@@ -1,3 +1,6 @@
+svg {
+  box-sizing: border-box;
+}
 .diagram {
   background-color: $secondary;
   position: relative;
@@ -47,5 +50,13 @@
     height: 100%;
     width: 100%;
     z-index: 9;
+  }
+  &__bottom {
+    text-align: center;
+  }
+  &__logo {
+    width: 62px;
+    height: 32px;
+    transform: translate(-31px, -16px);
   }
 }
