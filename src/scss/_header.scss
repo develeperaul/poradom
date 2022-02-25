@@ -1,0 +1,25 @@
+.header {
+  padding-top: 20px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 31px;
+  }
+}
+
+.carousel {
+  &__image {
+    width: 100%;
+    margin-bottom: 21px;
+  }
+  &__title {
+    font-size: 22px;
+    line-height: 26px;
+    color: #ffffff;
+    margin-bottom: 14px;
+  }
+  &__text {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+}

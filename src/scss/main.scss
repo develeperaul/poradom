@@ -1,109 +1,15 @@
+@import "~reset-css";
 @import "~normalize.css";
 @import "vars";
 @import "mixins";
+@import "settings";
 @import "fonts";
-
-body {
-  font-family: NormsM, sans-serif;
-  font-size: 12px;
-  line-height: 16px;
-  color: $black;
-}
-
-.title {
-  font-family: DinCyLt, sans-serif;
-  font-size: 26px;
-  line-height: 31px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.button {
-  &__round {
-    border-radius: 100px;
-    padding: 6px 13px;
-    font-size: 12px;
-    color: #c3cad1;
-    background: transparent;
-    border: 1px solid #c3cad1;
-    line-height: 16px;
-    &_active {
-      background: $primary;
-      border: 1px solid $primary;
-      color: #fff;
-    }
-  }
-  padding: 22px;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: center;
-  border-radius: 4px;
-  box-sizing: border-box;
-  border: 1px solid $accent;
-  &_accent {
-    color: #fff;
-    background-color: $accent;
-  }
-  &_border {
-    font-size: 16px;
-    line-height: 19px;
-    padding: 16px;
-    background-color: transparent;
-  }
-  // &_black {
-  //   background-color: #000;
-  //   color: #fff;
-  // }
-}
-
-.circle {
-  border-radius: 50%;
-  width: 4px;
-  height: 4px;
-  background-color: #fff;
-  &_active {
-    background-color: $primary;
-  }
-}
-
-.line {
-  background: #fff;
-  height: 1px;
-  width: 43px;
-  &_active {
-    background: $primary;
-  }
-}
-
-.filter {
-  background: #e5e7ea;
-  border-radius: 4px;
-  height: 24px;
-  width: 24px;
-}
-
-.number {
-  font-family: DinCyLt, sans-serif;
-  color: $primary;
-  font-size: 64px;
-  line-height: 82px;
-  letter-spacing: -0.08em;
-}
-
-.label-text {
-  font-size: 7px;
-  line-height: 8px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-
-.pie {
-  background: $primary;
-  height: 36px;
-  width: 36px;
-}
-
-.card {
-  border-radius: 4px;
-}
+@import "ui";
+@import "dropdown";
+@import "header";
+@import "built";
+@import "ready";
+@import "settlements";
+@import "project";
+@import "diagram";
+@import "footer";

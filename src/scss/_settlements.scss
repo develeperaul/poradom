@@ -1,0 +1,62 @@
+.settlements {
+  background-color: $secondary;
+  position: relative;
+  &__title {
+    position: absolute;
+    bottom: -4px;
+    left: 18px;
+    z-index: 9;
+    & > span {
+      padding-top: 9px;
+      padding-right: 24px;
+      padding-left: 10px;
+    }
+  }
+  &__line {
+    &-top,
+    &-bottom {
+      position: absolute;
+      background-color: $primary;
+    }
+    &-top {
+      top: 0;
+      left: 20px;
+      width: 1px;
+      height: 40px;
+    }
+    &-bottom {
+      bottom: 0;
+      left: 20px;
+      width: 1px;
+      height: 160px;
+    }
+  }
+  &__number {
+    position: absolute;
+    left: 7px;
+    top: 40px;
+  }
+  &__number-content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+  }
+  &__top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  &__icon {
+    transform: translateY(-20px);
+  }
+  &__bottom {
+    padding-left: 21px;
+    display: flex;
+    &-title {
+      color: #fff;
+      margin-right: 12px;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: NormsM, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: $black;
+}
+
+h2 {
+  font-size: 26px;
+  line-height: 31px;
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 120%;
+  color: $black;
+}
+
+h4 {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+h5 {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+h6 {
+  font-size: 8px;
+  line-height: 10px;
+}
+
+img {
+  max-width: 100%;
+}
+
+// .container {
+
+//   margin: 0 auto;
+// }
+
+.container {
+  margin-right: auto; /* 1 */
+  margin-left: auto; /* 1 */
+  // width: 100%;
+  // max-width: 1200px;
+  // padding-right: 15px; /* 3 */
+  // padding-left: 15px; /* 3 */
+  // width: 100%;
+
+  max-width: 1440px; /* 2 */
+  width: 100%;
+  padding: 0 $gap-m;
+  @include media(1140) {
+    padding: 0 $gap;
+  }
+}
+
+.-l-gap {
+  margin-left: -$gap-m;
+}
+
+.-r-gap {
+  margin-right: -$gap-m;
+}
+
+.-x-gap {
+  margin-left: -$gap-m;
+  margin-right: -$gap-m;
+}

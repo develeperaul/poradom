@@ -1,0 +1,79 @@
+.project {
+  position: relative;
+  background-color: $secondary;
+  padding-bottom: 20px;
+  &__line {
+    &-top,
+    &-bottom {
+      position: absolute;
+      background-color: $primary;
+    }
+    &-top {
+      top: 0;
+      left: 20px;
+      width: 1px;
+      height: 40px;
+    }
+    &-bottom {
+      bottom: 0;
+      left: 20px;
+      width: 1px;
+      height: 160px;
+    }
+  }
+  &__number {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 7px;
+    top: 40px;
+  }
+
+  &__bottom {
+    &-title {
+      padding-left: 23px;
+      padding-right: 4px;
+      color: #fff;
+      margin-right: 12px;
+      z-index: 11;
+      &:first-child {
+        transform: translateY(5px);
+      }
+    }
+  }
+
+  &__number-content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+  }
+  &__top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    z-index: 9;
+    & > span:first-child {
+      padding-top: 9px;
+    }
+    & > span {
+      padding-right: 13px;
+      padding-left: 10px;
+    }
+  }
+  &__top {
+    padding-top: 40px;
+    display: flex;
+    justify-content: end;
+  }
+  &__icon {
+  }
+  &__bottom {
+    padding-left: 21px;
+    transform: translateY(-20px);
+  }
+  &__image {
+  }
+}

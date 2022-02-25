@@ -1,0 +1,51 @@
+.diagram {
+  background-color: $secondary;
+  position: relative;
+  &__number-content {
+    position: absolute;
+  }
+  &__top {
+    padding-top: 80px;
+    display: flex;
+    justify-content: end;
+  }
+  &__title {
+    z-index: 9;
+    margin-left: 50px;
+    & > span {
+      padding-top: 9px;
+
+      padding-left: 14px;
+    }
+  }
+  &__line {
+    &-top,
+    &-bottom {
+      position: absolute;
+      background-color: $primary;
+    }
+    &-top {
+      top: 0;
+      left: 20px;
+      width: 1px;
+      height: 40px;
+    }
+    &-bottom {
+      bottom: 0;
+      left: 20px;
+      width: 1px;
+      height: 160px;
+    }
+  }
+  &__number {
+    position: absolute;
+    left: 7px;
+    top: 40px;
+  }
+  &__number-content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+  }
+}

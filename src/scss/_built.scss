@@ -1,0 +1,31 @@
+.built {
+  padding: 15px 0 40px 0;
+
+  &__number {
+    font-weight: 700;
+    color: $accent;
+    margin: 0;
+    font-size: 96px;
+    line-height: 113px;
+    letter-spacing: 0.02em;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__image {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  &__dropdowns-title {
+    margin-bottom: 18px;
+  }
+  &__title {
+    display: block;
+    margin-left: 12px;
+    margin-top: 25px;
+    font-size: 8px;
+    line-height: 10px;
+    color: $primary;
+    text-transform: uppercase;
+  }
+}
