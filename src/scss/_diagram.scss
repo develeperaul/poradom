@@ -53,6 +53,13 @@ svg {
   }
   &__bottom {
     text-align: center;
+    // position: relative;
+  }
+  &__image {
+    height: 40%;
+
+    // position: absolute;
+    // right: -16px;
   }
   &__logo {
     width: 62px;

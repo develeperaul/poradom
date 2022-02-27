@@ -106,12 +106,12 @@ gradientColor.prototype.colorHex = function (rgb) {
 const zero = 44.44;
 var data = [100, 72.44, 100, 44.44, 72.44, 100, 44.44, 72.44, 100];
 
-var diagramWidth = 320,
-  diagramHeight = 320,
+var diagramWidth = 280,
+  diagramHeight = 280,
   cx = diagramWidth / 2,
   cy = diagramHeight / 2,
   //   indicatorRadiuses = [102, 96, 90],
-  indicatorRadiuses = [150, 140, 130, 120, 110, 100, 90, 80, 70],
+  indicatorRadiuses = [130, 120, 110, 100, 90, 80, 70, 60, 50],
   maxAngle = 270,
   diagramBgColor = "trasnparent",
   indicatorBgColor = "trasnparent",
@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var scene = document.getElementById("scene");
   //   scene.setAttribute("width", diagramWidth);
   //   scene.setAttribute("height", diagramHeight);
-  scene.setAttribute("viewBox", "0 0 320 320");
+  scene.setAttribute("viewBox", `0 0 ${diagramWidth} ${diagramHeight}`);
   //   scene.setAttribute("preserveAspectRatio", "xMidYMid meet");
 
   scene.style.backgroundColor = diagramBgColor;
