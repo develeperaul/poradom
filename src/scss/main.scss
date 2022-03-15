@@ -5,16 +5,23 @@
 @import "settings";
 @import "fonts";
 @import "ui";
+@import "./swiper-bundle.min.css";
+@import "./swiper";
 @import "dropdown";
 @import "header";
 @import "built";
 @import "ready";
 @import "settlements";
 @import "project";
+@import "sculpture";
 @import "diagram";
+@import "distance";
 @import "footer";
 
-.development {
+svg {
+  fill: blue;
+}
+​ .development {
   color: #c3cad1;
   font-size: 12px;
 }

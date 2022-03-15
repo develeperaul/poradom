@@ -1,0 +1,109 @@
+$pagColor: #c3cad1;
+$pageColorActive: #0099e0;
+
+.swiper {
+  display: flex;
+  flex-direction: column;
+  & * .button {
+    width: auto;
+  }
+}
+// .carousel > .button {
+//     width: auto;
+// }
+.swiper-pagination {
+  display: flex;
+
+  justify-content: center;
+  .pag {
+    // display: block;
+    vertical-align: baseline;
+    text-align: center;
+    position: relative;
+    margin: 0 6px;
+    width: 43px;
+    display: block;
+    color: $pagColor;
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: -8px;
+      // transform: translateX(25%);
+      height: 1px;
+      width: 100%;
+      background-color: $pagColor;
+    }
+    &-active {
+      color: $pageColorActive;
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        // transform: translateX(25%);
+        height: 1px;
+        width: 100%;
+        background-color: $pageColorActive;
+      }
+    }
+  }
+}
+
+.swiper {
+  &-dots {
+    display: flex;
+    .dot {
+      width: 4px;
+      height: 4px;
+      background-color: $pagColor;
+      border-radius: 50%;
+      &:not(:last-child) {
+        margin-right: 3px;
+      }
+      &-active {
+        background-color: $pageColorActive;
+      }
+    }
+  }
+  &-numbs {
+    display: flex;
+    padding-top: 9px;
+    justify-content: center;
+    margin-top: 20px;
+    .numb {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      margin-right: 6px;
+      vertical-align: baseline;
+      text-align: center;
+      position: relative;
+      margin: 0 6px;
+      width: 43px;
+      display: block;
+      color: $pagColor;
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: -8px;
+        // transform: translateX(25%);
+        height: 1px;
+        width: 100%;
+        background-color: $pagColor;
+      }
+      &-active {
+        color: $pageColorActive;
+        &::after {
+          position: absolute;
+          content: "";
+          left: 0;
+          // transform: translateX(25%);
+          height: 1px;
+          width: 100%;
+          background-color: $pageColorActive;
+        }
+      }
+    }
+  }
+}

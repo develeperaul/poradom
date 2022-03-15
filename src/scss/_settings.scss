@@ -10,6 +10,8 @@ html {
 
 body {
   font-family: NormsM, sans-serif;
+
+  font-weight: 500;
   font-size: 12px;
   line-height: 16px;
   color: $black;
@@ -35,8 +37,8 @@ h3 {
 }
 
 h4 {
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 h5 {
@@ -45,7 +47,7 @@ h5 {
 }
 
 h6 {
-  font-size: 8px;
+  font-size: 10px;
   line-height: 10px;
 }
 

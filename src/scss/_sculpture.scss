@@ -1,0 +1,40 @@
+.sculpture {
+  background-color: #000;
+  padding-top: 8px;
+  padding-bottom: 40px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    font-family: AlienscowsEL;
+    color: $brown;
+    letter-spacing: -0.4px;
+    margin-bottom: 20px;
+    &-wrapper {
+      flex-shrink: 0;
+      //   position: relative;
+    }
+    &-image {
+      //   position: absolute;
+      width: 83px;
+      height: 83px;
+      border-radius: 50%;
+      display: block;
+      clip-path: polygon(9px 0%, 100% 0%, 100% 100%, 9px 100%);
+    }
+  }
+
+  &__image {
+    right: 0;
+    margin-right: -16px;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  &__text {
+    color: #8f959b;
+    font-size: 16px;
+    line-height: 21px;
+  }
+}

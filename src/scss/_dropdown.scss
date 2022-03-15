@@ -25,9 +25,7 @@ $choice-color: #212529;
 
 .dropdown {
   margin-bottom: 6px;
-  :last-child {
-    // margin-bottom: 14px;
-  }
+
   position: relative;
 
   border-radius: 4px;
@@ -129,8 +127,10 @@ $choice-color: #212529;
       }
     }
   }
+  &__btn {
+    margin-top: 14px;
+  }
 }
-
 @media (max-width: 768px) {
   .outer-wrapper {
     grid-template-columns: 1fr;

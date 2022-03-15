@@ -1,3 +1,5 @@
+@import "burger";
+
 .title {
   font-family: DinCyLt, sans-serif;
   color: #fff;
@@ -18,17 +20,41 @@
 }
 
 .button {
+  &__wrapper {
+    position: relative;
+  }
+  &__group {
+    display: flex;
+    overflow-x: scroll;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &::before {
+      position: absolute;
+
+      content: "";
+      right: 0;
+      width: 30px;
+      height: 100%;
+      background: linear-gradient(270deg, #fff, transparent);
+    }
+  }
   &__round {
     border-radius: 100px;
     padding: 6px 13px;
     font-size: 12px;
-    color: #c3cad1;
+    color: $border;
     background: transparent;
-    border: 1px solid #c3cad1;
+    border: 1px solid $border;
     line-height: 16px;
+    &:not(:last-child) {
+      margin-right: 6px;
+    }
     &_active {
-      background: $primary;
-      border: 1px solid $primary;
+      background: $accent;
+      border: 1px solid $accent;
       color: #fff;
     }
   }
@@ -44,7 +70,13 @@
     color: #fff;
     background-color: $accent;
   }
+  &_brown {
+    color: #fff;
+    border: 1px solid $brown;
+    background-color: $brown;
+  }
   &_border {
+    border: 1px solid $border;
     font-size: 16px;
     line-height: 19px;
     padding: 16px;
@@ -84,10 +116,11 @@
 
 .number {
   font-family: DinCyLt, sans-serif;
-  color: $primary;
+  color: $number;
   font-size: 64px;
   line-height: 82px;
   letter-spacing: -0.08em;
+  z-index: 9;
 }
 
 .label-text {
@@ -105,20 +138,58 @@
   width: 36px;
   margin-bottom: 8px;
 }
-
+.link {
+  display: block;
+  color: $primary;
+  text-decoration: underline;
+  text-align: center;
+}
 .card {
   position: relative;
   border-radius: 4px;
   background: #fff;
-  &__label {
-    position: absolute;
-  }
-  &__image {
-    width: 100%;
+  flex-grow: 1;
+  &_s {
     margin-bottom: 20px;
   }
+  &_label {
+    margin-top: 10px;
+  }
+  &__label {
+    position: absolute;
+    width: 88px;
+    z-index: 9;
+  }
+  &__location {
+    &_p {
+      position: absolute;
+      left: 29px;
+      top: 20px;
+    }
+  }
+  &__image {
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: block;
+    filter: brightness(70%);
+  }
   &__container {
-    padding: 0 22px 20px;
+    padding: 20px 22px;
+    border-right: 1px solid $border;
+    border-bottom: 1px solid $border;
+    border-left: 1px solid $border;
+    border-radius: 0 0 4px 4px;
+    display: flex;
+    justify-content: space-between;
+    &_l {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    &_r {
+      align-self: end;
+      margin-bottom: 5px;
+    }
   }
   &__address {
     color: #8f959b;
@@ -128,14 +199,42 @@
   &__content {
     display: flex;
     align-items: end;
-    margin-bottom: 14px;
+    &_s {
+      margin-bottom: 14px;
+    }
   }
   &__title {
     margin-right: 12px;
   }
+  .label {
+    right: 11px;
+    top: -10px;
+    &__text {
+      position: absolute;
+      font-size: 12px;
+      line-height: 12px;
+      text-align: center;
+      left: 0;
+      right: 0;
+      top: 0;
+      top: 0;
+      bottom: 0;
+      color: #fff;
+      padding: 2px 0px;
+      margin: auto;
+      // transform: translate(50%, 50%);
+      text-align: center;
+      width: calc(100% - 22px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 7px;
+    }
+  }
   &__info {
     display: flex;
     white-space: nowrap;
+    margin-bottom: 14px;
     :not(:last-child) {
       margin-right: 18px;
     }
@@ -143,25 +242,111 @@
 
   &__region-size-title,
   &__dedlain-title {
-    margin-bottom: 6px;
     color: #8f959b;
+    font-size: 12px;
+    line-height: 16px;
   }
   &__region-size-text,
   &__dedlain-text {
     flex-grow: 1;
-    font-size: 8px;
-    line-height: 10px;
+    font-size: 16px;
+    line-height: 21px;
+  }
+  //flat
+  &-flat {
+    &__image {
+      background-color: rgba(0, 0, 0, 0.1);
+      width: 100%;
+      display: block;
+    }
+    &__container {
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+    }
+    &__date {
+      color: #8f959b;
+      margin-bottom: 6px;
+    }
+    &__text {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  //survey
+  &-survey {
+    border-radius: 4px;
+    background-color: $primary;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    align-items: center;
+    padding: 9px 14px 9px 20px;
+    &__numb {
+      width: 30px;
+      text-align: left;
+    }
+    &_active {
+      background-color: red;
+    }
   }
 }
 
-.image__round {
-  border-radius: 50%;
-  width: 75px;
-  height: 75px;
-  display: block;
+.form {
+  padding: 40px 21px;
+  background-color: $primary;
+  border-radius: 4px;
+  color: #fff;
+  &__title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  &__check {
+    font-size: 10px;
+    line-height: 100%;
+    /* or 10px */
 
-  margin-bottom: 40px;
-  &-wrapper {
+    /* Gray 100 */
+
+    color: #f2f2f2;
+  }
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  z-index: 9;
+  &__image {
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 8px;
+    object-fit: scale-down;
+    display: flex;
+    img {
+      margin: 0 auto;
+      width: 50%;
+    }
+  }
+
+  &__title {
+    color: #fff;
+  }
+}
+
+.content-round {
+  padding-left: 21px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-bottom: 40px;
+  &__title {
+    color: #fff;
+    margin-right: 12px;
+  }
+  &__wrapper {
     flex-shrink: 0;
     position: relative;
     &::after,
@@ -184,21 +369,21 @@
       height: 40px;
     }
   }
-}
-
-.label {
-  right: 11px;
-  top: -6px;
-  &__text {
-    // z-index: 10;
-    position: absolute;
-    font-size: 7px;
-    color: #fff;
-    line-height: 8px;
-    top: 0;
-    padding: 5px 14px;
-    // transform: translate(50%, 50%);
-    text-align: center;
-    width: 100%;
+  &__image {
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    display: block;
   }
 }
+
+// .card {
+//   border-radius: 4px;
+//   border: 1px solid #e5e7ea;
+//   &__top {
+//   }
+
+//   &__bottom {
+//     padding: 20px 22px;
+//   }
+// }
