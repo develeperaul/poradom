@@ -5,8 +5,8 @@
     font-weight: 700;
     color: $accent;
     margin: 0;
-    font-size: 96px;
-    line-height: 113px;
+    font-size: 84px;
+    line-height: 99px;
     letter-spacing: 0.02em;
     display: flex;
     justify-content: space-between;
@@ -22,7 +22,8 @@
   }
   &__title {
     display: block;
-    margin-left: 12px;
+    letter-spacing: 0;
+    // margin-left: 12px;
     margin-top: 25px;
     font-size: 12px;
     line-height: 16px;

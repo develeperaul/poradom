@@ -1,4 +1,16 @@
+footer {
+  h3 {
+    color: #fff !important;
+  }
+}
 .footer {
+  padding: 33px 0 30px;
+  background-color: $secondary;
+  color: #fff !important;
+  &__line {
+    border-top: 1px solid #00293c;
+    margin: 30px 0;
+  }
   &__content {
     display: flex;
     flex-direction: column;
@@ -19,18 +31,9 @@
 
 .social {
   display: flex;
-  &__link {
+  &__link_s {
     &:not(:last-child) {
       margin-right: 14px;
     }
-    background-color: #f2f2f2;
-    display: inline-block;
-    // padding: 10px;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }

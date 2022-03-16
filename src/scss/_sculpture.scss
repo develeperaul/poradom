@@ -1,8 +1,17 @@
 .sculpture {
   background-color: #000;
-  padding-top: 8px;
+  padding-top: 47px;
   padding-bottom: 40px;
-
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 47px;
+    background-color: $brown;
+    right: 50%;
+    top: 0;
+  }
   &__content {
     display: flex;
     justify-content: space-between;

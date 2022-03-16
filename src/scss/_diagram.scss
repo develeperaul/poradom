@@ -4,22 +4,34 @@ svg {
 .diagram {
   background-color: $secondary;
   position: relative;
+  padding-bottom: 40px;
   &__number-content {
     position: absolute;
   }
   &__top {
     padding-top: 80px;
     display: flex;
-    justify-content: end;
+    flex-direction: column;
+    align-items: flex-end;
   }
   &__title {
     z-index: 9;
     margin-left: 50px;
+    margin-bottom: 10px;
     & > span {
       padding-top: 9px;
 
       padding-left: 14px;
     }
+  }
+  &__text {
+    color: #e5e7ea;
+    display: inline-block;
+    margin-left: 78px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    width: 100%;
+    align-self: flex-start;
   }
   &__line {
     &-top,

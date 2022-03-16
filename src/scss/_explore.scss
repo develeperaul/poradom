@@ -1,0 +1,13 @@
+.explore {
+  padding: 40px 0;
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__images {
+    display: grid;
+    /* flex-wrap: wrap; */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    margin-bottom: 30px;
+  }
+}

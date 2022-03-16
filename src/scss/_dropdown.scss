@@ -33,8 +33,11 @@ $choice-color: #212529;
 
   &__header {
     display: flex;
-    flex-direction: row;
-    padding: 17px 20px;
+    align-items: center;
+    justify-content: space-between;
+    // padding: 17px 20px;
+    padding: 7px 20px;
+    min-height: 50px;
     align-content: center;
     cursor: pointer;
     color: $font-color;
@@ -56,8 +59,18 @@ $choice-color: #212529;
     }
 
     &--icon {
-      margin-left: auto;
-
+      margin-left: 20px;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        height: calc(100% + 14px);
+        width: 1px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -20px;
+        background-color: $border-color;
+      }
       .rotate-icon {
         transition: transform $transition-duration linear;
         transform: rotate(180deg);

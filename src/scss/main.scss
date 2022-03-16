@@ -16,12 +16,20 @@
 @import "sculpture";
 @import "diagram";
 @import "distance";
+@import "checkbox.css";
+@import "accardion.css";
+@import "explore";
 @import "footer";
 
-svg {
-  fill: blue;
+.hit,
+.distance,
+.new-project {
+  z-index: 111;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
-​ .development {
-  color: #c3cad1;
+
+.development {
+  color: $border;
   font-size: 12px;
 }

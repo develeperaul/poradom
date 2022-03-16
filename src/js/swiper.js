@@ -21,7 +21,9 @@ function swiper(name, opts) {
   });
 }
 class newSwiper extends swiper {}
-new newSwiper(".headerSwiper");
+new newSwiper(".headerSwiper", {
+  spaceBetween: 8,
+});
 new newSwiper(".readySwiper");
 new newSwiper(".newProject" , {
   spaceBetween: 16,

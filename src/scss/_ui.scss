@@ -60,12 +60,15 @@
   }
   width: 100%;
   display: block;
-  padding: 22px;
-  font-size: 12px;
-  line-height: 16px;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 18px;
   text-align: center;
   border-radius: 4px;
   border: 1px solid $accent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &_accent {
     color: #fff;
     background-color: $accent;
@@ -81,6 +84,9 @@
     line-height: 19px;
     padding: 16px;
     background-color: transparent;
+  }
+  &_l {
+    margin-right: 8px;
   }
   // &_black {
   //   background-color: #000;
@@ -132,11 +138,26 @@
 }
 
 .pie {
-  background: $primary;
   border-radius: 50%;
   height: 36px;
   width: 36px;
-  margin-bottom: 8px;
+  // margin-bottom: 8px;
+  object-fit: scale-down;
+  display: flex;
+  & > img {
+    width: 50%;
+    margin: 0 auto;
+  }
+  &_primary {
+    background: $primary;
+  }
+  &_big {
+    width: 48px;
+    height: 48px;
+  }
+  &_accent {
+    background: $accent;
+  }
 }
 .link {
   display: block;
@@ -276,19 +297,61 @@
 
   //survey
   &-survey {
+    cursor: pointer;
     border-radius: 4px;
+    min-height: 50px;
+    height: 100%;
     background-color: $primary;
     display: flex;
-    justify-content: space-between;
-    color: #fff;
+
     align-items: center;
+    color: #fff;
     padding: 9px 14px 9px 20px;
+    position: relative;
+    overflow: hidden;
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+    &__wrapper {
+      z-index: 9;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__progress {
+      position: absolute;
+      height: 100%;
+      left: 0;
+      background-color: #0099e0;
+      opacity: 0.5;
+    }
+    &_active > &__progress {
+      opacity: 1;
+      background-color: #0099e0;
+    }
     &__numb {
+      z-index: 3;
       width: 30px;
       text-align: left;
+      margin-left: 24px;
+      position: relative;
     }
     &_active {
-      background-color: red;
+      // background-color: ;
+    }
+    &_active > &__wrapper > &__numb::after {
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 10px;
+      left: -14px;
+      top: 50%;
+      background-image: url(../img/icons/check.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: translateY(-50%);
     }
   }
 }
@@ -299,16 +362,11 @@
   border-radius: 4px;
   color: #fff;
   &__title {
-    font-size: 18px;
-    line-height: 22px;
+    margin-bottom: 20px;
   }
   &__check {
     font-size: 10px;
     line-height: 100%;
-    /* or 10px */
-
-    /* Gray 100 */
-
     color: #f2f2f2;
   }
 }
@@ -361,7 +419,7 @@
       bottom: 0;
       top: 75px;
       left: 50%;
-      height: 100%;
+      height: 40px;
     }
     &::before {
       top: -40px;
