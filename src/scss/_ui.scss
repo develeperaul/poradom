@@ -53,6 +53,9 @@
     &:not(:last-child) {
       margin-right: 6px;
     }
+    &:last-child {
+      margin-right: 25px;
+    }
     &_active {
       background: $accent;
       border: 1px solid $accent;
@@ -314,6 +317,7 @@
     &:not(:last-child) {
       margin-bottom: 8px;
     }
+
     &__wrapper {
       z-index: 9;
       width: 100%;
@@ -324,8 +328,10 @@
     &__progress {
       position: absolute;
       height: 100%;
+      width: 0;
       left: 0;
       background-color: #0099e0;
+      transition: width 1s ease;
       opacity: 0.5;
     }
     &_active > &__progress {

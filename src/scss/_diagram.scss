@@ -80,3 +80,31 @@ svg {
     transform: translate(-31px, -16px);
   }
 }
+
+.survey__wrapper {
+  position: relative;
+  & > .popup {
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    background-color: rgba(33, 37, 41, 0.9);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    padding: 30px 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.7s ease;
+
+    opacity: 0;
+    &_active {
+      opacity: 1;
+      z-index: 10;
+    }
+  }
+}
+.survey__list {
+  position: relative;
+}
