@@ -328,40 +328,6 @@
               </ul>
             </div>
           </div>
-
-          <div id="dropdown_4" class="dropdown">
-            <div
-              id="dropdownHeader_4"
-              class="dropdown__header dropdown__header--hide"
-            >
-              <div id="dropdownHeaderValue_4" class="dropdown__header--title">
-                Посёлок
-              </div>
-              <div class="dropdown__header--icon">
-                <img
-                  id="chevronIcon_4"
-                  class="fas fa-angle-down rotate-icon-home"
-                  src="./img/icons/down.svg"
-                  alt=""
-                />
-                
-              </div>
-            </div>
-
-            <div
-              id="dropdownListBody_4"
-              class="dropdown__body dropdown__body--hide"
-            >
-              <ul id="dropdownList_4" class="dropdown__body--list">
-                <li class="dropdown__body--list-index">Test Value 1</li>
-                <li class="dropdown__body--list-index">Test Value 2</li>
-                <li class="dropdown__body--list-index">Test Value 3</li>
-                <li class="dropdown__body--list-index">Test Value 4</li>
-                <li class="dropdown__body--list-index">Test Value 5</li>
-                <li class="dropdown__body--list-index">Test Value 6</li>
-              </ul>
-            </div>
-          </div>
           
           <button class="button button_accent dropdown__btn">Загрузка</button>
         </div>
@@ -802,8 +768,10 @@
           </div>
           <p class="sculpture__text">Закажите индивидуальное проектирование вашего дома</p>
         </div>
+        <div class="sculpture__image">
 
-          <img src="./img/sculpture.png" alt="" class="sculpture__image ">
+          <img src="./img/sculpture.png" alt="" class=" ">
+        </div>
           <div class="container">
 
           
@@ -974,6 +942,10 @@
             </div>
             <div class="swiper-numbs"></div>
           </div>
+          <div class="news__botton">
+
+            <a href="#">Все новости</a>
+          </div>
         </div>
       </section>
 
@@ -984,10 +956,14 @@
             <div class="text-field">
               <input class="text-field__input" type="text" name="login" id="login" placeholder="Введите ваш телефон">
             </div>
+            <label class="checkbox-other">
+              <input type="checkbox">
+              <p>Даю согласие на обработку <a href="#" class="checkbox__link"> персональных данных </span></p>
+            </label>
 
             <button class="button button_accent">Отправить</button>
             
-            <p class="check__text">Даю согласие на обработку <span> персональных данных </span></p>
+            
           </div>
         </div>
       </section>
@@ -1020,7 +996,7 @@
     <footer class="footer">
       <div class="container">
       <div id="accordion">
-        <h3 class="">Покупателям</h3>
+        <h3 class="">Покупателям <span class="accordion__line"></span></h3>
         <div class="tabs__text" id="tabs-1" style="height: 0px;">
             <a href="#">
               Проектирование
@@ -1032,15 +1008,16 @@
             <a href="#">Проектирование</a>
         
           </div>
-          <h3 class="">Стандарты</h3>
+          <h3 class="">Стандарты <span class="accordion__line"></span></h3>
           <div class="tabs__text" id="tabs-2" style="height: 0px;">
             <a href="#">Проектирование</a>
           </div>
-          <h3 class="">О застройщике</h3>
+          <h3 class="">О застройщике <span class="accordion__line"></span></h3>
           <div class="tabs__text" id="tabs-3" style="height: 0px;">
             <a href="#">Проектирование</a>
           </div>
-          <h3>Контакты</h3>
+          <h3>Контакты </h3>
+          
           <div class="tabs__text" id="tabs-4" style="height: 0px;">
             <a href="#">Проектирование</a>
           </div>

@@ -1,14 +1,6 @@
 import "../scss/main.scss";
-import "./dropdown";
-import "./animateNumber";
-// import "./diagram";
-import "./accardion";
-// import Swiper styles
-// import "swiper/css";
 
 import "./swiper";
-import "../index.html";
-
 class Cards {
   constructor(name){
     this.name = document.querySelector(`#cards_${name}`);
@@ -87,7 +79,27 @@ class Survey {
       })
     }
 }
-new Cards('new')
+if(window.location.href.replace("http://localhost:3000/", "")=='index.html'){
+  import('./dropdown')
+  import('./accardion')
+  import('./animateNumber')
+  import('../index.html').then(module=>{
+    new Cards('new')
 new Survey('survey')
+  })
+  
+}
+if(window.location.href.replace("http://localhost:3000/", "")=='requisites.html'){
+  import('../scss/pages/requisites/requisites.scss')  
+  import('./accardion')
+  import('../pages/requisites.html').then(module=>{
+    console.log(window.location.href.replace("http://localhost:3000/", ""))  
+  })
+}
+
+
+
+
+
 
 

@@ -22,9 +22,22 @@ const PATHS = {
   assets: "assets/",
 };
 
+const PATHSPAGE = {
+  // Path to main app dir
+  src: path.join(__dirname, "src/pages"),
+  // Path to Output dir
+  dist: path.join(__dirname, "dist/pages"),
+  // Path to Second Output dir (js/css/fonts etc folder)
+  assets: "assets/",
+};
+
+const PAGES_DIR = PATHS.src
+const PAGES = fs
+  .readdirSync('./src/pages')
+  .filter(fileName => fileName.endsWith('.html'))
 // const PAGES_DIR = `${PATHS.src}/pug/pages/`;
 // const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'));
-
+console.log(PAGES)
 const fileName = (ext) =>
   isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
 const optimization = () => {
@@ -72,7 +85,7 @@ const optimization = () => {
 
   return confObj;
 };
-
+  
 module.exports = {
   context: path.resolve(__dirname, "src"),
   mode: "development",
@@ -97,9 +110,15 @@ module.exports = {
       template: path.resolve(__dirname, "src/index.html"),
       minify: { collapseWhitespace: idProd },
     }),
+    new HTMLWebpackPlugin({
+      filename: "requisites.html",
+      template: path.resolve(__dirname, "src/pages/requisites.html"),
+      minify: { collapseWhitespace: idProd },
+    }),
     // ...PAGES.map(page => new HTMLWebpackPlugin({
-    //   template: `${PAGES_DIR}/${page}`,
-    //   filename: `./${page.replace(/\.pug/,'.html')}`,
+        
+    //   template: path.resolve(__dirname, `src/pages/${page}`),
+    //   filename: page,
     //   minify: {collapseWhitespace: idProd}
     // })),
     new CleanWebpackPlugin(),
@@ -128,7 +147,7 @@ module.exports = {
         loader: "pug-loader",
       },
       {
-        test: /\.html$/,
+        test: /\.html$/i,
         loader: "html-loader",
       },
       {

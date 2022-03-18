@@ -1,4 +1,5 @@
 var accordion = document.getElementById('accordion');
+	console.log(accordion)
 		accordion.addEventListener('click', change);
 		function change(event) {
 			var targ = event.target;

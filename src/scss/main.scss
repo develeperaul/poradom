@@ -8,6 +8,7 @@
 @import "./swiper-bundle.min.css";
 @import "./swiper";
 @import "dropdown";
+@import "sidebar";
 @import "header";
 @import "built";
 @import "ready";
@@ -35,4 +36,9 @@
 .development {
   color: $border;
   font-size: 12px;
+}
+
+.checkbox__link {
+  color: #fff;
+  text-decoration: underline;
 }

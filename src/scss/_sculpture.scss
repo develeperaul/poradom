@@ -40,6 +40,24 @@
     margin-right: -16px;
     margin-bottom: 30px;
     width: 100%;
+    position: relative;
+    img {
+      width: 100%;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url("../img/dots.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      // background: red;
+      width: 70%;
+      height: 100%;
+      top: -45px;
+      right: 0;
+      z-index: 100;
+    }
   }
   &__text {
     color: #8f959b;
