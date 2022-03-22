@@ -4,6 +4,7 @@
 @import "mixins";
 @import "settings";
 @import "fonts";
+@import "input";
 @import "ui";
 @import "./swiper-bundle.min.css";
 @import "./swiper";
@@ -25,6 +26,12 @@
 @import "explore";
 @import "footer";
 
+.section {
+  padding: 30px 0 40px;
+  &__title {
+    margin-bottom: 20px;
+  }
+}
 .hit,
 .distance,
 .new-project {

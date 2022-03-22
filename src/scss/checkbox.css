@@ -54,7 +54,7 @@ input.checkbox_invalid + p:before {
   width: 8px;
   height: 6px;
   left: 3px;
-  top: 4.5px;
+  top: 4px;
 
   opacity: 1;
 }

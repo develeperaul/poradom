@@ -1,7 +1,7 @@
 import "../scss/main.scss";
 //pages
-import "./pages/index"
-import "./pages/requisites"
+// import "./pages/index"
+// import "./pages/requisites"
 // import '../index.html'
 //plugins
 import Accordion from  './plugins/accardion'

@@ -40,6 +40,7 @@ export default class Dropdown {
         chevronIcon.classList.toggle("rotate-icon-home");
         chevronIcon.classList.toggle("rotate-icon");
         dropdownListBody.classList.toggle("dropdown__body--hide");
+        dropDownHeader.classList.toggle("dropdown__header_show")
         dropdownListBody.classList.toggle("dropdown__body--show");
         // dropdownHeader.classList.toggle("dropdown__header--hide");
         // dropdownHeader.classList.toggle("dropdown__header--show");

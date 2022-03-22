@@ -92,7 +92,9 @@ module.exports = {
   entry: {
     main: "./js/main.js",
     index: "./js/pages/index.js",
-    requisites: "./js/pages/requisites.js"
+    requisites: "./js/pages/requisites.js",
+    'series-projects': "./js/pages/series-projects.js",
+    series: "./js/pages/series.js"
   },
   output: {
     filename: `./js/${fileName("js")}`,
@@ -113,13 +115,25 @@ module.exports = {
       filename: "index.html",
       template: path.resolve(__dirname, "src/index.html"),
       minify: { collapseWhitespace: idProd },
-      chunks: ["main"]
+      chunks: ["main", "index"]
     }),
     new HTMLWebpackPlugin({
       filename: "requisites.html",
       template: path.resolve(__dirname, "src/pages/requisites.html"),
       minify: { collapseWhitespace: idProd },
-      chunks: ["main"]
+      chunks: ["main", "requisites"]
+    }),
+    new HTMLWebpackPlugin({
+      filename: "series-projects.html",
+      template: path.resolve(__dirname, "src/pages/series-projects.html"),
+      minify: { collapseWhitespace: idProd },
+      chunks: ["main", "series-projects"]
+    }),
+    new HTMLWebpackPlugin({
+      filename: "series.html",
+      template: path.resolve(__dirname, "src/pages/series.html"),
+      minify: { collapseWhitespace: idProd },
+      chunks: ["main", "series"]
     }),
     // ...PAGES.map(page => new HTMLWebpackPlugin({
         

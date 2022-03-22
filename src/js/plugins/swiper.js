@@ -20,7 +20,7 @@ function swiper(name, opts={}) {
     ...opts
   });
 }
-class newSwiper extends swiper {}
+export default class newSwiper extends swiper {}
 new newSwiper(".headerSwiper", {
   spaceBetween: 8,
 });
@@ -38,5 +38,7 @@ new newSwiper(".newProject" , {
       },
     }
 });
+
+
 new newSwiper(".newsSwiper");
 new newSwiper(".buttonsSwiper",{pagination:{}});

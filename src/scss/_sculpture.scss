@@ -21,6 +21,7 @@
     color: $brown;
     letter-spacing: -0.4px;
     margin-bottom: 20px;
+    text-transform: uppercase;
     &-wrapper {
       flex-shrink: 0;
       //   position: relative;
@@ -60,7 +61,7 @@
     }
   }
   &__text {
-    color: #8f959b;
+    color: #b5b9be;
     font-size: 16px;
     line-height: 21px;
   }

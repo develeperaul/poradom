@@ -3,68 +3,61 @@ import "../plugins/swiper";
 import '../plugins/animateNumber'
 import '../plugins/telmask'
 import '../plugins/validateform'
+import Cards from  '../plugins/cards'
 import Dropdown from '../plugins/dropdown';
 new Dropdown("1");
 new Dropdown("2");
 new Dropdown("3");
 
-class Cards {
-  constructor(name){
-    
-    this.name = document.querySelector(`#cards_${name}`);
-    if(this.name){
-      const groupBtn = []
-      const btns = []
-        Array.prototype.slice.call(this.name.children).forEach((el,i)=>{
-          el.setAttribute('id',`cards_${name}_${i+1}`)
-          el.querySelector('.button__group').setAttribute('id',`group_${name}_${i+1}`)
-          const groupEl = el.querySelector(`#group_${name}_${i+1}`)
-          btns.push(...Array.from(groupEl.children))
-          groupBtn.push(el.querySelector(`#group_${name}_${i+1}`))
-        })
-        
-        btns.forEach((el,i)=>{
-          
-          el.addEventListener(
-            'click',
-            (e)=>{
-              if(el.getAttribute('class').indexOf('button__round_active') == -1){
-                Array.from(el.parentNode.children).forEach(item=>{
-                  if(item.getAttribute('class').indexOf('button__round_active') !== -1){
-                    item.classList.remove('button__round_active')
-                    el.classList.add('button__round_active')
-                  }
-                })
-              }
-            }
-          )
-        })
-    }
-  }
-}
+
 class Survey {
     constructor(name){
         this.name = document.querySelector(`#${name}`)
         if(this.name){
           const popup = this.name.parentNode.querySelector('.popup')
-          
-          
-          if(this.name.children.length > 0 && this.getActiveClass){
+          if(this.name.children.length > 0 && !this.getActiveClass){
           Array.from(this.name.children).forEach(el=>{
             el.addEventListener(
               'click',
               ()=>{
-                if(this.getActiveClass){
-                  if(el.getAttribute('class').indexOf('card-survey_active') == -1){
+
+                // document.querySelectorAll('.card-survey').forEach(item=>item.classList.add('card-survey_opacity'))
+                // el.classList.toggle('card-survey_opacity')
+                // if(this.getActiveClass){
+                //   if(el.getAttribute('class').indexOf('card-survey_active') == -1){
+                //     el.classList.add('card-survey_active')
+                //     this.updateWithProgress()
+                //     console.log(el)
+                //     popup.classList.add('popup_active')
+                //     setTimeout(()=>{
+                //       popup.classList.remove('popup_active')
+                //     }, 1500)
+                //   }
+                // }
+                if(!this.getActiveClass){
+                  console.log(this.getActiveClass)
+                  if(!el.classList.contains('card-survey_first')){
+                    document.querySelectorAll('.card-survey').forEach(item=>{
+                      if(item.classList.contains('card-survey_first')){
+                        item.classList.remove('card-survey_first')
+                      }
+                      item.classList.add('card-survey_opacity')
+                    })
+                    el.classList.add('card-survey_first')
+                    el.classList.remove('card-survey_opacity')
+                  }else {
+                  if(el.classList.contains('card-survey_first') ){
+                    document.querySelectorAll('.card-survey').forEach(item=>item.classList.remove('card-survey_opacity'))
+                    el.classList.remove('card-survey_first')
                     el.classList.add('card-survey_active')
-                    // this.name.classList.remove('survey__notactive')
                     this.updateWithProgress()
-                    console.log(el)
+                    
                     popup.classList.add('popup_active')
                     setTimeout(()=>{
                       popup.classList.remove('popup_active')
                     }, 1500)
                   }
+                }
                 }
                   
               }
@@ -76,8 +69,19 @@ class Survey {
     get getActiveClass() {
         let isActive = false
         Array.from(this.name.children).forEach(el=>{
+          // console.log(el.getAttribute('class').indexOf('card-survey_active') !== -1)
             if(el.getAttribute('class').indexOf('card-survey_active') !== -1){
-                isActive = el.getAttribute('class').indexOf('card-survey_active') !== -1
+              isActive = el.getAttribute('class').indexOf('card-survey_active') !== -1
+            }
+        })
+        return isActive
+    }
+
+    get firstClick(){
+        let isActive = false
+        Array.from(this.name.children).forEach(el=>{
+            if(el.getAttribute('class').indexOf('card-survey_first') !== -1){
+                isActive = el.getAttribute('class').indexOf('card-survey_first') !== -1
             }
         })
         return !isActive
@@ -93,7 +97,6 @@ class Survey {
   }
 new Cards('new')
 new Survey('survey')
-console.log('sdflkj')
 // import '../../index.html'
 // new Dropdown("1");
 // new Dropdown("2");
