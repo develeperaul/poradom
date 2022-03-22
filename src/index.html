@@ -149,25 +149,69 @@
     </style>
   </head>
   <body>
-    <!--header start-->
-    <header class="header" style="background-image: 'url(' + require('./img/main.png')+')'">
+    <section class="sidebar ">
       <div class="container">
         <div class="header__wrapper">
           <div class="header__top">
             <img src="./img/icons/logo1.svg" alt="" />
-            <div>
-              <input type="checkbox" id="checkbox3" class="checkbox3 visuallyHidden">
-              <label for="checkbox3">
-                <div class="hamburger hamburger3">
-                  <span class="bar bar1"></span>
-                  <span class="bar bar2"></span>
-                  <span class="bar bar3"></span>
-                  <span class="bar bar4"></span>
-                </div>
-              </label>
-              </div>
-            </div>
-            
+            <button class="menu-trigger active" id="menu-sidebar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+    
+        <div class="sidebar__list accordion" id="sidebar-accordion">
+          <h3 class="">Покупателям </h3>
+          <div class="tabs__text" id="tabs-1" style="height: 0px;">
+            <a href="#">
+              Проектирование
+            </a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+    
+          </div>
+          <h3 class="">Стандарты</h3>
+          <div class="tabs__text" id="tabs-2" style="height: 0px;">
+            <a href="#">Проектирование</a>
+          </div>
+          <h3 class="">О застройщике </h3>
+          <div class="tabs__text" id="tabs-3" style="height: 0px;">
+            <a href="#">Проектирование</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--header start-->
+    <header class="header" style="background-image: 'url(' + require('./img/main.png')+')'">
+
+        <a href="tg://resolve?domain=username" class="pie pie_big pie_blue drop__children children">
+          <img src="./img/icons/telega.svg" alt="">
+        </a>
+        <a href="https://wa.me/799999999" class="pie pie_big pie_blue drop__children children">
+          <img src="./img/icons/whatsapp.svg" alt="">
+        </a>
+        <a href="tel:+799999999" class="pie pie_big pie_blue drop__children children">
+          <img src="./img/icons/phone.svg" alt="">
+        </a>
+        <span class="pie pie_big pie_accent drop drop_sq" id="drop">
+        <span></span><span></span><span></span><span></span>
+        </span>
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__top">
+            <img src="./img/icons/logo1.svg" alt="" />
+            <button class="menu-trigger" id="menu-header">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+
             <div class="swiper readySwiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide header__bottom">
@@ -175,9 +219,6 @@
                       <h2 class="carousel__title">Новый проект <br> со вторым <br> светом</h2>
                       <p class="carousel__text">Запишитесь на экскурсию, <br>
                       чтобы увидеть это первыми!
-                      <span class="pie pie_big pie_accent">
-                        <img src="./img/icons/window.svg" alt="">
-                      </span>
                       </p>
                       <buttton class="button button_accent">Записаться на экскурсию</buttton>
                     </div>  
@@ -951,20 +992,20 @@
 
       <section class="application">
         <div class="container">
-          <div class="form">
+          <form action="#" class="form" id="special-offer">
             <h4 class="form__title">Узнавать первым о спецпредложениях и акциях, домах и участках</h4>
             <div class="text-field">
-              <input class="text-field__input" type="text" name="login" id="login" placeholder="Введите ваш телефон">
+              <input data-special-offer class="text-field__input tel " type="text" name="login" id="login" placeholder="Введите ваш телефон">
             </div>
             <label class="checkbox-other">
-              <input type="checkbox">
-              <p>Даю согласие на обработку <a href="#" class="checkbox__link"> персональных данных </span></p>
+              <input data-special-offer type="checkbox">
+              <p >Даю согласие на обработку <a href="#" class="checkbox__link"> персональных данных </span></p>
             </label>
 
-            <button class="button button_accent">Отправить</button>
+            <button type="submit" id="special-offer-btn" class="button button_accent">Отправить</button>
             
             
-          </div>
+          </form>
         </div>
       </section>
       <section class="explore">
@@ -995,7 +1036,7 @@
     <!--footer start-->
     <footer class="footer">
       <div class="container">
-      <div id="accordion">
+      <div class="accordion" id="accordion">
         <h3 class="">Покупателям <span class="accordion__line"></span></h3>
         <div class="tabs__text" id="tabs-1" style="height: 0px;">
             <a href="#">

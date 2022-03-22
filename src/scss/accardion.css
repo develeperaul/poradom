@@ -1,8 +1,8 @@
-#accordion {
+.accordion {
   width: 100%;
   margin: 20px auto;
 }
-#accordion > h3 {
+.accordion > h3 {
   cursor: pointer;
   padding-bottom: 14px;
   margin-bottom: 14px;
@@ -12,7 +12,7 @@
   position: relative;
 }
 
-/* #accordion > h3::after {
+/* .accordion > h3::after {
   position: absolute;
   content: "";
   width: 100%;
@@ -22,7 +22,7 @@
   left: 0;
   transition: width 1s ease;
 } */
-#accordion .accordion__line {
+.accordion .accordion__line {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -32,10 +32,10 @@
   transition: width 1s ease;
   background-color: #00557b;
 }
-#accordion > h3.select > .accordion__line {
+.accordion > h3.select > .accordion__line {
   width: 0;
 }
-#accordion > h3::before {
+.accordion > h3::before {
   position: absolute;
   content: "";
   top: calc(50% - 7.5px);
@@ -49,20 +49,20 @@
   transform: rotate(0deg);
   transition: transform 1s ease;
 }
-#accordion > h3.select {
+.accordion > h3.select {
   font-weight: normal;
   margin-bottom: 0;
   padding-bottom: 10px;
 }
-#accordion > h3.select::before {
+.accordion > h3.select::before {
   transform: rotate(180deg);
 }
-#accordion > h3.select::after {
+.accordion > h3.select::after {
   position: absolute;
   content: "";
   width: 0%;
 }
-#accordion > div {
+.accordion > div {
   height: 0;
   overflow: hidden;
   transition: height 1s;

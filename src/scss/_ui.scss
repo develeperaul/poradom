@@ -155,6 +155,9 @@
   &_primary {
     background: $primary;
   }
+  &_blue {
+    background: #0099e0;
+  }
   &_big {
     width: 48px;
     height: 48px;
@@ -323,6 +326,7 @@
       width: 100%;
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
 
     &__progress {

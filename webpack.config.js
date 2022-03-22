@@ -89,7 +89,11 @@ const optimization = () => {
 module.exports = {
   context: path.resolve(__dirname, "src"),
   mode: "development",
-  entry: "./js/main.js",
+  entry: {
+    main: "./js/main.js",
+    index: "./js/pages/index.js",
+    requisites: "./js/pages/requisites.js"
+  },
   output: {
     filename: `./js/${fileName("js")}`,
     path: path.resolve(__dirname, "dist"),
@@ -109,11 +113,13 @@ module.exports = {
       filename: "index.html",
       template: path.resolve(__dirname, "src/index.html"),
       minify: { collapseWhitespace: idProd },
+      chunks: ["main"]
     }),
     new HTMLWebpackPlugin({
       filename: "requisites.html",
       template: path.resolve(__dirname, "src/pages/requisites.html"),
       minify: { collapseWhitespace: idProd },
+      chunks: ["main"]
     }),
     // ...PAGES.map(page => new HTMLWebpackPlugin({
         

@@ -2,10 +2,10 @@ import Swiper from "./swiper-bundle.min";
 function swiper(name, opts={}) {
   return new Swiper(name, {
     loop: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // },
     spaceBetween: 16,
             pagination: {
       el: ".swiper-numbs",

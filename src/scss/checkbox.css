@@ -34,6 +34,9 @@
   border: 1px solid #fff;
   border-radius: 4px;
 }
+input.checkbox_invalid + p:before {
+  border: 1px solid red;
+}
 
 /* Checked */
 .checkbox-other input[type="checkbox"] + p:after {

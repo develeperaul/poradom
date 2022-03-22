@@ -149,25 +149,20 @@
     </style>
 </head>
 <body>
-    <section class="sidebar">
+    <section class="sidebar ">
         <div class="container">
             <div class="header__wrapper">
                 <div class="header__top">
                     <img src="../img/icons/logo1.svg" alt="" />
-                    <div id="burger">
-                        <input type="checkbox" id="checkbox3" class="checkbox3 visuallyHidden">
-                        <label for="checkbox3">
-                            <div class="hamburger hamburger3">
-                                <span class="bar bar1"></span>
-                                <span class="bar bar2"></span>
-                                <span class="bar bar3"></span>
-                                <span class="bar bar4"></span>
-                            </div>
-                        </label>
-                    </div>
+                        <button class="menu-trigger active" id="menu-sidebar">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
                 </div>
             </div>
-            <div id="accordion">
+
+            <div class="sidebar__list accordion" id="sidebar-accordion">
                 <h3 class="">Покупателям </h3>
                 <div class="tabs__text" id="tabs-1" style="height: 0px;">
                     <a href="#">
@@ -192,21 +187,27 @@
         </div>
     </section>
     <header class="header" style="background-image: 'url(' + require('../img/main.png')+')'">
+        <a href="tg://resolve?domain=username" class="pie pie_big pie_blue drop__children children">
+            <img src="../img/icons/telega.svg" alt="">
+        </a>
+        <a href="https://wa.me/799999999" class="pie pie_big pie_blue drop__children children">
+            <img src="../img/icons/whatsapp.svg" alt="">
+        </a>
+        <a href="tel:+799999999" class="pie pie_big pie_blue drop__children children">
+            <img src="../img/icons/phone.svg" alt="">
+        </a>
+        <span class="pie pie_big pie_accent drop drop_sq" id="drop">
+            <span></span><span></span><span></span><span></span>
+        </span>
         <div class="container">
             <div class="header__wrapper">
                 <div class="header__top">
                     <img src="../img/icons/logo1.svg" alt="" />
-                    <div id="burger">
-                        <input type="checkbox" id="checkbox3" class="checkbox3 visuallyHidden">
-                        <label for="checkbox3">
-                            <div class="hamburger hamburger3">
-                                <span class="bar bar1"></span>
-                                <span class="bar bar2"></span>
-                                <span class="bar bar3"></span>
-                                <span class="bar bar4"></span>
-                            </div>
-                        </label>
-                    </div>
+                    <button class="menu-trigger" id="menu-header">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
     
                 <div class="swiper readySwiper">
@@ -216,9 +217,6 @@
                                 <h2 class="carousel__title">Новый проект <br> со вторым <br> светом</h2>
                                 <p class="carousel__text">Запишитесь на экскурсию, <br>
                                     чтобы увидеть это первыми!
-                                    <span class="pie pie_big pie_accent">
-                                        <img src="../img/icons/window.svg" alt="">
-                                    </span>
                                 </p>
                                 <buttton class="button button_accent">Записаться на экскурсию</buttton>
                             </div>
@@ -254,7 +252,20 @@
     <main>
         <section class="requisites">
             <div class="container">
-                <h2>Компания Порадом</h2>
+                <h2 class="requisites__title">Компания Порадом</h2>
+                <div class="requisites__btns">
+
+                    <div class=" button__group">
+                                            <button class="button__round button__round_active">85</button>
+                                            <button class="button__round ">125</button>
+                                            <button class="button__round">135</button>
+                                            <button class="button__round ">125</button>
+                                                                <button class="button__round button__round_active">85</button>
+                                                                <button class="button__round ">125</button>
+                                                                <button class="button__round">135</button>
+                                                                <button class="button__round ">125</button>
+                    </div>
+                </div>
                 <div class="requisites__list">
                     <div class="requisites__item item">
                         <div class="item__left">
@@ -338,7 +349,7 @@
     <!--footer start-->
     <footer class="footer">
         <div class="container">
-            <div id="accordion">
+            <div class="accordion" id="accordion">
                 <h3 class="">Покупателям <span class="accordion__line"></span></h3>
                 <div class="tabs__text" id="tabs-1" style="height: 0px;">
                     <a href="#">

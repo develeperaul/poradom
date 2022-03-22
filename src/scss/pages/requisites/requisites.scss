@@ -6,6 +6,13 @@ $border: #e5e7ea;
   h2 {
     text-transform: none;
   }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__btns {
+    margin-bottom: 35px;
+    position: relative;
+  }
   &__list {
     display: flex;
     flex-direction: column;
@@ -17,6 +24,7 @@ $border: #e5e7ea;
       width: 100%;
       position: relative;
       padding-top: 14px;
+      text-align: start;
       &:not(:last-child) {
         padding-bottom: 14px;
       }
