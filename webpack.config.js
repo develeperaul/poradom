@@ -94,7 +94,10 @@ module.exports = {
     index: "./js/pages/index.js",
     requisites: "./js/pages/requisites.js",
     'series-projects': "./js/pages/series-projects.js",
-    series: "./js/pages/series.js"
+    series: "./js/pages/series.js",
+    reviews: "./js/pages/reviews.js",
+    review: "./js/pages/review.js",
+    'ready-homes': "./js/pages/ready-homes.js"
   },
   output: {
     filename: `./js/${fileName("js")}`,
@@ -114,27 +117,47 @@ module.exports = {
     new HTMLWebpackPlugin({
       filename: "index.html",
       template: path.resolve(__dirname, "src/index.html"),
-      minify: { collapseWhitespace: idProd },
+      minify: { collapseWhitespace: false },
       chunks: ["main", "index"]
     }),
     new HTMLWebpackPlugin({
       filename: "requisites.html",
       template: path.resolve(__dirname, "src/pages/requisites.html"),
-      minify: { collapseWhitespace: idProd },
+      // minify: { collapseWhitespace: idProd },
+      minify: { collapseWhitespace: false },
       chunks: ["main", "requisites"]
     }),
     new HTMLWebpackPlugin({
       filename: "series-projects.html",
       template: path.resolve(__dirname, "src/pages/series-projects.html"),
-      minify: { collapseWhitespace: idProd },
+      minify: { collapseWhitespace: false },
       chunks: ["main", "series-projects"]
     }),
     new HTMLWebpackPlugin({
       filename: "series.html",
       template: path.resolve(__dirname, "src/pages/series.html"),
-      minify: { collapseWhitespace: idProd },
+      minify: { collapseWhitespace: false },
       chunks: ["main", "series"]
     }),
+    new HTMLWebpackPlugin({
+      filename: "reviews.html",
+      template: path.resolve(__dirname, "src/pages/reviews.html"),
+      minify: { collapseWhitespace: false },
+      chunks: ["main", "reviews"]
+    }),
+    new HTMLWebpackPlugin({
+      filename: "review.html",
+      template: path.resolve(__dirname, "src/pages/review.html"),
+      minify: { collapseWhitespace: false },
+      chunks: ["main", "review"]
+    }),
+    new HTMLWebpackPlugin({
+      filename: "ready-homes.html",
+      template: path.resolve(__dirname, "src/pages/ready-homes.html"),
+      minify: { collapseWhitespace: false },
+      chunks: ["main", "ready-homes"]
+    }),
+    
     // ...PAGES.map(page => new HTMLWebpackPlugin({
         
     //   template: path.resolve(__dirname, `src/pages/${page}`),
@@ -169,6 +192,9 @@ module.exports = {
       {
         test: /\.html$/i,
         loader: "html-loader",
+  options: {
+    minimize: false,
+  },
       },
       {
         test: /\.css$/i,
@@ -181,6 +207,7 @@ module.exports = {
           },
           "vue-style-loader",
           "css-loader",
+          "postcss-loader",
         ],
       },
       {
@@ -196,6 +223,7 @@ module.exports = {
           },
           "css-loader",
           "sass-loader",
+          "postcss-loader",
         ],
       },
       {

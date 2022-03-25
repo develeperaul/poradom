@@ -5,6 +5,7 @@ import "../scss/main.scss";
 // import '../index.html'
 //plugins
 import Accordion from  './plugins/accardion'
+import "./plugins/swiper";
 class SideBar {
   constructor(){
     const menuSideBar = document.querySelector("#menu-sidebar");

@@ -1,13 +1,16 @@
+import ScrollPos  from '../plugins/scroll-pos'
 export default class Cards {
   constructor(name){
-    console.log(name)
     this.name = document.querySelector(`#cards_${name}`);
+    console.log(this.name)
+    
     if(this.name){
       const groupBtn = []
       const btns = []
         Array.prototype.slice.call(this.name.children).forEach((el,i)=>{
           el.setAttribute('id',`cards_${name}_${i+1}`)
           el.querySelector('.button__group').setAttribute('id',`group_${name}_${i+1}`)
+          new ScrollPos(`group_${name}_${i+1}`)
           const groupEl = el.querySelector(`#group_${name}_${i+1}`)
           btns.push(...Array.from(groupEl.children))
           groupBtn.push(el.querySelector(`#group_${name}_${i+1}`))

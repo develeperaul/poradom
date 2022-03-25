@@ -33,6 +33,7 @@ $pageColorActive: #0099e0;
 .swiper {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   & * .button {
     width: auto;
   }
