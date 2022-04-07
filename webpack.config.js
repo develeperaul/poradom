@@ -31,13 +31,20 @@ const PATHSPAGE = {
   assets: "assets/",
 };
 
-const PAGES_DIR = PATHS.src
+const PAGES_DIR = PATHS.src;
 const PAGES = fs
-  .readdirSync('./src/pages')
-  .filter(fileName => fileName.endsWith('.html'))
+  .readdirSync("./src/pages")
+  .filter((fileName) => fileName.endsWith(".html"));
 // const PAGES_DIR = `${PATHS.src}/pug/pages/`;
 // const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'));
-console.log(PAGES)
+let p = {};
+
+PAGES.forEach((page) => {
+  const name = page.replace(".html", "");
+  console.log({ [name]: `./js/pages/${name}.js` });
+  p = { [name]: `./js/pages/${name}.js`, ...p };
+});
+
 const fileName = (ext) =>
   isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
 const optimization = () => {
@@ -85,19 +92,22 @@ const optimization = () => {
 
   return confObj;
 };
-  
+
 module.exports = {
   context: path.resolve(__dirname, "src"),
   mode: "development",
   entry: {
     main: "./js/main.js",
     index: "./js/pages/index.js",
-    requisites: "./js/pages/requisites.js",
-    'series-projects': "./js/pages/series-projects.js",
-    series: "./js/pages/series.js",
-    reviews: "./js/pages/reviews.js",
-    review: "./js/pages/review.js",
-    'ready-homes': "./js/pages/ready-homes.js"
+    ...p,
+    // home: "./js/pages/home.js",
+    // requisites: "./js/pages/requisites.js",
+    // "series-projects": "./js/pages/series-projects.js",
+    // series: "./js/pages/series.js",
+    // reviews: "./js/pages/reviews.js",
+    // review: "./js/pages/review.js",
+    // "ready-homes": "./js/pages/ready-homes.js",
+    // contacts: "./js/pages/contacts.js",
   },
   output: {
     filename: `./js/${fileName("js")}`,
@@ -118,52 +128,61 @@ module.exports = {
       filename: "index.html",
       template: path.resolve(__dirname, "src/index.html"),
       minify: { collapseWhitespace: false },
-      chunks: ["main", "index"]
+      chunks: ["main", "index"],
     }),
-    new HTMLWebpackPlugin({
-      filename: "requisites.html",
-      template: path.resolve(__dirname, "src/pages/requisites.html"),
-      // minify: { collapseWhitespace: idProd },
-      minify: { collapseWhitespace: false },
-      chunks: ["main", "requisites"]
+    // new HTMLWebpackPlugin({
+    //   filename: "home.html",
+    //   template: path.resolve(__dirname, "src/pages/home.html"),
+    //   minify: { collapseWhitespace: false },
+    //   chunks: ["main", "home"],
+    // }),
+    // new HTMLWebpackPlugin({
+    //   filename: "requisites.html",
+    //   template: path.resolve(__dirname, "src/pages/requisites.html"),
+    //   // minify: { collapseWhitespace: idProd },
+    //   minify: { collapseWhitespace: false },
+    //   chunks: ["main", "requisites"],
+    // }),
+    // new HTMLWebpackPlugin({
+    //   filename: "series-projects.html",
+    //   template: path.resolve(__dirname, "src/pages/series-projects.html"),
+    //   minify: { collapseWhitespace: false },
+    //   chunks: ["main", "series-projects"],
+    // }),
+    // new HTMLWebpackPlugin({
+    //   filename: "series.html",
+    //   template: path.resolve(__dirname, "src/pages/series.html"),
+    //   minify: { collapseWhitespace: false },
+    //   chunks: ["main", "series"],
+    // }),
+    // new HTMLWebpackPlugin({
+    //   filename: "reviews.html",
+    //   template: path.resolve(__dirname, "src/pages/reviews.html"),
+    //   minify: { collapseWhitespace: false },
+    //   chunks: ["main", "reviews"],
+    // }),
+    // new HTMLWebpackPlugin({
+    //   filename: "review.html",
+    //   template: path.resolve(__dirname, "src/pages/review.html"),
+    //   minify: { collapseWhitespace: false },
+    //   chunks: ["main", "review"],
+    // }),
+    // new HTMLWebpackPlugin({
+    //   filename: "ready-homes.html",
+    //   template: path.resolve(__dirname, "src/pages/ready-homes.html"),
+    //   minify: { collapseWhitespace: false },
+    //   chunks: ["main", "ready-homes"],
+    // }),
+
+    // ),
+    ...PAGES.map((page) => {
+      return new HTMLWebpackPlugin({
+        template: path.resolve(__dirname, `src/pages/${page}`),
+        filename: page,
+        minify: { collapseWhitespace: false },
+        chunks: ["main", page.replace(".html", "")],
+      });
     }),
-    new HTMLWebpackPlugin({
-      filename: "series-projects.html",
-      template: path.resolve(__dirname, "src/pages/series-projects.html"),
-      minify: { collapseWhitespace: false },
-      chunks: ["main", "series-projects"]
-    }),
-    new HTMLWebpackPlugin({
-      filename: "series.html",
-      template: path.resolve(__dirname, "src/pages/series.html"),
-      minify: { collapseWhitespace: false },
-      chunks: ["main", "series"]
-    }),
-    new HTMLWebpackPlugin({
-      filename: "reviews.html",
-      template: path.resolve(__dirname, "src/pages/reviews.html"),
-      minify: { collapseWhitespace: false },
-      chunks: ["main", "reviews"]
-    }),
-    new HTMLWebpackPlugin({
-      filename: "review.html",
-      template: path.resolve(__dirname, "src/pages/review.html"),
-      minify: { collapseWhitespace: false },
-      chunks: ["main", "review"]
-    }),
-    new HTMLWebpackPlugin({
-      filename: "ready-homes.html",
-      template: path.resolve(__dirname, "src/pages/ready-homes.html"),
-      minify: { collapseWhitespace: false },
-      chunks: ["main", "ready-homes"]
-    }),
-    
-    // ...PAGES.map(page => new HTMLWebpackPlugin({
-        
-    //   template: path.resolve(__dirname, `src/pages/${page}`),
-    //   filename: page,
-    //   minify: {collapseWhitespace: idProd}
-    // })),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: `./css/${fileName("css")}`,
@@ -192,9 +211,9 @@ module.exports = {
       {
         test: /\.html$/i,
         loader: "html-loader",
-  options: {
-    minimize: false,
-  },
+        options: {
+          minimize: false,
+        },
       },
       {
         test: /\.css$/i,
