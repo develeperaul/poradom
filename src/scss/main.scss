@@ -37,6 +37,9 @@
   &__title {
     margin-bottom: 20px;
   }
+  &__subtitle {
+    margin-bottom: 20px;
+  }
 
   &__text {
     color: #b5b9be;
@@ -72,7 +75,7 @@
   &_sq {
     position: absolute;
     right: 8px;
-    bottom: 178px;
+    bottom: 183px;
 
     z-index: 10;
   }
@@ -131,52 +134,52 @@
   position: absolute;
   z-index: 10;
   right: 8px;
-  &:nth-child(1) {
-    bottom: 238px;
+  &:nth-child(4) {
+    bottom: 243px;
     right: -1000px;
   }
   &:nth-child(2) {
-    bottom: 298px;
+    bottom: 371px;
     right: -1000px;
   }
   &:nth-child(3) {
-    bottom: 358px;
+    bottom: 307px;
     right: -1000px;
   }
 }
 
 .children_close {
-  &:nth-child(1) {
-    bottom: 238px;
+  &:nth-child(4) {
+    bottom: 243px;
     right: 8px;
     animation-name: close;
     animation-fill-mode: both;
     animation-timing-function: ease;
     animation-duration: 3s;
-    animation-delay: 0.2s;
   }
   &:nth-child(2) {
-    bottom: 298px;
+    bottom: 371px;
     right: 8px;
     animation-name: close;
     animation-fill-mode: both;
     animation-timing-function: ease;
-    animation-delay: 0.1s;
+    animation-delay: 0.3s;
     animation-duration: 0.3s;
   }
   &:nth-child(3) {
-    bottom: 358px;
+    bottom: 307px;
     right: 8px;
     animation-name: close;
     animation-fill-mode: both;
     animation-timing-function: ease;
+    animation-delay: 0.2s;
     animation-duration: 0.3s;
   }
 }
 .children_active {
   position: absolute;
-  &:nth-child(1) {
-    bottom: 238px;
+  &:nth-child(4) {
+    bottom: 243px;
     right: -1000px;
     animation-name: open;
     animation-fill-mode: both;
@@ -184,22 +187,22 @@
     animation-duration: 0.3s;
   }
   &:nth-child(2) {
-    bottom: 298px;
-    right: -1000px;
-    animation-name: open;
-    animation-fill-mode: both;
-    animation-timing-function: ease-out;
-    animation-duration: 0.3s;
-    animation-delay: 0.1s;
-  }
-  &:nth-child(3) {
-    bottom: 358px;
+    bottom: 371px;
     right: -1000px;
     animation-name: open;
     animation-fill-mode: both;
     animation-timing-function: ease-out;
     animation-duration: 0.3s;
     animation-delay: 0.2s;
+  }
+  &:nth-child(3) {
+    bottom: 307px;
+    right: -1000px;
+    animation-name: open;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+    animation-duration: 0.3s;
+    animation-delay: 0.1s;
   }
 }
 

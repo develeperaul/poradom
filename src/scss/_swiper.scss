@@ -22,6 +22,9 @@ $pageColorActive: #0099e0;
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+  &_pb {
+    padding-bottom: 85px;
+  }
 }
 
 /* .swiper-slide img {
@@ -36,6 +39,9 @@ $pageColorActive: #0099e0;
   justify-content: flex-end;
   & * .button {
     width: auto;
+  }
+  &-wrapper_pb {
+    padding-bottom: 85px;
   }
 }
 // .carousel > .button {
@@ -112,6 +118,11 @@ $pageColorActive: #0099e0;
     padding-top: 9px;
     justify-content: center;
     margin-top: 20px;
+    &_position {
+      position: absolute;
+      bottom: 45px !important;
+      z-index: 10;
+    }
     .numb {
       color: #fff;
       font-size: 16px;

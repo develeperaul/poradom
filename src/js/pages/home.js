@@ -1,5 +1,4 @@
-import "../../index.html";
-
+import "../../pages/home.html";
 import "../plugins/animateNumber";
 import "../plugins/telmask";
 import "../plugins/validateform";

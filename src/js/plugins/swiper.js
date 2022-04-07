@@ -1,5 +1,5 @@
 import Swiper from "./swiper-bundle.min";
-function swiper(name, opts={}) {
+function swiper(name, opts = {}) {
   return new Swiper(name, {
     loop: true,
     // autoplay: {
@@ -7,38 +7,57 @@ function swiper(name, opts={}) {
     //   disableOnInteraction: false,
     // },
     spaceBetween: 16,
-            pagination: {
+    pagination: {
       el: ".swiper-numbs",
       bulletActiveClass: "numb-active",
       bulletClass: "numb",
       type: "bullets",
       clickable: true,
       renderBullet: function (index, className) {
-       return '<span class="' + className + '">' + (index + 1) + "</span>";
+        return '<span class="' + className + '">' + (index + 1) + "</span>";
       },
     },
-    ...opts
+    // pagination: {
+    //       el: ".swiper-pagination",
+    //       clickable: true,
+    //       renderBullet: function (index, className) {
+    //         return '<span class="' + className + '">' + (index + 1) + "</span>";
+    //       }
+    //     },
+    ...opts,
   });
 }
 export default class newSwiper extends swiper {}
-new newSwiper(".headerSwiper", {
-  spaceBetween: 8,
-});
+new newSwiper(".headerSwiper");
 new newSwiper(".readySwiper");
-new newSwiper(".newProject" , {
+new newSwiper(".hitProject", {
   spaceBetween: 16,
-      pagination: {
-      el: ".swiper-dots",
-      bulletActiveClass: "dot-active",
-      bulletClass: "dot",
-      type: "bullets",
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '"></span>';
-      },
-    }
+  pagination: {
+    el: ".swiper-dots",
+    bulletActiveClass: "dot-active",
+    bulletClass: "dot",
+    type: "bullets",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '"></span>';
+    },
+  },
 });
-
+new newSwiper(".newProject", {
+  spaceBetween: 16,
+  pagination: {
+    el: ".swiper-dots",
+    bulletActiveClass: "dot-active",
+    bulletClass: "dot",
+    type: "bullets",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '"></span>';
+    },
+  },
+});
+new newSwiper("#office", { pagination: {} });
 
 new newSwiper(".newsSwiper");
-new newSwiper(".buttonsSwiper",{pagination:{}});
+new newSwiper(".projects");
+new newSwiper(".buttonsSwiper", { pagination: {} });

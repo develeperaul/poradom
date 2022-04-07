@@ -1,0 +1,24 @@
+.contancts {
+  &__top {
+    margin-bottom: 30px;
+  }
+}
+.contact {
+  display: flex;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  &__slider {
+    margin-bottom: 20px;
+  }
+  &_space {
+    margin-right: 10px;
+  }
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+  &__map {
+    width: 100%;
+  }
+}
