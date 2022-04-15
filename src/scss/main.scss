@@ -16,6 +16,7 @@
 @import "hit";
 @import "settlements";
 @import "project";
+@import "features";
 @import "sculpture";
 @import "diagram";
 @import "news";
@@ -222,5 +223,13 @@
   to {
     opacity: 0;
     right: -1000px;
+  }
+}
+.neighbors {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+  & > img {
+    z-index: 10;
   }
 }

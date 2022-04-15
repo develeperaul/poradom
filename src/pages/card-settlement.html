@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poradom</title>
+  </head>
+
+  <body>
+    <div class="top-arrow" id="arrow">
+      <div class="arrow-icon">
+        <svg
+          width="14"
+          height="8"
+          viewBox="0 0 14 8"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M13 7L7 1L1 7" stroke="white" stroke-linecap="round" />
+        </svg>
+      </div>
+    </div>
+    <section class="sidebar">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__top">
+            <img src="../img/icons/logo1.svg" alt="" />
+            <button class="menu-trigger active" id="menu-sidebar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="sidebar__list accordion" id="sidebar-accordion">
+          <h3 class="">Покупателям</h3>
+          <div class="tabs__text" id="tabs-1" style="height: 0px">
+            <a href="#"> Проектирование </a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+          </div>
+          <h3 class="">Стандарты</h3>
+          <div class="tabs__text" id="tabs-2" style="height: 0px">
+            <a href="#">Проектирование</a>
+          </div>
+          <h3 class="">О застройщике</h3>
+          <div class="tabs__text" id="tabs-3" style="height: 0px">
+            <a href="#">Проектирование</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <header class="header">
+      <div class="header__top header__top_absolute">
+        <img src="../img/icons/logo1.svg" alt="" />
+        <button class="menu-trigger" id="menu-header">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <a
+        href="tg://resolve?domain=username"
+        class="pie pie_big pie_blue drop__children children"
+      >
+        <img src="../img/icons/telega.svg" alt="" />
+      </a>
+      <a
+        href="https://wa.me/799999999"
+        class="pie pie_big pie_blue drop__children children"
+      >
+        <img src="../img/icons/whatsapp.svg" alt="" />
+      </a>
+      <a
+        href="tel:+799999999"
+        class="pie pie_big pie_blue drop__children children"
+      >
+        <img src="../img/icons/phone.svg" alt="" />
+      </a>
+      <span class="pie pie_big pie_accent drop drop_sq" id="drop">
+        <span></span><span></span><span></span><span></span>
+      </span>
+      <div class="swiper headerSwiper">
+        <div class="swiper-wrapper swiper-wrapper_pb">
+          <div class="swiper-slide swiper-slide_pb header__bottom">
+            <div class="carousel">
+              <div></div>
+              <h2 class="carousel__title">
+                Новый проект <br />
+                со вторым <br />
+                светом
+              </h2>
+              <p class="carousel__text">
+                Запишитесь на экскурсию, <br />
+                чтобы увидеть это первыми!
+              </p>
+              <buttton class="carousel__btn button button_accent"
+                >Записаться на экскурсию</buttton
+              >
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide_pb header__bottom">
+            <div class="carousel">
+              <div></div>
+              <h2 class="carousel__title">
+                Новый проект <br />
+                со вторым <br />
+                светом
+              </h2>
+              <p class="carousel__text">
+                Запишитесь на экскурсию, <br />
+                чтобы увидеть это первыми!
+              </p>
+              <buttton class="carousel__btn button button_accent"
+                >Записаться на экскурсию</buttton
+              >
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide_pb header__bottom">
+            <div class="carousel">
+              <div></div>
+              <h2 class="carousel__title">
+                Новый проект <br />
+                со вторым <br />
+                светом
+              </h2>
+              <p class="carousel__text">
+                Запишитесь на экскурсию, <br />
+                чтобы увидеть это первыми!
+              </p>
+              <buttton class="carousel__btn button button_accent"
+                >Записаться на экскурсию</buttton
+              >
+            </div>
+          </div>
+        </div>
+        <div class="swiper-numbs swiper-numbs_position"></div>
+      </div>
+    </header>
+    <main>
+      <section class="video">
+        <div class="container">
+          <div class="section__crumbs bread-crumbs__wrapper">
+            <a href="#" class="bread-crumbs bread-crumbs__home"></a>
+            <div class="bread-crumbs bread-crumbs__page">
+              <a href="#">Коттеджные посёлки</a>
+            </div>
+          </div>
+          <div class="location">
+            <div class="location__image">
+              <img src="../img/icons/location.svg" alt="" />
+            </div>
+            <h5 class="location__title">Нагаева</h5>
+          </div>
+          <h2>Девичья Гора</h2>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="section__top">
+            <h2 class="section__title">План посёлка «Девичья Гора»</h2>
+          </div>
+          <div class="section__btns">
+            <div id="reviews-btns" class="button__group">
+              <a href="#" class="button__round button__round_active">Общий</a>
+              <a href="#" class="button__round">1 очередь</a>
+              <a href="#" class="button__round">2 очередь</a>
+              <a href="#" class="button__round">3 очередь</a>
+              <a href="#" class="button__round">4 очередь</a>
+              <a href="#" class="button__round">5 очередь</a>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="markers">
+            <div class="marker">
+              <div class="marker__pie marker__pie_loose"></div>
+              <p class="marker__text">свободные участки</p>
+            </div>
+            <div class="marker">
+              <div class="marker__pie marker__pie_sold"></div>
+              <p class="marker__text">проданные участки</p>
+            </div>
+            <div class="marker">
+              <div class="marker__pie marker__pie_booked"></div>
+              <p class="marker__text">забронированы</p>
+            </div>
+            <div class="marker">
+              <div class="marker__pie marker__pie_ready"></div>
+              <p class="marker__text">готовые дома</p>
+            </div>
+          </div>
+          <form action="#" class="form" id="special-offer">
+            <h4 class="form__title">
+              Узнавать первым о спецпредложениях и акциях, домах и участках
+            </h4>
+            <div class="text-field">
+              <input
+                data-special-offer=""
+                class="text-field__input tel"
+                type="text"
+                name="login"
+                id="login"
+                placeholder="Введите ваш телефон"
+              />
+            </div>
+            <label class="checkbox-other">
+              <input data-special-offer="" type="checkbox" />
+              <p>
+                Даю согласие на обработку
+                <a href="#" class="checkbox__link"> персональных данных </a>
+              </p>
+            </label>
+
+            <button
+              type="submit"
+              id="special-offer-btn"
+              class="button button_accent"
+            >
+              Отправить
+            </button>
+          </form>
+        </div>
+      </section>
+      <section class="features">
+        <!-- <div class="features-content">
+          <span class="features__line-top"></span>
+          <div class="features__number">
+            <span class="number">03</span>
+            <h4 class="features__bottom-title">Особенности посёлка</h4>
+          </div>
+        </div> -->
+        <div class="container">
+          <div class="features__top">
+            <div class="features__line-top"></div>
+            <span class="number">01</span>
+            <h4 class="features__title">
+              Особенности <br />
+              посёлка
+            </h4>
+            <img
+              src="../img/icons/features-settlement.svg"
+              alt=""
+              class="features__icon"
+            />
+          </div>
+          <div class="features__bottom">
+            <div class="hit__swiper swiper featuresSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                    <h2 class="title">
+                      <span> готовые </span>
+                      <br />
+                      <span> дома </span>
+                    </h2>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-next"></div>
+              <div class="swiper-prev"></div>
+              <div class="swiper-numbs"></div>
+            </div>
+            <div class="features__cards">
+              <div class="features__card">
+                <div class="features__card-title">22 км</div>
+                <div class="features__card-text">
+                  от Монумента <br />
+                  Дружбы
+                </div>
+              </div>
+              <div class="features__card">
+                <div class="features__card-title">18 мин</div>
+                <div class="features__card-text">
+                  от центра <br />
+                  города
+                </div>
+              </div>
+              <div class="features__card">
+                <div class="features__card-title">60 га</div>
+                <div class="features__card-text">
+                  площадь <br />
+                  посёлка
+                </div>
+              </div>
+              <div class="features__card">
+                <div class="features__card-title">2012</div>
+                <div class="features__card-text">
+                  год начала <br />
+                  строительства
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="features">
+        <div class="container">
+          <div class="features__top">
+            <span class="number">02</span>
+            <h4 class="features__title">
+              Пора знать своих <br />
+              будущих соседей
+            </h4>
+            <img
+              src="../img/icons/project.svg"
+              alt=""
+              class="features__icon features__icon_b-50"
+            />
+          </div>
+        </div>
+        <div class="neighbors">
+          <img src="../img/img.png" alt="" width="283" height="190" />
+        </div>
+        <div class="container">
+          <div class="features__bottom">
+            <h4>Посмотрите кто уже выбрал этот поселок</h4>
+            <div class="survey__wrapper">
+              <div class="popup">Спасибо. Ваш голос учтён</div>
+              <div class="survey__list survey__notactive" id="survey">
+                <div class="card-survey">
+                  <div
+                    class="card-survey__progress"
+                    data-w="20"
+                    style="width: 20%"
+                  ></div>
+                  <div class="card-survey__wrapper">
+                    <h5>молодые семьи, планирующие детей</h5>
+                    <span class="card-survey__numb"> 20% </span>
+                  </div>
+                </div>
+                <div class="card-survey">
+                  <div
+                    class="card-survey__progress"
+                    data-w="50"
+                    style="width: 15%"
+                  ></div>
+                  <div class="card-survey__wrapper">
+                    <h5>взрослые семейные пары</h5>
+                    <span class="card-survey__numb"> 15% </span>
+                  </div>
+                </div>
+                <div class="card-survey">
+                  <div
+                    class="card-survey__progress"
+                    data-w="26"
+                    style="width: 10%"
+                  ></div>
+                  <div class="card-survey__wrapper">
+                    <h5>семьи с детьми</h5>
+                    <span class="card-survey__numb"> 10% </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="news">
+        <div class="news__number-content">
+          <span class="news__number number">04</span>
+        </div>
+        <div class="container">
+          <div class="news__top">
+            <h2 class="title news__title">
+              <span>посёлок</span>
+              <br />
+              <span>в новостях</span>
+            </h2>
+            <span></span>
+          </div>
+          <div class="swiper newsSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card-flat">
+                  <img src="../img/main.png" alt="" class="card-flat__image" />
+                  <div class="card-flat__container">
+                    <h6 class="card-flat__date">25.02.2022</h6>
+
+                    <h4 class="card-flat__text">
+                      Открыто бронирование таунхаусов второй очереди в
+                      Нагаевском парке
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-numbs"></div>
+          </div>
+          <div class="news__botton">
+            <a href="#">Все новости</a>
+          </div>
+        </div>
+      </section>
+      <section class="application">
+        <div class="container">
+          <form action="#" class="form" id="special-offer">
+            <h4 class="form__title">
+              Узнавать первым о спецпредложениях и акциях, домах и участках
+            </h4>
+            <div class="text-field">
+              <input
+                data-special-offer
+                class="text-field__input tel"
+                type="text"
+                name="login"
+                id="login"
+                placeholder="Введите ваш телефон"
+              />
+            </div>
+            <label class="checkbox-other">
+              <input data-special-offer type="checkbox" />
+              <p>
+                Даю согласие на обработку
+                <a href="#" class="checkbox__link"> персональных данных </a>
+              </p>
+            </label>
+
+            <button
+              type="submit"
+              id="special-offer-btn"
+              class="button button_accent"
+            >
+              Отправить
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!--footer start-->
+    <footer class="footer">
+      <div class="container">
+        <div class="accordion" id="accordion">
+          <h3 class="">Покупателям <span class="accordion__line"></span></h3>
+          <div class="tabs__text" id="tabs-1" style="height: 0px">
+            <a href="#"> Проектирование </a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+          </div>
+          <h3 class="">Стандарты <span class="accordion__line"></span></h3>
+          <div class="tabs__text" id="tabs-2" style="height: 0px">
+            <a href="#">Проектирование</a>
+          </div>
+          <h3 class="">О застройщике <span class="accordion__line"></span></h3>
+          <div class="tabs__text" id="tabs-3" style="height: 0px">
+            <a href="#">Проектирование</a>
+          </div>
+          <h3>Контакты</h3>
+
+          <div class="tabs__text" id="tabs-4" style="height: 0px">
+            <a href="#">Проектирование</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__line"></div>
+      <div class="container">
+        <div class="footer__content">
+          <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
+          <div class="footer__socials social">
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/youtube.svg" alt="" class="social__icon" />
+            </a>
+            <a href="#" class="pie pie_primary social__link_s">
+              <img
+                src="../img/icons/instagram.svg"
+                alt=""
+                class="social__icon"
+              />
+            </a>
+            <a href="#" class="pie pie_primary social__link_s">
+              <img
+                src="../img/icons/facebook.svg"
+                alt=""
+                class="social__icon"
+              />
+            </a>
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+            </a>
+          </div>
+          <div class="footer__contact">
+            <address>г.Уфа, ул.Мустая Каримова, д.16</address>
+            <a href="tell:73472008719">+7 (347) 200-87-19</a>
+          </div>
+          <p class="development">
+            Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!--footer end-->
+  </body>
+</html>

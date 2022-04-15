@@ -1,0 +1,131 @@
+.features {
+  position: relative;
+  background-color: $secondary;
+  padding-bottom: 20px;
+  color: #ffffff;
+  &__top {
+    position: relative;
+    margin-left: -7px;
+    padding-top: 40px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 26px;
+  }
+  &__title {
+    margin-left: 23px;
+  }
+  &__icon {
+    position: absolute;
+    right: 0;
+    &_b {
+      &-50 {
+        bottom: -50%;
+      }
+    }
+  }
+  &__line {
+    &-top {
+      position: absolute;
+      background-color: $primary;
+      top: 0;
+      left: 18px;
+      width: 1px;
+      height: 40px;
+    }
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  &__card {
+    border-radius: 4px;
+    background-color: $primary;
+    text-align: center;
+    padding-top: 19px;
+    padding-bottom: 14px;
+    &-title {
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 120%;
+      margin-bottom: 4px;
+    }
+    &-text {
+      color: #e5e7ea;
+    }
+  }
+  // &__line {
+  //   &-top,
+  //   &-bottom {
+  //     position: absolute;
+  //     background-color: $primary;
+  //   }
+  //   &-top {
+  //     top: 0;
+  //     left: 20px;
+  //     width: 1px;
+  //     height: 40px;
+  //   }
+  //   &-bottom {
+  //     bottom: 0;
+  //     left: 20px;
+  //     width: 1px;
+  //     height: 160px;
+  //   }
+  // }
+  // &__number {
+  //   position: absolute;
+  //   display: flex;
+  //   align-items: center;
+  //   left: 7px;
+  //   top: 40px;
+  // }
+
+  // &__bottom {
+  //   &-title {
+  //     padding-left: 23px;
+  //     padding-right: 4px;
+  //     color: #fff;
+  //     margin-right: 12px;
+  //     z-index: 11;
+  //     &:first-child {
+  //       transform: translateY(5px);
+  //     }
+  //   }
+  // }
+
+  // &__number-content {
+  //   position: absolute;
+  //   height: 100%;
+  //   width: 100%;
+  //   z-index: 9;
+  // }
+  // &__top {
+  //   position: relative;
+  //   display: flex;
+  //   justify-content: space-between;
+  // }
+  // &__title {
+  //   z-index: 9;
+  //   & > span:first-child {
+  //     padding-top: 9px;
+  //   }
+  //   & > span {
+  //     padding-right: 13px;
+  //     padding-left: 10px;
+  //   }
+  // }
+  // &__top {
+  //   padding-top: 40px;
+  //   display: flex;
+  //   justify-content: end;
+  // }
+  // &__icon {
+  // }
+  // &__bottom {
+  //   padding-left: 21px;
+  //   transform: translateY(-20px);
+  // }
+  // &__image {
+  // }
+}

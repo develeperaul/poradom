@@ -37,14 +37,14 @@ const PAGES = fs
   .filter((fileName) => fileName.endsWith(".html"));
 // const PAGES_DIR = `${PATHS.src}/pug/pages/`;
 // const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'));
-let p = {};
 
+let p = {};
 PAGES.forEach((page) => {
   const name = page.replace(".html", "");
   console.log({ [name]: `./js/pages/${name}.js` });
   p = { [name]: `./js/pages/${name}.js`, ...p };
 });
-
+console.log(PAGES);
 const fileName = (ext) =>
   isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
 const optimization = () => {

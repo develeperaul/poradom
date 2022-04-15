@@ -7,6 +7,7 @@ import "./plugins/swiper";
 //plugins
 import Accordion from "./plugins/accardion";
 import "./plugins/swiper";
+console.log(Accordion);
 const scrollTop = () => window.scrollTo(pageYOffset, 0);
 const arrow = document.querySelector("#arrow");
 arrow.onclick = scrollTop;

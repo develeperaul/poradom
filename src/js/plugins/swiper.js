@@ -61,3 +61,9 @@ new newSwiper("#office", { pagination: {} });
 new newSwiper(".newsSwiper");
 new newSwiper(".projects");
 new newSwiper(".buttonsSwiper", { pagination: {} });
+new newSwiper(".featuresSwiper", {
+  navigation: {
+    nextEl: ".swiper-next",
+    prevEl: ".swiper-prev",
+  },
+});

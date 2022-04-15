@@ -59,6 +59,7 @@
     }
   }
   &__round {
+    white-space: nowrap;
     border-radius: 100px;
     padding: 6px 13px;
     font-size: 12px;
@@ -145,7 +146,8 @@
   font-family: DinCyLt, sans-serif;
   color: $number;
   font-size: 64px;
-  line-height: 82px;
+  // line-height: 82px;
+  line-height: 100%;
   letter-spacing: -0.08em;
   z-index: 9;
 }
@@ -175,6 +177,9 @@
   }
   &_blue {
     background: #0099e0;
+  }
+  &_white {
+    background: #fff;
   }
   &_small {
     width: 24px;
@@ -805,6 +810,61 @@
   }
   100% {
     opacity: 0;
+  }
+}
+
+.video {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  background: $secondary url("../img/video_bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+
+.markers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 14px;
+  // column-gap: 18px;
+}
+.marker {
+  display: flex;
+  align-items: center;
+  &__pie {
+    width: 14px;
+    height: 14px;
+    border-radius: 9999px;
+    margin-right: 8px;
+    &_loose {
+      background-color: #58b368;
+    }
+    &_sold {
+      background-color: #ed1556;
+    }
+    &_booked {
+      background-color: #eeac0d;
+    }
+    &_ready {
+      background-color: #0099e0;
+    }
+  }
+  &__text {
+    white-space: nowrap;
+  }
+}
+
+.navigation {
+  &__card {
+    position: relative;
+    width: 100%;
+    & > img {
+      width: 100%;
+    }
+    &-title {
+      position: absolute;
+    }
   }
 }
 
