@@ -15,24 +15,30 @@
   &__content {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    margin-bottom: 20px;
   }
   &__title {
     font-family: AlienscowsEL;
     color: $brown;
+    font-size: 36px;
+    line-height: 110%;
     letter-spacing: -0.4px;
-    margin-bottom: 20px;
     text-transform: uppercase;
+    z-index: 10;
     &-wrapper {
       flex-shrink: 0;
       //   position: relative;
     }
     &-image {
-      //   position: absolute;
-      width: 83px;
-      height: 83px;
-      border-radius: 50%;
+      position: absolute;
+      height: 100%;
+      right: 0;
+      // width: 83px;
+      // height: 83px;
+      // border-radius: 50%;
       display: block;
-      clip-path: polygon(9px 0%, 100% 0%, 100% 100%, 9px 100%);
+      // clip-path: polygon(9px 0%, 100% 0%, 100% 100%, 9px 100%);
     }
   }
 

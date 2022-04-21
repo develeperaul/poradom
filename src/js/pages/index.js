@@ -31,7 +31,6 @@ class Survey {
             //   }
             // }
             if (!this.getActiveClass) {
-              console.log(this.getActiveClass);
               if (!el.classList.contains("card-survey_first")) {
                 document.querySelectorAll(".card-survey").forEach((item) => {
                   if (item.classList.contains("card-survey_first")) {

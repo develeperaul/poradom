@@ -55,10 +55,10 @@
         </div>
       </div>
     </section>
-    <header class="header">
-      <div class="header__top header__top_absolute">
-        <img src="../img/icons/logo1.svg" alt="" />
-        <button class="menu-trigger" id="menu-header">
+    <header class="header flex-column">
+      <div class="header__top header__top_white container">
+        <img src="../img/icons/logo3.svg" alt="" />
+        <button class="menu-trigger menu-trigger_primary" id="menu-header">
           <span></span>
           <span></span>
           <span></span>
@@ -86,53 +86,304 @@
       <span class="pie pie_big pie_accent drop drop_sq" id="drop">
         <span></span><span></span><span></span><span></span>
       </span>
-      <div class="swiper headerSwiper">
-        <div class="swiper-wrapper swiper-wrapper_pb">
-          <div class="swiper-slide swiper-slide_pb header__bottom">
-            <div class="carousel">
-              <div></div>
-              <h2 class="carousel__title">
-                Новый проект <br />
-                со вторым <br />
-                светом
-              </h2>
-              <p class="carousel__text">
-                Запишитесь на экскурсию, <br />
-                чтобы увидеть это первыми!
+      <div class="header__bottom project-header flex-grow">
+        <div class="container h-full flex-column space-between">
+          <div class="project-header__top">
+            <h2 class="m-b--20">Кирпичный Стандарт 105</h2>
+            <div class="video__play">
+              <div class="pie pie__play">
+                <img
+                  src="../img/icons/play.svg"
+                  alt=""
+                  style="width: 18px; margin-left: 24px"
+                />
+              </div>
+
+              <p class="video__play-text">
+                Видеообзор <br />
+                проекта
               </p>
-              <buttton class="carousel__btn button button_accent"
-                >Записаться на экскурсию</buttton
-              >
             </div>
           </div>
-          <div class="swiper-slide swiper-slide_pb header__bottom">
-            <div class="carousel">
-              <div></div>
-              <h2 class="carousel__title">
-                Новый проект <br />
-                со вторым <br />
-                светом
-              </h2>
-              <p class="carousel__text">
-                Запишитесь на экскурсию, <br />
-                чтобы увидеть это первыми!
-              </p>
-              <buttton class="carousel__btn button button_accent"
-                >Записаться на экскурсию</buttton
-              >
+          <div class="project-header__bottom">
+            <buttton class="button button_accent m-b--10"
+              >Записаться на экскурсию</buttton
+            >
+            <buttton class="button button_blue">Рассчитать ипотеку</buttton>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="wrapper">
+      <div class="popup">Спасибо. Ваш голос учтён</div>
+      <section class="section">
+        <div class="container">
+          <div class="section__top">
+            <h2 class="section__title">Визуализация проекта</h2>
+          </div>
+          <div class="section__btns">
+            <div id="reviews-btns" class="button__group">
+              <a href="#" class="button__round button__round_active">Общий</a>
+              <a href="#" class="button__round">1 очередь</a>
+              <a href="#" class="button__round">2 очередь</a>
+              <a href="#" class="button__round">3 очередь</a>
+              <a href="#" class="button__round">4 очередь</a>
+              <a href="#" class="button__round">5 очередь</a>
             </div>
           </div>
-          <div class="swiper-slide swiper-slide_pb header__bottom">
-            <div class="carousel">
-              <div></div>
-              <h2 class="carousel__title">
-                Новый проект <br />
-                со вторым <br />
-                светом
-              </h2>
-              <p class="carousel__text">
-                Запишитесь на экскурсию, <br />
-                чтобы увидеть это первыми!
+          <div class="swiper featuresSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="navigation__card">
+                  <img src="../img/img.png" alt="" />
+                  <p class="section__text">Подпись фотографии</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="navigation__card">
+                  <img src="../img/img.png" alt="" />
+                  <p class="section__text">Подпись фотографии</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-next"></div>
+            <div class="swiper-prev"></div>
+            <div class="swiper-numbs"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="section__top">
+            <h2 class="section__title">Базовая планировка</h2>
+          </div>
+          <div class="section__bottom">
+            <div class="plan__item">
+              <img src="../img/plan.png" alt="" class="plan__item-img" />
+              <p class="section__text plan__item-text">План первого этажа</p>
+            </div>
+            <div class="plan__item">
+              <img src="../img/plan.png" alt="" class="plan__item-img" />
+              <p class="section__text plan__item-text">План первого этажа</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="features">
+        <!-- <div class="features-content">
+          <span class="features__line-top"></span>
+          <div class="features__number">
+            <span class="number">03</span>
+            <h4 class="features__bottom-title">Особенности посёлка</h4>
+          </div>
+        </div> -->
+        <div class="container">
+          <div class="features__top">
+            <div class="features__line-top"></div>
+            <span class="number">01</span>
+            <h4 class="features__title">
+              Особенности <br />
+              дома
+            </h4>
+            <img
+              src="../img/icons/ready.svg"
+              alt=""
+              class="features__icon"
+              width="75"
+              height="51"
+            />
+          </div>
+          <div class="features__bottom">
+            <div class="hit__swiper swiper featuresSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                    <div class="swiper-slide__title_ty--30">
+                      <h2 class="title swiper-slide__title">
+                        <span> готовые </span>
+                        <br />
+                        <span> дома </span>
+                      </h2>
+                      <p class="swiper-slide__text">
+                        Отличное дополнение фасада и место, где можно любоваться
+                        рассветами и закатами, отдохнуть, сидя в кресле с книгой
+                        и чашкой ароматного чая
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                    <div class="swiper-slide__title_ty--30">
+                      <h2 class="title swiper-slide__title">
+                        <span> готовые </span>
+                        <br />
+                        <span> дома </span>
+                      </h2>
+                      <p class="swiper-slide__text">
+                        Отличное дополнение фасада и место, где можно любоваться
+                        рассветами и закатами, отдохнуть, сидя в кресле с книгой
+                        и чашкой ароматного чая
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-next"></div>
+              <div class="swiper-prev"></div>
+              <div class="swiper-numbs swiper-numbs_mt--10"></div>
+            </div>
+            <form action="#" class="form" id="special-offer">
+              <h4 class="form__title">
+                Узнавать первым о спецпредложениях и акциях, домах и участках
+              </h4>
+              <div class="text-field">
+                <input
+                  data-special-offer
+                  class="text-field__input tel"
+                  type="text"
+                  name="login"
+                  id="login"
+                  placeholder="Введите ваш телефон"
+                />
+              </div>
+              <label class="checkbox-other">
+                <input data-special-offer type="checkbox" />
+                <p>
+                  Даю согласие на обработку
+                  <a href="#" class="checkbox__link"> персональных данных </a>
+                </p>
+              </label>
+
+              <button
+                type="submit"
+                id="special-offer-btn"
+                class="button button_accent"
+              >
+                Отправить
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="features">
+        <div class="container">
+          <div class="features__top">
+            <span class="number">02</span>
+            <h4 class="features__title">
+              Комплектация <br />
+              дома
+            </h4>
+            <img
+              src="../img/icons/ready.svg"
+              alt=""
+              class="features__icon"
+              width="75"
+              height="51"
+            />
+          </div>
+          <div class="section__btns">
+            <div id="reviews-btns" class="button__group">
+              <a href="#" class="button__round button__round_active">Общий</a>
+              <a href="#" class="button__round">1 очередь</a>
+              <a href="#" class="button__round">2 очередь</a>
+              <a href="#" class="button__round">3 очередь</a>
+              <a href="#" class="button__round">4 очередь</a>
+              <a href="#" class="button__round">5 очередь</a>
+            </div>
+          </div>
+          <div class="features__bottom">
+            <div class="hit__swiper swiper featuresSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                    <div class="swiper-slide__title_ty--30">
+                      <h2 class="title title_primary swiper-slide__title">
+                        <span class=""> готовые </span>
+                        <br />
+                        <span> дома </span>
+                      </h2>
+                      <ul class="swiper-slide__list">
+                        <li class="swiper-slide__item">Диаметр</li>
+                        <li class="swiper-slide__item">Длина</li>
+                        <li class="swiper-slide__item">Бетон</li>
+                        <li class="swiper-slide__item">Противоморозные</li>
+                        <li class="swiper-slide__item">Прогрев</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                    <div class="swiper-slide__title_ty--30">
+                      <h2 class="title swiper-slide__title">
+                        <span> готовые </span>
+                        <br />
+                        <span> дома </span>
+                      </h2>
+                      <ul class="swiper-slide__list">
+                        <li class="swiper-slide__item">Диаметр</li>
+                        <li class="swiper-slide__item">Длина</li>
+                        <li class="swiper-slide__item">Бетон</li>
+                        <li class="swiper-slide__item">Противоморозные</li>
+                        <li class="swiper-slide__item">Прогрев</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-next"></div>
+              <div class="swiper-prev"></div>
+              <div class="swiper-numbs swiper-numbs_mt--10"></div>
+            </div>
+            <div class="communications">
+              <h4 class="communications__title">Пакет коммуникаций</h4>
+              <p class="communications__text">
+                Наши специалисты выяснили, что при самостоятельном подключении
+                коммуникаций вы заполните более 80 форм документов и совершите
+                более 10 визитов в различные инстанции
+              </p>
+              <div class="communications__cards">
+                <div class="communications__card">
+                  <img
+                    src="../img/icons/water-system.svg"
+                    alt=""
+                    class="communications__card-icon"
+                  />
+                  <h5 class="communications__card-title">Водоснабжение</h5>
+                </div>
+                <div class="communications__card">
+                  <img
+                    src="../img//icons/light.svg"
+                    alt=""
+                    class="communications__card-icon"
+                  />
+                  <h5 class="communications__card-title">Электроснабжение</h5>
+                </div>
+                <div class="communications__card">
+                  <img
+                    src="../img/icons/gas.svg"
+                    alt=""
+                    class="communications__card-icon"
+                  />
+                  <h5 class="communications__card-title">Газоснабжение</h5>
+                </div>
+                <div class="communications__card">
+                  <img
+                    src="../img/icons/sewage.svg"
+                    alt=""
+                    class="communications__card-icon"
+                  />
+                  <h5 class="communications__card-title">Канализация</h5>
+                </div>
+              </div>
+              <p class="communications__text">
+                Оставьте заявку и узнайте стоимость подключения пакета
+                коммуникаций
               </p>
               <buttton class="carousel__btn button button_accent"
                 >Записаться на экскурсию</buttton
@@ -140,10 +391,209 @@
             </div>
           </div>
         </div>
-        <div class="swiper-numbs swiper-numbs_position"></div>
-      </div>
-    </header>
-    <main></main>
+      </section>
+      <section class="interior">
+        <div class="container"></div>
+      </section>
+      <section class="section settlements">
+        <div class="container">
+          <div class="settlements__top -r-gap">
+            <h2 class="title settlements__title">
+              <span> Внутренняя </span>
+              <br />
+              <span>отделка дома</span>
+            </h2>
+            <img
+              src="../img/icons/ready.svg"
+              class="settlements__icon"
+              alt=""
+            />
+            <div class="settlements-content">
+              <span class="settlements__number number">03</span>
+            </div>
+            <img src="../img/people.png" alt="" width="155" height="216" />
+          </div>
+          <div class="settlements__bottom content-round">
+            <p class="content-round__title">
+              Собственная студия дизайна и чистовой отделки ПОРАДОМ предлагает
+              на выбор 3 пакета разработки будущего интерьера, созданного
+              дизайнером-архитектором с учетом ваших желаний
+            </p>
+          </div>
+
+          <div class="section__btns">
+            <div id="reviews-btns" class="button__group">
+              <a href="#" class="button__round button__round_active">Общий</a>
+              <a href="#" class="button__round">1 очередь</a>
+              <a href="#" class="button__round">2 очередь</a>
+              <a href="#" class="button__round">3 очередь</a>
+              <a href="#" class="button__round">4 очередь</a>
+              <a href="#" class="button__round">5 очередь</a>
+            </div>
+          </div>
+
+          <div class="swiper featuresSwiper m-b--30">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="navigation__card">
+                  <img src="../img/img.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="navigation__card">
+                  <img src="../img/img.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-next"></div>
+            <div class="swiper-prev"></div>
+            <div class="swiper-numbs"></div>
+          </div>
+          <buttton class="button button_accent m-b--10"
+            >Записаться на экскурсию</buttton
+          >
+          <buttton class="button button_blue">Студия ПОРАДОМ</buttton>
+        </div>
+      </section>
+      <section class="diagram">
+        <div class="diagram__number-content">
+          <span class="diagram__number number">04</span>
+        </div>
+        <div class="container">
+          <div class="diagram__top">
+            <h2 class="title diagram__title">
+              <span>купить легко</span>
+            </h2>
+            <p class="diagram__text">
+              Индивидуальный подход — принцип работы ПОРАДОМ
+            </p>
+          </div>
+          <div class="diagram__accordion accordion" id="card-project">
+            <h3 class="">Оплата 100% <span class="accordion__line"></span></h3>
+            <div class="tabs__text" id="tabs-1" style="height: 0px">
+              <a href="#"> Проектирование </a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="">
+              Беспроцентная рассрочка <span class="accordion__line"></span>
+            </h3>
+            <div class="tabs__text" id="tabs-2" style="height: 0px">
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="">Ипотека <span class="accordion__line"></span></h3>
+            <div class="tabs__text" id="tabs-3" style="height: 0px">
+              <a href="#">Проектирование</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="section__top">
+            <h2 class="section__title">Фото готовых домов</h2>
+          </div>
+          <div class="swiper featuresSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="navigation__card">
+                  <img src="../img/img.png" alt="" />
+                  <p class="section__text">Подпись фотографии</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="navigation__card">
+                  <img src="../img/img.png" alt="" />
+                  <p class="section__text">Подпись фотографии</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-next"></div>
+            <div class="swiper-prev"></div>
+            <div class="swiper-numbs"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="section__top">
+            <h2 class="section__title">Другие проекты</h2>
+          </div>
+          <div class="swiper readySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper hitProject">
+                  <div class="swiper-wrapper">
+                    <div class="label-wrapper swiper-slide">
+                      <div class="label">
+                        <div class="label__text"><span>Хит продаж</span></div>
+                        <img src="../img/icons/label-blue.svg" alt="" />
+                      </div>
+                      <img src="../img/main.png" alt="" class="card__image" />
+                    </div>
+                    <div class="label-wrapper swiper-slide">
+                      <div class="label">
+                        <div class="label__text"><span>Хит продаж</span></div>
+                        <img src="../img/icons/label-blue.svg" alt="" />
+                      </div>
+                      <img src="../img/main.png" alt="" class="card__image" />
+                    </div>
+                  </div>
+                  <div class="card__container">
+                    <div class="card__container_l">
+                      <h5 class="card__address">Спецпроект</h5>
+                      <div class="card__content">
+                        <h4 class="card__title">Скай Лайт 165</h4>
+                      </div>
+                    </div>
+                    <div class="card__container_absolute">
+                      <div class="swiper-dots"></div>
+                    </div>
+                    <div class="swiper-numbs"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper hitProject">
+                  <div class="swiper-wrapper">
+                    <div class="label-wrapper swiper-slide">
+                      <div class="label">
+                        <div class="label__text"><span>Хит продаж</span></div>
+                        <img src="../img/icons/label-blue.svg" alt="" />
+                      </div>
+                      <img src="../img/main.png" alt="" class="card__image" />
+                    </div>
+                    <div class="label-wrapper swiper-slide">
+                      <div class="label">
+                        <div class="label__text"><span>Хит продаж</span></div>
+                        <img src="../img/icons/label-blue.svg" alt="" />
+                      </div>
+                      <img src="../img/main.png" alt="" class="card__image" />
+                    </div>
+                  </div>
+                  <div class="card__container">
+                    <div class="card__container_l">
+                      <h5 class="card__address">Спецпроект</h5>
+                      <div class="card__content">
+                        <h4 class="card__title">Скай Лайт 165</h4>
+                      </div>
+                    </div>
+                    <div class="card__container_absolute">
+                      <div class="swiper-dots"></div>
+                    </div>
+                    <div class="swiper-numbs"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-numbs"></div>
+          </div>
+        </div>
+      </section>
+    </main>
     <!--footer start-->
     <footer class="footer">
       <div class="container">

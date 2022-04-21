@@ -215,7 +215,7 @@
               class="dropdown__header dropdown__header--hide"
             >
               <div id="dropdownHeaderValue_1" class="dropdown__header--title">
-                Посёлок
+                Тип
               </div>
               <div class="dropdown__header--icon">
                 <img
@@ -281,7 +281,7 @@
               class="dropdown__header dropdown__header--hide"
             >
               <div id="dropdownHeaderValue_3" class="dropdown__header--title">
-                Посёлок
+                Площадь дома
               </div>
               <div class="dropdown__header--icon">
                 <img
@@ -307,8 +307,40 @@
               </ul>
             </div>
           </div>
+          
+          <div id="dropdown_3" class="dropdown">
+            <div
+              id="dropdownHeader_3"
+              class="dropdown__header dropdown__header--hide"
+            >
+              <div id="dropdownHeaderValue_3" class="dropdown__header--title">
+                Площадь участка
+              </div>
+              <div class="dropdown__header--icon">
+                <img
+                  id="chevronIcon_3"
+                  class="fas fa-angle-down rotate-icon-home"
+                  src="../img/icons/down.svg"
+                  alt=""
+                />
+              </div>
+            </div>
 
-          <button class="button button_accent dropdown__btn">Загрузка</button>
+            <div
+              id="dropdownListBody_3"
+              class="dropdown__body dropdown__body--hide"
+            >
+              <ul id="dropdownList_3" class="dropdown__body--list">
+                <li class="dropdown__body--list-index">Test Value 1</li>
+                <li class="dropdown__body--list-index">Test Value 2</li>
+                <li class="dropdown__body--list-index">Test Value 3</li>
+                <li class="dropdown__body--list-index">Test Value 4</li>
+                <li class="dropdown__body--list-index">Test Value 5</li>
+                <li class="dropdown__body--list-index">Test Value 6</li>
+              </ul>
+            </div>
+          </div>
+          <button class="button button_accent dropdown__btn">Показать варианты</button>
         </div>
       </section>
       <section class="ready">
@@ -789,13 +821,13 @@
             <h2 class="sculpture__title">
               Не нашли подходящий проект? Создадим его для вас
             </h2>
-            <div class="sculpture__title-wrapper">
+            
               <img
-                src="../img/main.png"
+                src="../img/sculpture-round.png"
                 alt=""
                 class="sculpture__title-image"
               />
-            </div>
+            
           </div>
           <p class="sculpture__text">
             Закажите индивидуальное проектирование вашего дома
@@ -805,7 +837,7 @@
           <img src="../img/sculpture.png" alt="" class=" " />
         </div>
         <div class="container">
-          <buttton class="button button_brown">Оставить заявку</buttton>
+          <buttton class="button button_brown">Подробнее</buttton>
         </div>
       </section>
       <section class="diagram">
@@ -970,7 +1002,7 @@
 
       <section class="application">
         <div class="container">
-          <form action="#" class="form" id="special-offer">
+          <form action="#" class="form" data-form="1">
             <h4 class="form__title">
               Узнавать первым о спецпредложениях и акциях, домах и участках
             </h4>

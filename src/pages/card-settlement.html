@@ -55,7 +55,7 @@
         </div>
       </div>
     </section>
-    <header class="header">
+    <header class="wrapper header">
       <div class="header__top header__top_absolute">
         <img src="../img/icons/logo1.svg" alt="" />
         <button class="menu-trigger" id="menu-header">
@@ -143,26 +143,62 @@
         <div class="swiper-numbs swiper-numbs_position"></div>
       </div>
     </header>
-    <main>
+    <main class="wrapper">
       <section class="video">
-        <div class="container">
-          <div class="section__crumbs bread-crumbs__wrapper">
-            <a href="#" class="bread-crumbs bread-crumbs__home"></a>
-            <div class="bread-crumbs bread-crumbs__page">
-              <a href="#">Коттеджные посёлки</a>
+        <div class="container video__wrapper">
+          <div class="video__top">
+            <div class="location video__location">
+              <div class="location__image">
+                <img src="../img/icons/location.svg" alt="" />
+              </div>
+              <h5 class="location__title">Нагаева</h5>
+            </div>
+            <h2 class="video__title">Девичья Гора</h2>
+            <div class="video__play">
+              <div class="pie pie__play">
+                <img
+                  src="../img/icons/play.svg"
+                  alt=""
+                  style="width: 18px; margin-left: 24px"
+                />
+              </div>
+
+              <p class="video__play-text">
+                Видеообзор <br />
+                посёлка
+              </p>
             </div>
           </div>
-          <div class="location">
-            <div class="location__image">
-              <img src="../img/icons/location.svg" alt="" />
+          <div class="video__bottom">
+            <div class="features__cards video__cards">
+              <div class="features__card features__card_border">
+                <div class="features__card-title">22 км</div>
+                <div class="features__card-text">
+                  от Монумента <br />
+                  Дружбы
+                </div>
+              </div>
+              <div class="features__card features__card_border">
+                <div class="features__card-title">18 мин</div>
+                <div class="features__card-text">
+                  от центра <br />
+                  города
+                </div>
+              </div>
             </div>
-            <h5 class="location__title">Нагаева</h5>
+            <buttton class="carousel__btn button button_accent"
+              >Записаться на экскурсию</buttton
+            >
           </div>
-          <h2>Девичья Гора</h2>
         </div>
       </section>
       <section class="section">
         <div class="container">
+          <div class="section__crumbs bread-crumbs">
+            <a href="home.html">ПОРАДОМ</a>
+            <a href="cottage-settlements.html">Коттеджные поселки</a>
+            <a href="#">Девичья Гора</a>
+          </div>
           <div class="section__top">
             <h2 class="section__title">План посёлка «Девичья Гора»</h2>
           </div>
@@ -174,6 +210,77 @@
               <a href="#" class="button__round">3 очередь</a>
               <a href="#" class="button__round">4 очередь</a>
               <a href="#" class="button__round">5 очередь</a>
+            </div>
+          </div>
+        </div>
+        <div class="plan">
+          <div class="plan__map">
+            <img src="../img/devgora.jpg" alt="" />
+            <svg viewBox="0 0 1200 600" preserveAspectRatio="xMinYMin slice">
+              <a
+                href="/kottedzhnye-poselki/devichya-gora-1-ochered/"
+                data-hover="#hover257"
+              >
+                <polygon
+                  class=""
+                  points="87,324 452,133 597,179 387,400 358,403 284,376 245,336 100,342"
+                ></polygon>
+                <rect
+                  x="262"
+                  y="252"
+                  width="160"
+                  height="32"
+                  rx="20"
+                  ry="20"
+                ></rect>
+                <text x="342" y="276">1 очередь</text>
+              </a>
+              <a
+                href="/kottedzhnye-poselki/devichya-gora-2-ochered/"
+                data-hover="#hover258"
+              >
+                <polygon
+                  class=""
+                  points="597,179 811,245 853,329 786,329 491,437 429,396 387,400"
+                ></polygon>
+                <rect
+                  x="540"
+                  y="292"
+                  width="160"
+                  height="32"
+                  rx="20"
+                  ry="20"
+                ></rect>
+                <text x="620" y="316">2 очередь</text>
+              </a>
+              <a
+                href="/kottedzhnye-poselki/devichya-gora-3-ochered/"
+                data-hover="#hover347"
+              >
+                <polygon
+                  class="free"
+                  points="811,245 824,246 888,157 1090,219 1130,282 1153,321 1136,385 1106,380 1043,378 893,341 852,329"
+                ></polygon>
+                <rect
+                  x="902"
+                  y="255"
+                  width="160"
+                  height="32"
+                  rx="20"
+                  ry="20"
+                ></rect>
+                <text x="982" y="279">3 очередь</text>
+              </a>
+            </svg>
+          </div>
+          <div class="plan__bottom">
+            <img
+              src="../img/icons/plan-arrows.svg"
+              alt=""
+              class="plan__bottom-arrows"
+            />
+            <div class="plan__bottom-count">
+              <p>всего участков <span class="plan__bottom-numb">160</span></p>
             </div>
           </div>
         </div>
@@ -198,25 +305,28 @@
           </div>
           <form action="#" class="form" id="special-offer">
             <h4 class="form__title">
-              Узнавать первым о спецпредложениях и акциях, домах и участках
+              Запишитесь на экскурсию по посёлку Девичья Гора
             </h4>
+            <p class="form__text">
+              Приезжайте на экскурсию, чтобы увидеть всё своими глазами и узнать
+              о жизни поселка из первых рук
+            </p>
             <div class="text-field">
               <input
                 data-special-offer=""
                 class="text-field__input tel"
                 type="text"
-                name="login"
-                id="login"
                 placeholder="Введите ваш телефон"
               />
             </div>
-            <label class="checkbox-other">
-              <input data-special-offer="" type="checkbox" />
-              <p>
-                Даю согласие на обработку
-                <a href="#" class="checkbox__link"> персональных данных </a>
-              </p>
-            </label>
+            <div class="text-field">
+              <input
+                data-special-offer=""
+                class="text-field__input tel"
+                type="text"
+                placeholder="Введите ваше имя"
+              />
+            </div>
 
             <button
               type="submit"
@@ -225,6 +335,13 @@
             >
               Отправить
             </button>
+            <label class="checkbox-other">
+              <input data-special-offer="" type="checkbox" />
+              <p>
+                Даю согласие на обработку
+                <a href="#" class="checkbox__link"> персональных данных </a>
+              </p>
+            </label>
           </form>
         </div>
       </section>
@@ -256,46 +373,55 @@
                 <div class="swiper-slide">
                   <div class="navigation__card">
                     <img src="../img/img.png" alt="" />
-                    <h2 class="title">
-                      <span> готовые </span>
+                    <h2
+                      class="title swiper-slide__title swiper-slide__title_ty--30"
+                    >
+                      <span> два </span>
                       <br />
-                      <span> дома </span>
+                      <span> озера </span>
                     </h2>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="navigation__card">
                     <img src="../img/img.png" alt="" />
+                    <h2
+                      class="title swiper-slide__title swiper-slide__title_ty--30"
+                    >
+                      <span> два </span>
+                      <br />
+                      <span> озера </span>
+                    </h2>
                   </div>
                 </div>
               </div>
               <div class="swiper-next"></div>
               <div class="swiper-prev"></div>
-              <div class="swiper-numbs"></div>
+              <div class="swiper-numbs swiper-numbs_mt--10"></div>
             </div>
             <div class="features__cards">
-              <div class="features__card">
+              <div class="features__card features__card_bg-primary">
                 <div class="features__card-title">22 км</div>
                 <div class="features__card-text">
                   от Монумента <br />
                   Дружбы
                 </div>
               </div>
-              <div class="features__card">
+              <div class="features__card features__card_bg-primary">
                 <div class="features__card-title">18 мин</div>
                 <div class="features__card-text">
                   от центра <br />
                   города
                 </div>
               </div>
-              <div class="features__card">
+              <div class="features__card features__card_bg-primary">
                 <div class="features__card-title">60 га</div>
                 <div class="features__card-text">
                   площадь <br />
                   посёлка
                 </div>
               </div>
-              <div class="features__card">
+              <div class="features__card features__card_bg-primary">
                 <div class="features__card-title">2012</div>
                 <div class="features__card-text">
                   год начала <br />
@@ -368,6 +494,70 @@
           </div>
         </div>
       </section>
+      <section class="section photo-settlement">
+        <div class="container">
+          <div class="section__top">
+            <h2 class="section__title">Фото посёлка</h2>
+          </div>
+          <div class="swiper featuresSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="navigation__card">
+                  <img src="../img/img.png" alt="" />
+                  <p class="section__text">Подпись фотографии</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="navigation__card">
+                  <img src="../img/img.png" alt="" />
+                  <p class="section__text">Подпись фотографии</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-next"></div>
+            <div class="swiper-prev"></div>
+            <div class="swiper-numbs"></div>
+          </div>
+        </div>
+      </section>
+      <section class="settlements p-b--40">
+        <div class="settlements-content">
+          <span class="settlements__number number">03</span>
+        </div>
+
+        <div class="container">
+          <div class="settlements__top -r-gap">
+            <h2 class="title settlements__title">
+              <span> посёлки </span>
+            </h2>
+            <img
+              src="../img/icons/project.svg"
+              class="settlements__icon"
+              alt=""
+            />
+            <img src="../img/people.png" alt="" width="210" height="170" />
+          </div>
+          <div class="settlements__bottom content-round">
+            <p class="content-round__title">
+              Сервисная компания «Смородина» отвечает за комфорт жителей
+              поселка: обслуживает дороги, шлагбаумы, фонарные столбы, камеры
+              видеонаблюдения, обрабатывает территорию от клещей, вывозит мусор,
+              проводит различные мероприятия и создает Сообщество дружных
+              соседей
+            </p>
+            <div class="content-round__wrapper">
+              <img
+                src="../img/icons/currant.svg"
+                alt=""
+                class="content-round__image"
+              />
+            </div>
+          </div>
+          <buttton class="button button_blue"
+            >Услуги сервисной компании</buttton
+          >
+        </div>
+      </section>
       <section class="news">
         <div class="news__number-content">
           <span class="news__number number">04</span>
@@ -408,25 +598,28 @@
         <div class="container">
           <form action="#" class="form" id="special-offer">
             <h4 class="form__title">
-              Узнавать первым о спецпредложениях и акциях, домах и участках
+              Запишитесь на экскурсию по посёлку Девичья Гора
             </h4>
+            <p class="form__text">
+              Приезжайте на экскурсию, чтобы увидеть всё своими глазами и узнать
+              о жизни поселка из первых рук
+            </p>
             <div class="text-field">
               <input
-                data-special-offer
+                data-special-offer=""
                 class="text-field__input tel"
                 type="text"
-                name="login"
-                id="login"
                 placeholder="Введите ваш телефон"
               />
             </div>
-            <label class="checkbox-other">
-              <input data-special-offer type="checkbox" />
-              <p>
-                Даю согласие на обработку
-                <a href="#" class="checkbox__link"> персональных данных </a>
-              </p>
-            </label>
+            <div class="text-field">
+              <input
+                data-special-offer=""
+                class="text-field__input tel"
+                type="text"
+                placeholder="Введите ваше имя"
+              />
+            </div>
 
             <button
               type="submit"
@@ -435,12 +628,27 @@
             >
               Отправить
             </button>
+            <label class="checkbox-other">
+              <input data-special-offer="" type="checkbox" />
+              <p>
+                Даю согласие на обработку
+                <a href="#" class="checkbox__link"> персональных данных </a>
+              </p>
+            </label>
           </form>
         </div>
       </section>
+      <section class="">
+        <div class="container">
+          <div class="section__top">
+            <h2 class="section__title">Все посёлки ПОРАДОМ</h2>
+          </div>
+        </div>
+        <img src="../img/cottage_map.png" alt="" class="w-full" />
+      </section>
     </main>
     <!--footer start-->
-    <footer class="footer">
+    <footer class="wrapper footer">
       <div class="container">
         <div class="accordion" id="accordion">
           <h3 class="">Покупателям <span class="accordion__line"></span></h3>

@@ -1,5 +1,6 @@
 $pagColor: #c3cad1;
 $pageColorActive: #0099e0;
+
 .swiper {
   width: 100%;
   height: 100%;
@@ -24,6 +25,29 @@ $pageColorActive: #0099e0;
   align-items: center;
   &_pb {
     padding-bottom: 85px;
+  }
+  &__title {
+    &_ty {
+      &--30 {
+        transform: translateY(-30px);
+      }
+    }
+  }
+  &__text {
+    margin-top: 14px;
+  }
+  &__list {
+    margin-top: 14px;
+  }
+  &__item {
+    position: relative;
+    padding-left: 10px;
+    &::after {
+      position: absolute;
+      content: "\2022";
+      color: #fff;
+      left: 0;
+    }
   }
 }
 
@@ -89,15 +113,15 @@ $pageColorActive: #0099e0;
   &-dots {
     display: flex;
     .dot {
-      width: 4px;
-      height: 4px;
+      width: 8px;
+      height: 8px;
       background-color: $pagColor;
       border-radius: 50%;
       &:not(:last-child) {
-        margin-right: 3px;
+        margin-right: 6px;
       }
       &-active {
-        background-color: $pageColorActive;
+        background-color: $accent;
       }
       &__lg-red {
         width: 8px;
@@ -118,6 +142,11 @@ $pageColorActive: #0099e0;
     padding-top: 9px;
     justify-content: center;
     margin-top: 20px;
+    &_mt {
+      &--10 {
+        margin-top: -10px;
+      }
+    }
     &_position {
       position: absolute;
       bottom: 45px !important;
@@ -167,7 +196,8 @@ $pageColorActive: #0099e0;
     width: 9px;
     height: 15px;
     z-index: 10;
-    top: calc(50% - 30px);
+    // top: calc(50% - 30px);
+    top: 50%;
   }
   &-prev {
     background-image: url(../img/icons/prev.svg);

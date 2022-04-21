@@ -40,10 +40,16 @@
   }
   &__card {
     border-radius: 4px;
-    background-color: $primary;
+
     text-align: center;
     padding-top: 19px;
     padding-bottom: 14px;
+    &_bg-primary {
+      background-color: $primary;
+    }
+    &_border {
+      border: 1px solid $border;
+    }
     &-title {
       font-weight: 500;
       font-size: 26px;

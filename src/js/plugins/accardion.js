@@ -1,7 +1,7 @@
 export default class Accordion {
   constructor(name) {
-    console.log(name);
     const accordion = document.getElementById(name);
+
     accordion.addEventListener("click", change);
     function change(event) {
       var targ = event.target;
@@ -10,10 +10,9 @@ export default class Accordion {
         hideAll();
       } else {
         hideAll();
-        console.log(targ);
+
         targ.classList.add("select");
 
-        console.log(targ);
         showText(targ.nextElementSibling);
       }
     }
@@ -31,7 +30,6 @@ export default class Accordion {
     function showText(textEl) {
       textEl.style.height = textEl.scrollHeight + "px";
       // textEl.classList.add('tabs__text_s')
-      console.log(textEl);
     }
   }
 }
