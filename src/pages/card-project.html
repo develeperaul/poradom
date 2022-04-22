@@ -494,8 +494,14 @@
             </p>
           </div>
           <div class="diagram__accordion accordion" id="card-project">
-            <h3 class="">Оплата 100% <span class="accordion__line"></span></h3>
-            <div class="tabs__text" id="tabs-1" style="height: 0px">
+            <h3 class="accordion-header">
+              Оплата 100% <span class="accordion__line"></span>
+            </h3>
+            <div
+              class="accordion-body tabs__text"
+              id="tabs-1"
+              style="height: 0px"
+            >
               <a href="#"> Проектирование </a>
               <a href="#">Проектирование</a>
               <a href="#">Проектирование</a>
@@ -503,16 +509,166 @@
               <a href="#">Проектирование</a>
               <a href="#">Проектирование</a>
             </div>
-            <h3 class="">
+            <h3 class="accordion-header">
               Беспроцентная рассрочка <span class="accordion__line"></span>
             </h3>
-            <div class="tabs__text" id="tabs-2" style="height: 0px">
+            <div
+              class="accordion-body tabs__text"
+              id="tabs-2"
+              style="height: 0px"
+            >
               <a href="#">Проектирование</a>
             </div>
-            <h3 class="">Ипотека <span class="accordion__line"></span></h3>
-            <div class="tabs__text" id="tabs-3" style="height: 0px">
-              <a href="#">Проектирование</a>
+            <h3 class="accordion-header">
+              Ипотека <span class="accordion__line"></span>
+            </h3>
+            <div
+              class="accordion-body tabs__text"
+              id="tabs-3"
+              style="height: 0px"
+            ></div>
+          </div>
+          <div class="calc">
+            <h4 class="calc__title">
+              Детально рассчитаем для вас самый выгодный вариант
+            </h4>
+
+            <div id="reviews-btns" class="button__group calc__btns">
+              <a href="#" class="button__round button__round_active"
+                >Сбербанк</a
+              >
+              <a href="#" class="button__round">Семейная ипотека ВТБ</a>
             </div>
+
+            <p class="calc__text">
+              Ипотека от 9,5% на строительство малоэтажных домов от ПАО
+              «Сбербанк». ПОРАДОМ является единственным в Уфе застройщиком
+              малоэтажных домов, аккредитованным в банке
+            </p>
+            <form class="calc__form">
+              <div id="dropdown_1" class="dropdown">
+                <div
+                  id="dropdownHeader_1"
+                  class="dropdown__header dropdown__header--hide"
+                >
+                  <div
+                    id="dropdownHeaderValue_1"
+                    class="dropdown__header--title"
+                  >
+                    Тип
+                  </div>
+                  <div class="dropdown__header--icon">
+                    <img
+                      id="chevronIcon_1"
+                      class="fas fa-angle-down rotate-icon-home"
+                      src="../img/icons/down.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div
+                  id="dropdownListBody_1"
+                  class="dropdown__body dropdown__body--hide"
+                >
+                  <ul id="dropdownList_1" class="dropdown__body--list">
+                    <li class="dropdown__body--list-index">Test Value 1</li>
+                    <li class="dropdown__body--list-index">Test Value 2</li>
+                    <li class="dropdown__body--list-index">Test Value 3</li>
+                    <li class="dropdown__body--list-index">Test Value 4</li>
+                    <li class="dropdown__body--list-index">Test Value 5</li>
+                    <li class="dropdown__body--list-index">Test Value 6</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="calc__plus calc__input">
+                <div class="float-field float-field_floating">
+                  <input
+                    class="float-field__input"
+                    type="text"
+                    id="cost-house"
+                    placeholder="placeholder"
+                  />
+                  <label class="float-field__label" for="cost-house"
+                    >Стоимость дома*</label
+                  >
+                </div>
+                <span class="calc__plus-icon">+</span>
+                <div class="float-field float-field_floating">
+                  <input
+                    class="float-field__input"
+                    type="text"
+                    id="cost-plot"
+                    placeholder="placeholder"
+                  />
+                  <label class="float-field__label" for="cost-plot"
+                    >Стоимость участка**</label
+                  >
+                </div>
+              </div>
+              <div class="calc__sum calc__input">
+                <div class="float-field float-field_floating">
+                  <input
+                    class="float-field__input"
+                    type="text"
+                    id="result"
+                    placeholder="placeholder"
+                  />
+                  <label class="float-field__label" for="result"
+                    >Итоговая стоимость</label
+                  >
+                </div>
+              </div>
+              <div class="calc__result calc__input">
+                <div class="float-field float-field_floating calc__result_60">
+                  <input
+                    class="float-field__input"
+                    type="text"
+                    id="result"
+                    placeholder="placeholder"
+                  />
+                  <label class="float-field__label" for="result"
+                    >Первоначальный взнос</label
+                  >
+                </div>
+                <div class="float-field float-field_floating calc__result_40">
+                  <input
+                    class="float-field__input"
+                    type="text"
+                    id="result"
+                    placeholder="placeholder"
+                  />
+                  <label class="float-field__label" for="result">Срок</label>
+                </div>
+              </div>
+              <div class="calc__result calc__input">
+                <div class="float-field float-field_floating calc__result_60">
+                  <input
+                    class="float-field__input"
+                    type="text"
+                    id="result"
+                    placeholder="placeholder"
+                  />
+                  <label class="float-field__label" for="result"
+                    >Ежемесячный платеж</label
+                  >
+                </div>
+                <div class="float-field float-field_floating calc__result_40">
+                  <input
+                    class="float-field__input"
+                    type="text"
+                    id="result"
+                    placeholder="placeholder"
+                  />
+                  <label class="float-field__label" for="result"
+                    >Min ставка</label
+                  >
+                </div>
+              </div>
+              <buttton class="button button_accent m-b--10"
+                >Отправить заявку</buttton
+              >
+            </form>
           </div>
         </div>
       </section>
@@ -623,8 +779,14 @@
     <footer class="footer">
       <div class="container">
         <div class="accordion" id="accordion">
-          <h3 class="">Покупателям <span class="accordion__line"></span></h3>
-          <div class="tabs__text" id="tabs-1" style="height: 0px">
+          <h3 class="accordion-header">
+            Покупателям <span class="accordion__line"></span>
+          </h3>
+          <div
+            class="accordion-body tabs__text"
+            id="tabs-1"
+            style="height: 0px"
+          >
             <a href="#"> Проектирование </a>
             <a href="#">Проектирование</a>
             <a href="#">Проектирование</a>
@@ -632,17 +794,33 @@
             <a href="#">Проектирование</a>
             <a href="#">Проектирование</a>
           </div>
-          <h3 class="">Стандарты <span class="accordion__line"></span></h3>
-          <div class="tabs__text" id="tabs-2" style="height: 0px">
+          <h3 class="accordion-header">
+            Стандарты <span class="accordion__line"></span>
+          </h3>
+          <div
+            class="accordion-body tabs__text"
+            id="tabs-2"
+            style="height: 0px"
+          >
             <a href="#">Проектирование</a>
           </div>
-          <h3 class="">О застройщике <span class="accordion__line"></span></h3>
-          <div class="tabs__text" id="tabs-3" style="height: 0px">
+          <h3 class="accordion-header">
+            О застройщике <span class="accordion__line"></span>
+          </h3>
+          <div
+            class="accordion-body tabs__text"
+            id="tabs-3"
+            style="height: 0px"
+          >
             <a href="#">Проектирование</a>
           </div>
-          <h3>Контакты</h3>
+          <h3 class="accordion-header">Контакты</h3>
 
-          <div class="tabs__text" id="tabs-4" style="height: 0px">
+          <div
+            class="accordion-body tabs__text"
+            id="tabs-4"
+            style="height: 0px"
+          >
             <a href="#">Проектирование</a>
           </div>
         </div>

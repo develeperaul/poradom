@@ -1,0 +1,32 @@
+.calc {
+  padding: 20px 30px;
+  background-color: #fff;
+  color: $black;
+  border-radius: 4px;
+  &__title,
+  &__btns,
+  &__text {
+    margin-bottom: 20px;
+  }
+  &__input {
+    margin-bottom: 10px;
+  }
+  &__plus {
+    display: flex;
+    align-items: center;
+    &-icon {
+      color: $border;
+      margin: 0 6px;
+    }
+  }
+  &__result {
+    display: flex;
+    &_60 {
+      width: 60%;
+      margin-right: 10px;
+    }
+    &_40 {
+      width: 40%;
+    }
+  }
+}
