@@ -1,5 +1,6 @@
 @import "~reset-css";
 @import "~normalize.css";
+@import "glightbox/dist/css/glightbox.css";
 @import "vars";
 @import "mixins";
 @import "settings";
@@ -26,6 +27,7 @@
 @import "distance";
 @import "checkbox.css";
 @import "accardion.css";
+@import "calc";
 @import "explore";
 @import "footer";
 .section {

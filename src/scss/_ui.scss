@@ -278,6 +278,10 @@
       #d10945 74.14%,
       #d10945 74.14%
     );
+    &_lg {
+      width: 48px;
+      height: 48px;
+    }
   }
 }
 
@@ -952,6 +956,20 @@
     }
     &-title {
       position: absolute;
+    }
+    &_round {
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    &_bg {
+      position: absolute;
+      bottom: 0;
+      max-width: 100%;
+      width: calc(100% - 12px - 32px);
+      border-radius: 4px 4px 0 0;
+      background: rgba(49, 62, 72, 0.8);
+      margin: 0 6px;
+      padding: 7px 16px;
     }
   }
 }
