@@ -9,6 +9,9 @@ const lightbox = GLightbox({
   loop: true,
   autoplayVideos: true,
 });
+
+import Dropdown from "./plugins/dropdown";
+new Dropdown("1");
 //pages
 // import "./pages/index"
 // import "./pages/requisites"
