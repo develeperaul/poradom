@@ -1,6 +1,6 @@
 import "../scss/main.scss";
 import "./plugins/swiper";
-
+import "./plugins/calc";
 import GLightbox from "glightbox";
 const lightbox = GLightbox({
   touchNavigation: false,

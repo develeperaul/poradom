@@ -528,16 +528,29 @@
               style="height: 0px"
             ></div>
           </div>
-          <div class="calc">
+          <form class="calc" id="calc-1">
             <h4 class="calc__title">
               Детально рассчитаем для вас самый выгодный вариант
             </h4>
 
             <div id="reviews-btns" class="button__group calc__btns">
-              <a href="#" class="button__round button__round_active"
-                >Сбербанк</a
+              <button
+                class="button__round button__round_active"
+                data-button
+                data-minimum="10"
+                data-rate="9"
               >
-              <a href="#" class="button__round">Семейная ипотека ВТБ</a>
+                Сбербанк
+              </button>
+              <button
+                href="#"
+                class="button__round"
+                data-button
+                data-minimum="15"
+                data-rate="50"
+              >
+                Семейная ипотека ВТБ
+              </button>
             </div>
 
             <p class="calc__text">
@@ -545,131 +558,191 @@
               «Сбербанк». ПОРАДОМ является единственным в Уфе застройщиком
               малоэтажных домов, аккредитованным в банке
             </p>
-            <form class="calc__form">
-              <div id="dropdown_1" class="dropdown">
-                <div
-                  id="dropdownHeader_1"
-                  class="dropdown__header dropdown__header--hide"
-                >
-                  <div
-                    id="dropdownHeaderValue_1"
-                    class="dropdown__header--title"
-                  >
-                    Тип
-                  </div>
-                  <div class="dropdown__header--icon">
-                    <img
-                      id="chevronIcon_1"
-                      class="fas fa-angle-down rotate-icon-home"
-                      src="../img/icons/down.svg"
-                      alt=""
-                    />
-                  </div>
-                </div>
 
-                <div
-                  id="dropdownListBody_1"
-                  class="dropdown__body dropdown__body--hide"
-                >
-                  <ul id="dropdownList_1" class="dropdown__body--list">
-                    <li class="dropdown__body--list-index">Test Value 1</li>
-                    <li class="dropdown__body--list-index">Test Value 2</li>
-                    <li class="dropdown__body--list-index">Test Value 3</li>
-                    <li class="dropdown__body--list-index">Test Value 4</li>
-                    <li class="dropdown__body--list-index">Test Value 5</li>
-                    <li class="dropdown__body--list-index">Test Value 6</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="calc__plus calc__input">
-                <div class="float-field float-field_floating">
-                  <input
-                    class="float-field__input"
-                    type="text"
-                    id="cost-house"
-                    placeholder="placeholder"
-                  />
-                  <label class="float-field__label" for="cost-house"
-                    >Стоимость дома*</label
-                  >
-                </div>
-                <span class="calc__plus-icon">+</span>
-                <div class="float-field float-field_floating">
-                  <input
-                    class="float-field__input"
-                    type="text"
-                    id="cost-plot"
-                    placeholder="placeholder"
-                  />
-                  <label class="float-field__label" for="cost-plot"
-                    >Стоимость участка**</label
-                  >
-                </div>
-              </div>
-              <div class="calc__sum calc__input">
-                <div class="float-field float-field_floating">
-                  <input
-                    class="float-field__input"
-                    type="text"
-                    id="result"
-                    placeholder="placeholder"
-                  />
-                  <label class="float-field__label" for="result"
-                    >Итоговая стоимость</label
-                  >
-                </div>
-              </div>
-              <div class="calc__result calc__input">
-                <div class="float-field float-field_floating calc__result_60">
-                  <input
-                    class="float-field__input"
-                    type="text"
-                    id="result"
-                    placeholder="placeholder"
-                  />
-                  <label class="float-field__label" for="result"
-                    >Первоначальный взнос</label
-                  >
-                </div>
-                <div class="float-field float-field_floating calc__result_40">
-                  <input
-                    class="float-field__input"
-                    type="text"
-                    id="result"
-                    placeholder="placeholder"
-                  />
-                  <label class="float-field__label" for="result">Срок</label>
-                </div>
-              </div>
-              <div class="calc__result calc__input">
-                <div class="float-field float-field_floating calc__result_60">
-                  <input
-                    class="float-field__input"
-                    type="text"
-                    id="result"
-                    placeholder="placeholder"
-                  />
-                  <label class="float-field__label" for="result"
-                    >Ежемесячный платеж</label
-                  >
-                </div>
-                <div class="float-field float-field_floating calc__result_40">
-                  <input
-                    class="float-field__input"
-                    type="text"
-                    id="result"
-                    placeholder="placeholder"
-                  />
-                  <label class="float-field__label" for="result"
-                    >Min ставка</label
-                  >
-                </div>
-              </div>
-              <buttton class="button button_accent m-b--10"
-                >Отправить заявку</buttton
+            <div id="dropdown_1" class="dropdown">
+              <div
+                id="dropdownHeader_1"
+                class="dropdown__header dropdown__header--hide"
               >
-            </form>
-          </div>
+                <div
+                  id="dropdownHeaderValue_1"
+                  class="dropdown__header--title"
+                  data-dropdown_header
+                >
+                  Тип
+                </div>
+                <div class="dropdown__header--icon">
+                  <img
+                    id="chevronIcon_1"
+                    class="fas fa-angle-down rotate-icon-home"
+                    src="../img/icons/down.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div
+                id="dropdownListBody_1"
+                class="dropdown__body dropdown__body--hide"
+              >
+                <ul id="dropdownList_1" class="dropdown__body--list">
+                  <li
+                    class="dropdown__body--list-index"
+                    data-dropdown_item
+                    data-sum="10000"
+                    data-house="5000"
+                    data-plot="5000"
+                  >
+                    Test Value 1
+                  </li>
+                  <li
+                    class="dropdown__body--list-index"
+                    data-dropdown_item
+                    data-sum="20000"
+                    data-house="15000"
+                    data-plot="5000"
+                  >
+                    Test Value 2
+                  </li>
+                  <li
+                    class="dropdown__body--list-index"
+                    data-dropdown_item
+                    data-sum="30000"
+                    data-house="20000"
+                    data-plot="10000"
+                  >
+                    Test Value 3
+                  </li>
+                  <li
+                    class="dropdown__body--list-index"
+                    data-dropdown_item
+                    data-sum="40000"
+                    data-house="20000"
+                    data-plot="20000"
+                  >
+                    Test Value 4
+                  </li>
+                  <li
+                    class="dropdown__body--list-index"
+                    data-dropdown_item
+                    data-sum="50000"
+                    data-house="30000"
+                    data-plot="20000"
+                  >
+                    Test Value 5
+                  </li>
+                  <li
+                    class="dropdown__body--list-index"
+                    data-dropdown_item
+                    data-sum="60000"
+                    data-house="40000"
+                    data-plot="20000"
+                  >
+                    Test Value 6
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="calc__plus calc__input">
+              <div class="float-field float-field_floating">
+                <input
+                  class="float-field__input"
+                  type="text"
+                  id="cost-house"
+                  placeholder="placeholder"
+                  data-input="house"
+                  disabled
+                />
+                <label class="float-field__label" for="cost-house"
+                  >Стоимость дома*</label
+                >
+              </div>
+              <span class="calc__plus-icon">+</span>
+              <div class="float-field float-field_floating">
+                <input
+                  class="float-field__input"
+                  type="text"
+                  id="cost-plot"
+                  placeholder="placeholder"
+                  data-input="plot"
+                  disabled
+                />
+                <label class="float-field__label" for="cost-plot"
+                  >Стоимость участка**</label
+                >
+              </div>
+            </div>
+            <div class="calc__sum calc__input">
+              <div class="float-field float-field_floating">
+                <input
+                  class="float-field__input"
+                  type="text"
+                  id="result"
+                  placeholder="placeholder"
+                  data-input="sum"
+                  disabled
+                />
+                <label class="float-field__label" for="result"
+                  >Итоговая стоимость</label
+                >
+              </div>
+            </div>
+            <div class="calc__result calc__input">
+              <div class="float-field float-field_floating calc__result_60">
+                <input
+                  class="float-field__input"
+                  type="text"
+                  id="result"
+                  placeholder="placeholder"
+                  data-input="initial"
+                />
+                <label class="float-field__label" for="result"
+                  >Первоначальный взнос</label
+                >
+              </div>
+              <div class="float-field float-field_floating calc__result_40">
+                <input
+                  class="float-field__input"
+                  type="text"
+                  id="result"
+                  placeholder="placeholder"
+                  data-input="period"
+                />
+                <label class="float-field__label" for="result">Срок</label>
+              </div>
+            </div>
+            <div class="calc__result calc__input">
+              <div class="float-field float-field_floating calc__result_60">
+                <input
+                  class="float-field__input"
+                  type="text"
+                  id="result"
+                  placeholder="placeholder"
+                  data-input="month"
+                  disabled
+                />
+                <label class="float-field__label" for="result"
+                  >Ежемесячный платеж</label
+                >
+              </div>
+              <div class="float-field float-field_floating calc__result_40">
+                <input
+                  class="float-field__input"
+                  type="text"
+                  id="result"
+                  placeholder="placeholder"
+                  data-input="rate"
+                  disabled
+                />
+                <label class="float-field__label" for="result"
+                  >Min ставка</label
+                >
+              </div>
+            </div>
+            <buttton class="button button_accent m-b--10"
+              >Отправить заявку</buttton
+            >
+          </form>
         </div>
       </section>
       <section class="section">
