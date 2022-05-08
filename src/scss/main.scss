@@ -279,6 +279,9 @@
     height: 0;
     overflow: hidden;
   }
+  &__content {
+    color: #8f959b;
+  }
   &_active.tab_border {
     padding: 30px 22px;
   }
