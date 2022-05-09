@@ -1,456 +1,371 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Poradom</title>
-  </head>
 
-  <body>
-    <div class="top-arrow" id="arrow">
-      <div class="arrow-icon">
-        <svg
-          width="14"
-          height="8"
-          viewBox="0 0 14 8"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M13 7L7 1L1 7" stroke="white" stroke-linecap="round" />
-        </svg>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poradom</title>
+</head>
+
+<body>
+  <div class="top-arrow" id="arrow">
+    <div class="arrow-icon">
+      <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 7L7 1L1 7" stroke="white" stroke-linecap="round" />
+      </svg>
+    </div>
+  </div>
+  <section class="sidebar">
+    <div class="container">
+      <div class="header__wrapper">
+        <div class="header__top">
+          <img src="../img/icons/logo1.svg" alt="" />
+          <button class="menu-trigger active" id="menu-sidebar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="sidebar__list accordion" id="sidebar-accordion">
+        <h3 class="">Покупателям</h3>
+        <div class="tabs__text" id="tabs-1" style="height: 0px">
+          <a href="#"> Проектирование </a>
+          <a href="#">Проектирование</a>
+          <a href="#">Проектирование</a>
+          <a href="#">Проектирование</a>
+          <a href="#">Проектирование</a>
+          <a href="#">Проектирование</a>
+        </div>
+        <h3 class="">Стандарты</h3>
+        <div class="tabs__text" id="tabs-2" style="height: 0px">
+          <a href="#">Проектирование</a>
+        </div>
+        <h3 class="">О застройщике</h3>
+        <div class="tabs__text" id="tabs-3" style="height: 0px">
+          <a href="#">Проектирование</a>
+        </div>
       </div>
     </div>
-    <section class="sidebar">
-      <div class="container">
-        <div class="header__wrapper">
-          <div class="header__top">
-            <img src="../img/icons/logo1.svg" alt="" />
-            <button class="menu-trigger active" id="menu-sidebar">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
+  </section>
+  <header class="header">
+    <div class="header__top header__top_absolute">
+      <img src="../img/icons/logo1.svg" alt="" />
+      <button class="menu-trigger" id="menu-header">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <a href="tg://resolve?domain=username" class="pie pie_big pie_blue drop__children children">
+      <img src="../img/icons/telega.svg" alt="" />
+    </a>
+    <a href="https://wa.me/799999999" class="pie pie_big pie_blue drop__children children">
+      <img src="../img/icons/whatsapp.svg" alt="" />
+    </a>
+    <a href="tel:+799999999" class="pie pie_big pie_blue drop__children children">
+      <img src="../img/icons/phone.svg" alt="" />
+    </a>
+    <span class="pie pie_big pie_accent drop drop_sq" id="drop">
+      <span></span><span></span><span></span><span></span>
+    </span>
+    <div class="swiper headerSwiper">
+      <div class="swiper-wrapper swiper-wrapper_pb">
+        <div class="swiper-slide swiper-slide_pb header__bottom">
+          <div class="carousel">
+            <div></div>
+            <h2 class="carousel__title">
+              Новый проект <br />
+              со вторым <br />
+              светом
+            </h2>
+            <p class="carousel__text">
+              Запишитесь на экскурсию, <br />
+              чтобы увидеть это первыми!
+            </p>
+            <buttton class="carousel__btn button button_accent">Записаться на экскурсию</buttton>
           </div>
         </div>
-
-        <div class="sidebar__list accordion" id="sidebar-accordion">
-          <h3 class="">Покупателям</h3>
-          <div class="tabs__text" id="tabs-1" style="height: 0px">
-            <a href="#"> Проектирование </a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
+        <div class="swiper-slide swiper-slide_pb header__bottom">
+          <div class="carousel">
+            <div></div>
+            <h2 class="carousel__title">
+              Новый проект <br />
+              со вторым <br />
+              светом
+            </h2>
+            <p class="carousel__text">
+              Запишитесь на экскурсию, <br />
+              чтобы увидеть это первыми!
+            </p>
+            <buttton class="carousel__btn button button_accent">Записаться на экскурсию</buttton>
           </div>
-          <h3 class="">Стандарты</h3>
-          <div class="tabs__text" id="tabs-2" style="height: 0px">
-            <a href="#">Проектирование</a>
+        </div>
+        <div class="swiper-slide swiper-slide_pb header__bottom">
+          <div class="carousel">
+            <div></div>
+            <h2 class="carousel__title">
+              Новый проект <br />
+              со вторым <br />
+              светом
+            </h2>
+            <p class="carousel__text">
+              Запишитесь на экскурсию, <br />
+              чтобы увидеть это первыми!
+            </p>
+            <buttton class="carousel__btn button button_accent">Записаться на экскурсию</buttton>
           </div>
-          <h3 class="">О застройщике</h3>
-          <div class="tabs__text" id="tabs-3" style="height: 0px">
-            <a href="#">Проектирование</a>
+        </div>
+      </div>
+      <div class="swiper-numbs swiper-numbs_position"></div>
+    </div>
+  </header>
+  <main class="wrapper">
+    <section class="section">
+      <div class="container">
+        <div class="section__crumbs bread-crumbs">
+          <a href="#">ПОРАДОМ</a>
+          <a href="#">Коттеджные посёлки</a>
+        </div>
+        <div class="section__top">
+          <h2 class="section__title">
+            Выкуп земель для малоэтажного строительства
+          </h2>
+        </div>
+        <div class="section__top">
+          <h4>
+            ДК ПОРАДОМ покупает на взаимовыгодных условиях земельные участки в
+            пригороде Уфы в южном и западном направлениях
+          </h4>
+        </div>
+        <div class="section__bottom">
+          <img src="../img/map-land.png" alt="" style="width: 100%" />
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="section__top">
+          <h2 class="section__title">Условия покупки земельного участка</h2>
+        </div>
+        <div class="section__bottom">
+          <div class="check-item">
+            <div class="check-item__left">
+              <div class="pie pie_accent pie_small">
+                <img src="../img/icons/check.svg" alt="" />
+              </div>
+            </div>
+            <div class="check-item__right">
+              <p>
+                Расположен в южном (Аэропорт) или западном (Затон) направлении
+                от Уфы
+              </p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-item__left">
+              <div class="pie pie_accent pie_small">
+                <img src="../img/icons/check.svg" alt="" />
+              </div>
+            </div>
+            <div class="check-item__right">
+              <p>
+                Близость и возможность подключения к коммуникациям (газ,
+                электроэнергия)
+              </p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-item__left">
+              <div class="pie pie_accent pie_small">
+                <img src="../img/icons/check.svg" alt="" />
+              </div>
+            </div>
+            <div class="check-item__right">
+              <p>Минимальная площадь 1 гектар (100 соток)</p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-item__left">
+              <div class="pie pie_accent pie_small">
+                <img src="../img/icons/check.svg" alt="" />
+              </div>
+            </div>
+            <div class="check-item__right">
+              <p>Отсутствие обременений и судебных споров</p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-item__left">
+              <div class="pie pie_accent pie_small">
+                <img src="../img/icons/check.svg" alt="" />
+              </div>
+            </div>
+            <div class="check-item__right">
+              <p>
+                Относится к землям населенных пунктов или имеет вид
+                разрешенного использования — ИЖС
+              </p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-item__left">
+              <div class="pie pie_accent pie_small">
+                <img src="../img/icons/check.svg" alt="" />
+              </div>
+            </div>
+            <div class="check-item__right">
+              <p>Наличие подъездных путей с твердым покрытием</p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-item__left">
+              <div class="pie pie_accent pie_small">
+                <img src="../img/icons/check.svg" alt="" />
+              </div>
+            </div>
+            <div class="check-item__right">
+              <p>Оформлено право собственности на землю</p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-item__left">
+              <div class="pie pie_accent pie_small">
+                <img src="../img/icons/check.svg" alt="" />
+              </div>
+            </div>
+            <div class="check-item__right">
+              <p>
+                Расположен в южном (Аэропорт) или западном (Затон) направлении
+                от Уфы
+              </p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-item__left">
+              <div class="pie pie_accent pie_small">
+                <img src="../img/icons/check.svg" alt="" />
+              </div>
+            </div>
+            <div class="check-item__right">
+              <p>
+                Расположен в южном (Аэропорт) или западном (Затон) направлении
+                от Уфы
+              </p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-item__left">
+              <div class="pie pie_accent pie_small">
+                <img src="../img/icons/check.svg" alt="" />
+              </div>
+            </div>
+            <div class="check-item__right">
+              <p>
+                Расположен в южном (Аэропорт) или западном (Затон) направлении
+                от Уфы
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <header class="header">
-      <div class="header__top header__top_absolute">
-        <img src="../img/icons/logo1.svg" alt="" />
-        <button class="menu-trigger" id="menu-header">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+    <section class="p-b--40 section__bg section__bg_secondary">
+      <img src="../img/img.png" class="w-full" alt="" />
+      <div class="container">
+        <h2 class="title transform-y---12 m-b--20">
+          <span>Преимущества</span>
+          <br />
+          <span>сотрудничества</span>
+          <br />
+          <span>с компанией</span>
+          <br />
+          <span>ПОРАДОМ</span>
+        </h2>
+        <div class="cards-mini">
+          <div class="mini">
+            <img src="../img/icons/scales.svg" alt="" class="mini__icon mini__icon_lg mini__icon_primary" />
+            <p class="mini__text">
+              Квалифицированное юридическое сопровождение и оформление сделки
+            </p>
+          </div>
+          <div class="mini">
+            <img src="../img/icons/handshake.svg" alt="" class="mini__icon mini__icon_lg mini__icon_primary" />
+            <p class="mini__text">
+              Прозрачные, понятные и надежные партнерские отношения
+            </p>
+          </div>
+          <div class="mini">
+            <img src="../img/icons/fireprocent.svg" alt="" class="mini__icon mini__icon_lg mini__icon_primary" />
+            <p class="mini__text">
+              Специальные предложения по строительству домов на выкупаемых
+              землях
+            </p>
+          </div>
+          <div class="mini">
+            <img src="../img/icons/heart.svg" alt="" class="mini__icon mini__icon_lg mini__icon_primary" />
+            <p class="mini__text">
+              Взаимовыгодные схемы расчетов в т.ч. бартерные
+            </p>
+          </div>
+          <div class="mini">
+            <img src="../img/icons/wallet.svg" alt="" class="mini__icon mini__icon_lg mini__icon_primary" />
+            <p class="mini__text">
+              Всегда своевременная оплата на гибких условиях
+            </p>
+          </div>
+        </div>
       </div>
-
-      <a
-        href="tg://resolve?domain=username"
-        class="pie pie_big pie_blue drop__children children"
-      >
-        <img src="../img/icons/telega.svg" alt="" />
-      </a>
-      <a
-        href="https://wa.me/799999999"
-        class="pie pie_big pie_blue drop__children children"
-      >
-        <img src="../img/icons/whatsapp.svg" alt="" />
-      </a>
-      <a
-        href="tel:+799999999"
-        class="pie pie_big pie_blue drop__children children"
-      >
-        <img src="../img/icons/phone.svg" alt="" />
-      </a>
-      <span class="pie pie_big pie_accent drop drop_sq" id="drop">
-        <span></span><span></span><span></span><span></span>
-      </span>
-      <div class="swiper headerSwiper">
-        <div class="swiper-wrapper swiper-wrapper_pb">
-          <div class="swiper-slide swiper-slide_pb header__bottom">
-            <div class="carousel">
-              <div></div>
-              <h2 class="carousel__title">
-                Новый проект <br />
-                со вторым <br />
-                светом
-              </h2>
-              <p class="carousel__text">
-                Запишитесь на экскурсию, <br />
-                чтобы увидеть это первыми!
-              </p>
-              <buttton class="carousel__btn button button_accent"
-                >Записаться на экскурсию</buttton
-              >
-            </div>
+    </section>
+    <section class="application p-b--30">
+      <div class="container">
+        <form action="#" class="form" id="special-offer" data-form="1">
+          <h4 class="form__title">Заголовок формы</h4>
+          <div class="text-field">
+            <input data-special-offer class="text-field__input" type="text" name="login" id="login"
+              placeholder="Ближайшие насленные пункты" />
           </div>
-          <div class="swiper-slide swiper-slide_pb header__bottom">
-            <div class="carousel">
-              <div></div>
-              <h2 class="carousel__title">
-                Новый проект <br />
-                со вторым <br />
-                светом
-              </h2>
-              <p class="carousel__text">
-                Запишитесь на экскурсию, <br />
-                чтобы увидеть это первыми!
-              </p>
-              <buttton class="carousel__btn button button_accent"
-                >Записаться на экскурсию</buttton
-              >
-            </div>
+          <div class="text-field">
+            <input data-special-offer class="text-field__input" type="text" name="login" id="login"
+              placeholder="Условия и схема выкупа участка" />
           </div>
-          <div class="swiper-slide swiper-slide_pb header__bottom">
-            <div class="carousel">
-              <div></div>
-              <h2 class="carousel__title">
-                Новый проект <br />
-                со вторым <br />
-                светом
-              </h2>
-              <p class="carousel__text">
-                Запишитесь на экскурсию, <br />
-                чтобы увидеть это первыми!
-              </p>
-              <buttton class="carousel__btn button button_accent"
-                >Записаться на экскурсию</buttton
-              >
-            </div>
+          <div class="text-field">
+            <input data-special-offer class="text-field__input" type="text" name="login" id="login"
+              placeholder="Площадь участка" />
           </div>
-        </div>
-        <div class="swiper-numbs swiper-numbs_position"></div>
-      </div>
-    </header>
-    <main class="wrapper">
-      <section class="section">
-        <div class="container">
-          <div class="section__crumbs bread-crumbs">
-            <a href="#">ПОРАДОМ</a>
-            <a href="#">Коттеджные посёлки</a>
+          <div class="text-field">
+            <input data-special-offer class="text-field__input tel" type="text" name="login" id="login"
+              placeholder="Введите ваш телефон" />
           </div>
-          <div class="section__top">
-            <h2 class="section__title">
-              Выкуп земель для малоэтажного строительства
-            </h2>
+          <div class="text-field">
+            <input data-special-offer class="text-field__input" type="text" name="login" id="login"
+              placeholder="Введите ваше имя" />
           </div>
-          <div class="section__top">
-            <h4>
-              ДК ПОРАДОМ покупает на взаимовыгодных условиях земельные участки в
-              пригороде Уфы в южном и западном направлениях
-            </h4>
-          </div>
-          <div class="section__bottom">
-            <img src="../img/map-land.png" alt="" style="width: 100%" />
-          </div>
-        </div>
-      </section>
-      <section class="section">
-        <div class="container">
-          <div class="section__top">
-            <h2 class="section__title">Условия покупки земельного участка</h2>
-          </div>
-          <div class="section__bottom">
-            <div class="check-item">
-              <div class="check-item__left">
-                <div class="pie pie_accent pie_small">
-                  <img src="../img/icons/check.svg" alt="" />
-                </div>
-              </div>
-              <div class="check-item__right">
-                <p>
-                  Расположен в южном (Аэропорт) или западном (Затон) направлении
-                  от Уфы
-                </p>
-              </div>
-            </div>
-            <div class="check-item">
-              <div class="check-item__left">
-                <div class="pie pie_accent pie_small">
-                  <img src="../img/icons/check.svg" alt="" />
-                </div>
-              </div>
-              <div class="check-item__right">
-                <p>
-                  Близость и возможность подключения к коммуникациям (газ,
-                  электроэнергия)
-                </p>
-              </div>
-            </div>
-            <div class="check-item">
-              <div class="check-item__left">
-                <div class="pie pie_accent pie_small">
-                  <img src="../img/icons/check.svg" alt="" />
-                </div>
-              </div>
-              <div class="check-item__right">
-                <p>Минимальная площадь 1 гектар (100 соток)</p>
-              </div>
-            </div>
-            <div class="check-item">
-              <div class="check-item__left">
-                <div class="pie pie_accent pie_small">
-                  <img src="../img/icons/check.svg" alt="" />
-                </div>
-              </div>
-              <div class="check-item__right">
-                <p>Отсутствие обременений и судебных споров</p>
-              </div>
-            </div>
-            <div class="check-item">
-              <div class="check-item__left">
-                <div class="pie pie_accent pie_small">
-                  <img src="../img/icons/check.svg" alt="" />
-                </div>
-              </div>
-              <div class="check-item__right">
-                <p>
-                  Относится к землям населенных пунктов или имеет вид
-                  разрешенного использования — ИЖС
-                </p>
-              </div>
-            </div>
-            <div class="check-item">
-              <div class="check-item__left">
-                <div class="pie pie_accent pie_small">
-                  <img src="../img/icons/check.svg" alt="" />
-                </div>
-              </div>
-              <div class="check-item__right">
-                <p>Наличие подъездных путей с твердым покрытием</p>
-              </div>
-            </div>
-            <div class="check-item">
-              <div class="check-item__left">
-                <div class="pie pie_accent pie_small">
-                  <img src="../img/icons/check.svg" alt="" />
-                </div>
-              </div>
-              <div class="check-item__right">
-                <p>Оформлено право собственности на землю</p>
-              </div>
-            </div>
-            <div class="check-item">
-              <div class="check-item__left">
-                <div class="pie pie_accent pie_small">
-                  <img src="../img/icons/check.svg" alt="" />
-                </div>
-              </div>
-              <div class="check-item__right">
-                <p>
-                  Расположен в южном (Аэропорт) или западном (Затон) направлении
-                  от Уфы
-                </p>
-              </div>
-            </div>
-            <div class="check-item">
-              <div class="check-item__left">
-                <div class="pie pie_accent pie_small">
-                  <img src="../img/icons/check.svg" alt="" />
-                </div>
-              </div>
-              <div class="check-item__right">
-                <p>
-                  Расположен в южном (Аэропорт) или западном (Затон) направлении
-                  от Уфы
-                </p>
-              </div>
-            </div>
-            <div class="check-item">
-              <div class="check-item__left">
-                <div class="pie pie_accent pie_small">
-                  <img src="../img/icons/check.svg" alt="" />
-                </div>
-              </div>
-              <div class="check-item__right">
-                <p>
-                  Расположен в южном (Аэропорт) или западном (Затон) направлении
-                  от Уфы
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="p-b--40 section__bg section__bg_secondary">
-        <img src="../img/img.png" class="w-full" alt="" />
-        <div class="container">
-          <h2 class="title transform-y---12 m-b--20">
-            <span>Преимущества</span>
-            <br />
-            <span>сотрудничества</span>
-            <br />
-            <span>с компанией</span>
-            <br />
-            <span>ПОРАДОМ</span>
-          </h2>
-          <div class="cards-mini">
-            <div class="mini">
-              <img
-                src="../img/icons/scales.svg"
-                alt=""
-                class="mini__icon mini__icon_lg mini__icon_primary"
-              />
-              <p class="mini__text">
-                Квалифицированное юридическое сопровождение и оформление сделки
-              </p>
-            </div>
-            <div class="mini">
-              <img
-                src="../img/icons/handshake.svg"
-                alt=""
-                class="mini__icon mini__icon_lg mini__icon_primary"
-              />
-              <p class="mini__text">
-                Прозрачные, понятные и надежные партнерские отношения
-              </p>
-            </div>
-            <div class="mini">
-              <img
-                src="../img/icons/fireprocent.svg"
-                alt=""
-                class="mini__icon mini__icon_lg mini__icon_primary"
-              />
-              <p class="mini__text">
-                Специальные предложения по строительству домов на выкупаемых
-                землях
-              </p>
-            </div>
-            <div class="mini">
-              <img
-                src="../img/icons/heart.svg"
-                alt=""
-                class="mini__icon mini__icon_lg mini__icon_primary"
-              />
-              <p class="mini__text">
-                Взаимовыгодные схемы расчетов в т.ч. бартерные
-              </p>
-            </div>
-            <div class="mini">
-              <img
-                src="../img/icons/wallet.svg"
-                alt=""
-                class="mini__icon mini__icon_lg mini__icon_primary"
-              />
-              <p class="mini__text">
-                Всегда своевременная оплата на гибких условиях
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="application p-b--30">
-        <div class="container">
-          <form action="#" class="form" id="special-offer" data-form="1">
-            <h4 class="form__title">Заголовок формы</h4>
-            <div class="text-field">
-              <input
-                data-special-offer
-                class="text-field__input"
-                type="text"
-                name="login"
-                id="login"
-                placeholder="Ближайшие насленные пункты"
-              />
-            </div>
-            <div class="text-field">
-              <input
-                data-special-offer
-                class="text-field__input"
-                type="text"
-                name="login"
-                id="login"
-                placeholder="Условия и схема выкупа участка"
-              />
-            </div>
-            <div class="text-field">
-              <input
-                data-special-offer
-                class="text-field__input"
-                type="text"
-                name="login"
-                id="login"
-                placeholder="Площадь участка"
-              />
-            </div>
-            <div class="text-field">
-              <input
-                data-special-offer
-                class="text-field__input tel"
-                type="text"
-                name="login"
-                id="login"
-                placeholder="Введите ваш телефон"
-              />
-            </div>
-            <div class="text-field">
-              <input
-                data-special-offer
-                class="text-field__input"
-                type="text"
-                name="login"
-                id="login"
-                placeholder="Введите ваше имя"
-              />
-            </div>
-            <div class="upload-file__wrapper" id="upload_1">
-              <input
-                data-special-offer
-                type="file"
-                name="files[]"
-                id="upload-file__input_1"
-                class="upload-file__input"
-                accept=".jpg, .jpeg, .png, .gif, .bmp, .doc, .docx, .xls, .xlsx, .txt, .tar, .zip, .7z, .7zip"
-                multiple
-              />
-              <label class="upload-file__label" for="upload-file__input_1">
-                <img
-                  src="../img/icons/document.svg"
-                  alt=""
-                  class="upload-file__icon"
-                />
-                <span class="upload-file__text">Прикрепите план или схему</span>
-              </label>
-              <div class="files"></div>
-            </div>
-
-            <button
-              type="submit"
-              id="special-offer-btn"
-              class="button button_accent"
-            >
-              Отправить
-            </button>
-            <label class="checkbox-other">
-              <input data-special-offer type="checkbox" />
-              <p>
-                Даю согласие на обработку
-                <a href="#" class="checkbox__link"> персональных данных </a>
-              </p>
+          <div class="upload-file__wrapper" id="upload_1">
+            <input data-special-offer type="file" name="files[]" id="upload-file__input_1" class="upload-file__input"
+              accept=".jpg, .jpeg, .png, .gif, .bmp, .doc, .docx, .xls, .xlsx, .txt, .tar, .zip, .7z, .7zip" multiple />
+            <label class="upload-file__label" for="upload-file__input_1">
+              <img src="../img/icons/document.svg" alt="" class="upload-file__icon" />
+              <span class="upload-file__text">Прикрепите план или схему</span>
             </label>
-          </form>
-          <!-- <form action="#" class="form" data-form="1">
+            <div class="files"></div>
+          </div>
+
+          <button type="submit" id="special-offer-btn" class="button button_accent">
+            Отправить
+          </button>
+          <label class="checkbox-other">
+            <input data-special-offer type="checkbox" />
+            <p>
+              Даю согласие на обработку
+              <a href="#" class="checkbox__link"> персональных данных </a>
+            </p>
+          </label>
+        </form>
+        <!-- <form action="#" class="form" data-form="1">
             <h4 class="form__title">Ваше предложение по земле</h4>
             <div class="text-field">
               <input
@@ -536,73 +451,56 @@
               </p>
             </label>
           </form> -->
-        </div>
-      </section>
-    </main>
-    <!--footer start-->
-    <footer class="footer">
-      <div class="container">
-        <div class="accordion" id="accordion">
-          <h3 class="accordion-header">
-            Покупателям <span class="accordion__line"></span>
-          </h3>
-          <div
-            class="accordion-body tabs__text"
-            id="tabs-1"
-            style="height: 0px"
-          >
-            <a href="#"> Проектирование </a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-          </div>
-          <h3 class="accordion-header">
-            Стандарты <span class="accordion__line"></span>
-          </h3>
-          <div
-            class="accordion-body tabs__text"
-            id="tabs-2"
-            style="height: 0px"
-          >
       </div>
-      <div class="footer__line"></div>
-      <div class="container">
-        <div class="footer__content">
-          <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
-          <div class="footer__socials social">
-            <a href="#" class="pie pie_primary social__link_s">
-              <img src="../img/icons/youtube.svg" alt="" class="social__icon" />
-            </a>
-            <a href="#" class="pie pie_primary social__link_s">
-              <img
-                src="../img/icons/instagram.svg"
-                alt=""
-                class="social__icon"
-              />
-            </a>
-            <a href="#" class="pie pie_primary social__link_s">
-              <img
-                src="../img/icons/facebook.svg"
-                alt=""
-                class="social__icon"
-              />
-            </a>
-            <a href="#" class="pie pie_primary social__link_s">
-              <img src="../img/icons/vk.svg" alt="" class="social__icon" />
-            </a>
-          </div>
-          <div class="footer__contact">
-            <address>г.Уфа, ул.Мустая Карима, д.16</address>
-            <a href="tell:73472008719">+7 (347) 200-87-19</a>
-          </div>
-          <p class="development">
-            Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
-          </p>
+    </section>
+  </main>
+  <!--footer start-->
+  <footer class="footer">
+    <div class="container">
+      <div class="accordion" id="accordion">
+        <h3 class="accordion-header">
+          Покупателям <span class="accordion__line"></span>
+        </h3>
+        <div class="accordion-body tabs__text" id="tabs-1" style="height: 0px">
+          <a href="#"> Проектирование </a>
+          <a href="#">Проектирование</a>
+          <a href="#">Проектирование</a>
+          <a href="#">Проектирование</a>
+          <a href="#">Проектирование</a>
+          <a href="#">Проектирование</a>
         </div>
-      </div>
-    </footer>
-    <!--footer end-->
-  </body>
+        <h3 class="accordion-header">
+          Стандарты <span class="accordion__line"></span>
+        </h3>
+        <div class="accordion-body tabs__text" id="tabs-2" style="height: 0px">
+        </div>
+        <div class="footer__line"></div>
+        <div class="container">
+          <div class="footer__content">
+            <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
+            <div class="footer__socials social">
+              <a href="#" class="pie pie_primary social__link_s">
+                <img src="../img/icons/youtube.svg" alt="" class="social__icon" />
+              </a>
+
+              <a href="#" class="pie pie_primary social__link_s">
+                <img src="../img/icons/facebook.svg" alt="" class="social__icon" />
+              </a>
+              <a href="#" class="pie pie_primary social__link_s">
+                <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+              </a>
+            </div>
+            <div class="footer__contact">
+              <address>г.Уфа, ул.Мустая Карима, д.16</address>
+              <a href="tell:73472008719">+7 (347) 200-87-19</a>
+            </div>
+            <p class="development">
+              Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
+            </p>
+          </div>
+        </div>
+  </footer>
+  <!--footer end-->
+</body>
+
 </html>
