@@ -55,6 +55,12 @@
 
   &__title {
     margin-bottom: 20px;
+
+    @include desktop-sm {
+      font-size: 48px;
+      line-height: 100%;
+      margin-bottom: 40px;
+    }
   }
 
   &__subtitle {
@@ -68,10 +74,20 @@
   &__btns {
     margin-bottom: 30px;
     position: relative;
+
+    @include desktop-sm {
+      margin-bottom: 45px;
+    }
   }
 
   &__crumbs {
     margin-bottom: 20px;
+
+    @include desktop-sm {
+      margin-bottom: 60px;
+      font-size: 14px;
+      line-height: 130%;
+    }
   }
 }
 

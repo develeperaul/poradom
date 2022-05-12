@@ -5,6 +5,7 @@ $pageColorActive: #0099e0;
   width: 100%;
   height: 100%;
 }
+
 .swiper-slide {
   /* text-align: center; */
   /* font-size: 18px; */
@@ -23,9 +24,11 @@ $pageColorActive: #0099e0;
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+
   &_pb {
     padding-bottom: 85px;
   }
+
   &__title {
     &_ty {
       &--30 {
@@ -33,15 +36,19 @@ $pageColorActive: #0099e0;
       }
     }
   }
+
   &__text {
     margin-top: 14px;
   }
+
   &__list {
     margin-top: 14px;
   }
+
   &__item {
     position: relative;
     padding-left: 10px;
+
     &::after {
       position: absolute;
       content: "\2022";
@@ -61,13 +68,22 @@ $pageColorActive: #0099e0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
+  &-card {
+    @include desktop-sm {
+      display: none;
+    }
+  }
+
   & * .button {
     width: auto;
   }
+
   &-wrapper_pb {
     padding-bottom: 85px;
   }
 }
+
 // .carousel > .button {
 //     width: auto;
 // }
@@ -75,6 +91,7 @@ $pageColorActive: #0099e0;
   display: flex;
 
   justify-content: center;
+
   .pag {
     // display: block;
     vertical-align: baseline;
@@ -84,6 +101,7 @@ $pageColorActive: #0099e0;
     width: 43px;
     display: block;
     color: $pagColor;
+
     &::after {
       position: absolute;
       content: "";
@@ -94,8 +112,10 @@ $pageColorActive: #0099e0;
       width: 100%;
       background-color: $pagColor;
     }
+
     &-active {
       color: $pageColorActive;
+
       &::after {
         position: absolute;
         content: "";
@@ -112,46 +132,56 @@ $pageColorActive: #0099e0;
 .swiper {
   &-dots {
     display: flex;
+
     .dot {
       width: 8px;
       height: 8px;
       background-color: $pagColor;
       border-radius: 50%;
+
       &:not(:last-child) {
         margin-right: 6px;
       }
+
       &-active {
         background-color: $accent;
       }
+
       &__lg-red {
         width: 8px;
         height: 8px;
         background-color: $pagColor;
         border-radius: 50%;
+
         &:not(:last-child) {
           margin-right: 6px;
         }
+
         &-active {
           background-color: $accent;
         }
       }
     }
   }
+
   &-numbs {
     display: flex;
     padding-top: 9px;
     justify-content: center;
     margin-top: 20px;
+
     &_mt {
       &--10 {
         margin-top: -10px;
       }
     }
+
     &_position {
       position: absolute;
       bottom: 45px !important;
       z-index: 10;
     }
+
     .numb {
       color: #fff;
       font-size: 16px;
@@ -164,6 +194,7 @@ $pageColorActive: #0099e0;
       width: 43px;
       display: block;
       color: $pagColor;
+
       &::after {
         position: absolute;
         content: "";
@@ -174,8 +205,10 @@ $pageColorActive: #0099e0;
         width: 100%;
         background-color: $pagColor;
       }
+
       &-active {
         color: $pageColorActive;
+
         &::after {
           position: absolute;
           content: "";
@@ -188,6 +221,7 @@ $pageColorActive: #0099e0;
       }
     }
   }
+
   &-prev,
   &-next {
     position: absolute;
@@ -200,10 +234,12 @@ $pageColorActive: #0099e0;
     // top: 50%;
     top: 115px;
   }
+
   &-prev {
     background-image: url(../img/icons/prev.svg);
     left: 12px;
   }
+
   &-next {
     right: 12px;
     background-image: url(../img/icons/next.svg);
