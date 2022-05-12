@@ -42,12 +42,19 @@ $choice-color: #212529;
     cursor: pointer;
     color: $font-color;
     transition: all $transition-duration ease;
+
+    @include desktop-sm {
+      min-height: 60px;
+    }
+
     &_show {
       .dropdown__header--icon {
         opacity: 0;
       }
+
       min-height: 20px;
     }
+
     &--hide {
       margin-bottom: -3px;
     }
@@ -56,8 +63,7 @@ $choice-color: #212529;
       margin-bottom: 0px;
     }
 
-    &--title {
-    }
+    &--title {}
 
     &--active {
       color: $choice-color;
@@ -66,6 +72,7 @@ $choice-color: #212529;
     &--icon {
       margin-left: 20px;
       position: relative;
+
       &::after {
         position: absolute;
         content: "";
@@ -76,6 +83,7 @@ $choice-color: #212529;
         left: -20px;
         background-color: $border-color;
       }
+
       .rotate-icon {
         transition: transform $transition-duration ease;
         transform: rotate(180deg);
@@ -103,7 +111,12 @@ $choice-color: #212529;
     border-top-right-radius: 0px;
     margin: 0 -1px;
     background-color: #fff;
-    transition: max-height $transition-duration ease-in-out;
+    // transition: max-height $transition-duration ease-in-out;
+
+    @include desktop-sm {
+      position: absolute;
+      z-index: 1;
+    }
 
     &--hide {
       //   max-height: 3px;
@@ -112,6 +125,7 @@ $choice-color: #212529;
       border-top: none;
       // display: none;
     }
+
     // @keyframes drop {
     //   0%{}
     // }
@@ -122,6 +136,10 @@ $choice-color: #212529;
 
     &--show {
       max-height: 100vh;
+
+      @include desktop-sm {
+        overflow-y: initial;
+      }
     }
 
     &--list {
@@ -153,10 +171,12 @@ $choice-color: #212529;
       }
     }
   }
+
   &__btn {
     margin-top: 14px;
   }
 }
+
 // @media (max-width: 768px) {
 //   .outer-wrapper {
 //     grid-template-columns: 1fr;

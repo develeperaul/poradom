@@ -1,6 +1,20 @@
 .built {
   padding: 15px 0 40px 0;
 
+  &__wrapper {
+    @include desktop-sm {
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+
+      &>* {
+        max-width: 270px;
+        flex-basis: 270px;
+        margin: 0;
+      }
+    }
+  }
+
   &__number {
     font-weight: 700;
     color: $accent;
@@ -12,14 +26,22 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 15px;
+
+    @include desktop-sm {
+      font-size: 370px;
+      line-height: 437px;
+    }
   }
+
   &__image {
     width: 100%;
     margin-bottom: 31px;
   }
+
   &__dropdowns-title {
     margin-bottom: 14px;
   }
+
   &__title {
     display: block;
     letter-spacing: 0;

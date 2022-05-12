@@ -2,5 +2,11 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
+
+    @include desktop-sm {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
   }
 }

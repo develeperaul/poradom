@@ -30,26 +30,33 @@
 @import "calc";
 @import "explore";
 @import "footer";
+
 .section {
   padding: 20px 0 40px;
+
   &:not(:first-child) {
     padding: 40px 0 40px;
   }
+
   &__bg {
     &_secondary {
       background-color: $secondary;
       color: #fff;
     }
   }
+
   &__top {
     margin-bottom: 20px;
-    & > .section__title {
+
+    &>.section__title {
       margin-bottom: 10px;
     }
   }
+
   &__title {
     margin-bottom: 20px;
   }
+
   &__subtitle {
     margin-bottom: 20px;
   }
@@ -57,6 +64,7 @@
   &__text {
     color: #b5b9be;
   }
+
   &__btns {
     margin-bottom: 30px;
     position: relative;
@@ -66,6 +74,7 @@
     margin-bottom: 20px;
   }
 }
+
 .hit,
 .distance,
 .new-project {
@@ -76,7 +85,10 @@
 
 .development {
   color: $border;
-  font-size: 12px;
+  font-size: 10px;
+  display: flex;
+  column-gap: 10px;
+  align-items: baseline;
 }
 
 .checkbox__link {
@@ -92,6 +104,7 @@
 
     z-index: 10;
   }
+
   &__wrapper {
     position: relative;
     width: 100%;
@@ -101,60 +114,71 @@
 
   display: grid;
   gap: 4px;
-  grid-template-areas: "A B" "C D";
+  grid-template-areas: "A B""C D";
   justify-content: center;
   align-content: center;
   transform: rotate(0deg) translate(0px, 0px);
   opacity: 1;
   transition: all 0.3s ease;
-  & > span {
+
+  &>span {
     width: 9px;
     height: 9px;
     border-radius: 2px;
     background-color: #fff;
     z-index: 10;
   }
-  & > span:nth-child(1) {
-  }
-  & > span:nth-child(2) {
-  }
-  & > span:nth-child(3) {
-  }
-  & > span:nth-child(4) {
-  }
+
+  &>span:nth-child(1) {}
+
+  &>span:nth-child(2) {}
+
+  &>span:nth-child(3) {}
+
+  &>span:nth-child(4) {}
+
   &_active {
     gap: 0px;
     transform: rotate(90deg);
-    & > span {
+
+    &>span {
       width: 2px;
       height: 20px;
     }
-    & > span:nth-child(1) {
+
+    &>span:nth-child(1) {
       transform: rotate(-45deg) translate(-6px, 8px);
     }
-    & > span:nth-child(2) {
+
+    &>span:nth-child(2) {
       opacity: 0;
     }
-    & > span:nth-child(3) {
+
+    &>span:nth-child(3) {
       transform: rotate(45deg) translate(-6px, -8px);
     }
-    & > span:nth-child(4) {
+
+    &>span:nth-child(4) {
       opacity: 0;
     }
   }
 }
+
 .children {
   position: absolute;
   z-index: 10;
   right: 8px;
+
   &:nth-child(4) {
     bottom: 243px;
     right: -1000px;
   }
+
   &:nth-child(2) {
     bottom: 371px;
     right: -1000px;
   }
+
   &:nth-child(3) {
     bottom: 307px;
     right: -1000px;
@@ -170,6 +194,7 @@
     animation-timing-function: ease;
     animation-duration: 3s;
   }
+
   &:nth-child(2) {
     bottom: 371px;
     right: 8px;
@@ -179,6 +204,7 @@
     animation-delay: 0.3s;
     animation-duration: 0.3s;
   }
+
   &:nth-child(3) {
     bottom: 307px;
     right: 8px;
@@ -189,8 +215,10 @@
     animation-duration: 0.3s;
   }
 }
+
 .children_active {
   position: absolute;
+
   &:nth-child(4) {
     bottom: 243px;
     right: -1000px;
@@ -199,6 +227,7 @@
     animation-timing-function: ease-out;
     animation-duration: 0.3s;
   }
+
   &:nth-child(2) {
     bottom: 371px;
     right: -1000px;
@@ -208,6 +237,7 @@
     animation-duration: 0.3s;
     animation-delay: 0.2s;
   }
+
   &:nth-child(3) {
     bottom: 307px;
     right: -1000px;
@@ -223,25 +253,30 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
     right: 8px;
   }
 }
+
 @keyframes close {
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
     right: -1000px;
   }
 }
+
 .neighbors {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 30px;
-  & > img {
+
+  &>img {
     z-index: 10;
   }
 }
@@ -249,16 +284,19 @@
 .tab {
   transition: all 0.5s ease;
   margin-bottom: 10px;
+
   &_border {
     padding: 20px 22px;
     border: 1px solid #e5e7ea;
     border-radius: 4px;
   }
+
   &__top {
     cursor: pointer;
     position: relative;
     margin-bottom: 0;
     transition: all 1s ease;
+
     &::before {
       position: absolute;
       content: "";
@@ -274,20 +312,25 @@
       transition: all 1s ease;
     }
   }
+
   &__bottom {
     transition: all 1s ease;
     height: 0;
     overflow: hidden;
   }
+
   &__content {
     color: #8f959b;
   }
+
   &_active.tab_border {
     padding: 30px 22px;
   }
+
   &_active &__top {
     margin-bottom: 14px;
   }
+
   &_active &__top::before {
     transform: rotate(180deg);
   }
