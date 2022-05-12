@@ -9,6 +9,22 @@ footer {
   background-color: $secondary;
   color: #fff !important;
 
+  &__m {
+    display: block;
+
+    @include desktop-sm {
+      display: none;
+    }
+  }
+
+  &__d {
+    display: none;
+
+    @include desktop-sm {
+      display: block;
+    }
+  }
+
   &__line {
     border-top: 1px solid #00293c;
     margin: 30px 0;
@@ -22,10 +38,19 @@ footer {
 
   &__logo {
     margin-bottom: 40px;
+
+    @include desktop-sm {
+      margin-bottom: 50px;
+    }
   }
 
   &__socials {
     margin-bottom: 20px;
+
+    @include desktop-sm {
+      align-self: baseline;
+      margin-bottom: 24px;
+    }
   }
 
   &__contact {
@@ -33,6 +58,42 @@ footer {
     margin-bottom: 11px;
     font-size: 16px;
     line-height: 180%;
+
+    @include desktop-sm {
+      font-size: 12px;
+      line-height: 170%;
+      text-align: left;
+      align-self: baseline;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+
+    &-right {
+      display: flex;
+      column-gap: 150px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    &-header {
+      color: $primary;
+    }
+
+    &-item {
+      color: #fff;
+    }
   }
 }
 
