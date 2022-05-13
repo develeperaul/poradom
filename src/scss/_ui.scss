@@ -351,7 +351,10 @@
   align-items: center;
   justify-content: center;
   transition: background-color 0.2s ease-in-out;
-
+  @include desktop-sm {
+    width: 36px;
+    height: 36px;
+  }
   &>span {
     display: inline-block;
     height: 13px;
@@ -360,7 +363,9 @@
     background-color: #fff;
     transition: background-color 0.2s ease-in-out;
     position: relative;
-
+    @include desktop-sm {
+      height: 25px;
+    }
     &::after,
     &::before {
       position: absolute;
@@ -369,6 +374,9 @@
       width: 1px;
       background-color: #fff;
       transition: background-color 0.2s ease-in-out;
+      @include desktop-sm {
+        height: 6px;
+      }
     }
 
     &:nth-child(1) {
@@ -867,7 +875,9 @@
     max-height: 0;
     transition: max-height 0.2s ease-in-out;
     filter: drop-shadow(0px 47px 19px rgba(0, 0, 0, 0.01)) drop-shadow(0px 26px 16px rgba(0, 0, 0, 0.05)) drop-shadow(0px 12px 12px rgba(0, 0, 0, 0.09)) drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
-
+    @include desktop-sm {
+      width: 220px;
+    }
     &_open {
       max-height: 100vh;
     }
@@ -881,7 +891,9 @@
       font-weight: 500;
       font-size: 12px;
       line-height: 130%;
-
+      @include desktop-sm {
+        padding: 14px; 
+      }
       &:not(:last-child) {
         border-bottom: 1px solid #e5e7ea;
       }
