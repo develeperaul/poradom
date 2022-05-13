@@ -19,11 +19,11 @@
     margin-bottom: 20px;
   }
   &__title {
-    font-family: AlienscowsEL;
+    font-family: MrPalkerDadsonCondL, sans-serif;
     color: $brown;
     font-size: 36px;
     line-height: 110%;
-    letter-spacing: -0.4px;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
     z-index: 10;
     &-wrapper {
