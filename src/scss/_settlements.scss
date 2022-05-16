@@ -4,7 +4,7 @@
   &__title {
     position: absolute;
     bottom: -4px;
-    left: 18px;
+    right: 16px;
     z-index: 9;
     & > span {
       padding-top: 9px;
@@ -49,6 +49,12 @@
     margin-bottom: 40px;
   }
   &__icon {
-    transform: translateY(-20px);
+    position: absolute;
+    top: 40px;
+  }
+  &__photo {
+    margin-left: auto;
+    margin-right: 0em;
+    z-index: 8;
   }
 }

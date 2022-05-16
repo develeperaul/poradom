@@ -2,7 +2,7 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-
+    gap: 20px;
     @include desktop-sm {
       flex-direction: row;
       flex-wrap: wrap;
