@@ -74,12 +74,13 @@
   & > span:first-child {
     position: relative;
     z-index: 10;
-
+    padding-top: 10px;
     &::after {
       position: absolute;
       content: "";
       width: 100%;
       height: calc(100% - 5px);
+      bottom: 5px;
       left: 0;
       z-index: -1;
       background-color: $accent;
@@ -326,8 +327,8 @@
   }
 
   &__play {
-    width: 64px;
-    height: 64px;
+    width: 48px;
+    height: 48px;
     background: linear-gradient(
       180deg,
       #fe497f -20.21%,
@@ -1193,15 +1194,21 @@
 }
 
 .video {
-  padding-top: 30px;
+  // padding-top: 30px;
   padding-bottom: 50px;
-  background: $secondary url("../img/video_bg.png");
+  background: $secondary;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color: #fff;
   height: 100vh;
-
+  &__top {
+    &-image {
+      width: 220px;
+      height: 130px;
+      margin-left: auto;
+    }
+  }
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -1210,26 +1217,30 @@
   }
 
   &__cards {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 
   &__title {
     margin-bottom: 20px;
+    text-transform: uppercase;
   }
 
   &__location {
-    margin-bottom: 7px;
+    margin-bottom: 20px;
   }
 
   &__play {
     display: flex;
     align-items: center;
   }
+  & &__play {
+    margin-bottom: 20px;
+  }
 
   &__play-text {
-    margin-left: 18px;
+    margin-left: 14px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 130%;
     color: #e5e7ea;
   }
