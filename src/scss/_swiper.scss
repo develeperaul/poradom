@@ -244,4 +244,40 @@ $pageColorActive: #0099e0;
     right: 12px;
     background-image: url(../img/icons/next.svg);
   }
+
+  &-stories-line {
+    display: flex;
+    padding-top: 9px;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 4px;
+
+    .stories-line {
+      background: green;
+      opacity: 0.5;
+      border-radius: 24px;
+      height: 3px;
+      width: 100%;
+      &::after {
+        position: absolute;
+        content: "";
+        border-radius: 24px;
+        height: 100%;
+        width: 0%;
+        transition: width 2.5s ease;
+      }
+      &-active {
+        background: green;
+        position: relative;
+
+        &::after {
+          width: 100%;
+          background-color: blue;
+        }
+      }
+      &.line-active {
+        background: blue;
+      }
+    }
+  }
 }
