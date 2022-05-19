@@ -7,14 +7,44 @@
       gap: 10px;
       justify-content: space-between;
 
-      &>* {
+      & > * {
         max-width: 270px;
         flex-basis: 270px;
         margin: 0;
       }
     }
   }
+  &__counter {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    @include desktop-sm {
+      max-width: 1500px;
+      margin: 0 auto;
+      grid-template-columns: repeat(4, 1fr);
 
+      grid-template-areas:
+        "A A B B"
+        "C C B B";
+    }
+    & .built__title {
+      @include desktop-sm {
+        grid-area: A;
+      }
+    }
+    & .built__image {
+      grid-column: 2 span / 2 span;
+      @include desktop-sm {
+        grid-area: C;
+      }
+    }
+
+    & .built__number {
+      @include desktop-sm {
+        grid-area: B;
+      }
+    }
+  }
   &__number {
     font-weight: 700;
     color: $accent;
@@ -37,9 +67,21 @@
     width: 100%;
     margin-bottom: 31px;
   }
-
+  &__drop {
+    @include desktop-sm {
+      background-color: $secondary;
+      padding: 70px 150px;
+      border-radius: 12px;
+    }
+  }
   &__dropdowns-title {
     margin-bottom: 14px;
+    @include desktop-sm {
+      color: #fff;
+      font-size: 48px;
+      line-height: 100%;
+      margin-bottom: 30px;
+    }
   }
 
   &__title {
@@ -52,5 +94,9 @@
     font-weight: 500;
     color: $black;
     text-transform: uppercase;
+    @include desktop-sm {
+      font-size: 48px;
+      line-height: 100%;
+    }
   }
 }

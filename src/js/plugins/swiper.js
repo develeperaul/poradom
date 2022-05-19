@@ -85,7 +85,7 @@ new newSwiper(".storiesSwiper", {
     },
   },
 });
-new newSwiper(".headerSwiper");
+new newSwiper(".headerSwiper", { spaceBetween: 0 });
 new newSwiper(".readySwiper", {});
 new newSwiper(".hitProject", {
   spaceBetween: 16,

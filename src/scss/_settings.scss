@@ -122,6 +122,13 @@ img {
   @include desktop-sm {
     padding: 0 $gap;
   }
+  &-slider {
+    width: calc(100% - 2 * #{$gap-m});
+    // margin-left: #{calc(#{$val} + #{$offset_one_side})};
+    @include desktop-sm {
+      width: calc(100% - 2 * #{$gap});
+    }
+  }
 }
 
 .-l-gap {

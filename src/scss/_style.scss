@@ -224,3 +224,30 @@
     line-height: 130%;
   }
 }
+
+.contact {
+  text-align: center;
+  margin-bottom: 11px;
+  font-size: 12px;
+  line-height: 170%;
+
+  @include desktop-sm {
+    font-size: 16px;
+    line-height: 180%;
+    text-align: left;
+    align-self: baseline;
+  }
+}
+
+.pick-up {
+  display: none;
+  @include desktop-sm {
+    display: flex;
+    display: none;
+    gap: 30px;
+  }
+  &__left {
+  }
+  &__right {
+  }
+}

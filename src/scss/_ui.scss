@@ -191,10 +191,13 @@
   text-align: center;
   border-radius: 4px;
   border: 1px solid $accent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  @include desktop-sm {
+    width: auto;
+    display: inline-block;
+  }
   &_accent {
     color: #fff;
     background-color: $accent;
@@ -366,7 +369,7 @@
     transition: background-color 0.2s ease-in-out;
     position: relative;
     @include desktop-sm {
-      height: 25px;
+      height: 23px;
     }
     &::after,
     &::before {
@@ -377,12 +380,12 @@
       background-color: #fff;
       transition: background-color 0.2s ease-in-out;
       @include desktop-sm {
-        height: 6px;
+        height: 5.4px;
       }
     }
 
     &:nth-child(1) {
-      margin-right: 6px;
+      margin-right: 10px;
 
       &::after,
       &::before {
@@ -420,13 +423,16 @@
     background-color: darken(#e5e7ea, 10%);
   }
 
-  &_active {
+  &_active,
+  &_active:hover {
+    background-color: #0099e0;
+
     & > span {
-      background-color: #0099e0;
+      background-color: #e5e7ea;
 
       &::after,
       &::before {
-        background-color: #0099e0;
+        background-color: #e5e7ea;
       }
     }
   }
@@ -500,19 +506,28 @@
 
   &_label {
     padding-top: 10px;
+    @include desktop-sm {
+      padding-top: 16px;
+    }
   }
 
   &__label {
     position: absolute;
     width: 88px;
     z-index: 9;
+    @include desktop-sm {
+      width: 125px;
+    }
   }
 
   &__location {
     &_p {
       position: absolute;
-      left: 29px;
+      left: 30px;
       top: 20px;
+      @include desktop-sm {
+        top: 35px;
+      }
     }
   }
 
@@ -599,6 +614,9 @@
   .label {
     right: 11px;
     top: 0px;
+    @include desktop-sm {
+      right: 30px;
+    }
 
     &__text {
       position: absolute;
@@ -620,6 +638,9 @@
       flex-direction: column;
       justify-content: center;
       margin-bottom: 7px;
+      @include desktop-sm {
+        font-size: 14px;
+      }
     }
   }
 
@@ -865,6 +886,7 @@
   &-filter {
     &__wrapper {
       position: relative;
+      cursor: pointer;
     }
 
     z-index: 10;
@@ -907,7 +929,8 @@
         border-bottom: 1px solid #e5e7ea;
       }
 
-      &_active {
+      &_active,
+      &:hover {
         background-color: #e5e7ea;
         color: #000;
       }
@@ -950,6 +973,12 @@
     margin-right: 8px;
     object-fit: scale-down;
     display: flex;
+
+    @include desktop-sm {
+      width: 36px;
+      height: 36px;
+      margin-right: 14px;
+    }
 
     img {
       margin: 0 auto;

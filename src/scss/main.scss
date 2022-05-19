@@ -114,6 +114,14 @@
 }
 
 .drop {
+  @include desktop-sm {
+    display: none;
+  }
+  &__children {
+    @include desktop-sm {
+      display: none;
+    }
+  }
   &_sq {
     position: absolute;
     right: 8px;
