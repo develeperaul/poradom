@@ -1,75 +1,158 @@
 .settlements {
   background-color: $secondary;
   position: relative;
+
+  &__container {
+    @include desktop-sm {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 70px;
+    }
+  }
+
   &__title {
     position: absolute;
-    bottom: 28px;
-    transform: translateY(100%);
-    /* right: 50px; */
-    left: 40px;
+    top: 189px;
+    right: 16px;
     z-index: 9;
-    & > span {
+
+    @include desktop-sm {
+      display: none;
+    }
+
+    &>span {
       padding-top: 9px;
       padding-right: 24px;
     }
+
+    &_desk {
+      display: none;
+
+      @include desktop-sm {
+        display: block;
+        position: static;
+      }
+    }
   }
+
   &__line {
+
     &-top,
     &-bottom {
       position: absolute;
       background-color: $primary;
     }
+
     &-top {
       top: 0;
       left: 20px;
       width: 1px;
       height: 40px;
+
+      @include desktop-sm {
+        left: 130px;
+      }
     }
+
     &-bottom {
       bottom: 0;
       left: 20px;
       width: 1px;
       height: 160px;
+
+      @include desktop-sm {
+        left: 130px;
+      }
     }
   }
+
   &__number {
     position: absolute;
     left: 7px;
     top: 40px;
+    z-index: 9;
+
+    @include desktop-sm {
+      left: 60px;
+      display: flex;
+      gap: 20px;
+      align-items: baseline;
+    }
   }
+
   &__number-content {
     position: absolute;
     height: 100%;
     width: 100%;
     z-index: 9;
   }
+
   &__top {
     position: relative;
     display: flex;
     justify-content: space-between;
+
+    @include desktop-sm {
+      order: 2;
+    }
   }
+
   &__icon {
     position: absolute;
     top: 40px;
+
+    @include desktop-sm {
+      top: 80px;
+      width: 353px;
+      height: 310px;
+    }
   }
+
   &__photo {
     margin-left: auto;
     margin-right: 0em;
     z-index: 8;
+
+    @include desktop-sm {
+      min-height: 700px;
+      flex-basis: 950px;
+    }
   }
 
   & .content-round {
     padding-top: 76px;
     padding-left: 0;
+
+    @include desktop-sm {
+      padding-top: 0;
+      padding-bottom: 90px;
+      place-self: end;
+      /* grid-column: 1 span; */
+      width: 100%;
+    }
+
+    &__title {
+      padding-left: 24px;
+      text-align: left;
+
+      @include desktop-sm {
+        padding-left: 0;
+        margin: 0;
+        flex-grow: 1;
+      }
+    }
+
     &__wrapper {
       display: block;
       /* align-self: baseline; */
       margin-bottom: auto;
       margin-top: 0;
+
       &::before {
         top: -76px;
         height: 76px;
       }
+
       &::after {
         width: 0;
         height: 0;

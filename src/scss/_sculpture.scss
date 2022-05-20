@@ -3,6 +3,12 @@
   padding-top: 47px;
   padding-bottom: 40px;
   position: relative;
+
+  @include desktop-sm {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -12,12 +18,14 @@
     right: 50%;
     top: 0;
   }
+
   &__content {
     display: flex;
     justify-content: space-between;
     position: relative;
     margin-bottom: 20px;
   }
+
   &__title {
     font-family: MrPalkerDadsonCondL, sans-serif;
     color: $brown;
@@ -26,10 +34,22 @@
     letter-spacing: 0.02em;
     text-transform: uppercase;
     z-index: 10;
+
+    @include desktop-sm {
+      font-size: 86px;
+    }
+
+    &-br {
+      @include desktop-sm {
+        display: none;
+      }
+    }
+
     &-wrapper {
       flex-shrink: 0;
       //   position: relative;
     }
+
     &-image {
       position: absolute;
       height: 100%;
@@ -38,7 +58,12 @@
       // height: 83px;
       // border-radius: 50%;
       display: block;
+
       // clip-path: polygon(9px 0%, 100% 0%, 100% 100%, 9px 100%);
+      @include desktop-sm {
+        z-index: 1;
+        top: -35px;
+      }
     }
   }
 
@@ -48,9 +73,20 @@
     margin-bottom: 30px;
     width: 100%;
     position: relative;
+
+    @include desktop-sm {
+      position: absolute;
+      /* top: 0; */
+      bottom: 0;
+      width: 50%;
+      /* display: none; */
+      margin: 0;
+    }
+
     img {
       width: 100%;
     }
+
     &::before {
       position: absolute;
       content: "";
@@ -64,11 +100,24 @@
       top: -45px;
       right: 0;
       z-index: 100;
+
+      @include desktop-sm {
+        width: 55%;
+        top: 25px;
+        right: 32px;
+      }
     }
   }
+
   &__text {
     color: #b5b9be;
     font-size: 16px;
     line-height: 21px;
+
+    @include desktop-sm {
+      font-size: 26px;
+      line-height: 120%;
+      margin-bottom: 100px;
+    }
   }
 }

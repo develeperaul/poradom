@@ -71,10 +71,19 @@
   text-transform: uppercase;
   color: #fff;
 
-  & > span:first-child {
+  @include desktop-sm {
+    letter-spacing: -0.03em;
+  }
+
+  &>span:first-child {
     position: relative;
     z-index: 10;
     padding-top: 10px;
+
+    @include desktop-sm {
+      padding-top: 0;
+    }
+
     &::after {
       position: absolute;
       content: "";
@@ -84,12 +93,17 @@
       left: 0;
       z-index: -1;
       background-color: $accent;
+
+      @include desktop-sm {
+        height: calc(100% - 24px);
+        bottom: 22px;
+      }
     }
   }
 }
 
 .title_primary {
-  & > span:first-child {
+  &>span:first-child {
     position: relative;
     z-index: 10;
 
@@ -191,13 +205,16 @@
   text-align: center;
   border-radius: 4px;
   border: 1px solid $accent;
+
   // display: flex;
   // justify-content: center;
   // align-items: center;
   @include desktop-sm {
     width: auto;
     display: inline-block;
+    min-width: 270px;
   }
+
   &_accent {
     color: #fff;
     background-color: $accent;
@@ -271,13 +288,14 @@
   font-family: DinCyLt, sans-serif;
   color: $number;
   font-size: 64px;
-  // line-height: 82px;
+  line-height: 82px;
   line-height: 100%;
   letter-spacing: -0.08em;
   z-index: 9;
 
   @include desktop-sm {
     font-size: 140px;
+    line-height: 180px;
   }
 }
 
@@ -298,7 +316,7 @@
   display: flex;
   flex-shrink: 0;
 
-  & > img {
+  &>img {
     width: 50%;
     margin: 0 auto;
   }
@@ -332,13 +350,11 @@
   &__play {
     width: 48px;
     height: 48px;
-    background: linear-gradient(
-      180deg,
-      #fe497f -20.21%,
-      #ed1556 28.44%,
-      #d10945 74.14%,
-      #d10945 74.14%
-    );
+    background: linear-gradient(180deg,
+        #fe497f -20.21%,
+        #ed1556 28.44%,
+        #d10945 74.14%,
+        #d10945 74.14%);
 
     &_lg {
       width: 48px;
@@ -356,11 +372,13 @@
   align-items: center;
   justify-content: center;
   transition: background-color 0.2s ease-in-out;
+
   @include desktop-sm {
     width: 36px;
     height: 36px;
   }
-  & > span {
+
+  &>span {
     display: inline-block;
     height: 13px;
     width: 1px;
@@ -368,9 +386,11 @@
     background-color: #fff;
     transition: background-color 0.2s ease-in-out;
     position: relative;
+
     @include desktop-sm {
       height: 23px;
     }
+
     &::after,
     &::before {
       position: absolute;
@@ -379,6 +399,7 @@
       width: 1px;
       background-color: #fff;
       transition: background-color 0.2s ease-in-out;
+
       @include desktop-sm {
         height: 5.4px;
       }
@@ -403,6 +424,7 @@
     }
 
     &:nth-child(2) {
+
       &::after,
       &::before {
         top: 0;
@@ -427,7 +449,7 @@
   &_active:hover {
     background-color: #0099e0;
 
-    & > span {
+    &>span {
       background-color: #e5e7ea;
 
       &::after,
@@ -506,6 +528,7 @@
 
   &_label {
     padding-top: 10px;
+
     @include desktop-sm {
       padding-top: 16px;
     }
@@ -515,6 +538,7 @@
     position: absolute;
     width: 88px;
     z-index: 9;
+
     @include desktop-sm {
       width: 125px;
     }
@@ -525,6 +549,7 @@
       position: absolute;
       left: 30px;
       top: 20px;
+
       @include desktop-sm {
         top: 35px;
       }
@@ -552,6 +577,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
+
       &-top {
         display: flex;
         justify-content: space-between;
@@ -614,6 +640,7 @@
   .label {
     right: 11px;
     top: 0px;
+
     @include desktop-sm {
       right: 30px;
     }
@@ -638,6 +665,7 @@
       flex-direction: column;
       justify-content: center;
       margin-bottom: 7px;
+
       @include desktop-sm {
         font-size: 14px;
       }
@@ -670,6 +698,7 @@
 
   //user
   &-user {
+
     // max-width: 139px;
     // width: 100%;
     &__img {
@@ -712,7 +741,7 @@
       display: flex;
       justify-content: space-between;
 
-      & > * {
+      &>* {
         color: $black;
         padding: 13px;
         border: 1px solid $border;
@@ -725,13 +754,13 @@
         width: 100%;
       }
 
-      & > *:first-child {
+      &>*:first-child {
         padding-right: 26px;
         padding-left: 13px;
         margin-right: 16px;
       }
 
-      & > *:last-child {
+      &>*:last-child {
         padding-right: 13px;
         padding-left: 26px;
       }
@@ -849,7 +878,7 @@
       opacity: 0.5;
     }
 
-    &_active > &__progress {
+    &_active>&__progress {
       opacity: 1;
       background-color: #0099e0;
     }
@@ -867,7 +896,7 @@
       // background-color: ;
     }
 
-    &_active > &__wrapper > &__numb::after {
+    &_active>&__wrapper>&__numb::after {
       position: absolute;
       content: "";
       width: 10px;
@@ -901,14 +930,12 @@
     // min-width: 180px;
     max-height: 0;
     transition: max-height 0.2s ease-in-out;
-    filter: drop-shadow(0px 47px 19px rgba(0, 0, 0, 0.01))
-      drop-shadow(0px 26px 16px rgba(0, 0, 0, 0.05))
-      drop-shadow(0px 12px 12px rgba(0, 0, 0, 0.09))
-      drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1))
-      drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0px 47px 19px rgba(0, 0, 0, 0.01)) drop-shadow(0px 26px 16px rgba(0, 0, 0, 0.05)) drop-shadow(0px 12px 12px rgba(0, 0, 0, 0.09)) drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
+
     @include desktop-sm {
       width: 220px;
     }
+
     &_open {
       max-height: 100vh;
     }
@@ -922,9 +949,11 @@
       font-weight: 500;
       font-size: 12px;
       line-height: 130%;
+
       @include desktop-sm {
         padding: 14px;
       }
+
       &:not(:last-child) {
         border-bottom: 1px solid #e5e7ea;
       }
@@ -997,10 +1026,17 @@
   justify-content: flex-end;
   align-items: center;
   padding-bottom: 40px;
+  gap: 14px;
 
   &__title {
     color: #fff;
-    margin-right: 12px;
+
+    @include desktop-sm {
+      margin: 0;
+      margin-bottom: 160px;
+      text-align: center;
+      padding: 0px;
+    }
   }
 
   &__wrapper {
@@ -1017,16 +1053,25 @@
     }
 
     &::after {
-      bottom: 0;
-      top: 75px;
+      bottom: -40px;
       left: 50%;
       height: 40px;
+
+      @include desktop-sm {
+        bottom: -120px;
+        height: 120px;
+      }
     }
 
     &::before {
       top: -40px;
       left: 50%;
       height: 40px;
+
+      @include desktop-sm {
+        top: -110px;
+        height: 110px;
+      }
     }
   }
 
@@ -1035,6 +1080,11 @@
     width: 75px;
     height: 75px;
     display: block;
+
+    @include desktop-sm {
+      width: 240px;
+      height: 240px;
+    }
   }
 }
 
@@ -1045,12 +1095,12 @@
   white-space: nowrap;
   flex-wrap: wrap;
 
-  > *:last-child {
+  >*:last-child {
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
-  & > * {
+  &>* {
     color: $primary;
     display: inline-block;
     position: relative;
@@ -1172,7 +1222,7 @@
     position: relative;
     width: 100%;
 
-    & > img {
+    &>img {
       width: 100%;
     }
 
@@ -1231,6 +1281,7 @@
   background-size: cover;
   color: #fff;
   height: 100vh;
+
   &__top {
     &-image {
       width: 220px;
@@ -1238,6 +1289,7 @@
       margin-left: auto;
     }
   }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -1262,6 +1314,7 @@
     display: flex;
     align-items: center;
   }
+
   & &__play {
     margin-bottom: 20px;
   }
@@ -1345,13 +1398,13 @@
 
     -ms-overflow-style: none;
 
-    & > img {
+    &>img {
       max-width: inherit !important;
       height: 100%;
       width: auto;
     }
 
-    & > svg {
+    &>svg {
       position: absolute;
       left: 0;
       top: 0;
@@ -1360,7 +1413,7 @@
       overflow: visible !important;
     }
 
-    & > svg polygon {
+    &>svg polygon {
       fill: #ff3333;
       fill-opacity: 0.5;
       stroke: #ff3333;
@@ -1374,12 +1427,12 @@
       }
     }
 
-    & > svg rect {
+    &>svg rect {
       fill: #000;
       fill-opacity: 0.5;
     }
 
-    & > svg text {
+    &>svg text {
       font-size: 20px;
       line-height: 1;
       letter-spacing: 0.05em;

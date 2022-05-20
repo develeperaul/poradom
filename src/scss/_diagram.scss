@@ -5,32 +5,45 @@ svg {
 .diagram {
   background-color: $secondary;
   position: relative;
+  padding-bottom: 40px;
+
+  @include desktop-sm {
+    padding-bottom: 120px;
+  }
 
   &__accordion>h3 {
     color: #fff;
   }
 
-  padding-bottom: 40px;
 
   &__number-content {
     position: absolute;
   }
 
   &__top {
-    padding-top: 80px;
+
     padding-left: 13px;
+    margin-left: 50px;
     width: 100%;
+    padding-top: 80px;
+
+    @include desktop-sm {
+      padding-top: 130px;
+      margin-left: 300px;
+      padding-left: 0;
+    }
   }
 
   &__title {
     z-index: 9;
-    margin-left: 50px;
     margin-bottom: 10px;
+
+    @include desktop-sm {
+      margin-bottom: 40px;
+    }
 
     &>span {
       padding-top: 9px;
-
-      padding-left: 11px;
       padding-right: 11px;
     }
   }
@@ -46,6 +59,7 @@ svg {
     @include desktop-sm {
       font-size: 26px;
       line-height: 31px;
+      margin-left: 0;
     }
   }
 
@@ -74,15 +88,23 @@ svg {
 
   &__number {
     position: absolute;
-    left: 7px;
     top: 40px;
+
+    @include desktop-sm {
+      top: 80px;
+    }
   }
 
   &__number-content {
     position: absolute;
+    left: 7px;
     // height: 100%;
     // width: 100%;
     z-index: 9;
+
+    @include desktop-sm {
+      left: 60px;
+    }
   }
 
   &__bottom {
@@ -106,6 +128,10 @@ svg {
 
 .survey__wrapper {
   position: relative;
+
+  @include desktop-sm {
+    margin-left: 300px;
+  }
 
   &>.popup {
     position: absolute;
@@ -136,7 +162,7 @@ svg {
 
   @include desktop-sm {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 570px));
     gap: 10px 30px;
   }
 }
