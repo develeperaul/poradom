@@ -258,6 +258,7 @@ $pageColorActive: #0099e0;
       border-radius: 24px;
       height: 3px;
       width: 100%;
+
       &::after {
         position: absolute;
         content: "";
@@ -266,6 +267,7 @@ $pageColorActive: #0099e0;
         width: 0%;
         transition: width 2.5s ease;
       }
+
       &-active {
         background: green;
         position: relative;
@@ -275,6 +277,7 @@ $pageColorActive: #0099e0;
           background-color: blue;
         }
       }
+
       &.line-active {
         background: blue;
       }

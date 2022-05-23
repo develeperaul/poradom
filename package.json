@@ -60,7 +60,7 @@
     "normalize.css": "^8.0.1",
     "reset-css": "^5.0.1",
     "smoothscroll-polyfill": "^0.4.4",
-    "swiper": "^8.0.6",
+    "swiper": "^8.1.5",
     "v-mask": "^2.3.0",
     "vee-validate": "^4.5.7",
     "vue": "^3.2.26",

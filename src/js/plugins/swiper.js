@@ -1,6 +1,11 @@
-import Swiper from "./swiper-bundle.min";
-function swiper(name, opts = {}) {
+
+import Swiper, { Navigation, Pagination, Grid } from 'swiper';
+
+// import styles bundle
+
+const swiper = (name, opts = {}) => {
   return new Swiper(name, {
+    modules: [Navigation, Pagination, Grid],
     loop: true,
     // autoplay: {
     //   delay: 2500,
@@ -27,7 +32,7 @@ function swiper(name, opts = {}) {
     ...opts,
   });
 }
-export default class newSwiper extends swiper {}
+export default class newSwiper extends swiper { }
 new newSwiper(".storiesSwiper", {
   on: {
     afterInit: (swiper) => {
@@ -115,7 +120,17 @@ new newSwiper(".newProject", {
 });
 new newSwiper("#office", { pagination: {} });
 
-new newSwiper(".newsSwiper");
+new newSwiper(".newsSwiper", {
+  // slidesPerView: 1,
+  slidesPerView: 2,
+  grid: {
+    rows: 2,
+  },
+  // breakpoints: {
+  //   1440: {
+  //   }
+  // }
+});
 new newSwiper(".projects");
 new newSwiper(".buttonsSwiper", { pagination: {} });
 new newSwiper(".featuresSwiper", {
