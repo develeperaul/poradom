@@ -221,10 +221,9 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              hmr: isDev,
+              // hmr: isDev,
             },
           },
-          "vue-style-loader",
           "css-loader",
           "postcss-loader",
         ],

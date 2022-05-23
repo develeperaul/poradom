@@ -8,20 +8,18 @@ svg {
   padding-bottom: 40px;
 
   @include desktop-sm {
-    padding-bottom: 120px;
+    padding-bottom: 20px;
   }
 
-  &__accordion>h3 {
+  &__accordion > h3 {
     color: #fff;
   }
-
 
   &__number-content {
     position: absolute;
   }
 
   &__top {
-
     padding-left: 13px;
     margin-left: 50px;
     width: 100%;
@@ -42,7 +40,7 @@ svg {
       margin-bottom: 40px;
     }
 
-    &>span {
+    & > span {
       padding-top: 9px;
       padding-right: 11px;
     }
@@ -64,7 +62,6 @@ svg {
   }
 
   &__line {
-
     &-top,
     &-bottom {
       position: absolute;
@@ -133,7 +130,7 @@ svg {
     margin-left: 300px;
   }
 
-  &>.popup {
+  & > .popup {
     position: absolute;
     width: 100%;
     color: #fff;

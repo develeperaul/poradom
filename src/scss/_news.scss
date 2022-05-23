@@ -8,17 +8,29 @@
   &__number-content {
     position: absolute;
     width: 100%;
+    @include desktop-sm {
+      left: 60px;
+    }
   }
   &__number {
     position: absolute;
     left: 7px;
     top: 0px;
+    @include desktop-sm {
+      top: 80px;
+    }
   }
   &__top {
     padding-top: 40px;
     margin-bottom: 30px;
+    margin-left: 50px;
     padding-left: 13px;
     width: 100%;
+    @include desktop-sm {
+      padding-top: 130px;
+      margin-left: 300px;
+      padding-left: 0;
+    }
   }
   &__botton {
     text-align: center;
@@ -26,10 +38,14 @@
   }
   &__title {
     z-index: 9;
-    margin-left: 50px;
 
     & > span {
       padding-right: 11px;
+    }
+    &_br {
+      @include desktop-sm {
+        display: none;
+      }
     }
   }
   & > a {

@@ -2,7 +2,7 @@ import "../../pages/home.html";
 import "../plugins/animateNumber";
 import "../plugins/telmask";
 import "../plugins/validateform";
-import Cards from "../plugins/cards";
+// import Cards from "../plugins/cards";
 import Dropdown from "../plugins/dropdown";
 new Dropdown("1");
 new Dropdown("2");
@@ -30,7 +30,6 @@ class Survey {
             //   }
             // }
             if (!this.getActiveClass) {
-              
               if (!el.classList.contains("card-survey_first")) {
                 document.querySelectorAll(".card-survey").forEach((item) => {
                   if (item.classList.contains("card-survey_first")) {
@@ -94,7 +93,7 @@ class Survey {
     });
   }
 }
-new Cards("new");
+// new Cards("new");
 new Survey("survey");
 // import '../../index.html'
 // new Dropdown("1");

@@ -1,6 +1,8 @@
-
-import Swiper, { Navigation, Pagination, Grid } from 'swiper';
-
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/grid";
+import "swiper/css/pagination";
+import Swiper, { Navigation, Pagination, Grid } from "swiper";
 // import styles bundle
 
 const swiper = (name, opts = {}) => {
@@ -31,8 +33,8 @@ const swiper = (name, opts = {}) => {
     //     },
     ...opts,
   });
-}
-export default class newSwiper extends swiper { }
+};
+export default class newSwiper extends swiper {}
 new newSwiper(".storiesSwiper", {
   on: {
     afterInit: (swiper) => {
@@ -120,12 +122,29 @@ new newSwiper(".newProject", {
 });
 new newSwiper("#office", { pagination: {} });
 
-new newSwiper(".newsSwiper", {
-  // slidesPerView: 1,
-  slidesPerView: 2,
+const s = new Swiper(".newsSwiper", {
+  modules: [Navigation, Pagination, Grid],
+  loop: false,
   grid: {
+    fill: "row",
     rows: 2,
   },
+  // slidesPerView: 1,
+  slidesPerView: 2,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-numbs",
+    bulletActiveClass: "numb-active",
+    bulletClass: "numb",
+    type: "bullets",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
+  },
+  // grid: {
+  //   rows: 2,
+  // },
   // breakpoints: {
   //   1440: {
   //   }

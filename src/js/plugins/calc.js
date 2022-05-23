@@ -35,6 +35,7 @@ window.addEventListener("DOMContentLoaded", function () {
   }
   const form = document.querySelector("#calc-1");
   const inputs = form.querySelectorAll("input");
+
   const dropdownHeader = form.querySelector("[data-dropdown_header]");
   const month = form.querySelector("[data-input='month']");
 
