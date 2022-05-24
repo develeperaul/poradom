@@ -1,0 +1,58 @@
+.contacts {
+    & .section__btns {
+        @include desktop-sm {
+            display: none;
+        }
+    }
+
+    &__top {
+        @include desktop-sm {
+
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 30px;
+
+            &>img {
+                max-height: 400px;
+                height: 100%;
+                object-fit: cover;
+                margin: 0;
+            }
+        }
+    }
+
+    &__image {
+        margin-bottom: 20px;
+
+        @include desktop-sm {
+            order: 2;
+        }
+    }
+
+    &__map {
+        @include desktop-sm {
+            order: 3;
+        }
+    }
+
+    &__image,
+    &__map {
+        width: 100%;
+    }
+
+    &__list {
+        margin-bottom: 40px;
+
+        @include desktop-sm {
+            order: 1;
+        }
+    }
+
+    & .contact__title {
+        display: none;
+
+        @include desktop-sm {
+            display: block;
+        }
+    }
+}

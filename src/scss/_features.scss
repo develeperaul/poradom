@@ -3,26 +3,32 @@
   background-color: $secondary;
   padding-bottom: 20px;
   color: #ffffff;
+
   &__top {
     position: relative;
     margin-left: -7px;
     padding-top: 40px;
     display: flex;
-    align-items: flex-end;
+    // align-items: flex-end;
     margin-bottom: 26px;
   }
+
   &__title {
-    margin-left: 23px;
+    padding-top: 32px;
+    margin-left: 16px;
   }
+
   &__icon {
     position: absolute;
     right: 0;
+
     &_b {
       &-50 {
         bottom: -50%;
       }
     }
   }
+
   &__line {
     &-top {
       position: absolute;
@@ -33,33 +39,40 @@
       height: 40px;
     }
   }
+
   &__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
+
   &__card {
     border-radius: 4px;
 
     text-align: center;
     padding-top: 19px;
     padding-bottom: 14px;
+
     &_bg-primary {
       background-color: $primary;
     }
+
     &_border {
       border: 1px solid $border;
     }
+
     &-title {
       font-weight: 500;
       font-size: 26px;
       line-height: 120%;
       margin-bottom: 4px;
     }
+
     &-text {
       color: #e5e7ea;
     }
   }
+
   // &__line {
   //   &-top,
   //   &-bottom {

@@ -11,9 +11,10 @@
     flex-direction: column;
   }
 
-  & > .container {
+  &>.container {
     // height: 100%;
   }
+
   &__trigger {
     display: flex;
     gap: 21px;
@@ -23,33 +24,42 @@
     line-height: 130%;
     align-items: center;
   }
+
   &__top {
     display: flex;
     justify-content: space-between;
     // margin-bottom: 31px;
     align-items: center;
-    padding-top: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 
     @include desktop-sm {
       grid-template-columns: repeat(6, minmax(0, 1fr));
       display: grid;
+      padding-top: 23px;
+      padding-bottom: 23px;
+
       & .header__trigger,
       & .logo,
       & .header__contacts {
         grid-column: span 2 / span 2;
       }
+
       & .header__trigger {
         order: 1;
       }
+
       & .logo {
         order: 2;
         justify-self: center;
       }
+
       & .header__contacts {
         order: 3;
         justify-self: end;
       }
     }
+
     &_absolute {
       position: absolute;
       width: 100%;
@@ -59,6 +69,17 @@
 
     &_white {
       background-color: #fff;
+
+      & .header__trigger,
+      & .header__contact {
+        color: $black;
+      }
+
+      & .menu-trigger {
+        & span {
+          background-color: $secondary;
+        }
+      }
     }
   }
 
@@ -82,14 +103,17 @@
       justify-content: space-between;
     }
   }
+
   &__contacts {
     display: none;
+
     @include desktop-sm {
       display: flex;
       align-items: center;
       gap: 70px;
     }
   }
+
   &__contact {
     color: #fff;
   }
@@ -110,15 +134,18 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
     @include desktop-sm {
       justify-content: center;
     }
+
     &__title {
       margin-bottom: 20px;
 
       text-transform: uppercase;
       font-family: "DinCyMd", sans-serif;
       letter-spacing: 0.01em;
+
       @include desktop-sm {
         margin-bottom: 30px;
         margin-top: 160px;
@@ -139,7 +166,6 @@
       }
     }
 
-    &__btn {
-    }
+    &__btn {}
   }
 }

@@ -1,740 +1,640 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Poradom</title>
-  </head>
 
-  <body>
-    <div class="top-arrow" id="arrow">
-      <div class="arrow-icon">
-        <svg
-          width="14"
-          height="8"
-          viewBox="0 0 14 8"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M13 7L7 1L1 7" stroke="white" stroke-linecap="round" />
-        </svg>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poradom</title>
+</head>
+
+<body>
+  <div class="top-arrow" id="arrow">
+    <div class="arrow-icon">
+      <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 7L7 1L1 7" stroke="white" stroke-linecap="round" />
+      </svg>
+    </div>
+  </div>
+  <section class="sidebar">
+    <div class="container">
+      <div class="header__wrapper">
+        <div class="header__top">
+          <img src="../img/icons/logo1.svg" alt="" />
+          <button class="menu-trigger active" id="menu-sidebar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="sidebar__list accordion" id="sidebar-accordion">
+        <h3 class="">Покупателям</h3>
+        <div class="tabs__text" id="tabs-1" style="height: 0px">
+          <a href="#"> Проектирование </a>
+          <a href="#">Проектирование</a>
+          <a href="#">Проектирование</a>
+          <a href="#">Проектирование</a>
+          <a href="#">Проектирование</a>
+          <a href="#">Проектирование</a>
+        </div>
+        <h3 class="">Стандарты</h3>
+        <div class="tabs__text" id="tabs-2" style="height: 0px">
+          <a href="#">Проектирование</a>
+        </div>
+        <h3 class="">О застройщике</h3>
+        <div class="tabs__text" id="tabs-3" style="height: 0px">
+          <a href="#">Проектирование</a>
+        </div>
       </div>
     </div>
-    <section class="sidebar">
-      <div class="container">
-        <div class="header__wrapper">
-          <div class="header__top">
-            <img src="../img/icons/logo1.svg" alt="" />
-            <button class="menu-trigger active" id="menu-sidebar">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
+  </section>
+  <!--header start-->
+
+  <header class="header">
+    <div class="header__top_absolute">
+      <div class="container header__top">
+        <img src="../img/icons/logo1.svg" alt="" class="logo" />
+        <div class="header__trigger">
+          <button class="menu-trigger" id="menu-header">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <span class="menu-trigger__text"> Меню </span>
+        </div>
+        <div class="header__contacts">
+          <div class="social">
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/youtube.svg" alt="" class="social__icon" />
+            </a>
+
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/facebook.svg" alt="" class="social__icon" />
+            </a>
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+            </a>
+          </div>
+          <div class="header__contact contact">
+            <address>г.Уфа, ул.Мустая Карима, д.16</address>
+            <a href="tell:73472008719">+7 (347) 200-87-19</a>
           </div>
         </div>
+      </div>
+    </div>
 
-        <div class="sidebar__list accordion" id="sidebar-accordion">
-          <h3 class="">Покупателям</h3>
-          <div class="tabs__text" id="tabs-1" style="height: 0px">
-            <a href="#"> Проектирование </a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
+    <a href="tg://resolve?domain=username" class="pie pie_big pie_blue drop__children children">
+      <img src="../img/icons/telega.svg" alt="" />
+    </a>
+    <a href="https://wa.me/799999999" class="pie pie_big pie_blue drop__children children">
+      <img src="../img/icons/whatsapp.svg" alt="" />
+    </a>
+    <a href="tel:+799999999" class="pie pie_big pie_blue drop__children children">
+      <img src="../img/icons/phone.svg" alt="" />
+    </a>
+    <span class="pie pie_big pie_accent drop drop_sq" id="drop">
+      <span></span><span></span><span></span><span></span>
+    </span>
+    <div class="pick-up">
+      <div class="pick-up__left">
+        <a href="#">Готовые дома</a>
+        <a href="#">Проекты домов</a>
+        <a href="#">Посёлки</a>
+      </div>
+      <div class="pick-up__right"></div>
+    </div>
+    <div class="swiper headerSwiper">
+      <div class="swiper-wrapper swiper-wrapper_pb">
+        <div class="swiper-slide swiper-slide_pb header__bottom">
+          <div class="container container-slider carousel">
+            <h2 class="carousel__title">
+              Новый проект <br />
+              со вторым <br />
+              светом
+            </h2>
+            <p class="carousel__text">
+              Запишитесь на экскурсию, <br />
+              чтобы увидеть это первыми!
+            </p>
+            <div>
+              <buttton class="carousel__btn button button_accent">Записаться на экскурсию</buttton>
+            </div>
           </div>
-          <h3 class="">Стандарты</h3>
-          <div class="tabs__text" id="tabs-2" style="height: 0px">
-            <a href="#">Проектирование</a>
+        </div>
+        <div class="swiper-slide swiper-slide_pb header__bottom">
+          <div class="container container-slider carousel">
+            <h2 class="carousel__title">
+              Новый проект <br />
+              со вторым <br />
+              светом
+            </h2>
+            <p class="carousel__text">
+              Запишитесь на экскурсию, <br />
+              чтобы увидеть это первыми!
+            </p>
+            <div>
+              <buttton class="carousel__btn button button_accent">Записаться на экскурсию</buttton>
+            </div>
           </div>
-          <h3 class="">О застройщике</h3>
-          <div class="tabs__text" id="tabs-3" style="height: 0px">
-            <a href="#">Проектирование</a>
+        </div>
+        <div class="swiper-slide swiper-slide_pb header__bottom">
+          <div class="container container-slider carousel">
+            <h2 class="carousel__title">
+              Новый проект <br />
+              со вторым <br />
+              светом
+            </h2>
+            <p class="carousel__text">
+              Запишитесь на экскурсию, <br />
+              чтобы увидеть это первыми!
+            </p>
+            <div>
+              <buttton class="carousel__btn button button_accent">Записаться на экскурсию</buttton>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-numbs swiper-numbs_position"></div>
+    </div>
+  </header>
+  <!--header end-->
+  <!--main start-->
+  <main>
+    <section class="built">
+      <div class="container">
+        <div class="built__counter">
+          <h1 class="built__number">
+            <span id="out-1"> 0 </span>
+          </h1>
+          <span class="built__title">Домов Построено</span>
+          <img src="../img/icons/built.svg" alt="" class="built__image" />
+        </div>
+        <div class="built__drop">
+          <h3 class="built__dropdowns-title">Я хочу</h3>
+          <div class="built__wrapper">
+            <div id="dropdown_1" class="dropdown">
+              <div id="dropdownHeader_1" class="dropdown__header dropdown__header--hide">
+                <div id="dropdownHeaderValue_1" class="dropdown__header--title">
+                  Тип
+                </div>
+                <div class="dropdown__header--icon">
+                  <img id="chevronIcon_1" class="fas fa-angle-down rotate-icon-home" src="../img/icons/down.svg"
+                    alt="" />
+                </div>
+              </div>
+
+              <div id="dropdownListBody_1" class="dropdown__body dropdown__body--hide">
+                <ul id="dropdownList_1" class="dropdown__body--list">
+                  <li class="dropdown__body--list-index">Test Value 1</li>
+                  <li class="dropdown__body--list-index">Test Value 2</li>
+                  <li class="dropdown__body--list-index">Test Value 3</li>
+                  <li class="dropdown__body--list-index">Test Value 4</li>
+                  <li class="dropdown__body--list-index">Test Value 5</li>
+                  <li class="dropdown__body--list-index">Test Value 6</li>
+                </ul>
+              </div>
+            </div>
+
+            <div id="dropdown_2" class="dropdown">
+              <div id="dropdownHeader_2" class="dropdown__header dropdown__header--hide">
+                <div id="dropdownHeaderValue_2" class="dropdown__header--title">
+                  Посёлок
+                </div>
+                <div class="dropdown__header--icon">
+                  <img id="chevronIcon_2" class="fas fa-angle-down rotate-icon-home" src="../img/icons/down.svg"
+                    alt="" />
+                </div>
+              </div>
+
+              <div id="dropdownListBody_2" class="dropdown__body dropdown__body--hide">
+                <ul id="dropdownList_2" class="dropdown__body--list">
+                  <li class="dropdown__body--list-index">Test Value 1</li>
+                  <li class="dropdown__body--list-index">Test Value 2</li>
+                  <li class="dropdown__body--list-index">Test Value 3</li>
+                  <li class="dropdown__body--list-index">Test Value 4</li>
+                  <li class="dropdown__body--list-index">Test Value 5</li>
+                  <li class="dropdown__body--list-index">Test Value 6</li>
+                </ul>
+              </div>
+            </div>
+
+            <div id="dropdown_3" class="dropdown">
+              <div id="dropdownHeader_3" class="dropdown__header dropdown__header--hide">
+                <div id="dropdownHeaderValue_3" class="dropdown__header--title">
+                  Площадь дома
+                </div>
+                <div class="dropdown__header--icon">
+                  <img id="chevronIcon_3" class="fas fa-angle-down rotate-icon-home" src="../img/icons/down.svg"
+                    alt="" />
+                </div>
+              </div>
+
+              <div id="dropdownListBody_3" class="dropdown__body dropdown__body--hide">
+                <ul id="dropdownList_3" class="dropdown__body--list">
+                  <li class="dropdown__body--list-index">Test Value 1</li>
+                  <li class="dropdown__body--list-index">Test Value 2</li>
+                  <li class="dropdown__body--list-index">Test Value 3</li>
+                  <li class="dropdown__body--list-index">Test Value 4</li>
+                  <li class="dropdown__body--list-index">Test Value 5</li>
+                  <li class="dropdown__body--list-index">Test Value 6</li>
+                </ul>
+              </div>
+            </div>
+
+            <div id="dropdown_3" class="dropdown">
+              <div id="dropdownHeader_3" class="dropdown__header dropdown__header--hide">
+                <div id="dropdownHeaderValue_3" class="dropdown__header--title">
+                  Площадь участка
+                </div>
+                <div class="dropdown__header--icon">
+                  <img id="chevronIcon_3" class="fas fa-angle-down rotate-icon-home" src="../img/icons/down.svg"
+                    alt="" />
+                </div>
+              </div>
+
+              <div id="dropdownListBody_3" class="dropdown__body dropdown__body--hide">
+                <ul id="dropdownList_3" class="dropdown__body--list">
+                  <li class="dropdown__body--list-index">Test Value 1</li>
+                  <li class="dropdown__body--list-index">Test Value 2</li>
+                  <li class="dropdown__body--list-index">Test Value 3</li>
+                  <li class="dropdown__body--list-index">Test Value 4</li>
+                  <li class="dropdown__body--list-index">Test Value 5</li>
+                  <li class="dropdown__body--list-index">Test Value 6</li>
+                </ul>
+              </div>
+            </div>
+            <button class="button button_accent dropdown__btn">
+              Показать варианты
+            </button>
           </div>
         </div>
       </div>
     </section>
-    <!--header start-->
+    <section class="ready" style="display: block">
+      <div class="container">
+        <div class="ready__number-content">
+          <span class="ready__line-top"></span>
+          <span class="ready__number number">01</span>
+          <span class="ready__line-bottom"></span>
+        </div>
 
-    <header class="header">
-      <div class="header__top_absolute">
-        <div class="container header__top">
-          <img src="../img/icons/logo1.svg" alt="" class="logo" />
-          <div class="header__trigger">
-            <button class="menu-trigger" id="menu-header">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-            <span class="menu-trigger__text"> Меню </span>
+        <div class="ready__content">
+          <div class="ready__top">
+            <h2 class="title ready__title">
+              <span> готовые </span>
+              <br />
+              <span> дома </span>
+            </h2>
+            <img src="../img/icons/ready.svg" class="ready__icon" alt="" />
+            <img src="../img/people.png" alt="" width="155" height="216" class="ready__image" />
           </div>
-          <div class="header__contacts">
-            <div class="social">
-              <a href="#" class="pie pie_primary social__link_s">
-                <img
-                  src="../img/icons/youtube.svg"
-                  alt=""
-                  class="social__icon"
-                />
-              </a>
-
-              <a href="#" class="pie pie_primary social__link_s">
-                <img
-                  src="../img/icons/facebook.svg"
-                  alt=""
-                  class="social__icon"
-                />
-              </a>
-              <a href="#" class="pie pie_primary social__link_s">
-                <img src="../img/icons/vk.svg" alt="" class="social__icon" />
-              </a>
-            </div>
-            <div class="header__contact contact">
-              <address>г.Уфа, ул.Мустая Карима, д.16</address>
-              <a href="tell:73472008719">+7 (347) 200-87-19</a>
+          <div class="ready__bottom content-round">
+            <h4 class="content-round__title">
+              Дома построены <br />
+              и ждут своих хозяев!
+            </h4>
+            <div class="content-round__wrapper">
+              <img src="../img/main.png" alt="" class="content-round__image" />
             </div>
           </div>
         </div>
       </div>
+    </section>
+    <section class="hit">
+      <div class="container">
+        <div class="hit__swiper swiper swiper-card readySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card card_label">
+                <div class="card__label label">
+                  <div class="label__text"><span>Хит продаж</span></div>
+                  <img src="../img/icons/label-blue.svg" alt="" />
+                </div>
+                <div class="location card__location_p">
+                  <div class="location__image">
+                    <img src="../img/icons/location.svg" alt="" />
+                  </div>
+                  <h5 class="location__title">Нагаева</h5>
+                </div>
+                <img src="../img/main.png" alt="" class="card__image" />
+                <div class="card__container">
+                  <div class="card__container_l">
+                    <h5 class="card__address">
+                      Есенинский-2, ул. Лесная поляна, 8
+                    </h5>
+                    <div class="card__content card__content_s">
+                      <h4 class="card__title">Кирпичный Стандарт 170</h4>
 
-      <a
-        href="tg://resolve?domain=username"
-        class="pie pie_big pie_blue drop__children children"
-      >
-        <img src="../img/icons/telega.svg" alt="" />
-      </a>
-      <a
-        href="https://wa.me/799999999"
-        class="pie pie_big pie_blue drop__children children"
-      >
-        <img src="../img/icons/whatsapp.svg" alt="" />
-      </a>
-      <a
-        href="tel:+799999999"
-        class="pie pie_big pie_blue drop__children children"
-      >
-        <img src="../img/icons/phone.svg" alt="" />
-      </a>
-      <span class="pie pie_big pie_accent drop drop_sq" id="drop">
-        <span></span><span></span><span></span><span></span>
-      </span>
-      <div class="pick-up">
-        <div class="pick-up__left">
-          <a href="#">Готовые дома</a>
-          <a href="#">Проекты домов</a>
-          <a href="#">Посёлки</a>
+                    </div>
+                    <div class="card__info">
+                      <div>
+                        <h6 class="card__region-size-title">S участка</h6>
+                        <p class="card__region-size-text">18.25 соток</p>
+                      </div>
+                      <div>
+                        <h6 class="card__dedlain-title">Срок сдачи</h6>
+                        <p class="card__dedlain-text">IV кв 2022</p>
+                      </div>
+                    </div>
+                    <button class="button button_border">5 884 954 ₽</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card card_label">
+                <div class="card__label label">
+                  <div class="label__text"><span>Хит продаж</span></div>
+                  <img src="../img/icons/label-blue.svg" alt="" />
+                </div>
+                <div class="location card__location_p">
+                  <div class="location__image">
+                    <img src="../img/icons/location.svg" alt="" />
+                  </div>
+                  <h5 class="location__title">Нагаева</h5>
+                </div>
+                <img src="../img/main.png" alt="" class="card__image" />
+                <div class="card__container">
+                  <div class="card__container_l">
+                    <h5 class="card__address">
+                      Есенинский-2, ул. Лесная поляна, 8
+                    </h5>
+                    <div class="card__content card__content_s">
+                      <h4 class="card__title">Кирпичный Стандарт 170</h4>
+                      <a href="#" class="card__link"><img src="../img/icons/right-arrow.svg" alt=""></a>
+                    </div>
+                    <div class="card__info">
+                      <div>
+                        <h6 class="card__region-size-title">S участка</h6>
+                        <p class="card__region-size-text">18.25 соток</p>
+                      </div>
+                      <div>
+                        <h6 class="card__dedlain-title">Срок сдачи</h6>
+                        <p class="card__dedlain-text">IV кв 2022</p>
+                      </div>
+                    </div>
+                    <button class="button button_border">5 884 954 ₽</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-numbs"></div>
         </div>
-        <div class="pick-up__right"></div>
+        <div class="cards__wrapper">
+          <div class="card card_label">
+            <div class="card__label label">
+              <div class="label__text"><span>Хит продаж</span></div>
+              <img src="../img/icons/label-blue.svg" alt="" />
+            </div>
+            <div class="location card__location_p">
+              <div class="location__image">
+                <img src="../img/icons/location.svg" alt="" />
+              </div>
+              <h5 class="location__title">Нагаева</h5>
+            </div>
+            <img src="../img/main.png" alt="" class="card__image" />
+            <div class="card__container">
+              <div class="card__container_l">
+                <h5 class="card__address">
+                  Есенинский-2, ул. Лесная поляна, 8
+                </h5>
+                <div class="card__content card__content_s">
+                  <h4 class="card__title">Кирпичный Стандарт 170</h4>
+                  <a href="#" class="card__link"><img src="../img/icons/right-arrow.svg" alt=""></a>
+                </div>
+                <div class="card__info">
+                  <div>
+                    <h6 class="card__region-size-title">S участка</h6>
+                    <p class="card__region-size-text">18.25 соток</p>
+                  </div>
+                  <div>
+                    <h6 class="card__dedlain-title">Срок сдачи</h6>
+                    <p class="card__dedlain-text">IV кв 2022</p>
+                  </div>
+                </div>
+                <button class="button button_border">5 884 954 ₽</button>
+              </div>
+            </div>
+          </div>
+          <div class="card card_label">
+            <div class="card__label label">
+              <div class="label__text"><span>Хит продаж</span></div>
+              <img src="../img/icons/label-blue.svg" alt="" />
+            </div>
+            <div class="location card__location_p">
+              <div class="location__image">
+                <img src="../img/icons/location.svg" alt="" />
+              </div>
+              <h5 class="location__title">Нагаева</h5>
+            </div>
+            <img src="../img/main.png" alt="" class="card__image" />
+            <div class="card__container">
+              <div class="card__container_l">
+                <h5 class="card__address">
+                  Есенинский-2, ул. Лесная поляна, 8
+                </h5>
+                <div class="card__content card__content_s">
+                  <h4 class="card__title">Кирпичный Стандарт 170</h4>
+                  <a href="#" class="card__link"><img src="../img/icons/right-arrow.svg" alt=""></a>
+                </div>
+                <div class="card__info">
+                  <div>
+                    <h6 class="card__region-size-title">S участка</h6>
+                    <p class="card__region-size-text">18.25 соток</p>
+                  </div>
+                  <div>
+                    <h6 class="card__dedlain-title">Срок сдачи</h6>
+                    <p class="card__dedlain-text">IV кв 2022</p>
+                  </div>
+                </div>
+                <button class="button button_border">5 884 954 ₽</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="link">Все 48 готовых домов</a>
       </div>
-      <div class="swiper headerSwiper">
-        <div class="swiper-wrapper swiper-wrapper_pb">
-          <div class="swiper-slide swiper-slide_pb header__bottom">
-            <div class="container container-slider carousel">
-              <h2 class="carousel__title">
-                Новый проект <br />
-                со вторым <br />
-                светом
-              </h2>
-              <p class="carousel__text">
-                Запишитесь на экскурсию, <br />
-                чтобы увидеть это первыми!
-              </p>
-              <div>
-                <buttton class="carousel__btn button button_accent"
-                  >Записаться на экскурсию</buttton
-                >
-              </div>
-            </div>
+    </section>
+    <section class="settlements">
+      <div class="container">
+        <div class="settlements-content">
+          <span class="settlements__line-top"></span>
+          <div class="settlements__number">
+            <span class="number">02</span>
+            <h2 class="title settlements__title settlements__title_desk">
+              <span> посёлки </span>
+            </h2>
           </div>
-          <div class="swiper-slide swiper-slide_pb header__bottom">
-            <div class="container container-slider carousel">
-              <h2 class="carousel__title">
-                Новый проект <br />
-                со вторым <br />
-                светом
-              </h2>
-              <p class="carousel__text">
-                Запишитесь на экскурсию, <br />
-                чтобы увидеть это первыми!
-              </p>
-              <div>
-                <buttton class="carousel__btn button button_accent"
-                  >Записаться на экскурсию</buttton
-                >
-              </div>
-            </div>
+          <span class="settlements__line-bottom"></span>
+        </div>
+        <h2 class="title settlements__title">
+          <span> посёлки </span>
+        </h2>
+        <img src="../img/icons/settlements.svg" class="settlements__icon" alt="" />
+        <div class="settlements__container">
+          <div class="settlements__top -r-gap">
+            <img src="../img/people.png" alt="" class="settlements__photo" width="215" height="216" />
           </div>
-          <div class="swiper-slide swiper-slide_pb header__bottom">
-            <div class="container container-slider carousel">
-              <h2 class="carousel__title">
-                Новый проект <br />
-                со вторым <br />
-                светом
-              </h2>
-              <p class="carousel__text">
-                Запишитесь на экскурсию, <br />
-                чтобы увидеть это первыми!
-              </p>
-              <div>
-                <buttton class="carousel__btn button button_accent"
-                  >Записаться на экскурсию</buttton
-                >
-              </div>
+          <div class="settlements__bottom content-round">
+            <h4 class="content-round__title">
+              Пора жить в своём доме с городским комфортом
+            </h4>
+            <div class="content-round__wrapper">
+              <img src="../img/main.png" alt="" class="content-round__image" />
             </div>
           </div>
         </div>
-        <div class="swiper-numbs swiper-numbs_position"></div>
       </div>
-    </header>
-    <!--header end-->
-    <!--main start-->
-    <main>
-      <section class="built">
-        <div class="container">
-          <div class="built__counter">
-            <h1 class="built__number">
-              <span id="out-1"> 0 </span>
-            </h1>
-            <span class="built__title">Домов Построено</span>
-            <img src="../img/icons/built.svg" alt="" class="built__image" />
-          </div>
-          <div class="built__drop">
-            <h3 class="built__dropdowns-title">Я хочу</h3>
-            <div class="built__wrapper">
-              <div id="dropdown_1" class="dropdown">
-                <div
-                  id="dropdownHeader_1"
-                  class="dropdown__header dropdown__header--hide"
-                >
-                  <div
-                    id="dropdownHeaderValue_1"
-                    class="dropdown__header--title"
-                  >
-                    Тип
-                  </div>
-                  <div class="dropdown__header--icon">
-                    <img
-                      id="chevronIcon_1"
-                      class="fas fa-angle-down rotate-icon-home"
-                      src="../img/icons/down.svg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-
-                <div
-                  id="dropdownListBody_1"
-                  class="dropdown__body dropdown__body--hide"
-                >
-                  <ul id="dropdownList_1" class="dropdown__body--list">
-                    <li class="dropdown__body--list-index">Test Value 1</li>
-                    <li class="dropdown__body--list-index">Test Value 2</li>
-                    <li class="dropdown__body--list-index">Test Value 3</li>
-                    <li class="dropdown__body--list-index">Test Value 4</li>
-                    <li class="dropdown__body--list-index">Test Value 5</li>
-                    <li class="dropdown__body--list-index">Test Value 6</li>
-                  </ul>
-                </div>
+    </section>
+    <section class="distance">
+      <div class="container">
+        <div class="distance__wrapper">
+          <div class="card card_s card_label">
+            <div class="card__label label">
+              <div class="label__text">
+                <span>15 минут до центра города</span>
               </div>
-
-              <div id="dropdown_2" class="dropdown">
-                <div
-                  id="dropdownHeader_2"
-                  class="dropdown__header dropdown__header--hide"
-                >
-                  <div
-                    id="dropdownHeaderValue_2"
-                    class="dropdown__header--title"
-                  >
-                    Посёлок
-                  </div>
-                  <div class="dropdown__header--icon">
-                    <img
-                      id="chevronIcon_2"
-                      class="fas fa-angle-down rotate-icon-home"
-                      src="../img/icons/down.svg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-
-                <div
-                  id="dropdownListBody_2"
-                  class="dropdown__body dropdown__body--hide"
-                >
-                  <ul id="dropdownList_2" class="dropdown__body--list">
-                    <li class="dropdown__body--list-index">Test Value 1</li>
-                    <li class="dropdown__body--list-index">Test Value 2</li>
-                    <li class="dropdown__body--list-index">Test Value 3</li>
-                    <li class="dropdown__body--list-index">Test Value 4</li>
-                    <li class="dropdown__body--list-index">Test Value 5</li>
-                    <li class="dropdown__body--list-index">Test Value 6</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div id="dropdown_3" class="dropdown">
-                <div
-                  id="dropdownHeader_3"
-                  class="dropdown__header dropdown__header--hide"
-                >
-                  <div
-                    id="dropdownHeaderValue_3"
-                    class="dropdown__header--title"
-                  >
-                    Площадь дома
-                  </div>
-                  <div class="dropdown__header--icon">
-                    <img
-                      id="chevronIcon_3"
-                      class="fas fa-angle-down rotate-icon-home"
-                      src="../img/icons/down.svg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-
-                <div
-                  id="dropdownListBody_3"
-                  class="dropdown__body dropdown__body--hide"
-                >
-                  <ul id="dropdownList_3" class="dropdown__body--list">
-                    <li class="dropdown__body--list-index">Test Value 1</li>
-                    <li class="dropdown__body--list-index">Test Value 2</li>
-                    <li class="dropdown__body--list-index">Test Value 3</li>
-                    <li class="dropdown__body--list-index">Test Value 4</li>
-                    <li class="dropdown__body--list-index">Test Value 5</li>
-                    <li class="dropdown__body--list-index">Test Value 6</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div id="dropdown_3" class="dropdown">
-                <div
-                  id="dropdownHeader_3"
-                  class="dropdown__header dropdown__header--hide"
-                >
-                  <div
-                    id="dropdownHeaderValue_3"
-                    class="dropdown__header--title"
-                  >
-                    Площадь участка
-                  </div>
-                  <div class="dropdown__header--icon">
-                    <img
-                      id="chevronIcon_3"
-                      class="fas fa-angle-down rotate-icon-home"
-                      src="../img/icons/down.svg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-
-                <div
-                  id="dropdownListBody_3"
-                  class="dropdown__body dropdown__body--hide"
-                >
-                  <ul id="dropdownList_3" class="dropdown__body--list">
-                    <li class="dropdown__body--list-index">Test Value 1</li>
-                    <li class="dropdown__body--list-index">Test Value 2</li>
-                    <li class="dropdown__body--list-index">Test Value 3</li>
-                    <li class="dropdown__body--list-index">Test Value 4</li>
-                    <li class="dropdown__body--list-index">Test Value 5</li>
-                    <li class="dropdown__body--list-index">Test Value 6</li>
-                  </ul>
-                </div>
-              </div>
-              <button class="button button_accent dropdown__btn">
-                Показать варианты
-              </button>
+              <img src="../img/icons/label-blue.svg" alt="" />
             </div>
-          </div>
-        </div>
-      </section>
-      <section class="ready" style="display: block">
-        <div class="container">
-          <div class="ready__number-content">
-            <span class="ready__line-top"></span>
-            <span class="ready__number number">01</span>
-            <span class="ready__line-bottom"></span>
-          </div>
-
-          <div class="ready__content">
-            <div class="ready__top">
-              <h2 class="title ready__title">
-                <span> готовые </span>
-                <br />
-                <span> дома </span>
-              </h2>
-              <img src="../img/icons/ready.svg" class="ready__icon" alt="" />
-              <img
-                src="../img/people.png"
-                alt=""
-                width="155"
-                height="216"
-                class="ready__image"
-              />
-            </div>
-            <div class="ready__bottom content-round">
-              <h4 class="content-round__title">
-                Дома построены <br />
-                и ждут своих хозяев!
-              </h4>
-              <div class="content-round__wrapper">
-                <img
-                  src="../img/main.png"
-                  alt=""
-                  class="content-round__image"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="hit">
-        <div class="container">
-          <div class="hit__swiper swiper swiper-card readySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="card card_label">
-                  <div class="card__label label">
-                    <div class="label__text"><span>Хит продаж</span></div>
-                    <img src="../img/icons/label-blue.svg" alt="" />
-                  </div>
-                  <div class="location card__location_p">
-                    <div class="location__image">
-                      <img src="../img/icons/location.svg" alt="" />
-                    </div>
-                    <h5 class="location__title">Нагаева</h5>
-                  </div>
-                  <img src="../img/main.png" alt="" class="card__image" />
-                  <div class="card__container">
-                    <div class="card__container_l">
-                      <h5 class="card__address">
-                        Есенинский-2, ул. Лесная поляна, 8
-                      </h5>
-                      <div class="card__content card__content_s">
-                        <h4 class="card__title">Кирпичный Стандарт 170</h4>
-                      </div>
-                      <div class="card__info">
-                        <div>
-                          <h6 class="card__region-size-title">S участка</h6>
-                          <p class="card__region-size-text">18.25 соток</p>
-                        </div>
-                        <div>
-                          <h6 class="card__dedlain-title">Срок сдачи</h6>
-                          <p class="card__dedlain-text">IV кв 2022</p>
-                        </div>
-                      </div>
-                      <button class="button button_border">5 884 954 ₽</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card card_label">
-                  <div class="card__label label">
-                    <div class="label__text"><span>Хит продаж</span></div>
-                    <img src="../img/icons/label-blue.svg" alt="" />
-                  </div>
-                  <div class="location card__location_p">
-                    <div class="location__image">
-                      <img src="../img/icons/location.svg" alt="" />
-                    </div>
-                    <h5 class="location__title">Нагаева</h5>
-                  </div>
-                  <img src="../img/main.png" alt="" class="card__image" />
-                  <div class="card__container">
-                    <div class="card__container_l">
-                      <h5 class="card__address">
-                        Есенинский-2, ул. Лесная поляна, 8
-                      </h5>
-                      <div class="card__content card__content_s">
-                        <h4 class="card__title">Кирпичный Стандарт 170</h4>
-                      </div>
-                      <div class="card__info">
-                        <div>
-                          <h6 class="card__region-size-title">S участка</h6>
-                          <p class="card__region-size-text">18.25 соток</p>
-                        </div>
-                        <div>
-                          <h6 class="card__dedlain-title">Срок сдачи</h6>
-                          <p class="card__dedlain-text">IV кв 2022</p>
-                        </div>
-                      </div>
-                      <button class="button button_border">5 884 954 ₽</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-numbs"></div>
-          </div>
-          <div class="cards__wrapper">
-            <div class="card card_label">
-              <div class="card__label label">
-                <div class="label__text"><span>Хит продаж</span></div>
-                <img src="../img/icons/label-blue.svg" alt="" />
-              </div>
-              <div class="location card__location_p">
-                <div class="location__image">
-                  <img src="../img/icons/location.svg" alt="" />
-                </div>
-                <h5 class="location__title">Нагаева</h5>
-              </div>
-              <img src="../img/main.png" alt="" class="card__image" />
-              <div class="card__container">
-                <div class="card__container_l">
-                  <h5 class="card__address">
-                    Есенинский-2, ул. Лесная поляна, 8
-                  </h5>
-                  <div class="card__content card__content_s">
-                    <h4 class="card__title">Кирпичный Стандарт 170</h4>
-                  </div>
-                  <div class="card__info">
-                    <div>
-                      <h6 class="card__region-size-title">S участка</h6>
-                      <p class="card__region-size-text">18.25 соток</p>
-                    </div>
-                    <div>
-                      <h6 class="card__dedlain-title">Срок сдачи</h6>
-                      <p class="card__dedlain-text">IV кв 2022</p>
-                    </div>
-                  </div>
-                  <button class="button button_border">5 884 954 ₽</button>
-                </div>
-              </div>
-            </div>
-            <div class="card card_label">
-              <div class="card__label label">
-                <div class="label__text"><span>Хит продаж</span></div>
-                <img src="../img/icons/label-blue.svg" alt="" />
-              </div>
-              <div class="location card__location_p">
-                <div class="location__image">
-                  <img src="../img/icons/location.svg" alt="" />
-                </div>
-                <h5 class="location__title">Нагаева</h5>
-              </div>
-              <img src="../img/main.png" alt="" class="card__image" />
-              <div class="card__container">
-                <div class="card__container_l">
-                  <h5 class="card__address">
-                    Есенинский-2, ул. Лесная поляна, 8
-                  </h5>
-                  <div class="card__content card__content_s">
-                    <h4 class="card__title">Кирпичный Стандарт 170</h4>
-                  </div>
-                  <div class="card__info">
-                    <div>
-                      <h6 class="card__region-size-title">S участка</h6>
-                      <p class="card__region-size-text">18.25 соток</p>
-                    </div>
-                    <div>
-                      <h6 class="card__dedlain-title">Срок сдачи</h6>
-                      <p class="card__dedlain-text">IV кв 2022</p>
-                    </div>
-                  </div>
-                  <button class="button button_border">5 884 954 ₽</button>
+            <img src="../img/main.png" alt="" class="card__image" />
+            <div class="card__container">
+              <div class="card__container_l">
+                <h5 class="card__address">Акбердино</h5>
+                <div class="card__content">
+                  <h4 class="card__title">Девичья Гора</h4>
+                  <a href="#" class="card__link"><img src="../img/icons/right-arrow.svg" alt=""></a>
                 </div>
               </div>
             </div>
           </div>
-          <a href="#" class="link">Все 48 готовых домов</a>
-        </div>
-      </section>
-      <section class="settlements">
-        <div class="container">
-          <div class="settlements-content">
-            <span class="settlements__line-top"></span>
-            <div class="settlements__number">
-              <span class="number">02</span>
-              <h2 class="title settlements__title settlements__title_desk">
-                <span> посёлки </span>
-              </h2>
+          <div class="card card_s card_label">
+            <div class="card__label label">
+              <div class="label__text">
+                <span>15 минут до центра города</span>
+              </div>
+              <img src="../img/icons/label-blue.svg" alt="" />
             </div>
-            <span class="settlements__line-bottom"></span>
-          </div>
-          <h2 class="title settlements__title">
-            <span> посёлки </span>
-          </h2>
-          <img
-            src="../img/icons/settlements.svg"
-            class="settlements__icon"
-            alt=""
-          />
-          <div class="settlements__container">
-            <div class="settlements__top -r-gap">
-              <img
-                src="../img/people.png"
-                alt=""
-                class="settlements__photo"
-                width="215"
-                height="216"
-              />
-            </div>
-            <div class="settlements__bottom content-round">
-              <h4 class="content-round__title">
-                Пора жить в своём доме с городским комфортом
-              </h4>
-              <div class="content-round__wrapper">
-                <img
-                  src="../img/main.png"
-                  alt=""
-                  class="content-round__image"
-                />
+            <img src="../img/main.png" alt="" class="card__image" />
+            <div class="card__container">
+              <div class="card__container_l">
+                <h5 class="card__address">Акбердино</h5>
+                <div class="card__content">
+                  <h4 class="card__title">Девичья Гора</h4>
+                  <a href="#" class="card__link"><img src="../img/icons/right-arrow.svg" alt=""></a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="distance">
-        <div class="container">
-          <div class="distance__wrapper">
-            <div class="card card_s card_label">
-              <div class="card__label label">
-                <div class="label__text">
-                  <span>15 минут до центра города</span>
-                </div>
-                <img src="../img/icons/label-blue.svg" alt="" />
+          <div class="card card_s card_label">
+            <div class="card__label label">
+              <div class="label__text">
+                <span>15 минут до центра города</span>
               </div>
-              <img src="../img/main.png" alt="" class="card__image" />
-              <div class="card__container">
-                <div class="card__container_l">
-                  <h5 class="card__address">Акбердино</h5>
-                  <div class="card__content">
-                    <h4 class="card__title">Девичья Гора</h4>
-                  </div>
+              <img src="../img/icons/label-blue.svg" alt="" />
+            </div>
+            <img src="../img/main.png" alt="" class="card__image" />
+            <div class="card__container">
+              <div class="card__container_l">
+                <h5 class="card__address">Акбердино</h5>
+                <div class="card__content">
+                  <h4 class="card__title">Девичья Гора</h4>
+                  <a href="#" class="card__link"><img src="../img/icons/right-arrow.svg" alt=""></a>
                 </div>
               </div>
             </div>
-            <div class="card card_s card_label">
-              <div class="card__label label">
-                <div class="label__text">
-                  <span>15 минут до центра города</span>
-                </div>
-                <img src="../img/icons/label-blue.svg" alt="" />
+          </div>
+          <div class="card card_s card_label">
+            <div class="card__label label">
+              <div class="label__text">
+                <span>15 минут до центра города</span>
               </div>
-              <img src="../img/main.png" alt="" class="card__image" />
-              <div class="card__container">
-                <div class="card__container_l">
-                  <h5 class="card__address">Акбердино</h5>
-                  <div class="card__content">
-                    <h4 class="card__title">Девичья Гора</h4>
-                  </div>
+              <img src="../img/icons/label-blue.svg" alt="" />
+            </div>
+            <img src="../img/main.png" alt="" class="card__image" />
+            <div class="card__container">
+              <div class="card__container_l">
+                <h5 class="card__address">Акбердино</h5>
+                <div class="card__content">
+                  <h4 class="card__title">Девичья Гора</h4>
+                  <a href="#" class="card__link"><img src="../img/icons/right-arrow.svg" alt=""></a>
                 </div>
               </div>
             </div>
-            <div class="card card_s card_label">
-              <div class="card__label label">
-                <div class="label__text">
-                  <span>15 минут до центра города</span>
-                </div>
-                <img src="../img/icons/label-blue.svg" alt="" />
+          </div>
+          <div class="card card_s card_label">
+            <div class="card__label label">
+              <div class="label__text">
+                <span>15 минут до центра города</span>
               </div>
-              <img src="../img/main.png" alt="" class="card__image" />
-              <div class="card__container">
-                <div class="card__container_l">
-                  <h5 class="card__address">Акбердино</h5>
-                  <div class="card__content">
-                    <h4 class="card__title">Девичья Гора</h4>
-                  </div>
+              <img src="../img/icons/label-blue.svg" alt="" />
+            </div>
+            <img src="../img/main.png" alt="" class="card__image" />
+            <div class="card__container">
+              <div class="card__container_l">
+                <h5 class="card__address">Акбердино</h5>
+                <div class="card__content">
+                  <h4 class="card__title">Девичья Гора</h4>
+                  <a href="#" class="card__link"><img src="../img/icons/right-arrow.svg" alt=""></a>
                 </div>
               </div>
             </div>
-            <div class="card card_s card_label">
-              <div class="card__label label">
-                <div class="label__text">
-                  <span>15 минут до центра города</span>
-                </div>
-                <img src="../img/icons/label-blue.svg" alt="" />
+          </div>
+          <div class="card card_s card_label">
+            <div class="card__label label">
+              <div class="label__text">
+                <span>15 минут до центра города</span>
               </div>
-              <img src="../img/main.png" alt="" class="card__image" />
-              <div class="card__container">
-                <div class="card__container_l">
-                  <h5 class="card__address">Акбердино</h5>
-                  <div class="card__content">
-                    <h4 class="card__title">Девичья Гора</h4>
-                  </div>
-                </div>
-              </div>
+              <img src="../img/icons/label-blue.svg" alt="" />
             </div>
-            <div class="card card_s card_label">
-              <div class="card__label label">
-                <div class="label__text">
-                  <span>15 минут до центра города</span>
-                </div>
-                <img src="../img/icons/label-blue.svg" alt="" />
-              </div>
-              <img src="../img/main.png" alt="" class="card__image" />
-              <div class="card__container">
-                <div class="card__container_l">
-                  <h5 class="card__address">Акбердино</h5>
-                  <div class="card__content">
-                    <h4 class="card__title">Девичья Гора</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card card_s card_label">
-              <div class="card__label label">
-                <div class="label__text">
-                  <span>15 минут до центра города</span>
-                </div>
-                <img src="../img/icons/label-blue.svg" alt="" />
-              </div>
-              <img src="../img/main.png" alt="" class="card__image" />
-              <div class="card__container">
-                <div class="card__container_l">
-                  <h5 class="card__address">Акбердино</h5>
-                  <div class="card__content">
-                    <h4 class="card__title">Девичья Гора</h4>
-                  </div>
+            <img src="../img/main.png" alt="" class="card__image" />
+            <div class="card__container">
+              <div class="card__container_l">
+                <h5 class="card__address">Акбердино</h5>
+                <div class="card__content">
+                  <h4 class="card__title">Девичья Гора</h4>
+                  <a href="#" class="card__link"><img src="../img/icons/right-arrow.svg" alt=""></a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="project">
-        <div class="project-content">
-          <span class="project__line-top"></span>
-          <div class="project__number">
-            <span class="number">03</span>
-          </div>
-          <span class="project__line-bottom"></span>
+      </div>
+    </section>
+    <section class="project">
+      <div class="project-content">
+        <span class="project__line-top"></span>
+        <div class="project__number">
+          <span class="number">03</span>
         </div>
-        <div class="container">
-          <img src="../img/icons/project.svg" alt="" class="project__icon" />
-          <div class="project__bottom -r-gap">
-            <img
-              src="../img/main.png"
-              class="project__image"
-              width="238"
-              height="131"
-              alt=""
-            />
-            <div class="project__bottom-content">
-              <h2 class="title project__title">
-                <span> СЕРИИ проектов </span>
-                <!-- <br /> -->
-                <span> ДОМОВ ДЛЯ </span>
-                <br />
-                <span>СТРОИТЕЛЬСТВА</span>
-              </h2>
-              <h4 class="project__bottom-title">
-                Пора выбирать дом. <br />
-                Проекты, проверенные временем
-              </h4>
-            </div>
+        <span class="project__line-bottom"></span>
+      </div>
+      <div class="container">
+        <img src="../img/icons/project.svg" alt="" class="project__icon" />
+        <div class="project__bottom -r-gap">
+          <img src="../img/main.png" class="project__image" width="238" height="131" alt="" />
+          <div class="project__bottom-content">
+            <h2 class="title project__title">
+              <span> СЕРИИ проектов </span>
+              <!-- <br /> -->
+              <span> ДОМОВ ДЛЯ </span>
+              <br />
+              <span>СТРОИТЕЛЬСТВА</span>
+            </h2>
+            <h4 class="project__bottom-title">
+              Пора выбирать дом. <br />
+              Проекты, проверенные временем
+            </h4>
           </div>
         </div>
-      </section>
-      <section class="new-project">
-        <div class="container">
-          <!--если нужно сделать в карточке картинки слайдом-->
-          <!-- <div class="card card_s card_label">
+      </div>
+    </section>
+    <section class="new-project">
+      <div class="container">
+        <!--если нужно сделать в карточке картинки слайдом-->
+        <!-- <div class="card card_s card_label">
           <div class="card__label label">
             <div class="label__text"><span>Новый проект</span></div>
             <img src="../img/icons/label-red.svg" alt="" />
@@ -758,652 +658,570 @@
             </div>
           </div>
         </div> -->
-          <div id="cards_new" class="distance__wrapper">
-            <div class="card card_s card_label">
-              <div class="card__label label">
-                <div class="label__text"><span>Новый проект</span></div>
-                <img src="../img/icons/label-red.svg" alt="" />
+        <div id="cards_new" class="distance__wrapper">
+          <div class="card card_s card_label">
+            <div class="card__label label">
+              <div class="label__text"><span>Новый проект</span></div>
+              <img src="../img/icons/label-red.svg" alt="" />
+            </div>
+            <div class="">
+              <div class="swiper-wrapper">
+                <img src="../img/main.png" alt="" class="card__image swiper-slide" />
               </div>
-              <div class="">
-                <div class="swiper-wrapper">
-                  <img
-                    src="../img/main.png"
-                    alt=""
-                    class="card__image swiper-slide"
-                  />
-                </div>
-                <div class="card__container">
-                  <div class="card__container_l">
-                    <h5 class="card__address">Спецпроект</h5>
-                    <div class="card__content">
-                      <h4 class="card__title">Скай Лайт 165</h4>
-                    </div>
+              <div class="card__container">
+                <div class="card__container_l">
+                  <h5 class="card__address">Спецпроект</h5>
+                  <div class="card__content">
+                    <h4 class="card__title">Скай Лайт 165</h4>
+                    <a href="#" class="card__link"><img src="../img/icons/right-arrow.svg" alt=""></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div id="new_1" class="card card_s card_label">
-              <img src="../img/main.png" alt="" class="card__image" />
-              <div class="card__container">
-                <div class="card__container_l">
-                  <h5 class="card__address">Акбердино</h5>
-                  <div class="card__content card__content_s">
-                    <h4 class="card__title">Девичья Гора</h4>
-                  </div>
-                  <div class="button__wrapper">
-                    <div class="button__group">
-                      <button class="button__round button__round_active">
-                        85
-                      </button>
-                      <button class="button__round">125</button>
-                      <button class="button__round">135</button>
-                      <button class="button__round">125</button>
-                      <button class="button__round">125</button>
-                      <button class="button__round">135</button>
-                      <button class="button__round">125</button>
-                    </div>
+          </div>
+          <div id="new_1" class="card card_s card_label">
+            <img src="../img/main.png" alt="" class="card__image" />
+            <div class="card__container">
+              <div class="card__container_l">
+                <h5 class="card__address">Акбердино</h5>
+                <div class="card__content card__content_s">
+                  <h4 class="card__title">Девичья Гора</h4>
+                  <a href="#" class="card__link"><img src="../img/icons/right-arrow.svg" alt=""></a>
+                </div>
+                <div class="button__wrapper">
+                  <div class="button__group">
+                    <button class="button__round button__round_active">
+                      85
+                    </button>
+                    <button class="button__round">125</button>
+                    <button class="button__round">135</button>
+                    <button class="button__round">125</button>
+                    <button class="button__round">125</button>
+                    <button class="button__round">135</button>
+                    <button class="button__round">125</button>
                   </div>
                 </div>
               </div>
             </div>
-            <div id="new_2" class="card card_s card_label">
-              <img src="../img/main.png" alt="" class="card__image" />
-              <div class="card__container">
-                <div class="card__container_l">
-                  <h5 class="card__address">Акбердино</h5>
-                  <div class="card__content card__content_s">
-                    <h4 class="card__title">Девичья Гора</h4>
-                  </div>
-                  <div class="button__wrapper">
-                    <div class="button__group">
-                      <button class="button__round button__round_active">
-                        85
-                      </button>
-                      <button class="button__round">125</button>
-                      <button class="button__round">135</button>
-                      <button class="button__round">125</button>
-                    </div>
+          </div>
+          <div id="new_2" class="card card_s card_label">
+            <img src="../img/main.png" alt="" class="card__image" />
+            <div class="card__container">
+              <div class="card__container_l">
+                <h5 class="card__address">Акбердино</h5>
+                <div class="card__content card__content_s">
+                  <h4 class="card__title">Девичья Гора</h4>
+                  <a href="#" class="card__link"><img src="../img/icons/right-arrow.svg" alt=""></a>
+                </div>
+                <div class="button__wrapper">
+                  <div class="button__group">
+                    <button class="button__round button__round_active">
+                      85
+                    </button>
+                    <button class="button__round">125</button>
+                    <button class="button__round">135</button>
+                    <button class="button__round">125</button>
                   </div>
                 </div>
               </div>
             </div>
-            <div id="new_3" class="card card_s card_label">
-              <img src="../img/main.png" alt="" class="card__image" />
-              <div class="card__container">
-                <div class="card__container_l">
-                  <h5 class="card__address">Акбердино</h5>
-                  <div class="card__content card__content_s">
-                    <h4 class="card__title">Девичья Гора</h4>
-                  </div>
-                  <div class="button__wrapper">
-                    <div class="button__group">
-                      <button class="button__round">85</button>
-                      <button class="button__round button__round_active">
-                        125
-                      </button>
-                      <button class="button__round">135</button>
-                      <button class="button__round">125</button>
-                      <button class="button__round">135</button>
-                      <button class="button__round">145</button>
-                      <button class="button__round">155</button>
-                    </div>
+          </div>
+          <div id="new_3" class="card card_s card_label">
+            <img src="../img/main.png" alt="" class="card__image" />
+            <div class="card__container">
+              <div class="card__container_l">
+                <h5 class="card__address">Акбердино</h5>
+                <div class="card__content card__content_s">
+                  <h4 class="card__title">Девичья Гора</h4>
+                  <a href="#" class="card__link"><img src="../img/icons/right-arrow.svg" alt=""></a>
+                </div>
+                <div class="button__wrapper">
+                  <div class="button__group">
+                    <button class="button__round">85</button>
+                    <button class="button__round button__round_active">
+                      125
+                    </button>
+                    <button class="button__round">135</button>
+                    <button class="button__round">125</button>
+                    <button class="button__round">135</button>
+                    <button class="button__round">145</button>
+                    <button class="button__round">155</button>
                   </div>
                 </div>
               </div>
             </div>
-            <div id="new_4" class="card card_s card_label">
-              <img src="../img/main.png" alt="" class="card__image" />
-              <div class="card__container">
-                <div class="card__container_l">
-                  <h5 class="card__address">Акбердино</h5>
-                  <div class="card__content card__content_s">
-                    <h4 class="card__title">Девичья Гора</h4>
-                  </div>
-                  <div class="button__wrapper">
-                    <div class="button__group">
-                      <button class="button__round">85</button>
-                      <button class="button__round">125</button>
-                      <button class="button__round">135</button>
-                      <button class="button__round button__round_active">
-                        125
-                      </button>
-                      <button class="button__round">125</button>
-                    </div>
+          </div>
+          <div id="new_4" class="card card_s card_label">
+            <img src="../img/main.png" alt="" class="card__image" />
+            <div class="card__container">
+              <div class="card__container_l">
+                <h5 class="card__address">Акбердино</h5>
+                <div class="card__content card__content_s">
+                  <h4 class="card__title">Девичья Гора</h4>
+                  <a href="#" class="card__link"><img src="../img/icons/right-arrow.svg" alt=""></a>
+                </div>
+                <div class="button__wrapper">
+                  <div class="button__group">
+                    <button class="button__round">85</button>
+                    <button class="button__round">125</button>
+                    <button class="button__round">135</button>
+                    <button class="button__round button__round_active">
+                      125
+                    </button>
+                    <button class="button__round">125</button>
                   </div>
                 </div>
               </div>
             </div>
-            <div id="new_5" class="card card_s card_label">
-              <img src="../img/main.png" alt="" class="card__image" />
-              <div class="card__container">
-                <div class="card__container_l">
-                  <h5 class="card__address">Акбердино</h5>
-                  <div class="card__content card__content_s">
-                    <h4 class="card__title">Девичья Гора</h4>
-                  </div>
-                  <div class="button__wrapper">
-                    <div class="button__group">
-                      <button class="button__round button__round_active">
-                        85
-                      </button>
-                      <button class="button__round">125</button>
-                      <button class="button__round">135</button>
-                      <button class="button__round">125</button>
-                    </div>
+          </div>
+          <div id="new_5" class="card card_s card_label">
+            <img src="../img/main.png" alt="" class="card__image" />
+            <div class="card__container">
+              <div class="card__container_l">
+                <h5 class="card__address">Акбердино</h5>
+                <div class="card__content card__content_s">
+                  <h4 class="card__title">Девичья Гора</h4>
+                  <a href="#" class="card__link"><img src="../img/icons/right-arrow.svg" alt=""></a>
+                </div>
+                <div class="button__wrapper">
+                  <div class="button__group">
+                    <button class="button__round button__round_active">
+                      85
+                    </button>
+                    <button class="button__round">125</button>
+                    <button class="button__round">135</button>
+                    <button class="button__round">125</button>
                   </div>
                 </div>
               </div>
             </div>
-            <div id="new_6" class="card card_s card_label">
-              <img src="../img/main.png" alt="" class="card__image" />
-              <div class="card__container">
-                <div class="card__container_l">
-                  <h5 class="card__address">Акбердино</h5>
-                  <div class="card__content card__content_s">
-                    <h4 class="card__title">Девичья Гора</h4>
-                  </div>
-                  <div class="button__wrapper">
-                    <div class="button__group">
-                      <button class="button__round button__round_active">
-                        85
-                      </button>
-                      <button class="button__round">125</button>
-                      <button class="button__round">135</button>
-                      <button class="button__round">125</button>
-                      <button class="button__round">135</button>
-                      <button class="button__round">145</button>
-                      <button class="button__round">155</button>
-                    </div>
+          </div>
+          <div id="new_6" class="card card_s card_label">
+            <img src="../img/main.png" alt="" class="card__image" />
+            <div class="card__container">
+              <div class="card__container_l">
+                <h5 class="card__address">Акбердино</h5>
+                <div class="card__content card__content_s">
+                  <h4 class="card__title">Девичья Гора</h4>
+                  <a href="#" class="card__link"><img src="../img/icons/right-arrow.svg" alt=""></a>
+                </div>
+                <div class="button__wrapper">
+                  <div class="button__group">
+                    <button class="button__round button__round_active">
+                      85
+                    </button>
+                    <button class="button__round">125</button>
+                    <button class="button__round">135</button>
+                    <button class="button__round">125</button>
+                    <button class="button__round">135</button>
+                    <button class="button__round">145</button>
+                    <button class="button__round">155</button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="sculpture">
-        <div class="container">
-          <div class="sculpture__content">
-            <h2 class="sculpture__title">
-              Не нашли <br />
-              подходящий проект? <br />
-              Создадим <br class="sculpture__title-br" />
-              его для вас
-            </h2>
+      </div>
+    </section>
+    <section class="sculpture">
+      <div class="container">
+        <div class="sculpture__content">
+          <h2 class="sculpture__title">
+            Не нашли <br />
+            подходящий проект? <br />
+            Создадим <br class="sculpture__title-br" />
+            его для вас
+          </h2>
 
-            <img
-              src="../img/sculpture-round.png"
-              alt=""
-              class="sculpture__title-image"
-            />
+          <img src="../img/sculpture-round.png" alt="" class="sculpture__title-image" />
+        </div>
+        <p class="sculpture__text">
+          Закажите индивидуальное <br />
+          проектирование вашего дома
+        </p>
+      </div>
+      <div class="sculpture__image">
+        <img src="../img/sculpture.png" alt="" class=" " />
+      </div>
+      <div class="container">
+        <buttton class="button button_brown">Подробнее</buttton>
+      </div>
+    </section>
+    <section class="diagram">
+      <div class="diagram__number-content">
+        <span class="diagram__line-top"></span>
+        <span class="diagram__number number">04</span>
+      </div>
+      <div class="container">
+        <div class="diagram__top">
+          <h2 class="title diagram__title">
+            <span>самое важное</span>
+            <br />
+            <span>в загородной</span>
+            <br />
+            <span>жизни</span>
+          </h2>
+          <p class="diagram__text">Примите участие в опросе</p>
+        </div>
+        <div class="survey__wrapper">
+          <div class="popup">Спасибо. Ваш голос учтён</div>
+          <div class="survey__list survey__notactive" id="survey">
+            <div class="card-survey">
+              <div class="card-survey__progress" data-w="20" style="width: 0px"></div>
+              <div class="card-survey__wrapper">
+                <h5>техническое обслуживание домов</h5>
+                <span class="card-survey__numb"> 678 </span>
+              </div>
+            </div>
+            <div class="card-survey">
+              <div class="card-survey__progress" data-w="50" style="width: 0px"></div>
+              <div class="card-survey__wrapper">
+                <h5>гарантийное обслуживание</h5>
+                <span class="card-survey__numb"> 574 </span>
+              </div>
+            </div>
+            <div class="card-survey">
+              <div class="card-survey__progress" data-w="35" style="width: 0px"></div>
+              <div class="card-survey__wrapper">
+                <h5>техническое обслуживание домов</h5>
+                <span class="card-survey__numb"> 67 </span>
+              </div>
+            </div>
+            <div class="card-survey">
+              <div class="card-survey__progress" data-w="26" style="width: 0px"></div>
+              <div class="card-survey__wrapper">
+                <h5>фиксированная цена</h5>
+                <span class="card-survey__numb"> 567 </span>
+              </div>
+            </div>
+            <div class="card-survey">
+              <div class="card-survey__progress" data-w="40" style="width: 0px"></div>
+              <div class="card-survey__wrapper">
+                <h5>гибкая система оплаты; рассрочка</h5>
+                <span class="card-survey__numb"> 323 </span>
+              </div>
+            </div>
+            <div class="card-survey">
+              <div class="card-survey__progress" data-w="25" style="width: 0px"></div>
+              <div class="card-survey__wrapper">
+                <h5>земельные участки от 6 соток</h5>
+                <span class="card-survey__numb"> 302 </span>
+              </div>
+            </div>
+            <div class="card-survey">
+              <div class="card-survey__progress" data-w="30" style="width: 0px"></div>
+              <div class="card-survey__wrapper">
+                <h5>центральные коммуникации: газ, электричество</h5>
+                <span class="card-survey__numb"> 249 </span>
+              </div>
+            </div>
+            <div class="card-survey">
+              <div class="card-survey__progress" data-w="20" style="width: 0px"></div>
+              <div class="card-survey__wrapper">
+                <h5>система видеонаблюдения за объектом</h5>
+                <span class="card-survey__numb"> 208 </span>
+              </div>
+            </div>
+            <div class="card-survey">
+              <div class="card-survey__progress" data-w="10" style="width: 0px"></div>
+              <div class="card-survey__wrapper">
+                <h5>строгое соблюдение графика строительства</h5>
+                <span class="card-survey__numb"> 123 </span>
+              </div>
+            </div>
           </div>
-          <p class="sculpture__text">
-            Закажите индивидуальное <br />
-            проектирование вашего дома
+        </div>
+      </div>
+    </section>
+
+    <section class="news">
+      <div class="news__number-content">
+        <span class="news__number number">05</span>
+      </div>
+      <div class="container">
+        <div class="news__top">
+          <h2 class="title news__title">
+            <span>новости</span>
+            <br class="news__title_br" />
+            <span>порадом</span>
+          </h2>
+          <span></span>
+        </div>
+        <div class="swiper newsSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card-flat">
+                <img src="../img/main.png" alt="" class="card-flat__image" />
+                <div class="card-flat__container">
+                  <h6 class="card-flat__date">25.02.2022</h6>
+
+                  <h4 class="card-flat__text">
+                    Открыто бронирование таунхаусов второй очереди в
+                    Нагаевском парке
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-flat">
+                <img src="../img/main.png" alt="" class="card-flat__image" />
+                <div class="card-flat__container">
+                  <h6 class="card-flat__date">25.02.2022</h6>
+
+                  <h4 class="card-flat__text">
+                    Открыто бронирование таунхаусов второй очереди в
+                    Нагаевском парке
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-flat">
+                <img src="../img/main.png" alt="" class="card-flat__image" />
+                <div class="card-flat__container">
+                  <h6 class="card-flat__date">25.02.2022</h6>
+
+                  <h4 class="card-flat__text">
+                    Открыто бронирование таунхаусов второй очереди в
+                    Нагаевском парке
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-flat">
+                <img src="../img/main.png" alt="" class="card-flat__image" />
+                <div class="card-flat__container">
+                  <h6 class="card-flat__date">25.02.2022</h6>
+
+                  <h4 class="card-flat__text">
+                    Открыто бронирование таунхаусов второй очереди в
+                    Нагаевском парке
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-flat">
+                <img src="../img/main.png" alt="" class="card-flat__image" />
+                <div class="card-flat__container">
+                  <h6 class="card-flat__date">25.02.2022</h6>
+
+                  <h4 class="card-flat__text">
+                    Открыто бронирование таунхаусов второй очереди в
+                    Нагаевском парке
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-flat">
+                <img src="../img/main.png" alt="" class="card-flat__image" />
+                <div class="card-flat__container">
+                  <h6 class="card-flat__date">25.02.2022</h6>
+
+                  <h4 class="card-flat__text">
+                    Открыто бронирование таунхаусов второй очереди в
+                    Нагаевском парке
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-flat">
+                <img src="../img/main.png" alt="" class="card-flat__image" />
+                <div class="card-flat__container">
+                  <h6 class="card-flat__date">25.02.2022</h6>
+
+                  <h4 class="card-flat__text">
+                    Открыто бронирование таунхаусов второй очереди в
+                    Нагаевском парке
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-flat">
+                <img src="../img/main.png" alt="" class="card-flat__image" />
+                <div class="card-flat__container">
+                  <h6 class="card-flat__date">25.02.2022</h6>
+
+                  <h4 class="card-flat__text">
+                    Открыто бронирование таунхаусов второй очереди в
+                    Нагаевском парке
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-numbs"></div>
+        </div>
+        <div class="news__botton">
+          <a href="#">Все новости</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="application">
+      <div class="container">
+        <form action="#" class="form" data-form="1">
+          <h4 class="form__title">
+            Узнавать первым о спецпредложениях и акциях, домах и участках
+          </h4>
+          <div class="text-field">
+            <input data-special-offer class="text-field__input tel" type="text" name="login" id="login"
+              placeholder="Введите ваш телефон" />
+          </div>
+
+          <button type="submit" id="special-offer-btn" class="button button_accent">
+            Отправить
+          </button>
+        </form>
+      </div>
+    </section>
+    <section class="explore">
+      <div class="container">
+        <h2 class="explore__title">Ещё больше о ПОРАДОМ</h2>
+        <div class="explore__images">
+          <img src="../img/main.png" alt="" />
+          <img src="../img/main.png" alt="" />
+          <img src="../img/main.png" alt="" />
+          <img src="../img/main.png" alt="" />
+          <img src="../img/main.png" alt="" />
+          <img src="../img/main.png" alt="" />
+          <img src="../img/main.png" alt="" />
+          <img src="../img/main.png" alt="" />
+          <img src="../img/main.png" alt="" />
+        </div>
+        <button class="button button_border">
+          <img src="../img/icons/inst.svg" class="button_l" alt="" />
+          poradomufa
+        </button>
+      </div>
+    </section>
+  </main>
+  <!--main end-->
+  <!--footer start-->
+  <footer class="footer">
+    <div class="footer__m">
+      <div class="container">
+        <div class="accordion" id="accordion">
+          <h3 class="accordion-header">
+            Покупателям <span class="accordion__line"></span>
+          </h3>
+          <div class="accordion-body tabs__text" id="tabs-1" style="height: 0px">
+            <a href="#"> Проектирование </a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+          </div>
+          <h3 class="accordion-header">
+            Стандарты <span class="accordion__line"></span>
+          </h3>
+          <div class="accordion-body tabs__text" id="tabs-2" style="height: 0px">
+            <a href="#">Проектирование</a>
+          </div>
+          <h3 class="accordion-header">
+            О застройщике <span class="accordion__line"></span>
+          </h3>
+          <div class="accordion-body tabs__text" id="tabs-3" style="height: 0px">
+            <a href="#">Проектирование</a>
+          </div>
+          <h3 class="accordion-header">Контакты</h3>
+
+          <div class="accordion-body tabs__text" id="tabs-4" style="height: 0px">
+            <a href="#">Проектирование</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__line"></div>
+      <div class="container">
+        <div class="footer__content">
+          <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
+          <div class="footer__socials social">
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/youtube.svg" alt="" class="social__icon" />
+            </a>
+
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/facebook.svg" alt="" class="social__icon" />
+            </a>
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+            </a>
+          </div>
+          <div class="footer__contact">
+            <address>г.Уфа, ул.Мустая Карима, д.16</address>
+            <a href="tell:73472008719">+7 (347) 200-87-19</a>
+          </div>
+          <p class="development">
+            Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
           </p>
         </div>
-        <div class="sculpture__image">
-          <img src="../img/sculpture.png" alt="" class=" " />
-        </div>
-        <div class="container">
-          <buttton class="button button_brown">Подробнее</buttton>
-        </div>
-      </section>
-      <section class="diagram">
-        <div class="diagram__number-content">
-          <span class="diagram__line-top"></span>
-          <span class="diagram__number number">04</span>
-        </div>
-        <div class="container">
-          <div class="diagram__top">
-            <h2 class="title diagram__title">
-              <span>самое важное</span>
-              <br />
-              <span>в загородной</span>
-              <br />
-              <span>жизни</span>
-            </h2>
-            <p class="diagram__text">Примите участие в опросе</p>
-          </div>
-          <div class="survey__wrapper">
-            <div class="popup">Спасибо. Ваш голос учтён</div>
-            <div class="survey__list survey__notactive" id="survey">
-              <div class="card-survey">
-                <div
-                  class="card-survey__progress"
-                  data-w="20"
-                  style="width: 0px"
-                ></div>
-                <div class="card-survey__wrapper">
-                  <h5>техническое обслуживание домов</h5>
-                  <span class="card-survey__numb"> 678 </span>
-                </div>
+      </div>
+    </div>
+    <div class="footer__d">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__top-left">
+            <div class="footer__content">
+              <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
+              <div class="footer__socials social">
+                <a href="#" class="pie pie_primary social__link_s">
+                  <img src="../img/icons/youtube.svg" alt="" class="social__icon" />
+                </a>
+
+                <a href="#" class="pie pie_primary social__link_s">
+                  <img src="../img/icons/facebook.svg" alt="" class="social__icon" />
+                </a>
+                <a href="#" class="pie pie_primary social__link_s">
+                  <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+                </a>
               </div>
-              <div class="card-survey">
-                <div
-                  class="card-survey__progress"
-                  data-w="50"
-                  style="width: 0px"
-                ></div>
-                <div class="card-survey__wrapper">
-                  <h5>гарантийное обслуживание</h5>
-                  <span class="card-survey__numb"> 574 </span>
-                </div>
-              </div>
-              <div class="card-survey">
-                <div
-                  class="card-survey__progress"
-                  data-w="35"
-                  style="width: 0px"
-                ></div>
-                <div class="card-survey__wrapper">
-                  <h5>техническое обслуживание домов</h5>
-                  <span class="card-survey__numb"> 67 </span>
-                </div>
-              </div>
-              <div class="card-survey">
-                <div
-                  class="card-survey__progress"
-                  data-w="26"
-                  style="width: 0px"
-                ></div>
-                <div class="card-survey__wrapper">
-                  <h5>фиксированная цена</h5>
-                  <span class="card-survey__numb"> 567 </span>
-                </div>
-              </div>
-              <div class="card-survey">
-                <div
-                  class="card-survey__progress"
-                  data-w="40"
-                  style="width: 0px"
-                ></div>
-                <div class="card-survey__wrapper">
-                  <h5>гибкая система оплаты; рассрочка</h5>
-                  <span class="card-survey__numb"> 323 </span>
-                </div>
-              </div>
-              <div class="card-survey">
-                <div
-                  class="card-survey__progress"
-                  data-w="25"
-                  style="width: 0px"
-                ></div>
-                <div class="card-survey__wrapper">
-                  <h5>земельные участки от 6 соток</h5>
-                  <span class="card-survey__numb"> 302 </span>
-                </div>
-              </div>
-              <div class="card-survey">
-                <div
-                  class="card-survey__progress"
-                  data-w="30"
-                  style="width: 0px"
-                ></div>
-                <div class="card-survey__wrapper">
-                  <h5>центральные коммуникации: газ, электричество</h5>
-                  <span class="card-survey__numb"> 249 </span>
-                </div>
-              </div>
-              <div class="card-survey">
-                <div
-                  class="card-survey__progress"
-                  data-w="20"
-                  style="width: 0px"
-                ></div>
-                <div class="card-survey__wrapper">
-                  <h5>система видеонаблюдения за объектом</h5>
-                  <span class="card-survey__numb"> 208 </span>
-                </div>
-              </div>
-              <div class="card-survey">
-                <div
-                  class="card-survey__progress"
-                  data-w="10"
-                  style="width: 0px"
-                ></div>
-                <div class="card-survey__wrapper">
-                  <h5>строгое соблюдение графика строительства</h5>
-                  <span class="card-survey__numb"> 123 </span>
-                </div>
+              <div class="footer__contact">
+                <address>г.Уфа, ул.Мустая Карима, д.16</address>
+                <a href="tell:73472008719">+7 (347) 200-87-19</a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="news">
-        <div class="news__number-content">
-          <span class="news__number number">05</span>
-        </div>
-        <div class="container">
-          <div class="news__top">
-            <h2 class="title news__title">
-              <span>новости</span>
-              <br class="news__title_br" />
-              <span>порадом</span>
-            </h2>
-            <span></span>
-          </div>
-          <div class="swiper newsSwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="card-flat">
-                  <img src="../img/main.png" alt="" class="card-flat__image" />
-                  <div class="card-flat__container">
-                    <h6 class="card-flat__date">25.02.2022</h6>
-
-                    <h4 class="card-flat__text">
-                      Открыто бронирование таунхаусов второй очереди в
-                      Нагаевском парке
-                    </h4>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card-flat">
-                  <img src="../img/main.png" alt="" class="card-flat__image" />
-                  <div class="card-flat__container">
-                    <h6 class="card-flat__date">25.02.2022</h6>
-
-                    <h4 class="card-flat__text">
-                      Открыто бронирование таунхаусов второй очереди в
-                      Нагаевском парке
-                    </h4>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card-flat">
-                  <img src="../img/main.png" alt="" class="card-flat__image" />
-                  <div class="card-flat__container">
-                    <h6 class="card-flat__date">25.02.2022</h6>
-
-                    <h4 class="card-flat__text">
-                      Открыто бронирование таунхаусов второй очереди в
-                      Нагаевском парке
-                    </h4>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card-flat">
-                  <img src="../img/main.png" alt="" class="card-flat__image" />
-                  <div class="card-flat__container">
-                    <h6 class="card-flat__date">25.02.2022</h6>
-
-                    <h4 class="card-flat__text">
-                      Открыто бронирование таунхаусов второй очереди в
-                      Нагаевском парке
-                    </h4>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card-flat">
-                  <img src="../img/main.png" alt="" class="card-flat__image" />
-                  <div class="card-flat__container">
-                    <h6 class="card-flat__date">25.02.2022</h6>
-
-                    <h4 class="card-flat__text">
-                      Открыто бронирование таунхаусов второй очереди в
-                      Нагаевском парке
-                    </h4>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card-flat">
-                  <img src="../img/main.png" alt="" class="card-flat__image" />
-                  <div class="card-flat__container">
-                    <h6 class="card-flat__date">25.02.2022</h6>
-
-                    <h4 class="card-flat__text">
-                      Открыто бронирование таунхаусов второй очереди в
-                      Нагаевском парке
-                    </h4>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card-flat">
-                  <img src="../img/main.png" alt="" class="card-flat__image" />
-                  <div class="card-flat__container">
-                    <h6 class="card-flat__date">25.02.2022</h6>
-
-                    <h4 class="card-flat__text">
-                      Открыто бронирование таунхаусов второй очереди в
-                      Нагаевском парке
-                    </h4>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card-flat">
-                  <img src="../img/main.png" alt="" class="card-flat__image" />
-                  <div class="card-flat__container">
-                    <h6 class="card-flat__date">25.02.2022</h6>
-
-                    <h4 class="card-flat__text">
-                      Открыто бронирование таунхаусов второй очереди в
-                      Нагаевском парке
-                    </h4>
-                  </div>
-                </div>
-              </div>
+          <div class="footer__top-right">
+            <div class="footer__nav">
+              <h5 class="footer__nav-header">Покупателям</h5>
+              <a href="#" class="footer__nav-item"> Поселки </a>
+              <a href="#" class="footer__nav-item"> Готовые дома </a>
             </div>
-            <div class="swiper-numbs"></div>
-          </div>
-          <div class="news__botton">
-            <a href="#">Все новости</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="application">
-        <div class="container">
-          <form action="#" class="form" data-form="1">
-            <h4 class="form__title">
-              Узнавать первым о спецпредложениях и акциях, домах и участках
-            </h4>
-            <div class="text-field">
-              <input
-                data-special-offer
-                class="text-field__input tel"
-                type="text"
-                name="login"
-                id="login"
-                placeholder="Введите ваш телефон"
-              />
+            <div class="footer__nav">
+              <h5 class="footer__nav-header">Покупателям</h5>
+              <a href="#" class="footer__nav-item"> Поселки </a>
+              <a href="#" class="footer__nav-item"> Готовые дома </a>
             </div>
-
-            <button
-              type="submit"
-              id="special-offer-btn"
-              class="button button_accent"
-            >
-              Отправить
-            </button>
-          </form>
-        </div>
-      </section>
-      <section class="explore">
-        <div class="container">
-          <h2 class="explore__title">Ещё больше о ПОРАДОМ</h2>
-          <div class="explore__images">
-            <img src="../img/main.png" alt="" />
-            <img src="../img/main.png" alt="" />
-            <img src="../img/main.png" alt="" />
-            <img src="../img/main.png" alt="" />
-            <img src="../img/main.png" alt="" />
-            <img src="../img/main.png" alt="" />
-            <img src="../img/main.png" alt="" />
-            <img src="../img/main.png" alt="" />
-            <img src="../img/main.png" alt="" />
-          </div>
-          <button class="button button_border">
-            <img src="../img/icons/inst.svg" class="button_l" alt="" />
-            poradomufa
-          </button>
-        </div>
-      </section>
-    </main>
-    <!--main end-->
-    <!--footer start-->
-    <footer class="footer">
-      <div class="footer__m">
-        <div class="container">
-          <div class="accordion" id="accordion">
-            <h3 class="accordion-header">
-              Покупателям <span class="accordion__line"></span>
-            </h3>
-            <div
-              class="accordion-body tabs__text"
-              id="tabs-1"
-              style="height: 0px"
-            >
-              <a href="#"> Проектирование </a>
-              <a href="#">Проектирование</a>
-              <a href="#">Проектирование</a>
-              <a href="#">Проектирование</a>
-              <a href="#">Проектирование</a>
-              <a href="#">Проектирование</a>
+            <div class="footer__nav">
+              <h5 class="footer__nav-header">Покупателям</h5>
+              <a href="#" class="footer__nav-item"> Поселки </a>
+              <a href="#" class="footer__nav-item"> Готовые дома </a>
             </div>
-            <h3 class="accordion-header">
-              Стандарты <span class="accordion__line"></span>
-            </h3>
-            <div
-              class="accordion-body tabs__text"
-              id="tabs-2"
-              style="height: 0px"
-            >
-              <a href="#">Проектирование</a>
-            </div>
-            <h3 class="accordion-header">
-              О застройщике <span class="accordion__line"></span>
-            </h3>
-            <div
-              class="accordion-body tabs__text"
-              id="tabs-3"
-              style="height: 0px"
-            >
-              <a href="#">Проектирование</a>
-            </div>
-            <h3 class="accordion-header">Контакты</h3>
-
-            <div
-              class="accordion-body tabs__text"
-              id="tabs-4"
-              style="height: 0px"
-            >
-              <a href="#">Проектирование</a>
+            <div class="footer__nav">
+              <h5 class="footer__nav-header">Покупателям</h5>
+              <a href="#" class="footer__nav-item"> Поселки </a>
+              <a href="#" class="footer__nav-item"> Готовые дома </a>
             </div>
           </div>
         </div>
-        <div class="footer__line"></div>
-        <div class="container">
-          <div class="footer__content">
-            <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
-            <div class="footer__socials social">
-              <a href="#" class="pie pie_primary social__link_s">
-                <img
-                  src="../img/icons/youtube.svg"
-                  alt=""
-                  class="social__icon"
-                />
-              </a>
-
-              <a href="#" class="pie pie_primary social__link_s">
-                <img
-                  src="../img/icons/facebook.svg"
-                  alt=""
-                  class="social__icon"
-                />
-              </a>
-              <a href="#" class="pie pie_primary social__link_s">
-                <img src="../img/icons/vk.svg" alt="" class="social__icon" />
-              </a>
-            </div>
-            <div class="footer__contact">
-              <address>г.Уфа, ул.Мустая Карима, д.16</address>
-              <a href="tell:73472008719">+7 (347) 200-87-19</a>
-            </div>
-            <p class="development">
-              Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
-            </p>
-          </div>
+        <div class="footer__bottom">
+          <p class="footer__bottom-left">Все права защищены</p>
+          <p class="development footer__bottom-right">
+            Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
+          </p>
         </div>
       </div>
-      <div class="footer__d">
-        <div class="container">
-          <div class="footer__top">
-            <div class="footer__top-left">
-              <div class="footer__content">
-                <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
-                <div class="footer__socials social">
-                  <a href="#" class="pie pie_primary social__link_s">
-                    <img
-                      src="../img/icons/youtube.svg"
-                      alt=""
-                      class="social__icon"
-                    />
-                  </a>
+    </div>
+  </footer>
+  <!--footer end-->
+</body>
 
-                  <a href="#" class="pie pie_primary social__link_s">
-                    <img
-                      src="../img/icons/facebook.svg"
-                      alt=""
-                      class="social__icon"
-                    />
-                  </a>
-                  <a href="#" class="pie pie_primary social__link_s">
-                    <img
-                      src="../img/icons/vk.svg"
-                      alt=""
-                      class="social__icon"
-                    />
-                  </a>
-                </div>
-                <div class="footer__contact">
-                  <address>г.Уфа, ул.Мустая Карима, д.16</address>
-                  <a href="tell:73472008719">+7 (347) 200-87-19</a>
-                </div>
-              </div>
-            </div>
-            <div class="footer__top-right">
-              <div class="footer__nav">
-                <h5 class="footer__nav-header">Покупателям</h5>
-                <a href="#" class="footer__nav-item"> Поселки </a>
-                <a href="#" class="footer__nav-item"> Готовые дома </a>
-              </div>
-              <div class="footer__nav">
-                <h5 class="footer__nav-header">Покупателям</h5>
-                <a href="#" class="footer__nav-item"> Поселки </a>
-                <a href="#" class="footer__nav-item"> Готовые дома </a>
-              </div>
-              <div class="footer__nav">
-                <h5 class="footer__nav-header">Покупателям</h5>
-                <a href="#" class="footer__nav-item"> Поселки </a>
-                <a href="#" class="footer__nav-item"> Готовые дома </a>
-              </div>
-              <div class="footer__nav">
-                <h5 class="footer__nav-header">Покупателям</h5>
-                <a href="#" class="footer__nav-item"> Поселки </a>
-                <a href="#" class="footer__nav-item"> Готовые дома </a>
-              </div>
-            </div>
-          </div>
-          <div class="footer__bottom">
-            <p class="footer__bottom-left">Все права защищены</p>
-            <p class="development footer__bottom-right">
-              Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!--footer end-->
-  </body>
 </html>
 <!-- <div class="text-field">
                 <label class="text-field__label" for="city">City</label>

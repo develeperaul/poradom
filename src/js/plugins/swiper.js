@@ -34,7 +34,7 @@ const swiper = (name, opts = {}) => {
     ...opts,
   });
 };
-export default class newSwiper extends swiper {}
+export default class newSwiper extends swiper { }
 new newSwiper(".storiesSwiper", {
   on: {
     afterInit: (swiper) => {
@@ -125,13 +125,18 @@ new newSwiper("#office", { pagination: {} });
 const s = new Swiper(".newsSwiper", {
   modules: [Navigation, Pagination, Grid],
   loop: false,
-  grid: {
-    fill: "row",
-    rows: 2,
-  },
   // slidesPerView: 1,
-  slidesPerView: 2,
   spaceBetween: 30,
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      grid: {
+        fill: "row",
+        rows: 2,
+      },
+
+    }
+  },
   pagination: {
     el: ".swiper-numbs",
     bulletActiveClass: "numb-active",

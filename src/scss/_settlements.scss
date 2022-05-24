@@ -1,6 +1,7 @@
 .settlements {
   background-color: $secondary;
   position: relative;
+  padding-bottom: 30px;
 
   &__container {
     @include desktop-sm {
@@ -12,8 +13,8 @@
 
   &__title {
     position: absolute;
-    top: 189px;
-    right: 16px;
+    top: 143px;
+    left: calc(40px - #{$gap-m});
     z-index: 9;
 
     @include desktop-sm {
@@ -69,7 +70,7 @@
   &__number {
     position: absolute;
     left: 7px;
-    top: 40px;
+    top: 50px;
     z-index: 9;
 
     @include desktop-sm {
@@ -99,12 +100,14 @@
 
   &__icon {
     position: absolute;
-    top: 40px;
+    width: 88px;
+    top: 30px;
 
     @include desktop-sm {
       top: 80px;
       width: 353px;
       height: 310px;
+
     }
   }
 
@@ -132,7 +135,9 @@
     }
 
     &__title {
-      padding-left: 24px;
+      font-size: 12px;
+      line-height: 130%;
+      padding-left: 0;
       text-align: left;
 
       @include desktop-sm {

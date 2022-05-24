@@ -10,7 +10,7 @@
 .text-field__input {
   display: block;
   width: 100%;
-  height: calc(3.25rem + 2px);
+  height: 50px;
   padding: 0.375rem 0.75rem;
   font-family: inherit;
   font-size: 1rem;
@@ -22,6 +22,10 @@
   border: 1px solid #bdbdbd;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  @include desktop-sm {
+    height: 60px;
+  }
 }
 
 .text-field__input::placeholder {
@@ -77,16 +81,16 @@
   color: #dc3545;
 }
 
-.text-field__input_valid ~ .text-field__message {
+.text-field__input_valid~.text-field__message {
   color: #198754;
 }
 
-.text-field__input_invalid ~ .text-field__message,
-.text-field__input_valid ~ .text-field__message {
+.text-field__input_invalid~.text-field__message,
+.text-field__input_valid~.text-field__message {
   display: block;
 }
 
-.upload-file__input.text-field__input_invalid ~ .upload-file__label {
+.upload-file__input.text-field__input_invalid~.upload-file__label {
   border: 1px solid #dc3545;
   color: #dc3545;
 }
@@ -120,6 +124,7 @@
 .files {
   color: #c3cad1;
 }
+
 .files_space {
   margin-bottom: 8px;
 }
@@ -166,6 +171,10 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+
+  @include desktop-sm {
+    height: 60px;
+  }
 }
 
 .float-field__input[type="search"]::-webkit-search-decoration,
@@ -203,6 +212,10 @@
   height: 50px;
   line-height: 1.25;
   padding: 7px 20px;
+
+  @include desktop-sm {
+    height: 60px;
+  }
 }
 
 .float-field_floating .float-field__label {
@@ -234,10 +247,8 @@
   padding-bottom: 0.625rem;
 }
 
-.float-field_floating .float-field__input:focus ~ .float-field__label,
-.float-field_floating
-  .float-field__input:not(:placeholder-shown)
-  ~ .float-field__label {
+.float-field_floating .float-field__input:focus~.float-field__label,
+.float-field_floating .float-field__input:not(:placeholder-shown)~.float-field__label {
   opacity: 0.65;
   transform: scale(0.85) translateY(-0.75rem) translateX(0.15rem);
 }
