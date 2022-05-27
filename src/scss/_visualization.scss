@@ -1,0 +1,49 @@
+.visualization {
+  @include desktop-sm {
+  }
+
+  &__content {
+    @include desktop-sm {
+      display: grid;
+      grid-template-areas: "A A A A B B";
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+  &__left {
+    @include desktop-sm {
+      grid-area: A;
+    }
+    & .swiper-numbs {
+      @include desktop-sm {
+        display: none;
+      }
+    }
+    .swiper-nav {
+      @include desktop-sm {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+      }
+      & .swiper-next,
+      & .swiper-prev {
+        @include desktop-sm {
+          top: auto;
+        }
+      }
+    }
+  }
+  .section__btns {
+    @include desktop-sm {
+      grid-area: B;
+      margin-left: 160px;
+    }
+    & .button__group {
+      overflow-x: auto;
+      flex-wrap: wrap;
+      gap: 10px;
+      //   display: grid;
+      //   grid-template-columns: repeat(2, minmax(0, 1fr));
+      //   gap: 10px 0px;
+    }
+  }
+}

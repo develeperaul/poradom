@@ -1,0 +1,28 @@
+.mortgage {
+  &__content {
+    @include desktop-sm {
+      display: flex;
+      gap: 120px;
+    }
+  }
+  &__title {
+    margin-bottom: 10px;
+  }
+  &__text {
+    @include desktop-sm {
+      font-size: 26px;
+      line-height: 120%;
+    }
+  }
+  &__accordion {
+    @include desktop-sm {
+      margin-left: 300px;
+      width: calc(100% - 300px);
+    }
+  }
+  &__calc {
+    @include desktop-sm {
+      max-width: 610px;
+    }
+  }
+}

@@ -30,6 +30,7 @@ class Survey {
             //     }, 1500)
             //   }
             // }
+
             if (!this.getActiveClass) {
               if (!el.classList.contains("card-survey_first")) {
                 document.querySelectorAll(".card-survey").forEach((item) => {
@@ -42,11 +43,9 @@ class Survey {
                 el.classList.remove("card-survey_opacity");
               } else {
                 if (el.classList.contains("card-survey_first")) {
-                  document
-                    .querySelectorAll(".card-survey")
-                    .forEach((item) =>
-                      item.classList.remove("card-survey_opacity")
-                    );
+                  document.querySelectorAll(".card-survey").forEach((item) => {
+                    item.classList.remove("card-survey_opacity");
+                  });
                   el.classList.remove("card-survey_first");
                   el.classList.add("card-survey_active");
                   this.updateWithProgress();
@@ -75,7 +74,7 @@ class Survey {
     return isActive;
   }
 
-  get firstClick() {
+  firstClick() {
     let isActive = false;
     Array.from(this.name.children).forEach((el) => {
       if (el.getAttribute("class").indexOf("card-survey_first") !== -1) {

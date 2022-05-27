@@ -1,57 +1,62 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poradom</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Poradom</title>
-</head>
-
-<body>
-  <div class="top-arrow" id="arrow">
-    <div class="arrow-icon">
-      <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13 7L7 1L1 7" stroke="white" stroke-linecap="round" />
-      </svg>
-    </div>
-  </div>
-  <section class="sidebar">
-    <div class="container">
-      <div class="header__wrapper">
-        <div class="header__top">
-          <img src="../img/icons/logo1.svg" alt="" />
-          <button class="menu-trigger active" id="menu-sidebar">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </div>
-
-      <div class="sidebar__list accordion" id="sidebar-accordion">
-        <h3 class="">Покупателям</h3>
-        <div class="tabs__text" id="tabs-1" style="height: 0px">
-          <a href="#"> Проектирование </a>
-          <a href="#">Проектирование</a>
-          <a href="#">Проектирование</a>
-          <a href="#">Проектирование</a>
-          <a href="#">Проектирование</a>
-          <a href="#">Проектирование</a>
-        </div>
-        <h3 class="">Стандарты</h3>
-        <div class="tabs__text" id="tabs-2" style="height: 0px">
-          <a href="#">Проектирование</a>
-        </div>
-        <h3 class="">О застройщике</h3>
-        <div class="tabs__text" id="tabs-3" style="height: 0px">
-          <a href="#">Проектирование</a>
-        </div>
+  <body>
+    <div class="top-arrow" id="arrow">
+      <div class="arrow-icon">
+        <svg
+          width="14"
+          height="8"
+          viewBox="0 0 14 8"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M13 7L7 1L1 7" stroke="white" stroke-linecap="round" />
+        </svg>
       </div>
     </div>
-  </section>
-  <header class="header flex-column">
-    <!-- <div class="header__top header__top_white container">
+    <section class="sidebar">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__top">
+            <img src="../img/icons/logo1.svg" alt="" />
+            <button class="menu-trigger active" id="menu-sidebar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="sidebar__list accordion" id="sidebar-accordion">
+          <h3 class="">Покупателям</h3>
+          <div class="tabs__text" id="tabs-1" style="height: 0px">
+            <a href="#"> Проектирование </a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+          </div>
+          <h3 class="">Стандарты</h3>
+          <div class="tabs__text" id="tabs-2" style="height: 0px">
+            <a href="#">Проектирование</a>
+          </div>
+          <h3 class="">О застройщике</h3>
+          <div class="tabs__text" id="tabs-3" style="height: 0px">
+            <a href="#">Проектирование</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <header class="header flex-column">
+      <!-- <div class="header__top header__top_white container">
       <img src="../img/icons/logo3.svg" alt="" />
       <button class="menu-trigger menu-trigger_primary" id="menu-header">
         <span></span>
@@ -59,136 +64,179 @@
         <span></span>
       </button>
     </div> -->
-    <div class="header__top_absolute header__top_white">
-      <div class="container header__top">
-        <img src="../img/icons/logo3.svg" alt="" class="logo" />
-        <div class="header__trigger">
-          <button class="menu-trigger" id="menu-header">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          <span class="menu-trigger__text"> Меню </span>
-        </div>
-        <div class="header__contacts">
-          <div class="social">
-            <a href="#" class="pie pie_primary social__link_s">
-              <img src="../img/icons/youtube.svg" alt="" class="social__icon" />
-            </a>
-
-            <a href="#" class="pie pie_primary social__link_s">
-              <img src="../img/icons/facebook.svg" alt="" class="social__icon" />
-            </a>
-            <a href="#" class="pie pie_primary social__link_s">
-              <img src="../img/icons/vk.svg" alt="" class="social__icon" />
-            </a>
+      <div class="header__top_white">
+        <div class="container header__top">
+          <img src="../img/icons/logo3.svg" alt="" class="logo" />
+          <div class="header__trigger">
+            <button class="menu-trigger" id="menu-header">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <span class="menu-trigger__text"> Меню </span>
           </div>
-          <div class="header__contact contact">
-            <address>г.Уфа, ул.Мустая Карима, д.16</address>
-            <a href="tell:73472008719">+7 (347) 200-87-19</a>
-          </div>
-        </div>
-      </div>
-    </div>
+          <div class="header__contacts">
+            <div class="social">
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/youtube.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
 
-    <a href="tg://resolve?domain=username" class="pie pie_big pie_blue drop__children children">
-      <img src="../img/icons/telega.svg" alt="" />
-    </a>
-    <a href="https://wa.me/799999999" class="pie pie_big pie_blue drop__children children">
-      <img src="../img/icons/whatsapp.svg" alt="" />
-    </a>
-    <a href="tel:+799999999" class="pie pie_big pie_blue drop__children children">
-      <img src="../img/icons/phone.svg" alt="" />
-    </a>
-    <span class="pie pie_big pie_accent drop drop_sq" id="drop">
-      <span></span><span></span><span></span><span></span>
-    </span>
-    <div class="header__bottom project-header flex-grow">
-      <div class="container h-full flex-column space-between">
-        <div class="project-header__top">
-          <h2 class="m-b--20">Кирпичный Стандарт 105</h2>
-
-          <div class="video__play">
-            <a href="https://vimeo.com/115041822" class="glightbox">
-              <div class="pie pie__play">
-                <img src="../img/icons/play.svg" alt="" style="width: 18px; margin-left: 24px" />
-              </div>
-            </a>
-
-            <p class="video__play-text">
-              Видеообзор <br />
-              проекта
-            </p>
-          </div>
-        </div>
-        <div class="project-header__bottom">
-          <buttton class="button button_accent m-b--10">Записаться на экскурсию</buttton>
-          <buttton class="button button_blue">Рассчитать ипотеку</buttton>
-        </div>
-      </div>
-    </div>
-  </header>
-  <main class="wrapper">
-    <section class="section">
-      <div class="container">
-        <div class="section__top">
-          <h2 class="section__title">Визуализация проекта</h2>
-        </div>
-        <div class="section__btns">
-          <div id="reviews-btns" class="button__group">
-            <a href="#" class="button__round button__round_active">Общий</a>
-            <a href="#" class="button__round">1 очередь</a>
-            <a href="#" class="button__round">2 очередь</a>
-            <a href="#" class="button__round">3 очередь</a>
-            <a href="#" class="button__round">4 очередь</a>
-            <a href="#" class="button__round">5 очередь</a>
-          </div>
-        </div>
-        <div class="swiper featuresSwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="navigation__card">
-                <img src="../img/img.png" alt="" />
-                <p class="section__text">Подпись фотографии</p>
-              </div>
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/facebook.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+              <a href="#" class="pie pie_primary social__link_s">
+                <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+              </a>
             </div>
-            <div class="swiper-slide">
-              <div class="navigation__card">
-                <img src="../img/img.png" alt="" />
-                <p class="section__text">Подпись фотографии</p>
-              </div>
+            <div class="header__contact contact">
+              <address>г.Уфа, ул.Мустая Карима, д.16</address>
+              <a href="tell:73472008719">+7 (347) 200-87-19</a>
             </div>
           </div>
-          <div class="swiper-next"></div>
-          <div class="swiper-prev"></div>
-          <div class="swiper-numbs"></div>
         </div>
       </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div class="section__top">
-          <h2 class="section__title">Базовая планировка</h2>
+
+      <a
+        href="tg://resolve?domain=username"
+        class="pie pie_big pie_blue drop__children children"
+      >
+        <img src="../img/icons/telega.svg" alt="" />
+      </a>
+      <a
+        href="https://wa.me/799999999"
+        class="pie pie_big pie_blue drop__children children"
+      >
+        <img src="../img/icons/whatsapp.svg" alt="" />
+      </a>
+      <a
+        href="tel:+799999999"
+        class="pie pie_big pie_blue drop__children children"
+      >
+        <img src="../img/icons/phone.svg" alt="" />
+      </a>
+      <span class="pie pie_big pie_accent drop drop_sq" id="drop">
+        <span></span><span></span><span></span><span></span>
+      </span>
+      <div class="header__bottom project-header flex-grow video">
+        <div class="container video__wrapper">
+          <div class="video__top">
+            <img src="../img/img.png" alt="" class="video__top-image -r-gap" />
+          </div>
+          <div class="video__bottom">
+            <div class="video__content">
+              <div class="video__block-info">
+                <div>
+                  <h2 class="video__title">
+                    Кирпичный <br />
+                    Стандарт 105
+                  </h2>
+                </div>
+                <div class="info">
+                  <img src="../img/icons/info.svg" alt="" class="video__info" />
+                  <div class="popup">
+                    Основательный и надежный, построенный на века экологичный
+                    дом из кирпича для потомков. Дома этой серии выбирают
+                    сторонники традиционного строительства, которым необходимо
+                    ощущение спокойствия и надежности. «Кирпичный стандарт 105»
+                    доведен до совершенства. Планировка без излишеств для семьи
+                    с 1-2 детьми включает просторную кухню-гостиную, отдельную
+                    гардеробную комнату на первом этаже, 3 спальни на
+                    полноценном втором этаже, 2 санузла.
+                  </div>
+                </div>
+              </div>
+              <div class="video__play">
+                <a href="https://vimeo.com/115041822" class="glightbox">
+                  <div class="pie pie__play">
+                    <img
+                      src="../img/icons/play.svg"
+                      alt=""
+                      style="width: 12px; margin-left: 20px"
+                    />
+                  </div>
+                </a>
+
+                <p class="video__play-text">Видеообзор посёлка</p>
+              </div>
+              <p class="video__subtitle">6 700 000 ₽</p>
+              <p class="video__text">
+                строительство от 6 месяцев; гараж, терраса и земельный участок в
+                указанную стоимость не входят
+              </p>
+            </div>
+            <!-- <buttton class="carousel__btn button button_accent"
+              >Записаться на экскурсию</buttton
+            > -->
+            <div class="video__buttons">
+              <buttton class="button button_accent"
+                >Записаться на экскурсию</buttton
+              >
+              <buttton class="button button_blue">Рассчитать ипотеку</buttton>
+            </div>
+          </div>
         </div>
-        <div class="section__bottom">
-          <div class="plan__item">
-            <a href="img/plan.png" class="glightbox">
-              <img src="../img/plan.png" alt="" class="plan__item-img" />
-            </a>
-            <p class="section__text plan__item-text">План первого этажа</p>
+      </div>
+    </header>
+    <main class="wrapper">
+      <section class="visualization section">
+        <div class="container">
+          <div class="section__crumbs bread-crumbs">
+            <a href="home.html">ПОРАДОМ</a>
+            <a href="cottage-settlements.html">Коттеджные поселки</a>
+            <a href="#">Девичья Гора</a>
           </div>
-          <div class="plan__item">
-            <a href="img/plan.png" class="glightbox">
-              <img src="../img/plan.png" alt="" class="plan__item-img" />
-            </a>
-            <p class="section__text plan__item-text">План первого этажа</p>
+          <div class="section__top">
+            <h2 class="section__title">Визуализация проекта</h2>
           </div>
-          <div class="alternative">
-            <h4 class="alternative__title">Альтернативные планировки</h4>
-            <p class="section__text alternative__text">
-              Стоимость альтернативных планировочных решений может отличаться
-              от базовой цены проекта
-            </p>
+          <div class="visualization__content">
+            <div class="section__btns">
+              <div id="reviews-btns" class="button__group">
+                <a href="#" class="button__round button__round_active">Общий</a>
+                <a href="#" class="button__round">1 очередь</a>
+                <a href="#" class="button__round">2 очередь</a>
+                <a href="#" class="button__round">3 очередь</a>
+                <a href="#" class="button__round">4 очередь</a>
+                <a href="#" class="button__round">5 очередь</a>
+              </div>
+            </div>
+            <div class="swiper featuresSwiper visualization__left">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-nav">
+                <div class="swiper-next"></div>
+                <div class="swiper-prev"></div>
+              </div>
+              <div class="swiper-numbs"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="plans-floor section">
+        <div class="container">
+          <div class="section__top">
+            <h2 class="section__title">Базовая планировка</h2>
+          </div>
+          <div class="plans-floor__content section__bottom">
             <div class="plan__item">
               <a href="img/plan.png" class="glightbox">
                 <img src="../img/plan.png" alt="" class="plan__item-img" />
@@ -199,617 +247,1041 @@
               <a href="img/plan.png" class="glightbox">
                 <img src="../img/plan.png" alt="" class="plan__item-img" />
               </a>
-              <p class="section__text plan__item-text">План второго этажа</p>
+              <p class="section__text plan__item-text">План первого этажа</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="features">
-      <!-- <div class="features-content">
-          <span class="features__line-top"></span>
-          <div class="features__number">
-            <span class="number">03</span>
-            <h4 class="features__bottom-title">Особенности посёлка</h4>
-          </div>
-        </div> -->
-      <div class="container">
-        <div class="features__top">
-          <div class="features__line-top"></div>
-          <span class="number">01</span>
-          <h4 class="features__title">
-            Особенности <br />
-            дома
-          </h4>
-          <img src="../img/icons/ready.svg" alt="" class="features__icon" width="75" height="51" />
-        </div>
-        <div class="features__bottom">
-          <div class="hit__swiper swiper featuresSwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="navigation__card">
-                  <img src="../img/img.png" alt="" />
-                  <div class="swiper-slide__title_ty--30">
-                    <h2 class="title swiper-slide__title">
-                      <span> готовые </span>
-                      <br />
-                      <span> дома </span>
-                    </h2>
-                    <p class="swiper-slide__text">
-                      Отличное дополнение фасада и место, где можно любоваться
-                      рассветами и закатами, отдохнуть, сидя в кресле с книгой
-                      и чашкой ароматного чая
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="navigation__card">
-                  <img src="../img/img.png" alt="" />
-                  <div class="swiper-slide__title_ty--30">
-                    <h2 class="title swiper-slide__title">
-                      <span> готовые </span>
-                      <br />
-                      <span> дома </span>
-                    </h2>
-                    <p class="swiper-slide__text">
-                      Отличное дополнение фасада и место, где можно любоваться
-                      рассветами и закатами, отдохнуть, сидя в кресле с книгой
-                      и чашкой ароматного чая
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-next"></div>
-            <div class="swiper-prev"></div>
-            <div class="swiper-numbs swiper-numbs_mt--10"></div>
-          </div>
-          <form action="#" class="form" id="special-offer">
-            <h4 class="form__title">
-              Узнавать первым о спецпредложениях и акциях, домах и участках
-            </h4>
-            <div class="text-field">
-              <input data-special-offer class="text-field__input tel" type="text" name="login" id="login"
-                placeholder="Введите ваш телефон" />
-            </div>
-            <label class="checkbox-other">
-              <input data-special-offer type="checkbox" />
-              <p>
-                Даю согласие на обработку
-                <a href="#" class="checkbox__link"> персональных данных </a>
+            <div class="alternative">
+              <h4 class="alternative__title">Альтернативные планировки</h4>
+              <p class="section__text alternative__text">
+                Стоимость альтернативных планировочных решений может отличаться
+                от базовой цены проекта
               </p>
-            </label>
-
-            <button type="submit" id="special-offer-btn" class="button button_accent">
-              Отправить
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-    <section class="features">
-      <div class="container">
-        <div class="features__top">
-          <span class="number">02</span>
-          <h4 class="features__title">
-            Комплектация <br />
-            дома
-          </h4>
-          <img src="../img/icons/ready.svg" alt="" class="features__icon" width="75" height="51" />
-        </div>
-        <div class="section__btns">
-          <div id="reviews-btns" class="button__group">
-            <a href="#" class="button__round button__round_active">Общий</a>
-            <a href="#" class="button__round">1 очередь</a>
-            <a href="#" class="button__round">2 очередь</a>
-            <a href="#" class="button__round">3 очередь</a>
-            <a href="#" class="button__round">4 очередь</a>
-            <a href="#" class="button__round">5 очередь</a>
+              <div class="plan__item">
+                <a href="img/plan.png" class="glightbox">
+                  <img src="../img/plan.png" alt="" class="plan__item-img" />
+                </a>
+                <p class="section__text plan__item-text">План первого этажа</p>
+              </div>
+              <div class="plan__item">
+                <a href="img/plan.png" class="glightbox">
+                  <img src="../img/plan.png" alt="" class="plan__item-img" />
+                </a>
+                <p class="section__text plan__item-text">План второго этажа</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="features__bottom">
-          <div class="hit__swiper swiper featuresSwiper">
+      </section>
+      <section class="features">
+        <div class="container">
+          <div class="content-number">
+            <div class="features__line-top"></div>
+            <span class="number">01</span>
+          </div>
+          <div class="content-title">
+            <h2 class="title">
+              <span> Особенности</span>
+              <br class="title-br" />
+              <span>посёлка</span>
+            </h2>
+
+            <!-- <img src="../img/icons/features-settlement.svg" alt="" class="features__icon" /> -->
+          </div>
+          <div class="features__bottom">
+            <div class="hit__swiper swiper featuresSwiper swiper_flex">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="card-flex">
+                    <img src="../img/img.png" alt="" />
+
+                    <div class="">
+                      <h4 class="card-flex__title">Девичья Гора</h4>
+
+                      <p class="swiper-slide__text">
+                        Отличное дополнение фасада и место, где можно любоваться
+                        рассветами и закатами, отдохнуть, сидя в кресле с книгой
+                        и чашкой ароматного чая
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card-flex">
+                    <img src="../img/img.png" alt="" />
+                    <div class="">
+                      <h4 class="card-flex__title">Девичья Гора</h4>
+
+                      <p class="swiper-slide__text">
+                        Отличное дополнение фасада и место, где можно любоваться
+                        рассветами и закатами, отдохнуть, сидя в кресле с книгой
+                        и чашкой ароматного чая
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-flex__nav">
+                <div class="swiper-next"></div>
+                <div class="swiper-prev"></div>
+              </div>
+
+              <div
+                class="swiper-numbs swiper-numbs_start card-flex__pagination"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="container">
+          <div class="content-number">
+            <div class="features__line-top"></div>
+            <span class="number">02</span>
+          </div>
+          <div class="content-title">
+            <h2 class="title">
+              <span> комплектация</span>
+
+              <span>дома</span>
+            </h2>
+
+            <!-- <img src="../img/icons/features-settlement.svg" alt="" class="features__icon" /> -->
+          </div>
+          <div class="content-btns section__btns">
+            <div id="reviews-btns" class="button__group">
+              <a href="#" class="button__round button__round_active">Общий</a>
+              <a href="#" class="button__round">1 очередь</a>
+              <a href="#" class="button__round">2 очередь</a>
+              <a href="#" class="button__round">3 очередь</a>
+              <a href="#" class="button__round">4 очередь</a>
+              <a href="#" class="button__round">5 очередь</a>
+            </div>
+          </div>
+          <div class="features__bottom">
+            <div class="hit__swiper swiper featuresSwiper swiper_flex">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="card-flex">
+                    <img src="../img/img.png" alt="" />
+                    <div>
+                      <h4 class="card-flex__title">Девичья Гора</h4>
+                      <ul class="swiper-slide__list">
+                        <li class="swiper-slide__item">Диаметр</li>
+                        <li class="swiper-slide__item">Длина</li>
+                        <li class="swiper-slide__item">Бетон</li>
+                        <li class="swiper-slide__item">Противоморозные</li>
+                        <li class="swiper-slide__item">Прогрев</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card-flex">
+                    <img src="../img/img.png" alt="" />
+                    <div>
+                      <h4 class="card-flex__title">Девичья Гора</h4>
+                      <ul class="swiper-slide__list">
+                        <li class="swiper-slide__item">Диаметр</li>
+                        <li class="swiper-slide__item">Длина</li>
+                        <li class="swiper-slide__item">Бетон</li>
+                        <li class="swiper-slide__item">Противоморозные</li>
+                        <li class="swiper-slide__item">Прогрев</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-flex__nav">
+                <div class="swiper-next"></div>
+                <div class="swiper-prev"></div>
+              </div>
+
+              <div
+                class="swiper-numbs swiper-numbs_start card-flex__pagination"
+              ></div>
+            </div>
+
+            <div class="communications">
+              <div class="communications__top">
+                <h4 class="communications__title">
+                  Подключить <br />
+                  пакет коммуникаций
+                </h4>
+                <p class="communications__text">
+                  Чтобы подключить коммуникации самостоятельно, вам придется
+                  заполнить более 80 форм документов и совершить более 10
+                  визитов в различные инстанции. Мы можем сделать это за вас.
+                  Просто оставьте заявку
+                </p>
+              </div>
+              <div class="communications__cards communications__middle">
+                <div class="communications__card">
+                  <img
+                    src="../img/icons/water-system.svg"
+                    alt=""
+                    class="communications__card-icon"
+                  />
+                  <h5 class="communications__card-title">Водоснабжение</h5>
+                </div>
+                <div class="communications__card">
+                  <img
+                    src="../img//icons/light.svg"
+                    alt=""
+                    class="communications__card-icon"
+                  />
+                  <h5 class="communications__card-title">Электроснабжение</h5>
+                </div>
+                <div class="communications__card">
+                  <img
+                    src="../img/icons/gas.svg"
+                    alt=""
+                    class="communications__card-icon"
+                  />
+                  <h5 class="communications__card-title">Газоснабжение</h5>
+                </div>
+                <div class="communications__card">
+                  <img
+                    src="../img/icons/sewage.svg"
+                    alt=""
+                    class="communications__card-icon"
+                  />
+                  <h5 class="communications__card-title">Канализация</h5>
+                </div>
+              </div>
+
+              <buttton
+                class="carousel__btn button button_accent communications__button"
+              >
+                <span>Класс</span>
+                <svg
+                  width="18"
+                  height="16"
+                  viewBox="0 0 18 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.18142 0.0569869C8.87722 0.135797 8.48945 0.328772 8.37767 0.457019L8.29396 0.553016V1.7868V3.02055L7.25802 5.19059C6.68826 6.38412 6.2008 7.37696 6.17477 7.39689C6.13472 7.42761 6.12744 8.00901 6.12744 11.1738V14.9144L6.35594 14.9999C6.66826 15.1167 7.03355 15.2109 7.39689 15.2684C7.65142 15.3086 8.27913 15.3166 11.212 15.3167C13.6446 15.3168 14.7776 15.3058 14.9019 15.2807C15.3168 15.1972 15.8008 14.8723 16.0007 14.5429C16.2216 14.179 16.277 13.6869 16.1438 13.2707C16.0759 13.0584 16.0753 13.0457 16.1323 13.014C16.7832 12.6518 17.108 11.8233 16.8617 11.1537C16.8226 11.0474 16.7944 10.9586 16.7991 10.9564C16.8974 10.9103 17.1281 10.7318 17.244 10.6122C17.7795 10.0596 17.8072 9.15784 17.3062 8.58741L17.207 8.47456L17.3202 8.32246C18.0503 7.34164 17.58 6.03885 16.3507 5.63689C16.1334 5.56585 16.1003 5.56481 13.7356 5.55445C12.4184 5.54867 11.3406 5.53681 11.3406 5.52805C11.3406 5.51932 11.4016 5.30906 11.4761 5.06087C11.6381 4.52099 11.7939 3.82104 11.8502 3.38023C11.9003 2.98798 11.875 2.33612 11.7994 2.06937C11.5603 1.22608 10.9552 0.464142 10.2593 0.129916C10.0353 0.0223848 9.97497 0.00800801 9.71763 0.00101569C9.51482 -0.00450627 9.35406 0.0122557 9.18142 0.0569869ZM1.73591 6.99915C1.09151 7.14987 0.541012 7.68018 0.390913 8.29488C0.314408 8.6081 0.31434 14.3468 0.390811 14.66C0.528453 15.2235 0.970998 15.7054 1.54184 15.9132C1.73757 15.9845 1.78618 15.987 3.16314 15.9962C4.5123 16.0052 4.59365 16.0024 4.80495 15.939C4.92723 15.9024 5.10342 15.8318 5.19652 15.7823L5.36578 15.6923L5.37437 11.3223L5.38294 6.95219L3.64793 6.95497C2.37196 6.95703 1.86607 6.96869 1.73591 6.99915Z"
+                    fill="white"
+                  />
+                </svg>
+              </buttton>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features section interior">
+        <div class="container">
+          <div class="content-number">
+            <span class="number">03</span>
+          </div>
+          <div class="content-title">
+            <h2 class="title">
+              <span>Внутренняя</span>
+              <br />
+              <span>отделка дома</span>
+            </h2>
+          </div>
+          <div class="-r-gap interior__top">
+            <img
+              src="../img/people.png"
+              alt=""
+              width="155"
+              height="216"
+              class="interior__photo"
+            />
+          </div>
+          <div class="interior__bottom">
+            <p class="interior__text">
+              Дом можно купить в черновой или предчистовой отделке или заказать
+              дизайн-проект в Студии дизайна и чистовой отделки ПОРАДОМ
+            </p>
+
+            <div class="section__btns">
+              <div id="reviews-btns" class="button__group">
+                <a href="#" class="button__round button__round_active">Общий</a>
+                <a href="#" class="button__round">1 очередь</a>
+                <a href="#" class="button__round">2 очередь</a>
+                <a href="#" class="button__round">3 очередь</a>
+                <a href="#" class="button__round">4 очередь</a>
+                <a href="#" class="button__round">5 очередь</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper featuresSwiper swiper_flex">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="navigation__card">
+                <div class="card-flex">
                   <img src="../img/img.png" alt="" />
-                  <div class="swiper-slide__title_ty--30">
-                    <h2 class="title title_primary swiper-slide__title">
-                      <span class=""> готовые </span>
-                      <br />
-                      <span> дома </span>
-                    </h2>
-                    <ul class="swiper-slide__list">
-                      <li class="swiper-slide__item">Диаметр</li>
-                      <li class="swiper-slide__item">Длина</li>
-                      <li class="swiper-slide__item">Бетон</li>
-                      <li class="swiper-slide__item">Противоморозные</li>
-                      <li class="swiper-slide__item">Прогрев</li>
-                    </ul>
+                  <div>
+                    <h4 class="card-flex__title">
+                      Разработка проекта дизайнером-архитектором по вашим
+                      желаниям
+                    </h4>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide">
-                <div class="navigation__card">
+                <div class="card-flex">
                   <img src="../img/img.png" alt="" />
-                  <div class="swiper-slide__title_ty--30">
-                    <h2 class="title swiper-slide__title">
-                      <span> готовые </span>
-                      <br />
-                      <span> дома </span>
-                    </h2>
-                    <ul class="swiper-slide__list">
-                      <li class="swiper-slide__item">Диаметр</li>
-                      <li class="swiper-slide__item">Длина</li>
-                      <li class="swiper-slide__item">Бетон</li>
-                      <li class="swiper-slide__item">Противоморозные</li>
-                      <li class="swiper-slide__item">Прогрев</li>
-                    </ul>
+                  <div>
+                    <h4 class="card-flex__title">
+                      Разработка проекта дизайнером-архитектором по вашим
+                      желаниям
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-flex">
+                  <img src="../img/img.png" alt="" />
+                  <div>
+                    <h4 class="card-flex__title">
+                      Разработка проекта дизайнером-архитектором по вашим
+                      желаниям
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-flex">
+                  <img src="../img/img.png" alt="" />
+                  <div>
+                    <h4 class="card-flex__title">
+                      Разработка проекта дизайнером-архитектором по вашим
+                      желаниям
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card-flex">
+                  <img src="../img/img.png" alt="" />
+                  <div>
+                    <h4 class="card-flex__title">
+                      Разработка проекта дизайнером-архитектором по вашим
+                      желаниям
+                    </h4>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="swiper-next"></div>
-            <div class="swiper-prev"></div>
-            <div class="swiper-numbs swiper-numbs_mt--10"></div>
+
+            <div class="card-flex__nav">
+              <div class="swiper-next"></div>
+              <div class="swiper-prev"></div>
+            </div>
+            <div class="card-flex__pagination-wrapper">
+              <div class="swiper-numbs swiper-numbs_start"></div>
+
+              <div class="interior__btns">
+                <buttton class="button button_accent"
+                  >Записаться на экскурсию</buttton
+                >
+                <buttton class="button button_blue">Студия ПОРАДОМ</buttton>
+              </div>
+            </div>
           </div>
-          <div class="communications">
-            <h4 class="communications__title">Пакет коммуникаций</h4>
-            <p class="communications__text">
-              Наши специалисты выяснили, что при самостоятельном подключении
-              коммуникаций вы заполните более 80 форм документов и совершите
-              более 10 визитов в различные инстанции
+        </div>
+      </section>
+      <section class="diagram mortgage">
+        <!-- <div class="diagram__number-content">
+          <span class="diagram__number number">04</span>
+        </div> -->
+        <div class="container">
+          <div class="mortgage__content">
+            <div class="mortgage__top">
+              <div class="content-number">
+                <div class="features__line-top"></div>
+                <span class="number">04</span>
+              </div>
+              <div class="content-title">
+                <h2 class="title mortgage__title">
+                  <span> Купить легко</span>
+                </h2>
+                <p>Индивидуальный подход — принцип работы ПОРАДОМ</p>
+              </div>
+              <!-- <div class="diagram__top">
+                <h2 class="title diagram__title">
+                  <span>купить легко</span>
+                </h2>
+                <p class="diagram__text">
+                  Индивидуальный подход — принцип работы ПОРАДОМ
+                </p>
+              </div> -->
+
+              <div
+                class="diagram__accordion accordion mortgage__accordion"
+                id="card-project"
+              >
+                <h3 class="accordion-header">
+                  Оплата 100% <span class="accordion__line"></span>
+                </h3>
+                <div
+                  class="accordion-body tabs__text"
+                  id="tabs-1"
+                  style="height: 0px"
+                >
+                  <a href="#"> Проектирование </a>
+                  <a href="#">Проектирование</a>
+                  <a href="#">Проектирование</a>
+                  <a href="#">Проектирование</a>
+                  <a href="#">Проектирование</a>
+                  <a href="#">Проектирование</a>
+                </div>
+                <h3 class="accordion-header">
+                  Беспроцентная рассрочка <span class="accordion__line"></span>
+                </h3>
+                <div
+                  class="accordion-body tabs__text"
+                  id="tabs-2"
+                  style="height: 0px"
+                >
+                  <a href="#">Проектирование</a>
+                </div>
+                <h3 class="accordion-header">
+                  Ипотека <span class="accordion__line"></span>
+                </h3>
+                <div
+                  class="accordion-body tabs__text"
+                  id="tabs-3"
+                  style="height: 0px"
+                ></div>
+              </div>
+            </div>
+            <div class="mortgage__bottom">
+              <form class="calc mortgage__calc" id="calc-1">
+                <h4 class="calc__title">
+                  Детально рассчитаем для вас самый выгодный вариант
+                </h4>
+
+                <div id="reviews-btns" class="button__group calc__btns">
+                  <button
+                    class="button__round button__round_active"
+                    data-button
+                    data-minimum="10"
+                    data-rate="9"
+                  >
+                    Сбербанк
+                  </button>
+                  <button
+                    href="#"
+                    class="button__round"
+                    data-button
+                    data-minimum="15"
+                    data-rate="50"
+                  >
+                    Семейная ипотека ВТБ
+                  </button>
+                </div>
+
+                <p class="calc__text">
+                  Ипотека от 9,5% на строительство малоэтажных домов от ПАО
+                  «Сбербанк». ПОРАДОМ является единственным в Уфе застройщиком
+                  малоэтажных домов, аккредитованным в банке
+                </p>
+                <div class="calc__inputs">
+                  <div id="dropdown_1" class="dropdown">
+                    <div
+                      id="dropdownHeader_1"
+                      class="dropdown__header dropdown__header--hide"
+                    >
+                      <div
+                        id="dropdownHeaderValue_1"
+                        class="dropdown__header--title"
+                        data-dropdown_header
+                      >
+                        Тип
+                      </div>
+                      <div class="dropdown__header--icon">
+                        <img
+                          id="chevronIcon_1"
+                          class="fas fa-angle-down rotate-icon-home"
+                          src="../img/icons/down.svg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+
+                    <div
+                      id="dropdownListBody_1"
+                      class="dropdown__body dropdown__body--hide"
+                    >
+                      <ul id="dropdownList_1" class="dropdown__body--list">
+                        <li
+                          class="dropdown__body--list-index"
+                          data-dropdown_item
+                          data-sum="10000"
+                          data-house="5000"
+                          data-plot="5000"
+                        >
+                          Test Value 1
+                        </li>
+                        <li
+                          class="dropdown__body--list-index"
+                          data-dropdown_item
+                          data-sum="20000"
+                          data-house="15000"
+                          data-plot="5000"
+                        >
+                          Test Value 2
+                        </li>
+                        <li
+                          class="dropdown__body--list-index"
+                          data-dropdown_item
+                          data-sum="30000"
+                          data-house="20000"
+                          data-plot="10000"
+                        >
+                          Test Value 3
+                        </li>
+                        <li
+                          class="dropdown__body--list-index"
+                          data-dropdown_item
+                          data-sum="40000"
+                          data-house="20000"
+                          data-plot="20000"
+                        >
+                          Test Value 4
+                        </li>
+                        <li
+                          class="dropdown__body--list-index"
+                          data-dropdown_item
+                          data-sum="50000"
+                          data-house="30000"
+                          data-plot="20000"
+                        >
+                          Test Value 5
+                        </li>
+                        <li
+                          class="dropdown__body--list-index"
+                          data-dropdown_item
+                          data-sum="60000"
+                          data-house="40000"
+                          data-plot="20000"
+                        >
+                          Test Value 6
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="calc__plus calc__input">
+                    <div class="float-field float-field_floating">
+                      <input
+                        class="float-field__input"
+                        type="text"
+                        id="cost-house"
+                        placeholder="placeholder"
+                        data-input="house"
+                        disabled
+                      />
+                      <label class="float-field__label" for="cost-house"
+                        >Стоимость дома*</label
+                      >
+                    </div>
+                    <span class="calc__plus-icon">+</span>
+                    <div class="float-field float-field_floating">
+                      <input
+                        class="float-field__input"
+                        type="text"
+                        id="cost-plot"
+                        placeholder="placeholder"
+                        data-input="plot"
+                        disabled
+                      />
+                      <label class="float-field__label" for="cost-plot"
+                        >Стоимость участка**</label
+                      >
+                    </div>
+                  </div>
+                  <div class="calc__sum calc__input">
+                    <div class="float-field float-field_floating">
+                      <input
+                        class="float-field__input"
+                        type="text"
+                        id="result"
+                        placeholder="placeholder"
+                        data-input="sum"
+                        disabled
+                      />
+                      <label class="float-field__label" for="result"
+                        >Итоговая стоимость</label
+                      >
+                    </div>
+                  </div>
+                  <div class="calc__result calc__input">
+                    <div
+                      class="float-field float-field_floating calc__result_60"
+                    >
+                      <input
+                        class="float-field__input"
+                        type="text"
+                        id="result"
+                        placeholder="placeholder"
+                        data-input="initial"
+                      />
+                      <label class="float-field__label" for="result"
+                        >Первоначальный взнос</label
+                      >
+                    </div>
+                    <div
+                      class="float-field float-field_floating calc__result_40"
+                    >
+                      <input
+                        class="float-field__input"
+                        type="text"
+                        id="result"
+                        placeholder="placeholder"
+                        data-input="period"
+                      />
+                      <label class="float-field__label" for="result"
+                        >Срок</label
+                      >
+                    </div>
+                  </div>
+                  <div class="calc__result calc__input">
+                    <div
+                      class="float-field float-field_floating calc__result_60"
+                    >
+                      <input
+                        class="float-field__input"
+                        type="text"
+                        id="result"
+                        placeholder="placeholder"
+                        data-input="month"
+                        disabled
+                      />
+                      <label class="float-field__label" for="result"
+                        >Ежемесячный платеж</label
+                      >
+                    </div>
+                    <div
+                      class="float-field float-field_floating calc__result_40"
+                    >
+                      <input
+                        class="float-field__input"
+                        type="text"
+                        id="result"
+                        placeholder="placeholder"
+                        data-input="rate"
+                        disabled
+                      />
+                      <label class="float-field__label" for="result"
+                        >Min ставка</label
+                      >
+                    </div>
+                  </div>
+                  <buttton class="button button_accent m-b--10"
+                    >Отправить заявку</buttton
+                  >
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="section__top">
+            <h2 class="section__title">Фото готовых домов</h2>
+          </div>
+          <div class="image-form">
+            <div class="swiper featuresSwiper image-form__image">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/img.png" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-nav">
+                <div class="swiper-next"></div>
+                <div class="swiper-prev"></div>
+              </div>
+              <div class="swiper-numbs swiper-numbs_start"></div>
+            </div>
+            <div class="image-form__form image-form__form_swiper">
+              <form action="#" class="form form__column" id="special-offer">
+                <div class="form__top">
+                  <h4 class="form__title">
+                    Запишитесь на экскурсию по посёлку Девичья Гора
+                  </h4>
+                  <p class="form__text">
+                    Приезжайте на экскурсию, чтобы увидеть всё своими глазами и
+                    узнать о жизни поселка из первых рук
+                  </p>
+                </div>
+                <div class="form__bottom">
+                  <div class="form__inputs">
+                    <div class="text-field">
+                      <input
+                        data-special-offer=""
+                        class="text-field__input tel"
+                        type="text"
+                        placeholder="Введите ваш телефон"
+                      />
+                    </div>
+                    <div class="text-field">
+                      <input
+                        data-special-offer=""
+                        class="text-field__input tel"
+                        type="text"
+                        placeholder="Введите ваше имя"
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      id="special-offer-btn"
+                      class="button button_accent"
+                    >
+                      Отправить
+                    </button>
+                  </div>
+
+                  <label class="checkbox-other">
+                    <input data-special-offer="" type="checkbox" />
+                    <p>
+                      Даю согласие на обработку
+                      <a href="#" class="checkbox__link">
+                        персональных данных
+                      </a>
+                    </p>
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="section__top">
+            <h2 class="section__title">Другие проекты</h2>
+          </div>
+          <div class="swiper otherProjects">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper hitProject">
+                  <div class="swiper-wrapper">
+                    <div class="label-wrapper swiper-slide">
+                      <div class="label">
+                        <div class="label__text"><span>Хит продаж</span></div>
+                        <img src="../img/icons/label-blue.svg" alt="" />
+                      </div>
+                      <img src="../img/main.png" alt="" class="card__image" />
+                    </div>
+                    <div class="label-wrapper swiper-slide">
+                      <div class="label">
+                        <div class="label__text"><span>Хит продаж</span></div>
+                        <img src="../img/icons/label-blue.svg" alt="" />
+                      </div>
+                      <img src="../img/main.png" alt="" class="card__image" />
+                    </div>
+                  </div>
+                  <div class="card__container">
+                    <div class="card__container_l">
+                      <h5 class="card__address">Спецпроект</h5>
+                      <div class="card__content">
+                        <h4 class="card__title">Скай Лайт 165</h4>
+                      </div>
+                    </div>
+
+                    <div class="card__container_absolute">
+                      <div class="swiper-dots"></div>
+                    </div>
+                    <div class="swiper-numbs"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper hitProject">
+                  <div class="swiper-wrapper">
+                    <div class="label-wrapper swiper-slide">
+                      <div class="label">
+                        <div class="label__text"><span>Хит продаж</span></div>
+                        <img src="../img/icons/label-blue.svg" alt="" />
+                      </div>
+                      <img src="../img/main.png" alt="" class="card__image" />
+                    </div>
+                    <div class="label-wrapper swiper-slide">
+                      <div class="label">
+                        <div class="label__text"><span>Хит продаж</span></div>
+                        <img src="../img/icons/label-blue.svg" alt="" />
+                      </div>
+                      <img src="../img/main.png" alt="" class="card__image" />
+                    </div>
+                  </div>
+                  <div class="card__container">
+                    <div class="card__container_l">
+                      <h5 class="card__address">Спецпроект</h5>
+                      <div class="card__content">
+                        <h4 class="card__title">Скай Лайт 165</h4>
+                      </div>
+                    </div>
+
+                    <div class="card__container_absolute">
+                      <div class="swiper-dots"></div>
+                    </div>
+                    <div class="swiper-numbs"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-numbs"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--footer start-->
+    <footer class="footer">
+      <div class="footer__m">
+        <div class="container">
+          <div class="accordion" id="accordion">
+            <h3 class="accordion-header">
+              Покупателям <span class="accordion__line"></span>
+            </h3>
+            <div
+              class="accordion-body tabs__text"
+              id="tabs-1"
+              style="height: 0px"
+            >
+              <a href="#"> Проектирование </a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="accordion-header">
+              Стандарты <span class="accordion__line"></span>
+            </h3>
+            <div
+              class="accordion-body tabs__text"
+              id="tabs-2"
+              style="height: 0px"
+            >
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="accordion-header">
+              О застройщике <span class="accordion__line"></span>
+            </h3>
+            <div
+              class="accordion-body tabs__text"
+              id="tabs-3"
+              style="height: 0px"
+            >
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="accordion-header">Контакты</h3>
+
+            <div
+              class="accordion-body tabs__text"
+              id="tabs-4"
+              style="height: 0px"
+            >
+              <a href="#">Проектирование</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__line"></div>
+        <div class="container">
+          <div class="footer__content">
+            <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
+            <div class="footer__socials social">
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/youtube.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/facebook.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+              <a href="#" class="pie pie_primary social__link_s">
+                <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+              </a>
+            </div>
+            <div class="footer__contact">
+              <address>г.Уфа, ул.Мустая Карима, д.16</address>
+              <a href="tell:73472008719">+7 (347) 200-87-19</a>
+            </div>
+            <p class="development">
+              Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
             </p>
-            <div class="communications__cards">
-              <div class="communications__card">
-                <img src="../img/icons/water-system.svg" alt="" class="communications__card-icon" />
-                <h5 class="communications__card-title">Водоснабжение</h5>
-              </div>
-              <div class="communications__card">
-                <img src="../img//icons/light.svg" alt="" class="communications__card-icon" />
-                <h5 class="communications__card-title">Электроснабжение</h5>
-              </div>
-              <div class="communications__card">
-                <img src="../img/icons/gas.svg" alt="" class="communications__card-icon" />
-                <h5 class="communications__card-title">Газоснабжение</h5>
-              </div>
-              <div class="communications__card">
-                <img src="../img/icons/sewage.svg" alt="" class="communications__card-icon" />
-                <h5 class="communications__card-title">Канализация</h5>
+          </div>
+        </div>
+      </div>
+      <div class="footer__d">
+        <div class="container">
+          <div class="footer__top">
+            <div class="footer__top-left">
+              <div class="footer__content">
+                <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
+                <div class="footer__socials social">
+                  <a href="#" class="pie pie_primary social__link_s">
+                    <img
+                      src="../img/icons/youtube.svg"
+                      alt=""
+                      class="social__icon"
+                    />
+                  </a>
+
+                  <a href="#" class="pie pie_primary social__link_s">
+                    <img
+                      src="../img/icons/facebook.svg"
+                      alt=""
+                      class="social__icon"
+                    />
+                  </a>
+                  <a href="#" class="pie pie_primary social__link_s">
+                    <img
+                      src="../img/icons/vk.svg"
+                      alt=""
+                      class="social__icon"
+                    />
+                  </a>
+                </div>
+                <div class="footer__contact">
+                  <address>г.Уфа, ул.Мустая Карима, д.16</address>
+                  <a href="tell:73472008719">+7 (347) 200-87-19</a>
+                </div>
               </div>
             </div>
-            <p class="communications__text">
-              Оставьте заявку и узнайте стоимость подключения пакета
-              коммуникаций
+            <div class="footer__top-right">
+              <div class="footer__nav">
+                <h5 class="footer__nav-header">Покупателям</h5>
+                <a href="#" class="footer__nav-item"> Поселки </a>
+                <a href="#" class="footer__nav-item"> Готовые дома </a>
+              </div>
+              <div class="footer__nav">
+                <h5 class="footer__nav-header">Покупателям</h5>
+                <a href="#" class="footer__nav-item"> Поселки </a>
+                <a href="#" class="footer__nav-item"> Готовые дома </a>
+              </div>
+              <div class="footer__nav">
+                <h5 class="footer__nav-header">Покупателям</h5>
+                <a href="#" class="footer__nav-item"> Поселки </a>
+                <a href="#" class="footer__nav-item"> Готовые дома </a>
+              </div>
+              <div class="footer__nav">
+                <h5 class="footer__nav-header">Покупателям</h5>
+                <a href="#" class="footer__nav-item"> Поселки </a>
+                <a href="#" class="footer__nav-item"> Готовые дома </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <p class="footer__bottom-left">Все права защищены</p>
+            <p class="development footer__bottom-right">
+              Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
             </p>
-            <buttton class="carousel__btn button button_accent">Записаться на экскурсию</buttton>
           </div>
         </div>
       </div>
-    </section>
-    <section class="interior">
-      <div class="container"></div>
-    </section>
-    <section class="section settlements">
-      <div class="container">
-        <div class="settlements__top -r-gap">
-          <h2 class="title settlements__title">
-            <span> Внутренняя </span>
-            <br />
-            <span>отделка дома</span>
-          </h2>
-          <img src="../img/icons/ready.svg" class="settlements__icon" alt="" />
-          <div class="settlements-content">
-            <span class="settlements__number number">03</span>
-          </div>
-          <img src="../img/people.png" alt="" width="155" height="216" />
-        </div>
-        <div class="settlements__bottom content-round">
-          <p class="content-round__title">
-            Собственная студия дизайна и чистовой отделки ПОРАДОМ предлагает
-            на выбор 3 пакета разработки будущего интерьера, созданного
-            дизайнером-архитектором с учетом ваших желаний
-          </p>
-        </div>
-
-        <div class="section__btns">
-          <div id="reviews-btns" class="button__group">
-            <a href="#" class="button__round button__round_active">Общий</a>
-            <a href="#" class="button__round">1 очередь</a>
-            <a href="#" class="button__round">2 очередь</a>
-            <a href="#" class="button__round">3 очередь</a>
-            <a href="#" class="button__round">4 очередь</a>
-            <a href="#" class="button__round">5 очередь</a>
-          </div>
-        </div>
-
-        <div class="swiper featuresSwiper m-b--30">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="navigation__card">
-                <img src="../img/img.png" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="navigation__card">
-                <img src="../img/img.png" alt="" />
-              </div>
-            </div>
-          </div>
-          <div class="swiper-next"></div>
-          <div class="swiper-prev"></div>
-          <div class="swiper-numbs"></div>
-        </div>
-        <buttton class="button button_accent m-b--10">Записаться на экскурсию</buttton>
-        <buttton class="button button_blue">Студия ПОРАДОМ</buttton>
-      </div>
-    </section>
-    <section class="diagram">
-      <div class="diagram__number-content">
-        <span class="diagram__number number">04</span>
-      </div>
-      <div class="container">
-        <div class="diagram__top">
-          <h2 class="title diagram__title">
-            <span>купить легко</span>
-          </h2>
-          <p class="diagram__text">
-            Индивидуальный подход — принцип работы ПОРАДОМ
-          </p>
-        </div>
-        <div class="diagram__accordion accordion" id="card-project">
-          <h3 class="accordion-header">
-            Оплата 100% <span class="accordion__line"></span>
-          </h3>
-          <div class="accordion-body tabs__text" id="tabs-1" style="height: 0px">
-            <a href="#"> Проектирование </a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-          </div>
-          <h3 class="accordion-header">
-            Беспроцентная рассрочка <span class="accordion__line"></span>
-          </h3>
-          <div class="accordion-body tabs__text" id="tabs-2" style="height: 0px">
-            <a href="#">Проектирование</a>
-          </div>
-          <h3 class="accordion-header">
-            Ипотека <span class="accordion__line"></span>
-          </h3>
-          <div class="accordion-body tabs__text" id="tabs-3" style="height: 0px"></div>
-        </div>
-        <form class="calc" id="calc-1">
-          <h4 class="calc__title">
-            Детально рассчитаем для вас самый выгодный вариант
-          </h4>
-
-          <div id="reviews-btns" class="button__group calc__btns">
-            <button class="button__round button__round_active" data-button data-minimum="10" data-rate="9">
-              Сбербанк
-            </button>
-            <button href="#" class="button__round" data-button data-minimum="15" data-rate="50">
-              Семейная ипотека ВТБ
-            </button>
-          </div>
-
-          <p class="calc__text">
-            Ипотека от 9,5% на строительство малоэтажных домов от ПАО
-            «Сбербанк». ПОРАДОМ является единственным в Уфе застройщиком
-            малоэтажных домов, аккредитованным в банке
-          </p>
-
-          <div id="dropdown_1" class="dropdown">
-            <div id="dropdownHeader_1" class="dropdown__header dropdown__header--hide">
-              <div id="dropdownHeaderValue_1" class="dropdown__header--title" data-dropdown_header>
-                Тип
-              </div>
-              <div class="dropdown__header--icon">
-                <img id="chevronIcon_1" class="fas fa-angle-down rotate-icon-home" src="../img/icons/down.svg" alt="" />
-              </div>
-            </div>
-
-            <div id="dropdownListBody_1" class="dropdown__body dropdown__body--hide">
-              <ul id="dropdownList_1" class="dropdown__body--list">
-                <li class="dropdown__body--list-index" data-dropdown_item data-sum="10000" data-house="5000"
-                  data-plot="5000">
-                  Test Value 1
-                </li>
-                <li class="dropdown__body--list-index" data-dropdown_item data-sum="20000" data-house="15000"
-                  data-plot="5000">
-                  Test Value 2
-                </li>
-                <li class="dropdown__body--list-index" data-dropdown_item data-sum="30000" data-house="20000"
-                  data-plot="10000">
-                  Test Value 3
-                </li>
-                <li class="dropdown__body--list-index" data-dropdown_item data-sum="40000" data-house="20000"
-                  data-plot="20000">
-                  Test Value 4
-                </li>
-                <li class="dropdown__body--list-index" data-dropdown_item data-sum="50000" data-house="30000"
-                  data-plot="20000">
-                  Test Value 5
-                </li>
-                <li class="dropdown__body--list-index" data-dropdown_item data-sum="60000" data-house="40000"
-                  data-plot="20000">
-                  Test Value 6
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="calc__plus calc__input">
-            <div class="float-field float-field_floating">
-              <input class="float-field__input" type="text" id="cost-house" placeholder="placeholder" data-input="house"
-                disabled />
-              <label class="float-field__label" for="cost-house">Стоимость дома*</label>
-            </div>
-            <span class="calc__plus-icon">+</span>
-            <div class="float-field float-field_floating">
-              <input class="float-field__input" type="text" id="cost-plot" placeholder="placeholder" data-input="plot"
-                disabled />
-              <label class="float-field__label" for="cost-plot">Стоимость участка**</label>
-            </div>
-          </div>
-          <div class="calc__sum calc__input">
-            <div class="float-field float-field_floating">
-              <input class="float-field__input" type="text" id="result" placeholder="placeholder" data-input="sum"
-                disabled />
-              <label class="float-field__label" for="result">Итоговая стоимость</label>
-            </div>
-          </div>
-          <div class="calc__result calc__input">
-            <div class="float-field float-field_floating calc__result_60">
-              <input class="float-field__input" type="text" id="result" placeholder="placeholder"
-                data-input="initial" />
-              <label class="float-field__label" for="result">Первоначальный взнос</label>
-            </div>
-            <div class="float-field float-field_floating calc__result_40">
-              <input class="float-field__input" type="text" id="result" placeholder="placeholder" data-input="period" />
-              <label class="float-field__label" for="result">Срок</label>
-            </div>
-          </div>
-          <div class="calc__result calc__input">
-            <div class="float-field float-field_floating calc__result_60">
-              <input class="float-field__input" type="text" id="result" placeholder="placeholder" data-input="month"
-                disabled />
-              <label class="float-field__label" for="result">Ежемесячный платеж</label>
-            </div>
-            <div class="float-field float-field_floating calc__result_40">
-              <input class="float-field__input" type="text" id="result" placeholder="placeholder" data-input="rate"
-                disabled />
-              <label class="float-field__label" for="result">Min ставка</label>
-            </div>
-          </div>
-          <buttton class="button button_accent m-b--10">Отправить заявку</buttton>
-        </form>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div class="section__top">
-          <h2 class="section__title">Фото готовых домов</h2>
-        </div>
-        <div class="swiper featuresSwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="navigation__card">
-                <img src="../img/img.png" alt="" />
-                <p class="section__text">Подпись фотографии</p>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="navigation__card">
-                <img src="../img/img.png" alt="" />
-                <p class="section__text">Подпись фотографии</p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-next"></div>
-          <div class="swiper-prev"></div>
-          <div class="swiper-numbs"></div>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div class="section__top">
-          <h2 class="section__title">Другие проекты</h2>
-        </div>
-        <div class="swiper readySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="swiper hitProject">
-                <div class="swiper-wrapper">
-                  <div class="label-wrapper swiper-slide">
-                    <div class="label">
-                      <div class="label__text"><span>Хит продаж</span></div>
-                      <img src="../img/icons/label-blue.svg" alt="" />
-                    </div>
-                    <img src="../img/main.png" alt="" class="card__image" />
-                  </div>
-                  <div class="label-wrapper swiper-slide">
-                    <div class="label">
-                      <div class="label__text"><span>Хит продаж</span></div>
-                      <img src="../img/icons/label-blue.svg" alt="" />
-                    </div>
-                    <img src="../img/main.png" alt="" class="card__image" />
-                  </div>
-                </div>
-                <div class="card__container">
-                  <div class="card__container_l">
-                    <h5 class="card__address">Спецпроект</h5>
-                    <div class="card__content">
-                      <h4 class="card__title">Скай Лайт 165</h4>
-                    </div>
-                  </div>
-
-                  <div class="card__container_absolute">
-                    <div class="swiper-dots"></div>
-                  </div>
-                  <div class="swiper-numbs"></div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper hitProject">
-                <div class="swiper-wrapper">
-                  <div class="label-wrapper swiper-slide">
-                    <div class="label">
-                      <div class="label__text"><span>Хит продаж</span></div>
-                      <img src="../img/icons/label-blue.svg" alt="" />
-                    </div>
-                    <img src="../img/main.png" alt="" class="card__image" />
-                  </div>
-                  <div class="label-wrapper swiper-slide">
-                    <div class="label">
-                      <div class="label__text"><span>Хит продаж</span></div>
-                      <img src="../img/icons/label-blue.svg" alt="" />
-                    </div>
-                    <img src="../img/main.png" alt="" class="card__image" />
-                  </div>
-                </div>
-                <div class="card__container">
-                  <div class="card__container_l">
-                    <h5 class="card__address">Спецпроект</h5>
-                    <div class="card__content">
-                      <h4 class="card__title">Скай Лайт 165</h4>
-                    </div>
-                  </div>
-
-                  <div class="card__container_absolute">
-                    <div class="swiper-dots"></div>
-                  </div>
-                  <div class="swiper-numbs"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-numbs"></div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <!--footer start-->
-  <footer class="footer">
-    <div class="footer__m">
-      <div class="container">
-        <div class="accordion" id="accordion">
-          <h3 class="accordion-header">
-            Покупателям <span class="accordion__line"></span>
-          </h3>
-          <div class="accordion-body tabs__text" id="tabs-1" style="height: 0px">
-            <a href="#"> Проектирование </a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-          </div>
-          <h3 class="accordion-header">
-            Стандарты <span class="accordion__line"></span>
-          </h3>
-          <div class="accordion-body tabs__text" id="tabs-2" style="height: 0px">
-            <a href="#">Проектирование</a>
-          </div>
-          <h3 class="accordion-header">
-            О застройщике <span class="accordion__line"></span>
-          </h3>
-          <div class="accordion-body tabs__text" id="tabs-3" style="height: 0px">
-            <a href="#">Проектирование</a>
-          </div>
-          <h3 class="accordion-header">Контакты</h3>
-
-          <div class="accordion-body tabs__text" id="tabs-4" style="height: 0px">
-            <a href="#">Проектирование</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer__line"></div>
-      <div class="container">
-        <div class="footer__content">
-          <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
-          <div class="footer__socials social">
-            <a href="#" class="pie pie_primary social__link_s">
-              <img src="../img/icons/youtube.svg" alt="" class="social__icon" />
-            </a>
-
-            <a href="#" class="pie pie_primary social__link_s">
-              <img src="../img/icons/facebook.svg" alt="" class="social__icon" />
-            </a>
-            <a href="#" class="pie pie_primary social__link_s">
-              <img src="../img/icons/vk.svg" alt="" class="social__icon" />
-            </a>
-          </div>
-          <div class="footer__contact">
-            <address>г.Уфа, ул.Мустая Карима, д.16</address>
-            <a href="tell:73472008719">+7 (347) 200-87-19</a>
-          </div>
-          <p class="development">
-            Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="footer__d">
-      <div class="container">
-        <div class="footer__top">
-          <div class="footer__top-left">
-            <div class="footer__content">
-              <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
-              <div class="footer__socials social">
-                <a href="#" class="pie pie_primary social__link_s">
-                  <img src="../img/icons/youtube.svg" alt="" class="social__icon" />
-                </a>
-
-                <a href="#" class="pie pie_primary social__link_s">
-                  <img src="../img/icons/facebook.svg" alt="" class="social__icon" />
-                </a>
-                <a href="#" class="pie pie_primary social__link_s">
-                  <img src="../img/icons/vk.svg" alt="" class="social__icon" />
-                </a>
-              </div>
-              <div class="footer__contact">
-                <address>г.Уфа, ул.Мустая Карима, д.16</address>
-                <a href="tell:73472008719">+7 (347) 200-87-19</a>
-              </div>
-            </div>
-          </div>
-          <div class="footer__top-right">
-            <div class="footer__nav">
-              <h5 class="footer__nav-header">Покупателям</h5>
-              <a href="#" class="footer__nav-item"> Поселки </a>
-              <a href="#" class="footer__nav-item"> Готовые дома </a>
-            </div>
-            <div class="footer__nav">
-              <h5 class="footer__nav-header">Покупателям</h5>
-              <a href="#" class="footer__nav-item"> Поселки </a>
-              <a href="#" class="footer__nav-item"> Готовые дома </a>
-            </div>
-            <div class="footer__nav">
-              <h5 class="footer__nav-header">Покупателям</h5>
-              <a href="#" class="footer__nav-item"> Поселки </a>
-              <a href="#" class="footer__nav-item"> Готовые дома </a>
-            </div>
-            <div class="footer__nav">
-              <h5 class="footer__nav-header">Покупателям</h5>
-              <a href="#" class="footer__nav-item"> Поселки </a>
-              <a href="#" class="footer__nav-item"> Готовые дома </a>
-            </div>
-          </div>
-        </div>
-        <div class="footer__bottom">
-          <p class="footer__bottom-left">Все права защищены</p>
-          <p class="development footer__bottom-right">
-            Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!--footer end-->
-</body>
-
+    </footer>
+    <!--footer end-->
+  </body>
 </html>

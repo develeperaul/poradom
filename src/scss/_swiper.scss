@@ -170,7 +170,14 @@ $pageColorActive: #0099e0;
     padding-top: 9px;
     justify-content: center;
     margin-top: 20px;
-
+    @include desktop-sm {
+      margin-top: 60px;
+    }
+    &_start {
+      @include desktop-sm {
+        justify-content: flex-start;
+      }
+    }
     &_mt {
       &--10 {
         margin-top: -10px;
@@ -192,7 +199,7 @@ $pageColorActive: #0099e0;
       text-align: center;
       position: relative;
       margin: 0 6px;
-      width: 43px;
+      min-width: 43px;
       display: block;
       color: $pagColor;
 
@@ -282,6 +289,12 @@ $pageColorActive: #0099e0;
       &.line-active {
         background: blue;
       }
+    }
+  }
+  &_flex {
+    @include desktop-sm {
+      margin-left: 300px;
+      width: calc(100% - 300px);
     }
   }
 }

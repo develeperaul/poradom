@@ -1,0 +1,100 @@
+.content-title {
+  $contentTitle: &;
+}
+.service-settlement {
+  background-color: $secondary;
+  position: relative;
+  padding-bottom: 30px;
+  & .content-title {
+    position: absolute;
+    z-index: 9;
+    top: 143px;
+    left: 40px;
+    margin: 0;
+    padding: 0;
+    @include desktop-sm {
+      width: 42%;
+      position: static;
+      padding-top: 130px;
+      margin-left: 300px;
+      padding-bottom: 0;
+      margin-bottom: 60px;
+    }
+    & .title {
+      @include desktop-sm {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  & .content-round__image {
+    width: 120px;
+    height: 120px;
+  }
+  &__top {
+    @include desktop-sm {
+      position: absolute;
+      top: 0;
+      width: calc(100% - #{$gap});
+    }
+  }
+  &__photo {
+    margin-left: auto;
+    margin-right: 0em;
+    z-index: 8;
+    @include desktop-sm {
+      width: 660px;
+      height: 530px;
+    }
+  }
+  & .content-round {
+    padding-top: 76px;
+    padding-left: 0;
+    @include desktop-sm {
+      display: none;
+    }
+  }
+  & .content-round__title {
+    font-size: 12px;
+    line-height: 130%;
+    padding-left: 0;
+    text-align: left;
+    margin: 0;
+    @include desktop-sm {
+      font-size: 18px;
+      line-height: 120%;
+    }
+  }
+  & .content-round__wrapper {
+    display: block;
+    /* align-self: baseline; */
+    margin-bottom: auto;
+    margin-top: 0;
+  }
+  & .content-round__wrapper::before {
+    top: -76px;
+    height: 76px;
+  }
+  & .content-round__wrapper::after {
+    width: 0;
+    height: 0;
+  }
+  & .content-round__image_absolute {
+    position: absolute;
+  }
+  &__content {
+    display: none;
+    @include desktop-sm {
+      display: flex;
+      gap: 80px;
+      align-items: end;
+      & > * {
+        z-index: 9;
+      }
+    }
+  }
+  &__button {
+    @include desktop-sm {
+      display: none;
+    }
+  }
+}

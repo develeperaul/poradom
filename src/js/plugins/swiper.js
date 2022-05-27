@@ -34,7 +34,7 @@ const swiper = (name, opts = {}) => {
     ...opts,
   });
 };
-export default class newSwiper extends swiper { }
+export default class newSwiper extends swiper {}
 new newSwiper(".storiesSwiper", {
   on: {
     afterInit: (swiper) => {
@@ -134,8 +134,7 @@ const s = new Swiper(".newsSwiper", {
         fill: "row",
         rows: 2,
       },
-
-    }
+    },
   },
   pagination: {
     el: ".swiper-numbs",
@@ -161,5 +160,58 @@ new newSwiper(".featuresSwiper", {
   navigation: {
     nextEl: ".swiper-next",
     prevEl: ".swiper-prev",
+  },
+  on: {
+    // paginationUpdate: function (swiper, paginationEl) {
+    //   swiper.pagination.bullets.forEach((bullet, index) => {
+    //     console.log(
+    //       bullet.classList.contains("numb-active") &&
+    //         index > 4 &&
+    //         swiper.pagination.bullets.length >= 8
+    //     );
+    //     if (
+    //       bullet.classList.contains("numb-active") &&
+    //       index > 4 &&
+    //       swiper.pagination.bullets.length >= 8
+    //     ) {
+    //       paginationEl.classList.add("swiper-numbs--transformX");
+    //     }
+    //     if (
+    //       bullet.classList.contains("numb-active") &&
+    //       index === 0 &&
+    //       swiper.pagination.bullets.length >= 8
+    //     ) {
+    //       paginationEl.classList.remove("swiper-numbs--transformX");
+    //     }
+    //   });
+    // },
+  },
+  breakpoints: {
+    1440: {
+      pagination: {
+        dynamicBullets: true,
+        dynamicMainBullets: 4,
+        el: ".swiper-numbs",
+        bulletActiveClass: "numb-active",
+        bulletClass: "numb",
+        type: "bullets",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+      },
+    },
+  },
+});
+
+new newSwiper(".otherProjects", {
+  modules: [Navigation, Pagination],
+  loop: false,
+  // slidesPerView: 1,
+  spaceBetween: 30,
+  breakpoints: {
+    1440: {
+      slidesPerView: 4,
+    },
   },
 });

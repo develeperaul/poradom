@@ -33,10 +33,22 @@
 @import "plans";
 
 @import "settlements-map";
+@import "service-settlement";
 @import "contacts";
-
+@import "neighbors";
+@import "visualization";
+@import "sections/interior";
+@import "sections/mortgage";
 @import "footer";
 
+@import "plugins/toggle";
+@import "plugins/popup-info";
+
+.title-br {
+  @include desktop-sm {
+    display: none;
+  }
+}
 .section {
   padding: 20px 0 40px;
 
@@ -54,7 +66,7 @@
   &__top {
     margin-bottom: 20px;
 
-    &>.section__title {
+    & > .section__title {
       margin-bottom: 10px;
     }
   }
@@ -78,7 +90,7 @@
   }
 
   &__btns {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     position: relative;
 
     @include desktop-sm {
@@ -146,14 +158,14 @@
 
   display: grid;
   gap: 4px;
-  grid-template-areas: "A B""C D";
+  grid-template-areas: "A B" "C D";
   justify-content: center;
   align-content: center;
   transform: rotate(0deg) translate(0px, 0px);
   opacity: 1;
   transition: all 0.3s ease;
 
-  &>span {
+  & > span {
     width: 9px;
     height: 9px;
     border-radius: 2px;
@@ -161,36 +173,40 @@
     z-index: 10;
   }
 
-  &>span:nth-child(1) {}
+  & > span:nth-child(1) {
+  }
 
-  &>span:nth-child(2) {}
+  & > span:nth-child(2) {
+  }
 
-  &>span:nth-child(3) {}
+  & > span:nth-child(3) {
+  }
 
-  &>span:nth-child(4) {}
+  & > span:nth-child(4) {
+  }
 
   &_active {
     gap: 0px;
     transform: rotate(90deg);
 
-    &>span {
+    & > span {
       width: 2px;
       height: 20px;
     }
 
-    &>span:nth-child(1) {
+    & > span:nth-child(1) {
       transform: rotate(-45deg) translate(-6px, 8px);
     }
 
-    &>span:nth-child(2) {
+    & > span:nth-child(2) {
       opacity: 0;
     }
 
-    &>span:nth-child(3) {
+    & > span:nth-child(3) {
       transform: rotate(45deg) translate(-6px, -8px);
     }
 
-    &>span:nth-child(4) {
+    & > span:nth-child(4) {
       opacity: 0;
     }
   }
@@ -300,29 +316,6 @@
   to {
     opacity: 0;
     right: -1000px;
-  }
-}
-
-.neighbors {
-  &__title {
-    padding-top: 33px;
-    margin-left: 14px;
-  }
-
-  &__content {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 30px;
-
-    &>img {
-      z-index: 10;
-    }
-  }
-
-  &__bottom {
-    &-title {
-      margin-bottom: 20px;
-    }
   }
 }
 

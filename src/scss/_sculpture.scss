@@ -7,6 +7,7 @@
   @include desktop-sm {
     padding-top: 100px;
     padding-bottom: 100px;
+    padding-left: 180px;
   }
 
   &::after {
@@ -37,12 +38,6 @@
 
     @include desktop-sm {
       font-size: 86px;
-    }
-
-    &-br {
-      @include desktop-sm {
-        display: none;
-      }
     }
 
     &-wrapper {

@@ -1,0 +1,63 @@
+.interior {
+  & .content-title {
+    position: absolute;
+    z-index: 9;
+    top: 125px;
+    left: 40px;
+    margin: 0;
+    padding: 0;
+    @include desktop-sm {
+      width: 42%;
+      position: static;
+      padding-top: 130px;
+      margin-left: 300px;
+      padding-bottom: 0;
+      margin-bottom: 60px;
+    }
+    & .title {
+      @include desktop-sm {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  &__top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    @include desktop-sm {
+      display: none;
+    }
+  }
+
+  &__bottom {
+    @include desktop-sm {
+      margin-left: 300px;
+    }
+  }
+  &__btns {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include desktop-sm {
+      flex-direction: row;
+      gap: 20px;
+      //   position: absolute;
+      //   z-index: 9;
+    }
+  }
+  &__text {
+    margin-bottom: 20px;
+    @include desktop-sm {
+      font-size: 26px;
+      line-height: 120%;
+      margin-bottom: 30px;
+    }
+  }
+  &__photo {
+    margin-left: auto;
+    margin-right: 0em;
+    z-index: 8;
+  }
+}

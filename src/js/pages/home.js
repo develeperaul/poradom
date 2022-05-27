@@ -41,11 +41,14 @@ class Survey {
                 el.classList.remove("card-survey_opacity");
               } else {
                 if (el.classList.contains("card-survey_first")) {
-                  document
-                    .querySelectorAll(".card-survey")
-                    .forEach((item) =>
-                      item.classList.remove("card-survey_opacity")
+                  document.querySelectorAll(".card-survey").forEach((item) => {
+                    item.classList.remove("card-survey_opacity");
+                    console.log(
+                      item
+                        .querySelector(".card-survey__numb")
+                        .classList.add("card-survey__numb_active")
                     );
+                  });
                   el.classList.remove("card-survey_first");
                   el.classList.add("card-survey_active");
                   this.updateWithProgress();

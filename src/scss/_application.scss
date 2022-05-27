@@ -7,4 +7,16 @@
     padding: 100px 0;
     background-color: $secondary;
   }
+  .form {
+    @include desktop-sm {
+      margin: 0 auto;
+      width: calc(100% - 2 * 300px);
+      padding: 50px 150px;
+    }
+    &__top {
+      @include desktop-sm {
+        max-width: 279px;
+      }
+    }
+  }
 }

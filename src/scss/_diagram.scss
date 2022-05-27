@@ -22,7 +22,6 @@ svg {
   &__top {
     padding-left: 13px;
     margin-left: 50px;
-    width: 100%;
     padding-top: 80px;
 
     @include desktop-sm {
@@ -49,8 +48,7 @@ svg {
   &__text {
     color: #e5e7ea;
     display: inline-block;
-    margin-left: 61px;
-    margin-bottom: 30px;
+    // margin-left: 61px;
     font-size: 16px;
     align-self: flex-start;
 
@@ -95,8 +93,6 @@ svg {
   &__number-content {
     position: absolute;
     left: 7px;
-    // height: 100%;
-    // width: 100%;
     z-index: 9;
 
     @include desktop-sm {
@@ -146,6 +142,16 @@ svg {
     transition: all 0.7s ease;
 
     opacity: 0;
+
+    @include desktop-sm {
+      max-width: 300px;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      transform: translate(-50%, -50%);
+      top: 0%;
+      padding: 19px;
+    }
 
     &_active {
       opacity: 1;

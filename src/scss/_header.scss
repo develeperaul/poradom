@@ -11,7 +11,7 @@
     flex-direction: column;
   }
 
-  &>.container {
+  & > .container {
     // height: 100%;
   }
 
@@ -32,12 +32,13 @@
     align-items: center;
     padding-top: 12px;
     padding-bottom: 12px;
-
+    height: 64px;
     @include desktop-sm {
       grid-template-columns: repeat(6, minmax(0, 1fr));
       display: grid;
-      padding-top: 23px;
-      padding-bottom: 23px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      height: 100px;
 
       & .header__trigger,
       & .logo,
@@ -101,6 +102,13 @@
 
     &_between {
       justify-content: space-between;
+    }
+    &.video {
+      .video__top-image {
+        @include desktop-sm {
+          height: calc(100vh - 100px);
+        }
+      }
     }
   }
 
@@ -166,6 +174,7 @@
       }
     }
 
-    &__btn {}
+    &__btn {
+    }
   }
 }
