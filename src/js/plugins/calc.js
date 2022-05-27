@@ -28,9 +28,9 @@ window.addEventListener("DOMContentLoaded", function () {
     input.value = callback;
   }
   function setPrefix(input, val, start, end) {
-    console.log(input);
     const newvalue = start + val + end;
-    input.value = newvalue;
+
+    input.value = isNaN(val) ? null : newvalue;
     input.selectionStart = input.selectionEnd = val.length;
   }
   const form = document.querySelector("#calc-1");

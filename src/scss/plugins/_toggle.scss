@@ -1,0 +1,19 @@
+.toggle {
+  &-element {
+    display: none;
+    @include desktop-sm {
+      display: grid;
+    }
+    &:not(:last-child) {
+      @include desktop-sm {
+        margin-bottom: 80px;
+      }
+    }
+    &__active {
+      display: block;
+      @include desktop-sm {
+        display: grid;
+      }
+    }
+  }
+}

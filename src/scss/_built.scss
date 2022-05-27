@@ -1,3 +1,18 @@
+@property --percent {
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: false;
+}
+@property --temp {
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: false;
+}
+@property --v1 {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
 .built {
   padding: 15px 0 40px 0;
 
@@ -61,6 +76,31 @@
       font-size: 370px;
       line-height: 437px;
     }
+  }
+
+  .animate-number {
+    font-weight: 700;
+    color: $accent;
+    margin: 0;
+    font-size: 84px;
+    line-height: 99px;
+    letter-spacing: 0.02em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+
+    @include desktop-sm {
+      font-size: 370px;
+      line-height: 437px;
+    }
+    transition: --percent 1s;
+    --temp: calc(var(--percent));
+    --v1: max(var(--temp) - 0.5, 0);
+    counter-reset: v1 var(--v1);
+  }
+  .animate-number::before {
+    content: counter(v1);
   }
 
   &__image {

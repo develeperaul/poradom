@@ -2,7 +2,9 @@
   background-color: $secondary;
   position: relative;
   padding-bottom: 30px;
-
+  @include desktop-sm {
+    padding-bottom: 0;
+  }
   &__container {
     @include desktop-sm {
       display: grid;
@@ -21,7 +23,7 @@
       display: none;
     }
 
-    &>span {
+    & > span {
       padding-top: 9px;
       padding-right: 24px;
     }
@@ -37,7 +39,6 @@
   }
 
   &__line {
-
     &-top,
     &-bottom {
       position: absolute;
@@ -98,6 +99,9 @@
     }
   }
 
+  &__bottom {
+  }
+
   &__icon {
     position: absolute;
     width: 88px;
@@ -107,7 +111,6 @@
       top: 80px;
       width: 353px;
       height: 310px;
-
     }
   }
 
@@ -131,7 +134,8 @@
       padding-bottom: 90px;
       place-self: end;
       /* grid-column: 1 span; */
-      width: 100%;
+      width: calc(100% - 150px);
+      gap: 30px;
     }
 
     &__title {
@@ -144,6 +148,8 @@
         padding-left: 0;
         margin: 0;
         flex-grow: 1;
+        font-size: 26px;
+        line-height: 120%;
       }
     }
 
@@ -153,14 +159,16 @@
       margin-bottom: auto;
       margin-top: 0;
 
-      &::before {
-        top: -76px;
-        height: 76px;
+      &::after {
+        bottom: -90px;
+        height: 90px;
       }
 
-      &::after {
-        width: 0;
-        height: 0;
+      &::before {
+        @include desktop-sm {
+          width: 0;
+          height: 0;
+        }
       }
     }
   }

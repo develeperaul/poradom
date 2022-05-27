@@ -14,11 +14,6 @@ const lightbox = GLightbox({
 
 import Dropdown from "./plugins/dropdown";
 new Dropdown("1");
-//pages
-// import "./pages/index"
-// import "./pages/requisites"
-// import '../index.html'
-//plugins
 import Accordion from "./plugins/accardion";
 import "./plugins/telmask";
 import "./plugins/validateform";
@@ -100,7 +95,6 @@ new Accordion("sidebar-accordion");
 new Drop();
 //footer
 new Accordion("accordion");
-console.log("hi");
 class Test {
   constructor(name) {
     const parent = document.querySelector(`#${name}`);
@@ -166,9 +160,6 @@ document.addEventListener("DOMContentLoaded", function () {
     modalButtons.forEach(function (item) {
       /* Назначаем каждой кнопке обработчик клика */
       item.addEventListener("click", function (e) {
-        /* Предотвращаем стандартное действие элемента. Так как кнопку разные
-                люди могут сделать по-разному. Кто-то сделает ссылку, кто-то кнопку.
-                Нужно подстраховаться. */
         e.preventDefault();
 
         /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
@@ -212,17 +203,14 @@ document.addEventListener("DOMContentLoaded", function () {
       this.classList.remove("active");
     });
   }
-}); // end ready
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   const forms = document.querySelectorAll("form");
   const inputFile = document.querySelectorAll(".upload-file__input");
-  /////////// Кнопка «Прикрепить файл» ///////////
 
   const inputWrappers = document.querySelectorAll(".upload-file__wrapper");
   inputFile.forEach(function (el, index) {
-    // let textSelector = document.querySelector(".upload-file__text");
-
     let fileList;
 
     // Событие выбора файла(ов)
@@ -236,15 +224,12 @@ document.addEventListener("DOMContentLoaded", () => {
         fileList.push(el.files[i]);
       }
 
-      // вызов функции для каждого файла
       fileList.forEach((file) => {
         uploadFile(file, parentWrapper);
       });
     });
 
-    // Проверяем размер файлов и выводим название
     const uploadFile = (file, idWrapper) => {
-      // файла <5 Мб
       if (file.size > 5 * 1024 * 1024) {
         alert("Файл должен быть не более 5 МБ.");
         return;
@@ -316,3 +301,71 @@ document.addEventListener("DOMContentLoaded", () => {
   //   });
   // }
 });
+
+class toggleGroup {
+  constructor() {
+    this.name = document.querySelector(`.toggle-btns`);
+    this.elements = document.querySelectorAll(".toggle-element");
+
+    if (this.name) {
+      const btns = this.name.querySelectorAll(".button__round");
+
+      Array.from(btns).forEach((button) => {
+        button.onclick = (e) => {
+          Array.from(btns).forEach((el, index) => {
+            el.classList.remove("button__round_active");
+            button.classList.add("button__round_active");
+            console.log(this.elements);
+            this.elements[index].classList.remove("toggle-element__active");
+            if (el.classList.contains("button__round_active")) {
+              this.elements[index].classList.add("toggle-element__active");
+            }
+          });
+        };
+      });
+    }
+  }
+}
+new toggleGroup();
+
+class toggleInfo {
+  constructor() {
+    this.open = false;
+    const modalButtons = document.querySelectorAll(".info");
+
+    document.onclick = (e) => {
+      if (this.open && !e.target.className.includes("popup-open")) {
+        this.open = false;
+        console.log(e);
+        Array.from(document.querySelectorAll(".popup")).forEach((item) => {
+          item.classList.remove("popup-open");
+          item.display = "none";
+        });
+      }
+      //   this.card.classList.remove("card-filter_open");
+      //   square.classList.remove("square_active");
+      //   this.open = false;
+      // }
+    };
+    document.onscroll = (e) => {
+      Array.from(document.querySelectorAll(".popup")).forEach((item) => {
+        item.classList.remove("popup-open");
+        item.display = "none";
+      });
+    };
+    modalButtons.forEach((el) => {
+      el.addEventListener("click", (e) => {
+        e.preventDefault();
+        const popup = el.querySelector(".popup");
+        popup.style.display = "block";
+        setTimeout(() => {
+          popup.classList.add("popup-open");
+          this.open = true;
+        }, 0.5);
+
+        console.log("open");
+      });
+    });
+  }
+}
+new toggleInfo();

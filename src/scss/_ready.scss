@@ -9,7 +9,7 @@
     left: 18px;
     z-index: 9;
 
-    &>span {
+    & > span {
       padding-top: 9px;
       padding-right: 27px;
       padding-left: 14px;
@@ -17,7 +17,6 @@
   }
 
   &__line {
-
     &-top,
     &-bottom {
       position: absolute;
@@ -36,6 +35,9 @@
       left: 20px;
       width: 1px;
       height: 160px;
+      @include desktop-sm {
+        display: none;
+      }
     }
   }
 
@@ -54,11 +56,8 @@
 
   &__content {
     @include desktop-sm {
-
       display: grid;
       grid-template-columns: repeat(12, 1fr);
-
-
     }
   }
 
@@ -89,7 +88,6 @@
 
   &__image {
     @include desktop-sm {
-
       height: 700px;
       max-height: 700px;
       max-width: 990px;
