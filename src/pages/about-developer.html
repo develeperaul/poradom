@@ -50,14 +50,38 @@
       </div>
     </div>
   </section>
+  <!--header start-->
   <header class="header">
-    <div class="header__top header__top_absolute">
-      <img src="../img/icons/logo1.svg" alt="" />
-      <button class="menu-trigger" id="menu-header">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+    <div class="header__top_absolute">
+      <div class="container header__top">
+        <img src="../img/icons/logo1.svg" alt="" class="logo" />
+        <div class="header__trigger">
+          <button class="menu-trigger" id="menu-header">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <span class="menu-trigger__text"> Меню </span>
+        </div>
+        <div class="header__contacts">
+          <div class="social">
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/youtube.svg" alt="" class="social__icon" />
+            </a>
+
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/facebook.svg" alt="" class="social__icon" />
+            </a>
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+            </a>
+          </div>
+          <div class="header__contact contact">
+            <address>г.Уфа, ул.Мустая Карима, д.16</address>
+            <a href="tell:73472008719">+7 (347) 200-87-19</a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <a href="tg://resolve?domain=username" class="pie pie_big pie_blue drop__children children">
@@ -72,11 +96,11 @@
     <span class="pie pie_big pie_accent drop drop_sq" id="drop">
       <span></span><span></span><span></span><span></span>
     </span>
+
     <div class="swiper headerSwiper">
       <div class="swiper-wrapper swiper-wrapper_pb">
         <div class="swiper-slide swiper-slide_pb header__bottom">
-          <div class="carousel">
-            <div></div>
+          <div class="container container-slider carousel">
             <h2 class="carousel__title">
               Новый проект <br />
               со вторым <br />
@@ -86,12 +110,13 @@
               Запишитесь на экскурсию, <br />
               чтобы увидеть это первыми!
             </p>
-            <buttton class="carousel__btn button button_accent">Записаться на экскурсию</buttton>
+            <div>
+              <buttton class="carousel__btn button button_accent">Записаться на экскурсию</buttton>
+            </div>
           </div>
         </div>
         <div class="swiper-slide swiper-slide_pb header__bottom">
-          <div class="carousel">
-            <div></div>
+          <div class="container container-slider carousel">
             <h2 class="carousel__title">
               Новый проект <br />
               со вторым <br />
@@ -101,12 +126,13 @@
               Запишитесь на экскурсию, <br />
               чтобы увидеть это первыми!
             </p>
-            <buttton class="carousel__btn button button_accent">Записаться на экскурсию</buttton>
+            <div>
+              <buttton class="carousel__btn button button_accent">Записаться на экскурсию</buttton>
+            </div>
           </div>
         </div>
         <div class="swiper-slide swiper-slide_pb header__bottom">
-          <div class="carousel">
-            <div></div>
+          <div class="container container-slider carousel">
             <h2 class="carousel__title">
               Новый проект <br />
               со вторым <br />
@@ -116,13 +142,28 @@
               Запишитесь на экскурсию, <br />
               чтобы увидеть это первыми!
             </p>
-            <buttton class="carousel__btn button button_accent">Записаться на экскурсию</buttton>
+            <div>
+              <buttton class="carousel__btn button button_accent">Записаться на экскурсию</buttton>
+            </div>
           </div>
         </div>
       </div>
       <div class="swiper-numbs swiper-numbs_position"></div>
     </div>
+    <div class="container">
+      <div class="pick-up">
+        <div class="pick-up__left">
+          <a href="#">Готовые дома</a>
+          <a href="#">Проекты домов</a>
+          <a href="#">Посёлки</a>
+        </div>
+        <div class="pick-up__right">
+          <div class="selection"><a href="#">Подобрать</a></div>
+        </div>
+      </div>
+    </div>
   </header>
+  <!--header end-->
   <main class="wrapper">
     <section class="section">
       <div class="container">
@@ -180,12 +221,15 @@
     </section>
     <section class="section section__bg section__bg_secondary">
       <div class="container">
-        <h2 class="title m-b--10">
-          <span>ДК ПОРАДОМ – лидер</span>
-          <br />
-          <span>малоэтажного</span>
-          <span>строительства РБ</span>
-        </h2>
+        <div class="content-title">
+          <h2 class="title">
+            <span>ДК ПОРАДОМ – лидер</span>
+            <br />
+            <span>малоэтажного</span>
+            <br>
+            <span>строительства РБ</span>
+          </h2>
+        </div>
         <p class="m-b--30">
           Входит в ТОП-3 застройщиков по объемам строительства
         </p>

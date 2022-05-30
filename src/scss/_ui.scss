@@ -75,7 +75,7 @@
     letter-spacing: -0.03em;
   }
 
-  & > span:first-child {
+  &>span:first-child {
     position: relative;
     z-index: 10;
     padding-top: 10px;
@@ -103,7 +103,7 @@
 }
 
 .title_primary {
-  & > span:first-child {
+  &>span:first-child {
     position: relative;
     z-index: 10;
 
@@ -121,11 +121,13 @@
 }
 
 .button {
-  display: flex;
+  display: inline-block;
   gap: 11px;
+
   @include desktop-sm {
     gap: 13px;
   }
+
   &__wrapper {
     position: relative;
   }
@@ -137,9 +139,11 @@
     /* for Internet Explorer, Edge */
     scrollbar-width: none;
     gap: 6px;
+
     @include desktop-sm {
       gap: 20px;
     }
+
     &::-webkit-scrollbar {
       display: none;
     }
@@ -198,7 +202,6 @@
   }
 
   width: 100%;
-  display: flex;
   gap: 11px;
 
   padding: 20px;
@@ -319,7 +322,7 @@
   display: flex;
   flex-shrink: 0;
 
-  & > img {
+  &>img {
     width: 50%;
     margin: 0 auto;
   }
@@ -353,13 +356,11 @@
   &__play {
     width: 48px;
     height: 48px;
-    background: linear-gradient(
-      180deg,
-      #fe497f -20.21%,
-      #ed1556 28.44%,
-      #d10945 74.14%,
-      #d10945 74.14%
-    );
+    background: linear-gradient(180deg,
+        #fe497f -20.21%,
+        #ed1556 28.44%,
+        #d10945 74.14%,
+        #d10945 74.14%);
 
     &_lg {
       width: 48px;
@@ -383,7 +384,7 @@
     height: 36px;
   }
 
-  & > span {
+  &>span {
     display: inline-block;
     height: 13px;
     width: 1px;
@@ -429,6 +430,7 @@
     }
 
     &:nth-child(2) {
+
       &::after,
       &::before {
         top: 0;
@@ -453,7 +455,7 @@
   &_active:hover {
     background-color: #0099e0;
 
-    & > span {
+    &>span {
       background-color: #e5e7ea;
 
       &::after,
@@ -532,6 +534,7 @@
   &-wrapper {
     // margin: auto;
     display: none;
+
     @include desktop-sm {
       background-color: $primary;
       margin-top: 16px;
@@ -542,14 +545,17 @@
       padding: 0 75px;
     }
   }
+
   &_label {
     padding-top: 10px;
 
     @include desktop-sm {
       padding-top: 16px;
     }
+
     &-s {
       margin-top: 10px;
+
       @include desktop-sm {
         margin-top: 16px;
       }
@@ -651,10 +657,12 @@
   &__link {
     flex-shrink: 0;
     margin-top: 5px;
+
     @include desktop-sm {
       margin-top: 10px;
     }
-    & > img {
+
+    &>img {
       width: 12px;
       height: 20px;
     }
@@ -734,6 +742,7 @@
 
   //user
   &-user {
+
     // max-width: 139px;
     // width: 100%;
     &__img {
@@ -776,7 +785,7 @@
       display: flex;
       justify-content: space-between;
 
-      & > * {
+      &>* {
         color: $black;
         padding: 13px;
         border: 1px solid $border;
@@ -789,13 +798,13 @@
         width: 100%;
       }
 
-      & > *:first-child {
+      &>*:first-child {
         padding-right: 26px;
         padding-left: 13px;
         margin-right: 16px;
       }
 
-      & > *:last-child {
+      &>*:last-child {
         padding-right: 13px;
         padding-left: 26px;
       }
@@ -810,15 +819,18 @@
   &-flat {
     border-radius: 4px 4px 0 0;
     overflow: hidden;
+
     @include desktop-sm {
       display: flex;
       border-radius: 0;
       gap: 30px;
     }
+
     &__image {
       background-color: rgba(0, 0, 0, 0.1);
       width: 100%;
       display: block;
+
       @include desktop-sm {
         width: 280px;
         height: 190px;
@@ -830,17 +842,21 @@
       padding-left: 0;
       display: flex;
       flex-direction: column;
+
       @include desktop-sm {
         padding: 0;
         justify-content: space-between;
       }
-      & > .card__link {
+
+      &>.card__link {
         display: none;
+
         @include desktop-sm {
           display: block;
         }
       }
     }
+
     &__wrapper {
       & .card__link {
         @include desktop-sm {
@@ -848,6 +864,7 @@
         }
       }
     }
+
     &__date {
       color: #8f959b;
       margin-bottom: 6px;
@@ -937,7 +954,7 @@
       opacity: 0.5;
     }
 
-    &_active > &__progress {
+    &_active>&__progress {
       opacity: 1;
       background-color: #0099e0;
     }
@@ -951,18 +968,20 @@
       position: relative;
       opacity: 0;
       transition: opacity 0.2s ease;
+
       &_active {
         opacity: 1;
       }
     }
 
     &_active &__right {
-      & > svg {
+      &>svg {
         @include desktop-sm {
           display: none;
         }
       }
-      & > img {
+
+      &>img {
         @include desktop-sm {
           width: 28px;
           height: 24px;
@@ -970,24 +989,30 @@
         }
       }
     }
+
     &__right {
       display: flex;
       align-items: center;
       gap: 10px;
+
       @include desktop-sm {
         gap: 29px;
       }
-      & > img {
+
+      &>img {
         display: none;
       }
-      & > svg {
+
+      &>svg {
         display: none;
+
         @include desktop-sm {
           fill: $secondary;
           display: block;
         }
       }
     }
+
     // &:hover &__right > svg {
     //   fill: red;
     //   display: none;
@@ -996,7 +1021,7 @@
       display: none;
     }
 
-    &_active > &__wrapper > &__numb::after {
+    &_active>&__wrapper>&__numb::after {
       position: absolute;
       content: "";
       width: 10px;
@@ -1008,6 +1033,7 @@
       background-repeat: no-repeat;
       background-position: center;
       transform: translateY(-50%);
+
       @include desktop-sm {
         display: none;
       }
@@ -1033,11 +1059,7 @@
     // min-width: 180px;
     max-height: 0;
     transition: max-height 0.2s ease-in-out;
-    filter: drop-shadow(0px 47px 19px rgba(0, 0, 0, 0.01))
-      drop-shadow(0px 26px 16px rgba(0, 0, 0, 0.05))
-      drop-shadow(0px 12px 12px rgba(0, 0, 0, 0.09))
-      drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1))
-      drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0px 47px 19px rgba(0, 0, 0, 0.01)) drop-shadow(0px 26px 16px rgba(0, 0, 0, 0.05)) drop-shadow(0px 12px 12px rgba(0, 0, 0, 0.09)) drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
 
     @include desktop-sm {
       width: 220px;
@@ -1085,6 +1107,7 @@
     justify-content: space-between;
     padding: 70px;
   }
+
   &__column {
     padding: 40px;
     flex-direction: column;
@@ -1096,11 +1119,10 @@
       flex-direction: column;
     }
   }
-  &__top {
-  }
 
-  &__bottom {
-  }
+  &__top {}
+
+  &__bottom {}
 
   &__inputs {
     @include desktop-sm {
@@ -1112,6 +1134,7 @@
         margin-bottom: 0;
       }
     }
+
     &_col {
       flex-direction: column;
       margin: 0;
@@ -1240,12 +1263,12 @@
   white-space: nowrap;
   flex-wrap: wrap;
 
-  > *:last-child {
+  >*:last-child {
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
-  & > * {
+  &>* {
     color: $primary;
     display: inline-block;
     position: relative;
@@ -1290,6 +1313,7 @@
   z-index: 1000;
   display: none;
   opacity: 0;
+
   @include desktop-sm {
     right: 30px;
     bottom: 20%;
@@ -1370,24 +1394,29 @@
   &-flex {
     position: relative;
     width: 100%;
+
     @include desktop-sm {
       display: flex;
       gap: 70px;
     }
 
-    & > img {
+    &>img {
       width: 100%;
+
       @include desktop-sm {
         width: 830px;
         height: 530px;
         flex-shrink: 0;
       }
     }
+
     &__title {
       margin-top: 20px;
     }
+
     &__pagination {
       overflow-x: auto;
+
       @include desktop-sm {
         overflow-x: visible;
         position: absolute;
@@ -1402,6 +1431,7 @@
         z-index: 9;
         // left: 900px !important;
       }
+
       &-wrapper {
         @include desktop-sm {
           overflow-x: visible;
@@ -1411,6 +1441,7 @@
           max-width: 50%;
           z-index: 9;
         }
+
         & .swiper-numbs {
           transform: translateX(0) !important;
           left: auto !important;
@@ -1421,14 +1452,16 @@
         width: 0 !important;
       }
     }
+
     &__nav {
       @include desktop-sm {
         position: absolute;
         width: 830px;
         top: 50%;
       }
-      & > .swiper-next,
-      & > .swiper-prev {
+
+      &>.swiper-next,
+      &>.swiper-prev {
         @include desktop-sm {
           top: auto;
         }
@@ -1442,9 +1475,10 @@
     position: relative;
     width: 100%;
 
-    & > img {
+    &>img {
       width: 100%;
       margin-bottom: 10px;
+
       @include desktop-sm {
         margin-bottom: 20px;
       }
@@ -1559,6 +1593,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+
   @include desktop-sm {
     display: grid;
     grid-template-areas:
@@ -1571,26 +1606,31 @@
     column-gap: 70px;
     row-gap: initial;
   }
+
   &__top {
     @include desktop-sm {
       grid-area: A;
       margin-bottom: 40px;
     }
   }
+
   &__middle {
     @include desktop-sm {
       grid-area: B;
       margin: 0;
     }
   }
+
   &__button {
     @include desktop-sm {
       grid-area: C;
       place-self: start;
     }
   }
+
   &__title {
     margin-bottom: 14px;
+
     @include desktop-sm {
       font-size: 48px;
       line-height: 100%;
@@ -1598,14 +1638,14 @@
     }
   }
 
-  &__text {
-  }
+  &__text {}
 
   &__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 20px;
     column-gap: 10px;
+
     @include desktop-sm {
       align-content: space-between;
       column-gap: 40px;
@@ -1624,6 +1664,7 @@
       margin: 0 auto;
       margin-bottom: 14px;
       object-fit: none;
+
       @include desktop-sm {
         width: 90px;
         height: 90px;
@@ -1656,7 +1697,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 999999px;
-  & > a {
+
+  &>a {
     color: #fff;
   }
 }
@@ -1666,23 +1708,28 @@
     position: absolute;
     left: 7px;
     z-index: 9;
+
     @include desktop-sm {
       left: 60px;
     }
+
     & .number {
       position: absolute;
       top: 40px;
+
       @include desktop-sm {
         top: 80px;
       }
     }
   }
+
   &-title {
     padding-left: 13px;
     margin-left: 50px;
     padding-top: 72px;
     margin-bottom: 20px;
     color: #fff;
+
     @include desktop-sm {
       padding-top: 130px;
       margin-left: 300px;
@@ -1690,6 +1737,7 @@
       margin-bottom: 40px;
     }
   }
+
   &-btns {
     @include desktop-sm {
       margin-left: 300px;
@@ -1699,21 +1747,26 @@
 
 .image-form {
   display: block;
+
   & .card-form {
     display: none;
   }
+
   &--gap {
     margin: 0 #{-$gap-m};
+
     @include desktop-sm {
       margin: 0 #{-$gap};
     }
   }
+
   &__form {
     display: none;
     padding: 40px 0;
     background-color: $secondary;
     align-items: center;
     justify-content: center;
+
     @include desktop-sm {
       grid-area: B;
       background-color: $secondary;
@@ -1724,17 +1777,21 @@
         height: 760px;
       }
     }
+
     &_open {
       display: flex;
     }
   }
+
   @include desktop-sm {
     display: grid;
     grid-template-areas: "A A A A B B";
     grid-template-columns: repeat(6, 1fr);
+
     &__image {
       grid-area: A;
-      & .navigation__card > img {
+
+      & .navigation__card>img {
         max-height: 760px;
         height: 760px;
       }
@@ -1742,10 +1799,12 @@
 
     .swiper {
       padding-bottom: 55px;
+
       &-nav {
         position: absolute;
         width: 100%;
         top: 50%;
+
         .swiper-next,
         .swiper-prev {
           top: auto;
@@ -1757,12 +1816,14 @@
         left: 0 !important;
         transform: translateX(-110px) !important;
         z-index: 9;
+
         &--transformX {
           transform: translateX(-55px) !important;
         }
       }
     }
   }
+
   &.swiper {
     &_center {
       @include desktop-sm {
@@ -1782,15 +1843,19 @@
     border-radius: 36px;
     padding: 5px 13px;
     white-space: nowrap;
+
     &_vacant {
       background-color: #58b368;
     }
+
     &_booked {
       background-color: #eeac0d;
     }
+
     &_sold {
       background-color: #ed1556;
     }
+
     &_ready {
       background-color: #0099e0;
     }
