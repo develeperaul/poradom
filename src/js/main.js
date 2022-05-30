@@ -369,3 +369,86 @@ class toggleInfo {
   }
 }
 new toggleInfo();
+document.addEventListener("DOMContentLoaded", () => {
+  let currentEl = null;
+  const planMap = document.querySelector(".plan__map");
+  const svg = document.querySelector(".plan__map svg");
+
+  svg.onmouseover = (e) => {
+    if (currentEl) return;
+    let target = e.target.closest("polygon");
+    if (e.target.closest("polygon")?.getAttribute("data-hover")) {
+      if (!target) return;
+      if (!svg.contains(target)) return;
+      const dataHover = target.getAttribute("data-hover");
+      const dataHoverEl = document.querySelector(dataHover);
+      let elDisplay = dataHoverEl.style.display;
+      if (elDisplay === "none") dataHoverEl.style.display = "block";
+      currentEl = target;
+    } else if (target?.parentNode?.getAttribute("data-hover")) {
+      target = target.parentNode;
+      const dataHover = target.getAttribute("data-hover");
+      const dataHoverEl = document.querySelector(dataHover);
+      let elDisplay = dataHoverEl.style.display;
+      if (elDisplay === "none") dataHoverEl.style.display = "block";
+      if (!target) return;
+      if (!svg.contains(target)) return;
+      currentEl = target;
+      target.style.background = "green";
+    }
+  };
+
+  svg.onmouseout = (e) => {
+    if (!currentEl) return;
+    let relatedTarget = e.relatedTarget;
+    while (relatedTarget) {
+      if (relatedTarget == currentEl) return;
+      relatedTarget = relatedTarget.parentNode;
+    }
+    if (currentEl.getAttribute("data-hover")) {
+      const dataHover = currentEl.getAttribute("data-hover");
+      if (dataHover[0] === "#") {
+        const dataHoverEl = document.querySelector(dataHover);
+        let elDisplay = dataHoverEl.style.display;
+        if (elDisplay === "block") dataHoverEl.style.display = "none";
+      }
+    }
+    currentEl = null;
+  };
+
+  svg.onmousemove = (e) => {
+    let target = e.target.closest("polygon");
+    if (e.target.closest("polygon")?.getAttribute("data-hover")) {
+      if (!target) return;
+      if (!svg.contains(target)) return;
+      const dataHover = target.getAttribute("data-hover");
+      const dataHoverEl = document.querySelector(dataHover);
+      let elDisplay = dataHoverEl.style.display;
+      if (elDisplay === "none") dataHoverEl.style.display = "block";
+      //получаем позицию курсора мышки относительно блока
+      // planMap.offsetWidth + ":" + planMap.offsetHeight;
+      let planMapCoords = planMap.getBoundingClientRect();
+      let xCoord = e.clientX - planMapCoords.left;
+      let yCoord = e.clientY - planMapCoords.top; //если planMapCoords.top отрицательный то значит некоторая область не видими
+      //размер родительского блока
+      const planMapWidth = planMap.offsetWidth;
+      const planMapHeight = planMap.offsetHeight;
+      dataHoverEl.style.top = yCoord + "px";
+      dataHoverEl.style.left = xCoord + "px";
+      dataHoverEl.offsetWidth;
+      dataHoverEl.offsetHeight;
+      console.log("Координаты по Y: " + yCoord);
+      if (dataHoverEl.getBoundingClientRect().top < 0) {
+        dataHoverEl.style.top =
+          yCoord - (dataHoverEl.getBoundingClientRect().top - 30) + "px";
+      }
+      if (dataHoverEl.getBoundingClientRect().left < 0) {
+        dataHoverEl.style.left =
+          xCoord - (dataHoverEl.getBoundingClientRect().left - 30) + "px";
+      }
+      dataHoverEl.style.transform = "translate(-50%, -110%)";
+
+      currentEl = target;
+    }
+  };
+});

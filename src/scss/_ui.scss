@@ -1772,3 +1772,27 @@
     }
   }
 }
+
+.status {
+  &__round {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 130%;
+    color: #ffffff;
+    border-radius: 36px;
+    padding: 5px 13px;
+    white-space: nowrap;
+    &_vacant {
+      background-color: #58b368;
+    }
+    &_booked {
+      background-color: #eeac0d;
+    }
+    &_sold {
+      background-color: #ed1556;
+    }
+    &_ready {
+      background-color: #0099e0;
+    }
+  }
+}
