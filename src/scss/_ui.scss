@@ -239,7 +239,10 @@
     line-height: 19px;
     padding: 16px;
     background-color: transparent;
-
+    @include desktop-sm {
+      font-size: 26px;
+      line-height: 120%;
+    }
     &-white {
       border: 1px solid #fff;
       color: #fff;
@@ -602,7 +605,7 @@
     background-color: rgba(0, 0, 0, 0.1);
     width: 100%;
     display: block;
-    filter: brightness(70%);
+    // filter: brightness(70%);
   }
 
   &__container {
@@ -614,7 +617,16 @@
     border-radius: 0 0 4px 4px;
     display: flex;
     justify-content: space-between;
-
+    & .button {
+      &__group {
+        @include desktop-sm {
+          gap: 8px;
+        }
+      }
+      &__round {
+        padding: 8px 16px;
+      }
+    }
     &_l {
       display: flex;
       flex-direction: column;
@@ -889,7 +901,7 @@
     }
 
     &__date {
-      color: #8f959b;
+      color: #e5e7ea;
       margin-bottom: 6px;
     }
 
@@ -1143,7 +1155,9 @@
     @include desktop-sm {
       max-width: 350px;
     }
-
+    & .button {
+      margin-top: 10px;
+    }
     & .form__inputs {
       flex-direction: column;
     }
@@ -1160,9 +1174,7 @@
       display: flex;
       gap: 10px;
       margin-bottom: 40px;
-      .button {
-        margin-top: 10px;
-      }
+
       & .text-field {
         margin-bottom: 0;
       }

@@ -13,7 +13,7 @@ const lightbox = GLightbox({
 });
 
 import Dropdown from "./plugins/dropdown";
-new Dropdown("1");
+
 import Accordion from "./plugins/accardion";
 import "./plugins/telmask";
 import "./plugins/validateform";
@@ -49,6 +49,7 @@ class SideBar {
   constructor() {
     const menuSideBar = document.querySelector("#menu-sidebar");
     const menuHeader = document.querySelector("#menu-header");
+    const menuHeaderFixed = document.querySelector("#menu-header_fixed");
     const sidebar = document.querySelector(".sidebar");
     menuSideBar.onclick = () => {
       if (sidebar.classList.contains("sidebar_active")) {
@@ -57,6 +58,12 @@ class SideBar {
       }
     };
     menuHeader.onclick = () => {
+      if (!sidebar.classList.contains("sidebar_active")) {
+        menuSideBar.classList.add("active");
+        sidebar.classList.add("sidebar_active");
+      }
+    };
+    menuHeaderFixed.onclick = () => {
       if (!sidebar.classList.contains("sidebar_active")) {
         menuSideBar.classList.add("active");
         sidebar.classList.add("sidebar_active");
@@ -536,4 +543,50 @@ document.addEventListener("DOMContentLoaded", () => {
     // console.log(test);
     currentEl = null;
   };
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("header");
+
+  const headerHeight = header.offsetHeight;
+
+  const headerNav = document.querySelector(".header__top_fixed");
+
+  const headerNavHeight = headerNav.offsetHeight;
+
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > headerHeight - headerNavHeight) {
+      headerNav.style.display = "block";
+      setTimeout(() => {
+        headerNav.classList.add("header__top_fixed-open");
+      }, 200);
+    } else {
+      headerNav.style.display = "none";
+      setTimeout(() => {
+        headerNav.classList.remove("header__top_fixed-open");
+      }, 200);
+    }
+    // if (window.pageYOffset > 20) {
+    //   if (arrow?.classList.contains("hidden-arrow"))
+    //     arrow?.classList.remove("hidden-arrow");
+    //   if (!arrow?.classList.contains("show-arrow")) {
+    //     arrow.style.display = "block";
+    //     arrow?.classList.add("show-arrow");
+    //     scroll.value = true;
+    //   }
+
+    //   arrow?.classList.add("article");
+    // } else {
+    //   if (arrow?.classList.contains("show-arrow"))
+    //     arrow?.classList.remove("show-arrow");
+    //   if (!arrow?.classList.contains("hidden-arrow")) {
+    //     arrow?.classList.add("hidden-arrow");
+
+    //     setTimeout(() => {
+    //       if (arrow?.classList.contains("hidden-arrow"))
+    //         arrow.style.display = "none";
+    //     }, 1100);
+    //   }
+    // }
+  });
 });
