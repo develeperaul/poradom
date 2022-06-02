@@ -1,6 +1,4 @@
 .application {
-  transform: translateY(-20px);
-  margin-bottom: -20px;
   @include desktop-sm {
     transform: translateY(0px);
     margin-bottom: 0;

@@ -11,9 +11,62 @@
   &_active {
     transform: translateX(0%);
   }
+
   &__list > * {
     color: #fff;
   }
+  &__list {
+    &.accordion {
+      @include desktop-sm {
+        display: none;
+      }
+    }
+    &-desktop {
+      font-size: 26px;
+      line-height: 120%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 520px;
+      padding-top: 80px;
+    }
+  }
+  &-children__list > &__item {
+    width: 230px;
+    font-size: 16px;
+    position: relative;
+    & > a {
+      color: #fff;
+      &:hover {
+        color: #0099e0;
+      }
+    }
+  }
+  &__item {
+    position: relative;
+    padding-right: 20px;
+    & > a {
+      display: flex;
+      gap: 20px;
+    }
+    &-left {
+      min-width: 60px;
+      color: $primary;
+    }
+    &-right {
+      color: #fff;
+      &:hover {
+        color: #0099e0;
+      }
+    }
+  }
+  &__children {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+  }
+
   &__list > h3 {
     display: inline-block;
     &::before {

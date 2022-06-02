@@ -39,6 +39,15 @@
 @import "visualization";
 @import "sections/interior";
 @import "sections/mortgage";
+@import "sections/results";
+@import "sections/complex";
+@import "sections/comands";
+@import "sections/road-map";
+@import "sections/redemption";
+@import "sections/advantages";
+@import "sections/review";
+@import "sections/news";
+@import "sections/news-item";
 @import "footer";
 
 @import "plugins/toggle";
@@ -65,9 +74,17 @@
 
   &__top {
     margin-bottom: 20px;
-
+    @include desktop-sm {
+      margin-bottom: 40px;
+    }
     & > .section__title {
       margin-bottom: 10px;
+    }
+    &_first {
+      display: none;
+      @include desktop-sm {
+        display: block;
+      }
     }
   }
 
@@ -105,6 +122,13 @@
       margin-bottom: 60px;
       font-size: 14px;
       line-height: 130%;
+    }
+  }
+  &-flex {
+    display: block;
+    @include desktop-sm {
+      display: flex;
+      gap: 100px;
     }
   }
 }

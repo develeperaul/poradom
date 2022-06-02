@@ -1,0 +1,19 @@
+.redemption {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @include desktop-sm {
+      flex-direction: row;
+      gap: 150px;
+    }
+    &-top {
+      height: 320px;
+      width: 100%;
+      @include desktop-sm {
+        max-width: 900px;
+        height: 550px;
+      }
+    }
+  }
+}

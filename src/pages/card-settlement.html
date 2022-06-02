@@ -23,36 +23,146 @@
     </div>
     <section class="sidebar">
       <div class="container">
-        <div class="header__wrapper">
+        <div class="header__wrapper"></div>
           <div class="header__top">
-            <img src="../img/icons/logo1.svg" alt="" />
-            <button class="menu-trigger active" id="menu-sidebar">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
+            <img src="../img/icons/logo1.svg" alt="" class="logo" />
+            <div class="header__trigger">
+              <button class="menu-trigger active" id="menu-sidebar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <span class="menu-trigger__text"> Меню </span>
+            </div>
+            <div class="header__contacts">
+              <div class="social">
+                <a href="#" class="pie pie_primary social__link_s">
+                  <img
+                    src="../img/icons/youtube.svg"
+                    alt=""
+                    class="social__icon"
+                  />
+                </a>
+
+                <a href="#" class="pie pie_primary social__link_s">
+                  <img
+                    src="../img/icons/facebook.svg"
+                    alt=""
+                    class="social__icon"
+                  />
+                </a>
+                <a href="#" class="pie pie_primary social__link_s">
+                  <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+                </a>
+              </div>
+              <div class="header__contact contact">
+                <address>г.Уфа, ул.Мустая Карима, д.16</address>
+                <a href="tell:73472008719">+7 (347) 200-87-19</a>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar__list accordion" id="sidebar-accordion">
+            <h3 class="">Покупателям</h3>
+            <div class="tabs__text" id="tabs-1" style="height: 0px">
+              <a href="#"> Проектирование </a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="">Стандарты</h3>
+            <div class="tabs__text" id="tabs-2" style="height: 0px">
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="">О застройщике</h3>
+            <div class="tabs__text" id="tabs-3" style="height: 0px">
+              <a href="#">Проектирование</a>
+            </div>
+          </div>
+          <div id="list_03">
+
+            <ul class="sidebar__list-desktop">
+              <li class="sidebar__item" data-node="#list_01-1">
+                <a href="#">
+                  <span class="sidebar__item-left">01 —</span>
+                  <span class="sidebar__item-right">Коттеджные посёлки</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_02-1">
+                <a href="#">
+                  <span class="sidebar__item-left">02 —</span>
+                  <span class="sidebar__item-right">Готовые дома</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_03-1">
+                <a href="#">
+                  <span class="sidebar__item-left">03 —</span>
+                  <span class="sidebar__item-right">Проекты</span>
+                </a>
+                <div class="sidebar___list_desktop-2 sidebar__children" id="list_03-1" style="display: none;">
+                  <ul class="sidebar-children__list">
+                    <li class="sidebar__item"  data-node="#list_03_1-2"><a href="#">Серия Первый Дом</a></li>
+                    <li class="sidebar__item"  data-node="#list_03_2-2"><a href="#">Серия NATUR-A</a></li>
+                    <li class="sidebar__item"  data-node="#list_03_3-2"><a href="#">Серия Элегант</a></li>
+                    <li class="sidebar__item"  data-node="#list_03_4-2"><a href="#">Серия Классик</a></li>
+                    <li class="sidebar__item"  data-node="#list_03_5-2"><a href="#">Кирпичный Стандарт</a></li>
+                    <li class="sidebar__item" data-node="#list_03_6-2">
+                      <a href="#" >Серия Ред Лайт</a>
+                      <div class="sidebar__list_desktop-3 sidebar__children" id="list_03_6-2" style="display: none;">
+                        <ul class="sidebar-children__list">
+                          <li class="sidebar__item" data-node="#list_03_6_1-3"><a href="#">Кирпичный Стандарт 105</a></li>
+                          <li class="sidebar__item" data-node="#list_03_6_2-3"><a href="#">Кирпичный Стандарт 120</a></li>
+                          <li class="sidebar__item" data-node="#list_03_6_3-3"><a href="#">Кирпичный Стандарт 140</a></li>
+                          <li class="sidebar__item" data-node="#list_03_6_4-3"><a href="#">Кирпичный Стандарт 150</a></li>
+                          <li class="sidebar__item" data-node="#list_03_6_5-3"><a href="#">Кирпичный Стандарт 170</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="sidebar__item" data-node="#list_03_7-2"><a href="#" >Индивидуальный проект</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="sidebar__item" data-node="#list_04-1">
+                <a href="#">
+                  <span class="sidebar__item-left">04 —</span>
+                  <span class="sidebar__item-right">Стандарты Порадом</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_05-1">
+                <a href="#">
+                  <span class="sidebar__item-left">05 —</span>
+                  <span class="sidebar__item-right">Компания Порадом</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_06-1">
+                <a href="#">
+                  <span class="sidebar__item-left">06 —</span>
+                  <span class="sidebar__item-right">Галерея</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_07-1">
+                <a href="#">
+                  <span class="sidebar__item-left">07 —</span>
+                  <span class="sidebar__item-right">Новости</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_08-1">
+                <a href="#">
+                  <span class="sidebar__item-left">08 —</span>
+                  <span class="sidebar__item-right">Отзывы</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_09-1">
+                <a href="#">
+                  <span class="sidebar__item-left">09 —</span>
+                  <span class="sidebar__item-right">Контакты</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div class="sidebar__list accordion" id="sidebar-accordion">
-          <h3 class="">Покупателям</h3>
-          <div class="tabs__text" id="tabs-1" style="height: 0px">
-            <a href="#"> Проектирование </a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-          </div>
-          <h3 class="">Стандарты</h3>
-          <div class="tabs__text" id="tabs-2" style="height: 0px">
-            <a href="#">Проектирование</a>
-          </div>
-          <h3 class="">О застройщике</h3>
-          <div class="tabs__text" id="tabs-3" style="height: 0px">
-            <a href="#">Проектирование</a>
-          </div>
-        </div>
       </div>
     </section>
     <!--header start-->
@@ -197,7 +307,11 @@
       <section class="video">
         <div class="container video__wrapper">
           <div class="video__top">
-            <img src="../img/img.png" alt="" class="video__top-image -r-gap" />
+            <img
+              src="../img/card-settlement/settlement.jpg"
+              alt=""
+              class="video__top-image -r-gap"
+            />
           </div>
           <div class="video__bottom">
             <div class="video__content">
@@ -303,15 +417,15 @@
           <div class="plan__map">
             <img src="../img/devgora.jpg" alt="" />
             <svg viewBox="0 0 1200 600" preserveAspectRatio="xMinYMin slice">
-              <!-- <a
+              <a
                 href="/kottedzhnye-poselki/devichya-gora-1-ochered/"
-                > -->
-              <polygon
                 data-hover="#hover1"
-                class=""
-                points="87,324 452,133 597,179 387,400 358,403 284,376 245,336 100,342"
-              ></polygon>
-              <!-- <rect
+              >
+                <polygon
+                  class=""
+                  points="87,324 452,133 597,179 387,400 358,403 284,376 245,336 100,342"
+                ></polygon>
+                <rect
                   x="262"
                   y="252"
                   width="160"
@@ -320,16 +434,16 @@
                   ry="20"
                 ></rect>
                 <text x="342" y="276">1 очередь</text>
-              </a> -->
-              <!-- <a
+              </a>
+              <a
                 href="/kottedzhnye-poselki/devichya-gora-2-ochered/"
-                > -->
-              <polygon
                 data-hover="#hover2"
-                class=""
-                points="597,179 811,245 853,329 786,329 491,437 429,396 387,400"
-              ></polygon>
-              <!-- <rect
+              >
+                <polygon
+                  class=""
+                  points="597,179 811,245 853,329 786,329 491,437 429,396 387,400"
+                ></polygon>
+                <rect
                   x="540"
                   y="292"
                   width="160"
@@ -338,13 +452,12 @@
                   ry="20"
                 ></rect>
                 <text x="620" y="316">2 очередь</text>
-              </a> -->
+              </a>
               <a
                 href="/kottedzhnye-poselki/devichya-gora-3-ochered/"
-                data-hover="#hover347"
+                data-hover="#hover3"
               >
                 <polygon
-                  data-hover="3"
                   class="free"
                   points="811,245 824,246 888,157 1090,219 1130,282 1153,321 1136,385 1106,380 1043,378 893,341 852,329"
                 ></polygon>
@@ -360,7 +473,7 @@
               </a>
             </svg>
           </div>
-          <!-- <div class="plan__bottom">
+          <div class="plan__bottom">
             <img
               src="../img/icons/plan-arrows.svg"
               alt=""
@@ -372,7 +485,10 @@
             <div class="plan__bottom-count" id="hover2" style="display: none">
               <p>всего участков <span class="plan__bottom-numb">170</span></p>
             </div>
-          </div> -->
+            <div class="plan__bottom-count" id="hover3" style="display: none">
+              <p>всего участков <span class="plan__bottom-numb">180</span></p>
+            </div>
+          </div>
           <div class="plan__hovers">
             <div class="plan__hover" id="hover1" style="display: none">
               <div class="plan__hover-header">
@@ -785,7 +901,12 @@
                 />
               </div>
               <div class="neighbors__content -r-gap">
-                <img src="../img/img.png" alt="" width="283" height="190" />
+                <img
+                  src="../img/card-settlement/neighbors.png"
+                  alt=""
+                  width="283"
+                  height="190"
+                />
               </div>
 
               <div class="neighbors__bottom">
@@ -832,7 +953,12 @@
             </div>
             <div class="neighbors__right -r-gap">
               <div class="neighbors__content">
-                <img src="../img/img.png" alt="" width="283" height="190" />
+                <img
+                  src="../img/card-settlement/neighbors.png"
+                  alt=""
+                  width="283"
+                  height="190"
+                />
               </div>
             </div>
           </div>
@@ -1065,7 +1191,7 @@
               alt=""
             />
             <img
-              src="../img/people.png"
+              src="../img/card-settlement/service.jpg"
               alt=""
               width="200"
               height="170"
@@ -1128,78 +1254,14 @@
                   <p class="section__text">Подпись фотографии</p>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="navigation__card">
-                  <img src="../img/img.png" alt="" />
-                  <p class="section__text">Подпись фотографии</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="navigation__card">
-                  <img src="../img/img.png" alt="" />
-                  <p class="section__text">Подпись фотографии</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="navigation__card">
-                  <img src="../img/img.png" alt="" />
-                  <p class="section__text">Подпись фотографии</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="navigation__card">
-                  <img src="../img/img.png" alt="" />
-                  <p class="section__text">Подпись фотографии</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="navigation__card">
-                  <img src="../img/img.png" alt="" />
-                  <p class="section__text">Подпись фотографии</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="navigation__card">
-                  <img src="../img/img.png" alt="" />
-                  <p class="section__text">Подпись фотографии</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="navigation__card">
-                  <img src="../img/img.png" alt="" />
-                  <p class="section__text">Подпись фотографии</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="navigation__card">
-                  <img src="../img/img.png" alt="" />
-                  <p class="section__text">Подпись фотографии</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="navigation__card">
-                  <img src="../img/img.png" alt="" />
-                  <p class="section__text">Подпись фотографии</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="navigation__card">
-                  <img src="../img/img.png" alt="" />
-                  <p class="section__text">Подпись фотографии</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="navigation__card">
-                  <img src="../img/img.png" alt="" />
-                  <p class="section__text">Подпись фотографии</p>
-                </div>
-              </div>
             </div>
             <div class="swiper-nav">
               <div class="swiper-next"></div>
               <div class="swiper-prev"></div>
             </div>
-            <div class="swiper-numbs swiper-numbs_start"></div>
+            <div>
+              <div class="swiper-numbs swiper-numbs_start"></div>
+            </div>
           </div>
 
           <buttton class="service-settlement__button button button_blue"

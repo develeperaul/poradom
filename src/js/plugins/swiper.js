@@ -162,29 +162,29 @@ new newSwiper(".featuresSwiper", {
     prevEl: ".swiper-prev",
   },
   on: {
-    // paginationUpdate: function (swiper, paginationEl) {
-    //   swiper.pagination.bullets.forEach((bullet, index) => {
-    //     console.log(
-    //       bullet.classList.contains("numb-active") &&
-    //         index > 4 &&
-    //         swiper.pagination.bullets.length >= 8
-    //     );
-    //     if (
-    //       bullet.classList.contains("numb-active") &&
-    //       index > 4 &&
-    //       swiper.pagination.bullets.length >= 8
-    //     ) {
-    //       paginationEl.classList.add("swiper-numbs--transformX");
-    //     }
-    //     if (
-    //       bullet.classList.contains("numb-active") &&
-    //       index === 0 &&
-    //       swiper.pagination.bullets.length >= 8
-    //     ) {
-    //       paginationEl.classList.remove("swiper-numbs--transformX");
-    //     }
-    //   });
-    // },
+    paginationUpdate: function (swiper, paginationEl) {
+      // swiper.pagination.bullets.forEach((bullet, index) => {
+      //   console.log(
+      //     bullet.classList.contains("numb-active") &&
+      //       index > 4 &&
+      //       swiper.pagination.bullets.length >= 8
+      //   );
+      //   if (
+      //     bullet.classList.contains("numb-active") &&
+      //     index > 4 &&
+      //     swiper.pagination.bullets.length >= 8
+      //   ) {
+      //     paginationEl.classList.add("swiper-numbs--transformX");
+      //   }
+      //   if (
+      //     bullet.classList.contains("numb-active") &&
+      //     index === 0 &&
+      //     swiper.pagination.bullets.length >= 8
+      //   ) {
+      //     paginationEl.classList.remove("swiper-numbs--transformX");
+      //   }
+      // });
+    },
   },
   breakpoints: {
     1440: {
@@ -212,6 +212,57 @@ new newSwiper(".otherProjects", {
   breakpoints: {
     1440: {
       slidesPerView: 4,
+    },
+  },
+});
+
+new newSwiper(".roadMap", {
+  pagination: {},
+  navigation: {
+    nextEl: ".swiper-next-arrow",
+    prevEl: ".swiper-prev-arrow",
+  },
+  loop: false,
+  breakpoints: {
+    "@0.00": {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    "@0.75": {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    "@1.00": {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+    "@1.50": {
+      slidesPerView: 6,
+      spaceBetween: 50,
+    },
+  },
+});
+
+new Swiper(".newsSlider", {
+  modules: [Navigation, Pagination, Grid],
+  loop: false,
+  breakpoints: {
+    1440: {
+      slidesPerView: 4,
+      grid: {
+        fill: "row",
+        rows: 4,
+      },
+    },
+  },
+  pagination: {
+    el: ".swiper-numbs",
+    bulletActiveClass: "numb-active",
+    bulletClass: "numb",
+    type: "bullets",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
     },
   },
 });

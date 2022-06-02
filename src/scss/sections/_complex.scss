@@ -1,0 +1,18 @@
+.complex {
+  &__content {
+    @include desktop-sm {
+      margin-left: 300px;
+      display: flex;
+      gap: 80px;
+    }
+    &-image {
+      display: none;
+      @include desktop-sm {
+        display: block;
+        margin-top: 60px;
+        width: 670px;
+        height: 470px;
+      }
+    }
+  }
+}

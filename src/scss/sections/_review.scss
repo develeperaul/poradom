@@ -1,0 +1,24 @@
+.review {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+    @include desktop-sm {
+      height: 600px;
+      flex-direction: row;
+      gap: 150px;
+      margin-bottom: 100px;
+    }
+    & > img {
+      @include desktop-sm {
+        width: 900px;
+      }
+    }
+    &-text {
+      @include desktop-sm {
+        max-width: 600px;
+      }
+    }
+  }
+}

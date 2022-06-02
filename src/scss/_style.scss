@@ -2,6 +2,10 @@
   display: flex;
   flex-direction: column;
 
+  &__top {
+    background-color: $secondary;
+  }
+
   &__item {
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -12,7 +16,7 @@
     position: relative;
     margin-bottom: 10px;
 
-    &>img {
+    & > img {
       width: 100%;
     }
   }
@@ -45,7 +49,7 @@
 .link {
   &-vacance {
     padding: 40px 21px;
-    background-color: $accent;
+    background-color: $primary;
     border-radius: 4px;
     color: #fff;
     font-weight: 500;
@@ -78,7 +82,7 @@
       line-height: 130%;
 
       @include desktop-sm {
-        padding: 80px 60px;
+        padding: 60px 60px;
         order: 2;
         font-size: 18px;
         line-height: 120%;
@@ -88,7 +92,8 @@
     &__bottom {
       flex-shrink: 0;
 
-      &>img {}
+      & > img {
+      }
     }
 
     &__img {
@@ -108,10 +113,32 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     row-gap: 30px;
-
+    @include desktop-sm {
+      gap: 75px;
+      row-gap: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      // grid-template-columns: repeat(3, minmax(0, 190px));
+    }
     .mini {
       text-align: center;
-
+      @include desktop-sm {
+        flex-basis: 190px;
+      }
+      & > h2 {
+        font-size: 26px;
+        line-height: 120%;
+        @include desktop-sm {
+          font-size: 48px;
+          line-height: 100%;
+        }
+      }
+      & > p {
+        @include desktop-sm {
+          font-size: 16px;
+          line-height: 130%;
+        }
+      }
       &__block {
         border-radius: 4px;
         text-align: center;
@@ -153,9 +180,11 @@
         margin-bottom: 4px;
       }
 
-      &__top {}
+      &__top {
+      }
 
-      &__bottom {}
+      &__bottom {
+      }
     }
   }
 }
@@ -195,7 +224,8 @@
       margin-right: 16px;
     }
 
-    &__right {}
+    &__right {
+    }
   }
 }
 
@@ -207,6 +237,14 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include desktop-sm {
+      gap: 60px;
+    }
   }
 
   &__icon {
@@ -222,10 +260,6 @@
 
   &__item {
     display: flex;
-
-    &:not(:last-child) {
-      margin-bottom: 20px;
-    }
   }
 
   &__left {
@@ -235,50 +269,24 @@
     line-height: 120%;
     color: $primary;
     margin-right: 18px;
+    @include desktop-sm {
+      font-size: 26px;
+      line-height: 120%;
+    }
   }
 
   &__right {
-    &>h4 {
-      margin-bottom: 6px;
+    @include desktop-sm {
+      max-width: 386px;
     }
-  }
-}
-
-.road-map {
-  &__list {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__item {
-    position: relative;
-
-    &:not(:last-child) {
-      padding-bottom: 70px;
-
-      &::before {
-        position: absolute;
-        content: "";
-        width: 1px;
-        height: 30px;
-
-        background-image: url("../img/icons/dotted.svg");
-        background-repeat: no-repeat;
-        bottom: 20px;
+    & > h4 {
+      margin-bottom: 6px;
+      @include desktop-sm {
+        margin-bottom: 20px;
+        font-size: 26px;
+        line-height: 120%;
       }
     }
-
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  &__text {
-    margin-top: 10px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 130%;
   }
 }
 
@@ -318,10 +326,11 @@
     flex-direction: column;
     gap: 20px;
 
-    &>a {
+    & > a {
       color: #fff;
     }
   }
 
-  &__right {}
+  &__right {
+  }
 }

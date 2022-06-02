@@ -45,8 +45,7 @@ PAGES.forEach((page) => {
   p = { [name]: `./js/pages/${name}.js`, ...p };
 });
 console.log(PAGES);
-const fileName = (ext) =>
-  isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
+const fileName = (ext) => (isDev ? `[name].${ext}` : `[name].${ext}`);
 const optimization = () => {
   const confObj = {
     splitChunks: { chunks: "all" },
@@ -253,14 +252,14 @@ module.exports = {
         test: /\.(?:|gif|jpg|jpeg|svg|png)$/,
         type: "asset/resource",
         generator: {
-          filename: "img/[hash][ext][query]",
+          filename: "img/[name].[ext]",
         },
       },
       {
         test: /\.(woff|woff2|eot|otf|ttf)$/,
         type: "asset/resource",
         generator: {
-          filename: "fonts/[hash][ext][query]",
+          filename: "fonts/[name].[ext]",
         },
       },
     ],

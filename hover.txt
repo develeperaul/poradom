@@ -1,0 +1,5 @@
+ наведение на полигон svg
+связывание через data утрибут у карты с id карточки
+ссылка на hover css polygon https://stackoverflow.com/questions/36137604/svg-polygon-hover-does-not-work-correclty
+
+ определить обработчик на родительском элементе и там обрабатывать возникающие события

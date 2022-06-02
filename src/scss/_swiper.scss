@@ -164,7 +164,9 @@ $pageColorActive: #0099e0;
       }
     }
   }
-
+  & .paginate-center {
+    margin: 0 auto;
+  }
   &-numbs {
     display: flex;
     padding-top: 9px;
@@ -296,5 +298,26 @@ $pageColorActive: #0099e0;
       margin-left: 300px;
       width: calc(100% - 300px);
     }
+  }
+  &-arrows {
+    margin: 0 auto;
+    margin-top: 106px;
+    display: flex;
+    gap: 94px;
+  }
+  &-prev-arrow,
+  &-next-arrow {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    background-image: url(../img/icons/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &-prev-arrow {
+    transform: rotate(90deg);
+  }
+  &-next-arrow {
+    transform: rotate(-90deg);
   }
 }

@@ -1,0 +1,65 @@
+.road-map {
+  .roadMap {
+    display: none;
+    @include desktop-sm {
+      display: flex;
+    }
+    & .swiper-slide {
+      position: relative;
+      &:not(:last-child)::before {
+        @include desktop-sm {
+          position: absolute;
+          content: "";
+          width: 2px;
+          height: 30px;
+
+          background-image: url("../img/icons/dotted.svg");
+          background-repeat: no-repeat;
+          top: 44px;
+          right: -15px;
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    @include desktop-sm {
+      display: none;
+    }
+  }
+
+  &__item {
+    position: relative;
+    @include desktop-sm {
+      //   max-width: 300px;
+    }
+    &:not(:last-child) {
+      padding-bottom: 70px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 2px;
+        height: 30px;
+
+        background-image: url("../img/icons/dotted.svg");
+        background-repeat: no-repeat;
+        bottom: 20px;
+      }
+    }
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+  }
+}

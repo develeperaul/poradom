@@ -452,3 +452,88 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  let oldEl = null;
+  let currentEl = null;
+  let level = 0;
+  let test = false;
+  const parentList = document.querySelector(".sidebar__list-desktop");
+  parentList.onmouseover = (e) => {
+    if (currentEl) return;
+    let target = e.target.closest("li");
+    if (!parentList.contains(target)) return;
+    currentEl = target;
+    if (currentEl?.getAttribute("data-node")) {
+      // console.log(currentEl);
+      let childrenEL = currentEl.querySelector(
+        `${currentEl?.getAttribute("data-node")}`
+      );
+      console.log(currentEl);
+      if (currentEl.getAttribute("data-node").match(/-\d*/g)[0]) {
+        let newLevel = currentEl
+          .getAttribute("data-node")
+          .match(/-\d*/g)[0]
+          .replace("-", "");
+
+        console.log(level);
+        console.log(newLevel);
+        if (newLevel && newLevel < level) {
+          test = true;
+          for (let i = level; i > newLevel; i = i - 1) {
+            if (oldEl?.getAttribute("data-node")) {
+              let el = document.querySelector(
+                `#list${oldEl
+                  .getAttribute("data-node")
+                  .split("-")[0]
+                  .match(/_\d*/g)
+                  .splice(0, i - 1)
+                  .join("")}-${i - 1}`
+              );
+              // console.log(el);
+              el ? el.style.setProperty("display", "none") : null;
+            }
+          }
+        }
+        if (newLevel && newLevel === level) {
+          if (oldEl && test) {
+            let oldLevel = oldEl
+              .getAttribute("data-node")
+              .match(/-\d*/g)[0]
+              .replace("-", "");
+            console.log(oldEl);
+            console.log(oldLevel);
+            let parentOld = document.querySelector(
+              oldEl.getAttribute("data-node")
+            );
+            parentOld ? (parentOld.style.display = "none") : null;
+
+            // document.querySelector(
+            //   oldEl.getAttribute("data-node")
+            // ).style.display = "none";
+          }
+          test = false;
+        }
+        level = currentEl
+          ?.getAttribute("data-node")
+          .match(/-\d*/g)[0]
+          .replace("-", "");
+      }
+      if (childrenEL) {
+        childrenEL.style.display = "flex";
+        test = true;
+        // currentEl = childrenEL;
+      }
+      // console.log(level);
+    }
+  };
+  parentList.onmouseout = (e) => {
+    if (!currentEl) return;
+    if (test) {
+      oldEl = currentEl;
+    }
+    // console.log(oldEl);
+    // console.log(test);
+    currentEl = null;
+  };
+});

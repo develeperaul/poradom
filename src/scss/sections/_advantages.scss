@@ -1,0 +1,16 @@
+.advantages {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @include desktop-sm {
+      margin-left: 300px;
+      flex-direction: row;
+      gap: 170px;
+    }
+    & .cards-mini {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 236px));
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.results {
+  &__content {
+    @include desktop-sm {
+      display: flex;
+      gap: 200px;
+      margin-left: 300px;
+    }
+    & > p {
+      @include desktop-sm {
+        font-size: 26px;
+        line-height: 120%;
+      }
+    }
+  }
+}

@@ -11,10 +11,21 @@ new Dropdown("3");
 class Survey {
   constructor(name) {
     this.name = document.querySelector(`#${name}`);
+    const local = localStorage.getItem("survey");
     if (this.name) {
       const popup = this.name.parentNode.querySelector(".popup");
       if (this.name.children.length > 0 && !this.getActiveClass) {
         Array.from(this.name.children).forEach((el) => {
+          if (local && el.getAttribute("data-survey_number") === local) {
+            el.classList.add("card-survey_active");
+            document.querySelectorAll(".card-survey").forEach((item, index) => {
+              item
+                .querySelector(".card-survey__numb")
+                .classList.add("card-survey__numb_active");
+            });
+            this.updateWithProgress();
+          }
+
           el.addEventListener("click", () => {
             // document.querySelectorAll('.card-survey').forEach(item=>item.classList.add('card-survey_opacity'))
             // el.classList.toggle('card-survey_opacity')
@@ -40,17 +51,18 @@ class Survey {
                 el.classList.add("card-survey_first");
                 el.classList.remove("card-survey_opacity");
               } else {
+                console.log("hi");
                 if (el.classList.contains("card-survey_first")) {
                   document.querySelectorAll(".card-survey").forEach((item) => {
                     item.classList.remove("card-survey_opacity");
-                    console.log(
-                      item
-                        .querySelector(".card-survey__numb")
-                        .classList.add("card-survey__numb_active")
-                    );
+                    item
+                      .querySelector(".card-survey__numb")
+                      .classList.add("card-survey__numb_active");
                   });
                   el.classList.remove("card-survey_first");
                   el.classList.add("card-survey_active");
+                  const localEl = el.getAttribute("data-survey_number");
+                  localStorage.setItem("survey", localEl);
                   this.updateWithProgress();
 
                   popup.classList.add("popup_active");
