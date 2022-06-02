@@ -139,6 +139,9 @@
   z-index: 111;
   padding-top: 40px;
   padding-bottom: 40px;
+  @include desktop-sm {
+    padding: 120px 0;
+  }
 }
 
 .development {

@@ -71,6 +71,10 @@ svg {
       left: 20px;
       width: 1px;
       height: 40px;
+      @include desktop-sm {
+        left: 70px;
+        height: 80px;
+      }
     }
 
     &-bottom {

@@ -8,7 +8,6 @@
   }
 
   &__line {
-
     &-top,
     &-bottom {
       position: absolute;
@@ -20,6 +19,10 @@
       left: 20px;
       width: 1px;
       height: 40px;
+      @include desktop-sm {
+        left: 130px;
+        height: 80px;
+      }
     }
 
     &-bottom {
@@ -27,6 +30,10 @@
       left: 20px;
       width: 1px;
       height: 160px;
+      @include desktop-sm {
+        left: 130px;
+        height: 170px;
+      }
     }
   }
 
@@ -75,11 +82,12 @@
       margin-bottom: 70px;
     }
 
-    &>span:first-child {
+    & > span:first-child {
       display: block;
     }
 
-    &>span {}
+    & > span {
+    }
   }
 
   &__top {
@@ -114,7 +122,6 @@
     }
 
     &-content {
-
       @include desktop-sm {
         margin-left: 155px;
         margin-right: -70px;

@@ -1160,7 +1160,9 @@
       display: flex;
       gap: 10px;
       margin-bottom: 40px;
-
+      .button {
+        margin-top: 10px;
+      }
       & .text-field {
         margin-bottom: 0;
       }

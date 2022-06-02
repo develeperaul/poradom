@@ -8,7 +8,10 @@
     bottom: 3px;
     left: 18px;
     z-index: 9;
-
+    @include desktop-sm {
+      bottom: 120px;
+      left: 150px;
+    }
     & > span {
       padding-top: 9px;
       padding-right: 27px;
@@ -28,6 +31,10 @@
       left: 20px;
       width: 1px;
       height: 40px;
+      @include desktop-sm {
+        left: 70px;
+        height: 80px;
+      }
     }
 
     &-bottom {
@@ -45,6 +52,9 @@
     position: absolute;
     left: 7px;
     top: 40px;
+    @include desktop-sm {
+      top: 80px;
+    }
   }
 
   &__number-content {
@@ -82,7 +92,7 @@
     @include desktop-sm {
       grid-column: 3 span / 3 span;
       width: 100%;
-      transform: translate(0px, 80px);
+      transform: translate(0px, 120px);
     }
   }
 
