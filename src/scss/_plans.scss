@@ -52,6 +52,9 @@
     &__img {
       margin-bottom: 10px;
     }
+    &-text {
+      font-style: italic;
+    }
   }
 }
 
@@ -225,6 +228,16 @@
 }
 
 .plans-floor {
+  padding-bottom: 40px;
+  @include desktop-sm {
+    padding-bottom: 120px;
+  }
+  &_pb0 {
+    padding-bottom: 40px;
+    @include desktop-sm {
+      padding-bottom: 0;
+    }
+  }
   &__content {
     @include desktop-sm {
       display: grid;
@@ -235,7 +248,7 @@
       @include desktop-sm {
         max-width: 520px;
         margin-right: -$gap;
-        height: calc(100% + 150px);
+        height: calc(100% + 140px);
         position: relative;
         top: -100px;
         padding-top: 100px;

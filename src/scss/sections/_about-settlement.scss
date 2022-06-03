@@ -1,0 +1,62 @@
+.about-settlement {
+  background-color: $secondary;
+  position: relative;
+  padding-bottom: 30px;
+  @include desktop-sm {
+    padding-bottom: 120px;
+  }
+  &__top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    @include desktop-sm {
+      margin-bottom: 0;
+      position: absolute;
+      top: 0;
+      width: calc(100% - 60px);
+    }
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    @include desktop-sm {
+      grid-template-columns: repeat(4, 200px);
+      margin-left: 300px;
+    }
+  }
+  &__slider {
+    margin-top: 30px;
+    @include desktop-sm {
+      margin-top: 60px;
+    }
+  }
+  &__icon {
+    position: absolute;
+
+    height: 75px;
+    top: 30px;
+    @include desktop-sm {
+      width: 450px;
+      height: 307px;
+      top: 120px;
+    }
+  }
+  .content-title {
+    position: absolute;
+    z-index: 9;
+    top: 143px;
+    left: 40px;
+    margin: 0;
+    padding: 0;
+    @include desktop-sm {
+      width: 42%;
+      position: static;
+      padding-top: 130px;
+      margin-left: 300px;
+      padding-bottom: 0;
+      margin-bottom: 60px;
+    }
+  }
+}

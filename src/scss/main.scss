@@ -48,6 +48,8 @@
 @import "sections/review";
 @import "sections/news";
 @import "sections/news-item";
+@import "sections/location-home";
+@import "sections/about-settlement";
 @import "footer";
 
 @import "plugins/toggle";
@@ -61,9 +63,18 @@
 }
 .section {
   padding: 20px 0 40px;
+  @include desktop-sm {
+    padding: 80px 0 120px;
+  }
+  &-pb0 {
+    padding-bottom: 0 !important;
+  }
 
   &:not(:first-child) {
     padding: 40px 0 40px;
+    @include desktop-sm {
+      padding: 40px 0 120px;
+    }
   }
 
   &__bg {

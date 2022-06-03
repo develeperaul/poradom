@@ -15,7 +15,9 @@
 }
 .built {
   padding: 15px 0 40px 0;
-
+  @include desktop-sm {
+    padding: 80px 0;
+  }
   &__wrapper {
     @include desktop-sm {
       display: flex;

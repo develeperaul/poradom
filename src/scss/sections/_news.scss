@@ -2,4 +2,10 @@
   & .swiper-slide {
     justify-content: flex-start;
   }
+
+  & .content-title {
+    @include desktop-sm {
+      margin-bottom: 60px;
+    }
+  }
 }

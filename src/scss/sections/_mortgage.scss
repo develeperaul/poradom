@@ -1,8 +1,16 @@
 .mortgage {
+  @include desktop-sm {
+    padding-bottom: 120px;
+  }
   &__content {
     @include desktop-sm {
       display: flex;
       gap: 120px;
+    }
+  }
+  &__bottom {
+    @include desktop-sm {
+      padding-top: 120px;
     }
   }
   &__title {
@@ -16,8 +24,20 @@
   }
   &__accordion {
     @include desktop-sm {
+      margin-top: 90px;
       margin-left: 300px;
       width: calc(100% - 300px);
+    }
+    &-title {
+      color: #fff;
+      margin-bottom: 20px;
+      font-size: 18px;
+      line-height: 120%;
+      @include desktop-sm {
+        font-size: 48px;
+        line-height: 100%;
+        margin-bottom: 40px;
+      }
     }
   }
   &__calc {

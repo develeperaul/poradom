@@ -1,3 +1,6 @@
 .settlements-map {
-    padding-top: 40px;
+  padding-top: 40px;
+  @include desktop-sm {
+    padding-top: 120px;
+  }
 }

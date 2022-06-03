@@ -40,6 +40,12 @@ $pageColorActive: #0099e0;
 
   &__text {
     margin-top: 14px;
+    @include desktop-sm {
+      font-size: 18px;
+      line-height: 140%;
+      max-width: 300px;
+      margin-top: 40px;
+    }
   }
 
   &__list {

@@ -44,6 +44,23 @@
   }
 }
 
+.bg {
+  &-vacant {
+    background-color: $vacant !important;
+  }
+
+  &-booked {
+    background-color: $booked !important;
+  }
+
+  &-sold {
+    background-color: $sold !important;
+  }
+
+  &-ready {
+    background-color: $ready !important;
+  }
+}
 .transform {
   &-y {
     &---12 {
@@ -75,9 +92,13 @@
     letter-spacing: -0.03em;
   }
 
+  & > span {
+    z-index: 10;
+    position: relative;
+  }
+
   & > span:first-child {
     position: relative;
-    z-index: 10;
     padding-top: 10px;
 
     @include desktop-sm {
@@ -478,6 +499,9 @@
   font-size: 16px;
   line-height: 130%;
   margin-top: 30px;
+  @include desktop-sm {
+    margin-top: 60px;
+  }
 }
 
 .label {
@@ -1189,7 +1213,11 @@
   &__title {
     margin-bottom: 20px;
   }
-
+  &__top {
+    @include desktop-sm {
+      max-width: 385px;
+    }
+  }
   &__text {
     margin-top: -10px;
     margin-bottom: 20px;
@@ -1654,6 +1682,7 @@
     padding: 100px 150px;
     column-gap: 70px;
     row-gap: initial;
+    margin-top: 120px;
   }
 
   &__top {
@@ -1920,19 +1949,19 @@
     white-space: nowrap;
 
     &_vacant {
-      background-color: #58b368;
+      background-color: $vacant;
     }
 
     &_booked {
-      background-color: #eeac0d;
+      background-color: $booked;
     }
 
     &_sold {
-      background-color: #ed1556;
+      background-color: $sold;
     }
 
     &_ready {
-      background-color: #0099e0;
+      background-color: $ready;
     }
   }
 }

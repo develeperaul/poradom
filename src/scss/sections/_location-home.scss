@@ -1,0 +1,108 @@
+.location-home {
+  &__content {
+    @include desktop-sm {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-areas: "A A A A B B";
+    }
+    &-top {
+      padding: 40px 0;
+      grid-area: A;
+      @include desktop-sm {
+        padding: 120px 0;
+      }
+    }
+
+    &-bottom {
+      padding: 40px 0;
+      margin: 0 -#{$gap-m};
+      background-color: $secondary;
+      grid-area: B;
+      @include desktop-sm {
+        margin: 0;
+        margin-right: -#{$gap};
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  &__content-top &__button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    @include desktop-sm {
+      margin-top: 40px;
+    }
+  }
+  &__cards {
+    &-wrapper {
+      max-width: 288px;
+      width: 100%;
+      margin: 0 auto;
+      @include desktop-sm {
+        max-width: 410px;
+      }
+    }
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  &__card {
+    padding: 20px 0;
+    background-color: $primary;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+    @include desktop-sm {
+      gap: 10px;
+    }
+    &-col {
+      &--2 {
+        grid-column: 2 span / 2 span;
+      }
+    }
+
+    &-title {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 130%;
+      color: $darkwhite;
+      text-align: center;
+      @include desktop-sm {
+        font-size: 16px;
+        line-height: 130%;
+      }
+    }
+    &-text {
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 120%;
+      color: #ffffff;
+      text-align: center;
+      @include desktop-sm {
+        font-size: 26px;
+        line-height: 120%;
+      }
+      &--sm {
+        font-size: 18px;
+        line-height: 120%;
+      }
+    }
+  }
+
+  &__content-bottom .button {
+    margin-top: 30px;
+
+    width: 100%;
+
+    @include desktop-sm {
+      margin-top: 20px;
+    }
+  }
+}

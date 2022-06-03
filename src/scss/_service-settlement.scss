@@ -5,6 +5,9 @@
   background-color: $secondary;
   position: relative;
   padding-bottom: 30px;
+  @include desktop-sm {
+    padding-bottom: 80px;
+  }
   & .content-title {
     position: absolute;
     z-index: 9;
@@ -41,6 +44,7 @@
     margin-left: auto;
     margin-right: 0em;
     z-index: 8;
+    object-fit: cover;
     @include desktop-sm {
       width: 660px;
       height: 530px;
@@ -98,6 +102,17 @@
   &__button {
     @include desktop-sm {
       display: none;
+    }
+  }
+  & .swiper {
+    @include desktop-sm {
+      padding-bottom: 40px;
+    }
+  }
+  & .form {
+    margin-top: 20px;
+    @include desktop-sm {
+      margin-top: 40px;
     }
   }
 }

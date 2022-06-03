@@ -1,4 +1,7 @@
 .interior {
+  @include desktop-sm {
+    padding-bottom: 120px;
+  }
   & .content-title {
     position: absolute;
     z-index: 9;

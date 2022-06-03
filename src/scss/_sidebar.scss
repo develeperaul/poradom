@@ -22,13 +22,16 @@
       }
     }
     &-desktop {
-      font-size: 26px;
-      line-height: 120%;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      width: 520px;
-      padding-top: 80px;
+      display: none;
+      @include desktop-sm {
+        font-size: 26px;
+        line-height: 120%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 520px;
+        padding-top: 80px;
+      }
     }
   }
   &-children__list > &__item {
