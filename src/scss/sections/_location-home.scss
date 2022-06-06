@@ -8,6 +8,7 @@
     &-top {
       padding: 40px 0;
       grid-area: A;
+      position: relative;
       @include desktop-sm {
         padding: 120px 0;
       }
@@ -95,7 +96,26 @@
       }
     }
   }
-
+  &__count {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+    margin-left: -60px;
+    width: calc(100% + 60px);
+    padding: 15px 0;
+    gap: 16px;
+    background: #212529;
+    border-radius: 4px 4px 0px 0px;
+    color: #fff;
+    &-left,
+    &-right {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+  }
   &__content-bottom .button {
     margin-top: 30px;
 

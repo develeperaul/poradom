@@ -40,6 +40,11 @@
       left: 18px;
       width: 1px;
       height: 40px;
+      @include desktop-sm {
+        left: 60px;
+
+        height: 80px;
+      }
     }
   }
 

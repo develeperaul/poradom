@@ -64,7 +64,7 @@
 .section {
   padding: 20px 0 40px;
   @include desktop-sm {
-    padding: 80px 0 120px;
+    padding: 40px 0 120px;
   }
   &-pb0 {
     padding-bottom: 0 !important;
@@ -73,7 +73,7 @@
   &:not(:first-child) {
     padding: 40px 0 40px;
     @include desktop-sm {
-      padding: 40px 0 120px;
+      padding: 120px 0 120px;
     }
   }
 
