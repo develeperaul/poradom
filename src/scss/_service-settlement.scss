@@ -98,6 +98,9 @@
         z-index: 9;
       }
     }
+    &_contact {
+      align-items: flex-start;
+    }
   }
   &__button {
     @include desktop-sm {
