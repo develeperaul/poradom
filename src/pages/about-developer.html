@@ -1,369 +1,324 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Poradom</title>
-  </head>
 
-  <body>
-    <div class="top-arrow" id="arrow">
-      <div class="arrow-icon">
-        <svg
-          width="14"
-          height="8"
-          viewBox="0 0 14 8"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M13 7L7 1L1 7" stroke="white" stroke-linecap="round" />
-        </svg>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poradom</title>
+</head>
+
+<body>
+  <div class="top-arrow" id="arrow">
+    <div class="arrow-icon">
+      <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 7L7 1L1 7" stroke="white" stroke-linecap="round" />
+      </svg>
+    </div>
+  </div>
+  <section class="sidebar">
+    <div class="container">
+      <div class="header__wrapper"></div>
+      <div class="header__top">
+        <img src="../img/icons/logo1.svg" alt="" class="logo" />
+        <div class="header__trigger">
+          <button class="menu-trigger active" id="menu-sidebar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <span class="menu-trigger__text"> Меню </span>
+        </div>
+        <div class="header__contacts">
+          <div class="social">
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/youtube.svg" alt="" class="social__icon" />
+            </a>
+
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/facebook.svg" alt="" class="social__icon" />
+            </a>
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+            </a>
+          </div>
+          <div class="header__contact contact">
+            <address>г.Уфа, ул.Мустая Карима, д.16</address>
+            <a href="tell:73472008719">+7 (347) 200-87-19</a>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar__list accordion" id="sidebar-accordion">
+        <h3 class="">Покупателям</h3>
+        <div class="tabs__text" id="tabs-1" style="height: 0px">
+          <a href="#"> Проектирование </a>
+          <a href="#">Проектирование</a>
+          <a href="#">Проектирование</a>
+          <a href="#">Проектирование</a>
+          <a href="#">Проектирование</a>
+          <a href="#">Проектирование</a>
+        </div>
+        <h3 class="">Стандарты</h3>
+        <div class="tabs__text" id="tabs-2" style="height: 0px">
+          <a href="#">Проектирование</a>
+        </div>
+        <h3 class="">О застройщике</h3>
+        <div class="tabs__text" id="tabs-3" style="height: 0px">
+          <a href="#">Проектирование</a>
+        </div>
+      </div>
+      <div id="list_03">
+
+        <ul class="sidebar__list-desktop">
+          <li class="sidebar__item" data-node="#list_01-1">
+            <a href="#">
+              <span class="sidebar__item-left">01 —</span>
+              <span class="sidebar__item-right">Коттеджные посёлки</span>
+            </a>
+          </li>
+          <li class="sidebar__item" data-node="#list_02-1">
+            <a href="#">
+              <span class="sidebar__item-left">02 —</span>
+              <span class="sidebar__item-right">Готовые дома</span>
+            </a>
+          </li>
+          <li class="sidebar__item" data-node="#list_03-1">
+            <a href="#">
+              <span class="sidebar__item-left">03 —</span>
+              <span class="sidebar__item-right">Проекты</span>
+            </a>
+            <div class="sidebar___list_desktop-2 sidebar__children" id="list_03-1" style="display: none;">
+              <ul class="sidebar-children__list">
+                <li class="sidebar__item" data-node="#list_03_1-2"><a href="#">Серия Первый Дом</a></li>
+                <li class="sidebar__item" data-node="#list_03_2-2"><a href="#">Серия NATUR-A</a></li>
+                <li class="sidebar__item" data-node="#list_03_3-2"><a href="#">Серия Элегант</a></li>
+                <li class="sidebar__item" data-node="#list_03_4-2"><a href="#">Серия Классик</a></li>
+                <li class="sidebar__item" data-node="#list_03_5-2"><a href="#">Кирпичный Стандарт</a></li>
+                <li class="sidebar__item" data-node="#list_03_6-2">
+                  <a href="#">Серия Ред Лайт</a>
+                  <div class="sidebar__list_desktop-3 sidebar__children" id="list_03_6-2" style="display: none;">
+                    <ul class="sidebar-children__list">
+                      <li class="sidebar__item" data-node="#list_03_6_1-3"><a href="#">Кирпичный Стандарт 105</a></li>
+                      <li class="sidebar__item" data-node="#list_03_6_2-3"><a href="#">Кирпичный Стандарт 120</a></li>
+                      <li class="sidebar__item" data-node="#list_03_6_3-3"><a href="#">Кирпичный Стандарт 140</a></li>
+                      <li class="sidebar__item" data-node="#list_03_6_4-3"><a href="#">Кирпичный Стандарт 150</a></li>
+                      <li class="sidebar__item" data-node="#list_03_6_5-3"><a href="#">Кирпичный Стандарт 170</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="sidebar__item" data-node="#list_03_7-2"><a href="#">Индивидуальный проект</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar__item" data-node="#list_04-1">
+            <a href="#">
+              <span class="sidebar__item-left">04 —</span>
+              <span class="sidebar__item-right">Стандарты Порадом</span>
+            </a>
+          </li>
+          <li class="sidebar__item" data-node="#list_05-1">
+            <a href="#">
+              <span class="sidebar__item-left">05 —</span>
+              <span class="sidebar__item-right">Компания Порадом</span>
+            </a>
+          </li>
+          <li class="sidebar__item" data-node="#list_06-1">
+            <a href="#">
+              <span class="sidebar__item-left">06 —</span>
+              <span class="sidebar__item-right">Галерея</span>
+            </a>
+          </li>
+          <li class="sidebar__item" data-node="#list_07-1">
+            <a href="#">
+              <span class="sidebar__item-left">07 —</span>
+              <span class="sidebar__item-right">Новости</span>
+            </a>
+          </li>
+          <li class="sidebar__item" data-node="#list_08-1">
+            <a href="#">
+              <span class="sidebar__item-left">08 —</span>
+              <span class="sidebar__item-right">Отзывы</span>
+            </a>
+          </li>
+          <li class="sidebar__item" data-node="#list_09-1">
+            <a href="#">
+              <span class="sidebar__item-left">09 —</span>
+              <span class="sidebar__item-right">Контакты</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
-    <section class="sidebar">
+
+    </div>
+  </section>
+  <!--header start-->
+  <div class="header__top_white header__top_fixed header__top_fixed-open " style="display: none;">
+    <div class="container header__top">
+      <img src="../img/icons/logo3.svg" alt="" class="logo" />
+      <div class="header__trigger">
+        <button class="menu-trigger" id="menu-header">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <span class="menu-trigger__text"> Меню </span>
+      </div>
+      <div class="header__contacts">
+        <div class="social">
+          <a href="#" class="pie pie_primary social__link_s">
+            <img src="../img/icons/youtube.svg" alt="" class="social__icon" />
+          </a>
+
+          <a href="#" class="pie pie_primary social__link_s">
+            <img src="../img/icons/facebook.svg" alt="" class="social__icon" />
+          </a>
+          <a href="#" class="pie pie_primary social__link_s">
+            <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+          </a>
+        </div>
+        <div class="header__contact contact">
+          <address>г.Уфа, ул.Мустая Карима, д.16</address>
+          <a href="tell:73472008719">+7 (347) 200-87-19</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header class="header">
+    <div class="header__top_absolute">
+      <div class="container header__top">
+        <img src="../img/icons/logo1.svg" alt="" class="logo" />
+        <div class="header__trigger">
+          <button class="menu-trigger" id="menu-header">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <span class="menu-trigger__text"> Меню </span>
+        </div>
+        <div class="header__contacts">
+          <div class="social">
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/youtube.svg" alt="" class="social__icon" />
+            </a>
+
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/facebook.svg" alt="" class="social__icon" />
+            </a>
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+            </a>
+          </div>
+          <div class="header__contact contact">
+            <address>г.Уфа, ул.Мустая Карима, д.16</address>
+            <a href="tell:73472008719">+7 (347) 200-87-19</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="tg://resolve?domain=username" class="pie pie_big pie_blue drop__children children">
+      <img src="../img/icons/telega.svg" alt="" />
+    </a>
+    <a href="https://wa.me/799999999" class="pie pie_big pie_blue drop__children children">
+      <img src="../img/icons/whatsapp.svg" alt="" />
+    </a>
+    <a href="tel:+799999999" class="pie pie_big pie_blue drop__children children">
+      <img src="../img/icons/phone.svg" alt="" />
+    </a>
+    <span class="pie pie_big pie_accent drop drop_sq" id="drop">
+      <span></span><span></span><span></span><span></span>
+    </span>
+
+    <div class="swiper headerSwiper">
+      <div class="swiper-wrapper swiper-wrapper_pb">
+        <div class="swiper-slide swiper-slide_pb header__bottom">
+          <div class="container container-slider carousel">
+            <h2 class="carousel__title">
+              Новый проект <br />
+              со вторым <br />
+              светом
+            </h2>
+            <p class="carousel__text">
+              Запишитесь на экскурсию, <br />
+              чтобы увидеть это первыми!
+            </p>
+            <div>
+              <buttton class="carousel__btn button button_accent">Записаться на экскурсию</buttton>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide_pb header__bottom">
+          <div class="container container-slider carousel">
+            <h2 class="carousel__title">
+              Новый проект <br />
+              со вторым <br />
+              светом
+            </h2>
+            <p class="carousel__text">
+              Запишитесь на экскурсию, <br />
+              чтобы увидеть это первыми!
+            </p>
+            <div>
+              <buttton class="carousel__btn button button_accent">Записаться на экскурсию</buttton>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide_pb header__bottom">
+          <div class="container container-slider carousel">
+            <h2 class="carousel__title">
+              Новый проект <br />
+              со вторым <br />
+              светом
+            </h2>
+            <p class="carousel__text">
+              Запишитесь на экскурсию, <br />
+              чтобы увидеть это первыми!
+            </p>
+            <div>
+              <buttton class="carousel__btn button button_accent">Записаться на экскурсию</buttton>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-numbs swiper-numbs_position"></div>
+    </div>
+    <div class="container">
+      <div class="pick-up">
+        <div class="pick-up__left">
+          <a href="#">Готовые дома</a>
+          <a href="#">Проекты домов</a>
+          <a href="#">Посёлки</a>
+        </div>
+        <div class="pick-up__right">
+          <div class="selection"><a href="#">Подобрать</a></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--header end-->
+  <main class="wrapper">
+    <section class="section">
       <div class="container">
-        <div class="header__wrapper"></div>
-          <div class="header__top">
-            <img src="../img/icons/logo1.svg" alt="" class="logo" />
-            <div class="header__trigger">
-              <button class="menu-trigger active" id="menu-sidebar">
-                <span></span>
-                <span></span>
-                <span></span>
-              </button>
-              <span class="menu-trigger__text"> Меню </span>
-            </div>
-            <div class="header__contacts">
-              <div class="social">
-                <a href="#" class="pie pie_primary social__link_s">
-                  <img
-                    src="../img/icons/youtube.svg"
-                    alt=""
-                    class="social__icon"
-                  />
-                </a>
-
-                <a href="#" class="pie pie_primary social__link_s">
-                  <img
-                    src="../img/icons/facebook.svg"
-                    alt=""
-                    class="social__icon"
-                  />
-                </a>
-                <a href="#" class="pie pie_primary social__link_s">
-                  <img src="../img/icons/vk.svg" alt="" class="social__icon" />
-                </a>
-              </div>
-              <div class="header__contact contact">
-                <address>г.Уфа, ул.Мустая Карима, д.16</address>
-                <a href="tell:73472008719">+7 (347) 200-87-19</a>
-              </div>
-            </div>
-          </div>
-          <div class="sidebar__list accordion" id="sidebar-accordion">
-            <h3 class="">Покупателям</h3>
-            <div class="tabs__text" id="tabs-1" style="height: 0px">
-              <a href="#"> Проектирование </a>
-              <a href="#">Проектирование</a>
-              <a href="#">Проектирование</a>
-              <a href="#">Проектирование</a>
-              <a href="#">Проектирование</a>
-              <a href="#">Проектирование</a>
-            </div>
-            <h3 class="">Стандарты</h3>
-            <div class="tabs__text" id="tabs-2" style="height: 0px">
-              <a href="#">Проектирование</a>
-            </div>
-            <h3 class="">О застройщике</h3>
-            <div class="tabs__text" id="tabs-3" style="height: 0px">
-              <a href="#">Проектирование</a>
-            </div>
-          </div>
-          <div id="list_03">
-
-            <ul class="sidebar__list-desktop">
-              <li class="sidebar__item" data-node="#list_01-1">
-                <a href="#">
-                  <span class="sidebar__item-left">01 —</span>
-                  <span class="sidebar__item-right">Коттеджные посёлки</span>
-                </a>
-              </li>
-              <li class="sidebar__item" data-node="#list_02-1">
-                <a href="#">
-                  <span class="sidebar__item-left">02 —</span>
-                  <span class="sidebar__item-right">Готовые дома</span>
-                </a>
-              </li>
-              <li class="sidebar__item" data-node="#list_03-1">
-                <a href="#">
-                  <span class="sidebar__item-left">03 —</span>
-                  <span class="sidebar__item-right">Проекты</span>
-                </a>
-                <div class="sidebar___list_desktop-2 sidebar__children" id="list_03-1" style="display: none;">
-                  <ul class="sidebar-children__list">
-                    <li class="sidebar__item"  data-node="#list_03_1-2"><a href="#">Серия Первый Дом</a></li>
-                    <li class="sidebar__item"  data-node="#list_03_2-2"><a href="#">Серия NATUR-A</a></li>
-                    <li class="sidebar__item"  data-node="#list_03_3-2"><a href="#">Серия Элегант</a></li>
-                    <li class="sidebar__item"  data-node="#list_03_4-2"><a href="#">Серия Классик</a></li>
-                    <li class="sidebar__item"  data-node="#list_03_5-2"><a href="#">Кирпичный Стандарт</a></li>
-                    <li class="sidebar__item" data-node="#list_03_6-2">
-                      <a href="#" >Серия Ред Лайт</a>
-                      <div class="sidebar__list_desktop-3 sidebar__children" id="list_03_6-2" style="display: none;">
-                        <ul class="sidebar-children__list">
-                          <li class="sidebar__item" data-node="#list_03_6_1-3"><a href="#">Кирпичный Стандарт 105</a></li>
-                          <li class="sidebar__item" data-node="#list_03_6_2-3"><a href="#">Кирпичный Стандарт 120</a></li>
-                          <li class="sidebar__item" data-node="#list_03_6_3-3"><a href="#">Кирпичный Стандарт 140</a></li>
-                          <li class="sidebar__item" data-node="#list_03_6_4-3"><a href="#">Кирпичный Стандарт 150</a></li>
-                          <li class="sidebar__item" data-node="#list_03_6_5-3"><a href="#">Кирпичный Стандарт 170</a></li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="sidebar__item" data-node="#list_03_7-2"><a href="#" >Индивидуальный проект</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="sidebar__item" data-node="#list_04-1">
-                <a href="#">
-                  <span class="sidebar__item-left">04 —</span>
-                  <span class="sidebar__item-right">Стандарты Порадом</span>
-                </a>
-              </li>
-              <li class="sidebar__item" data-node="#list_05-1">
-                <a href="#">
-                  <span class="sidebar__item-left">05 —</span>
-                  <span class="sidebar__item-right">Компания Порадом</span>
-                </a>
-              </li>
-              <li class="sidebar__item" data-node="#list_06-1">
-                <a href="#">
-                  <span class="sidebar__item-left">06 —</span>
-                  <span class="sidebar__item-right">Галерея</span>
-                </a>
-              </li>
-              <li class="sidebar__item" data-node="#list_07-1">
-                <a href="#">
-                  <span class="sidebar__item-left">07 —</span>
-                  <span class="sidebar__item-right">Новости</span>
-                </a>
-              </li>
-              <li class="sidebar__item" data-node="#list_08-1">
-                <a href="#">
-                  <span class="sidebar__item-left">08 —</span>
-                  <span class="sidebar__item-right">Отзывы</span>
-                </a>
-              </li>
-              <li class="sidebar__item" data-node="#list_09-1">
-                <a href="#">
-                  <span class="sidebar__item-left">09 —</span>
-                  <span class="sidebar__item-right">Контакты</span>
-                </a>
-              </li>
-            </ul>
+        <div class="section__crumbs bread-crumbs">
+          <a href="home.html">ПОРАДОМ</a>
+          <a href="about-developer.html">Компания ПОРАДОМ</a>
+          <a href="#">О застройщике</a>
+        </div>
+        <div class="section__top">
+          <h2 class="section__title">Компания ПОРАДОМ</h2>
+        </div>
+        <div class="section__btns">
+          <div id="reviews-btns" class="button__group">
+            <a href="#" class="button__round button__round_active">О застройщике</a>
+            <a href="#" class="button__round">Команда</a>
+            <a href="#" class="button__round">Пресс-центр</a>
           </div>
         </div>
-
-      </div>
-    </section>
-    <!--header start-->
-        <div class="header__top_white header__top_fixed header__top_fixed-open " style="display: none;">
-        <div class="container header__top">
-          <img src="../img/icons/logo3.svg" alt="" class="logo" />
-          <div class="header__trigger">
-            <button class="menu-trigger" id="menu-header">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-            <span class="menu-trigger__text"> Меню </span>
-          </div>
-          <div class="header__contacts">
-            <div class="social">
-              <a href="#" class="pie pie_primary social__link_s">
-                <img
-                  src="../img/icons/youtube.svg"
-                  alt=""
-                  class="social__icon"
-                />
-              </a>
-
-              <a href="#" class="pie pie_primary social__link_s">
-                <img
-                  src="../img/icons/facebook.svg"
-                  alt=""
-                  class="social__icon"
-                />
-              </a>
-              <a href="#" class="pie pie_primary social__link_s">
-                <img src="../img/icons/vk.svg" alt="" class="social__icon" />
-              </a>
-            </div>
-            <div class="header__contact contact">
-              <address>г.Уфа, ул.Мустая Карима, д.16</address>
-              <a href="tell:73472008719">+7 (347) 200-87-19</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    <header class="header">
-      <div class="header__top_absolute">
-        <div class="container header__top">
-          <img src="../img/icons/logo1.svg" alt="" class="logo" />
-          <div class="header__trigger">
-            <button class="menu-trigger" id="menu-header">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-            <span class="menu-trigger__text"> Меню </span>
-          </div>
-          <div class="header__contacts">
-            <div class="social">
-              <a href="#" class="pie pie_primary social__link_s">
-                <img
-                  src="../img/icons/youtube.svg"
-                  alt=""
-                  class="social__icon"
-                />
-              </a>
-
-              <a href="#" class="pie pie_primary social__link_s">
-                <img
-                  src="../img/icons/facebook.svg"
-                  alt=""
-                  class="social__icon"
-                />
-              </a>
-              <a href="#" class="pie pie_primary social__link_s">
-                <img src="../img/icons/vk.svg" alt="" class="social__icon" />
-              </a>
-            </div>
-            <div class="header__contact contact">
-              <address>г.Уфа, ул.Мустая Карима, д.16</address>
-              <a href="tell:73472008719">+7 (347) 200-87-19</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <a
-        href="tg://resolve?domain=username"
-        class="pie pie_big pie_blue drop__children children"
-      >
-        <img src="../img/icons/telega.svg" alt="" />
-      </a>
-      <a
-        href="https://wa.me/799999999"
-        class="pie pie_big pie_blue drop__children children"
-      >
-        <img src="../img/icons/whatsapp.svg" alt="" />
-      </a>
-      <a
-        href="tel:+799999999"
-        class="pie pie_big pie_blue drop__children children"
-      >
-        <img src="../img/icons/phone.svg" alt="" />
-      </a>
-      <span class="pie pie_big pie_accent drop drop_sq" id="drop">
-        <span></span><span></span><span></span><span></span>
-      </span>
-
-      <div class="swiper headerSwiper">
-        <div class="swiper-wrapper swiper-wrapper_pb">
-          <div class="swiper-slide swiper-slide_pb header__bottom">
-            <div class="container container-slider carousel">
-              <h2 class="carousel__title">
-                Новый проект <br />
-                со вторым <br />
-                светом
-              </h2>
-              <p class="carousel__text">
-                Запишитесь на экскурсию, <br />
-                чтобы увидеть это первыми!
-              </p>
+        <div class="section__bottom">
+          <div class="card-about card-about_center">
+            <div class="card-about__top">
               <div>
-                <buttton class="carousel__btn button button_accent"
-                  >Записаться на экскурсию</buttton
-                >
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide swiper-slide_pb header__bottom">
-            <div class="container container-slider carousel">
-              <h2 class="carousel__title">
-                Новый проект <br />
-                со вторым <br />
-                светом
-              </h2>
-              <p class="carousel__text">
-                Запишитесь на экскурсию, <br />
-                чтобы увидеть это первыми!
-              </p>
-              <div>
-                <buttton class="carousel__btn button button_accent"
-                  >Записаться на экскурсию</buttton
-                >
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide swiper-slide_pb header__bottom">
-            <div class="container container-slider carousel">
-              <h2 class="carousel__title">
-                Новый проект <br />
-                со вторым <br />
-                светом
-              </h2>
-              <p class="carousel__text">
-                Запишитесь на экскурсию, <br />
-                чтобы увидеть это первыми!
-              </p>
-              <div>
-                <buttton class="carousel__btn button button_accent"
-                  >Записаться на экскурсию</buttton
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-numbs swiper-numbs_position"></div>
-      </div>
-      <div class="container">
-        <div class="pick-up">
-          <div class="pick-up__left">
-            <a href="#">Готовые дома</a>
-            <a href="#">Проекты домов</a>
-            <a href="#">Посёлки</a>
-          </div>
-          <div class="pick-up__right">
-            <div class="selection"><a href="#">Подобрать</a></div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!--header end-->
-    <main class="wrapper">
-      <section class="section">
-        <div class="container">
-          <div class="section__crumbs bread-crumbs">
-            <a href="home.html">ПОРАДОМ</a>
-            <a href="about-developer.html">Компания ПОРАДОМ</a>
-            <a href="#">О застройщике</a>
-          </div>
-          <div class="section__top">
-            <h2 class="section__title">Компания ПОРАДОМ</h2>
-          </div>
-          <div class="section__btns">
-            <div id="reviews-btns" class="button__group">
-              <a href="#" class="button__round button__round_active"
-                >О застройщике</a
-              >
-              <a href="#" class="button__round">Команда</a>
-              <a href="#" class="button__round">Пресс-центр</a>
-            </div>
-          </div>
-          <div class="section__bottom">
-            <div class="card-about">
-              <div class="card-about__top">
                 <p>
                   Приветствую всех, кто в поисках собственного загородного дома
                   зашёл на наш сайт! Для меня и всей нашей команды слова
@@ -387,624 +342,549 @@
                   жизни — это норма, и мы готовы поддержать всех, кто мечтает
                   жить в доме такого типа, жить по-новому, с комфортом.
                 </p>
-                <br />
+
+              </div>
+              <div>
+
                 <p class="text__italic">С уважением, основатель ДК ПОРАДОМ</p>
                 <p class="text__italic">Ринат Зайнуллин</p>
               </div>
-              <div class="card-about__bottom">
-                <img src="../img/rinat.jpg" alt="" class="card-about__img" />
-              </div>
+            </div>
+            <div class="card-about__bottom">
+              <img src="../img/rinat.jpg" alt="" class="card-about__img" />
             </div>
           </div>
         </div>
-      </section>
-      <section class="section results section__bg section__bg_secondary">
-        <div class="container">
-          <div class="content-title-nonumber">
-            <h2 class="title">
-              <span>ДК ПОРАДОМ – лидер</span>
-              <br />
-              <span>малоэтажного</span>
-              <br />
-              <span>строительства республики</span>
-            </h2>
-          </div>
-          <div class="results__content">
-            <p class="m-b--30">
-              Входит в ТОП-3 застройщиков <br />
-              по объемам строительства
-            </p>
-            <div class="cards-mini">
-              <div class="mini">
-                <h2 class="mini__title text__color-primary">10 лет</h2>
-                <p>в строительстве загородных домов</p>
-              </div>
-              <div class="mini">
-                <h2 class="mini__title text__color-primary">300</h2>
-                <p>построенных домов и таунхаусов</p>
-              </div>
-              <div class="mini">
-                <h2 class="mini__title text__color-primary">100</h2>
-                <p>домов ежегодно</p>
-              </div>
-              <div class="mini">
-                <h2 class="mini__title text__color-primary">400+</h2>
-                <p>счастливых семей</p>
-              </div>
-              <div class="mini">
-                <h2 class="mini__title text__color-primary">X</h2>
-                <p>благоустроенных посёлков</p>
-              </div>
-              <div class="mini">
-                <h2 class="mini__title text__color-primary">15 лет</h2>
-                <p>гарантии на строительство</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section road-map">
-        <div class="container">
-          <div class="section__top">
-            <h2 class="section__title">
-              История домостроительной компании ПОРАДОМ
-            </h2>
-          </div>
-
-          <div class="road-map__list">
-            <div class="road-map__item">
-              <div class="year-circle">
-                <h2>2012</h2>
-              </div>
-              <p class="road-map__text">
-                Основание компании, строительство первого дома
-              </p>
-            </div>
-            <div class="road-map__item">
-              <div class="year-circle">
-                <h2>2013</h2>
-              </div>
-              <p class="road-map__text">
-                Основание компании, строительство первого дома
-              </p>
-            </div>
-            <div class="road-map__item">
-              <div class="year-circle">
-                <h2>2014</h2>
-              </div>
-              <p class="road-map__text">
-                Основание компании, строительство первого дома
-              </p>
-            </div>
-            <div class="road-map__item">
-              <div class="year-circle">
-                <h2>2015</h2>
-              </div>
-              <p class="road-map__text">
-                Основание компании, строительство первого дома
-              </p>
-            </div>
-            <div class="road-map__item">
-              <div class="year-circle">
-                <h2>2016</h2>
-              </div>
-              <p class="road-map__text">
-                Строительство второй очереди посёлка Девичья Гора и первой
-                очереди поселка Есенинский . Открытие детского сада в Девичьей
-                Горе
-              </p>
-            </div>
-            <div class="road-map__item">
-              <div class="year-circle">
-                <h2>2017</h2>
-              </div>
-              <p class="road-map__text">
-                Строительство посёлка Цветы Башкирии и новых очередей поселка
-                Есенинский . Открытие детской площадки в Есенинском
-              </p>
-            </div>
-            <div class="road-map__item">
-              <div class="year-circle">
-                <h2>2018</h2>
-              </div>
-              <p class="road-map__text">
-                Строительство следующей очереди посёлка Есенинский
-              </p>
-            </div>
-            <div class="road-map__item">
-              <div class="year-circle">
-                <h2>2019</h2>
-              </div>
-              <p class="road-map__text">
-                Строительство новых очередей в поселках Цветы Башкирии, Девичья
-                Гора . Открытие в центре города главного офиса компании .
-                Основание сервисной компании «Смородина». Запуск новой серии
-                домов NATUR-A
-              </p>
-            </div>
-            <div class="road-map__item">
-              <div class="year-circle">
-                <h2>2020</h2>
-              </div>
-              <p class="road-map__text">
-                Запуск новой серии домов Первый дом . Строительство таунхаусов в
-                Нагаевской Роще
-              </p>
-            </div>
-            <div class="road-map__item">
-              <div class="year-circle">
-                <h2>2021</h2>
-              </div>
-              <p class="road-map__text">
-                ПОРАДОМ вошел в Ассоциацию застройщиков РБ
-              </p>
-            </div>
-            <div class="road-map__item">
-              <div class="year-circle">
-                <h2>2022</h2>
-              </div>
-              <p class="road-map__text">
-                10 лет компании ПОРАДОМ . Запуск нового проекта Скай Лайт 165 с
-                вторым светом
-              </p>
-            </div>
-          </div>
-          <div class="swiper roadMap">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="road-map__item">
-                  <div class="year-circle">
-                    <h2>2012</h2>
-                  </div>
-                  <p class="road-map__text">
-                    Основание компании, строительство первого дома
-                  </p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="road-map__item">
-                  <div class="year-circle">
-                    <h2>2013</h2>
-                  </div>
-                  <p class="road-map__text">
-                    Строительство первых домов в Акбердино . Первое место в
-                    «Кровельном марафоне – 2013» в номинации СКАТНАЯ КРОВЛЯ
-                  </p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="road-map__item">
-                  <div class="year-circle">
-                    <h2>2014</h2>
-                  </div>
-                  <p class="road-map__text">
-                    Строительство первой очереди поселка Девичья Гора.
-                    Проектирование и запуск серии домов «Европа»
-                  </p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="road-map__item">
-                  <div class="year-circle">
-                    <h2>2015</h2>
-                  </div>
-                  <p class="road-map__text">
-                    Проектирование и запуск нескольких серии домов: Классик, Ред
-                    Лайт, Кирпичный Стандарт . Начало строительства детского
-                    сада в Девичьей Горе
-                  </p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="road-map__item">
-                  <div class="year-circle">
-                    <h2>2016</h2>
-                  </div>
-                  <p class="road-map__text">
-                    Строительство второй очереди посёлка Девичья Гора и первой
-                    очереди поселка Есенинский . Открытие детского сада в
-                    Девичьей Горе
-                  </p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="road-map__item">
-                  <div class="year-circle">
-                    <h2>2017</h2>
-                  </div>
-                  <p class="road-map__text">
-                    Строительство посёлка Цветы Башкирии и новых очередей
-                    поселка Есенинский . Открытие детской площадки в Есенинском
-                  </p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="road-map__item">
-                  <div class="year-circle">
-                    <h2>2018</h2>
-                  </div>
-                  <p class="road-map__text">
-                    Строительство следующей очереди посёлка Есенинский
-                  </p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="road-map__item">
-                  <div class="year-circle">
-                    <h2>2019</h2>
-                  </div>
-                  <p class="road-map__text">
-                    Строительство новых очередей в поселках Цветы Башкирии,
-                    Девичья Гора . Открытие в центре города главного офиса
-                    компании . Основание сервисной компании «Смородина». Запуск
-                    новой серии домов NATUR-A
-                  </p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="road-map__item">
-                  <div class="year-circle">
-                    <h2>2020</h2>
-                  </div>
-                  <p class="road-map__text">
-                    Запуск новой серии домов Первый дом . Строительство
-                    таунхаусов в Нагаевской Роще
-                  </p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="road-map__item">
-                  <div class="year-circle">
-                    <h2>2021</h2>
-                  </div>
-                  <p class="road-map__text">
-                    ПОРАДОМ вошел в Ассоциацию застройщиков РБ
-                  </p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="road-map__item">
-                  <div class="year-circle">
-                    <h2>2022</h2>
-                  </div>
-                  <p class="road-map__text">
-                    10 лет компании ПОРАДОМ . Запуск нового проекта Скай Лайт
-                    165 с вторым светом
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-arrows">
-              <div class="swiper-prev-arrow"></div>
-              <div class="swiper-next-arrow"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="complex section__bg section__bg_secondary">
-        <img src="../img/about/road-map.jpg" class="w-full" alt="" />
-        <div class="container">
-          <div class="content-title-translate">
-            <h2 class="title">
-              <span>ПОРАДОМ сегодня –</span>
-              <br />
-              <span>ПОЛНЫЙ КОМПЛЕКС</span>
-              <br />
-              <span>работ от проекта</span>
-              <br />
-              <span>до свежей травы </span> <br />
-              <span>на газоне</span>
-            </h2>
-          </div>
-          <div>
-            <div class="complex__content">
-              <img
-                src="../img/about/complex.jpg"
-                class="complex__content-image"
-                alt=""
-              />
-              <div class="about-work__list">
-                <div class="about-work__item">
-                  <div class="about-work__left">01 —</div>
-                  <div class="about-work__right">
-                    <h4>Домостроительная компания ПОРАДОМ</h4>
-                    <p>
-                      Проектирование и строительство индивидуальных загородных
-                      домов, таунхаусов в собственных поселках. Разработка и
-                      реализация девелоперских проектов полного цикла
-                    </p>
-                  </div>
-                </div>
-                <div class="about-work__item">
-                  <div class="about-work__left">02 —</div>
-                  <div class="about-work__right">
-                    <h4>Студия дизайна и чистовой отделки ПОРАДОМ</h4>
-                    <p>
-                      Разработка индивидуальных дизайн-проектов интерьеров .
-                      Чистовая отделка под ключ
-                    </p>
-                  </div>
-                </div>
-                <div class="about-work__item">
-                  <div class="about-work__left">03 —</div>
-                  <div class="about-work__right">
-                    <h4>Сервисная компания СМОРОДИНА</h4>
-                    <p>
-                      Благоустройство и ежедневное обслуживание коттеджных
-                      поселков
-                    </p>
-                  </div>
-                </div>
-                <div class="about-work__item">
-                  <div class="about-work__left">04 —</div>
-                  <div class="about-work__right">
-                    <h4>Компания БАТРАК</h4>
-                    <p>
-                      Аренда спецтехники и механизированные работы на
-                      строительных объектах
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section section__bg section__bg_secondary">
-        <div class="container">
-          <h2 class="title m-b--20">
-            <span>Высокий стандарт</span>
+      </div>
+    </section>
+    <section class="section results section__bg section__bg_secondary">
+      <div class="container">
+        <div class="content-title-nonumber">
+          <h2 class="title">
+            <span>ДК ПОРАДОМ – лидер</span>
             <br />
-            <span>ПОРАДОМ</span>
+            <span>малоэтажного</span>
+            <br />
+            <span>строительства республики</span>
           </h2>
+        </div>
+        <div class="results__content">
+          <p class="m-b--30">
+            Входит в ТОП-3 застройщиков <br />
+            по объемам строительства
+          </p>
           <div class="cards-mini">
             <div class="mini">
-              <img
-                src="../img/icons/medal.svg"
-                alt=""
-                class="mini__icon mini__icon_lg mini__icon_primary"
-              />
-              <p class="mini__text">Безупречное качество строительства</p>
+              <h2 class="mini__title text__color-primary">10 лет</h2>
+              <p>в строительстве загородных домов</p>
             </div>
             <div class="mini">
-              <img
-                src="../img/icons/sheet.svg"
-                alt=""
-                class="mini__icon mini__icon_lg mini__icon_primary"
-              />
-              <p class="mini__text">
-                Экологичные и безопасные материалов и технологий
-              </p>
+              <h2 class="mini__title text__color-primary">300</h2>
+              <p>построенных домов и таунхаусов</p>
             </div>
             <div class="mini">
-              <img
-                src="../img/icons/area.svg"
-                alt=""
-                class="mini__icon mini__icon_lg mini__icon_primary"
-              />
-              <p class="mini__text">Земельные участки от 6 соток</p>
+              <h2 class="mini__title text__color-primary">100</h2>
+              <p>домов ежегодно</p>
             </div>
             <div class="mini">
-              <img
-                src="../img/icons/fire.svg"
-                alt=""
-                class="mini__icon mini__icon_lg mini__icon_primary"
-              />
-              <p class="mini__text">
-                Центральные коммуникации: газ, электричество
-              </p>
+              <h2 class="mini__title text__color-primary">400+</h2>
+              <p>счастливых семей</p>
             </div>
             <div class="mini">
-              <img
-                src="../img/icons/garage.svg"
-                alt=""
-                class="mini__icon mini__icon_lg mini__icon_primary"
-              />
-              <p class="mini__text">
-                Реализация под ключ: гараж, терраса, забор, благоустройство
-              </p>
+              <h2 class="mini__title text__color-primary">X</h2>
+              <p>благоустроенных посёлков</p>
             </div>
             <div class="mini">
-              <img
-                src="../img/icons/bricks.svg"
-                alt=""
-                class="mini__icon mini__icon_lg mini__icon_primary"
-              />
-              <p class="mini__text">
-                Различные виды внутренней отделки домов на выбор
-              </p>
+              <h2 class="mini__title text__color-primary">15 лет</h2>
+              <p>гарантии на строительство</p>
             </div>
-            <div class="mini">
-              <img
-                src="../img/icons/brain.svg"
-                alt=""
-                class="mini__icon mini__icon_lg mini__icon_primary"
-              />
-              <p class="mini__text">Продуманная инфраструктура посёлков</p>
-            </div>
-            <div class="mini">
-              <img
-                src="../img/icons/wallet.svg"
-                alt=""
-                class="mini__icon mini__icon_lg mini__icon_primary"
-              />
-              <p class="mini__text">
-                Гибкая система оплаты. Рассрочка. Ипотека. Материнский капитал
-              </p>
-            </div>
-            <div class="mini">
-              <img
-                src="../img/icons/scales.svg"
-                alt=""
-                class="mini__icon mini__icon_lg mini__icon_primary"
-              />
-              <p class="mini__text">Юридическое сопровождение сделки</p>
-            </div>
-            <div class="mini">
-              <img
-                src="../img/icons/cup.svg"
-                alt=""
-                class="mini__icon mini__icon_lg mini__icon_primary"
-              />
-              <p class="mini__text">Гарантия на дома 5 лет</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <!--footer start-->
-    <footer class="footer">
-      <div class="footer__m">
-        <div class="container">
-          <div class="accordion" id="accordion">
-            <h3 class="accordion-header">
-              Покупателям <span class="accordion__line"></span>
-            </h3>
-            <div
-              class="accordion-body tabs__text"
-              id="tabs-1"
-              style="height: 0px"
-            >
-              <a href="#"> Проектирование </a>
-              <a href="#">Проектирование</a>
-              <a href="#">Проектирование</a>
-              <a href="#">Проектирование</a>
-              <a href="#">Проектирование</a>
-              <a href="#">Проектирование</a>
-            </div>
-            <h3 class="accordion-header">
-              Стандарты <span class="accordion__line"></span>
-            </h3>
-            <div
-              class="accordion-body tabs__text"
-              id="tabs-2"
-              style="height: 0px"
-            >
-              <a href="#">Проектирование</a>
-            </div>
-            <h3 class="accordion-header">
-              О застройщике <span class="accordion__line"></span>
-            </h3>
-            <div
-              class="accordion-body tabs__text"
-              id="tabs-3"
-              style="height: 0px"
-            >
-              <a href="#">Проектирование</a>
-            </div>
-            <h3 class="accordion-header">Контакты</h3>
-
-            <div
-              class="accordion-body tabs__text"
-              id="tabs-4"
-              style="height: 0px"
-            >
-              <a href="#">Проектирование</a>
-            </div>
-          </div>
-        </div>
-        <div class="footer__line"></div>
-        <div class="container">
-          <div class="footer__content">
-            <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
-            <div class="footer__socials social">
-              <a href="#" class="pie pie_primary social__link_s">
-                <img
-                  src="../img/icons/youtube.svg"
-                  alt=""
-                  class="social__icon"
-                />
-              </a>
-
-              <a href="#" class="pie pie_primary social__link_s">
-                <img
-                  src="../img/icons/facebook.svg"
-                  alt=""
-                  class="social__icon"
-                />
-              </a>
-              <a href="#" class="pie pie_primary social__link_s">
-                <img src="../img/icons/vk.svg" alt="" class="social__icon" />
-              </a>
-            </div>
-            <div class="footer__contact">
-              <address>г.Уфа, ул.Мустая Карима, д.16</address>
-              <a href="tell:73472008719">+7 (347) 200-87-19</a>
-            </div>
-            <p class="development">
-              Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
-            </p>
           </div>
         </div>
       </div>
-      <div class="footer__d">
-        <div class="container">
-          <div class="footer__top">
-            <div class="footer__top-left">
-              <div class="footer__content">
-                <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
-                <div class="footer__socials social">
-                  <a href="#" class="pie pie_primary social__link_s">
-                    <img
-                      src="../img/icons/youtube.svg"
-                      alt=""
-                      class="social__icon"
-                    />
-                  </a>
+    </section>
+    <section class="section road-map">
+      <div class="container">
+        <div class="section__top">
+          <h2 class="section__title">
+            История домостроительной компании ПОРАДОМ
+          </h2>
+        </div>
 
-                  <a href="#" class="pie pie_primary social__link_s">
-                    <img
-                      src="../img/icons/facebook.svg"
-                      alt=""
-                      class="social__icon"
-                    />
-                  </a>
-                  <a href="#" class="pie pie_primary social__link_s">
-                    <img
-                      src="../img/icons/vk.svg"
-                      alt=""
-                      class="social__icon"
-                    />
-                  </a>
-                </div>
-                <div class="footer__contact">
-                  <address>г.Уфа, ул.Мустая Карима, д.16</address>
-                  <a href="tell:73472008719">+7 (347) 200-87-19</a>
-                </div>
-              </div>
+        <div class="road-map__list">
+          <div class="road-map__item">
+            <div class="year-circle">
+              <h2>2012</h2>
             </div>
-            <div class="footer__top-right">
-              <div class="footer__nav">
-                <h5 class="footer__nav-header">Покупателям</h5>
-                <a href="#" class="footer__nav-item"> Поселки </a>
-                <a href="#" class="footer__nav-item"> Готовые дома </a>
-              </div>
-              <div class="footer__nav">
-                <h5 class="footer__nav-header">Покупателям</h5>
-                <a href="#" class="footer__nav-item"> Поселки </a>
-                <a href="#" class="footer__nav-item"> Готовые дома </a>
-              </div>
-              <div class="footer__nav">
-                <h5 class="footer__nav-header">Покупателям</h5>
-                <a href="#" class="footer__nav-item"> Поселки </a>
-                <a href="#" class="footer__nav-item"> Готовые дома </a>
-              </div>
-              <div class="footer__nav">
-                <h5 class="footer__nav-header">Покупателям</h5>
-                <a href="#" class="footer__nav-item"> Поселки </a>
-                <a href="#" class="footer__nav-item"> Готовые дома </a>
-              </div>
-            </div>
+            <p class="road-map__text">
+              Основание компании, строительство первого дома
+            </p>
           </div>
-          <div class="footer__bottom">
-            <p class="footer__bottom-left">Все права защищены</p>
-            <p class="development footer__bottom-right">
-              Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
+          <div class="road-map__item">
+            <div class="year-circle">
+              <h2>2013</h2>
+            </div>
+            <p class="road-map__text">
+              Основание компании, строительство первого дома
+            </p>
+          </div>
+          <div class="road-map__item">
+            <div class="year-circle">
+              <h2>2014</h2>
+            </div>
+            <p class="road-map__text">
+              Основание компании, строительство первого дома
+            </p>
+          </div>
+          <div class="road-map__item">
+            <div class="year-circle">
+              <h2>2015</h2>
+            </div>
+            <p class="road-map__text">
+              Основание компании, строительство первого дома
+            </p>
+          </div>
+          <div class="road-map__item">
+            <div class="year-circle">
+              <h2>2016</h2>
+            </div>
+            <p class="road-map__text">
+              Строительство второй очереди посёлка Девичья Гора и первой
+              очереди поселка Есенинский . Открытие детского сада в Девичьей
+              Горе
+            </p>
+          </div>
+          <div class="road-map__item">
+            <div class="year-circle">
+              <h2>2017</h2>
+            </div>
+            <p class="road-map__text">
+              Строительство посёлка Цветы Башкирии и новых очередей поселка
+              Есенинский . Открытие детской площадки в Есенинском
+            </p>
+          </div>
+          <div class="road-map__item">
+            <div class="year-circle">
+              <h2>2018</h2>
+            </div>
+            <p class="road-map__text">
+              Строительство следующей очереди посёлка Есенинский
+            </p>
+          </div>
+          <div class="road-map__item">
+            <div class="year-circle">
+              <h2>2019</h2>
+            </div>
+            <p class="road-map__text">
+              Строительство новых очередей в поселках Цветы Башкирии, Девичья
+              Гора . Открытие в центре города главного офиса компании .
+              Основание сервисной компании «Смородина». Запуск новой серии
+              домов NATUR-A
+            </p>
+          </div>
+          <div class="road-map__item">
+            <div class="year-circle">
+              <h2>2020</h2>
+            </div>
+            <p class="road-map__text">
+              Запуск новой серии домов Первый дом . Строительство таунхаусов в
+              Нагаевской Роще
+            </p>
+          </div>
+          <div class="road-map__item">
+            <div class="year-circle">
+              <h2>2021</h2>
+            </div>
+            <p class="road-map__text">
+              ПОРАДОМ вошел в Ассоциацию застройщиков РБ
+            </p>
+          </div>
+          <div class="road-map__item">
+            <div class="year-circle">
+              <h2>2022</h2>
+            </div>
+            <p class="road-map__text">
+              10 лет компании ПОРАДОМ . Запуск нового проекта Скай Лайт 165 с
+              вторым светом
             </p>
           </div>
         </div>
+        <div class="swiper roadMap">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="road-map__item">
+                <div class="year-circle">
+                  <h2>2012</h2>
+                </div>
+                <p class="road-map__text">
+                  Основание компании, строительство первого дома
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="road-map__item">
+                <div class="year-circle">
+                  <h2>2013</h2>
+                </div>
+                <p class="road-map__text">
+                  Строительство первых домов в Акбердино . Первое место в
+                  «Кровельном марафоне – 2013» в номинации СКАТНАЯ КРОВЛЯ
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="road-map__item">
+                <div class="year-circle">
+                  <h2>2014</h2>
+                </div>
+                <p class="road-map__text">
+                  Строительство первой очереди поселка Девичья Гора.
+                  Проектирование и запуск серии домов «Европа»
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="road-map__item">
+                <div class="year-circle">
+                  <h2>2015</h2>
+                </div>
+                <p class="road-map__text">
+                  Проектирование и запуск нескольких серии домов: Классик, Ред
+                  Лайт, Кирпичный Стандарт . Начало строительства детского
+                  сада в Девичьей Горе
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="road-map__item">
+                <div class="year-circle">
+                  <h2>2016</h2>
+                </div>
+                <p class="road-map__text">
+                  Строительство второй очереди посёлка Девичья Гора и первой
+                  очереди поселка Есенинский . Открытие детского сада в
+                  Девичьей Горе
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="road-map__item">
+                <div class="year-circle">
+                  <h2>2017</h2>
+                </div>
+                <p class="road-map__text">
+                  Строительство посёлка Цветы Башкирии и новых очередей
+                  поселка Есенинский . Открытие детской площадки в Есенинском
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="road-map__item">
+                <div class="year-circle">
+                  <h2>2018</h2>
+                </div>
+                <p class="road-map__text">
+                  Строительство следующей очереди посёлка Есенинский
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="road-map__item">
+                <div class="year-circle">
+                  <h2>2019</h2>
+                </div>
+                <p class="road-map__text">
+                  Строительство новых очередей в поселках Цветы Башкирии,
+                  Девичья Гора . Открытие в центре города главного офиса
+                  компании . Основание сервисной компании «Смородина». Запуск
+                  новой серии домов NATUR-A
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="road-map__item">
+                <div class="year-circle">
+                  <h2>2020</h2>
+                </div>
+                <p class="road-map__text">
+                  Запуск новой серии домов Первый дом . Строительство
+                  таунхаусов в Нагаевской Роще
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="road-map__item">
+                <div class="year-circle">
+                  <h2>2021</h2>
+                </div>
+                <p class="road-map__text">
+                  ПОРАДОМ вошел в Ассоциацию застройщиков РБ
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="road-map__item">
+                <div class="year-circle">
+                  <h2>2022</h2>
+                </div>
+                <p class="road-map__text">
+                  10 лет компании ПОРАДОМ . Запуск нового проекта Скай Лайт
+                  165 с вторым светом
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-arrows">
+            <div class="swiper-prev-arrow"></div>
+            <div class="swiper-next-arrow"></div>
+          </div>
+        </div>
       </div>
-    </footer>
-    <!--footer end-->
-  </body>
+    </section>
+    <section class="complex section__bg section__bg_secondary">
+      <img src="../img/about/road-map.jpg" class="w-full" alt="" />
+      <div class="container">
+        <div class="content-title-translate">
+          <h2 class="title">
+            <span>ПОРАДОМ сегодня –</span>
+            <br />
+            <span>ПОЛНЫЙ КОМПЛЕКС</span>
+            <br />
+            <span>работ от проекта</span>
+            <br />
+            <span>до свежей травы </span> <br />
+            <span>на газоне</span>
+          </h2>
+        </div>
+        <div>
+          <div class="complex__content">
+            <img src="../img/about/complex.jpg" class="complex__content-image" alt="" />
+            <div class="about-work__list">
+              <div class="about-work__item">
+                <div class="about-work__left">01 —</div>
+                <div class="about-work__right">
+                  <h4>Домостроительная компания ПОРАДОМ</h4>
+                  <p>
+                    Проектирование и строительство индивидуальных загородных
+                    домов, таунхаусов в собственных поселках. Разработка и
+                    реализация девелоперских проектов полного цикла
+                  </p>
+                </div>
+              </div>
+              <div class="about-work__item">
+                <div class="about-work__left">02 —</div>
+                <div class="about-work__right">
+                  <h4>Студия дизайна и чистовой отделки ПОРАДОМ</h4>
+                  <p>
+                    Разработка индивидуальных дизайн-проектов интерьеров .
+                    Чистовая отделка под ключ
+                  </p>
+                </div>
+              </div>
+              <div class="about-work__item">
+                <div class="about-work__left">03 —</div>
+                <div class="about-work__right">
+                  <h4>Сервисная компания СМОРОДИНА</h4>
+                  <p>
+                    Благоустройство и ежедневное обслуживание коттеджных
+                    поселков
+                  </p>
+                </div>
+              </div>
+              <div class="about-work__item">
+                <div class="about-work__left">04 —</div>
+                <div class="about-work__right">
+                  <h4>Компания БАТРАК</h4>
+                  <p>
+                    Аренда спецтехники и механизированные работы на
+                    строительных объектах
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section__bg section__bg_secondary">
+      <div class="container">
+        <h2 class="title m-b--20">
+          <span>Высокий стандарт</span>
+          <br />
+          <span>ПОРАДОМ</span>
+        </h2>
+        <div class="cards-mini">
+          <div class="mini">
+            <img src="../img/icons/medal.svg" alt="" class="mini__icon mini__icon_lg mini__icon_primary" />
+            <p class="mini__text">Безупречное качество строительства</p>
+          </div>
+          <div class="mini">
+            <img src="../img/icons/sheet.svg" alt="" class="mini__icon mini__icon_lg mini__icon_primary" />
+            <p class="mini__text">
+              Экологичные и безопасные материалов и технологий
+            </p>
+          </div>
+          <div class="mini">
+            <img src="../img/icons/area.svg" alt="" class="mini__icon mini__icon_lg mini__icon_primary" />
+            <p class="mini__text">Земельные участки от 6 соток</p>
+          </div>
+          <div class="mini">
+            <img src="../img/icons/fire.svg" alt="" class="mini__icon mini__icon_lg mini__icon_primary" />
+            <p class="mini__text">
+              Центральные коммуникации: газ, электричество
+            </p>
+          </div>
+          <div class="mini">
+            <img src="../img/icons/garage.svg" alt="" class="mini__icon mini__icon_lg mini__icon_primary" />
+            <p class="mini__text">
+              Реализация под ключ: гараж, терраса, забор, благоустройство
+            </p>
+          </div>
+          <div class="mini">
+            <img src="../img/icons/bricks.svg" alt="" class="mini__icon mini__icon_lg mini__icon_primary" />
+            <p class="mini__text">
+              Различные виды внутренней отделки домов на выбор
+            </p>
+          </div>
+          <div class="mini">
+            <img src="../img/icons/brain.svg" alt="" class="mini__icon mini__icon_lg mini__icon_primary" />
+            <p class="mini__text">Продуманная инфраструктура посёлков</p>
+          </div>
+          <div class="mini">
+            <img src="../img/icons/wallet.svg" alt="" class="mini__icon mini__icon_lg mini__icon_primary" />
+            <p class="mini__text">
+              Гибкая система оплаты. Рассрочка. Ипотека. Материнский капитал
+            </p>
+          </div>
+          <div class="mini">
+            <img src="../img/icons/scales.svg" alt="" class="mini__icon mini__icon_lg mini__icon_primary" />
+            <p class="mini__text">Юридическое сопровождение сделки</p>
+          </div>
+          <div class="mini">
+            <img src="../img/icons/cup.svg" alt="" class="mini__icon mini__icon_lg mini__icon_primary" />
+            <p class="mini__text">Гарантия на дома 5 лет</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--footer start-->
+  <footer class="footer">
+    <div class="footer__m">
+      <div class="container">
+        <div class="accordion" id="accordion">
+          <h3 class="accordion-header">
+            Покупателям <span class="accordion__line"></span>
+          </h3>
+          <div class="accordion-body tabs__text" id="tabs-1" style="height: 0px">
+            <a href="#"> Проектирование </a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+          </div>
+          <h3 class="accordion-header">
+            Стандарты <span class="accordion__line"></span>
+          </h3>
+          <div class="accordion-body tabs__text" id="tabs-2" style="height: 0px">
+            <a href="#">Проектирование</a>
+          </div>
+          <h3 class="accordion-header">
+            О застройщике <span class="accordion__line"></span>
+          </h3>
+          <div class="accordion-body tabs__text" id="tabs-3" style="height: 0px">
+            <a href="#">Проектирование</a>
+          </div>
+          <h3 class="accordion-header">Контакты</h3>
+
+          <div class="accordion-body tabs__text" id="tabs-4" style="height: 0px">
+            <a href="#">Проектирование</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__line"></div>
+      <div class="container">
+        <div class="footer__content">
+          <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
+          <div class="footer__socials social">
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/youtube.svg" alt="" class="social__icon" />
+            </a>
+
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/facebook.svg" alt="" class="social__icon" />
+            </a>
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+            </a>
+          </div>
+          <div class="footer__contact">
+            <address>г.Уфа, ул.Мустая Карима, д.16</address>
+            <a href="tell:73472008719">+7 (347) 200-87-19</a>
+          </div>
+          <p class="development">
+            Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer__d">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__top-left">
+            <div class="footer__content">
+              <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
+              <div class="footer__socials social">
+                <a href="#" class="pie pie_primary social__link_s">
+                  <img src="../img/icons/youtube.svg" alt="" class="social__icon" />
+                </a>
+
+                <a href="#" class="pie pie_primary social__link_s">
+                  <img src="../img/icons/facebook.svg" alt="" class="social__icon" />
+                </a>
+                <a href="#" class="pie pie_primary social__link_s">
+                  <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+                </a>
+              </div>
+              <div class="footer__contact">
+                <address>г.Уфа, ул.Мустая Карима, д.16</address>
+                <a href="tell:73472008719">+7 (347) 200-87-19</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__top-right">
+            <div class="footer__nav">
+              <h5 class="footer__nav-header">Покупателям</h5>
+              <a href="#" class="footer__nav-item"> Поселки </a>
+              <a href="#" class="footer__nav-item"> Готовые дома </a>
+            </div>
+            <div class="footer__nav">
+              <h5 class="footer__nav-header">Покупателям</h5>
+              <a href="#" class="footer__nav-item"> Поселки </a>
+              <a href="#" class="footer__nav-item"> Готовые дома </a>
+            </div>
+            <div class="footer__nav">
+              <h5 class="footer__nav-header">Покупателям</h5>
+              <a href="#" class="footer__nav-item"> Поселки </a>
+              <a href="#" class="footer__nav-item"> Готовые дома </a>
+            </div>
+            <div class="footer__nav">
+              <h5 class="footer__nav-header">Покупателям</h5>
+              <a href="#" class="footer__nav-item"> Поселки </a>
+              <a href="#" class="footer__nav-item"> Готовые дома </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__bottom-left">Все права защищены</p>
+          <p class="development footer__bottom-right">
+            Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--footer end-->
+</body>
+
 </html>

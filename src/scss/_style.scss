@@ -7,14 +7,17 @@
     position: relative;
     margin: 0 -#{$gap-m};
     padding-bottom: 55px;
+
     @include desktop-sm {
       margin: 0;
       margin-right: -60px;
       padding-bottom: 100px;
     }
   }
+
   &__bottom {
     margin-top: 20px;
+
     @include desktop-sm {
       margin-top: 40px;
     }
@@ -22,6 +25,7 @@
 
   &__item {
     gap: 20px;
+
     @include desktop-sm {
       flex-basis: 420px;
       gap: 30px;
@@ -32,7 +36,7 @@
     position: relative;
     margin-bottom: 10px;
 
-    & > img {
+    &>img {
       width: 100%;
       margin-bottom: 20px;
     }
@@ -50,21 +54,26 @@
       width: 280px;
       margin-left: auto;
       z-index: 8;
+
       @include desktop-sm {
         width: 660px;
         height: 440px;
       }
     }
+
     &__image {
       width: 200px;
       margin: 0 0 0 auto;
+
       @include desktop-sm {
         width: 660px;
         height: 440px;
       }
     }
+
     &__content {
       z-index: 9;
+
       @include desktop-sm {
         position: absolute;
         top: 348px;
@@ -72,8 +81,9 @@
         left: 152px;
       }
     }
+
     &__title {
-      & > span:first-child {
+      &>span:first-child {
         display: block;
 
         @include desktop-sm {
@@ -124,12 +134,17 @@
     overflow: hidden;
 
     @include desktop-sm {
-      width: calc(100% - 600px);
-      margin: 0 auto;
+
       display: flex;
     }
 
+    &_center {
+      width: calc(100% - 600px);
+      margin: 0 auto;
+    }
+
     &__top {
+
       padding: 30px 21px;
       background-color: #f2f2f2;
       color: $black;
@@ -137,6 +152,9 @@
       line-height: 130%;
 
       @include desktop-sm {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         padding: 60px 60px;
         order: 2;
         font-size: 18px;
@@ -147,8 +165,7 @@
     &__bottom {
       flex-shrink: 0;
 
-      & > img {
-      }
+      &>img {}
     }
 
     &__img {
@@ -168,6 +185,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     row-gap: 30px;
+
     @include desktop-sm {
       gap: 75px;
       row-gap: 40px;
@@ -175,25 +193,31 @@
       flex-wrap: wrap;
       // grid-template-columns: repeat(3, minmax(0, 190px));
     }
+
     .mini {
       text-align: center;
+
       @include desktop-sm {
         flex-basis: 190px;
       }
-      & > h2 {
+
+      &>h2 {
         font-size: 26px;
         line-height: 120%;
+
         @include desktop-sm {
           font-size: 48px;
           line-height: 100%;
         }
       }
-      & > p {
+
+      &>p {
         @include desktop-sm {
           font-size: 16px;
           line-height: 130%;
         }
       }
+
       &__block {
         border-radius: 4px;
         text-align: center;
@@ -220,6 +244,11 @@
         &_lg {
           width: 72px;
           height: 72px;
+
+          @include desktop-sm {
+            width: 90px;
+            height: 90px;
+          }
         }
 
         &_secondary {
@@ -235,11 +264,9 @@
         margin-bottom: 4px;
       }
 
-      &__top {
-      }
+      &__top {}
 
-      &__bottom {
-      }
+      &__bottom {}
     }
   }
 }
@@ -279,8 +306,7 @@
       margin-right: 16px;
     }
 
-    &__right {
-    }
+    &__right {}
   }
 }
 
@@ -293,10 +319,12 @@
     justify-content: space-between;
     align-items: baseline;
   }
+
   &__list {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
     @include desktop-sm {
       gap: 60px;
     }
@@ -324,6 +352,7 @@
     line-height: 120%;
     color: $primary;
     margin-right: 18px;
+
     @include desktop-sm {
       font-size: 26px;
       line-height: 120%;
@@ -334,8 +363,10 @@
     @include desktop-sm {
       max-width: 386px;
     }
-    & > h4 {
+
+    &>h4 {
       margin-bottom: 6px;
+
       @include desktop-sm {
         margin-bottom: 20px;
         font-size: 26px;
@@ -381,11 +412,11 @@
     flex-direction: column;
     gap: 20px;
 
-    & > a {
+    &>a {
       color: #fff;
+      text-decoration: underline;
     }
   }
 
-  &__right {
-  }
+  &__right {}
 }

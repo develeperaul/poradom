@@ -46,21 +46,22 @@
 
 .bg {
   &-vacant {
-    background-color: $vacant !important;
+    background-color: $vacant  !important;
   }
 
   &-booked {
-    background-color: $booked !important;
+    background-color: $booked  !important;
   }
 
   &-sold {
-    background-color: $sold !important;
+    background-color: $sold  !important;
   }
 
   &-ready {
-    background-color: $ready !important;
+    background-color: $ready  !important;
   }
 }
+
 .transform {
   &-y {
     &---12 {
@@ -92,12 +93,12 @@
     letter-spacing: -0.03em;
   }
 
-  & > span {
+  &>span {
     z-index: 10;
     position: relative;
   }
 
-  & > span:first-child {
+  &>span:first-child {
     position: relative;
     padding-top: 10px;
 
@@ -124,7 +125,7 @@
 }
 
 .title_primary {
-  & > span:first-child {
+  &>span:first-child {
     position: relative;
     z-index: 10;
 
@@ -260,10 +261,12 @@
     line-height: 19px;
     padding: 16px;
     background-color: transparent;
+
     @include desktop-sm {
       font-size: 26px;
       line-height: 120%;
     }
+
     &-white {
       border: 1px solid #fff;
       color: #fff;
@@ -346,7 +349,7 @@
   display: flex;
   flex-shrink: 0;
 
-  & > img {
+  &>img {
     width: 50%;
     margin: 0 auto;
   }
@@ -380,13 +383,11 @@
   &__play {
     width: 48px;
     height: 48px;
-    background: linear-gradient(
-      180deg,
-      #fe497f -20.21%,
-      #ed1556 28.44%,
-      #d10945 74.14%,
-      #d10945 74.14%
-    );
+    background: linear-gradient(180deg,
+        #fe497f -20.21%,
+        #ed1556 28.44%,
+        #d10945 74.14%,
+        #d10945 74.14%);
 
     &_lg {
       width: 48px;
@@ -410,7 +411,7 @@
     height: 36px;
   }
 
-  & > span {
+  &>span {
     display: inline-block;
     height: 13px;
     width: 1px;
@@ -456,6 +457,7 @@
     }
 
     &:nth-child(2) {
+
       &::after,
       &::before {
         top: 0;
@@ -480,7 +482,7 @@
   &_active:hover {
     background-color: #0099e0;
 
-    & > span {
+    &>span {
       background-color: #e5e7ea;
 
       &::after,
@@ -499,6 +501,7 @@
   font-size: 16px;
   line-height: 130%;
   margin-top: 30px;
+
   @include desktop-sm {
     margin-top: 60px;
   }
@@ -641,16 +644,19 @@
     border-radius: 0 0 4px 4px;
     display: flex;
     justify-content: space-between;
+
     & .button {
       &__group {
         @include desktop-sm {
           gap: 8px;
         }
       }
+
       &__round {
         padding: 8px 16px;
       }
     }
+
     &_l {
       display: flex;
       flex-direction: column;
@@ -712,7 +718,7 @@
       margin-top: 10px;
     }
 
-    & > img {
+    &>img {
       width: 12px;
       height: 20px;
     }
@@ -792,15 +798,18 @@
 
   //user
   &-user {
+
     // max-width: 139px;
     // width: 100%;
     @include desktop-sm {
       width: 270px;
     }
+
     &__img {
       width: 100%;
       height: 190px;
       margin-bottom: 14px;
+
       @include desktop-sm {
         height: 370px;
       }
@@ -840,7 +849,7 @@
       display: flex;
       justify-content: space-between;
 
-      & > * {
+      &>* {
         color: $black;
         padding: 13px;
         border: 1px solid $border;
@@ -853,13 +862,13 @@
         width: 100%;
       }
 
-      & > *:first-child {
+      &>*:first-child {
         padding-right: 26px;
         padding-left: 13px;
         margin-right: 16px;
       }
 
-      & > *:last-child {
+      &>*:last-child {
         padding-right: 13px;
         padding-left: 26px;
       }
@@ -902,12 +911,13 @@
         padding: 0;
         justify-content: space-between;
       }
+
       &_column {
         padding-top: 24px;
         flex-direction: column;
       }
 
-      & > .card__link {
+      &>.card__link {
         display: none;
 
         @include desktop-sm {
@@ -1013,7 +1023,7 @@
       opacity: 0.5;
     }
 
-    &_active > &__progress {
+    &_active>&__progress {
       opacity: 1;
       background-color: #0099e0;
     }
@@ -1034,13 +1044,13 @@
     }
 
     &_active &__right {
-      & > svg {
+      &>svg {
         @include desktop-sm {
           display: none;
         }
       }
 
-      & > img {
+      &>img {
         @include desktop-sm {
           width: 28px;
           height: 24px;
@@ -1058,11 +1068,11 @@
         gap: 29px;
       }
 
-      & > img {
+      &>img {
         display: none;
       }
 
-      & > svg {
+      &>svg {
         display: none;
 
         @include desktop-sm {
@@ -1080,7 +1090,7 @@
       display: none;
     }
 
-    &_active > &__wrapper > &__numb::after {
+    &_active>&__wrapper>&__numb::after {
       position: absolute;
       content: "";
       width: 10px;
@@ -1118,11 +1128,7 @@
     // min-width: 180px;
     max-height: 0;
     transition: max-height 0.2s ease-in-out;
-    filter: drop-shadow(0px 47px 19px rgba(0, 0, 0, 0.01))
-      drop-shadow(0px 26px 16px rgba(0, 0, 0, 0.05))
-      drop-shadow(0px 12px 12px rgba(0, 0, 0, 0.09))
-      drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1))
-      drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0px 47px 19px rgba(0, 0, 0, 0.01)) drop-shadow(0px 26px 16px rgba(0, 0, 0, 0.05)) drop-shadow(0px 12px 12px rgba(0, 0, 0, 0.09)) drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
 
     @include desktop-sm {
       width: 220px;
@@ -1170,32 +1176,35 @@
     justify-content: space-between;
     padding: 70px;
   }
+
   &-s {
     &--80 {
       margin-top: 80px;
     }
   }
+
   &__column {
     padding: 40px;
     flex-direction: column;
 
     height: fit-content;
+
     @include desktop-sm {
       max-width: 350px;
     }
+
     & .button {
       margin-top: 10px;
     }
+
     & .form__inputs {
       flex-direction: column;
     }
   }
 
-  &__top {
-  }
+  &__top {}
 
-  &__bottom {
-  }
+  &__bottom {}
 
   &__inputs {
     @include desktop-sm {
@@ -1217,11 +1226,13 @@
   &__title {
     margin-bottom: 20px;
   }
+
   &__top {
     @include desktop-sm {
       max-width: 385px;
     }
   }
+
   &__text {
     margin-top: -10px;
     margin-bottom: 20px;
@@ -1270,7 +1281,7 @@
   display: flex;
   // justify-content: flex-end;
   align-items: center;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   gap: 5px;
 
   &__title {
@@ -1340,12 +1351,12 @@
   white-space: nowrap;
   flex-wrap: wrap;
 
-  > *:last-child {
+  >*:last-child {
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
-  & > * {
+  &>* {
     color: $primary;
     display: inline-block;
     position: relative;
@@ -1477,7 +1488,7 @@
       gap: 70px;
     }
 
-    & > img {
+    &>img {
       width: 100%;
 
       @include desktop-sm {
@@ -1537,8 +1548,8 @@
         top: 50%;
       }
 
-      & > .swiper-next,
-      & > .swiper-prev {
+      &>.swiper-next,
+      &>.swiper-prev {
         @include desktop-sm {
           top: auto;
         }
@@ -1551,18 +1562,23 @@
   &__card {
     position: relative;
     width: 100%;
+
     @include desktop-sm {
       // max-width: 420px;
     }
-    & > img {
+
+    &>img {
       width: 100%;
     }
-    & > p {
+
+    &>p {
       margin-top: 10px;
+
       @include desktop-sm {
         margin-top: 20px;
       }
     }
+
     &-title {
       margin-top: 20px;
     }
@@ -1720,8 +1736,7 @@
     }
   }
 
-  &__text {
-  }
+  &__text {}
 
   &__cards {
     display: grid;
@@ -1771,7 +1786,7 @@
   align-items: center;
   color: #fff;
 
-  & > h2 {
+  &>h2 {
     font-size: 26px;
     line-height: 120%;
   }
@@ -1786,7 +1801,7 @@
   justify-content: center;
   border-radius: 999999px;
 
-  & > a {
+  &>a {
     color: #fff;
   }
 }
@@ -1824,6 +1839,7 @@
       padding-left: 0;
       margin-bottom: 40px;
     }
+
     &-nonumber {
       padding-top: 40px;
       margin-bottom: 20px;
@@ -1836,9 +1852,11 @@
         margin-bottom: 40px;
       }
     }
+
     &-translate {
       margin-bottom: 20px;
       color: #fff;
+
       @include desktop-sm {
         transform: translateY(-97px);
         margin-left: 300px;
@@ -1899,7 +1917,7 @@
     &__image {
       grid-area: A;
 
-      & .navigation__card > img {
+      & .navigation__card>img {
         max-height: 760px;
         height: 760px;
       }
@@ -1972,6 +1990,7 @@
 
 .list-choice {
   display: none;
+
   @include desktop-sm {
     display: flex;
     flex-direction: column;
@@ -1980,8 +1999,9 @@
     line-height: 120%;
     width: 350px;
   }
+
   &__item {
-    & > a {
+    &>a {
       color: $black;
 
       &:hover {

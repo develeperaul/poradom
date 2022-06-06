@@ -11,7 +11,7 @@
     flex-direction: column;
   }
 
-  & > .container {
+  &>.container {
     // height: 100%;
   }
 
@@ -33,6 +33,7 @@
     padding-top: 12px;
     padding-bottom: 12px;
     height: 64px;
+
     @include desktop-sm {
       grid-template-columns: repeat(6, minmax(0, 1fr));
       display: grid;
@@ -54,7 +55,8 @@
         order: 2;
         justify-self: center;
       }
-      & .logo > img {
+
+      & .logo>img {
         @include desktop-sm {
           width: 205px;
           height: 50px;
@@ -74,6 +76,7 @@
       width: 100%;
       opacity: 0;
       transition: opacity 0.2s ease;
+
       &-open {
         opacity: 1;
       }
@@ -120,6 +123,7 @@
     &_between {
       justify-content: space-between;
     }
+
     &.video {
       .video__top-image {
         @include desktop-sm {
@@ -141,6 +145,7 @@
 
   &__contact {
     color: #fff;
+
     &.contact {
       font-size: 16px;
       line-height: 180%;
@@ -195,10 +200,16 @@
       @include desktop-sm {
         font-size: 26px;
         margin-bottom: 40px;
+        line-height: 120%;
       }
     }
 
-    &__btn {
+    &__btn {}
+  }
+
+  & .video__top-image {
+    @include desktop-sm {
+      min-width: 960px;
     }
   }
 }
