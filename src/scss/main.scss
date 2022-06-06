@@ -131,7 +131,7 @@
     margin-bottom: 20px;
 
     @include desktop-sm {
-      margin-bottom: 60px;
+      margin-bottom: 40px;
       font-size: 14px;
       line-height: 130%;
     }
@@ -141,6 +141,9 @@
     @include desktop-sm {
       display: flex;
       gap: 100px;
+    }
+    &__content {
+      flex-grow: 1;
     }
   }
 }

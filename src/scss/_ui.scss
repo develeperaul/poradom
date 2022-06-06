@@ -1556,13 +1556,13 @@
     }
     & > img {
       width: 100%;
-      // margin-bottom: 10px;
-
+    }
+    & > p {
+      margin-top: 10px;
       @include desktop-sm {
-        margin-bottom: 20px;
+        margin-top: 20px;
       }
     }
-
     &-title {
       margin-top: 20px;
     }
