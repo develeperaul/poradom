@@ -17,7 +17,7 @@ class Survey {
       const popup = this.name.parentNode.querySelector(".popup");
       if (this.name.children.length > 0 && !this.getActiveClass) {
         Array.from(this.name.children).forEach((el) => {
-          if (local && el.getAttribute("data-survey_number") === local) {
+          if (el.getAttribute("data-survey_number") === local) {
             el.classList.add("card-survey_active");
             document.querySelectorAll(".card-survey").forEach((item, index) => {
               item
@@ -28,19 +28,6 @@ class Survey {
           }
 
           el.addEventListener("click", () => {
-            // document.querySelectorAll('.card-survey').forEach(item=>item.classList.add('card-survey_opacity'))
-            // el.classList.toggle('card-survey_opacity')
-            // if(this.getActiveClass){
-            //   if(el.getAttribute('class').indexOf('card-survey_active') == -1){
-            //     el.classList.add('card-survey_active')
-            //     this.updateWithProgress()
-            //     console.log(el)
-            //     popup.classList.add('popup_active')
-            //     setTimeout(()=>{
-            //       popup.classList.remove('popup_active')
-            //     }, 1500)
-            //   }
-            // }
             if (!this.getActiveClass) {
               if (!el.classList.contains("card-survey_first")) {
                 document.querySelectorAll(".card-survey").forEach((item) => {
@@ -62,6 +49,8 @@ class Survey {
                   });
                   el.classList.remove("card-survey_first");
                   el.classList.add("card-survey_active");
+                  console.log(el);
+                  console.log(el.getAttribute("data-survey_number"));
                   const localEl = el.getAttribute("data-survey_number");
                   localStorage.setItem("survey", localEl);
                   this.updateWithProgress();
@@ -111,10 +100,3 @@ class Survey {
 }
 // new Cards("new");
 new Survey("survey");
-// import '../../index.html'
-// new Dropdown("1");
-// new Dropdown("2");
-// new Dropdown("3");
-
-// new Cards('new')
-// new Survey('survey')

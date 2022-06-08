@@ -1,5 +1,5 @@
 .calc {
-  padding: 20px 30px;
+  padding: 20px 30px 30px;
   background-color: #fff;
   color: $black;
   border-radius: 4px;
@@ -43,6 +43,21 @@
     }
     &_40 {
       width: 40%;
+    }
+  }
+  &__sum {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 14px;
+      height: 14px;
+      background-image: url("../img/icons/sum.svg");
+      background-repeat: no-repeat;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%, -7px);
+      z-index: 10;
     }
   }
 }

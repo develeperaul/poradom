@@ -6,7 +6,7 @@
   background-position: center;
   background-size: cover;
   color: #fff;
-  height: 100vh;
+  height: 100%;
 
   @include desktop-sm {
     padding-bottom: 0;
@@ -34,7 +34,7 @@
       margin-left: auto;
 
       @include desktop-sm {
-
+        object-fit: cover;
         width: 100%;
         height: 700px;
       }

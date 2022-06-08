@@ -6,6 +6,7 @@
     @include desktop-sm {
       display: flex;
       gap: 120px;
+      justify-content: space-between;
     }
   }
   &__bottom {
@@ -43,6 +44,30 @@
   &__calc {
     @include desktop-sm {
       max-width: 610px;
+    }
+  }
+  &__secret {
+    &-content {
+      padding-top: 20px;
+      @include desktop-sm {
+        padding: 20px 55px 0;
+      }
+      & > p {
+        font-weight: 500;
+        color: #b5b9be;
+        font-size: 10px;
+        line-height: 100%;
+        @include desktop-sm {
+          font-size: 12px;
+          line-height: 130%;
+        }
+        &:not(:last-child) {
+          margin-bottom: 10px;
+          @include desktop-sm {
+            margin-bottom: 0;
+          }
+        }
+      }
     }
   }
 }

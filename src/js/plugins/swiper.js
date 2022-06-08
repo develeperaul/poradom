@@ -15,6 +15,8 @@ const swiper = (name, opts = {}) => {
     // },
     spaceBetween: 16,
     pagination: {
+      dynamicBullets: true,
+      dynamicMainBullets: 4,
       el: ".swiper-numbs",
       bulletActiveClass: "numb-active",
       bulletClass: "numb",
@@ -127,16 +129,9 @@ const s = new Swiper(".newsSwiper", {
   loop: false,
   // slidesPerView: 1,
   spaceBetween: 30,
-  breakpoints: {
-    767: {
-      slidesPerView: 2,
-      grid: {
-        fill: "row",
-        rows: 2,
-      },
-    },
-  },
   pagination: {
+    dynamicBullets: true,
+    dynamicMainBullets: 4,
     el: ".swiper-numbs",
     bulletActiveClass: "numb-active",
     bulletClass: "numb",
@@ -146,6 +141,19 @@ const s = new Swiper(".newsSwiper", {
       return '<span class="' + className + '">' + (index + 1) + "</span>";
     },
   },
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      grid: {
+        fill: "row",
+        rows: 2,
+      },
+      pagination: {
+        dynamicBullets: false,
+      },
+    },
+  },
+
   // grid: {
   //   rows: 2,
   // },
@@ -186,20 +194,16 @@ new newSwiper(".featuresSwiper", {
       // });
     },
   },
-  breakpoints: {
-    1440: {
-      pagination: {
-        dynamicBullets: true,
-        dynamicMainBullets: 4,
-        el: ".swiper-numbs",
-        bulletActiveClass: "numb-active",
-        bulletClass: "numb",
-        type: "bullets",
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + (index + 1) + "</span>";
-        },
-      },
+  pagination: {
+    dynamicBullets: true,
+    dynamicMainBullets: 4,
+    el: ".swiper-numbs",
+    bulletActiveClass: "numb-active",
+    bulletClass: "numb",
+    type: "bullets",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
     },
   },
 });
@@ -212,6 +216,9 @@ new newSwiper(".otherProjects", {
   breakpoints: {
     1440: {
       slidesPerView: 4,
+      pagination: {
+        dynamicBullets: false,
+      },
     },
   },
 });

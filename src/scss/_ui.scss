@@ -46,19 +46,19 @@
 
 .bg {
   &-vacant {
-    background-color: $vacant  !important;
+    background-color: $vacant !important;
   }
 
   &-booked {
-    background-color: $booked  !important;
+    background-color: $booked !important;
   }
 
   &-sold {
-    background-color: $sold  !important;
+    background-color: $sold !important;
   }
 
   &-ready {
-    background-color: $ready  !important;
+    background-color: $ready !important;
   }
 }
 
@@ -93,12 +93,12 @@
     letter-spacing: -0.03em;
   }
 
-  &>span {
+  & > span {
     z-index: 10;
     position: relative;
   }
 
-  &>span:first-child {
+  & > span:first-child {
     position: relative;
     padding-top: 10px;
 
@@ -125,7 +125,7 @@
 }
 
 .title_primary {
-  &>span:first-child {
+  & > span:first-child {
     position: relative;
     z-index: 10;
 
@@ -143,10 +143,10 @@
 }
 
 .button {
-  display: inline-block;
   gap: 11px;
-
+  display: block;
   @include desktop-sm {
+    display: inline-block;
     gap: 13px;
   }
 
@@ -205,7 +205,7 @@
     background: transparent;
     border: 1px solid $border;
     line-height: 16px;
-
+    cursor: pointer;
     @include desktop-sm {
       font-size: 16px;
       line-height: 130%;
@@ -349,7 +349,7 @@
   display: flex;
   flex-shrink: 0;
 
-  &>img {
+  & > img {
     width: 50%;
     margin: 0 auto;
   }
@@ -383,11 +383,13 @@
   &__play {
     width: 48px;
     height: 48px;
-    background: linear-gradient(180deg,
-        #fe497f -20.21%,
-        #ed1556 28.44%,
-        #d10945 74.14%,
-        #d10945 74.14%);
+    background: linear-gradient(
+      180deg,
+      #fe497f -20.21%,
+      #ed1556 28.44%,
+      #d10945 74.14%,
+      #d10945 74.14%
+    );
 
     &_lg {
       width: 48px;
@@ -411,7 +413,7 @@
     height: 36px;
   }
 
-  &>span {
+  & > span {
     display: inline-block;
     height: 13px;
     width: 1px;
@@ -457,7 +459,6 @@
     }
 
     &:nth-child(2) {
-
       &::after,
       &::before {
         top: 0;
@@ -482,7 +483,7 @@
   &_active:hover {
     background-color: #0099e0;
 
-    &>span {
+    & > span {
       background-color: #e5e7ea;
 
       &::after,
@@ -551,7 +552,7 @@
   border-radius: 4px;
   background: #fff;
   flex-grow: 1;
-  overflow: hidden;
+  // overflow: hidden;
   gap: 20px;
 
   @include desktop-sm {
@@ -591,10 +592,11 @@
   }
 
   &_label {
-    padding-top: 10px;
-
+    // padding-top: 10px;
+    margin-top: 10px;
     @include desktop-sm {
-      padding-top: 16px;
+      // padding-top: 16px;
+      margin-top: 16px;
     }
 
     &-s {
@@ -620,14 +622,18 @@
     &_p {
       position: absolute;
       left: 30px;
-      top: 20px;
+      top: 14px;
 
       @include desktop-sm {
-        top: 35px;
+        top: 20px;
       }
     }
   }
-
+  &__link-image {
+    display: block;
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+  }
   &__image {
     background-color: rgba(0, 0, 0, 0.1);
     width: 100%;
@@ -718,7 +724,7 @@
       margin-top: 10px;
     }
 
-    &>img {
+    & > img {
       width: 12px;
       height: 20px;
     }
@@ -739,10 +745,11 @@
 
   .label {
     right: 11px;
-    top: 0px;
+    top: -10px;
 
     @include desktop-sm {
       right: 30px;
+      top: -16px;
     }
 
     &__text {
@@ -798,7 +805,6 @@
 
   //user
   &-user {
-
     // max-width: 139px;
     // width: 100%;
     @include desktop-sm {
@@ -849,7 +855,7 @@
       display: flex;
       justify-content: space-between;
 
-      &>* {
+      & > * {
         color: $black;
         padding: 13px;
         border: 1px solid $border;
@@ -862,13 +868,13 @@
         width: 100%;
       }
 
-      &>*:first-child {
+      & > *:first-child {
         padding-right: 26px;
         padding-left: 13px;
         margin-right: 16px;
       }
 
-      &>*:last-child {
+      & > *:last-child {
         padding-right: 13px;
         padding-left: 26px;
       }
@@ -917,7 +923,7 @@
         flex-direction: column;
       }
 
-      &>.card__link {
+      & > .card__link {
         display: none;
 
         @include desktop-sm {
@@ -1023,7 +1029,7 @@
       opacity: 0.5;
     }
 
-    &_active>&__progress {
+    &_active > &__progress {
       opacity: 1;
       background-color: #0099e0;
     }
@@ -1044,13 +1050,13 @@
     }
 
     &_active &__right {
-      &>svg {
+      & > svg {
         @include desktop-sm {
           display: none;
         }
       }
 
-      &>img {
+      & > img {
         @include desktop-sm {
           width: 28px;
           height: 24px;
@@ -1068,11 +1074,11 @@
         gap: 29px;
       }
 
-      &>img {
+      & > img {
         display: none;
       }
 
-      &>svg {
+      & > svg {
         display: none;
 
         @include desktop-sm {
@@ -1090,7 +1096,7 @@
       display: none;
     }
 
-    &_active>&__wrapper>&__numb::after {
+    &_active > &__wrapper > &__numb::after {
       position: absolute;
       content: "";
       width: 10px;
@@ -1128,7 +1134,11 @@
     // min-width: 180px;
     max-height: 0;
     transition: max-height 0.2s ease-in-out;
-    filter: drop-shadow(0px 47px 19px rgba(0, 0, 0, 0.01)) drop-shadow(0px 26px 16px rgba(0, 0, 0, 0.05)) drop-shadow(0px 12px 12px rgba(0, 0, 0, 0.09)) drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0px 47px 19px rgba(0, 0, 0, 0.01))
+      drop-shadow(0px 26px 16px rgba(0, 0, 0, 0.05))
+      drop-shadow(0px 12px 12px rgba(0, 0, 0, 0.09))
+      drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1))
+      drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
 
     @include desktop-sm {
       width: 220px;
@@ -1202,9 +1212,11 @@
     }
   }
 
-  &__top {}
+  &__top {
+  }
 
-  &__bottom {}
+  &__bottom {
+  }
 
   &__inputs {
     @include desktop-sm {
@@ -1213,6 +1225,7 @@
       margin-bottom: 40px;
 
       & .text-field {
+        min-width: 270px;
         margin-bottom: 0;
       }
     }
@@ -1350,13 +1363,19 @@
   display: flex;
   white-space: nowrap;
   flex-wrap: wrap;
-
-  >*:last-child {
+  &_v2 {
+    padding: 20px 0;
+    margin: 0;
+    @include desktop-sm {
+      padding: 42px 0 0;
+    }
+  }
+  > *:last-child {
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
-  &>* {
+  & > * {
     color: $primary;
     display: inline-block;
     position: relative;
@@ -1488,7 +1507,7 @@
       gap: 70px;
     }
 
-    &>img {
+    & > img {
       width: 100%;
 
       @include desktop-sm {
@@ -1500,13 +1519,18 @@
 
     &__title {
       margin-top: 20px;
+      @include desktop-sm {
+        font-size: 48px;
+        line-height: 100%;
+        margin-top: 0;
+      }
     }
 
     &__pagination {
-      overflow-x: auto;
+      // overflow-x: auto;
 
       @include desktop-sm {
-        overflow-x: visible;
+        // overflow-x: visible;
         position: absolute;
         bottom: 0 !important;
         // width: calc(100% - 900px) !important;
@@ -1521,6 +1545,7 @@
       }
 
       &-wrapper {
+        position: relative;
         @include desktop-sm {
           overflow-x: visible;
           position: absolute;
@@ -1531,8 +1556,15 @@
         }
 
         & .swiper-numbs {
-          transform: translateX(0) !important;
-          left: auto !important;
+          top: 0;
+          @include desktop-sm {
+            transform: translateX(0) !important;
+            left: auto !important;
+            top: -120px;
+          }
+        }
+        & .interior__btns {
+          padding-top: 85px;
         }
       }
 
@@ -1548,8 +1580,8 @@
         top: 50%;
       }
 
-      &>.swiper-next,
-      &>.swiper-prev {
+      & > .swiper-next,
+      & > .swiper-prev {
         @include desktop-sm {
           top: auto;
         }
@@ -1564,14 +1596,14 @@
     width: 100%;
 
     @include desktop-sm {
-      // max-width: 420px;
+      padding-bottom: 20px;
     }
 
-    &>img {
+    & > img {
       width: 100%;
     }
 
-    &>p {
+    & > p {
       margin-top: 10px;
 
       @include desktop-sm {
@@ -1635,7 +1667,7 @@
   background-position: center;
   background-size: cover;
   color: #fff;
-  height: 100vh;
+  // height: 100vh;
 
   &__top {
     &-image {
@@ -1736,7 +1768,8 @@
     }
   }
 
-  &__text {}
+  &__text {
+  }
 
   &__cards {
     display: grid;
@@ -1786,7 +1819,7 @@
   align-items: center;
   color: #fff;
 
-  &>h2 {
+  & > h2 {
     font-size: 26px;
     line-height: 120%;
   }
@@ -1801,7 +1834,7 @@
   justify-content: center;
   border-radius: 999999px;
 
-  &>a {
+  & > a {
     color: #fff;
   }
 }
@@ -1917,7 +1950,7 @@
     &__image {
       grid-area: A;
 
-      & .navigation__card>img {
+      & .navigation__card > img {
         max-height: 760px;
         height: 760px;
       }
@@ -1940,11 +1973,11 @@
       &-numbs {
         position: absolute;
         left: 0 !important;
-        transform: translateX(-110px) !important;
+        transform: translateX(0px) !important;
         z-index: 9;
 
         &--transformX {
-          transform: translateX(-55px) !important;
+          // transform: translateX(-55px) !important;
         }
       }
     }
@@ -2001,7 +2034,7 @@
   }
 
   &__item {
-    &>a {
+    & > a {
       color: $black;
 
       &:hover {

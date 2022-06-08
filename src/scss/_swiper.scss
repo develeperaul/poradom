@@ -4,6 +4,10 @@ $pageColorActive: #0099e0;
 .swiper {
   width: 100%;
   height: 100%;
+  // padding-bottom: 50px;
+  // @include desktop-sm {
+  //   padding-bottom: 0;
+  // }
 }
 
 .swiper-slide {
@@ -50,12 +54,20 @@ $pageColorActive: #0099e0;
 
   &__list {
     margin-top: 14px;
+    @include desktop-sm {
+      margin-top: 20px;
+    }
   }
 
   &__item {
     position: relative;
     padding-left: 10px;
-
+    @include desktop-sm {
+      padding-left: 20px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 180%;
+    }
     &::after {
       position: absolute;
       content: "\2022";
@@ -174,9 +186,10 @@ $pageColorActive: #0099e0;
     margin: 0 auto;
   }
   &-numbs {
-    display: flex;
+    position: absolute;
+    text-align: center;
+    bottom: 0 !important;
     padding-top: 9px;
-    justify-content: center;
     margin-top: 20px;
     @include desktop-sm {
       margin-top: 60px;
@@ -194,8 +207,11 @@ $pageColorActive: #0099e0;
 
     &_position {
       position: absolute;
-      bottom: 45px !important;
+      bottom: 0;
       z-index: 10;
+      @include desktop-sm {
+        bottom: 45px !important;
+      }
     }
 
     .numb {
@@ -210,7 +226,7 @@ $pageColorActive: #0099e0;
       min-width: 43px;
       display: block;
       color: $pagColor;
-
+      display: inline-block;
       &::after {
         position: absolute;
         content: "";
@@ -246,6 +262,7 @@ $pageColorActive: #0099e0;
     width: 9px;
     height: 15px;
     z-index: 10;
+    cursor: pointer;
     // top: calc(50% - 30px);
     // top: 50%;
     top: 115px;
@@ -254,11 +271,17 @@ $pageColorActive: #0099e0;
   &-prev {
     background-image: url(../img/icons/prev.svg);
     left: 12px;
+    background-position: center left;
+    padding: 0px 0 10% 10%;
+    transform: translateY(-50%);
   }
 
   &-next {
     right: 12px;
     background-image: url(../img/icons/next.svg);
+    background-position: center right;
+    padding: 0px 0 10% 10%;
+    transform: translateY(-50%);
   }
 
   &-stories-line {
@@ -325,5 +348,26 @@ $pageColorActive: #0099e0;
   }
   &-next-arrow {
     transform: rotate(-90deg);
+  }
+}
+
+.newsSwiper {
+  padding-bottom: 50px;
+  @include desktop-sm {
+    padding-bottom: 110px;
+  }
+}
+
+.otherProjects {
+  padding-bottom: 50px;
+  @include desktop-sm {
+    padding-bottom: 110px;
+  }
+}
+
+.featuresSwiper {
+  padding-bottom: 50px;
+  @include desktop-sm {
+    padding-bottom: 0;
   }
 }

@@ -11,7 +11,7 @@
     flex-direction: column;
   }
 
-  &>.container {
+  & > .container {
     // height: 100%;
   }
 
@@ -56,7 +56,7 @@
         justify-self: center;
       }
 
-      & .logo>img {
+      & .logo > img {
         @include desktop-sm {
           width: 205px;
           height: 50px;
@@ -76,7 +76,7 @@
       width: 100%;
       opacity: 0;
       transition: opacity 0.2s ease;
-
+      z-index: 1000 !important;
       &-open {
         opacity: 1;
       }
@@ -91,7 +91,8 @@
 
     &_white {
       background-color: #fff;
-
+      z-index: 10;
+      box-shadow: 0px -2px 10px 0px rgba(0, 0, 0, 35%);
       & .header__trigger,
       & .header__contact {
         color: $black;
@@ -204,7 +205,8 @@
       }
     }
 
-    &__btn {}
+    &__btn {
+    }
   }
 
   & .video__top-image {

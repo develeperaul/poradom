@@ -51,24 +51,30 @@ class SideBar {
     const menuHeader = document.querySelector("#menu-header");
     const menuHeaderFixed = document.querySelector("#menu-header_fixed");
     const sidebar = document.querySelector(".sidebar");
-    menuSideBar.onclick = () => {
-      if (sidebar.classList.contains("sidebar_active")) {
-        menuSideBar.classList.remove("active");
-        sidebar.classList.remove("sidebar_active");
-      }
-    };
-    menuHeader.onclick = () => {
-      if (!sidebar.classList.contains("sidebar_active")) {
-        menuSideBar.classList.add("active");
-        sidebar.classList.add("sidebar_active");
-      }
-    };
-    menuHeaderFixed.onclick = () => {
-      if (!sidebar.classList.contains("sidebar_active")) {
-        menuSideBar.classList.add("active");
-        sidebar.classList.add("sidebar_active");
-      }
-    };
+    if (menuSideBar) {
+      menuSideBar.onclick = () => {
+        if (sidebar.classList.contains("sidebar_active")) {
+          menuSideBar.classList.remove("active");
+          sidebar.classList.remove("sidebar_active");
+        }
+      };
+    }
+    if (menuHeader) {
+      menuHeader.onclick = () => {
+        if (!sidebar.classList.contains("sidebar_active")) {
+          menuSideBar.classList.add("active");
+          sidebar.classList.add("sidebar_active");
+        }
+      };
+    }
+    if (menuHeaderFixed) {
+      menuHeaderFixed.onclick = () => {
+        if (!sidebar.classList.contains("sidebar_active")) {
+          menuSideBar.classList.add("active");
+          sidebar.classList.add("sidebar_active");
+        }
+      };
+    }
   }
 }
 class Drop {
@@ -312,22 +318,32 @@ document.addEventListener("DOMContentLoaded", () => {
 class toggleGroup {
   constructor() {
     this.name = document.querySelector(`.toggle-btns`);
-    this.elements = document.querySelectorAll(".toggle-element");
+    const btns = document.querySelectorAll("[data-toggle]");
 
-    if (this.name) {
-      const btns = this.name.querySelectorAll(".button__round");
-
+    if (btns) {
       Array.from(btns).forEach((button) => {
         button.onclick = (e) => {
-          Array.from(btns).forEach((el, index) => {
-            el.classList.remove("button__round_active");
-            button.classList.add("button__round_active");
-            console.log(this.elements);
-            this.elements[index].classList.remove("toggle-element__active");
-            if (el.classList.contains("button__round_active")) {
-              this.elements[index].classList.add("toggle-element__active");
-            }
-          });
+          const id = button.getAttribute("data-toggle");
+          const toggleEl = document.querySelector(`#${id}`);
+          const buttonParent = button.parentNode.querySelectorAll("button");
+
+          const toggleElParent =
+            toggleEl.parentNode.querySelectorAll("[data-toggle_el]");
+          if (
+            toggleEl &&
+            !toggleEl.classList.contains("toggle-element__active") &&
+            toggleElParent
+          ) {
+            console.log(buttonParent);
+            Array.from(buttonParent).forEach((btn) => {
+              btn.classList.remove("button__round_active");
+              button.classList.add("button__round_active");
+            });
+            Array.from(toggleElParent).forEach((el) => {
+              el.classList.remove("toggle-element__active");
+              toggleEl.classList.add("toggle-element__active");
+            });
+          }
         };
       });
     }
@@ -434,9 +450,14 @@ document.addEventListener("DOMContentLoaded", () => {
       if (elDisplay === "none") dataHoverEl.style.display = "block";
       //получаем позицию курсора мышки относительно блока
       // planMap.offsetWidth + ":" + planMap.offsetHeight;
-      let planMapCoords = planMap.getBoundingClientRect();
-      let xCoord = e.clientX - planMapCoords.left;
-      let yCoord = e.clientY - planMapCoords.top; //если planMapCoords.top отрицательный то значит некоторая область не видими
+      let planMapCoords;
+      let xCoord;
+      let yCoord;
+      if (planMap) {
+        planMapCoords = planMap.getBoundingClientRect();
+        xCoord = e.clientX - planMapCoords.left;
+        yCoord = e.clientY - planMapCoords.top; //если planMapCoords.top отрицательный то значит некоторая область не видими
+      }
       //размер родительского блока
       const planMapWidth = planMap.offsetWidth;
       const planMapHeight = planMap.offsetHeight;
@@ -546,47 +567,44 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const header = document.querySelector("header");
+  const header = document.querySelector(".header-nav");
+  if (header) {
+    const headerHeight = header.offsetHeight;
+    const headerNav = document.querySelector(".header__top_fixed");
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > headerHeight) {
+        headerNav.style.display = "block";
+        setTimeout(() => {
+          headerNav.classList.add("header__top_fixed-open");
+        }, 200);
+      } else {
+        headerNav.style.display = "none";
+        setTimeout(() => {
+          headerNav.classList.remove("header__top_fixed-open");
+        }, 200);
+      }
+      // if (window.pageYOffset > 20) {
+      //   if (arrow?.classList.contains("hidden-arrow"))
+      //     arrow?.classList.remove("hidden-arrow");
+      //   if (!arrow?.classList.contains("show-arrow")) {
+      //     arrow.style.display = "block";
+      //     arrow?.classList.add("show-arrow");
+      //     scroll.value = true;
+      //   }
 
-  const headerHeight = header.offsetHeight;
+      //   arrow?.classList.add("article");
+      // } else {
+      //   if (arrow?.classList.contains("show-arrow"))
+      //     arrow?.classList.remove("show-arrow");
+      //   if (!arrow?.classList.contains("hidden-arrow")) {
+      //     arrow?.classList.add("hidden-arrow");
 
-  const headerNav = document.querySelector(".header__top_fixed");
-
-  const headerNavHeight = headerNav.offsetHeight;
-
-  window.addEventListener("scroll", () => {
-    if (window.pageYOffset > headerHeight - headerNavHeight) {
-      headerNav.style.display = "block";
-      setTimeout(() => {
-        headerNav.classList.add("header__top_fixed-open");
-      }, 200);
-    } else {
-      headerNav.style.display = "none";
-      setTimeout(() => {
-        headerNav.classList.remove("header__top_fixed-open");
-      }, 200);
-    }
-    // if (window.pageYOffset > 20) {
-    //   if (arrow?.classList.contains("hidden-arrow"))
-    //     arrow?.classList.remove("hidden-arrow");
-    //   if (!arrow?.classList.contains("show-arrow")) {
-    //     arrow.style.display = "block";
-    //     arrow?.classList.add("show-arrow");
-    //     scroll.value = true;
-    //   }
-
-    //   arrow?.classList.add("article");
-    // } else {
-    //   if (arrow?.classList.contains("show-arrow"))
-    //     arrow?.classList.remove("show-arrow");
-    //   if (!arrow?.classList.contains("hidden-arrow")) {
-    //     arrow?.classList.add("hidden-arrow");
-
-    //     setTimeout(() => {
-    //       if (arrow?.classList.contains("hidden-arrow"))
-    //         arrow.style.display = "none";
-    //     }, 1100);
-    //   }
-    // }
-  });
+      //     setTimeout(() => {
+      //       if (arrow?.classList.contains("hidden-arrow"))
+      //         arrow.style.display = "none";
+      //     }, 1100);
+      //   }
+      // }
+    });
+  }
 });
