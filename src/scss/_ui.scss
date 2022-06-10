@@ -92,6 +92,9 @@
   @include desktop-sm {
     letter-spacing: -0.03em;
   }
+  &_black {
+    color: $black;
+  }
 
   & > span {
     z-index: 10;
@@ -163,7 +166,7 @@
     gap: 6px;
 
     @include desktop-sm {
-      gap: 20px;
+      gap: 14px;
     }
 
     &::-webkit-scrollbar {
@@ -783,12 +786,44 @@
     display: flex;
     white-space: nowrap;
     margin-bottom: 14px;
-
-    :not(:last-child) {
+    gap: 30px;
+    &:not(:last-child) {
       margin-right: 18px;
     }
+    @include desktop-sm {
+      gap: 40px;
+    }
+    &-region {
+      margin-bottom: 14px;
+      display: flex;
+      white-space: nowrap;
+      gap: 60px;
+      @include desktop-sm {
+        margin-bottom: 30px;
+      }
+    }
+    &-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      @include desktop-sm {
+        gap: 8px;
+      }
+    }
   }
-
+  &__status-marker {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    @include desktop-sm {
+      gap: 10px;
+    }
+    & > .marker__text {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 130%;
+    }
+  }
   &__region-size-title,
   &__dedlain-title {
     color: #8f959b;
@@ -801,6 +836,16 @@
     flex-grow: 1;
     font-size: 16px;
     line-height: 21px;
+  }
+
+  &__redion-text_lg,
+  &__region-size-text_lg {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    @include desktop-sm {
+      font-size: 26px;
+    }
   }
 
   //user
@@ -1262,20 +1307,26 @@
   display: flex;
   align-items: center;
   z-index: 9;
-
+  gap: 8px;
+  @include desktop-sm {
+    gap: 14px;
+  }
   &__image {
     width: 24px;
     height: 24px;
     background-color: #fff;
     border-radius: 50%;
-    margin-right: 8px;
+
     object-fit: scale-down;
     display: flex;
 
     @include desktop-sm {
       width: 36px;
       height: 36px;
-      margin-right: 14px;
+    }
+
+    &_blue {
+      background-color: #0099e0;
     }
 
     img {
@@ -1474,7 +1525,15 @@
     height: 14px;
     border-radius: 9999px;
     margin-right: 8px;
-
+    &-sm {
+      border-radius: 9999px;
+      width: 6px;
+      height: 6px;
+      @include desktop-sm {
+        width: 10px;
+        height: 10px;
+      }
+    }
     &_loose {
       background-color: #58b368;
     }
@@ -1534,7 +1593,7 @@
         position: absolute;
         bottom: 0 !important;
         // width: calc(100% - 900px) !important;
-        left: 1105px !important;
+        left: 1040px !important;
 
         // width: auto !important;
         max-width: 50%;
@@ -1596,7 +1655,8 @@
     width: 100%;
 
     @include desktop-sm {
-      padding-bottom: 20px;
+      height: 100%;
+      // padding-bottom: 20px;
     }
 
     & > img {
@@ -1951,8 +2011,10 @@
       grid-area: A;
 
       & .navigation__card > img {
-        max-height: 760px;
-        height: 760px;
+        @include desktop-sm {
+          max-height: 760px;
+          height: 760px;
+        }
       }
     }
 
@@ -1962,8 +2024,9 @@
       &-nav {
         position: absolute;
         width: 100%;
-        top: 50%;
-
+        @include desktop-sm {
+          top: 380px;
+        }
         .swiper-next,
         .swiper-prev {
           top: auto;

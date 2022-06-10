@@ -72,11 +72,10 @@
     &_fixed {
       position: fixed;
       top: 0;
-      z-index: 99;
+      z-index: 99 !important;
       width: 100%;
       opacity: 0;
       transition: opacity 0.2s ease;
-      z-index: 1000 !important;
       &-open {
         opacity: 1;
       }
@@ -212,6 +211,76 @@
   & .video__top-image {
     @include desktop-sm {
       min-width: 960px;
+    }
+  }
+
+  &-built {
+    height: 100%;
+    padding-top: 100px;
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+    &__image {
+      @include desktop-sm {
+        display: none;
+      }
+      &_desktop {
+        display: none;
+        @include desktop-sm {
+          display: block;
+          padding: 0 150px;
+        }
+      }
+    }
+
+    & .built__drop {
+      margin-top: 40px;
+      @include desktop-sm {
+        margin-top: 0px;
+      }
+      & .built__dropdowns-title {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.header-region {
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+    @include desktop-sm {
+      margin-bottom: 30px;
+      flex-direction: row;
+      gap: 150px;
+      align-items: flex-end;
+    }
+    &-left,
+    &-right {
+      display: flex;
+    }
+    &-left {
+      gap: 14px;
+      @include desktop-sm {
+        align-items: flex-end;
+      }
+    }
+
+    &-right {
+      gap: 24px;
+      @include desktop-sm {
+        gap: 35px;
+      }
+    }
+  }
+  &__title {
+    @include desktop-sm {
+      line-height: 85%;
     }
   }
 }

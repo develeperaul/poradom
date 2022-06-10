@@ -16,7 +16,6 @@ const swiper = (name, opts = {}) => {
     spaceBetween: 16,
     pagination: {
       dynamicBullets: true,
-      dynamicMainBullets: 4,
       el: ".swiper-numbs",
       bulletActiveClass: "numb-active",
       bulletClass: "numb",
@@ -171,32 +170,36 @@ new newSwiper(".featuresSwiper", {
   },
   on: {
     paginationUpdate: function (swiper, paginationEl) {
-      // swiper.pagination.bullets.forEach((bullet, index) => {
-      //   console.log(
-      //     bullet.classList.contains("numb-active") &&
-      //       index > 4 &&
-      //       swiper.pagination.bullets.length >= 8
-      //   );
-      //   if (
-      //     bullet.classList.contains("numb-active") &&
-      //     index > 4 &&
-      //     swiper.pagination.bullets.length >= 8
-      //   ) {
-      //     paginationEl.classList.add("swiper-numbs--transformX");
-      //   }
-      //   if (
-      //     bullet.classList.contains("numb-active") &&
-      //     index === 0 &&
-      //     swiper.pagination.bullets.length >= 8
-      //   ) {
-      //     paginationEl.classList.remove("swiper-numbs--transformX");
-      //   }
-      // });
+      // console.log(paginationEl);
+      // console.log(swiper);
+      swiper.pagination.bullets.forEach((bullet, index) => {
+        const left = +bullet.style.left.replace("px", "");
+        if (left > 0) bullet.style.left = "0px";
+        // console.log(bullet);
+      });
     },
+    // paginationUpdate: function (swiper, paginationEl) {
+    //   swiper.pagination.bullets.forEach((bullet, index) => {
+    //     console.log(
+    //       bullet.classList.contains("numb-active") && index > 3
+    //       // swiper.pagination.bullets.length >= 8
+    //     );
+    //     if (
+    //       bullet.classList.contains("numb-active") &&
+    //       index > 3
+    //       // swiper.pagination.bullets.length >= 8
+    //     ) {
+    //       paginationEl.classList.add("swiper-numbs--transformX");
+    //     }
+    //     if (bullet.classList.contains("numb-active") && index === 0) {
+    //       paginationEl.classList.remove("swiper-numbs--transformX");
+    //     }
+    //   });
+    // },
   },
   pagination: {
     dynamicBullets: true,
-    dynamicMainBullets: 4,
+    dynamicMainBullets: 2,
     el: ".swiper-numbs",
     bulletActiveClass: "numb-active",
     bulletClass: "numb",

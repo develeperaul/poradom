@@ -99,6 +99,12 @@
   border: 1px solid $border;
   padding: 30px 10px;
   text-align: center;
+  &__title {
+    margin-bottom: 14px;
+    @include desktop-sm {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .review {
@@ -398,6 +404,7 @@
 
 .pick-up {
   display: none;
+  color: #fff;
 
   @include desktop-sm {
     position: absolute;
@@ -418,8 +425,67 @@
       color: #fff;
       text-decoration: underline;
     }
+
+    & > a.decoration_none {
+      text-decoration: none;
+    }
   }
 
   &__right {
+  }
+}
+
+.indicators {
+  padding: 40px $gap-m;
+  background-color: $secondary;
+  margin: 0 -#{$gap-m};
+  @include desktop-sm {
+    padding: 80px $gap;
+    margin: 0 -#{$gap};
+  }
+  & .location-home__cards-wrapper {
+    max-width: 100%;
+  }
+  & .location-home__cards {
+    display: flex;
+    & .location-home__card {
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(6) {
+        width: 200px;
+      }
+
+      &:nth-child(5),
+      &:nth-child(7) {
+        width: 370px;
+      }
+
+      &:nth-child(1) {
+        order: 1;
+      }
+      &:nth-child(2) {
+        order: 2;
+      }
+      &:nth-child(3) {
+        order: 3;
+      }
+      &:nth-child(4) {
+        order: 4;
+      }
+      &:nth-child(5) {
+        order: 6;
+      }
+      &:nth-child(6) {
+        order: 5;
+      }
+      &:nth-child(7) {
+        order: 7;
+      }
+    }
+  }
+  & .button {
+    margin-top: 30px;
   }
 }

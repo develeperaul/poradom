@@ -55,7 +55,7 @@
     object-fit: cover;
 
     @include desktop-sm {
-      width: 660px;
+      width: 655px;
       height: 530px;
     }
   }
@@ -151,7 +151,7 @@
       gap: 80px;
       align-items: end;
 
-      &>* {
+      & > * {
         z-index: 9;
       }
     }
@@ -178,6 +178,14 @@
 
     @include desktop-sm {
       margin-top: 40px;
+    }
+  }
+
+  & .navigation__card {
+    & > img {
+      @include desktop-sm {
+        height: 760px;
+      }
     }
   }
 }

@@ -59,4 +59,11 @@
       margin-bottom: 60px;
     }
   }
+  & .navigation__card {
+    & > img {
+      @include desktop-sm {
+        height: 760px;
+      }
+    }
+  }
 }

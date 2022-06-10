@@ -52,6 +52,7 @@
 @import "sections/about-settlement";
 @import "sections/services";
 @import "sections/documents-homeowners";
+@import "sections/ready-homes";
 @import "footer";
 
 @import "plugins/toggle";
@@ -74,7 +75,9 @@
   &-pb0 {
     padding-bottom: 0 !important;
   }
-
+  &-pt80 {
+    padding-top: 80px !important;
+  }
   &:not(:first-child) {
     padding: 40px 0 40px;
 

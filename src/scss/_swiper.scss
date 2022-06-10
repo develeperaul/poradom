@@ -73,6 +73,7 @@ $pageColorActive: #0099e0;
       content: "\2022";
       color: #fff;
       left: 0;
+      top: 0;
     }
   }
 }
@@ -196,7 +197,7 @@ $pageColorActive: #0099e0;
     }
     &_start {
       @include desktop-sm {
-        justify-content: flex-start;
+        text-align: left;
       }
     }
     &_mt {
@@ -366,6 +367,13 @@ $pageColorActive: #0099e0;
 }
 
 .featuresSwiper {
+  padding-bottom: 50px;
+  @include desktop-sm {
+    padding-bottom: 0;
+  }
+}
+
+.hit__swiper {
   padding-bottom: 50px;
   @include desktop-sm {
     padding-bottom: 0;

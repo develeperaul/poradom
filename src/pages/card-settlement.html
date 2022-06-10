@@ -466,12 +466,21 @@
           </div>
           <div class="section__btns">
             <div id="reviews-btns" class="button__group">
-              <a href="#" class="button__round button__round_active">Общий</a>
-              <a href="#" class="button__round">1 очередь</a>
-              <a href="#" class="button__round">2 очередь</a>
-              <a href="#" class="button__round">3 очередь</a>
-              <a href="#" class="button__round">4 очередь</a>
-              <a href="#" class="button__round">5 очередь</a>
+              <button
+                class="button__round button__round_active"
+                data-toggle="plan_1"
+              >
+                Общий
+              </button>
+              <button class="button__round" data-toggle="plan_2">
+                1 очередь
+              </button>
+              <button class="button__round" data-toggle="plan_3">
+                2 очередь
+              </button>
+              <button class="button__round" data-toggle="plan_4">
+                3 очередь
+              </button>
             </div>
             <div class="markers">
               <div class="marker">
@@ -493,157 +502,435 @@
             </div>
           </div>
         </div>
-        <div class="plan">
-          <div class="plan__map">
-            <img src="../img/devgora.jpg" alt="" />
-            <svg viewBox="0 0 1200 600" preserveAspectRatio="xMinYMin slice">
-              <a
-                href="/kottedzhnye-poselki/devichya-gora-1-ochered/"
-                data-hover="#hover1"
+        <div
+          class="toggle-element toggle-element__active"
+          data-toggle_el
+          id="plan_1"
+        >
+          <div class="plan">
+            <div class="plan__map">
+              <img src="../img/devgora.jpg" alt="" />
+              <svg viewBox="0 0 1200 600" preserveAspectRatio="xMinYMin slice">
+                <a data-hover="#hover2_1" data-button="plan_2">
+                  <polygon
+                    class=""
+                    points="87,324 452,133 597,179 387,400 358,403 284,376 245,336 100,342"
+                  ></polygon>
+                  <rect
+                    x="262"
+                    y="252"
+                    width="160"
+                    height="32"
+                    rx="20"
+                    ry="20"
+                  ></rect>
+                  <text x="342" y="276">1 очередь</text>
+                </a>
+                <a data-hover="#hover3_1" data-button="plan_3">
+                  <polygon
+                    class=""
+                    points="597,179 811,245 853,329 786,329 491,437 429,396 387,400"
+                  ></polygon>
+                  <rect
+                    x="540"
+                    y="292"
+                    width="160"
+                    height="32"
+                    rx="20"
+                    ry="20"
+                  ></rect>
+                  <text x="620" y="316">2 очередь</text>
+                </a>
+                <a data-hover="#hover4_1" data-button="plan_4">
+                  <polygon
+                    class="free"
+                    points="811,245 824,246 888,157 1090,219 1130,282 1153,321 1136,385 1106,380 1043,378 893,341 852,329"
+                  ></polygon>
+                  <rect
+                    x="902"
+                    y="255"
+                    width="160"
+                    height="32"
+                    rx="20"
+                    ry="20"
+                  ></rect>
+                  <text x="982" y="279">3 очередь</text>
+                </a>
+
+                <script>
+                  // <![CDATA[ window.addEventListener('DOMContentLoaded', () =>
+                  { document.querySelectorAll('a[data-hover]').forEach(a=>{
+                  a.addEventListener('click', (event)=>{ event.preventDefault()
+                  const button =
+                  document.querySelector(`[data-toggle='${a.getAttribute('data-button')}']`)
+                  if(button)button.onclick() }) }) } // ]]>
+                </script>
+              </svg>
+            </div>
+            <div class="plan__bottom">
+              <img
+                src="../img/icons/plan-arrows.svg"
+                alt=""
+                class="plan__bottom-arrows"
+              />
+              <div
+                class="plan__bottom-count"
+                id="hover2_1"
+                style="display: none"
               >
+                <div class="location-home__count-left">
+                  <p>всего участков</p>
+                  <h4>160</h4>
+                </div>
+                <div class="location-home__count-right">
+                  <p>свободно</p>
+                  <h4>2</h4>
+                </div>
+
+                <!-- <p>всего участков <span class="plan__bottom-numb">160</span></p> -->
+              </div>
+              <div
+                class="plan__bottom-count"
+                id="hover3_1"
+                style="display: none"
+              >
+                <div class="location-home__count-left">
+                  <p>всего участков</p>
+                  <h4>161</h4>
+                </div>
+                <div class="location-home__count-right">
+                  <p>свободно</p>
+                  <h4>2</h4>
+                </div>
+              </div>
+              <div
+                class="plan__bottom-count"
+                id="hover4_1"
+                style="display: none"
+              >
+                <div class="location-home__count-left">
+                  <p>всего участков</p>
+                  <h4>163</h4>
+                </div>
+                <div class="location-home__count-right">
+                  <p>свободно</p>
+                  <h4>2</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="toggle-element" data-toggle_el id="plan_2">
+          <div class="plan">
+            <div class="plan__map">
+              <img src="../img/devgora.jpg" alt="" />
+              <svg viewBox="0 0 1200 600" preserveAspectRatio="xMinYMin slice">
                 <polygon
+                  data-hover="#card-hover1_2"
                   class=""
                   points="87,324 452,133 597,179 387,400 358,403 284,376 245,336 100,342"
+                  window.location="/"
                 ></polygon>
-                <rect
-                  x="262"
-                  y="252"
-                  width="160"
-                  height="32"
-                  rx="20"
-                  ry="20"
-                ></rect>
-                <text x="342" y="276">1 очередь</text>
-              </a>
-              <a
-                href="/kottedzhnye-poselki/devichya-gora-2-ochered/"
-                data-hover="#hover2"
-              >
+
                 <polygon
+                  data-hover="#card-hover2_2"
                   class=""
                   points="597,179 811,245 853,329 786,329 491,437 429,396 387,400"
+                  window.location="/"
                 ></polygon>
-                <rect
-                  x="540"
-                  y="292"
-                  width="160"
-                  height="32"
-                  rx="20"
-                  ry="20"
-                ></rect>
-                <text x="620" y="316">2 очередь</text>
-              </a>
-              <a
-                href="/kottedzhnye-poselki/devichya-gora-3-ochered/"
-                data-hover="#hover3"
-              >
                 <polygon
+                  data-hover="#card-hover3_2"
                   class="free"
                   points="811,245 824,246 888,157 1090,219 1130,282 1153,321 1136,385 1106,380 1043,378 893,341 852,329"
+                  window.location="/"
                 ></polygon>
-                <rect
-                  x="902"
-                  y="255"
-                  width="160"
-                  height="32"
-                  rx="20"
-                  ry="20"
-                ></rect>
-                <text x="982" y="279">3 очередь</text>
-              </a>
-            </svg>
-          </div>
-          <div class="plan__bottom">
-            <img
-              src="../img/icons/plan-arrows.svg"
-              alt=""
-              class="plan__bottom-arrows"
-            />
-            <div class="plan__bottom-count" id="hover1" style="display: none">
-              <p>всего участков <span class="plan__bottom-numb">160</span></p>
+              </svg>
             </div>
-            <div class="plan__bottom-count" id="hover2" style="display: none">
-              <p>всего участков <span class="plan__bottom-numb">170</span></p>
-            </div>
-            <div class="plan__bottom-count" id="hover3" style="display: none">
-              <p>всего участков <span class="plan__bottom-numb">180</span></p>
-            </div>
-          </div>
-          <div class="plan__hovers">
-            <div class="plan__hover" id="hover1" style="display: none">
-              <div class="plan__hover-header">
-                <div class="plan__hover-header_left">
-                  ул. Луговых спелых Ромашек, 22
-                </div>
-                <div class="plan__hover-header_right">
-                  <div class="status__round status__round_vacant">Свободен</div>
-                </div>
-              </div>
-              <div class="plan__hover-bottom">
-                <p class="plan__hover-bottom_left">Площадь участка</p>
-                <p class="plan__hover-bottom_right">6 соток</p>
-                <p class="plan__hover-bottom_left">Проект</p>
-                <p class="plan__hover-bottom_right">Кирпичный Стандарт 175</p>
-                <p class="plan__hover-bottom_left">Участок + дом</p>
-                <p class="plan__hover-bottom_right">7 678 000 руб.</p>
+            <div class="plan__bottom">
+              <img
+                src="../img/icons/plan-arrows.svg"
+                alt=""
+                class="plan__bottom-arrows"
+              />
+              <div class="plan__bottom-count">
+                <p>всего участков <span class="plan__bottom-numb">160</span></p>
               </div>
             </div>
-            <div class="plan__hover" id="hover2" style="display: none">
-              <div class="plan__hover-header">
-                <div class="plan__hover-header_left">
-                  ул. Луговых спелых Ромашек, 22
-                </div>
-                <div class="plan__hover-header_right">
-                  <div class="status__round status__round_booked">
-                    Забронирован
+            <div class="plan__hovers">
+              <div class="plan__hover" id="card-hover1_2" style="display: none">
+                <div class="plan__hover-header">
+                  <div class="plan__hover-header_left">
+                    ул. Луговых спелых Ромашек, 22
+                  </div>
+                  <div class="plan__hover-header_right">
+                    <div class="status__round status__round_vacant">
+                      Свободен
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="plan__hover-bottom">
-                <p class="plan__hover-bottom_left">Площадь участка</p>
-                <p class="plan__hover-bottom_right">6 соток</p>
-                <p class="plan__hover-bottom_left">Проект</p>
-                <p class="plan__hover-bottom_right">Кирпичный Стандарт 175</p>
-                <p class="plan__hover-bottom_left">Участок + дом</p>
-                <p class="plan__hover-bottom_right">7 678 000 руб.</p>
-              </div>
-            </div>
-            <div class="plan__hover" id="hover3" style="display: none">
-              <div class="plan__hover-header">
-                <div class="plan__hover-header_left">
-                  ул. Луговых спелых Ромашек, 22
-                </div>
-                <div class="plan__hover-header_right">
-                  <div class="status__round status__round_sold">Продан</div>
+                <div class="plan__hover-bottom">
+                  <p class="plan__hover-bottom_left">Площадь участка</p>
+                  <p class="plan__hover-bottom_right">6 соток</p>
+                  <p class="plan__hover-bottom_left">Проект</p>
+                  <p class="plan__hover-bottom_right">Кирпичный Стандарт 175</p>
+                  <p class="plan__hover-bottom_left">Участок + дом</p>
+                  <p class="plan__hover-bottom_right">7 678 000 руб.</p>
                 </div>
               </div>
-              <div class="plan__hover-bottom">
-                <p class="plan__hover-bottom_left">Площадь участка</p>
-                <p class="plan__hover-bottom_right">6 соток</p>
-                <p class="plan__hover-bottom_left">Проект</p>
-                <p class="plan__hover-bottom_right">Кирпичный Стандарт 175</p>
-                <p class="plan__hover-bottom_left">Участок + дом</p>
-                <p class="plan__hover-bottom_right">7 678 000 руб.</p>
-              </div>
-            </div>
-            <div class="plan__hover" id="hover4" style="display: none">
-              <div class="plan__hover-header">
-                <div class="plan__hover-header_left">
-                  ул. Луговых спелых Ромашек, 22
-                </div>
-                <div class="plan__hover-header_right">
-                  <div class="status__round status__round_ready">
-                    Готовый дом
+              <div class="plan__hover" id="card-hover2_2" style="display: none">
+                <div class="plan__hover-header">
+                  <div class="plan__hover-header_left">
+                    ул. Луговых спелых Ромашек, 22
+                  </div>
+                  <div class="plan__hover-header_right">
+                    <div class="status__round status__round_booked">
+                      Забронирован
+                    </div>
                   </div>
                 </div>
+                <div class="plan__hover-bottom">
+                  <p class="plan__hover-bottom_left">Площадь участка</p>
+                  <p class="plan__hover-bottom_right">6 соток</p>
+                  <p class="plan__hover-bottom_left">Проект</p>
+                  <p class="plan__hover-bottom_right">Кирпичный Стандарт 175</p>
+                  <p class="plan__hover-bottom_left">Участок + дом</p>
+                  <p class="plan__hover-bottom_right">7 678 000 руб.</p>
+                </div>
               </div>
-              <div class="plan__hover-bottom">
-                <p class="plan__hover-bottom_left">Площадь участка</p>
-                <p class="plan__hover-bottom_right">6 соток</p>
-                <p class="plan__hover-bottom_left">Проект</p>
-                <p class="plan__hover-bottom_right">Кирпичный Стандарт 175</p>
-                <p class="plan__hover-bottom_left">Участок + дом</p>
-                <p class="plan__hover-bottom_right">7 678 000 руб.</p>
+              <div class="plan__hover" id="card-hover3_2" style="display: none">
+                <div class="plan__hover-header">
+                  <div class="plan__hover-header_left">
+                    ул. Луговых спелых Ромашек, 22
+                  </div>
+                  <div class="plan__hover-header_right">
+                    <div class="status__round status__round_sold">Продан</div>
+                  </div>
+                </div>
+                <div class="plan__hover-bottom">
+                  <p class="plan__hover-bottom_left">Площадь участка</p>
+                  <p class="plan__hover-bottom_right">6 соток</p>
+                  <p class="plan__hover-bottom_left">Проект</p>
+                  <p class="plan__hover-bottom_right">Кирпичный Стандарт 175</p>
+                  <p class="plan__hover-bottom_left">Участок + дом</p>
+                  <p class="plan__hover-bottom_right">7 678 000 руб.</p>
+                </div>
+              </div>
+              <div class="plan__hover" id="hover4" style="display: none">
+                <div class="plan__hover-header">
+                  <div class="plan__hover-header_left">
+                    ул. Луговых спелых Ромашек, 22
+                  </div>
+                  <div class="plan__hover-header_right">
+                    <div class="status__round status__round_ready">
+                      Готовый дом
+                    </div>
+                  </div>
+                </div>
+                <div class="plan__hover-bottom">
+                  <p class="plan__hover-bottom_left">Площадь участка</p>
+                  <p class="plan__hover-bottom_right">6 соток</p>
+                  <p class="plan__hover-bottom_left">Проект</p>
+                  <p class="plan__hover-bottom_right">Кирпичный Стандарт 175</p>
+                  <p class="plan__hover-bottom_left">Участок + дом</p>
+                  <p class="plan__hover-bottom_right">7 678 000 руб.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="toggle-element" data-toggle_el id="plan_3">
+          <div class="plan">
+            <div class="plan__map">
+              <img src="../img/devgora.jpg" alt="" />
+              <svg viewBox="0 0 1200 600" preserveAspectRatio="xMinYMin slice">
+                <polygon
+                  data-hover="#card-hover1_3"
+                  class=""
+                  points="87,324 452,133 597,179 387,400 358,403 284,376 245,336 100,342"
+                  window.location="/"
+                ></polygon>
+
+                <polygon
+                  data-hover="#card-hover2_3"
+                  class=""
+                  points="597,179 811,245 853,329 786,329 491,437 429,396 387,400"
+                  window.location="/"
+                ></polygon>
+                <polygon
+                  data-hover="#card-hover3_3"
+                  class="free"
+                  points="811,245 824,246 888,157 1090,219 1130,282 1153,321 1136,385 1106,380 1043,378 893,341 852,329"
+                  window.location="/"
+                ></polygon>
+              </svg>
+            </div>
+            <div class="plan__bottom">
+              <img
+                src="../img/icons/plan-arrows.svg"
+                alt=""
+                class="plan__bottom-arrows"
+              />
+              <div class="plan__bottom-count">
+                <p>всего участков <span class="plan__bottom-numb">160</span></p>
+              </div>
+            </div>
+            <div class="plan__hovers">
+              <div class="plan__hover" id="card-hover1_3" style="display: none">
+                <div class="plan__hover-header">
+                  <div class="plan__hover-header_left">
+                    ул. Луговых спелых Ромашек, 22
+                  </div>
+                  <div class="plan__hover-header_right">
+                    <div class="status__round status__round_vacant">
+                      Свободен
+                    </div>
+                  </div>
+                </div>
+                <div class="plan__hover-bottom">
+                  <p class="plan__hover-bottom_left">Площадь участка</p>
+                  <p class="plan__hover-bottom_right">6 соток</p>
+                  <p class="plan__hover-bottom_left">Проект</p>
+                  <p class="plan__hover-bottom_right">Кирпичный Стандарт 175</p>
+                  <p class="plan__hover-bottom_left">Участок + дом</p>
+                  <p class="plan__hover-bottom_right">7 678 000 руб.</p>
+                </div>
+              </div>
+              <div class="plan__hover" id="card-hover2_3" style="display: none">
+                <div class="plan__hover-header">
+                  <div class="plan__hover-header_left">
+                    ул. Луговых спелых Ромашек, 22
+                  </div>
+                  <div class="plan__hover-header_right">
+                    <div class="status__round status__round_booked">
+                      Забронирован
+                    </div>
+                  </div>
+                </div>
+                <div class="plan__hover-bottom">
+                  <p class="plan__hover-bottom_left">Площадь участка</p>
+                  <p class="plan__hover-bottom_right">6 соток</p>
+                  <p class="plan__hover-bottom_left">Проект</p>
+                  <p class="plan__hover-bottom_right">Кирпичный Стандарт 175</p>
+                  <p class="plan__hover-bottom_left">Участок + дом</p>
+                  <p class="plan__hover-bottom_right">7 678 000 руб.</p>
+                </div>
+              </div>
+              <div class="plan__hover" id="card-hover3_3" style="display: none">
+                <div class="plan__hover-header">
+                  <div class="plan__hover-header_left">
+                    ул. Луговых спелых Ромашек, 22
+                  </div>
+                  <div class="plan__hover-header_right">
+                    <div class="status__round status__round_sold">Продан</div>
+                  </div>
+                </div>
+                <div class="plan__hover-bottom">
+                  <p class="plan__hover-bottom_left">Площадь участка</p>
+                  <p class="plan__hover-bottom_right">6 соток</p>
+                  <p class="plan__hover-bottom_left">Проект</p>
+                  <p class="plan__hover-bottom_right">Кирпичный Стандарт 175</p>
+                  <p class="plan__hover-bottom_left">Участок + дом</p>
+                  <p class="plan__hover-bottom_right">7 678 000 руб.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="toggle-element" data-toggle_el id="plan_4">
+          <div class="plan">
+            <div class="plan__map">
+              <img src="../img/devgora.jpg" alt="" />
+              <svg viewBox="0 0 1200 600" preserveAspectRatio="xMinYMin slice">
+                <polygon
+                  data-hover="#card-hover1_4"
+                  class=""
+                  points="87,324 452,133 597,179 387,400 358,403 284,376 245,336 100,342"
+                  window.location="/"
+                ></polygon>
+
+                <polygon
+                  data-hover="#card-hover2_4"
+                  class=""
+                  points="597,179 811,245 853,329 786,329 491,437 429,396 387,400"
+                  window.location="/"
+                ></polygon>
+                <polygon
+                  data-hover="#card-hover3_4"
+                  class="free"
+                  points="811,245 824,246 888,157 1090,219 1130,282 1153,321 1136,385 1106,380 1043,378 893,341 852,329"
+                  window.location="/"
+                ></polygon>
+              </svg>
+            </div>
+            <div class="plan__bottom">
+              <img
+                src="../img/icons/plan-arrows.svg"
+                alt=""
+                class="plan__bottom-arrows"
+              />
+              <div class="plan__bottom-count">
+                <p>всего участков <span class="plan__bottom-numb">160</span></p>
+              </div>
+            </div>
+            <div class="plan__hovers">
+              <div class="plan__hover" id="card-hover1_4" style="display: none">
+                <div class="plan__hover-header">
+                  <div class="plan__hover-header_left">
+                    ул. Луговых спелых Ромашек, 22
+                  </div>
+                  <div class="plan__hover-header_right">
+                    <div class="status__round status__round_vacant">
+                      Свободен
+                    </div>
+                  </div>
+                </div>
+                <div class="plan__hover-bottom">
+                  <p class="plan__hover-bottom_left">Площадь участка</p>
+                  <p class="plan__hover-bottom_right">6 соток</p>
+                  <p class="plan__hover-bottom_left">Проект</p>
+                  <p class="plan__hover-bottom_right">Кирпичный Стандарт 175</p>
+                  <p class="plan__hover-bottom_left">Участок + дом</p>
+                  <p class="plan__hover-bottom_right">7 678 000 руб.</p>
+                </div>
+              </div>
+              <div class="plan__hover" id="card-hover2_4" style="display: none">
+                <div class="plan__hover-header">
+                  <div class="plan__hover-header_left">
+                    ул. Луговых спелых Ромашек, 22
+                  </div>
+                  <div class="plan__hover-header_right">
+                    <div class="status__round status__round_booked">
+                      Забронирован
+                    </div>
+                  </div>
+                </div>
+                <div class="plan__hover-bottom">
+                  <p class="plan__hover-bottom_left">Площадь участка</p>
+                  <p class="plan__hover-bottom_right">6 соток</p>
+                  <p class="plan__hover-bottom_left">Проект</p>
+                  <p class="plan__hover-bottom_right">Кирпичный Стандарт 175</p>
+                  <p class="plan__hover-bottom_left">Участок + дом</p>
+                  <p class="plan__hover-bottom_right">7 678 000 руб.</p>
+                </div>
+              </div>
+              <div class="plan__hover" id="card-hover3_4" style="display: none">
+                <div class="plan__hover-header">
+                  <div class="plan__hover-header_left">
+                    ул. Луговых спелых Ромашек, 22
+                  </div>
+                  <div class="plan__hover-header_right">
+                    <div class="status__round status__round_sold">Продан</div>
+                  </div>
+                </div>
+                <div class="plan__hover-bottom">
+                  <p class="plan__hover-bottom_left">Площадь участка</p>
+                  <p class="plan__hover-bottom_right">6 соток</p>
+                  <p class="plan__hover-bottom_left">Проект</p>
+                  <p class="plan__hover-bottom_right">Кирпичный Стандарт 175</p>
+                  <p class="plan__hover-bottom_left">Участок + дом</p>
+                  <p class="plan__hover-bottom_right">7 678 000 руб.</p>
+                </div>
               </div>
             </div>
           </div>
