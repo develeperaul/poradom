@@ -10,7 +10,7 @@
   &__number-content {
     position: absolute;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       left: 60px;
     }
   }
@@ -20,7 +20,7 @@
     left: 7px;
     top: 0px;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       top: 80px;
     }
   }
@@ -30,10 +30,15 @@
     margin-bottom: 30px;
     margin-left: 50px;
     padding-left: 13px;
-
-    @include desktop-sm {
+    @include desktop-tablet {
+      margin-left: $space-l-t;
+    }
+    @include desktop-laptop {
+      margin-left: $space-l-l;
+    }
+    @include desktop-desktop {
       padding-top: 130px;
-      margin-left: 300px;
+      margin-left: $space-l-d;
       padding-left: 0;
     }
   }
@@ -55,20 +60,36 @@
     }
 
     &_br {
-      @include desktop-sm {
+      @include desktop-desktop {
         display: none;
       }
     }
   }
   & .swiper {
-    @include desktop-sm {
-      margin-left: 300px;
-      width: calc(100% - 300px);
+    @include desktop-tablet {
+      margin-left: $space-l-t;
+      width: calc(100% - #{$space-l-t});
+    }
+    @include desktop-laptop {
+      margin-left: $space-l-l;
+      width: calc(100% - #{$space-l-l});
+    }
+    @include desktop-desktop {
+      margin-left: $space-l-d;
+      width: calc(100% - #{$space-l-d});
     }
     &-numbs {
-      @include desktop-sm {
-        width: calc(100% + 300px);
-        margin-left: -300px;
+      @include desktop-tablet {
+        width: calc(100% + #{$space-l-t});
+        margin-left: -#{$space-l-t};
+      }
+      @include desktop-laptop {
+        width: calc(100% + #{$space-l-l});
+        margin-left: -#{$space-l-l};
+      }
+      @include desktop-desktop {
+        width: calc(100% + #{$space-l-d});
+        margin-left: -#{$space-l-d};
       }
     }
   }

@@ -8,7 +8,7 @@
     margin: 0 -#{$gap-m};
     padding-bottom: 55px;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       margin: 0;
       margin-right: -60px;
       padding-bottom: 100px;
@@ -18,7 +18,7 @@
   &__bottom {
     margin-top: 20px;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       margin-top: 40px;
     }
   }
@@ -26,7 +26,7 @@
   &__item {
     gap: 20px;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       flex-basis: 420px;
       gap: 30px;
     }
@@ -55,7 +55,7 @@
       margin-left: auto;
       z-index: 8;
 
-      @include desktop-sm {
+      @include desktop-desktop {
         width: 660px;
         height: 440px;
       }
@@ -65,7 +65,7 @@
       width: 200px;
       margin: 0 0 0 auto;
 
-      @include desktop-sm {
+      @include desktop-desktop {
         width: 660px;
         height: 440px;
       }
@@ -74,7 +74,7 @@
     &__content {
       z-index: 9;
 
-      @include desktop-sm {
+      @include desktop-desktop {
         position: absolute;
         top: 348px;
 
@@ -86,7 +86,7 @@
       & > span:first-child {
         display: block;
 
-        @include desktop-sm {
+        @include desktop-desktop {
           padding-right: 19px;
         }
       }
@@ -101,7 +101,7 @@
   text-align: center;
   &__title {
     margin-bottom: 14px;
-    @include desktop-sm {
+    @include desktop-desktop {
       margin-bottom: 10px;
     }
   }
@@ -139,7 +139,7 @@
     border-radius: 4px;
     overflow: hidden;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       display: flex;
     }
 
@@ -155,7 +155,7 @@
       font-size: 16px;
       line-height: 130%;
 
-      @include desktop-sm {
+      @include desktop-desktop {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -176,7 +176,7 @@
     &__img {
       width: 100%;
 
-      @include desktop-sm {
+      @include desktop-desktop {
         width: 540px;
         height: 700px;
       }
@@ -191,7 +191,7 @@
     gap: 10px;
     row-gap: 30px;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       gap: 75px;
       row-gap: 40px;
       display: flex;
@@ -202,7 +202,7 @@
     .mini {
       text-align: center;
 
-      @include desktop-sm {
+      @include desktop-desktop {
         flex-basis: 190px;
       }
 
@@ -210,14 +210,14 @@
         font-size: 26px;
         line-height: 120%;
 
-        @include desktop-sm {
+        @include desktop-desktop {
           font-size: 48px;
           line-height: 100%;
         }
       }
 
       & > p {
-        @include desktop-sm {
+        @include desktop-desktop {
           font-size: 16px;
           line-height: 130%;
         }
@@ -250,7 +250,7 @@
           width: 72px;
           height: 72px;
 
-          @include desktop-sm {
+          @include desktop-desktop {
             width: 90px;
             height: 90px;
           }
@@ -333,7 +333,7 @@
     flex-direction: column;
     gap: 20px;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       gap: 60px;
     }
   }
@@ -361,21 +361,21 @@
     color: $primary;
     margin-right: 18px;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       font-size: 26px;
       line-height: 120%;
     }
   }
 
   &__right {
-    @include desktop-sm {
+    @include desktop-desktop {
       max-width: 386px;
     }
 
     & > h4 {
       margin-bottom: 6px;
 
-      @include desktop-sm {
+      @include desktop-desktop {
         margin-bottom: 20px;
         font-size: 26px;
         line-height: 120%;
@@ -390,7 +390,7 @@
   font-size: 12px;
   line-height: 170%;
 
-  @include desktop-sm {
+  @include desktop-desktop {
     font-size: 16px;
     line-height: 180%;
     text-align: left;
@@ -406,20 +406,26 @@
   display: none;
   color: #fff;
 
-  @include desktop-sm {
+  @include desktop-tablet {
     position: absolute;
     z-index: 2;
-    right: 60px;
+    right: $gap-t;
     bottom: 60px;
     display: flex;
     align-items: center;
     gap: 30px;
   }
+  @include desktop-desktop {
+    right: $gap;
+  }
 
   &__left {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 12px;
+    @include desktop-desktop {
+      gap: 20px;
+    }
 
     & > a {
       color: #fff;
@@ -439,53 +445,79 @@
   padding: 40px $gap-m;
   background-color: $secondary;
   margin: 0 -#{$gap-m};
-  @include desktop-sm {
+  @include desktop-desktop {
     padding: 80px $gap;
     margin: 0 -#{$gap};
   }
   & .location-home__cards-wrapper {
     max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   & .location-home__cards {
-    display: flex;
-    & .location-home__card {
-      &:nth-child(1),
-      &:nth-child(2),
-      &:nth-child(3),
-      &:nth-child(4),
-      &:nth-child(6) {
-        width: 200px;
-      }
+    max-width: 100%;
+    width: 100%;
+    @include desktop-desktop {
+      display: flex;
+    }
+    @include desktop-desktop {
+      & .location-home__card {
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(6) {
+          width: 200px;
+        }
 
-      &:nth-child(5),
-      &:nth-child(7) {
-        width: 370px;
-      }
+        &:nth-child(5),
+        &:nth-child(7) {
+          width: 370px;
+        }
 
-      &:nth-child(1) {
-        order: 1;
-      }
-      &:nth-child(2) {
-        order: 2;
-      }
-      &:nth-child(3) {
-        order: 3;
-      }
-      &:nth-child(4) {
-        order: 4;
-      }
-      &:nth-child(5) {
-        order: 6;
-      }
-      &:nth-child(6) {
-        order: 5;
-      }
-      &:nth-child(7) {
-        order: 7;
+        &:nth-child(1) {
+          order: 1;
+        }
+        &:nth-child(2) {
+          order: 2;
+        }
+        &:nth-child(3) {
+          order: 3;
+        }
+        &:nth-child(4) {
+          order: 4;
+        }
+        &:nth-child(5) {
+          order: 6;
+        }
+        &:nth-child(6) {
+          order: 5;
+        }
+        &:nth-child(7) {
+          order: 7;
+        }
       }
     }
   }
   & .button {
     margin-top: 30px;
+  }
+}
+
+.grass {
+  position: absolute;
+  background-image: url(../img/grass.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+
+  margin: 0 -#{$gap-m};
+  width: calc(100% + 2 * #{$gap-m});
+  @include desktop-desktop {
+    margin: 0 -#{$gap};
+    width: calc(100% + 2 * #{$gap});
   }
 }

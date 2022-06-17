@@ -7,18 +7,18 @@
   }
   &-element.contacts__top {
     display: none;
-    @include desktop-sm {
+    @include desktop-tablet {
       display: grid;
     }
   }
   &-element:not(:last-child).contacts__top {
-    @include desktop-sm {
+    @include desktop-tablet {
       margin-bottom: 80px;
     }
   }
   &-element__active.contacts__top {
     display: block;
-    @include desktop-sm {
+    @include desktop-tablet {
       display: grid;
     }
   }

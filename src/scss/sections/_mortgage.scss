@@ -1,16 +1,16 @@
 .mortgage {
-  @include desktop-sm {
+  @include desktop-desktop {
     padding-bottom: 120px;
   }
   &__content {
-    @include desktop-sm {
+    @include desktop-desktop {
       display: flex;
       gap: 120px;
       justify-content: space-between;
     }
   }
   &__bottom {
-    @include desktop-sm {
+    @include desktop-desktop {
       padding-top: 120px;
     }
   }
@@ -18,13 +18,13 @@
     margin-bottom: 10px;
   }
   &__text {
-    @include desktop-sm {
+    @include desktop-desktop {
       font-size: 26px;
       line-height: 120%;
     }
   }
   &__accordion {
-    @include desktop-sm {
+    @include desktop-desktop {
       margin-top: 90px;
       margin-left: 300px;
       width: calc(100% - 300px);
@@ -34,7 +34,7 @@
       margin-bottom: 20px;
       font-size: 18px;
       line-height: 120%;
-      @include desktop-sm {
+      @include desktop-desktop {
         font-size: 48px;
         line-height: 100%;
         margin-bottom: 40px;
@@ -42,14 +42,14 @@
     }
   }
   &__calc {
-    @include desktop-sm {
+    @include desktop-desktop {
       max-width: 595px;
     }
   }
   &__secret {
     &-content {
       padding-top: 20px;
-      @include desktop-sm {
+      @include desktop-desktop {
         padding: 20px 55px 0;
       }
       & > p {
@@ -57,13 +57,13 @@
         color: #b5b9be;
         font-size: 10px;
         line-height: 100%;
-        @include desktop-sm {
+        @include desktop-desktop {
           font-size: 12px;
           line-height: 130%;
         }
         &:not(:last-child) {
           margin-bottom: 10px;
-          @include desktop-sm {
+          @include desktop-desktop {
             margin-bottom: 0;
           }
         }

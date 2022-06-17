@@ -1,6 +1,6 @@
 .explore {
   padding: 40px 0;
-  @include desktop-sm {
+  @include desktop-desktop {
     display: none;
   }
   &__title {

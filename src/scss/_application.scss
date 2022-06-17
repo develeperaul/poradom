@@ -1,6 +1,6 @@
 .application {
   background-color: $secondary;
-  @include desktop-sm {
+  @include desktop-desktop {
     transform: translateY(0px);
     margin-bottom: 0;
     padding: 100px 0;
@@ -8,19 +8,30 @@
   &__text {
     color: #fff;
     padding-top: 40px;
-    @include desktop-sm {
+    @include desktop-desktop {
       margin: 0 150px;
       padding-top: 100px;
     }
   }
   .form {
-    @include desktop-sm {
+    @include desktop-tablet {
       margin: 0 auto;
-      width: calc(100% - 2 * 300px);
+      width: calc(100% - 2 * #{$space-l-t});
+      padding: 40px 34px;
+    }
+    @include desktop-laptop {
+      width: calc(100% - 2 * #{$space-l-l});
+      padding: 50px 79px;
+    }
+    @include desktop-desktop {
+      width: calc(100% - 2 * #{$space-l-d});
       padding: 50px 150px;
     }
     &__top {
-      @include desktop-sm {
+      @include desktop-tablet {
+        max-width: 240px;
+      }
+      @include desktop-desktop {
         max-width: 279px;
       }
     }

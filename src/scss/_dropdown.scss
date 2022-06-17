@@ -43,7 +43,7 @@ $choice-color: #212529;
     color: $font-color;
     transition: all $transition-duration ease;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       min-height: 60px;
     }
 
@@ -114,7 +114,7 @@ $choice-color: #212529;
     background-color: #fff;
     // transition: max-height $transition-duration ease-in-out;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       position: absolute;
       z-index: 1;
     }
@@ -138,7 +138,7 @@ $choice-color: #212529;
     &--show {
       max-height: 100vh;
 
-      @include desktop-sm {
+      @include desktop-desktop {
         overflow-y: initial;
       }
     }

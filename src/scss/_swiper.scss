@@ -5,7 +5,7 @@ $pageColorActive: #0099e0;
   width: 100%;
   height: 100%;
   // padding-bottom: 50px;
-  // @include desktop-sm {
+  // @include desktop-desktop {
   //   padding-bottom: 0;
   // }
 }
@@ -44,7 +44,7 @@ $pageColorActive: #0099e0;
 
   &__text {
     margin-top: 14px;
-    @include desktop-sm {
+    @include desktop-desktop {
       font-size: 18px;
       line-height: 140%;
       max-width: 300px;
@@ -54,7 +54,7 @@ $pageColorActive: #0099e0;
 
   &__list {
     margin-top: 14px;
-    @include desktop-sm {
+    @include desktop-desktop {
       margin-top: 20px;
     }
   }
@@ -62,7 +62,7 @@ $pageColorActive: #0099e0;
   &__item {
     position: relative;
     padding-left: 10px;
-    @include desktop-sm {
+    @include desktop-desktop {
       padding-left: 20px;
       font-weight: 500;
       font-size: 18px;
@@ -90,7 +90,7 @@ $pageColorActive: #0099e0;
   justify-content: flex-end;
 
   &-card {
-    @include desktop-sm {
+    @include desktop-tablet {
       display: none;
     }
   }
@@ -192,11 +192,11 @@ $pageColorActive: #0099e0;
     bottom: 0 !important;
     padding-top: 9px;
     margin-top: 20px;
-    @include desktop-sm {
+    @include desktop-desktop {
       margin-top: 60px;
     }
     &_start {
-      @include desktop-sm {
+      @include desktop-desktop {
         text-align: left;
       }
     }
@@ -210,7 +210,7 @@ $pageColorActive: #0099e0;
       position: absolute;
       bottom: 0;
       z-index: 10;
-      @include desktop-sm {
+      @include desktop-tablet {
         bottom: 45px !important;
       }
     }
@@ -324,7 +324,7 @@ $pageColorActive: #0099e0;
     }
   }
   &_flex {
-    @include desktop-sm {
+    @include desktop-desktop {
       margin-left: 300px;
       width: calc(100% - 300px);
     }
@@ -354,28 +354,28 @@ $pageColorActive: #0099e0;
 
 .newsSwiper {
   padding-bottom: 50px;
-  @include desktop-sm {
+  @include desktop-desktop {
     padding-bottom: 110px;
   }
 }
 
 .otherProjects {
   padding-bottom: 50px;
-  @include desktop-sm {
+  @include desktop-desktop {
     padding-bottom: 110px;
   }
 }
 
 .featuresSwiper {
   padding-bottom: 50px;
-  @include desktop-sm {
+  @include desktop-desktop {
     padding-bottom: 0;
   }
 }
 
 .hit__swiper {
   padding-bottom: 50px;
-  @include desktop-sm {
+  @include desktop-desktop {
     padding-bottom: 0;
   }
 }

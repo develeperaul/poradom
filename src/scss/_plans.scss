@@ -1,6 +1,6 @@
 .plans {
   & .section__btns {
-    @include desktop-sm {
+    @include desktop-desktop {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
@@ -9,7 +9,7 @@
     & .markers {
       display: none;
 
-      @include desktop-sm {
+      @include desktop-desktop {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
@@ -20,7 +20,7 @@
   }
 
   & .markers {
-    @include desktop-sm {
+    @include desktop-desktop {
       display: none;
     }
   }
@@ -29,7 +29,7 @@
     background-color: $secondary;
     padding-top: 20px;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       padding: 80px 0;
     }
     & .form__top {
@@ -55,7 +55,7 @@
     &-text {
       font-style: italic;
       margin-top: 14px;
-      @include desktop-sm {
+      @include desktop-desktop {
         margin-top: 20px;
       }
     }
@@ -65,7 +65,7 @@
 .plan {
   position: relative;
   margin-bottom: 20px;
-  @include desktop-sm {
+  @include desktop-desktop {
     margin-bottom: 0;
   }
   &__map {
@@ -80,7 +80,7 @@
 
     -ms-overflow-style: none;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       height: auto;
       width: 100%;
     }
@@ -90,7 +90,7 @@
       height: 100%;
       width: auto;
 
-      @include desktop-sm {
+      @include desktop-desktop {
         height: auto;
         width: 100%;
       }
@@ -206,7 +206,7 @@
       margin-left: auto;
       margin-bottom: 10px;
 
-      @include desktop-sm {
+      @include desktop-desktop {
         display: none;
       }
     }
@@ -220,7 +220,7 @@
       gap: 30px;
       justify-content: center;
 
-      @include desktop-sm {
+      @include desktop-desktop {
         width: 500px;
         border-radius: 4px 4px 0px 0px;
         padding: 20px 0;
@@ -236,23 +236,23 @@
 
 .plans-floor {
   padding-bottom: 40px;
-  @include desktop-sm {
+  @include desktop-desktop {
     padding-bottom: 120px;
   }
   &_pb0 {
     padding-bottom: 40px;
-    @include desktop-sm {
+    @include desktop-desktop {
       padding-bottom: 0;
     }
   }
   &__content {
-    @include desktop-sm {
+    @include desktop-desktop {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 670px));
       grid-template-areas: "A B C";
     }
     & .alternative {
-      @include desktop-sm {
+      @include desktop-desktop {
         max-width: 520px;
         margin-right: -$gap;
         height: calc(100% + 140px);
@@ -265,13 +265,13 @@
         border: none;
       }
       &__text {
-        @include desktop-sm {
+        @include desktop-desktop {
           margin-bottom: 40px;
         }
       }
       & .plan__item-text {
         margin-top: 14px;
-        @include desktop-sm {
+        @include desktop-desktop {
           margin-top: 10px;
         }
       }
@@ -286,16 +286,16 @@
 .plan-region {
   position: relative;
   margin: 0 -#{$gap-m};
-  @include desktop-sm {
+  @include desktop-desktop {
     margin: 0 -#{$gap};
   }
   & .plan__map {
     height: 464px;
-    @include desktop-sm {
+    @include desktop-desktop {
       height: 900px;
     }
     & > img {
-      @include desktop-sm {
+      @include desktop-desktop {
         height: 100%;
       }
     }
@@ -306,7 +306,7 @@
     margin: 0 #{$gap-m};
     width: calc(100% - 2 * #{$gap-m});
     bottom: 10px;
-    @include desktop-sm {
+    @include desktop-desktop {
       margin: 0 #{$gap};
       width: calc(100% - 2 * #{$gap});
       justify-content: flex-end;

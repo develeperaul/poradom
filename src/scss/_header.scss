@@ -34,7 +34,7 @@
     padding-bottom: 12px;
     height: 64px;
 
-    @include desktop-sm {
+    @include desktop-laptop {
       grid-template-columns: repeat(6, minmax(0, 1fr));
       display: grid;
       padding-top: 14px;
@@ -57,7 +57,7 @@
       }
 
       & .logo > img {
-        @include desktop-sm {
+        @include desktop-desktop {
           width: 205px;
           height: 50px;
         }
@@ -126,7 +126,7 @@
 
     &.video {
       .video__top-image {
-        @include desktop-sm {
+        @include desktop-desktop {
           height: calc(100vh - 100px);
         }
       }
@@ -136,7 +136,7 @@
   &__contacts {
     display: none;
 
-    @include desktop-sm {
+    @include desktop-laptop {
       display: flex;
       align-items: center;
       gap: 70px;
@@ -172,7 +172,7 @@
     flex-direction: column;
     justify-content: flex-end;
 
-    @include desktop-sm {
+    @include desktop-tablet {
       justify-content: center;
     }
 
@@ -182,10 +182,13 @@
       text-transform: uppercase;
       font-family: "DinCyMd", sans-serif;
       letter-spacing: 0.01em;
-
-      @include desktop-sm {
-        margin-bottom: 30px;
+      @include desktop-tablet {
+        margin-bottom: 20px;
+        letter-spacing: -0.03em;
         margin-top: 160px;
+      }
+      @include desktop-desktop {
+        margin-bottom: 30px;
       }
     }
 
@@ -196,8 +199,12 @@
       line-height: 21px;
       display: flex;
       justify-content: space-between;
-
-      @include desktop-sm {
+      @include desktop-tablet {
+        font-size: 14px;
+        margin-bottom: 30px;
+        line-height: 130%;
+      }
+      @include desktop-desktop {
         font-size: 26px;
         margin-bottom: 40px;
         line-height: 120%;
@@ -209,7 +216,7 @@
   }
 
   & .video__top-image {
-    @include desktop-sm {
+    @include desktop-desktop {
       min-width: 960px;
     }
   }
@@ -224,12 +231,12 @@
       height: 100%;
     }
     &__image {
-      @include desktop-sm {
+      @include desktop-desktop {
         display: none;
       }
       &_desktop {
         display: none;
-        @include desktop-sm {
+        @include desktop-desktop {
           display: block;
           padding: 0 150px;
         }
@@ -238,7 +245,7 @@
 
     & .built__drop {
       margin-top: 40px;
-      @include desktop-sm {
+      @include desktop-desktop {
         margin-top: 0px;
       }
       & .built__dropdowns-title {
@@ -254,7 +261,7 @@
     flex-direction: column;
     gap: 14px;
     margin-bottom: 20px;
-    @include desktop-sm {
+    @include desktop-desktop {
       margin-bottom: 30px;
       flex-direction: row;
       gap: 150px;
@@ -266,20 +273,20 @@
     }
     &-left {
       gap: 14px;
-      @include desktop-sm {
+      @include desktop-desktop {
         align-items: flex-end;
       }
     }
 
     &-right {
       gap: 24px;
-      @include desktop-sm {
+      @include desktop-desktop {
         gap: 35px;
       }
     }
   }
   &__title {
-    @include desktop-sm {
+    @include desktop-desktop {
       line-height: 85%;
     }
   }

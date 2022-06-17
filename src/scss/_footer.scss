@@ -12,7 +12,7 @@ footer {
   &__m {
     display: block;
 
-    @include desktop-sm {
+    @include desktop-tablet {
       display: none;
     }
   }
@@ -20,7 +20,7 @@ footer {
   &__d {
     display: none;
 
-    @include desktop-sm {
+    @include desktop-tablet {
       display: block;
     }
   }
@@ -39,7 +39,7 @@ footer {
   &__logo {
     margin-bottom: 40px;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       margin-bottom: 50px;
     }
   }
@@ -47,7 +47,7 @@ footer {
   &__socials {
     margin-bottom: 20px;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       align-self: baseline;
       margin-bottom: 24px;
     }
@@ -56,10 +56,19 @@ footer {
   &__top {
     display: flex;
     justify-content: space-between;
-
+    gap: 73px;
     &-right {
-      display: flex;
-      column-gap: 150px;
+      // display: flex;
+      column-gap: 70px;
+      row-gap: 18px;
+      display: grid;
+      grid-template-areas:
+        "A B C"
+        "A B D";
+      @include desktop-laptop {
+        column-gap: 150px;
+        grid-template-areas: "A B C D";
+      }
     }
   }
 
@@ -72,7 +81,22 @@ footer {
   &__nav {
     display: flex;
     flex-direction: column;
-    row-gap: 30px;
+    row-gap: 18px;
+    @include desktop-desktop {
+      row-gap: 30px;
+    }
+    &:nth-child(1) {
+      grid-area: A;
+    }
+    &:nth-child(2) {
+      grid-area: B;
+    }
+    &:nth-child(3) {
+      grid-area: C;
+    }
+    &:nth-child(4) {
+      grid-area: D;
+    }
 
     &-header {
       color: $primary;

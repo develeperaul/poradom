@@ -4,19 +4,37 @@
     flex-direction: column;
     gap: 30px;
     margin-bottom: 40px;
-    @include desktop-sm {
-      height: 600px;
+    @include desktop-tablet {
+      gap: 24px;
+      margin-bottom: 40px;
       flex-direction: row;
-      gap: 150px;
+    }
+    @include desktop-laptop {
+      margin-bottom: 50px;
+      gap: 78px;
+    }
+    @include desktop-desktop {
       margin-bottom: 100px;
+
+      gap: 150px;
     }
     & > img {
-      @include desktop-sm {
+      @include desktop-tablet {
+        width: 340px;
+        height: 226px;
+      }
+      @include desktop-desktop {
+        height: 313px;
+        width: 470px;
+      }
+
+      @include desktop-desktop {
         width: 900px;
+        height: 600px;
       }
     }
     &-text {
-      @include desktop-sm {
+      @include desktop-tablet {
         max-width: 600px;
       }
     }

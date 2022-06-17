@@ -7,7 +7,7 @@ svg {
   position: relative;
   padding-bottom: 40px;
 
-  @include desktop-sm {
+  @include desktop-desktop {
     padding-bottom: 20px;
   }
 
@@ -24,7 +24,7 @@ svg {
     margin-left: 50px;
     padding-top: 80px;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       padding-top: 130px;
       margin-left: 300px;
       padding-left: 0;
@@ -35,7 +35,7 @@ svg {
     z-index: 9;
     margin-bottom: 10px;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       margin-bottom: 40px;
     }
 
@@ -52,7 +52,7 @@ svg {
     font-size: 16px;
     align-self: flex-start;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       font-size: 26px;
       line-height: 31px;
       margin-left: 0;
@@ -71,7 +71,7 @@ svg {
       left: 20px;
       width: 1px;
       height: 40px;
-      @include desktop-sm {
+      @include desktop-desktop {
         left: 70px;
         height: 80px;
       }
@@ -89,7 +89,7 @@ svg {
     position: absolute;
     top: 40px;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       top: 80px;
     }
   }
@@ -99,7 +99,7 @@ svg {
     left: 7px;
     z-index: 9;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       left: 60px;
     }
   }
@@ -125,8 +125,19 @@ svg {
 
 .survey__wrapper {
   position: relative;
-
-  @include desktop-sm {
+  @include desktop-tablet {
+    $space: 87px;
+    width: calc(100% - 2 * #{$space});
+    margin-left: $space;
+  }
+  @include desktop-laptop {
+    $space: 93px;
+    width: calc(100% - 2 * #{$space});
+    margin-left: 93px;
+  }
+  @include desktop-desktop {
+    $space: 300px;
+    width: calc(100% - 2 * #{$space});
     margin-left: 300px;
   }
 
@@ -147,7 +158,7 @@ svg {
 
     opacity: 0;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       max-width: 300px;
       right: 0;
       left: 0;
@@ -167,9 +178,13 @@ svg {
 .survey__list {
   position: relative;
 
-  @include desktop-sm {
+  @include desktop-laptop {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 570px));
+    grid-template-columns: repeat(2, minmax(0, 373px));
+    gap: 6px 8px;
+  }
+  @include desktop-desktop {
     gap: 10px 30px;
+    grid-template-columns: repeat(2, minmax(0, 570px));
   }
 }

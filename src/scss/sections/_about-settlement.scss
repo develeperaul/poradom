@@ -2,7 +2,7 @@
   background-color: $secondary;
   position: relative;
   padding-bottom: 30px;
-  @include desktop-sm {
+  @include desktop-desktop {
     padding-bottom: 120px;
   }
   &__top {
@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
-    @include desktop-sm {
+    @include desktop-desktop {
       margin-bottom: 0;
       position: absolute;
       top: 0;
@@ -21,14 +21,14 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    @include desktop-sm {
+    @include desktop-desktop {
       grid-template-columns: repeat(4, 200px);
       margin-left: 300px;
     }
   }
   &__slider {
     margin-top: 30px;
-    @include desktop-sm {
+    @include desktop-desktop {
       margin-top: 60px;
     }
   }
@@ -37,7 +37,7 @@
 
     height: 75px;
     top: 30px;
-    @include desktop-sm {
+    @include desktop-desktop {
       width: 450px;
       height: 307px;
       top: 120px;
@@ -50,7 +50,7 @@
     left: 40px;
     margin: 0;
     padding: 0;
-    @include desktop-sm {
+    @include desktop-desktop {
       width: 42%;
       position: static;
       padding-top: 130px;
@@ -61,7 +61,7 @@
   }
   & .navigation__card {
     & > img {
-      @include desktop-sm {
+      @include desktop-desktop {
         height: 760px;
       }
     }

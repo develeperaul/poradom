@@ -1,13 +1,13 @@
 .road-map {
   .roadMap {
     display: none;
-    @include desktop-sm {
+    @include desktop-desktop {
       display: flex;
     }
     & .swiper-slide {
       position: relative;
       &:not(:last-child)::before {
-        @include desktop-sm {
+        @include desktop-desktop {
           position: absolute;
           content: "";
           width: 2px;
@@ -25,14 +25,14 @@
   &__list {
     display: flex;
     flex-direction: column;
-    @include desktop-sm {
+    @include desktop-desktop {
       display: none;
     }
   }
 
   &__item {
     position: relative;
-    @include desktop-sm {
+    @include desktop-desktop {
       //   max-width: 300px;
     }
     &:not(:last-child) {

@@ -53,6 +53,7 @@
 @import "sections/services";
 @import "sections/documents-homeowners";
 @import "sections/ready-homes";
+@import "sections/region";
 @import "footer";
 
 @import "plugins/toggle";
@@ -60,7 +61,7 @@
 @import "plugins/glightbox";
 
 .title-br {
-  @include desktop-sm {
+  @include desktop-tablet {
     display: none;
   }
 }
@@ -68,7 +69,7 @@
 .section {
   padding: 20px 0 40px;
 
-  @include desktop-sm {
+  @include desktop-desktop {
     padding: 40px 0 120px;
   }
 
@@ -81,7 +82,7 @@
   &:not(:first-child) {
     padding: 40px 0 40px;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       padding: 120px 0 120px;
     }
   }
@@ -96,7 +97,7 @@
   &__top {
     margin-bottom: 20px;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       margin-bottom: 40px;
     }
 
@@ -107,7 +108,7 @@
     &_first {
       display: none;
 
-      @include desktop-sm {
+      @include desktop-desktop {
         display: block;
       }
     }
@@ -116,7 +117,7 @@
   &__title {
     margin-bottom: 20px;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       font-size: 48px;
       line-height: 100%;
       margin-bottom: 40px;
@@ -135,7 +136,7 @@
     margin-bottom: 20px;
     position: relative;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       margin-bottom: 45px;
     }
   }
@@ -143,7 +144,7 @@
   &__crumbs {
     margin-bottom: 20px;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       margin-bottom: 40px;
       font-size: 14px;
       line-height: 130%;
@@ -153,7 +154,7 @@
   &-flex {
     display: block;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       display: flex;
       gap: 100px;
     }
@@ -171,7 +172,7 @@
   padding-top: 40px;
   padding-bottom: 40px;
 
-  @include desktop-sm {
+  @include desktop-desktop {
     padding: 120px 0;
   }
 }
@@ -190,12 +191,12 @@
 }
 
 .drop {
-  @include desktop-sm {
+  @include desktop-tablet {
     display: none;
   }
 
   &__children {
-    @include desktop-sm {
+    @include desktop-tablet {
       display: none;
     }
   }

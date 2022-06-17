@@ -3,7 +3,7 @@
   background-color: $secondary;
   padding-bottom: 40px;
 
-  @include desktop-sm {
+  @include desktop-tablet {
     padding-bottom: 0;
   }
 
@@ -19,7 +19,7 @@
       left: 20px;
       width: 1px;
       height: 40px;
-      @include desktop-sm {
+      @include desktop-desktop {
         left: 130px;
         height: 80px;
       }
@@ -30,7 +30,7 @@
       left: 20px;
       width: 1px;
       height: 160px;
-      @include desktop-sm {
+      @include desktop-desktop {
         left: 130px;
         height: 170px;
       }
@@ -44,7 +44,7 @@
     left: 7px;
     top: 40px;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       left: 60px;
       top: 80px;
     }
@@ -54,7 +54,12 @@
     &-title {
       color: #fff;
       z-index: 11;
-
+      @include desktop-tablet {
+        display: none;
+      }
+      @include desktop-laptop {
+        display: inline-block;
+      }
       &:first-child {
         transform: translateY(5px);
       }
@@ -78,7 +83,7 @@
     z-index: 9;
     margin-bottom: 23px;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       margin-bottom: 70px;
     }
 
@@ -100,7 +105,7 @@
     position: absolute;
     top: 40px;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       top: 125px;
       width: 275px;
       height: 311px;
@@ -114,28 +119,53 @@
     // margin-right: 0em;
     z-index: 8;
 
-    @include desktop-sm {
-      width: auto;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 70px;
+    @include desktop-tablet {
+      display: block;
+      width: 100%;
+      // width: auto;
+      // display: grid;
+      // grid-template-columns: repeat(2, 1fr);
+      // gap: 70px;
     }
 
     &-content {
-      @include desktop-sm {
-        margin-left: 155px;
-        margin-right: -70px;
-        margin-top: 130px;
+      @include desktop-tablet {
+        position: absolute;
+        left: 45px;
+        top: 45px;
+        margin: 0;
+        // margin-left: 155px;
+        // margin-right: -70px;
+        // margin-top: 130px;
+      }
+      @include desktop-laptop {
+        top: 45px;
+        left: 18px;
+      }
+      @include desktop-desktop {
+        left: 95px;
+        top: 130px;
       }
     }
   }
 
   &__image {
-    @include desktop-sm {
-      order: 2;
+    @include desktop-tablet {
+      // order: 2;
+      // flex-grow: 1;
+      margin-right: 0;
+      margin-left: auto;
+      min-height: 310px;
+      width: 384px;
+    }
+
+    @include desktop-laptop {
+      width: 440px;
+    }
+
+    @include desktop-desktop {
+      width: 900px;
       min-height: 700px;
-      flex-grow: 1;
-      width: 100%;
     }
   }
 }

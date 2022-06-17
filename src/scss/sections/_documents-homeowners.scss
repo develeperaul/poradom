@@ -1,16 +1,15 @@
 .documents-homeowners {
-    &__content {
-        @include desktop-sm {
-
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 30px;
-        }
-
-        & .card-about {
-            @include desktop-sm {
-                grid-column: 2 span / 2 span;
-            }
-        }
+  &__content {
+    @include desktop-desktop {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 30px;
     }
+
+    & .card-about {
+      @include desktop-desktop {
+        grid-column: 2 span / 2 span;
+      }
+    }
+  }
 }

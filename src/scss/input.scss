@@ -1,5 +1,8 @@
 .text-field {
   margin-bottom: 1rem;
+  @include desktop-tablet {
+    margin-bottom: 6px;
+  }
 }
 
 .text-field__label {
@@ -22,9 +25,15 @@
   border: 1px solid #bdbdbd;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-
-  @include desktop-sm {
+  @include desktop-tablet {
+    height: 40px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  @include desktop-desktop {
     height: 60px;
+    font-size: 1rem;
+    line-height: 1.5;
   }
 }
 
@@ -81,16 +90,16 @@
   color: #dc3545;
 }
 
-.text-field__input_valid~.text-field__message {
+.text-field__input_valid ~ .text-field__message {
   color: #198754;
 }
 
-.text-field__input_invalid~.text-field__message,
-.text-field__input_valid~.text-field__message {
+.text-field__input_invalid ~ .text-field__message,
+.text-field__input_valid ~ .text-field__message {
   display: block;
 }
 
-.upload-file__input.text-field__input_invalid~.upload-file__label {
+.upload-file__input.text-field__input_invalid ~ .upload-file__label {
   border: 1px solid #dc3545;
   color: #dc3545;
 }
@@ -172,7 +181,7 @@
   -moz-appearance: none;
   appearance: none;
 
-  @include desktop-sm {
+  @include desktop-desktop {
     height: 60px;
   }
 }
@@ -213,7 +222,7 @@
   line-height: 1.25;
   padding: 7px 20px;
 
-  @include desktop-sm {
+  @include desktop-desktop {
     height: 60px;
   }
 }
@@ -247,8 +256,10 @@
   padding-bottom: 0.625rem;
 }
 
-.float-field_floating .float-field__input:focus~.float-field__label,
-.float-field_floating .float-field__input:not(:placeholder-shown)~.float-field__label {
+.float-field_floating .float-field__input:focus ~ .float-field__label,
+.float-field_floating
+  .float-field__input:not(:placeholder-shown)
+  ~ .float-field__label {
   opacity: 0.65;
   transform: scale(0.85) translateY(-0.75rem) translateX(0.15rem);
 }

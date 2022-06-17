@@ -1,12 +1,12 @@
 .news-item {
   &__news {
     display: none;
-    @include desktop-sm {
+    @include desktop-desktop {
       display: block;
     }
   }
   &__link {
-    @include desktop-sm {
+    @include desktop-desktop {
       display: none;
     }
   }

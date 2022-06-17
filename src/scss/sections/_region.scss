@@ -1,0 +1,19 @@
+.region {
+  &__project {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    @include desktop-desktop {
+      height: 900px;
+    }
+  }
+
+  &-road {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    margin: 0 -60px;
+    width: calc(100% + 120px);
+    max-width: inherit;
+  }
+}

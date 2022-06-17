@@ -1,13 +1,13 @@
 .complex {
   &__content {
-    @include desktop-sm {
+    @include desktop-desktop {
       margin-left: 300px;
       display: flex;
       gap: 80px;
     }
     &-image {
       display: none;
-      @include desktop-sm {
+      @include desktop-desktop {
         display: block;
         margin-top: 60px;
         width: 670px;

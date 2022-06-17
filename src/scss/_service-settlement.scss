@@ -7,7 +7,7 @@
   position: relative;
   padding-bottom: 30px;
 
-  @include desktop-sm {
+  @include desktop-desktop {
     padding-bottom: 80px;
   }
 
@@ -19,7 +19,7 @@
     margin: 0;
     padding: 0;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       width: 42%;
       position: static;
       padding-top: 130px;
@@ -29,7 +29,7 @@
     }
 
     & .title {
-      @include desktop-sm {
+      @include desktop-desktop {
         margin-bottom: 40px;
       }
     }
@@ -41,7 +41,7 @@
   }
 
   &__top {
-    @include desktop-sm {
+    @include desktop-desktop {
       position: absolute;
       top: 0;
       width: calc(100% - #{$gap});
@@ -54,7 +54,7 @@
     z-index: 8;
     object-fit: cover;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       width: 655px;
       height: 530px;
     }
@@ -72,12 +72,12 @@
     color: #fff;
     margin-bottom: 30px;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       gap: 20px;
     }
 
     &_mobile {
-      @include desktop-sm {
+      @include desktop-desktop {
         display: none;
       }
     }
@@ -89,7 +89,7 @@
     font-size: 16px;
     line-height: 130%;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       gap: 14px;
       font-size: 18px;
       line-height: 120%;
@@ -104,7 +104,7 @@
     padding-top: 76px;
     padding-left: 0;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       display: none;
     }
   }
@@ -116,7 +116,7 @@
     text-align: left;
     margin: 0;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       font-size: 18px;
       line-height: 120%;
     }
@@ -146,7 +146,7 @@
   &__content {
     display: none;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       display: flex;
       gap: 80px;
       align-items: end;
@@ -162,13 +162,13 @@
   }
 
   &__button {
-    @include desktop-sm {
+    @include desktop-desktop {
       display: none;
     }
   }
 
   & .swiper {
-    @include desktop-sm {
+    @include desktop-desktop {
       padding-bottom: 40px;
     }
   }
@@ -176,14 +176,14 @@
   & .form {
     margin-top: 20px;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       margin-top: 40px;
     }
   }
 
   & .navigation__card {
     & > img {
-      @include desktop-sm {
+      @include desktop-desktop {
         height: 760px;
       }
     }

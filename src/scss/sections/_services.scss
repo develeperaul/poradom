@@ -1,23 +1,21 @@
 .services {
-    background-color: $secondary;
-    position: relative;
-    padding-bottom: 40px;
+  background-color: $secondary;
+  position: relative;
+  padding-bottom: 40px;
 
-    @include desktop-sm {
-        padding-bottom: 120px;
+  @include desktop-desktop {
+    padding-bottom: 120px;
+  }
+
+  & .cards-mini {
+    color: #fff;
+
+    @include desktop-desktop {
+      margin-top: 80px;
+      margin-left: 300px;
+      display: grid;
+      gap: 40px 10px;
+      grid-template-columns: repeat(5, minmax(0, 200px));
     }
-
-    & .cards-mini {
-        color: #fff;
-
-        @include desktop-sm {
-            margin-top: 80px;
-            margin-left: 300px;
-            display: grid;
-            gap: 40px 10px;
-            grid-template-columns: repeat(5, minmax(0, 200px));
-
-        }
-
-    }
+  }
 }

@@ -15,11 +15,17 @@
 }
 .built {
   padding: 15px 0 40px 0;
-  @include desktop-sm {
+  @include desktop-tablet {
+    padding: 32px 0 40px;
+  }
+  @include desktop-laptop {
+    padding: 54px 0 40px;
+  }
+  @include desktop-desktop {
     padding: 80px 0;
   }
   &__wrapper {
-    @include desktop-sm {
+    @include desktop-tablet {
       display: flex;
       gap: 10px;
       justify-content: space-between;
@@ -35,9 +41,16 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
-    @include desktop-sm {
-      max-width: 1500px;
+    @include desktop-tablet {
       margin: 0 auto;
+      grid-template-columns: repeat(5, 1fr);
+
+      grid-template-areas:
+        "A A B B B"
+        "C C B B B";
+    }
+    @include desktop-laptop {
+      max-width: 1500px;
       grid-template-columns: repeat(4, 1fr);
 
       grid-template-areas:
@@ -45,7 +58,7 @@
         "C C B B";
     }
     & .built__title {
-      @include desktop-sm {
+      @include desktop-tablet {
         grid-area: A;
         place-self: center;
         justify-self: flex-start;
@@ -53,16 +66,27 @@
     }
     & .built__image {
       grid-column: 2 span / 2 span;
-      @include desktop-sm {
+      @include desktop-tablet {
         grid-area: C;
         margin: 0;
+        margin-top: 10px;
+      }
+      @include desktop-laptop {
+        height: 90px;
+      }
+      @include desktop-desktop {
+        height: auto;
         margin-top: 30px;
       }
     }
 
     & .built__number {
-      @include desktop-sm {
+      @include desktop-tablet {
+        place-self: end;
         grid-area: B;
+      }
+      @include desktop-laptop {
+        place-self: start;
       }
     }
   }
@@ -76,9 +100,16 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 15px;
-
-    @include desktop-sm {
+    @include desktop-tablet {
+      font-size: 160px;
+      line-height: 189px;
+    }
+    @include desktop-laptop {
+      font-size: 221px;
+      line-height: 261px;
+    }
+    @include desktop-desktop {
+      margin-bottom: 15px;
       font-size: 370px;
       line-height: 437px;
     }
@@ -94,9 +125,16 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 15px;
-
-    @include desktop-sm {
+    @include desktop-tablet {
+      font-size: 160px;
+      line-height: 189px;
+    }
+    @include desktop-laptop {
+      font-size: 221px;
+      line-height: 261px;
+    }
+    @include desktop-desktop {
+      margin-bottom: 15px;
       font-size: 370px;
       line-height: 437px;
     }
@@ -114,16 +152,30 @@
     margin-bottom: 31px;
   }
   &__drop {
-    @include desktop-sm {
+    @include desktop-tablet {
       background-color: $secondary;
-      padding: 70px 150px;
+      padding: 30px 20px;
       border-radius: 12px;
+    }
+    @include desktop-laptop {
+      padding: 38px 20px;
+    }
+    @include desktop-desktop {
+      padding: 70px 150px;
     }
   }
   &__dropdowns-title {
     margin-bottom: 14px;
-    @include desktop-sm {
+    @include desktop-tablet {
       color: #fff;
+      font-size: 24px;
+      line-height: 100%;
+      margin-bottom: 17px;
+    }
+    @include desktop-laptop {
+      margin-bottom: 20px;
+    }
+    @include desktop-desktop {
       font-size: 48px;
       line-height: 100%;
       margin-bottom: 30px;
@@ -140,7 +192,15 @@
     font-weight: 500;
     color: $black;
     text-transform: uppercase;
-    @include desktop-sm {
+    @include desktop-tablet {
+      font-size: 24px;
+      line-height: 100%;
+    }
+    @include desktop-laptop {
+      font-size: 36px;
+      line-height: 100%;
+    }
+    @include desktop-desktop {
       font-size: 48px;
       line-height: 100%;
     }

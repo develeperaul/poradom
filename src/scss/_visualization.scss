@@ -1,44 +1,44 @@
 .visualization {
-  @include desktop-sm {
+  @include desktop-desktop {
   }
 
   &__content {
-    @include desktop-sm {
+    @include desktop-desktop {
       display: grid;
       grid-template-areas: "A A A A B B";
       grid-template-columns: repeat(6, 1fr);
     }
   }
   &__left {
-    @include desktop-sm {
+    @include desktop-desktop {
       grid-area: A;
     }
     & .swiper-numbs {
-      @include desktop-sm {
+      @include desktop-desktop {
         display: none;
       }
     }
     .swiper-nav {
-      @include desktop-sm {
+      @include desktop-desktop {
         position: absolute;
         width: 100%;
         top: 50%;
       }
       & .swiper-next,
       & .swiper-prev {
-        @include desktop-sm {
+        @include desktop-desktop {
           top: auto;
         }
       }
     }
   }
   .section__btns {
-    @include desktop-sm {
+    @include desktop-desktop {
       grid-area: B;
       margin-left: 160px;
     }
     & .button__group {
-      @include desktop-sm {
+      @include desktop-desktop {
         overflow-x: auto;
         flex-wrap: wrap;
         gap: 10px;

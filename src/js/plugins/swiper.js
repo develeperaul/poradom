@@ -276,3 +276,5 @@ new Swiper(".newsSlider", {
     },
   },
 });
+
+new newSwiper(".regionSwiper", () => {});

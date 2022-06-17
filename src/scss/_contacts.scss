@@ -1,58 +1,72 @@
 .contacts {
-    & .section__btns {
-        @include desktop-sm {
-            display: none;
-        }
+  & .section__btns {
+    @include desktop-desktop {
+      display: none;
+    }
+  }
+
+  &__top {
+    @include desktop-tablet {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-areas:
+        "A N"
+        "B C";
+      & > img {
+        max-height: 280px;
+        height: 100%;
+        object-fit: cover;
+        margin: 0;
+      }
     }
 
-    &__top {
-        @include desktop-sm {
+    @include desktop-laptop {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-areas: "A B C";
+      gap: 30px;
 
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 30px;
-
-            &>img {
-                max-height: 400px;
-                height: 100%;
-                object-fit: cover;
-                margin: 0;
-            }
-        }
+      & > img {
+        max-height: 400px;
+        height: 100%;
+        object-fit: cover;
+        margin: 0;
+      }
     }
+  }
 
-    &__image {
-        margin-bottom: 20px;
+  &__image {
+    margin-bottom: 20px;
 
-        @include desktop-sm {
-            order: 2;
-        }
+    @include desktop-tablet {
+      grid-area: B;
+      margin-bottom: 0;
     }
+  }
 
-    &__map {
-        @include desktop-sm {
-            order: 3;
-        }
+  &__map {
+    @include desktop-tablet {
+      grid-area: C;
     }
+  }
 
-    &__image,
-    &__map {
-        width: 100%;
+  &__image,
+  &__map {
+    width: 100%;
+  }
+
+  &__list {
+    margin-bottom: 40px;
+
+    @include desktop-tablet {
+      grid-area: A;
     }
+  }
 
-    &__list {
-        margin-bottom: 40px;
+  & .contact__title {
+    display: none;
 
-        @include desktop-sm {
-            order: 1;
-        }
+    @include desktop-desktop {
+      display: block;
     }
-
-    & .contact__title {
-        display: none;
-
-        @include desktop-sm {
-            display: block;
-        }
-    }
+  }
 }

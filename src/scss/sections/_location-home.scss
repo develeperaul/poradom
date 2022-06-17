@@ -1,6 +1,6 @@
 .location-home {
   &__content {
-    @include desktop-sm {
+    @include desktop-desktop {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       grid-template-areas: "A A A A B B";
@@ -9,7 +9,7 @@
       padding: 40px 0;
       grid-area: A;
       position: relative;
-      @include desktop-sm {
+      @include desktop-desktop {
         padding: 120px 0;
       }
     }
@@ -19,7 +19,7 @@
       margin: 0 -#{$gap-m};
       background-color: $secondary;
       grid-area: B;
-      @include desktop-sm {
+      @include desktop-desktop {
         margin: 0;
         margin-right: -#{$gap};
         display: flex;
@@ -33,7 +33,7 @@
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    @include desktop-sm {
+    @include desktop-desktop {
       margin-top: 40px;
     }
   }
@@ -42,7 +42,7 @@
       max-width: 288px;
       width: 100%;
       margin: 0 auto;
-      @include desktop-sm {
+      @include desktop-desktop {
         max-width: 410px;
       }
     }
@@ -60,7 +60,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 4px;
-    @include desktop-sm {
+    @include desktop-desktop {
       gap: 10px;
     }
     &-col {
@@ -75,7 +75,7 @@
       line-height: 130%;
       color: $darkwhite;
       text-align: center;
-      @include desktop-sm {
+      @include desktop-desktop {
         font-size: 16px;
         line-height: 130%;
       }
@@ -86,7 +86,7 @@
       line-height: 120%;
       color: #ffffff;
       text-align: center;
-      @include desktop-sm {
+      @include desktop-desktop {
         font-size: 26px;
         line-height: 120%;
       }
@@ -121,7 +121,7 @@
 
     width: 100%;
 
-    @include desktop-sm {
+    @include desktop-desktop {
       margin-top: 20px;
     }
   }

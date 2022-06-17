@@ -3,7 +3,7 @@
   background-color: #fff;
   color: $black;
   border-radius: 4px;
-  @include desktop-sm {
+  @include desktop-desktop {
     padding: 60px 70px;
   }
   &__title,
@@ -15,7 +15,7 @@
     margin-bottom: 10px;
   }
   &__inputs {
-    @include desktop-sm {
+    @include desktop-desktop {
       background-color: #e5e7ea;
       border-radius: 6px;
       padding: 60px 55px;

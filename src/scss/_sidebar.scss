@@ -17,13 +17,13 @@
   }
   &__list {
     &.accordion {
-      @include desktop-sm {
+      @include desktop-desktop {
         display: none;
       }
     }
     &-desktop {
       display: none;
-      @include desktop-sm {
+      @include desktop-desktop {
         font-size: 26px;
         line-height: 120%;
         display: flex;

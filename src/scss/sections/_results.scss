@@ -1,12 +1,12 @@
 .results {
   &__content {
-    @include desktop-sm {
+    @include desktop-desktop {
       display: flex;
       gap: 200px;
       margin-left: 300px;
     }
     & > p {
-      @include desktop-sm {
+      @include desktop-desktop {
         font-size: 26px;
         line-height: 120%;
       }
