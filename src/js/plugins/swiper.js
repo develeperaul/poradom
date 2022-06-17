@@ -35,7 +35,7 @@ const swiper = (name, opts = {}) => {
     ...opts,
   });
 };
-export default class newSwiper extends swiper {}
+export default class newSwiper extends swiper { }
 new newSwiper(".storiesSwiper", {
   on: {
     afterInit: (swiper) => {
@@ -257,11 +257,18 @@ new Swiper(".newsSlider", {
   modules: [Navigation, Pagination, Grid],
   loop: false,
   breakpoints: {
-    1440: {
+    1000: {
       slidesPerView: 4,
       grid: {
         fill: "row",
-        rows: 4,
+        rows: 3,
+      },
+    },
+    768: {
+      slidesPerView: 3,
+      grid: {
+        fill: "row",
+        rows: 3,
       },
     },
   },
@@ -277,4 +284,4 @@ new Swiper(".newsSlider", {
   },
 });
 
-new newSwiper(".regionSwiper", () => {});
+new newSwiper(".regionSwiper", () => { });

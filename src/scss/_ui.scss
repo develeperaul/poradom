@@ -46,19 +46,19 @@
 
 .bg {
   &-vacant {
-    background-color: $vacant !important;
+    background-color: $vacant  !important;
   }
 
   &-booked {
-    background-color: $booked !important;
+    background-color: $booked  !important;
   }
 
   &-sold {
-    background-color: $sold !important;
+    background-color: $sold  !important;
   }
 
   &-ready {
-    background-color: $ready !important;
+    background-color: $ready  !important;
   }
 }
 
@@ -92,16 +92,17 @@
   @include desktop-desktop {
     letter-spacing: -0.03em;
   }
+
   &_black {
     color: $black;
   }
 
-  & > span {
+  &>span {
     z-index: 10;
     position: relative;
   }
 
-  & > span:first-child {
+  &>span:first-child {
     position: relative;
     padding-top: 10px;
 
@@ -128,7 +129,7 @@
 }
 
 .title_primary {
-  & > span:first-child {
+  &>span:first-child {
     position: relative;
     z-index: 10;
 
@@ -149,6 +150,7 @@
   gap: 11px;
   display: block;
   cursor: pointer;
+
   @include desktop-tablet {
     display: inline-block;
     gap: 13px;
@@ -210,6 +212,7 @@
     border: 1px solid $border;
     line-height: 16px;
     cursor: pointer;
+
     @include desktop-desktop {
       font-size: 16px;
       line-height: 130%;
@@ -236,11 +239,13 @@
   text-align: center;
   border-radius: 4px;
   border: 1px solid $accent;
+
   @include desktop-tablet {
     min-width: 180px;
     padding: 12px;
     width: auto;
   }
+
   @include desktop-laptop {
     // min-width: 220px;
   }
@@ -357,7 +362,7 @@
   display: flex;
   flex-shrink: 0;
 
-  & > img {
+  &>img {
     width: 50%;
     margin: 0 auto;
   }
@@ -391,13 +396,11 @@
   &__play {
     width: 48px;
     height: 48px;
-    background: linear-gradient(
-      180deg,
-      #fe497f -20.21%,
-      #ed1556 28.44%,
-      #d10945 74.14%,
-      #d10945 74.14%
-    );
+    background: linear-gradient(180deg,
+        #fe497f -20.21%,
+        #ed1556 28.44%,
+        #d10945 74.14%,
+        #d10945 74.14%);
 
     &_lg {
       width: 48px;
@@ -421,7 +424,7 @@
     height: 36px;
   }
 
-  & > span {
+  &>span {
     display: inline-block;
     height: 13px;
     width: 1px;
@@ -467,6 +470,7 @@
     }
 
     &:nth-child(2) {
+
       &::after,
       &::before {
         top: 0;
@@ -491,7 +495,7 @@
   &_active:hover {
     background-color: #0099e0;
 
-    & > span {
+    &>span {
       background-color: #e5e7ea;
 
       &::after,
@@ -562,10 +566,12 @@
   flex-grow: 1;
   // overflow: hidden;
   gap: 20px;
+
   @include desktop-tablet {
     max-width: 228px;
     flex-basis: 228px;
   }
+
   @include desktop-desktop {
     max-width: 420px;
     flex-basis: 420px;
@@ -587,6 +593,7 @@
       justify-content: center;
       padding: 0 20px;
     }
+
     @include desktop-desktop {
       padding: 0 75px;
     }
@@ -597,17 +604,28 @@
     color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 0 75px;
-    height: 370px;
     width: 420px;
-    margin-right: 0;
-    margin-left: auto;
+
+    @include desktop-tablet {
+      padding: 53px 27px;
+      justify-content: space-between;
+      height: 312px;
+    }
+
+    @include desktop-desktop {
+      justify-content: center;
+      height: 370px;
+      padding: 0 75px;
+    }
+
+    // margin-right: 0;
+    // margin-left: auto;
   }
 
   &_label {
     // padding-top: 10px;
     margin-top: 10px;
+
     @include desktop-desktop {
       // padding-top: 16px;
       margin-top: 16px;
@@ -643,11 +661,13 @@
       }
     }
   }
+
   &__link-image {
     display: block;
     border-radius: 4px 4px 0 0;
     overflow: hidden;
   }
+
   &__image {
     background-color: rgba(0, 0, 0, 0.1);
     width: 100%;
@@ -664,12 +684,15 @@
     border-radius: 0 0 4px 4px;
     display: flex;
     justify-content: space-between;
+
     @include desktop-tablet {
       padding: 13px 15px;
     }
+
     @include desktop-desktop {
       padding: 20px 22px;
     }
+
     & .button {
       &__group {
         @include desktop-desktop {
@@ -727,9 +750,11 @@
 
     &_s {
       margin-bottom: 14px;
+
       @include desktop-tablet {
         margin-bottom: 7px;
       }
+
       @include desktop-desktop {
         margin-bottom: 14px;
       }
@@ -749,7 +774,7 @@
       margin-top: 10px;
     }
 
-    & > img {
+    &>img {
       width: 12px;
       height: 20px;
     }
@@ -809,58 +834,72 @@
     white-space: nowrap;
     margin-bottom: 14px;
     gap: 30px;
+
     @include desktop-tablet {
       margin-bottom: 11px;
     }
+
     @include desktop-desktop {
       margin-bottom: 30px;
     }
+
     &:not(:last-child) {
       margin-right: 18px;
     }
+
     @include desktop-desktop {
       gap: 40px;
     }
+
     &-region {
       margin-bottom: 14px;
       display: flex;
       white-space: nowrap;
       gap: 60px;
+
       @include desktop-desktop {
         margin-bottom: 30px;
       }
     }
+
     &-item {
       display: flex;
       flex-direction: column;
       gap: 2px;
+
       @include desktop-desktop {
         gap: 8px;
       }
     }
   }
+
   &__status-marker {
     display: flex;
     gap: 6px;
     align-items: center;
+
     @include desktop-desktop {
       gap: 10px;
     }
-    & > .marker__text {
+
+    &>.marker__text {
       font-weight: 500;
       font-size: 12px;
       line-height: 130%;
     }
   }
+
   &__region-size-title,
   &__dedlain-title {
     color: #8f959b;
     font-size: 12px;
     line-height: 16px;
+
     @include desktop-tablet {
       font-size: 10px;
       line-height: 130%;
     }
+
     @include desktop-desktop {
       font-size: 16px;
       line-height: 130%;
@@ -872,10 +911,12 @@
     flex-grow: 1;
     font-size: 16px;
     line-height: 21px;
+
     @include desktop-tablet {
       font-size: 12px;
       line-height: 130%;
     }
+
     @include desktop-desktop {
       font-size: 18px;
     }
@@ -886,6 +927,7 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 120%;
+
     @include desktop-desktop {
       font-size: 26px;
     }
@@ -893,6 +935,7 @@
 
   //user
   &-user {
+
     // max-width: 139px;
     // width: 100%;
     @include desktop-desktop {
@@ -903,6 +946,10 @@
       width: 100%;
       height: 190px;
       margin-bottom: 14px;
+
+      @include desktop-tablet {
+        height: 312px;
+      }
 
       @include desktop-desktop {
         height: 370px;
@@ -943,7 +990,7 @@
       display: flex;
       justify-content: space-between;
 
-      & > * {
+      &>* {
         color: $black;
         padding: 13px;
         border: 1px solid $border;
@@ -956,13 +1003,13 @@
         width: 100%;
       }
 
-      & > *:first-child {
+      &>*:first-child {
         padding-right: 26px;
         padding-left: 13px;
         margin-right: 16px;
       }
 
-      & > *:last-child {
+      &>*:last-child {
         padding-right: 13px;
         padding-left: 26px;
       }
@@ -983,6 +1030,7 @@
       border-radius: 0;
       gap: 20px;
     }
+
     @include desktop-desktop {
       gap: 30px;
     }
@@ -991,10 +1039,12 @@
       background-color: rgba(0, 0, 0, 0.1);
       width: 100%;
       display: block;
+
       @include desktop-laptop {
         width: 173px;
         height: 120px;
       }
+
       @include desktop-desktop {
         width: 280px;
         height: 190px;
@@ -1017,7 +1067,7 @@
         flex-direction: column;
       }
 
-      & > .card__link {
+      &>.card__link {
         display: none;
 
         @include desktop-laptop {
@@ -1042,9 +1092,11 @@
     &__text {
       font-size: 18px;
       line-height: 120%;
+
       @include desktop-laptop {
         font-size: 16px;
       }
+
       @include desktop-desktop {
         font-size: 26px;
       }
@@ -1125,7 +1177,7 @@
       opacity: 0.5;
     }
 
-    &_active > &__progress {
+    &_active>&__progress {
       opacity: 1;
       background-color: #0099e0;
     }
@@ -1146,13 +1198,13 @@
     }
 
     &_active &__right {
-      & > svg {
+      &>svg {
         @include desktop-tablet {
           display: none;
         }
       }
 
-      & > img {
+      &>img {
         @include desktop-tablet {
           width: 28px;
           height: 24px;
@@ -1170,11 +1222,11 @@
         gap: 29px;
       }
 
-      & > img {
+      &>img {
         display: none;
       }
 
-      & > svg {
+      &>svg {
         display: none;
 
         @include desktop-tablet {
@@ -1192,7 +1244,7 @@
       display: none;
     }
 
-    &_active > &__wrapper > &__numb::after {
+    &_active>&__wrapper>&__numb::after {
       position: absolute;
       content: "";
       width: 10px;
@@ -1230,11 +1282,7 @@
     // min-width: 180px;
     max-height: 0;
     transition: max-height 0.2s ease-in-out;
-    filter: drop-shadow(0px 47px 19px rgba(0, 0, 0, 0.01))
-      drop-shadow(0px 26px 16px rgba(0, 0, 0, 0.05))
-      drop-shadow(0px 12px 12px rgba(0, 0, 0, 0.09))
-      drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1))
-      drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0px 47px 19px rgba(0, 0, 0, 0.01)) drop-shadow(0px 26px 16px rgba(0, 0, 0, 0.05)) drop-shadow(0px 12px 12px rgba(0, 0, 0, 0.09)) drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
 
     @include desktop-desktop {
       width: 220px;
@@ -1276,11 +1324,13 @@
   background-color: $primary;
   border-radius: 4px;
   color: #fff;
+
   @include desktop-tablet {
     padding: 30px 20px;
     display: flex;
     justify-content: space-between;
   }
+
   @include desktop-desktop {
     padding: 70px;
   }
@@ -1310,11 +1360,9 @@
     }
   }
 
-  &__top {
-  }
+  &__top {}
 
-  &__bottom {
-  }
+  &__bottom {}
 
   &__inputs {
     @include desktop-desktop {
@@ -1335,10 +1383,12 @@
   }
 
   &__title {
+
     // margin-bottom: 20px;
     @include desktop-tablet {
       line-height: 100%;
     }
+
     @include desktop-desktop {
       line-height: 120%;
     }
@@ -1348,6 +1398,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
     @include desktop-desktop {
       max-width: 385px;
     }
@@ -1370,9 +1421,11 @@
   align-items: center;
   z-index: 9;
   gap: 8px;
+
   @include desktop-desktop {
     gap: 14px;
   }
+
   &__image {
     width: 24px;
     height: 24px;
@@ -1412,12 +1465,14 @@
 
   &__title {
     color: #fff;
+
     @include desktop-laptop {
       margin: 0;
       text-align: center;
       padding: 0px;
       margin-bottom: 60px;
     }
+
     @include desktop-desktop {
       margin-bottom: 160px;
     }
@@ -1440,10 +1495,12 @@
       bottom: -40px;
       left: 50%;
       height: 40px;
+
       @include desktop-laptop {
         bottom: -55px;
         height: 55px;
       }
+
       @include desktop-desktop {
         bottom: -120px;
         height: 120px;
@@ -1454,10 +1511,12 @@
       top: -40px;
       left: 50%;
       height: 40px;
+
       @include desktop-laptop {
         top: -55px;
         height: 55px;
       }
+
       @include desktop-desktop {
         top: -110px;
         height: 110px;
@@ -1470,10 +1529,12 @@
     width: 75px;
     height: 75px;
     display: block;
+
     @include desktop-laptop {
       width: 100px;
       height: 100px;
     }
+
     @include desktop-desktop {
       width: 240px;
       height: 240px;
@@ -1487,19 +1548,22 @@
   display: flex;
   white-space: nowrap;
   flex-wrap: wrap;
+
   &_v2 {
     padding: 20px 0;
     margin: 0;
+
     @include desktop-desktop {
       padding: 42px 0 0;
     }
   }
-  > *:last-child {
+
+  >*:last-child {
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
-  & > * {
+  &>* {
     color: $primary;
     display: inline-block;
     position: relative;
@@ -1598,15 +1662,18 @@
     height: 14px;
     border-radius: 9999px;
     margin-right: 8px;
+
     &-sm {
       border-radius: 9999px;
       width: 6px;
       height: 6px;
+
       @include desktop-desktop {
         width: 10px;
         height: 10px;
       }
     }
+
     &_loose {
       background-color: #58b368;
     }
@@ -1639,7 +1706,7 @@
       gap: 70px;
     }
 
-    & > img {
+    &>img {
       width: 100%;
 
       @include desktop-desktop {
@@ -1651,6 +1718,7 @@
 
     &__title {
       margin-top: 20px;
+
       @include desktop-desktop {
         font-size: 48px;
         line-height: 100%;
@@ -1678,6 +1746,7 @@
 
       &-wrapper {
         position: relative;
+
         @include desktop-desktop {
           overflow-x: visible;
           position: absolute;
@@ -1689,12 +1758,14 @@
 
         & .swiper-numbs {
           top: 0;
+
           @include desktop-desktop {
             transform: translateX(0) !important;
             left: auto !important;
             top: -120px;
           }
         }
+
         & .interior__btns {
           padding-top: 85px;
         }
@@ -1712,22 +1783,25 @@
         top: 50%;
       }
 
-      & > .swiper-next,
-      & > .swiper-prev {
+      &>.swiper-next,
+      &>.swiper-prev {
         @include desktop-desktop {
           top: auto;
         }
       }
     }
   }
+
   & h4 {
     font-size: 18px;
     line-height: 120%;
+
     @include desktop-tablet {
       font-size: 16px;
     }
-    @include desktop-laptop {
-    }
+
+    @include desktop-laptop {}
+
     @include desktop-desktop {
       font-size: 26px;
     }
@@ -1744,11 +1818,11 @@
       // padding-bottom: 20px;
     }
 
-    & > img {
+    &>img {
       width: 100%;
     }
 
-    & > p {
+    &>p {
       margin-top: 10px;
 
       @include desktop-desktop {
@@ -1801,9 +1875,11 @@
       flex-wrap: wrap;
       gap: 22px;
     }
+
     @include desktop-laptop {
       gap: 7px;
     }
+
     @include desktop-desktop {
       gap: 30px;
     }
@@ -1919,8 +1995,7 @@
     }
   }
 
-  &__text {
-  }
+  &__text {}
 
   &__cards {
     display: grid;
@@ -1970,7 +2045,7 @@
   align-items: center;
   color: #fff;
 
-  & > h2 {
+  &>h2 {
     font-size: 26px;
     line-height: 120%;
   }
@@ -1984,12 +2059,13 @@
   align-items: center;
   justify-content: center;
   border-radius: 999999px;
+
   @include desktop-desktop {
     width: 150px;
     height: 150px;
   }
 
-  & > a {
+  &>a {
     color: #fff;
   }
 }
@@ -2027,9 +2103,11 @@
       padding-left: 0;
       margin-bottom: 40px;
     }
+
     @include desktop-laptop {
       margin-left: $space-l-l;
     }
+
     @include desktop-desktop {
       padding-top: 130px;
       margin-left: $space-l-d;
@@ -2112,7 +2190,7 @@
     &__image {
       grid-area: A;
 
-      & .navigation__card > img {
+      & .navigation__card>img {
         @include desktop-desktop {
           max-height: 760px;
           height: 760px;
@@ -2126,9 +2204,11 @@
       &-nav {
         position: absolute;
         width: 100%;
+
         @include desktop-desktop {
           top: 380px;
         }
+
         .swiper-next,
         .swiper-prev {
           top: auto;
@@ -2199,7 +2279,7 @@
   }
 
   &__item {
-    & > a {
+    &>a {
       color: $black;
 
       &:hover {

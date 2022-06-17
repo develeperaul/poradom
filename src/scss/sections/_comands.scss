@@ -7,31 +7,39 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 30px;
+
     @include desktop-desktop {
       margin-bottom: 0;
       display: flex;
       gap: 30px;
       flex-wrap: wrap;
     }
-    & > .card-user {
+
+    &>.card-user {
       flex-basis: 140px;
+
       @include desktop-tablet {
         flex-basis: 228px;
       }
+
       @include desktop-desktop {
         flex-basis: 270px;
       }
     }
-    & > .card-mail {
+
+    &>.card-mail {
       display: none;
-      @include desktop-desktop {
+
+      @include desktop-tablet {
         display: flex;
       }
     }
+
     &_last {
-      justify-content: space-between;
+      // justify-content: space-between;
     }
   }
+
   &__content {
     @include desktop-desktop {
       display: grid;
@@ -39,18 +47,22 @@
       gap: 30px;
     }
   }
+
   &__users {
     @include desktop-desktop {
       grid-column: 3 span / 3 span;
     }
-    & > h4 {
+
+    &>h4 {
       margin-bottom: 20px;
       white-space: nowrap;
     }
   }
+
   &__vacance {
     background-color: $secondary;
-    @include desktop-desktop {
+
+    @include desktop-tablet {
       display: none;
     }
   }
