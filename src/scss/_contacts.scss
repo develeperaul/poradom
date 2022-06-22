@@ -1,6 +1,6 @@
 .contacts {
   & .section__btns {
-    @include desktop-desktop {
+    @include desktop-tablet {
       display: none;
     }
   }
@@ -21,16 +21,19 @@
     }
 
     @include desktop-laptop {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: 1fr minmax(0, 271px) minmax(0, 271px);
       grid-template-areas: "A B C";
       gap: 30px;
 
       & > img {
-        max-height: 400px;
+        max-height: 210px;
         height: 100%;
         object-fit: cover;
         margin: 0;
       }
+    }
+    @include desktop-desktop {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
 

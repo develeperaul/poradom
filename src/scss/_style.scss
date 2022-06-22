@@ -80,6 +80,13 @@
     & > img {
       width: 100%;
     }
+    & > p {
+      margin-top: 10px;
+
+      @include desktop-desktop {
+        margin-top: 20px;
+      }
+    }
     &_bg {
       position: absolute;
       color: #fff;

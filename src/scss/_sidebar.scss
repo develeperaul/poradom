@@ -17,20 +17,25 @@
   }
   &__list {
     &.accordion {
-      @include desktop-desktop {
+      @include desktop-tablet {
         display: none;
       }
     }
     &-desktop {
       display: none;
-      @include desktop-desktop {
-        font-size: 26px;
+      @include desktop-tablet {
         line-height: 120%;
         display: flex;
         flex-direction: column;
-        gap: 40px;
-        width: 520px;
         padding-top: 80px;
+        gap: 24px;
+        font-size: 18px;
+        width: 350px;
+      }
+      @include desktop-desktop {
+        width: 520px;
+        font-size: 26px;
+        gap: 40px;
       }
     }
   }
@@ -53,11 +58,21 @@
     padding-right: 20px;
     & > a {
       display: flex;
-      gap: 20px;
+      @include desktop-tablet {
+        gap: 40px;
+      }
+      @include desktop-desktop {
+        gap: 20px;
+      }
     }
     &-left {
-      min-width: 60px;
       color: $primary;
+      @include desktop-tablet {
+        min-width: 40px;
+      }
+      @include desktop-desktop {
+        min-width: 60px;
+      }
     }
     &-right {
       color: #fff;
