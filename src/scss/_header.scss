@@ -11,6 +11,16 @@
     flex-direction: column;
   }
 
+  &.flex-column,
+  &.header-column {
+    @include desktop-tablet_to_laptop {
+      height: auto;
+    }
+    @include desktop-laptop_to_desktop {
+      height: auto;
+    }
+  }
+
   & > .container {
     // height: 100%;
   }
@@ -39,7 +49,10 @@
       display: grid;
       padding-top: 14px;
       padding-bottom: 14px;
-      height: 100px;
+      height: 70px;
+      @include desktop-desktop {
+        height: 100px;
+      }
 
       & .header__trigger,
       & .logo,
@@ -54,6 +67,10 @@
       & .logo {
         order: 2;
         justify-self: center;
+        @include desktop-laptop_to_desktop {
+          width: 144px;
+          height: 36px;
+        }
       }
 
       & .logo > img {
@@ -125,9 +142,73 @@
     }
 
     &.video {
+      .video__wrapper {
+        @include desktop-tablet_to_laptop {
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+      .video__top {
+        @include desktop-tablet_to_laptop {
+          order: 1;
+          width: calc(100% + 2 * #{$gap-t});
+          margin: 0 #{-$gap-t};
+        }
+        @include desktop-laptop_to_desktop {
+          width: 578px;
+        }
+        &-image {
+          @include desktop-tablet_to_laptop {
+            height: 768px;
+          }
+        }
+      }
+      .video__bottom {
+        margin-bottom: 0;
+        @include desktop-tablet_to_laptop {
+          order: 2;
+          width: 100%;
+        }
+      }
+
+      .video__buttons {
+        @include desktop-laptop_to_desktop {
+          max-width: 230px;
+          gap: 10px;
+          flex-direction: column;
+        }
+      }
+
       .video__top-image {
+        @include desktop-tablet {
+          margin-left: 0;
+        }
         @include desktop-desktop {
           height: calc(100vh - 100px);
+        }
+      }
+      .video__block-info {
+        @include desktop-tablet_to_laptop {
+          justify-content: flex-start;
+          width: 50%;
+        }
+      }
+      .video__content {
+        &-bottom {
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+          @include desktop-tablet_to_laptop {
+            flex-direction: row;
+            gap: 57px;
+            align-items: flex-end;
+          }
+          .video__buttons {
+            @include desktop-tablet_to_laptop {
+              gap: 4px;
+              flex-shrink: 0;
+            }
+          }
         }
       }
     }
@@ -139,7 +220,7 @@
     @include desktop-laptop {
       display: flex;
       align-items: center;
-      gap: 70px;
+      gap: 30px;
     }
   }
 
@@ -147,11 +228,17 @@
     color: #fff;
 
     &.contact {
-      font-size: 16px;
-      line-height: 180%;
       text-align: left;
       align-self: baseline;
       display: block;
+      @include desktop-tablet {
+        font-size: 12px;
+        line-height: 160%;
+      }
+      @include desktop-desktop {
+        font-size: 16px;
+        line-height: 180%;
+      }
     }
   }
 

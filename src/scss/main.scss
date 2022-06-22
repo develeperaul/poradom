@@ -25,7 +25,7 @@
 @import "news";
 @import "application";
 @import "distance";
-@import "checkbox.css";
+@import "checkbox";
 @import "accardion.css";
 @import "calc";
 @import "explore";
@@ -54,6 +54,11 @@
 @import "sections/documents-homeowners";
 @import "sections/ready-homes";
 @import "sections/region";
+@import "sections/requisites";
+@import "sections/about-work";
+@import "sections/vacance";
+@import "sections/form";
+
 @import "footer";
 
 @import "plugins/toggle";
@@ -82,6 +87,12 @@
   &:not(:first-child) {
     padding: 40px 0 40px;
 
+    @include desktop-tablet {
+      padding: 40px 0;
+    }
+    @include desktop-laptop {
+      padding: 50px 0;
+    }
     @include desktop-desktop {
       padding: 120px 0 120px;
     }
@@ -103,6 +114,9 @@
 
     & > .section__title {
       margin-bottom: 10px;
+      @include desktop-tablet {
+        margin-bottom: 0;
+      }
     }
 
     &_first {
@@ -116,10 +130,12 @@
 
   &__title {
     margin-bottom: 20px;
-
+    @include desktop-tablet {
+      font-size: 24px;
+      line-height: 100%;
+    }
     @include desktop-desktop {
       font-size: 48px;
-      line-height: 100%;
       margin-bottom: 40px;
     }
   }
@@ -143,7 +159,9 @@
 
   &__crumbs {
     margin-bottom: 20px;
-
+    @include desktop-tablet {
+      margin-bottom: 13px;
+    }
     @include desktop-desktop {
       margin-bottom: 40px;
       font-size: 14px;
@@ -154,8 +172,14 @@
   &-flex {
     display: block;
 
-    @include desktop-desktop {
+    @include desktop-tablet {
       display: flex;
+      gap: 80px;
+    }
+    @include desktop-laptop {
+      gap: 72px;
+    }
+    @include desktop-desktop {
       gap: 100px;
     }
 

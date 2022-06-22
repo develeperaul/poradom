@@ -49,10 +49,22 @@ class Survey {
                   });
                   el.classList.remove("card-survey_first");
                   el.classList.add("card-survey_active");
-                  console.log(el);
-                  console.log(el.getAttribute("data-survey_number"));
+
                   const localEl = el.getAttribute("data-survey_number");
                   localStorage.setItem("survey", localEl);
+
+                  const url = "/bitrix/templates/poradom/ajax/set_goal.php";
+                  fetch(url, {
+                    method: "POST",
+                    body: JSON.stringify({ Id: localEl }),
+                    headers: {
+                      Accept: "application/json",
+                      "Content-Type": "application/json",
+                    },
+                  })
+                    .then((responce) => console.log(responce))
+                    .catch((e) => console.log(e));
+
                   this.updateWithProgress();
 
                   popup.classList.add("popup_active");

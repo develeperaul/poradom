@@ -1,15 +1,42 @@
 .results {
   &__content {
-    @include desktop-desktop {
+    @include desktop-tablet {
       display: flex;
+      gap: 33px;
+      margin-left: $space-l-t;
+    }
+    @include desktop-laptop {
+      margin-left: $space-l-l;
+      gap: 29px;
+    }
+    @include desktop-desktop {
+      margin-left: $space-l-d;
       gap: 200px;
-      margin-left: 300px;
     }
     & > p {
-      @include desktop-desktop {
-        font-size: 26px;
+      color: $darkwhite;
+      @include desktop-tablet {
+        font-size: 18px;
         line-height: 120%;
       }
+      @include desktop-desktop {
+        font-size: 26px;
+      }
     }
+  }
+  & .cards-mini {
+    @include desktop-tablet {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 131px));
+    }
+    @include desktop-laptop {
+      grid-template-columns: repeat(3, minmax(0, 131px));
+    }
+    @include desktop-desktop {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .mini {
+    text-align: left;
   }
 }

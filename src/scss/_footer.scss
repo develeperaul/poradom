@@ -113,7 +113,10 @@ footer {
 
   &__link_s {
     &:not(:last-child) {
-      margin-right: 14px;
+      margin-right: 10px;
+      @include desktop-desktop {
+        margin-right: 14px;
+      }
     }
   }
 }

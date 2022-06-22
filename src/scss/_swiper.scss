@@ -192,11 +192,11 @@ $pageColorActive: #0099e0;
     bottom: 0 !important;
     padding-top: 9px;
     margin-top: 20px;
-    @include desktop-desktop {
+    @include desktop-laptop {
       margin-top: 60px;
     }
     &_start {
-      @include desktop-desktop {
+      @include desktop-laptop {
         text-align: left;
       }
     }
@@ -324,9 +324,17 @@ $pageColorActive: #0099e0;
     }
   }
   &_flex {
+    @include desktop-tablet {
+      margin-left: $space-l-t;
+      width: calc(100% - 2 * #{$space-l-t});
+    }
+    @include desktop-laptop {
+      margin-left: $space-l-l;
+      width: calc(100% - #{$space-l-l});
+    }
     @include desktop-desktop {
-      margin-left: 300px;
-      width: calc(100% - 300px);
+      margin-left: $space-l-d;
+      width: calc(100% - #{$space-l-d});
     }
   }
   &-arrows {
@@ -368,14 +376,14 @@ $pageColorActive: #0099e0;
 
 .featuresSwiper {
   padding-bottom: 50px;
-  @include desktop-desktop {
+  @include desktop-laptop {
     padding-bottom: 0;
   }
 }
 
 .hit__swiper {
   padding-bottom: 50px;
-  @include desktop-desktop {
+  @include desktop-laptop {
     padding-bottom: 0;
   }
 }

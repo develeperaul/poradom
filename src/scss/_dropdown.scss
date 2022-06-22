@@ -42,11 +42,16 @@ $choice-color: #212529;
     cursor: pointer;
     color: $font-color;
     transition: all $transition-duration ease;
-
+    @include desktop-tablet {
+      min-height: 40px;
+      padding: 5px 13px;
+    }
     @include desktop-desktop {
       min-height: 60px;
     }
-
+    &__wrapper {
+      overflow: hidden;
+    }
     &_show {
       .dropdown__header--icon {
         // opacity: 0;
@@ -64,6 +69,7 @@ $choice-color: #212529;
     }
 
     &--title {
+      white-space: nowrap;
     }
 
     &--active {
@@ -73,6 +79,7 @@ $choice-color: #212529;
     &--icon {
       margin-left: 20px;
       position: relative;
+      flex-shrink: 0;
 
       &::after {
         position: absolute;
@@ -99,7 +106,8 @@ $choice-color: #212529;
 
   &__body {
     overflow-y: hidden;
-
+    position: absolute;
+    z-index: 10;
     max-height: 0vh;
     // transition: max-height $transition-duration linear;
     // position: absolute;

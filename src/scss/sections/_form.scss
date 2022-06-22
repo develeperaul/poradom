@@ -1,0 +1,223 @@
+.form {
+  $this: &;
+  padding: 40px 21px;
+  background-color: $primary;
+  border-radius: 4px;
+  color: #fff;
+
+  @include desktop-tablet {
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include desktop-desktop {
+    padding: 70px;
+  }
+
+  &-s {
+    &--80 {
+      margin-top: 80px;
+    }
+  }
+
+  &__column {
+    flex-direction: column;
+
+    height: fit-content;
+    padding: 40px;
+    max-width: 350px;
+    gap: 20px;
+    @include desktop-tablet {
+      gap: 14px;
+    }
+    @include desktop-desktop {
+      gap: 30px;
+    }
+    @include desktop-laptop_to_desktop {
+      padding: 25px;
+      max-width: 240px;
+    }
+
+    & .button {
+      @include desktop-laptop {
+        margin-top: 4px;
+      }
+      @include desktop-desktop {
+        margin-top: 10px;
+      }
+    }
+
+    & .form__inputs {
+      flex-direction: column;
+    }
+
+    & .form__title {
+      @include desktop-laptop_to_desktop {
+        font-size: 16px;
+        line-height: 120%;
+      }
+    }
+    & .form__text {
+      @include desktop-laptop_to_desktop {
+        font-size: 12px;
+        line-height: 120%;
+      }
+    }
+  }
+
+  &__top {
+  }
+
+  &__bottom {
+  }
+
+  &__inputs {
+    @include desktop-desktop {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 40px;
+
+      & .text-field {
+        min-width: 270px;
+        margin-bottom: 0;
+      }
+    }
+
+    &_col {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+  }
+
+  &__title {
+    // margin-bottom: 20px;
+    @include desktop-tablet {
+      line-height: 100%;
+    }
+
+    @include desktop-desktop {
+      line-height: 120%;
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include desktop-desktop {
+      max-width: 385px;
+    }
+  }
+
+  &__text {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-size: 10px;
+    line-height: 130%;
+    @include desktop-tablet {
+      font-size: 14px;
+      line-height: 120%;
+    }
+    @include desktop-desktop {
+      font-size: 18px;
+      line-height: 120%;
+    }
+  }
+
+  &__check {
+    font-size: 10px;
+    line-height: 100%;
+    color: #f2f2f2;
+  }
+
+  &-column {
+    @include desktop-tablet_to_laptop {
+      flex-direction: column;
+    }
+    #{$this}__inputs {
+      @include desktop-tablet {
+        display: grid;
+        gap: 10px;
+        margin-bottom: 40px;
+        grid-template-columns: repeat(3, minmax(0, 180px));
+      }
+      @include desktop-laptop {
+        gap: 20px 10px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include desktop-desktop {
+        gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .checkbox-other {
+        @include desktop-tablet {
+          margin: 0;
+        }
+        @include desktop-tablet_to_laptop {
+          grid-column: 3 span / 3 span;
+        }
+      }
+    }
+  }
+}
+
+.form-standart {
+  $this: &;
+  padding: 40px 21px;
+  background-color: $primary;
+  border-radius: 4px;
+  color: #fff;
+
+  #{$this}-s {
+    #{$this}--80 {
+      margin-top: 80px;
+    }
+  }
+
+  #{$this}__column {
+    flex-direction: column;
+
+    height: fit-content;
+    padding: 40px;
+    max-width: 350px;
+
+    #{$this} .button {
+    }
+
+    #{$this} .form__inputs {
+      flex-direction: column;
+    }
+
+    #{$this} .form__title {
+    }
+    #{$this} .form__text {
+    }
+  }
+
+  #{$this}__inputs {
+    #{$this}_col {
+      flex-direction: column;
+      margin: 0;
+    }
+  }
+
+  #{$this}__top {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #{$this}__text {
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+
+  #{$this}__check {
+    font-size: 10px;
+    line-height: 100%;
+    color: #f2f2f2;
+  }
+}

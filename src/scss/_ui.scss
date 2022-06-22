@@ -46,19 +46,19 @@
 
 .bg {
   &-vacant {
-    background-color: $vacant  !important;
+    background-color: $vacant !important;
   }
 
   &-booked {
-    background-color: $booked  !important;
+    background-color: $booked !important;
   }
 
   &-sold {
-    background-color: $sold  !important;
+    background-color: $sold !important;
   }
 
   &-ready {
-    background-color: $ready  !important;
+    background-color: $ready !important;
   }
 }
 
@@ -97,12 +97,13 @@
     color: $black;
   }
 
-  &>span {
+  & > span {
     z-index: 10;
     position: relative;
   }
 
-  &>span:first-child {
+  & > span:first-child {
+    display: inline-block;
     position: relative;
     padding-top: 10px;
 
@@ -129,7 +130,7 @@
 }
 
 .title_primary {
-  &>span:first-child {
+  & > span:first-child {
     position: relative;
     z-index: 10;
 
@@ -212,7 +213,7 @@
     border: 1px solid $border;
     line-height: 16px;
     cursor: pointer;
-
+    align-self: center;
     @include desktop-desktop {
       font-size: 16px;
       line-height: 130%;
@@ -244,6 +245,7 @@
     min-width: 180px;
     padding: 12px;
     width: auto;
+    max-height: 40px;
   }
 
   @include desktop-laptop {
@@ -255,7 +257,7 @@
   // align-items: center;
   @include desktop-desktop {
     padding: 20px;
-
+    max-height: 60px;
     justify-content: center;
     min-width: 270px;
     gap: 13px;
@@ -361,8 +363,16 @@
   object-fit: scale-down;
   display: flex;
   flex-shrink: 0;
+  @include desktop-laptop {
+    width: 30px;
+    height: 30px;
+  }
+  @include desktop-desktop {
+    width: 36px;
+    height: 36px;
+  }
 
-  &>img {
+  & > img {
     width: 50%;
     margin: 0 auto;
   }
@@ -382,6 +392,14 @@
   &_small {
     width: 24px;
     height: 24px;
+    @include desktop-tablet {
+      width: 18px;
+      height: 18px;
+    }
+    @include desktop-desktop {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   &_big {
@@ -396,11 +414,13 @@
   &__play {
     width: 48px;
     height: 48px;
-    background: linear-gradient(180deg,
-        #fe497f -20.21%,
-        #ed1556 28.44%,
-        #d10945 74.14%,
-        #d10945 74.14%);
+    background: linear-gradient(
+      180deg,
+      #fe497f -20.21%,
+      #ed1556 28.44%,
+      #d10945 74.14%,
+      #d10945 74.14%
+    );
 
     &_lg {
       width: 48px;
@@ -424,7 +444,7 @@
     height: 36px;
   }
 
-  &>span {
+  & > span {
     display: inline-block;
     height: 13px;
     width: 1px;
@@ -470,7 +490,6 @@
     }
 
     &:nth-child(2) {
-
       &::after,
       &::before {
         top: 0;
@@ -495,7 +514,7 @@
   &_active:hover {
     background-color: #0099e0;
 
-    &>span {
+    & > span {
       background-color: #e5e7ea;
 
       &::after,
@@ -591,7 +610,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 0 20px;
+      padding: 30px 20px;
     }
 
     @include desktop-desktop {
@@ -774,7 +793,7 @@
       margin-top: 10px;
     }
 
-    &>img {
+    & > img {
       width: 12px;
       height: 20px;
     }
@@ -882,7 +901,7 @@
       gap: 10px;
     }
 
-    &>.marker__text {
+    & > .marker__text {
       font-weight: 500;
       font-size: 12px;
       line-height: 130%;
@@ -935,7 +954,6 @@
 
   //user
   &-user {
-
     // max-width: 139px;
     // width: 100%;
     @include desktop-desktop {
@@ -990,7 +1008,7 @@
       display: flex;
       justify-content: space-between;
 
-      &>* {
+      & > * {
         color: $black;
         padding: 13px;
         border: 1px solid $border;
@@ -1003,13 +1021,13 @@
         width: 100%;
       }
 
-      &>*:first-child {
+      & > *:first-child {
         padding-right: 26px;
         padding-left: 13px;
         margin-right: 16px;
       }
 
-      &>*:last-child {
+      & > *:last-child {
         padding-right: 13px;
         padding-left: 26px;
       }
@@ -1067,7 +1085,7 @@
         flex-direction: column;
       }
 
-      &>.card__link {
+      & > .card__link {
         display: none;
 
         @include desktop-laptop {
@@ -1117,7 +1135,12 @@
     padding: 9px 12px 9px 20px;
     position: relative;
     overflow: hidden;
-
+    @include desktop-tablet {
+      min-height: 40px;
+    }
+    @include desktop-desktop {
+      min-height: 50px;
+    }
     &:not(:last-child) {
       margin-bottom: 8px;
     }
@@ -1177,7 +1200,7 @@
       opacity: 0.5;
     }
 
-    &_active>&__progress {
+    &_active > &__progress {
       opacity: 1;
       background-color: #0099e0;
     }
@@ -1198,13 +1221,13 @@
     }
 
     &_active &__right {
-      &>svg {
+      & > svg {
         @include desktop-tablet {
           display: none;
         }
       }
 
-      &>img {
+      & > img {
         @include desktop-tablet {
           width: 28px;
           height: 24px;
@@ -1222,11 +1245,11 @@
         gap: 29px;
       }
 
-      &>img {
+      & > img {
         display: none;
       }
 
-      &>svg {
+      & > svg {
         display: none;
 
         @include desktop-tablet {
@@ -1244,7 +1267,7 @@
       display: none;
     }
 
-    &_active>&__wrapper>&__numb::after {
+    &_active > &__wrapper > &__numb::after {
       position: absolute;
       content: "";
       width: 10px;
@@ -1282,7 +1305,11 @@
     // min-width: 180px;
     max-height: 0;
     transition: max-height 0.2s ease-in-out;
-    filter: drop-shadow(0px 47px 19px rgba(0, 0, 0, 0.01)) drop-shadow(0px 26px 16px rgba(0, 0, 0, 0.05)) drop-shadow(0px 12px 12px rgba(0, 0, 0, 0.09)) drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0px 47px 19px rgba(0, 0, 0, 0.01))
+      drop-shadow(0px 26px 16px rgba(0, 0, 0, 0.05))
+      drop-shadow(0px 12px 12px rgba(0, 0, 0, 0.09))
+      drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1))
+      drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
 
     @include desktop-desktop {
       width: 220px;
@@ -1316,103 +1343,6 @@
         color: #000;
       }
     }
-  }
-}
-
-.form {
-  padding: 40px 21px;
-  background-color: $primary;
-  border-radius: 4px;
-  color: #fff;
-
-  @include desktop-tablet {
-    padding: 30px 20px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  @include desktop-desktop {
-    padding: 70px;
-  }
-
-  &-s {
-    &--80 {
-      margin-top: 80px;
-    }
-  }
-
-  &__column {
-    padding: 40px;
-    flex-direction: column;
-
-    height: fit-content;
-
-    @include desktop-desktop {
-      max-width: 350px;
-    }
-
-    & .button {
-      margin-top: 10px;
-    }
-
-    & .form__inputs {
-      flex-direction: column;
-    }
-  }
-
-  &__top {}
-
-  &__bottom {}
-
-  &__inputs {
-    @include desktop-desktop {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 40px;
-
-      & .text-field {
-        min-width: 270px;
-        margin-bottom: 0;
-      }
-    }
-
-    &_col {
-      flex-direction: column;
-      margin: 0;
-    }
-  }
-
-  &__title {
-
-    // margin-bottom: 20px;
-    @include desktop-tablet {
-      line-height: 100%;
-    }
-
-    @include desktop-desktop {
-      line-height: 120%;
-    }
-  }
-
-  &__top {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    @include desktop-desktop {
-      max-width: 385px;
-    }
-  }
-
-  &__text {
-    margin-top: -10px;
-    margin-bottom: 20px;
-  }
-
-  &__check {
-    font-size: 10px;
-    line-height: 100%;
-    color: #f2f2f2;
   }
 }
 
@@ -1558,12 +1488,12 @@
     }
   }
 
-  >*:last-child {
+  > *:last-child {
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
-  &>* {
+  & > * {
     color: $primary;
     display: inline-block;
     position: relative;
@@ -1662,7 +1592,14 @@
     height: 14px;
     border-radius: 9999px;
     margin-right: 8px;
-
+    @include desktop-tablet {
+      width: 8px;
+      height: 8px;
+    }
+    @include desktop-desktop {
+      width: 14px;
+      height: 14px;
+    }
     &-sm {
       border-radius: 9999px;
       width: 6px;
@@ -1693,6 +1630,12 @@
 
   &__text {
     white-space: nowrap;
+    @include desktop-tablet {
+      font-size: 9px;
+    }
+    @include desktop-desktop {
+      font-size: 16px;
+    }
   }
 }
 
@@ -1701,65 +1644,79 @@
     position: relative;
     width: 100%;
 
-    @include desktop-desktop {
+    @include desktop-laptop {
+      flex-shrink: 0;
       display: flex;
+      gap: 53px;
+    }
+    @include desktop-desktop {
       gap: 70px;
     }
 
-    &>img {
+    & > img {
       width: 100%;
-
+      @include desktop-tablet {
+        object-fit: cover;
+        flex-shrink: 0;
+        height: 342px;
+      }
+      @include desktop-laptop {
+        flex-shrink: 0;
+        width: 481px;
+        height: 297px;
+      }
       @include desktop-desktop {
         width: 830px;
         height: 530px;
-        flex-shrink: 0;
       }
     }
 
     &__title {
       margin-top: 20px;
 
+      @include desktop-laptop {
+        font-size: 24px;
+        line-height: 100%;
+        margin-top: 0;
+      }
       @include desktop-desktop {
         font-size: 48px;
         line-height: 100%;
-        margin-top: 0;
       }
     }
 
     &__pagination {
       // overflow-x: auto;
-
-      @include desktop-desktop {
-        // overflow-x: visible;
+      @include desktop-laptop {
         position: absolute;
         bottom: 0 !important;
-        // width: calc(100% - 900px) !important;
-        left: 1040px !important;
-
-        // width: auto !important;
-        max-width: 50%;
-        // max-width: 500px;
-        // overflow-x: scroll;
         z-index: 9;
-        // left: 900px !important;
+        max-width: 50%;
+        left: 700px !important;
+      }
+      @include desktop-desktop {
+        left: 1040px !important;
       }
 
       &-wrapper {
         position: relative;
 
-        @include desktop-desktop {
+        @include desktop-laptop {
           overflow-x: visible;
           position: absolute;
           bottom: 0 !important;
-          left: 900px !important;
           max-width: 50%;
+          left: 534px !important;
           z-index: 9;
+        }
+        @include desktop-desktop {
+          left: 900px !important;
         }
 
         & .swiper-numbs {
           top: 0;
 
-          @include desktop-desktop {
+          @include desktop-laptop {
             transform: translateX(0) !important;
             left: auto !important;
             top: -120px;
@@ -1767,7 +1724,12 @@
         }
 
         & .interior__btns {
-          padding-top: 85px;
+          @include desktop-laptop {
+            padding-top: 10px;
+          }
+          @include desktop-desktop {
+            padding-top: 85px;
+          }
         }
       }
 
@@ -1777,15 +1739,22 @@
     }
 
     &__nav {
-      @include desktop-desktop {
+      @include desktop-tablet {
         position: absolute;
-        width: 830px;
+        width: 100%;
+        top: 171px;
+      }
+      @include desktop-laptop {
+        width: 481px;
         top: 50%;
       }
+      @include desktop-desktop {
+        width: 830px;
+      }
 
-      &>.swiper-next,
-      &>.swiper-prev {
-        @include desktop-desktop {
+      & > .swiper-next,
+      & > .swiper-prev {
+        @include desktop-tablet {
           top: auto;
         }
       }
@@ -1800,7 +1769,8 @@
       font-size: 16px;
     }
 
-    @include desktop-laptop {}
+    @include desktop-laptop {
+    }
 
     @include desktop-desktop {
       font-size: 26px;
@@ -1818,11 +1788,15 @@
       // padding-bottom: 20px;
     }
 
-    &>img {
+    & > img {
       width: 100%;
+      @include desktop-tablet_to_laptop {
+        height: 450px;
+        object-fit: cover;
+      }
     }
 
-    &>p {
+    & > p {
       margin-top: 10px;
 
       @include desktop-desktop {
@@ -1949,37 +1923,46 @@
   display: flex;
   flex-direction: column;
   row-gap: 20px;
-
-  @include desktop-desktop {
+  @include desktop-tablet {
     display: grid;
     grid-template-areas:
       "A A A B B B"
       "C C C B B B";
     grid-template-columns: repeat(4, 1fr);
-    width: calc(100% - 600px);
+
+    width: 100%;
     margin: 0 auto;
+    padding: 40px;
+    column-gap: 40px;
+    row-gap: initial;
+    margin-top: 40px;
+  }
+  @include desktop-laptop {
+    column-gap: 170px;
+  }
+  @include desktop-desktop {
+    width: calc(100% - 2 * #{$space-l-d});
     padding: 100px 150px;
     column-gap: 70px;
-    row-gap: initial;
     margin-top: 120px;
   }
 
   &__top {
-    @include desktop-desktop {
+    @include desktop-tablet {
       grid-area: A;
       margin-bottom: 40px;
     }
   }
 
   &__middle {
-    @include desktop-desktop {
+    @include desktop-tablet {
       grid-area: B;
       margin: 0;
     }
   }
 
   &__button {
-    @include desktop-desktop {
+    @include desktop-tablet {
       grid-area: C;
       place-self: start;
     }
@@ -1995,7 +1978,11 @@
     }
   }
 
-  &__text {}
+  &__text {
+    @include desktop-tablet {
+      font-size: 14px;
+    }
+  }
 
   &__cards {
     display: grid;
@@ -2045,7 +2032,7 @@
   align-items: center;
   color: #fff;
 
-  &>h2 {
+  & > h2 {
     font-size: 26px;
     line-height: 120%;
   }
@@ -2065,7 +2052,7 @@
     height: 150px;
   }
 
-  &>a {
+  & > a {
     color: #fff;
   }
 }
@@ -2075,9 +2062,14 @@
     position: absolute;
     left: 7px;
     z-index: 9;
-
+    @include desktop-tablet {
+      left: $gap-t;
+    }
+    @include desktop-laptop {
+      left: $gap-l;
+    }
     @include desktop-desktop {
-      left: 60px;
+      left: $gap;
     }
 
     & .number {
@@ -2101,7 +2093,7 @@
       padding-top: 60px;
       margin-left: $space-l-t;
       padding-left: 0;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     @include desktop-laptop {
@@ -2111,6 +2103,7 @@
     @include desktop-desktop {
       padding-top: 130px;
       margin-left: $space-l-d;
+      margin-bottom: 40px;
     }
 
     &-nonumber {
@@ -2118,9 +2111,20 @@
       margin-bottom: 20px;
       color: #fff;
 
+      @include desktop-tablet {
+        padding-top: 40px;
+        margin-left: $space-l-t;
+        padding-left: 0;
+        margin-bottom: 40px;
+      }
+      @include desktop-laptop {
+        margin-left: $space-l-l;
+        padding-left: 0;
+        margin-bottom: 40px;
+      }
       @include desktop-desktop {
         padding-top: 120px;
-        margin-left: 300px;
+        margin-left: $space-l-d;
         padding-left: 0;
         margin-bottom: 40px;
       }
@@ -2129,15 +2133,28 @@
     &-translate {
       margin-bottom: 20px;
       color: #fff;
-
+      @include desktop-tablet {
+        transform: translateY(-53px);
+        margin-left: $space-l-t;
+      }
+      @include desktop-laptop {
+        transform: translateY(-53px);
+        margin-left: $space-l-l;
+      }
       @include desktop-desktop {
         transform: translateY(-97px);
-        margin-left: 300px;
+        margin-left: $space-l-d;
       }
     }
   }
 
   &-btns {
+    @include desktop-tablet {
+      margin-left: $space-l-t;
+    }
+    @include desktop-laptop {
+      margin-left: $space-l-l;
+    }
     @include desktop-desktop {
       margin-left: 300px;
     }
@@ -2153,6 +2170,9 @@
 
   &--gap {
     margin: 0 #{-$gap-m};
+    @include desktop-laptop {
+      margin: 0 #{-$gap-l};
+    }
 
     @include desktop-desktop {
       margin: 0 #{-$gap};
@@ -2166,13 +2186,17 @@
     align-items: center;
     justify-content: center;
 
-    @include desktop-desktop {
+    @include desktop-laptop {
       grid-area: B;
       background-color: $secondary;
       display: flex;
-
-      &_swiper {
-        // height: calc(100% - 96px);
+    }
+    &_swiper {
+      // height: calc(100% - 96px);
+      @include desktop-laptop {
+        height: 390px;
+      }
+      @include desktop-desktop {
         height: 760px;
       }
     }
@@ -2182,56 +2206,70 @@
     }
   }
 
-  @include desktop-desktop {
+  @include desktop-laptop {
     display: grid;
     grid-template-areas: "A A A A B B";
     grid-template-columns: repeat(6, 1fr);
-
-    &__image {
+  }
+  &__image {
+    @include desktop-laptop {
       grid-area: A;
+    }
 
-      & .navigation__card>img {
-        @include desktop-desktop {
-          max-height: 760px;
-          height: 760px;
-        }
+    & .navigation__card > img {
+      @include desktop-laptop {
+        max-height: 627px;
+        height: 390px;
+      }
+      @include desktop-desktop {
+        max-height: 760px;
+        height: 760px;
+      }
+    }
+  }
+
+  .swiper {
+    padding-bottom: 55px;
+
+    &-nav {
+      position: absolute;
+      width: 100%;
+      @include desktop-tablet {
+        top: 225px;
+      }
+      @include desktop-laptop {
+        top: 198px;
+      }
+      @include desktop-desktop {
+        top: 380px;
+      }
+
+      .swiper-next,
+      .swiper-prev {
+        top: auto;
       }
     }
 
-    .swiper {
-      padding-bottom: 55px;
+    &-numbs {
+      position: absolute;
+      left: 0 !important;
+      transform: translateX(0px) !important;
+      z-index: 9;
 
-      &-nav {
-        position: absolute;
-        width: 100%;
-
-        @include desktop-desktop {
-          top: 380px;
-        }
-
-        .swiper-next,
-        .swiper-prev {
-          top: auto;
-        }
-      }
-
-      &-numbs {
-        position: absolute;
-        left: 0 !important;
-        transform: translateX(0px) !important;
-        z-index: 9;
-
-        &--transformX {
-          // transform: translateX(-55px) !important;
-        }
+      &--transformX {
+        // transform: translateX(-55px) !important;
       }
     }
   }
 
   &.swiper {
     &_center {
+      @include desktop-laptop {
+        width: calc(100% - 2 * #{$space-l-l});
+        padding-bottom: 45px;
+      }
       @include desktop-desktop {
-        width: calc(100% - 600px);
+        width: calc(100% - 2 * #{$space-l-d});
         padding-bottom: 55px;
       }
     }
@@ -2269,17 +2307,22 @@
 .list-choice {
   display: none;
 
-  @include desktop-desktop {
+  @include desktop-tablet {
     display: flex;
     flex-direction: column;
+    gap: 14px;
+    font-size: 14px;
+    line-height: 120%;
+    min-width: 170px;
+  }
+  @include desktop-desktop {
     gap: 20px;
     font-size: 18px;
-    line-height: 120%;
-    width: 350px;
+    min-width: 350px;
   }
 
   &__item {
-    &>a {
+    & > a {
       color: $black;
 
       &:hover {

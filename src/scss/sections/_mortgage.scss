@@ -3,13 +3,20 @@
     padding-bottom: 120px;
   }
   &__content {
-    @include desktop-desktop {
+    @include desktop-laptop {
       display: flex;
-      gap: 120px;
+      gap: 90px;
       justify-content: space-between;
     }
   }
   &__bottom {
+    @include desktop-tablet_to_laptop {
+      margin: 0 auto;
+      width: calc(100% - 50px);
+    }
+    @include desktop-laptop {
+      padding-top: 50px;
+    }
     @include desktop-desktop {
       padding-top: 120px;
     }
@@ -24,10 +31,19 @@
     }
   }
   &__accordion {
+    @include desktop-tablet {
+      margin-top: 30px;
+      margin-left: $space-l-t;
+      width: calc(100% - 2 * #{$space-l-t});
+    }
+    @include desktop-laptop {
+      margin-left: $space-l-l;
+      width: calc(100% - #{$space-l-l});
+    }
     @include desktop-desktop {
       margin-top: 90px;
-      margin-left: 300px;
-      width: calc(100% - 300px);
+      margin-left: $space-l-d;
+      width: calc(100% - #{$space-l-d});
     }
     &-title {
       color: #fff;
@@ -42,8 +58,11 @@
     }
   }
   &__calc {
+    @include desktop-laptop {
+      width: 390px;
+    }
     @include desktop-desktop {
-      max-width: 595px;
+      width: 595px;
     }
   }
   &__secret {

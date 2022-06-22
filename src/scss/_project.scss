@@ -19,6 +19,12 @@
       left: 20px;
       width: 1px;
       height: 40px;
+      @include desktop-tablet {
+        left: 50px;
+      }
+      @include desktop-laptop {
+        left: 60px;
+      }
       @include desktop-desktop {
         left: 130px;
         height: 80px;
@@ -30,6 +36,14 @@
       left: 20px;
       width: 1px;
       height: 160px;
+      @include desktop-tablet {
+        left: 50px;
+        height: 90px;
+      }
+      @include desktop-laptop {
+        left: 60px;
+        height: 100px;
+      }
       @include desktop-desktop {
         left: 130px;
         height: 170px;
@@ -43,9 +57,14 @@
     align-items: center;
     left: 7px;
     top: 40px;
-
+    @include desktop-tablet {
+      left: $gap-t;
+    }
+    @include desktop-laptop {
+      left: $gap-l;
+    }
     @include desktop-desktop {
-      left: 60px;
+      left: $gap;
       top: 80px;
     }
   }
@@ -137,10 +156,6 @@
         // margin-left: 155px;
         // margin-right: -70px;
         // margin-top: 130px;
-      }
-      @include desktop-laptop {
-        top: 45px;
-        left: 18px;
       }
       @include desktop-desktop {
         left: 95px;

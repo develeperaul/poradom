@@ -52,6 +52,12 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+    @include desktop-tablet {
+      gap: 7px;
+    }
+    @include desktop-desktop {
+      gap: 10px;
+    }
   }
 
   &__card {

@@ -20,7 +20,7 @@ $color: #fff;
 .menu-trigger__text {
   display: none;
 
-  @include desktop-desktop {
+  @include desktop-laptop {
     display: inline-block;
   }
 }

@@ -10,12 +10,20 @@
   & .cards-mini {
     color: #fff;
 
-    @include desktop-desktop {
+    @include desktop-tablet {
       margin-top: 80px;
-      margin-left: 300px;
       display: grid;
       gap: 40px 10px;
+      margin-left: $space-l-t;
       grid-template-columns: repeat(5, minmax(0, 200px));
+    }
+    @include desktop-laptop {
+      margin-left: $space-l-l;
+    }
+    @include desktop-desktop {
+      gap: 40px 10px;
+      margin-left: $space-l-d;
+      grid-template-columns: repeat(5, minmax(0, 157px));
     }
   }
 }

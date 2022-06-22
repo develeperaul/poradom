@@ -12,6 +12,10 @@
     left: 18px;
     z-index: 9;
     @include desktop-tablet {
+      bottom: 70px;
+      left: 87px;
+    }
+    @include desktop-desktop {
       bottom: 120px;
       left: 150px;
     }
@@ -35,6 +39,10 @@
       width: 1px;
       height: 40px;
       @include desktop-tablet {
+        left: 30px;
+        height: 40px;
+      }
+      @include desktop-desktop {
         left: 70px;
         height: 80px;
       }
@@ -56,6 +64,10 @@
     left: 7px;
     top: 40px;
     @include desktop-tablet {
+      left: 0;
+      top: 40px;
+    }
+    @include desktop-desktop {
       top: 80px;
     }
   }
@@ -102,10 +114,11 @@
     @include desktop-tablet {
       width: 157px;
       grid-column: 3 span / 3 span;
-      transform: translate(0px, 120px);
+      transform: translate(0px, 60px);
     }
     @include desktop-desktop {
       width: 100%;
+      transform: translate(0px, 120px);
     }
   }
 

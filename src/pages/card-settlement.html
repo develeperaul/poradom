@@ -375,6 +375,15 @@
             <a href="home.html">ПОРАДОМ</a>
             <a href="cottage-settlements.html">Коттеджные поселки</a>
           </div>
+          <div class="video__name_tablet">
+            <div class="location video__location">
+              <div class="location__image">
+                <img src="../img/icons/location.svg" alt="" />
+              </div>
+              <h5 class="location__title">Нагаева</h5>
+            </div>
+            <h2 class="video__title">Девичья Гора</h2>
+          </div>
           <div class="video__wrapper">
             <div class="video__top -r-gap">
               <div class="glightbox__wrapper">
@@ -399,13 +408,15 @@
             </div>
             <div class="video__bottom">
               <div class="video__content">
-                <div class="location video__location">
-                  <div class="location__image">
-                    <img src="../img/icons/location.svg" alt="" />
+                <div class="video__name">
+                  <div class="location video__location">
+                    <div class="location__image">
+                      <img src="../img/icons/location.svg" alt="" />
+                    </div>
+                    <h5 class="location__title">Нагаева</h5>
                   </div>
-                  <h5 class="location__title">Нагаева</h5>
+                  <h2 class="video__title">Девичья Гора</h2>
                 </div>
-                <h2 class="video__title">Девичья Гора</h2>
                 <div class="video__play">
                   <a href="https://vimeo.com/115041822" class="glightbox">
                     <div class="pie pie__play">
@@ -422,30 +433,20 @@
                 <div class="features__cards video__cards">
                   <div class="features__card features__card_bg-primary">
                     <div class="features__card-title">22 км</div>
-                    <div class="features__card-text">
-                      от Монумента <br />
-                      Дружбы
-                    </div>
+                    <div class="features__card-text">от Монумента Дружбы</div>
                   </div>
                   <div class="features__card features__card_bg-primary">
                     <div class="features__card-title">18 мин</div>
-                    <div class="features__card-text">
-                      от центра <br />
-                      города
-                    </div>
+                    <div class="features__card-text">от центра города</div>
                   </div>
                   <div class="features__card features__card_bg-primary">
                     <div class="features__card-title">60 га</div>
-                    <div class="features__card-text">
-                      площадь <br />
-                      посёлка
-                    </div>
+                    <div class="features__card-text">площадь посёлка</div>
                   </div>
                   <div class="features__card features__card_bg-primary">
                     <div class="features__card-title">2012</div>
                     <div class="features__card-text">
-                      год начала <br />
-                      строительства
+                      год начала строительства
                     </div>
                   </div>
                 </div>
@@ -957,7 +958,7 @@
         </div>
         <div class="plans__form">
           <div class="container">
-            <form action="#" class="form" id="special-offer">
+            <form action="#" class="form form-column" id="special-offer">
               <div class="form__top">
                 <h4 class="form__title">
                   Запишитесь на экскурсию по посёлку Девичья Гора
@@ -993,15 +994,17 @@
                   >
                     Отправить
                   </button>
-                </div>
 
-                <label class="checkbox-other">
-                  <input data-special-offer="" type="checkbox" />
-                  <p>
-                    Даю согласие на обработку
-                    <a href="#" class="checkbox__link"> персональных данных </a>
-                  </p>
-                </label>
+                  <label class="checkbox-other">
+                    <input data-special-offer="" type="checkbox" />
+                    <p>
+                      Даю согласие на обработку
+                      <a href="#" class="checkbox__link">
+                        персональных данных
+                      </a>
+                    </p>
+                  </label>
+                </div>
               </div>
             </form>
           </div>
@@ -1780,4 +1783,16 @@
     </footer>
     <!--footer end-->
   </body>
+  <script type="text/javascript">
+    // Создает обработчик события window.onLoad
+    window.onload = function () {
+      YMaps.jQuery(function () {
+        // Создает экземпляр карты и привязывает его к созданному контейнеру
+        var map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]);
+
+        // Устанавливает начальные параметры отображения карты: центр карты и коэффициент масштабирования
+        map.setCenter(new YMaps.GeoPoint(37.64, 55.76), 10);
+      });
+    };
+  </script>
 </html>

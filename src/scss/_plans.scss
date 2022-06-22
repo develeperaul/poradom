@@ -1,6 +1,6 @@
 .plans {
   & .section__btns {
-    @include desktop-desktop {
+    @include desktop-tablet {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
@@ -8,11 +8,18 @@
 
     & .markers {
       display: none;
-
+      @include desktop-tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 48px;
+        row-gap: 6px;
+        margin: 0;
+      }
       @include desktop-desktop {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+        column-gap: 56px;
         margin: 0;
         gap: 40px;
       }
@@ -20,7 +27,7 @@
   }
 
   & .markers {
-    @include desktop-desktop {
+    @include desktop-tablet {
       display: none;
     }
   }
@@ -55,7 +62,9 @@
     &-text {
       font-style: italic;
       margin-top: 14px;
+      font-size: 12px;
       @include desktop-desktop {
+        font-size: 16px;
         margin-top: 20px;
       }
     }
@@ -65,13 +74,14 @@
 .plan {
   position: relative;
   margin-bottom: 20px;
-  @include desktop-desktop {
+  @include desktop-tablet {
     margin-bottom: 0;
   }
   &__map {
     position: relative;
     height: 45vh;
     width: 100%;
+    height: 100%;
     overflow: auto;
     scrollbar-width: none;
     /* хром, сафари */
@@ -88,7 +98,7 @@
     & > img {
       max-width: inherit !important;
       height: 100%;
-      width: auto;
+      width: 100%;
 
       @include desktop-desktop {
         height: auto;
@@ -246,26 +256,70 @@
     }
   }
   &__content {
-    @include desktop-desktop {
+    @include desktop-tablet {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 670px));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-areas: "A B" "C C";
+    }
+    @include desktop-laptop {
       grid-template-areas: "A B C";
+      grid-template-columns: 1fr 1fr minmax(0, 295px);
+    }
+    @include desktop-desktop {
+      grid-template-columns: 1fr 1fr minmax(0, 510px);
     }
     & .alternative {
+      @include desktop-tablet_to_laptop {
+        grid-area: C;
+      }
+      @include desktop-tablet {
+        border: none;
+        background-color: #f2f2f2;
+      }
+      @include desktop-laptop {
+        top: -50px;
+        margin-bottom: -50px;
+        margin-right: -$gap-l;
+      }
       @include desktop-desktop {
+        top: -100px;
         max-width: 520px;
         margin-right: -$gap;
         height: calc(100% + 140px);
         position: relative;
-        top: -100px;
         padding-top: 100px;
         padding-left: 70px;
         padding-right: 70px;
-        background-color: #f2f2f2;
-        border: none;
+      }
+      &__list {
+        margin-top: 20px;
+        @include desktop-tablet {
+          margin-top: 18px;
+        }
+        @include desktop-desktop {
+          margin-top: 40px;
+        }
+        @include desktop-tablet_to_laptop {
+          display: flex;
+          gap: 27px;
+          justify-content: center;
+        }
+        .plan__item-text {
+          @include desktop-tablet {
+            font-size: 10px;
+          }
+          @include desktop-desktop {
+            font-size: 16px;
+          }
+        }
       }
       &__text {
+        @include desktop-tablet {
+          font-size: 10px;
+          line-height: 120%;
+        }
         @include desktop-desktop {
+          font-size: 18px;
           margin-bottom: 40px;
         }
       }
@@ -276,8 +330,21 @@
         }
       }
       & .plan__item-img {
-        width: 270px;
-        height: 270px;
+        width: 200px;
+        height: 200px;
+
+        @include desktop-tablet {
+          width: 230px;
+          height: 230px;
+        }
+        @include desktop-laptop {
+          width: 110px;
+          height: 110px;
+        }
+        @include desktop-desktop {
+          width: 270px;
+          height: 270px;
+        }
       }
     }
   }

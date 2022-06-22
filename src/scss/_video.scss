@@ -8,22 +8,23 @@
   color: #fff;
   height: 100%;
 
-  @include desktop-desktop {
+  @include desktop-tablet {
     padding-bottom: 0;
     height: auto;
   }
 
   &__top {
-    @include desktop-desktop {
+    @include desktop-tablet {
       order: 2;
       /* flex-grow: 1; */
       width: 50%;
+      flex-shrink: 0;
     }
 
     & .glightbox {
       display: none;
 
-      @include desktop-desktop {
+      @include desktop-tablet {
         display: block;
       }
     }
@@ -32,10 +33,15 @@
       width: 220px;
       height: 130px;
       margin-left: auto;
-
-      @include desktop-desktop {
+      @include desktop-tablet {
         object-fit: cover;
+        height: 302px;
         width: 100%;
+      }
+      @include desktop-laptop {
+        height: 500px;
+      }
+      @include desktop-desktop {
         height: 700px;
       }
     }
@@ -50,11 +56,14 @@
   }
 
   &__content {
-    height: 100%;
+    // height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
+    @include desktop-tablet {
+      margin-bottom: 30px;
+    }
     @include desktop-desktop {
       margin-bottom: 40px;
     }
@@ -65,18 +74,31 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-
-    @include desktop-desktop {
+    @include desktop-tablet_to_laptop {
+      align-items: flex-start;
+    }
+    @include desktop-tablet {
       flex-direction: row;
-      align-items: center;
+      // align-items: center;
+      gap: 57px;
+    }
+    @include desktop-laptop {
+      gap: 75px;
+    }
+    @include desktop-desktop {
       gap: 120px;
     }
   }
 
   &__cards {
     margin-bottom: 40px;
-
+    @include desktop-tablet {
+      margin-bottom: 0;
+    }
     &.features__cards {
+      @include desktop-tablet {
+        grid-template-columns: repeat(2, 155px);
+      }
       @include desktop-desktop {
         grid-template-columns: repeat(4, 200px);
       }
@@ -89,13 +111,26 @@
     font-family: "DinCyMd", sans-serif;
   }
 
+  &__name {
+    display: block;
+    @include desktop-tablet_to_laptop {
+      display: none;
+    }
+    &_tablet {
+      display: none;
+      @include desktop-tablet_to_laptop {
+        display: block;
+      }
+    }
+  }
+
   &__subtitle {
     font-weight: 500;
     font-size: 26px;
     line-height: 120%;
     margin-bottom: 2px;
 
-    @include desktop-desktop {
+    @include desktop-tablet {
       margin-bottom: 10px;
       font-size: 48px;
       line-height: 100%;
@@ -120,7 +155,7 @@
     min-width: 18px;
     min-height: 18px;
 
-    @include desktop-desktop {
+    @include desktop-tablet {
       min-width: 24px;
       min-height: 24px;
     }
@@ -128,7 +163,7 @@
 
   &__location {
     margin-bottom: 20px;
-    @include desktop-desktop {
+    @include desktop-tablet {
       margin-bottom: 28px;
     }
   }
@@ -141,7 +176,7 @@
   & &__play {
     margin-bottom: 20px;
 
-    @include desktop-desktop {
+    @include desktop-tablet {
       display: none;
     }
   }
@@ -159,7 +194,7 @@
     flex-direction: column;
     gap: 10px;
 
-    @include desktop-desktop {
+    @include desktop-tablet {
       display: flex;
       flex-direction: row;
       gap: 20px;

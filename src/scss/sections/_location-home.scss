@@ -1,6 +1,6 @@
 .location-home {
   &__content {
-    @include desktop-desktop {
+    @include desktop-tablet {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       grid-template-areas: "A A A A B B";
@@ -9,6 +9,12 @@
       padding: 40px 0;
       grid-area: A;
       position: relative;
+      @include desktop-tablet {
+        padding: 40px 0;
+      }
+      @include desktop-laptop {
+        padding: 50px 0;
+      }
       @include desktop-desktop {
         padding: 120px 0;
       }
@@ -19,13 +25,22 @@
       margin: 0 -#{$gap-m};
       background-color: $secondary;
       grid-area: B;
-      @include desktop-desktop {
+      @include desktop-tablet {
+        padding: 40px 27px;
         margin: 0;
-        margin-right: -#{$gap};
+        margin-right: -#{$gap-t};
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+      }
+
+      @include desktop-laptop {
+        margin-right: -#{$gap-l};
+      }
+
+      @include desktop-desktop {
+        margin-right: -#{$gap};
       }
     }
   }
@@ -38,6 +53,13 @@
     }
   }
   &__cards {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    @include desktop-tablet_to_laptop {
+      gap: 4px;
+    }
     &-wrapper {
       max-width: 288px;
       width: 100%;
@@ -46,10 +68,6 @@
         max-width: 410px;
       }
     }
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
   }
   &__card {
     padding: 20px 0;
@@ -60,6 +78,9 @@
     justify-content: space-between;
     align-items: center;
     gap: 4px;
+    @include desktop-tablet {
+      padding: 14px 0;
+    }
     @include desktop-desktop {
       gap: 10px;
     }
@@ -75,6 +96,9 @@
       line-height: 130%;
       color: $darkwhite;
       text-align: center;
+      @include desktop-tablet {
+        font-size: 10px;
+      }
       @include desktop-desktop {
         font-size: 16px;
         line-height: 130%;
@@ -86,6 +110,9 @@
       line-height: 120%;
       color: #ffffff;
       text-align: center;
+      @include desktop-tablet {
+        font-size: 18px;
+      }
       @include desktop-desktop {
         font-size: 26px;
         line-height: 120%;
@@ -120,7 +147,9 @@
     margin-top: 30px;
 
     width: 100%;
-
+    @include desktop-tablet {
+      margin-top: 14px;
+    }
     @include desktop-desktop {
       margin-top: 20px;
     }
