@@ -1,4 +1,17 @@
 .comands {
+  padding: 24px 0 40px;
+  @include desktop-tablet {
+    padding: 24px 0 36px;
+  }
+  @include desktop-tablet {
+    padding: 24px 0 36px;
+  }
+  @include desktop-laptop {
+    padding: 34px 0 46px;
+  }
+  @include desktop-tablet {
+    padding: 42px 0 120px;
+  }
   &__item {
     row-gap: 20px;
     column-gap: 10px;
@@ -15,7 +28,7 @@
       flex-wrap: wrap;
     }
 
-    &>.card-user {
+    & > .card-user {
       flex-basis: 140px;
 
       @include desktop-tablet {
@@ -27,7 +40,7 @@
       }
     }
 
-    &>.card-mail {
+    & > .card-mail {
       display: none;
 
       @include desktop-tablet {
@@ -53,7 +66,7 @@
       grid-column: 3 span / 3 span;
     }
 
-    &>h4 {
+    & > h4 {
       margin-bottom: 20px;
       white-space: nowrap;
     }

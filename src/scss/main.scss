@@ -64,6 +64,7 @@
 @import "plugins/toggle";
 @import "plugins/popup-info";
 @import "plugins/glightbox";
+@import "plugins/slider-popup";
 
 .title-br {
   @include desktop-tablet {
@@ -430,8 +431,26 @@
       background-position: center;
       width: 10px;
       height: 6px;
-      transform: rotate(0deg);
+      transform: translateY(-50%) rotate(0deg);
       transition: all 1s ease;
+      @include desktop-tablet {
+        top: 50%;
+        width: 15px;
+        height: 9px;
+      }
+      @include desktop-desktop {
+        width: 20px;
+        height: 12px;
+      }
+    }
+  }
+  &__title {
+    padding-right: 20px;
+    @include desktop-tablet {
+      padding-right: 25px;
+    }
+    @include desktop-desktop {
+      padding-right: 30px;
     }
   }
 
@@ -454,6 +473,6 @@
   }
 
   &_active &__top::before {
-    transform: rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
   }
 }

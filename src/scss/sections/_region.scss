@@ -1,8 +1,13 @@
 .region {
+  $this: &;
+
   &__project {
     width: 100%;
     height: 600px;
     position: relative;
+    @include desktop-tablet {
+      height: 760px;
+    }
     @include desktop-desktop {
       height: 900px;
     }
@@ -10,10 +15,153 @@
 
   &-road {
     position: absolute;
-    display: block;
     bottom: 0;
-    margin: 0 -60px;
-    width: calc(100% + 120px);
-    max-width: inherit;
+    // position: absolute;
+    // display: block;
+    // bottom: 0;
+    // margin: 0 -60px;
+    // width: calc(100% + 120px);
+    // max-width: inherit;
+  }
+
+  &__cards {
+    width: calc(100% - 2 * #{$gap-m});
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    position: absolute;
+    bottom: 360px;
+    @include desktop-tablet {
+      width: 410px;
+      right: 20px;
+      top: 30px;
+      bottom: auto;
+    }
+  }
+  &__card {
+    font-weight: 500;
+    color: #fff;
+    background: #212529;
+    opacity: 0.8;
+    border-radius: 4px;
+    padding: 17px 5px;
+    text-align: center;
+    &-title {
+      font-size: 12px;
+      line-height: 130%;
+      margin-bottom: 4px;
+    }
+    &-value {
+      font-size: 26px;
+      line-height: 120%;
+    }
+  }
+  &__home-img {
+    display: none;
+    @include desktop-laptop {
+      display: block;
+      position: absolute;
+      pointer-events: none;
+      top: 127px;
+      width: 290px;
+      height: 170px;
+      z-index: 2;
+    }
+    @include desktop-desktop {
+      top: 177px;
+      width: 390px;
+      height: 270px;
+    }
+  }
+  .slider-wrapper {
+    position: relative;
+    height: 100%;
+    .dropdown {
+      position: absolute;
+      bottom: 520px;
+      margin: 0;
+      width: 100%;
+      z-index: 2;
+      @include desktop-tablet {
+        width: 270px;
+        bottom: auto;
+        top: 30px;
+      }
+    }
+  }
+  .sliders {
+    height: 100%;
+  }
+  .swiper {
+    height: 100%;
+    margin: 0 -#{$gap-m};
+    width: calc(100% + 2 * #{$gap-m});
+    @include desktop-tablet {
+      margin: 0 -#{$gap-t};
+      width: calc(100% + 2 * #{$gap-t});
+    }
+    @include desktop-laptop {
+      margin: 0 -#{$gap-l};
+      width: calc(100% + 2 * #{$gap-l});
+    }
+    @include desktop-desktop {
+      margin: 0 -#{$gap};
+      width: calc(100% + 2 * #{$gap});
+    }
+    &-slide {
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      #{$this}-road {
+        object-fit: cover;
+        height: 350px;
+        @include desktop-tablet {
+          height: 60%;
+        }
+        @include desktop-laptop {
+          height: 70%;
+        }
+        @include desktop-desktop {
+          height: 100%;
+        }
+      }
+    }
+
+    &-nav {
+      position: absolute;
+      bottom: 200px;
+      width: 100%;
+      z-index: 2;
+      @include desktop-tablet {
+        width: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 270px;
+      }
+      @include desktop-desktop {
+        bottom: 50%;
+      }
+    }
+    .button__group {
+      position: absolute;
+      bottom: 470px;
+      width: 100%;
+      margin: 0 $gap-m;
+      z-index: 1;
+      @include desktop-tablet {
+        max-width: 350px;
+        bottom: auto;
+        top: 90px;
+        margin: 0 $gap-t;
+      }
+      @include desktop-laptop {
+        top: 110px;
+        margin: 0 $gap-l;
+      }
+      @include desktop-desktop {
+        margin: 0 $gap;
+      }
+    }
   }
 }

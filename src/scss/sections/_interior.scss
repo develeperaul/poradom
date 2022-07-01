@@ -56,6 +56,8 @@
   }
 
   &__btns {
+    position: relative;
+    z-index: 10;
     padding-top: 30px;
     display: flex;
     flex-direction: column;

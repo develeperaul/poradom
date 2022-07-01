@@ -348,7 +348,7 @@
     flex-direction: column;
     gap: 14px;
     margin-bottom: 20px;
-    @include desktop-desktop {
+    @include desktop-tablet {
       margin-bottom: 30px;
       flex-direction: row;
       gap: 150px;
@@ -360,20 +360,20 @@
     }
     &-left {
       gap: 14px;
-      @include desktop-desktop {
+      @include desktop-tablet {
         align-items: flex-end;
       }
     }
 
     &-right {
       gap: 24px;
-      @include desktop-desktop {
+      @include desktop-tablet {
         gap: 35px;
       }
     }
   }
   &__title {
-    @include desktop-desktop {
+    @include desktop-tablet {
       line-height: 85%;
     }
   }

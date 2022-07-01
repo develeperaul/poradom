@@ -98,7 +98,7 @@
     & > img {
       max-width: inherit !important;
       height: 100%;
-      width: 100%;
+      // width: 100%;
 
       @include desktop-desktop {
         height: auto;
@@ -116,18 +116,9 @@
     }
 
     & > svg polygon {
-      fill: #ff3333;
       fill-opacity: 0.5;
-      stroke: #ff3333;
       stroke-width: 2px;
       cursor: pointer;
-
-      &.free {
-        fill: #8dc257;
-        fill-opacity: 0.5;
-        stroke: #fff;
-        stroke-width: 2px;
-      }
     }
 
     & > svg rect {
@@ -251,7 +242,7 @@
   }
   &_pb0 {
     padding-bottom: 40px;
-    @include desktop-desktop {
+    @include desktop-tablet {
       padding-bottom: 0;
     }
   }
@@ -271,22 +262,29 @@
     & .alternative {
       @include desktop-tablet_to_laptop {
         grid-area: C;
+
+        width: calc(100% + 2 * #{$gap-t});
+        margin-left: -#{$gap-t};
       }
       @include desktop-tablet {
+        // padding: 40px 10px;
         border: none;
         background-color: #f2f2f2;
+        padding: 40px 10px;
       }
       @include desktop-laptop {
+        padding: 50px 10px;
         top: -50px;
         margin-bottom: -50px;
+        position: relative;
         margin-right: -$gap-l;
+        height: calc(100% + 100px);
       }
       @include desktop-desktop {
         top: -100px;
-        max-width: 520px;
+        // max-width: 520px;
         margin-right: -$gap;
-        height: calc(100% + 140px);
-        position: relative;
+        height: calc(100% + 100px);
         padding-top: 100px;
         padding-left: 70px;
         padding-right: 70px;
@@ -353,6 +351,9 @@
 .plan-region {
   position: relative;
   margin: 0 -#{$gap-m};
+  @include desktop-laptop {
+    margin: 0 -#{$gap-l};
+  }
   @include desktop-desktop {
     margin: 0 -#{$gap};
   }

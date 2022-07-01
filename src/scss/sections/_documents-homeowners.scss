@@ -12,4 +12,23 @@
       }
     }
   }
+  &__top {
+    margin-bottom: 40px;
+    @include desktop-tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  .download__links {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @include desktop-tablet {
+      flex-direction: row;
+    }
+    @include desktop-desktop {
+      flex-direction: column;
+      gap: 44px;
+    }
+  }
 }

@@ -393,7 +393,8 @@
             <div class="card card-wrapper card_label-s">
               <h4>Знаете отличное место для будущего посёлка?</h4>
               <p>Напишите нам</p>
-              <button class="button button_accent">Написать</button>
+              <button class="button button_accent js-open-modal"
+              data-modal="write">Написать</button>
             </div>
           </div>
 
@@ -467,6 +468,115 @@
           </div>
         </div>
       </section>
+            <!-- popup -->
+      <div class="modal" data-modal="excursion">
+        <form action="#" class="form-standart" id="special-offer" data-form="1">
+          <h4 class="form__title">
+Запишитесь <br> на экскурсию <br> по посёлку <br> Название посёлка
+          </h4>
+          <p class="form__text">
+            Приезжайте на экскурсию, чтобы увидеть все своими глазами и узнать о
+            жизни поселка
+          </p>
+          <div class="text-field">
+            <input
+              data-special-offer
+              class="text-field__input tel"
+              type="text"
+              name="login"
+              id="login"
+              placeholder="Введите ваш телефон"
+            />
+          </div>
+          <div class="text-field">
+            <input
+              data-special-offer
+              class="text-field__input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Введите ваш имя"
+            />
+          </div>
+
+          <button
+            type="submit"
+            id="special-offer-btn"
+            class="button button_accent"
+          >
+            Отправить
+          </button>
+          <label class="checkbox-other">
+            <input data-special-offer type="checkbox" checked />
+            <p>
+              Даю согласие на обработку
+              <a href="#" class="checkbox__link"> персональных данных </a>
+            </p>
+          </label>
+        </form>
+      </div>
+      <div class="modal" data-modal="write">
+        <form action="#" class="form-standart" id="special-offer" data-form="3">
+          <h4 class="form__title">
+            Ваше предложение <br> по земле
+          </h4>
+          <div class="text-field">
+            <input
+              data-special-offer
+              class="text-field__input tel"
+              type="text"
+              name="login"
+              id="login"
+              placeholder="Введите ваш телефон"
+            />
+          </div>
+          <div class="text-field">
+            <input
+              data-special-offer
+              class="text-field__input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Введите ваш имя"
+            />
+          </div>
+
+          <button
+            type="submit"
+            id="special-offer-btn"
+            class="button button_accent"
+          >
+            Отправить
+          </button>
+          <label class="checkbox-other">
+            <input data-special-offer type="checkbox" checked />
+            <p>
+              Даю согласие на обработку
+              <a href="#" class="checkbox__link"> персональных данных </a>
+            </p>
+          </label>
+        </form>
+      </div>
+      <div class="popup-message">
+        <svg
+          width="65"
+          height="64"
+          viewBox="0 0 65 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="32.5" cy="32" r="32" fill="#003852" />
+          <path
+            d="M27.8333 43L18.5 34.0009L22.6504 29.9991L27.8333 35.0105L42.3496 21L46.5 25.0018L27.8333 43Z"
+            fill="white"
+          />
+        </svg>
+        <p>
+          Спасибо <br />
+          Ваша заявка принята
+        </p>
+      </div>
+      <div class="overlay js-overlay-modal"></div>
     </main>
     <!--footer start-->
     <footer class="footer">

@@ -39,4 +39,15 @@
       }
     }
   }
+
+  .navigation__card {
+    & > img {
+      @include desktop-laptop {
+        height: 396px;
+      }
+      @include desktop-desktop {
+        height: 760px;
+      }
+    }
+  }
 }

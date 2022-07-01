@@ -33,4 +33,9 @@
       }
     }
   }
+  .about-work__list {
+    @include desktop-tablet {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
 }

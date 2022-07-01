@@ -40,6 +40,9 @@
       left: 18px;
       width: 1px;
       height: 40px;
+      @include desktop-tablet {
+        left: 28px;
+      }
       @include desktop-desktop {
         left: 60px;
 

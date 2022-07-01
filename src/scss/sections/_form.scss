@@ -22,23 +22,33 @@
   }
 
   &__column {
+    display: flex;
     flex-direction: column;
-
+    padding: 20px;
     height: fit-content;
-    padding: 40px;
     max-width: 350px;
     gap: 20px;
     @include desktop-tablet {
+      padding: 30px 22px;
       gap: 14px;
     }
     @include desktop-desktop {
+      padding: 40px;
       gap: 30px;
     }
     @include desktop-laptop_to_desktop {
       padding: 25px;
       max-width: 240px;
     }
-
+    #{$this}__title {
+      @include desktop-tablet {
+        font-size: 16px;
+        line-height: 120%;
+      }
+      @include desktop-desktop {
+        font-size: 26px;
+      }
+    }
     & .button {
       @include desktop-laptop {
         margin-top: 4px;
@@ -50,6 +60,9 @@
 
     & .form__inputs {
       flex-direction: column;
+      & > * {
+        width: 100%;
+      }
     }
 
     & .form__title {
@@ -63,6 +76,10 @@
         font-size: 12px;
         line-height: 120%;
       }
+    }
+
+    & .form__top {
+      margin: 0;
     }
   }
 
@@ -106,6 +123,9 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @include desktop-tablet_to_laptop {
+      margin-bottom: 20px;
+    }
 
     @include desktop-desktop {
       max-width: 385px;
@@ -114,9 +134,10 @@
 
   &__text {
     margin-top: -10px;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     font-size: 10px;
     line-height: 130%;
+    margin-bottom: 20px;
     @include desktop-tablet {
       font-size: 14px;
       line-height: 120%;
@@ -137,6 +158,9 @@
     @include desktop-tablet_to_laptop {
       flex-direction: column;
     }
+    #{$this}__top {
+      margin: 0;
+    }
     #{$this}__inputs {
       @include desktop-tablet {
         display: grid;
@@ -145,12 +169,18 @@
         grid-template-columns: repeat(3, minmax(0, 180px));
       }
       @include desktop-laptop {
-        gap: 20px 10px;
+        gap: 10px;
         grid-template-columns: repeat(2, 1fr);
       }
       @include desktop-desktop {
         gap: 10px;
         grid-template-columns: repeat(3, 1fr);
+      }
+      .text-field {
+        margin-bottom: 20px;
+        @include desktop-tablet {
+          margin: 0;
+        }
       }
       .checkbox-other {
         @include desktop-tablet {
@@ -170,13 +200,32 @@
   background-color: $primary;
   border-radius: 4px;
   color: #fff;
-
+  @include desktop-tablet {
+    padding: 30px;
+  }
+  @include desktop-desktop {
+    padding: 40px;
+  }
   #{$this}-s {
     #{$this}--80 {
       margin-top: 80px;
     }
   }
 
+  .form__title {
+    margin-bottom: 20px;
+    @include desktop-tablet {
+      font-size: 18px;
+      line-height: 120%;
+    }
+    @include desktop-desktop {
+      font-size: 26px;
+      line-height: 120%;
+    }
+  }
+  .button {
+    width: 100%;
+  }
   #{$this}__column {
     flex-direction: column;
 
@@ -191,8 +240,6 @@
       flex-direction: column;
     }
 
-    #{$this} .form__title {
-    }
     #{$this} .form__text {
     }
   }
@@ -219,5 +266,27 @@
     font-size: 10px;
     line-height: 100%;
     color: #f2f2f2;
+  }
+}
+
+.modal {
+  form {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+  }
+
+  .form-close {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .form-standart {
+    width: 286px;
+    margin: 0 auto;
+    @include desktop-tablet {
+      width: 250px;
+    }
+    @include desktop-desktop {
+      width: 350px;
+    }
   }
 }

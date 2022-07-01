@@ -287,8 +287,22 @@
       }
       @include desktop-desktop {
         padding: 60px 60px;
-
         font-size: 18px;
+      }
+    }
+
+    &__text {
+      & > p {
+        @include desktop-tablet {
+          font-size: 12px;
+          line-height: 120%;
+        }
+        @include desktop-laptop {
+          font-size: 14px;
+        }
+        @include desktop-laptop {
+          font-size: 16px;
+        }
       }
     }
 
@@ -352,12 +366,14 @@
 
       & > p {
         @include desktop-tablet {
-          font-size: 14px;
+          font-size: 12px;
           line-height: 130%;
+        }
+        @include desktop-laptop {
+          font-size: 14px;
         }
         @include desktop-desktop {
           font-size: 16px;
-          line-height: 130%;
         }
       }
 
@@ -387,7 +403,10 @@
         &_lg {
           width: 72px;
           height: 72px;
-
+          @include desktop-tablet {
+            width: 60px;
+            height: 60px;
+          }
           @include desktop-desktop {
             width: 90px;
             height: 90px;
@@ -502,6 +521,9 @@
     align-items: center;
     gap: 30px;
   }
+  @include desktop-laptop {
+    right: $gap-l;
+  }
   @include desktop-desktop {
     right: $gap;
   }
@@ -510,6 +532,9 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    @include desktop-laptop {
+      gap: 20px;
+    }
     @include desktop-desktop {
       gap: 20px;
     }
@@ -532,6 +557,10 @@
   padding: 40px $gap-m;
   background-color: $secondary;
   margin: 0 -#{$gap-m};
+  @include desktop-laptop {
+    padding: 30px $gap-l;
+    margin: 0 -#{$gap-l};
+  }
   @include desktop-desktop {
     padding: 80px $gap;
     margin: 0 -#{$gap};
@@ -541,14 +570,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include desktop-tablet_to_laptop {
+      flex-direction: row;
+      align-items: center;
+      gap: 30px;
+    }
   }
   & .location-home__cards {
     max-width: 100%;
     width: 100%;
-    @include desktop-desktop {
+    @include desktop-tablet_to_laptop {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 7px;
+    }
+    @include desktop-laptop {
       display: flex;
     }
-    @include desktop-desktop {
+    @include desktop-laptop {
       & .location-home__card {
         &:nth-child(1),
         &:nth-child(2),
@@ -589,6 +628,9 @@
   }
   & .button {
     margin-top: 30px;
+    @include desktop-tablet_to_laptop {
+      margin: 0;
+    }
   }
 }
 
@@ -603,6 +645,10 @@
 
   margin: 0 -#{$gap-m};
   width: calc(100% + 2 * #{$gap-m});
+  @include desktop-laptop {
+    margin: 0 -#{$gap-l};
+    width: calc(100% + 2 * #{$gap-l});
+  }
   @include desktop-desktop {
     margin: 0 -#{$gap};
     width: calc(100% + 2 * #{$gap});
@@ -612,5 +658,128 @@
 .scan {
   &-img {
     width: 100%;
+  }
+}
+.test-class {
+  $this: &;
+  $paddingTop: 47px;
+  padding: 47px 16px 0 16px;
+  // height: calc(100% - #{$paddingTop});
+  height: calc(100% - 94px);
+  position: relative;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  &__title {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 120%;
+    margin-bottom: 10px;
+  }
+  &__wrapper {
+    position: relative;
+    opacity: 0;
+    height: 100%;
+    transition: opacity 0.2s ease;
+  }
+  &__subtitle {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    margin-bottom: 20px;
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 130%;
+  }
+  &__scroll {
+    overflow-y: scroll;
+    height: 0%;
+    transition: height 0.2s ease;
+
+    .test-class__wrapper_active & {
+      height: calc(100% - 120px);
+    }
+    &::-webkit-scrollbar {
+      background-color: transparent;
+      width: 2px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #e5e7ea;
+      opacity: 0.5;
+      border-radius: 24px;
+    }
+    &::-webkit-scrollbar-track {
+      width: 10px;
+    }
+  }
+  &__gradient {
+    background: linear-gradient(
+      0deg,
+      #000000 0%,
+      #000000 13.9%,
+      #000000 31.39%,
+      rgba(0, 0, 0, 0) 86.11%
+    );
+    opacity: 0.6;
+    height: 180px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+  &__turn {
+    position: absolute;
+    bottom: 34px;
+    left: 0;
+    text-align: center;
+    /* margin: 0 auto; */
+    right: 0;
+    color: #fff;
+    z-index: 1;
+    cursor: pointer;
+    .turn-active {
+      display: block;
+    }
+    .turn-disabled {
+      display: none;
+    }
+    &_active {
+      .turn-active {
+        display: none;
+      }
+      .turn-disabled {
+        display: block;
+      }
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    top: 0;
+  }
+}
+.swiper-slide {
+  &-active {
+    .test-class__wrapper {
+      opacity: 1;
+    }
+    .test-class__overlay {
+      height: 0;
+    }
+  }
+}
+
+.turn {
+  &-active {
+    display: block;
+  }
+  &-disabled {
+    display: none;
   }
 }

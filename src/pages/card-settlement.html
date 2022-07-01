@@ -452,7 +452,9 @@
                 </div>
               </div>
               <div class="video__buttons">
-                <buttton class="carousel__btn button button_accent"
+                <buttton
+                  class="carousel__btn button button_accent js-open-modal"
+                  data-modal="excursion"
                   >Записаться на экскурсию</buttton
                 >
               </div>
@@ -513,9 +515,40 @@
               <img src="../img/devgora.jpg" alt="" />
               <svg viewBox="0 0 1200 600" preserveAspectRatio="xMinYMin slice">
                 <a data-hover="#hover2_1" data-button="plan_2">
+                  <!-- белый -->
+                  <!-- <polygon
+                    class=""
+                    points="87,324 452,133 597,179 387,400 358,403 284,376 245,336 100,342"
+                    fill="#fbfbfb"
+                    stroke="#ffffff"
+                  ></polygon> -->
+                  <!-- синий -->
+                  <!-- <polygon
+                    class=""
+                    points="87,324 452,133 597,179 387,400 358,403 284,376 245,336 100,342"
+                    fill="#b3e1f6"
+                    stroke="#0099E0"
+                  ></polygon> -->
+                  <!-- зеленый -->
+                  <!-- <polygon
+                    class=""
+                    points="87,324 452,133 597,179 387,400 358,403 284,376 245,336 100,342"
+                    fill="#bdd6c2"
+                    stroke="#247733"
+                  ></polygon> -->
+                  <!-- желтый -->
+                  <!-- <polygon
+                    class=""
+                    points="87,324 452,133 597,179 387,400 358,403 284,376 245,336 100,342"
+                    fill="#fae6b6"
+                    stroke="#EEAC0D"
+                  ></polygon> -->
+                  <!-- красный -->
                   <polygon
                     class=""
                     points="87,324 452,133 597,179 387,400 358,403 284,376 245,336 100,342"
+                    fill="#ff3333"
+                    stroke="#ff3333"
                   ></polygon>
                   <rect
                     x="262"
@@ -531,6 +564,8 @@
                   <polygon
                     class=""
                     points="597,179 811,245 853,329 786,329 491,437 429,396 387,400"
+                    fill="#ff3333"
+                    stroke="#ff3333"
                   ></polygon>
                   <rect
                     x="540"
@@ -544,8 +579,9 @@
                 </a>
                 <a data-hover="#hover4_1" data-button="plan_4">
                   <polygon
-                    class="free"
                     points="811,245 824,246 888,157 1090,219 1130,282 1153,321 1136,385 1106,380 1043,378 893,341 852,329"
+                    fill="#ff3333"
+                    stroke="#ff3333"
                   ></polygon>
                   <rect
                     x="902"
@@ -630,6 +666,8 @@
                   data-hover="#card-hover1_2"
                   class=""
                   points="87,324 452,133 597,179 387,400 358,403 284,376 245,336 100,342"
+                  fill="#ff3333"
+                  stroke="#ff3333"
                   window.location="/"
                 ></polygon>
 
@@ -637,12 +675,16 @@
                   data-hover="#card-hover2_2"
                   class=""
                   points="597,179 811,245 853,329 786,329 491,437 429,396 387,400"
+                  fill="#ff3333"
+                  stroke="#ff3333"
                   window.location="/"
                 ></polygon>
                 <polygon
                   data-hover="#card-hover3_2"
                   class="free"
                   points="811,245 824,246 888,157 1090,219 1130,282 1153,321 1136,385 1106,380 1043,378 893,341 852,329"
+                  fill="#ff3333"
+                  stroke="#ff3333"
                   window.location="/"
                 ></polygon>
               </svg>
@@ -961,11 +1003,12 @@
             <form action="#" class="form form-column" id="special-offer">
               <div class="form__top">
                 <h4 class="form__title">
-                  Запишитесь на экскурсию по посёлку Девичья Гора
+                  Запишитесь на экскурсию <br />
+                  по посёлку Девичья Гора
                 </h4>
                 <p class="form__text">
-                  Приезжайте на экскурсию, чтобы увидеть всё своими глазами и
-                  узнать о жизни поселка из первых рук
+                  Приезжайте на экскурсию, чтобы увидеть <br />
+                  всё своими глазами и узнать о жизни поселка
                 </p>
               </div>
               <div class="form__bottom">
@@ -1212,8 +1255,8 @@
                     Запишитесь на экскурсию по посёлку Девичья Гора
                   </h4>
                   <p class="form__text">
-                    Приезжайте на экскурсию, чтобы увидеть всё своими глазами и
-                    узнать о жизни поселка из первых рук
+                    Приезжайте на экскурсию, чтобы увидеть все своими глазами и
+                    узнать о жизни поселка
                   </p>
                 </div>
                 <div class="form__bottom">
@@ -1407,7 +1450,6 @@
           <div class="news__top">
             <h2 class="title news__title">
               <span>посёлок</span>
-              <br />
               <span>в новостях</span>
             </h2>
             <span></span>
@@ -1443,7 +1485,6 @@
           <div class="news__top">
             <h2 class="title news__title">
               <span>посёлок</span>
-              <br class="news__title_br" />
               <span>в новостях</span>
             </h2>
             <span></span>
@@ -1580,8 +1621,8 @@
                     Запишитесь на экскурсию по посёлку Девичья Гора
                   </h4>
                   <p class="form__text">
-                    Приезжайте на экскурсию, чтобы увидеть всё своими глазами и
-                    узнать о жизни поселка из первых рук
+                    Приезжайте на экскурсию, чтобы увидеть все своими глазами и
+                    узнать о жизни поселка
                   </p>
                 </div>
                 <div class="form__bottom">
@@ -1627,6 +1668,76 @@
           </div>
         </div>
       </section>
+      <!-- popup -->
+      <div class="modal" data-modal="excursion">
+        <form action="#" class="form-standart" id="special-offer" data-form="1">
+          <h4 class="form__title">
+            Запишитесь <br />
+            на экскурсию <br />
+            по посёлку <br />
+            Название посёлка
+          </h4>
+          <p class="form__text">
+            Приезжайте на экскурсию, чтобы увидеть все своими глазами и узнать о
+            жизни поселка
+          </p>
+          <div class="text-field">
+            <input
+              data-special-offer
+              class="text-field__input tel"
+              type="text"
+              name="login"
+              id="login"
+              placeholder="Введите ваш телефон"
+            />
+          </div>
+          <div class="text-field">
+            <input
+              data-special-offer
+              class="text-field__input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Введите ваш имя"
+            />
+          </div>
+
+          <button
+            type="submit"
+            id="special-offer-btn"
+            class="button button_accent"
+          >
+            Отправить
+          </button>
+          <label class="checkbox-other">
+            <input data-special-offer type="checkbox" checked />
+            <p>
+              Даю согласие на обработку
+              <a href="#" class="checkbox__link"> персональных данных </a>
+            </p>
+          </label>
+        </form>
+      </div>
+      <div class="popup-message">
+        <svg
+          width="65"
+          height="64"
+          viewBox="0 0 65 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="32.5" cy="32" r="32" fill="#003852" />
+          <path
+            d="M27.8333 43L18.5 34.0009L22.6504 29.9991L27.8333 35.0105L42.3496 21L46.5 25.0018L27.8333 43Z"
+            fill="white"
+          />
+        </svg>
+        <p>
+          Спасибо <br />
+          Ваша заявка принята
+        </p>
+      </div>
+      <div class="overlay js-overlay-modal"></div>
     </main>
     <!--footer start-->
     <footer class="footer">

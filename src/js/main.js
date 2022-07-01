@@ -1,6 +1,6 @@
 import "../scss/main.scss";
 // import 'swiper/css'
-import "./plugins/swiper";
+import { stories } from "./plugins/swiper";
 import "./plugins/calc";
 
 import GLightbox from "glightbox";
@@ -16,7 +16,7 @@ import Dropdown from "./plugins/dropdown";
 
 import Accordion from "./plugins/accardion";
 import "./plugins/telmask";
-import "./plugins/validateform";
+import { validate } from "./plugins/validateform";
 
 const scrollTop = () => window.scrollTo(pageYOffset, 0);
 const arrow = document.querySelector("#arrow");
@@ -163,59 +163,122 @@ new Test("test");
 })(window.Element.prototype);
 
 document.addEventListener("DOMContentLoaded", function () {
-  /* Записываем в переменные массив элементов-кнопок и подложку.
-      Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
-  var modalButtons = document.querySelectorAll(".js-open-modal"),
-    overlay = document.querySelector(".js-overlay-modal"),
-    closeButtons = document.querySelectorAll(".js-modal-close");
-  if (overlay) {
-    /* Перебираем массив кнопок */
-    modalButtons.forEach(function (item) {
-      /* Назначаем каждой кнопке обработчик клика */
-      item.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
-                и будем искать модальное окно с таким же атрибутом. */
-        var modalId = this.getAttribute("data-modal"),
-          modalElem = document.querySelector(
-            '.modal[data-modal="' + modalId + '"]'
-          );
-
-        /* После того как нашли нужное модальное окно, добавим классы
-                подложке и окну чтобы показать их. */
-        modalElem.classList.add("active");
-        overlay.classList.add("active");
-      }); // end click
-    }); // end foreach
-
-    closeButtons.forEach(function (item) {
-      item.addEventListener("click", function (e) {
-        var parentModal = this.closest(".modal");
-
-        parentModal.classList.remove("active");
-        overlay.classList.remove("active");
-      });
-    }); // end foreach
-
-    document.body.addEventListener(
-      "keyup",
-      function (e) {
-        var key = e.keyCode;
-
-        if (key == 27) {
-          document.querySelector(".modal.active").classList.remove("active");
-          document.querySelector(".overlay").classList.remove("active");
+  class Popup {
+    constructor() {
+      let that = this;
+      that.close = false;
+      /* Записываем в переменные массив элементов-кнопок и подложку.
+          Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
+      var modalButtons = document.querySelectorAll(".js-open-modal"),
+        overlay = document.querySelector(".js-overlay-modal"),
+        closeButtons = document.querySelectorAll(".js-modal-close");
+      const toggleSwiper = (type, modalEl, index) => {
+        if (modalEl.querySelector(".swiper")) {
+          if (stories && Array.from(stories).length === 0) {
+            stories[type]();
+            stories.autoplay.start();
+            stories.slideToLoop(0);
+          }
+          if (stories && Array.from(stories).length !== 0) {
+            stories[index - 1][type]();
+            stories[index - 1].autoplay.start();
+            stories[index - 1].slideToLoop(0);
+          }
         }
-      },
-      false
-    );
+      };
+      let indexModal = null;
+      let modalElem = null;
+      if (overlay) {
+        /* Перебираем массив кнопок */
+        modalButtons.forEach(function (item) {
+          /* Назначаем каждой кнопке обработчик клика */
+          item.addEventListener("click", function (e) {
+            e.preventDefault();
 
-    overlay.addEventListener("click", function () {
-      document.querySelector(".modal.active").classList.remove("active");
-      this.classList.remove("active");
-    });
+            /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
+                    и будем искать модальное окно с таким же атрибутом. */
+            var modalId = this.getAttribute("data-modal");
+            modalElem = document.querySelector(
+              '.modal[data-modal="' + modalId + '"]'
+            );
+            indexModal = modalId;
+            /* После того как нашли нужное модальное окно, добавим классы
+                    подложке и окну чтобы показать их. */
+            modalElem.classList.add("active");
+            toggleSwiper("init", modalElem, indexModal);
+            toggleSwiper("enable", modalElem, indexModal);
+            overlay.classList.add("active");
+          }); // end click
+        }); // end foreach
+
+        closeButtons.forEach(function (item) {
+          item.addEventListener("click", function (e) {
+            toggleSwiper("disable", modalElem, indexModal);
+
+            var parentModal = that.closest(".modal");
+            that.close = true;
+            parentModal.classList.remove("active");
+            overlay.classList.remove("active");
+          });
+        }); // end foreach
+
+        document.body.addEventListener(
+          "keyup",
+          function (e) {
+            var key = e.keyCode;
+
+            if (key == 27) {
+              that.close = true;
+              document
+                .querySelector(".modal.active")
+                .classList.remove("active");
+              document.querySelector(".overlay").classList.remove("active");
+            }
+          },
+          false
+        );
+
+        overlay.addEventListener("click", function () {
+          that.close = true;
+          document.querySelector(".modal.active").classList.remove("active");
+          this.classList.remove("active");
+        });
+      }
+
+      //формы на попапах
+
+      const modals = document.querySelectorAll(".modal");
+      that.message = document.querySelector(".popup-message");
+      that.formActive;
+      Array.from(modals).forEach((modal) => {
+        const form = modal.querySelector("form");
+        if (form) {
+          // const submit = form.querySelector("button");
+          // console.log(submit);
+          form.addEventListener("submit", function (e) {
+            that.formActive = this;
+            e.preventDefault();
+            console.log(validate.validate);
+            if (!validate.validate) {
+              this.classList.add("form-close");
+              setTimeout(() => {
+                that.message.classList.add("active");
+              }, 250);
+            }
+          });
+        }
+      });
+    }
+    set close(isClose) {
+      if (isClose) {
+        this.message.classList.remove("active");
+        setTimeout(() => {
+          this.formActive.classList.remove("form-close");
+        }, 300);
+      }
+    }
   }
+  new Popup();
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -726,6 +789,39 @@ document.addEventListener("DOMContentLoaded", () => {
       //     }, 1100);
       //   }
       // }
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const testSwipers = document.querySelectorAll(".testSwiper");
+
+  if (testSwipers) {
+    Array.from(testSwipers).forEach((slider) => {
+      const sliders = slider.querySelectorAll(".swiper-slide");
+      const turns = slider.querySelectorAll(".test-class__turn");
+      Array.from(turns).forEach((turn) => {
+        turn.addEventListener("click", function (e) {
+          let modalId = this.getAttribute("data-modal");
+          if (stories && Array.from(stories).length === 0) {
+            stories.autoplay.stop();
+          }
+          if (stories && Array.from(stories).length !== 0) {
+            stories[modalId - 1].autoplay.stop();
+          }
+          const slide = e.path.find(
+            (path) => path.classList.value.indexOf("swiper-slide") !== -1
+          );
+          const wrapper = slide.querySelector(".test-class__wrapper");
+          if (turn.classList.contains("test-class__turn_active")) {
+            wrapper.classList.remove("test-class__wrapper_active");
+            turn.classList.remove("test-class__turn_active");
+          } else {
+            wrapper.classList.add("test-class__wrapper_active");
+            turn.classList.add("test-class__turn_active");
+          }
+        });
+      });
     });
   }
 });

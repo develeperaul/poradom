@@ -5,6 +5,12 @@
   cursor: pointer;
   user-select: none;
   position: relative;
+  @include desktop-tablet {
+    margin-top: 14px;
+  }
+  @include desktop-desktop {
+    margin-top: 20px;
+  }
 }
 .checkbox-other input[type="checkbox"] {
   position: absolute;
@@ -21,7 +27,7 @@
   padding: 0 0 0 28px;
   line-height: 120%;
   color: #f2f2f2;
-  @include desktop-laptop {
+  @include desktop-tablet {
     font-size: 10px;
   }
   @include desktop-desktop {

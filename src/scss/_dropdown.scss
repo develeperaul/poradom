@@ -184,6 +184,19 @@ $choice-color: #212529;
   &__btn {
     margin-top: 14px;
   }
+
+  &__img-round {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 9999px;
+  }
+
+  &__flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 }
 
 // @media (max-width: 768px) {

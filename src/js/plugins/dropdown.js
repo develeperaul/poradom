@@ -1,8 +1,9 @@
 export default class Dropdown {
+  #item;
   constructor(name) {
-    if(document.getElementById(`dropdownList_${name}`)){
-
-      const listItems = document
+    this.name = name;
+    if (document.getElementById(`dropdownList_${name}`)) {
+      this.listItems = document
         .getElementById(`dropdownList_${name}`)
         .getElementsByTagName("li");
       const dropDownHeader = document.getElementById(`dropdownHeader_${name}`);
@@ -10,14 +11,16 @@ export default class Dropdown {
       const dropdownListBody = document.getElementById(
         `dropdownListBody_${name}`
       );
-      const dropdownHeaderValue = document.getElementById(
+
+      this.dropdownHeaderValue = document.getElementById(
         `dropdownHeaderValue_${name}`
       );
+      const dropdownHeaderValue = this.dropdownHeaderValue;
       const isDropdownDisabled = document
         .getElementById(`dropdown_${name}`)
         .classList.contains("disabled");
-      const dropdown = document.getElementById(`dropdown_${name}`);
-      Array.from(listItems).forEach((item) => {
+      this.dropdown = document.getElementById(`dropdown_${name}`);
+      Array.from(this.listItems).forEach((item) => {
         item.addEventListener(
           "click",
           function () {
@@ -40,26 +43,67 @@ export default class Dropdown {
         chevronIcon.classList.toggle("rotate-icon-home");
         chevronIcon.classList.toggle("rotate-icon");
         dropdownListBody.classList.toggle("dropdown__body--hide");
-        dropDownHeader.classList.toggle("dropdown__header_show")
+        dropDownHeader.classList.toggle("dropdown__header_show");
         dropdownListBody.classList.toggle("dropdown__body--show");
         // dropdownHeader.classList.toggle("dropdown__header--hide");
         // dropdownHeader.classList.toggle("dropdown__header--show");
       }
-      function selectItem(_this) {
+      const selectItem = (_this) => {
         dropdownHeaderValue.classList.add("dropdown__header--active");
         dropdownHeaderValue.innerText = _this.innerText;
-        Array.from(listItems).forEach((item) => {
+        if (dropdownHeaderValue.querySelector("img")) {
+          dropdownHeaderValue.querySelector("img").remove();
+          dropdownHeaderValue.classList.remove("dropdown__flex");
+        }
+        if (_this.querySelector("img")) {
+          const img = _this.querySelector("img").cloneNode(true);
+          dropdownHeaderValue.classList.add("dropdown__flex");
+          dropdownHeaderValue.prepend(img);
+        }
+        Array.from(this.listItems).forEach((item) => {
           item.classList.remove("selected");
         });
         _this.classList.add("selected");
-      }
+        this.choisEl = _this;
+      };
+      this.selected = selectItem;
     }
+  }
+  select() {
+    const firstEl = document.querySelector(".dropdown__body--list-index");
+    this.selected(firstEl);
+  }
+
+  // get name() {
+  //     return this.#nameValue;
+  // }
+  get choisEl() {
+    return this._choisEl;
+  }
+  set choisEl(el) {
+    this._choisEl = el;
+    // console.log(this._choisEl);
+  }
+
+  get listItems() {
+    return this._listItems;
+  }
+  set listItems(el) {
+    this._listItems = el;
+  }
+
+  get dropdown() {
+    console.log(this._dropdown);
+    return this._dropdown;
+  }
+  set dropdown(el) {
+    this._dropdown = el;
   }
 }
 
 // new Dropdown("4");
 
-// const listItems = document
+// const this.listItems = document
 //   .getElementById("dropdownList")
 //   .getElementsByTagName("li");
 // const dropDownHeader = document.getElementById("dropdownHeader");
@@ -71,7 +115,7 @@ export default class Dropdown {
 //   .classList.contains("disabled");
 // const dropdown = document.getElementById("dropdown");
 
-// Array.from(listItems).forEach((item) => {
+// Array.from(this.listItems).forEach((item) => {
 //   item.addEventListener(
 //     "click",
 //     function () {
@@ -105,7 +149,7 @@ export default class Dropdown {
 //   dropdownHeaderValue.classList.add("dropdown__header--active");
 //   dropdownHeaderValue.innerText = _this.innerText;
 
-//   Array.from(listItems).forEach((item) => {
+//   Array.from(this.listItems).forEach((item) => {
 //     item.classList.remove("selected");
 //   });
 
