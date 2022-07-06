@@ -165,9 +165,18 @@
       }
       .video__bottom {
         margin-bottom: 0;
+        gap: 40px;
+        justify-content: flex-start;
+        margin-top: 64px;
+        @include desktop-tablet {
+          gap: 0;
+        }
         @include desktop-tablet_to_laptop {
           order: 2;
           width: 100%;
+        }
+        @include desktop-desktop {
+          margin-top: 120px;
         }
       }
 
@@ -197,11 +206,17 @@
         &-bottom {
           display: flex;
           flex-direction: column;
-          gap: 40px;
+          gap: 49px;
           @include desktop-tablet_to_laptop {
             flex-direction: row;
             gap: 57px;
             align-items: flex-end;
+          }
+          @include desktop-laptop {
+            gap: 30px;
+          }
+          @include desktop-desktop {
+            gap: 40px;
           }
           .video__buttons {
             @include desktop-tablet_to_laptop {
@@ -209,6 +224,18 @@
               flex-shrink: 0;
             }
           }
+        }
+      }
+      .video__location {
+        @include desktop-desktop {
+          position: absolute;
+          top: 65px;
+          margin: 0;
+        }
+      }
+      .info {
+        @include desktop-desktop {
+          top: -46px;
         }
       }
     }

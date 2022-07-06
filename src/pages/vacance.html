@@ -283,31 +283,34 @@
         <div class="section__top">
           <h2 class="section__title">Компания ПОРАДОМ</h2>
         </div>
-        <div class="section__btns">
-          <div id="reviews-btns" class="button__group">
-            <a href="#" class="button__round button__round_active">Вакансии</a>
-            <a href="#" class="button__round">Команда</a>
-            <a href="#" class="button__round">Пресс-центр</a>
+        <div class="section-flex__about-work">
+          <div class="section__btns">
+            <div id="reviews-btns" class="button__group">
+              <a href="#" class="button__round button__round_active">Вакансии</a>
+              <a href="#" class="button__round">Команда</a>
+              <a href="#" class="button__round">Пресс-центр</a>
+            </div>
           </div>
-        </div>
-        <div class="section__bottom">
-          <p>
-            Одна из самых важных составляющих успеха нашей компании — ее люди.
-            Сегодня ПОРАДОМ — крепкая, надежная и дружная команда, с которой
-            строить качественные дома для хороших людей одно удовольствие.
-          </p>
-          <br />
-          <p>
-            Мы всегда готовы помогать сотрудникам постигать новые технологии,
-            расти и развиваться.
-          </p>
-          <br />
-          <p>
-            Если вы активны, инициативны и амбициозны, легко и быстро
-            обучаетесь, готовы к работе в режиме многозадачности, ищете новые
-            возможности и стремитесь к достижению новых вершин, вы можете
-            стать частью нашей команды!
-          </p>
+          <div class="section__bottom">
+            <p>
+              Одна из самых важных составляющих успеха нашей компании — ее люди.
+              Сегодня ПОРАДОМ — крепкая, надежная и дружная команда, с которой
+              строить качественные дома для хороших людей одно удовольствие.
+            </p>
+            <br />
+            <p>
+              Мы всегда готовы помогать сотрудникам постигать новые технологии,
+              расти и развиваться.
+            </p>
+            <br />
+            <p>
+              Если вы активны, инициативны и амбициозны, легко и быстро
+              обучаетесь, готовы к работе в режиме многозадачности, ищете новые
+              возможности и стремитесь к достижению новых вершин, вы можете
+              стать частью нашей команды!
+            </p>
+          </div>
+
         </div>
       </div>
     </section>
@@ -316,7 +319,7 @@
         <div class="about-work__top">
           <div class="about-work__images">
             <img src="../img/icons/project.svg" class="about-work__icon" alt="" />
-            <img src="../img/people.png" class="about-work__img" alt="" />
+            <img src="../img/vacance.jpg" class="about-work__img" alt="" />
           </div>
           <div class="about-work__content">
 
@@ -409,21 +412,20 @@
                     на вакансию
                     Название вакансии</h4>
                   <div class="text-field">
-                    <input data-special-offer class="text-field__input tel" type="text" name="login" id="login"
+                    <input data-special-offer class="text-field__input tel" type="text" name="tel" 
                       placeholder="Введите ваш телефон" />
                   </div>
                   <div class="text-field">
-                    <input data-special-offer class="text-field__input" type="text" name="name" id="name"
+                    <input data-special-offer class="text-field__input" type="text" name="name" 
                       placeholder="Введите ваш имя" />
                   </div>
                   <div class="text-field">
-                    <input data-special-offer class="text-field__input" type="text" name="name" id="name"
+                    <input data-special-offer class="text-field__input" type="text" name="link" 
                       placeholder="Ссылка на резюме" />
                   </div>
                   <div class="upload-file__wrapper" id="upload_1">
-                    <input type="file" name="files[]" id="upload-file__input_1" class="upload-file__input"
-                      accept=".jpg, .jpeg, .png, .gif, .bmp, .doc, .docx, .xls, .xlsx, .txt, .tar, .zip, .7z, .7zip"
-                      multiple />
+                    <input type="file" name="file" id="upload-file__input_1" class="upload-file__input"
+                      accept=".jpg, .jpeg, .png, .gif, .bmp, .doc, .docx, .xls, .xlsx, .txt, .tar, .zip, .7z, .7zip"/>
                     <label class="upload-file__label" for="upload-file__input_1">
                       <img src="../img/icons/document-white.svg" alt="" class="upload-file__icon" />
                       <span class="upload-file__text">Прикрепить резюме</span>
@@ -489,7 +491,7 @@
                       placeholder="Ссылка на резюме" />
                   </div>
                   <div class="upload-file__wrapper" id="upload_2">
-                    <input type="file" name="files[]" id="upload-file__input_2" class="upload-file__input"
+                    <input type="file" name="file" id="upload-file__input_2" class="upload-file__input"
                       accept=".jpg, .jpeg, .png, .gif, .bmp, .doc, .docx, .xls, .xlsx, .txt, .tar, .zip, .7z, .7zip"
                       multiple />
                     <label class="upload-file__label" for="upload-file__input_2">

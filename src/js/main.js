@@ -2,7 +2,6 @@ import "../scss/main.scss";
 // import 'swiper/css'
 import { stories } from "./plugins/swiper";
 import "./plugins/calc";
-
 import GLightbox from "glightbox";
 const lightbox = GLightbox({
   touchNavigation: false,
@@ -17,6 +16,93 @@ import Dropdown from "./plugins/dropdown";
 import Accordion from "./plugins/accardion";
 import "./plugins/telmask";
 import { validate } from "./plugins/validateform";
+
+const forms = document.querySelectorAll("form");
+const formReq = async (form) => {
+  const url = "/bitrix/templates/poradom/ajax/form.php";
+  const formData = new FormData();
+  const fields = form.querySelectorAll("input");
+  const theme = form.getAttribute("data-theme");
+  Array.from(fields).forEach((field) => {
+    formData.append("theme", theme ? theme : "");
+    if (field.name) {
+      if (field.name === "file" && field.files.length > 0)
+        formData.append(field.name, field.files[0], field.files[0].name);
+      else formData.append(field.name, field.value);
+    }
+  });
+
+  let success = false;
+  const res = await fetch(url, {
+    method: "POST",
+    body: formData,
+  })
+    .then((responce) => {
+      if (responce.status === 200) {
+        success = true;
+      }
+    })
+    .catch((e) => console.log(e));
+  return success;
+};
+
+const togglePopupMessage = () => {
+  const overlay = document.querySelector(".js-overlay-modal");
+  const message = document.querySelector(".popup-message");
+  overlay.classList.add("active");
+  message.classList.add("active");
+  setTimeout(() => {
+    overlay.classList.remove("active");
+    message.classList.remove("active");
+  }, 1500);
+};
+
+forms.forEach((form) => {
+  if (!form.classList.contains("form-popup")) {
+    form.addEventListener("submit", async function (event) {
+      // if (!validate.validate) formReq(this);
+      event.preventDefault();
+      this.validate = null;
+      const fields = form.querySelectorAll("[data-special-offer]");
+      for (var i = 0; i < fields.length; i++) {
+        fields[i].classList.remove("text-field__input_invalid");
+        fields[i].classList.remove("checkbox_invalid");
+        if (fields[i].type == "checkbox" && !fields[i].checked) {
+          fields[i].classList.add("checkbox_invalid");
+          if (this.validate === null) this.validate = form;
+        }
+
+        if (
+          fields[i].type !== "checkbox" &&
+          fields[i].classList.contains("tel") &&
+          (!fields[i].value || fields[i].value.length < 17)
+        ) {
+          {
+            fields[i].classList.add("text-field__input_invalid");
+            if (this.validate === null) this.validate = form;
+          }
+        }
+        if (fields[i].type !== "checkbox" && !fields[i].value) {
+          fields[i].classList.add("text-field__input_invalid");
+          if (this.validate === null) this.validate = form;
+        }
+      }
+
+      if (!this.validate) {
+        const res = await formReq(this);
+        if (res) {
+          const input = document.createElement("input");
+          input.type = "reset";
+          input.setAttribute("hidden", "hidden"); // set the CSS class
+          this.appendChild(input);
+          input.click();
+          this.validate = null;
+          togglePopupMessage();
+        }
+      }
+    });
+  }
+});
 
 const scrollTop = () => window.scrollTo(pageYOffset, 0);
 const arrow = document.querySelector("#arrow");
@@ -135,36 +221,36 @@ class Test {
 }
 new Test("test");
 
-!(function (e) {
-  "function" != typeof e.matches &&
-    (e.matches =
-      e.msMatchesSelector ||
-      e.mozMatchesSelector ||
-      e.webkitMatchesSelector ||
-      function (e) {
-        for (
-          var t = this,
-            o = (t.document || t.ownerDocument).querySelectorAll(e),
-            n = 0;
-          o[n] && o[n] !== t;
-
-        )
-          ++n;
-        return Boolean(o[n]);
-      }),
-    "function" != typeof e.closest &&
-      (e.closest = function (e) {
-        for (var t = this; t && 1 === t.nodeType; ) {
-          if (t.matches(e)) return t;
-          t = t.parentNode;
-        }
-        return null;
-      });
-})(window.Element.prototype);
-
 document.addEventListener("DOMContentLoaded", function () {
   class Popup {
     constructor() {
+      !(function (e) {
+        "function" != typeof e.matches &&
+          (e.matches =
+            e.msMatchesSelector ||
+            e.mozMatchesSelector ||
+            e.webkitMatchesSelector ||
+            function (e) {
+              for (
+                var t = this,
+                  o = (t.document || t.ownerDocument).querySelectorAll(e),
+                  n = 0;
+                o[n] && o[n] !== t;
+
+              )
+                ++n;
+              return Boolean(o[n]);
+            }),
+          "function" != typeof e.closest &&
+            (e.closest = function (e) {
+              for (var t = this; t && 1 === t.nodeType; ) {
+                if (t.matches(e)) return t;
+                t = t.parentNode;
+              }
+              return null;
+            });
+      })(window.Element.prototype);
+
       let that = this;
       that.close = false;
       /* Записываем в переменные массив элементов-кнопок и подложку.
@@ -215,7 +301,7 @@ document.addEventListener("DOMContentLoaded", function () {
           item.addEventListener("click", function (e) {
             toggleSwiper("disable", modalElem, indexModal);
 
-            var parentModal = that.closest(".modal");
+            var parentModal = this.closest(".modal");
             that.close = true;
             parentModal.classList.remove("active");
             overlay.classList.remove("active");
@@ -250,20 +336,55 @@ document.addEventListener("DOMContentLoaded", function () {
       const modals = document.querySelectorAll(".modal");
       that.message = document.querySelector(".popup-message");
       that.formActive;
+
       Array.from(modals).forEach((modal) => {
         const form = modal.querySelector("form");
         if (form) {
-          // const submit = form.querySelector("button");
-          // console.log(submit);
-          form.addEventListener("submit", function (e) {
+          const submit = form.querySelector("button");
+          console.log(submit);
+          form.addEventListener("submit", async function (e) {
             that.formActive = this;
             e.preventDefault();
-            console.log(validate.validate);
-            if (!validate.validate) {
-              this.classList.add("form-close");
-              setTimeout(() => {
-                that.message.classList.add("active");
-              }, 250);
+            this.validate = null;
+            const fields = form.querySelectorAll("[data-special-offer]");
+            for (var i = 0; i < fields.length; i++) {
+              fields[i].classList.remove("text-field__input_invalid");
+              fields[i].classList.remove("checkbox_invalid");
+              if (fields[i].type == "checkbox" && !fields[i].checked) {
+                fields[i].classList.add("checkbox_invalid");
+                if (this.validate === null) this.validate = form;
+              }
+
+              if (
+                fields[i].type !== "checkbox" &&
+                fields[i].classList.contains("tel") &&
+                (!fields[i].value || fields[i].value.length < 17)
+              ) {
+                {
+                  fields[i].classList.add("text-field__input_invalid");
+                  if (this.validate === null) this.validate = form;
+                }
+              }
+              if (fields[i].type !== "checkbox" && !fields[i].value) {
+                fields[i].classList.add("text-field__input_invalid");
+                if (this.validate === null) this.validate = form;
+              }
+            }
+            if (!this.validate) {
+              const res = await formReq(this);
+              if (res) {
+                form.classList.add("form-close");
+                setTimeout(() => {
+                  that.message.classList.add("active");
+                }, 250);
+                const input = document.createElement("input");
+                input.type = "reset";
+                input.setAttribute("hidden", "hidden"); // set the CSS class
+                this.appendChild(input);
+                input.click();
+                this.validate = null;
+                setTimeout(() => overlay.click(), 1500);
+              }
             }
           });
         }
@@ -272,9 +393,12 @@ document.addEventListener("DOMContentLoaded", function () {
     set close(isClose) {
       if (isClose) {
         this.message.classList.remove("active");
-        setTimeout(() => {
-          this.formActive.classList.remove("form-close");
-        }, 300);
+        setTimeout(
+          function () {
+            this.formActive.classList.remove("form-close");
+          }.bind(this),
+          300
+        );
       }
     }
   }
@@ -493,6 +617,7 @@ document.addEventListener("DOMContentLoaded", () => {
     svg.onmouseover = (e) => {
       if (currentEl) return;
       let target = e.target.closest("polygon");
+      let targetPath = e.target.closest("path");
       if (e.target.closest("polygon")?.getAttribute("data-hover")) {
         if (!target) return;
         if (!svg.contains(target)) return;
@@ -521,6 +646,36 @@ document.addEventListener("DOMContentLoaded", () => {
         currentEl = target;
         target.style.background = "green";
       }
+
+      if (targetPath?.getAttribute("data-hover")) {
+        console.log(targetPath.getAttribute("data-hover"));
+        if (!targetPath) return;
+        if (!svg.contains(targetPath)) return;
+        const dataHover = targetPath.getAttribute("data-hover");
+        const dataHoverEl = document.querySelector(dataHover);
+        let elDisplay = dataHoverEl.style.display;
+        setPosition(e, plan, dataHoverEl);
+        if (dataHoverEl.classList.contains("plan__bottom-count")) {
+          if (elDisplay === "none") dataHoverEl.style.display = "flex";
+        } else {
+          if (elDisplay === "none") dataHoverEl.style.display = "block";
+        }
+        currentEl = targetPath;
+      } else if (targetPath?.parentNode?.getAttribute("data-hover")) {
+        targetPath = targetPath.parentNode;
+        const dataHover = targetPath.getAttribute("data-hover");
+        const dataHoverEl = document.querySelector(dataHover);
+        let elDisplay = dataHoverEl.style.display;
+        if (dataHoverEl.classList.contains("plan__bottom-count")) {
+          if (elDisplay === "none") dataHoverEl.style.display = "flex";
+        } else {
+          if (elDisplay === "none") dataHoverEl.style.display = "block";
+        }
+        if (!targetPath) return;
+        if (!svg.contains(targetPath)) return;
+        currentEl = targetPath;
+        targetPath.style.background = "green";
+      }
     };
 
     svg.onmouseout = (e) => {
@@ -547,6 +702,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     svg.onmousemove = (e) => {
       let target = e.target.closest("polygon");
+      let targetPath = e.target.closest("path");
       if (e.target.closest("polygon")?.getAttribute("data-hover")) {
         if (!target) return;
         if (!svg.contains(target)) return;
@@ -562,6 +718,24 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         currentEl = target;
+      }
+
+      if (targetPath?.getAttribute("data-hover")) {
+        if (!targetPath) return;
+        if (!svg.contains(targetPath)) return;
+        const dataHover = targetPath.getAttribute("data-hover");
+        const dataHoverEl = document.querySelector(dataHover);
+        let elDisplay = dataHoverEl.style.display;
+        setPosition(e, plan, dataHoverEl);
+
+        if (dataHoverEl.classList.contains("plan__bottom-count")) {
+          if (elDisplay === "none") dataHoverEl.style.display = "flex";
+        } else {
+          console.log(elDisplay === "none");
+          if (elDisplay === "none") dataHoverEl.style.display = "block";
+        }
+
+        currentEl = targetPath;
       }
     };
   });
@@ -809,6 +983,25 @@ document.addEventListener("DOMContentLoaded", () => {
           if (stories && Array.from(stories).length !== 0) {
             stories[modalId - 1].autoplay.stop();
           }
+
+          if (!("path" in Event.prototype))
+            Object.defineProperty(Event.prototype, "path", {
+              get: function () {
+                let path = [];
+                let currentElem = this.target;
+                while (currentElem) {
+                  path.push(currentElem);
+                  currentElem = currentElem.parentElement;
+                }
+                if (
+                  path.indexOf(window) === -1 &&
+                  path.indexOf(document) === -1
+                )
+                  path.push(document);
+                if (path.indexOf(window) === -1) path.push(window);
+                return path;
+              },
+            });
           const slide = e.path.find(
             (path) => path.classList.value.indexOf("swiper-slide") !== -1
           );

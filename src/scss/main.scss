@@ -26,7 +26,7 @@
 @import "application";
 @import "distance";
 @import "checkbox";
-@import "accardion.css";
+@import "accardion";
 @import "calc";
 @import "explore";
 @import "video";
@@ -147,6 +147,13 @@
 
   &__text {
     color: #b5b9be;
+    margin-top: 10px;
+    @include desktop-tablet {
+      margin-top: 5px;
+    }
+    @include desktop-desktop {
+      margin-top: 20px;
+    }
   }
 
   &__btns {
@@ -186,6 +193,36 @@
 
     &__content {
       flex-grow: 1;
+    }
+  }
+  &-flex__about-work {
+    @include desktop-desktop {
+      $space: $space-l-d + $gap + 100px;
+      display: flex;
+      justify-content: space-between;
+      margin-left: 0;
+      margin-right: $space;
+      width: calc(100% - #{$space});
+    }
+    .section__bottom {
+      @include desktop-tablet {
+        width: 485px;
+        margin-right: 0;
+        margin-left: auto;
+        font-size: 14px;
+        line-height: 120%;
+      }
+      @include desktop-laptop {
+        $space: $space-l-l + $gap-l + 100px;
+        margin-right: $space;
+        margin-left: auto;
+        width: 356px;
+      }
+      @include desktop-desktop {
+        margin: 0;
+        font-size: 18px;
+        width: 500px;
+      }
     }
   }
 }

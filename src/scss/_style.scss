@@ -55,8 +55,9 @@
       bottom: auto;
     }
     @include desktop-desktop {
-      width: 148px;
-      height: 130px;
+      width: 353px;
+      height: 310px;
+      top: 125px;
     }
   }
   &__item {
@@ -451,6 +452,10 @@
 
     &-primary {
       color: $primary;
+    }
+
+    &-ready {
+      color: $ready;
     }
   }
 }

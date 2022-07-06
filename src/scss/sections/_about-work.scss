@@ -69,11 +69,11 @@
     }
     @include desktop-laptop {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 296px));
+      grid-template-columns: repeat(2, minmax(0, 305px));
       gap: 30px 10px;
     }
     @include desktop-desktop {
-      grid-template-columns: repeat(2, minmax(0, 400px));
+      grid-template-columns: repeat(2, minmax(0, 445px));
       gap: 50px 30px;
     }
   }
@@ -124,12 +124,14 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 120%;
-    color: $primary;
+    color: #fff;
     margin-right: 18px;
-
-    @include desktop-laptop {
-      font-size: 26px;
+    @include desktop-tablet {
+      font-size: 18px;
       line-height: 120%;
+    }
+    @include desktop-desktop {
+      font-size: 26px;
     }
   }
 
@@ -140,11 +142,22 @@
 
     & > h4 {
       margin-bottom: 6px;
-
-      @include desktop-laptop {
-        margin-bottom: 20px;
-        font-size: 26px;
+      @include desktop-tablet {
+        margin-bottom: 10px;
+        font-size: 18px;
         line-height: 120%;
+      }
+      @include desktop-desktop {
+        font-size: 26px;
+        margin-bottom: 20px;
+      }
+    }
+    & > p {
+      @include desktop-tablet {
+        font-size: 14px;
+      }
+      @include desktop-desktop {
+        font-size: 16px;
       }
     }
   }

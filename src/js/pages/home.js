@@ -39,7 +39,6 @@ class Survey {
                 el.classList.add("card-survey_first");
                 el.classList.remove("card-survey_opacity");
               } else {
-                console.log("hi");
                 if (el.classList.contains("card-survey_first")) {
                   document.querySelectorAll(".card-survey").forEach((item) => {
                     item.classList.remove("card-survey_opacity");
