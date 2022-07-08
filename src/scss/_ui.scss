@@ -1925,12 +1925,22 @@
     }
     .card-slide {
       cursor: pointer;
+      width: 139px;
+      height: 200px;
+      @include desktop-tablet {
+        width: 142px;
+        height: 213px;
+      }
+      @include desktop-desktop {
+        width: 200px;
+        height: 300px;
+      }
       &__image {
         pointer-events: none;
         position: relative;
-        width: 139px;
         border-radius: 6px;
         overflow: hidden;
+        width: 139px;
         height: 200px;
         @include desktop-tablet {
           width: 142px;

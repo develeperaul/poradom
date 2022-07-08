@@ -166,25 +166,27 @@ class SideBar {
 class Drop {
   constructor() {
     const drop = document.querySelector("#drop");
-    drop.onclick = () => {
-      const childrens = document.querySelectorAll(".drop__children");
+    if (drop) {
+      drop.onclick = () => {
+        const childrens = document.querySelectorAll(".drop__children");
 
-      if (drop.classList.contains("drop_active")) {
-        drop.classList.remove("drop_active");
-        Array.from(childrens).forEach((item) => {
-          if (item.classList.contains("children_active"))
-            item.classList.remove("children_active");
-          item.classList.add("children_close");
-        });
-      } else {
-        drop.classList.add("drop_active");
-        Array.from(childrens).forEach((item) => {
-          if (!item.classList.contains("children_active"))
-            item.classList.add("children_active");
-          item.classList.remove("children_close");
-        });
-      }
-    };
+        if (drop.classList.contains("drop_active")) {
+          drop.classList.remove("drop_active");
+          Array.from(childrens).forEach((item) => {
+            if (item.classList.contains("children_active"))
+              item.classList.remove("children_active");
+            item.classList.add("children_close");
+          });
+        } else {
+          drop.classList.add("drop_active");
+          Array.from(childrens).forEach((item) => {
+            if (!item.classList.contains("children_active"))
+              item.classList.add("children_active");
+            item.classList.remove("children_close");
+          });
+        }
+      };
+    }
   }
 }
 //sidebar
@@ -256,8 +258,12 @@ document.addEventListener("DOMContentLoaded", function () {
       /* Записываем в переменные массив элементов-кнопок и подложку.
           Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
       var modalButtons = document.querySelectorAll(".js-open-modal"),
+        modalButtonsSlider = document.querySelectorAll(
+          ".js-open-modal[data-slider-button]"
+        ),
         overlay = document.querySelector(".js-overlay-modal"),
-        closeButtons = document.querySelectorAll(".js-modal-close");
+        closeButtons = document.querySelectorAll(".js-modal-close"),
+        closeButtonsSlider = document.querySelectorAll(".js-modal-close");
       const toggleSwiper = (type, modalEl, index) => {
         if (modalEl.querySelector(".swiper")) {
           if (stories && Array.from(stories).length === 0) {
@@ -266,9 +272,9 @@ document.addEventListener("DOMContentLoaded", function () {
             stories.slideToLoop(0);
           }
           if (stories && Array.from(stories).length !== 0) {
-            stories[index - 1][type]();
-            stories[index - 1].autoplay.start();
-            stories[index - 1].slideToLoop(0);
+            stories[index][type]();
+            stories[index].autoplay.start();
+            stories[index].slideToLoop(0);
           }
         }
       };
@@ -276,7 +282,8 @@ document.addEventListener("DOMContentLoaded", function () {
       let modalElem = null;
       if (overlay) {
         /* Перебираем массив кнопок */
-        modalButtons.forEach(function (item) {
+
+        modalButtons.forEach(function (item, index) {
           /* Назначаем каждой кнопке обработчик клика */
           item.addEventListener("click", function (e) {
             e.preventDefault();
@@ -287,16 +294,34 @@ document.addEventListener("DOMContentLoaded", function () {
             modalElem = document.querySelector(
               '.modal[data-modal="' + modalId + '"]'
             );
-            indexModal = modalId;
+            indexModal = index;
             /* После того как нашли нужное модальное окно, добавим классы
                     подложке и окну чтобы показать их. */
             modalElem.classList.add("active");
-            toggleSwiper("init", modalElem, indexModal);
-            toggleSwiper("enable", modalElem, indexModal);
             overlay.classList.add("active");
           }); // end click
         }); // end foreach
+        modalButtonsSlider.forEach(function (item, index) {
+          console.log(item);
+          /* Назначаем каждой кнопке обработчик клика */
+          item.addEventListener("click", function (e) {
+            e.preventDefault();
 
+            /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
+                    и будем искать модальное окно с таким же атрибутом. */
+            var modalId = this.getAttribute("data-modal");
+            modalElem = document.querySelector(
+              '.modal[data-modal="' + modalId + '"]'
+            );
+            indexModal = index;
+            /* После того как нашли нужное модальное окно, добавим классы
+                    подложке и окну чтобы показать их. */
+            modalElem.classList.add("active");
+            toggleSwiper("init", modalElem, index);
+            toggleSwiper("enable", modalElem, index);
+            overlay.classList.add("active");
+          }); // end click
+        }); // end foreach
         closeButtons.forEach(function (item) {
           item.addEventListener("click", function (e) {
             toggleSwiper("disable", modalElem, indexModal);

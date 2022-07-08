@@ -109,5 +109,27 @@ class Survey {
     });
   }
 }
+
+const drop = document.querySelector(".built__drop");
+const button = drop.querySelector(".dropdown__btn");
+
+button.addEventListener("click", (e) => {
+  const queryPath = [];
+  const types = document.querySelectorAll(`[data-header]`);
+  types.forEach((item) => queryPath.push(item.getAttribute("data-header")));
+  const type = queryPath[0];
+  const poselok = queryPath[1];
+  const s = queryPath[2];
+  const su = queryPath[3];
+  if (type && poselok) {
+    const path = button.getAttribute("data-href");
+
+    button.href = `${path}/?type=${type}&poselok=${poselok}${
+      s ? `&s=${s}` : ""
+    }${su ? `&su=${su}` : ""}`;
+  } else {
+    e.preventDefault();
+  }
+});
 // new Cards("new");
 new Survey("survey");
