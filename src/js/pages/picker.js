@@ -8,7 +8,10 @@ new Dropdown("4");
 new Filter();
 
 // const path = "?type=3&poselok=11&s=99&su=12.45";
+const topPos = document.querySelector(".ready-homes").offsetTop;
+const scrollTop = () => window.scrollTo(0, topPos);
 const path = window.location.search;
+if (path) scrollTop();
 const drop = document.querySelector(".built__drop");
 const button = drop.querySelector(".dropdown__btn");
 let query = [];
@@ -50,6 +53,12 @@ button.addEventListener("click", (e) => {
   const poselok = queryPath[1];
   const s = queryPath[2];
   const su = queryPath[3];
+
+  if (!type)
+    document.querySelector(`[data-type="type"]`).style.borderColor = "#ed1556";
+  if (!poselok)
+    document.querySelector(`[data-type="poselok"]`).style.borderColor =
+      "#ed1556";
   if (type && poselok) {
     const path = button.getAttribute("data-href");
 

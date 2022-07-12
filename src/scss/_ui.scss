@@ -2503,16 +2503,31 @@
         color: #0099e0;
       }
     }
+    &_active > a {
+      color: #0099e0;
+    }
   }
 }
 
 .compas {
   &__round {
     position: relative;
+    width: 30px;
+    height: 30px;
+    @include desktop-desktop {
+      width: 40px;
+      height: 40px;
+    }
   }
   &__arrow {
     position: absolute;
     top: 0;
+    width: 30px;
+    height: 30px;
+    @include desktop-desktop {
+      width: 40px;
+      height: 40px;
+    }
   }
 }
 

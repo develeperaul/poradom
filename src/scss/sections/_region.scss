@@ -81,7 +81,7 @@
       bottom: 520px;
       margin: 0;
       width: 100%;
-      z-index: 2;
+      z-index: 3;
       @include desktop-tablet {
         width: 270px;
         bottom: auto;
@@ -156,10 +156,11 @@
         margin: 0 $gap-t;
       }
       @include desktop-laptop {
-        top: 110px;
+        top: 85px;
         margin: 0 $gap-l;
       }
       @include desktop-desktop {
+        top: 110px;
         margin: 0 $gap;
       }
     }

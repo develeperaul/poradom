@@ -98,7 +98,7 @@
     & > img {
       max-width: inherit !important;
       height: 100%;
-      // width: 100%;
+      width: 100%;
 
       @include desktop-desktop {
         height: auto;
@@ -358,10 +358,10 @@
     margin: 0 -#{$gap};
   }
   & .plan__map {
-    height: 464px;
-    @include desktop-desktop {
-      height: 900px;
-    }
+    // height: 464px;
+    // @include desktop-desktop {
+    //   height: 900px;
+    // }
     & > img {
       @include desktop-desktop {
         height: 100%;

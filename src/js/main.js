@@ -22,6 +22,7 @@ const formReq = async (form) => {
   const url = "/bitrix/templates/poradom/ajax/form.php";
   const formData = new FormData();
   const fields = form.querySelectorAll("input");
+  console.log(form.getAttribute("data-theme"));
   const theme = form.getAttribute("data-theme");
   Array.from(fields).forEach((field) => {
     formData.append("theme", theme ? theme : "");
@@ -420,7 +421,9 @@ document.addEventListener("DOMContentLoaded", function () {
         this.message.classList.remove("active");
         setTimeout(
           function () {
-            this.formActive.classList.remove("form-close");
+            if (this.formActive) {
+              this.formActive.classList.remove("form-close");
+            }
           }.bind(this),
           300
         );
