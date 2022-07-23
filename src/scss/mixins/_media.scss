@@ -4,6 +4,34 @@
   }
 }
 
+@mixin desktop-desktop() {
+  @media (min-width: 1660px) {
+    @content;
+  }
+}
+
+@mixin desktop-laptop() {
+  @media (min-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin desktop-laptop_to_desktop() {
+  @media (min-width: 1000px) and (max-width: 1659px) {
+    @content;
+  }
+}
+@mixin desktop-tablet_to_laptop() {
+  @media (min-width: 768px) and (max-width: 999px) {
+    @content;
+  }
+}
+@mixin desktop-tablet() {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
 // @mixin media-min($w) {
 //   @media (min-width: $w+"px") {
 //     @content;

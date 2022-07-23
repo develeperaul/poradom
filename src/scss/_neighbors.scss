@@ -1,0 +1,101 @@
+.neighbors {
+  position: relative;
+  background-color: #003852;
+  padding-bottom: 20px;
+
+  color: #ffffff;
+  @include desktop-tablet {
+    padding-bottom: 0;
+  }
+  &__wrapper {
+    @include desktop-tablet {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+    }
+  }
+  &__left {
+  }
+  &__left &__content {
+    @include desktop-tablet {
+      display: none;
+    }
+  }
+  &__right {
+    // @include desktop-desktop {
+    //   width: 50%;
+    // }
+  }
+  &__right &__content {
+    display: none;
+    @include desktop-tablet {
+      display: block;
+    }
+    &,
+    & > img {
+      object-fit: cover;
+      @include desktop-tablet {
+        width: 263px;
+        height: 380px;
+      }
+      @include desktop-laptop {
+        width: 396px;
+        height: 390px;
+      }
+      @include desktop-desktop {
+        width: 960px;
+        height: 700px;
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+    @include desktop-tablet {
+      margin-bottom: 0;
+    }
+    & > img {
+      z-index: 10;
+    }
+  }
+
+  &__icon {
+    top: 40px;
+    @include desktop-tablet {
+      top: auto;
+      bottom: 0;
+      left: 20px;
+      width: 97px;
+      height: 110px;
+    }
+    @include desktop-desktop {
+      width: 256px;
+      height: 290px;
+    }
+  }
+  &__bottom {
+    @include desktop-tablet {
+      margin-left: $space-l-t;
+    }
+    @include desktop-laptop {
+      margin-left: $space-l-l;
+    }
+    @include desktop-desktop {
+      margin-left: $space-l-d;
+    }
+    &-title {
+      margin-bottom: 20px;
+      @include desktop-laptop {
+        margin-bottom: 30px;
+      }
+      @include desktop-desktop {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  & .survey__list {
+    grid-template-columns: repeat(1, minmax(0, 450px));
+    margin: 0;
+  }
+}

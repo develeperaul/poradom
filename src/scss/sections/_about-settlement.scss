@@ -1,0 +1,104 @@
+.about-settlement {
+  background-color: $secondary;
+  position: relative;
+  padding-bottom: 30px;
+  @include desktop-tablet {
+    padding-bottom: 40px;
+  }
+  @include desktop-laptop {
+    padding-bottom: 50px;
+  }
+  @include desktop-desktop {
+    padding-bottom: 120px;
+  }
+  &__top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    @include desktop-tablet {
+      margin-bottom: 0;
+      position: absolute;
+      top: 0;
+      width: calc(100% - #{$gap-t});
+    }
+    @include desktop-laptop {
+      width: calc(100% - #{$gap-l});
+    }
+    @include desktop-desktop {
+      width: calc(100% - #{$gap});
+    }
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    @include desktop-tablet {
+      grid-template-columns: repeat(4, 130px);
+      margin-left: $space-l-t;
+    }
+    @include desktop-laptop {
+      grid-template-columns: repeat(4, 124px);
+      margin-left: $space-l-l;
+    }
+    @include desktop-desktop {
+      grid-template-columns: repeat(4, 200px);
+      margin-left: $space-l-d;
+    }
+  }
+  &__slider {
+    margin-top: 30px;
+
+    @include desktop-desktop {
+      margin-top: 60px;
+    }
+  }
+  &__icon {
+    position: absolute;
+
+    height: 75px;
+    top: 30px;
+    @include desktop-desktop {
+      width: 450px;
+      height: 307px;
+      top: 120px;
+    }
+  }
+  .content-title {
+    position: absolute;
+    z-index: 9;
+    top: 143px;
+    left: 40px;
+    margin: 0;
+    padding: 0;
+    @include desktop-tablet {
+      width: 42%;
+      position: static;
+      padding-top: 60px;
+      margin-left: $space-l-t;
+      padding-bottom: 0;
+      margin-bottom: 30px;
+    }
+    @include desktop-desktop {
+      margin-bottom: 60px;
+      padding-top: 130px;
+      margin-left: $space-l-d;
+    }
+  }
+  &__slider.swiper {
+    @include desktop-laptop_to_desktop {
+      width: 626px;
+      margin-left: $space-l-l;
+    }
+  }
+  & .navigation__card {
+    & > img {
+      @include desktop-laptop {
+        height: 396px;
+      }
+      @include desktop-desktop {
+        height: 760px;
+      }
+    }
+  }
+}

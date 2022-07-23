@@ -1,0 +1,11 @@
+.news {
+  & .swiper-slide {
+    justify-content: flex-start;
+  }
+
+  & .content-title {
+    @include desktop-desktop {
+      margin-bottom: 60px;
+    }
+  }
+}

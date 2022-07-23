@@ -1,0 +1,11 @@
+.vacance {
+  &__list {
+    @include desktop-laptop {
+      margin: 0 auto;
+      width: calc(100% - #{$space-l-l});
+    }
+    @include desktop-desktop {
+      width: calc(100% - 2 * #{$space-l-d});
+    }
+  }
+}

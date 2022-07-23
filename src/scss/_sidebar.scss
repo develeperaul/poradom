@@ -11,9 +11,83 @@
   &_active {
     transform: translateX(0%);
   }
+
   &__list > * {
     color: #fff;
   }
+  &__list {
+    &.accordion {
+      @include desktop-tablet {
+        display: none;
+      }
+    }
+    &-desktop {
+      display: none;
+      @include desktop-tablet {
+        line-height: 120%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 80px;
+        gap: 24px;
+        font-size: 18px;
+        width: 350px;
+      }
+      @include desktop-desktop {
+        width: 520px;
+        font-size: 26px;
+        gap: 40px;
+      }
+    }
+  }
+  &-children__list > &__item {
+    width: 230px;
+    font-size: 16px;
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    & > a {
+      color: #fff;
+      &:hover {
+        color: #0099e0;
+      }
+    }
+  }
+  &__item {
+    position: relative;
+    padding-right: 20px;
+    & > a {
+      display: flex;
+      @include desktop-tablet {
+        gap: 40px;
+      }
+      @include desktop-desktop {
+        gap: 20px;
+      }
+    }
+    &-left {
+      color: $primary;
+      @include desktop-tablet {
+        min-width: 40px;
+      }
+      @include desktop-desktop {
+        min-width: 60px;
+      }
+    }
+    &-right {
+      color: #fff;
+      &:hover {
+        color: #0099e0;
+      }
+    }
+  }
+  &__children {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    transform: translateX(100%);
+  }
+
   &__list > h3 {
     display: inline-block;
     &::before {

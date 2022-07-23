@@ -1,0 +1,97 @@
+.interior {
+  @include desktop-desktop {
+    padding-bottom: 120px;
+  }
+  & .content-title {
+    position: absolute;
+    z-index: 9;
+    top: 125px;
+    left: 40px;
+    margin: 0;
+    padding: 0;
+
+    @include desktop-tablet {
+      // width: 42%;
+      position: static;
+      padding-top: 60px;
+      margin-left: $space-l-t;
+      padding-bottom: 0;
+      margin-bottom: 60px;
+    }
+    @include desktop-desktop {
+      padding-top: 130px;
+      margin-left: 300px;
+      padding-bottom: 0;
+      margin-bottom: 60px;
+    }
+
+    & .title {
+      @include desktop-desktop {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    @include desktop-tablet {
+      display: none;
+    }
+  }
+
+  &__bottom {
+    @include desktop-tablet {
+      margin-left: $space-l-t;
+    }
+    @include desktop-laptop {
+      margin-left: $space-l-l;
+    }
+    @include desktop-desktop {
+      margin-left: $space-l-d;
+    }
+  }
+
+  &__btns {
+    position: relative;
+    z-index: 10;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+    @include desktop-tablet {
+      padding-top: 55px;
+      flex-direction: row;
+      gap: 10px;
+      //   position: absolute;
+      //   z-index: 9;
+    }
+    @include desktop-laptop {
+      flex-direction: column;
+    }
+    @include desktop-desktop {
+      flex-direction: row;
+      gap: 20px;
+      padding-top: 30px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 20px;
+
+    @include desktop-desktop {
+      font-size: 26px;
+      line-height: 120%;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__photo {
+    margin-left: auto;
+    margin-right: 0em;
+    z-index: 8;
+  }
+}

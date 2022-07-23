@@ -1,5 +1,8 @@
 .explore {
   padding: 40px 0;
+  @include desktop-desktop {
+    display: none;
+  }
   &__title {
     margin-bottom: 30px;
   }

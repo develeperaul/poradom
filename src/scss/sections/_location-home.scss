@@ -1,0 +1,157 @@
+.location-home {
+  &__content {
+    @include desktop-tablet {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-areas: "A A A A B B";
+    }
+    &-top {
+      padding: 40px 0;
+      grid-area: A;
+      position: relative;
+      @include desktop-tablet {
+        padding: 40px 0;
+      }
+      @include desktop-laptop {
+        padding: 50px 0;
+      }
+      @include desktop-desktop {
+        padding: 120px 0;
+      }
+    }
+
+    &-bottom {
+      padding: 40px 0;
+      margin: 0 -#{$gap-m};
+      background-color: $secondary;
+      grid-area: B;
+      @include desktop-tablet {
+        padding: 40px 27px;
+        margin: 0;
+        margin-right: -#{$gap-t};
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @include desktop-laptop {
+        margin-right: -#{$gap-l};
+      }
+
+      @include desktop-desktop {
+        margin-right: -#{$gap};
+      }
+    }
+  }
+  &__content-top &__button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    @include desktop-desktop {
+      margin-top: 40px;
+    }
+  }
+  &__cards {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    @include desktop-tablet_to_laptop {
+      gap: 4px;
+    }
+    &-wrapper {
+      max-width: 288px;
+      width: 100%;
+      margin: 0 auto;
+      @include desktop-desktop {
+        max-width: 410px;
+      }
+    }
+  }
+  &__card {
+    padding: 20px 0;
+    background-color: $primary;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+    @include desktop-tablet {
+      padding: 14px 0;
+    }
+    @include desktop-desktop {
+      gap: 10px;
+    }
+    &-col {
+      &--2 {
+        grid-column: 2 span / 2 span;
+      }
+    }
+
+    &-title {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 130%;
+      color: $darkwhite;
+      text-align: center;
+      @include desktop-tablet {
+        font-size: 10px;
+      }
+      @include desktop-desktop {
+        font-size: 16px;
+        line-height: 130%;
+      }
+    }
+    &-text {
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 120%;
+      color: #ffffff;
+      text-align: center;
+      @include desktop-tablet {
+        font-size: 18px;
+      }
+      @include desktop-desktop {
+        font-size: 26px;
+        line-height: 120%;
+      }
+      &--sm {
+        font-size: 18px;
+        line-height: 120%;
+      }
+    }
+  }
+  &__count {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+    margin-left: -60px;
+    width: calc(100% + 60px);
+    padding: 15px 0;
+    gap: 16px;
+    background: #212529;
+    border-radius: 4px 4px 0px 0px;
+    color: #fff;
+    &-left,
+    &-right {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+  }
+  &__content-bottom .button {
+    margin-top: 30px;
+
+    width: 100%;
+    @include desktop-tablet {
+      margin-top: 14px;
+    }
+    @include desktop-desktop {
+      margin-top: 20px;
+    }
+  }
+}

@@ -25,16 +25,18 @@ $choice-color: #212529;
 
 .dropdown {
   margin-bottom: 6px;
-
+  background: #fff;
   position: relative;
 
   border-radius: 4px;
   border: 1px solid $border-color;
-
   &__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow-x: visible;
+    word-wrap: break-word;
+    gap: 10px;
     // padding: 17px 20px;
     padding: 7px 20px;
     min-height: 50px;
@@ -42,12 +44,24 @@ $choice-color: #212529;
     cursor: pointer;
     color: $font-color;
     transition: all $transition-duration ease;
+    @include desktop-tablet {
+      min-height: 40px;
+      padding: 5px 13px;
+    }
+    @include desktop-desktop {
+      min-height: 60px;
+    }
+    &__wrapper {
+      overflow: hidden;
+    }
     &_show {
       .dropdown__header--icon {
-        opacity: 0;
+        // opacity: 0;
       }
-      min-height: 20px;
+
+      // min-height: 20px;
     }
+
     &--hide {
       margin-bottom: -3px;
     }
@@ -57,6 +71,9 @@ $choice-color: #212529;
     }
 
     &--title {
+      white-space: nowrap;
+      word-wrap: inherit;
+      overflow: hidden;
     }
 
     &--active {
@@ -66,6 +83,8 @@ $choice-color: #212529;
     &--icon {
       margin-left: 20px;
       position: relative;
+      flex-shrink: 0;
+
       &::after {
         position: absolute;
         content: "";
@@ -76,6 +95,7 @@ $choice-color: #212529;
         left: -20px;
         background-color: $border-color;
       }
+
       .rotate-icon {
         transition: transform $transition-duration ease;
         transform: rotate(180deg);
@@ -90,7 +110,8 @@ $choice-color: #212529;
 
   &__body {
     overflow-y: hidden;
-
+    position: absolute;
+    z-index: 10;
     max-height: 0vh;
     // transition: max-height $transition-duration linear;
     // position: absolute;
@@ -103,7 +124,12 @@ $choice-color: #212529;
     border-top-right-radius: 0px;
     margin: 0 -1px;
     background-color: #fff;
-    transition: max-height $transition-duration ease-in-out;
+    // transition: max-height $transition-duration ease-in-out;
+
+    @include desktop-desktop {
+      position: absolute;
+      z-index: 1;
+    }
 
     &--hide {
       //   max-height: 3px;
@@ -112,6 +138,7 @@ $choice-color: #212529;
       border-top: none;
       // display: none;
     }
+
     // @keyframes drop {
     //   0%{}
     // }
@@ -122,6 +149,10 @@ $choice-color: #212529;
 
     &--show {
       max-height: 100vh;
+
+      @include desktop-desktop {
+        overflow-y: initial;
+      }
     }
 
     &--list {
@@ -153,10 +184,25 @@ $choice-color: #212529;
       }
     }
   }
+
   &__btn {
     margin-top: 14px;
   }
+
+  &__img-round {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 9999px;
+  }
+
+  &__flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 }
+
 // @media (max-width: 768px) {
 //   .outer-wrapper {
 //     grid-template-columns: 1fr;
