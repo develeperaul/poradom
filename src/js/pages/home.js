@@ -129,7 +129,7 @@ button.addEventListener("click", (e) => {
   if (type && poselok) {
     const path = button.getAttribute("data-href");
 
-    button.href = `${path}/?type=${type}&poselok=${poselok}${
+    button.href = `${path}?type=${type}&poselok=${poselok}${
       s ? `&s=${s}` : ""
     }${su ? `&su=${su}` : ""}`;
   } else {

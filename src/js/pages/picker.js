@@ -17,7 +17,7 @@ const button = drop.querySelector(".dropdown__btn");
 let query = [];
 const dropdown = document.querySelectorAll(".dropdown");
 // const dropHeader = document.querySelectorAll(".dropdown__header--title");
-console.log(dropdown);
+
 // const dropBody = document.querySelectorAll(".dropdown__body--list");
 
 dropdown.forEach((item) => {
@@ -28,9 +28,8 @@ dropdown.forEach((item) => {
   const regexp = new RegExp(`${t}=[-+]?[0-9]*\.?[0-9]+`, "g");
 
   const miniPathID = path.match(regexp) ? path.match(regexp)[0] : null;
-  console.log(miniPathID);
+
   if (miniPathID) {
-    console.log(miniPathID);
     const bodyitem = Array.from(body).find(
       (i) =>
         i.getAttribute(`data-index-type`) == miniPathID.replace(`${t}=`, "")
@@ -44,7 +43,7 @@ dropdown.forEach((item) => {
     );
   }
 });
-console.log(query);
+
 button.addEventListener("click", (e) => {
   const queryPath = [];
   const types = document.querySelectorAll(`[data-header]`);
@@ -53,7 +52,6 @@ button.addEventListener("click", (e) => {
   const poselok = queryPath[1];
   const s = queryPath[2];
   const su = queryPath[3];
-
   if (!type)
     document.querySelector(`[data-type="type"]`).style.borderColor = "#ed1556";
   if (!poselok)
@@ -62,8 +60,10 @@ button.addEventListener("click", (e) => {
   if (type && poselok) {
     const path = button.getAttribute("data-href");
 
-    button.href = `${path}/?type=${type}&poselok=${poselok}${
+    button.href = `${path}?type=${type}&poselok=${poselok}${
       s ? `&s=${s}` : ""
     }${su ? `&su=${su}` : ""}`;
+  } else {
+    e.preventDefault();
   }
 });
