@@ -686,9 +686,15 @@
   }
 
   &__location {
+    border-radius: 10px;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.1);
+    @include desktop-laptop {
+      padding: 7px 15px;
+    }
     &_p {
       position: absolute;
-      left: 30px;
+      left: 16px;
       top: 14px;
 
       @include desktop-desktop {
@@ -782,7 +788,11 @@
     // align-items: flex-start;
     justify-content: space-between;
     gap: 15px;
-
+    align-items: center;
+    &.link-content {
+      color: $black !important;
+      text-decoration: none;
+    }
     &_s {
       margin-bottom: 14px;
 

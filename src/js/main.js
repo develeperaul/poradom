@@ -16,7 +16,34 @@ import Dropdown from "./plugins/dropdown";
 import Accordion from "./plugins/accardion";
 import "./plugins/telmask";
 import { validate } from "./plugins/validateform";
-
+let startX, scrollLeft;
+let isDown = false;
+window.addEventListener("mousedown", (e) => {
+  const slider = e.target.closest(".button__group");
+  if (slider) {
+    isDown = true;
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  }
+});
+window.addEventListener("mouseleave", () => {
+  isDown = false;
+  // slider.classList.remove("active");
+});
+window.addEventListener("mouseup", () => {
+  isDown = false;
+});
+window.addEventListener("mousemove", (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const slider = e.target.closest(".button__group");
+  if (slider) {
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 3; //scroll-fast
+    slider.scrollLeft = scrollLeft - walk;
+    // console.log(walk);
+  }
+});
 const forms = document.querySelectorAll("form");
 const formReq = async (form) => {
   const url = "/bitrix/templates/poradom/ajax/form.php";

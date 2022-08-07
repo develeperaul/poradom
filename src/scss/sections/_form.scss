@@ -282,6 +282,7 @@
     pointer-events: none;
   }
   .form-standart {
+    position: relative;
     width: 286px;
     margin: 0 auto;
     @include desktop-tablet {
