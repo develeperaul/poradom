@@ -180,7 +180,7 @@ export const stories = new newSwiper(".testSwiper", {
     },
   },
 });
-new newSwiper(".headerSwiper", { spaceBetween: 0 });
+new newSwiper(".headerSwiper", { spaceBetween: 0, loop: false });
 new newSwiper(".readySwiper", {});
 new newSwiper(".hitProject", {
   spaceBetween: 16,

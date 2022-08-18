@@ -137,6 +137,7 @@
     margin-left: auto;
     margin-right: 0em;
     z-index: 8;
+    object-fit: cover;
     @include desktop-tablet {
       min-height: 310px;
       flex-basis: 505px;

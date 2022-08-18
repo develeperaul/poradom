@@ -15,7 +15,13 @@ import Dropdown from "./plugins/dropdown";
 
 import Accordion from "./plugins/accardion";
 import "./plugins/telmask";
-import { validate } from "./plugins/validateform";
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    const topPos = document.querySelector("#scroll-el").offsetTop;
+    if (topPos) (() => window.scrollTo(0, topPos))();
+  }, 3000);
+});
+
 let startX, scrollLeft;
 let isDown = false;
 window.addEventListener("mousedown", (e) => {
@@ -49,7 +55,7 @@ const formReq = async (form) => {
   const url = "/bitrix/templates/poradom/ajax/form.php";
   const formData = new FormData();
   const fields = form.querySelectorAll("input");
-  console.log(form.getAttribute("data-theme"));
+  // console.log(form.getAttribute("data-theme"));
   const theme = form.getAttribute("data-theme");
   Array.from(fields).forEach((field) => {
     formData.append("theme", theme ? theme : "");
@@ -330,7 +336,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }); // end click
         }); // end foreach
         modalButtonsSlider.forEach(function (item, index) {
-          console.log(item);
+          // console.log(item);
           /* Назначаем каждой кнопке обработчик клика */
           item.addEventListener("click", function (e) {
             e.preventDefault();
@@ -394,7 +400,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const form = modal.querySelector("form");
         if (form) {
           const submit = form.querySelector("button");
-          console.log(submit);
+
           form.addEventListener("submit", async function (e) {
             that.formActive = this;
             e.preventDefault();
@@ -470,7 +476,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Событие выбора файла(ов)
     el.addEventListener("change", function (e) {
-      console.log(e);
       // создаём массив файлов
       const parentWrapper = el.parentElement.getAttribute("id");
 
@@ -576,7 +581,6 @@ class toggleGroup {
             !toggleEl.classList.contains("toggle-element__active") &&
             toggleElParent
           ) {
-            console.log(buttonParent);
             Array.from(buttonParent).forEach((btn) => {
               btn.classList.remove("button__round_active");
               button.classList.add("button__round_active");
@@ -601,7 +605,6 @@ class toggleInfo {
     document.onclick = (e) => {
       if (this.open && !e.target.className.includes("popup-open")) {
         this.open = false;
-        console.log(e);
         Array.from(document.querySelectorAll(".popup")).forEach((item) => {
           item.classList.remove("popup-open");
           item.display = "none";
@@ -703,7 +706,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       if (targetPath?.getAttribute("data-hover")) {
-        console.log(targetPath.getAttribute("data-hover"));
         if (!targetPath) return;
         if (!svg.contains(targetPath)) return;
         const dataHover = targetPath.getAttribute("data-hover");
@@ -786,7 +788,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (dataHoverEl.classList.contains("plan__bottom-count")) {
           if (elDisplay === "none") dataHoverEl.style.display = "flex";
         } else {
-          console.log(elDisplay === "none");
           if (elDisplay === "none") dataHoverEl.style.display = "block";
         }
 
@@ -910,15 +911,13 @@ document.addEventListener("DOMContentLoaded", () => {
       let childrenEL = currentEl.querySelector(
         `${currentEl?.getAttribute("data-node")}`
       );
-      console.log(currentEl);
+
       if (currentEl.getAttribute("data-node").match(/-\d*/g)[0]) {
         let newLevel = currentEl
           .getAttribute("data-node")
           .match(/-\d*/g)[0]
           .replace("-", "");
 
-        console.log(level);
-        console.log(newLevel);
         if (newLevel && newLevel < level) {
           test = true;
           for (let i = level; i > newLevel; i = i - 1) {
@@ -942,8 +941,7 @@ document.addEventListener("DOMContentLoaded", () => {
               .getAttribute("data-node")
               .match(/-\d*/g)[0]
               .replace("-", "");
-            console.log(oldEl);
-            console.log(oldLevel);
+
             let parentOld = document.querySelector(
               oldEl.getAttribute("data-node")
             );

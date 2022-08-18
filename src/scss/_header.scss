@@ -20,7 +20,19 @@
       height: auto;
     }
   }
-
+  &__slider {
+    &_d {
+      display: none;
+      @include desktop-tablet {
+        display: flex;
+      }
+    }
+    &_m {
+      @include desktop-tablet {
+        display: none;
+      }
+    }
+  }
   & > .container {
     // height: 100%;
   }

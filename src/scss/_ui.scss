@@ -733,7 +733,17 @@
     @include desktop-desktop {
       padding: 20px 22px;
     }
-
+    &.special {
+      background-color: $primary;
+      border-color: $primary;
+      & > * {
+        color: #fff !important;
+        .card__address,
+        .card__content {
+          color: #fff !important;
+        }
+      }
+    }
     & .button {
       &__group {
         @include desktop-desktop {
@@ -788,7 +798,7 @@
     // align-items: flex-start;
     justify-content: space-between;
     gap: 15px;
-    align-items: center;
+    // align-items: center;
     &.link-content {
       color: $black !important;
       text-decoration: none;
@@ -1579,6 +1589,13 @@
   }
 }
 
+.contact-arrow {
+  position: fixed;
+  // right: 8px;
+  right: 0;
+  bottom: 56px;
+  z-index: 1000;
+}
 .show-arrow {
   animation: showarrow 1s ease-in-out;
   opacity: 1;
@@ -2250,7 +2267,9 @@
     @include desktop-desktop {
       left: $gap;
     }
-
+    &__full-h {
+      height: 100%;
+    }
     & .number {
       position: absolute;
       top: 40px;

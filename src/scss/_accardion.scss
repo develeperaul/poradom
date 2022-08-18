@@ -19,7 +19,15 @@
     line-height: 120%;
   }
 }
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
+  & > a {
+    color: #fff;
+  }
+}
 /* .accordion > h3::after {
   position: absolute;
   content: "";
@@ -43,9 +51,28 @@
 .accordion > h3.select > .accordion__line {
   width: 0;
 }
+
+.accordion-button {
+  background-image: url("../img/icons/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 14px;
+  height: 8px;
+  transform: rotate(0deg);
+  transition: transform 1s ease;
+  @include desktop-tablet {
+    width: 21px;
+    height: 12px;
+  }
+  &.select {
+    transform: rotate(180deg);
+  }
+}
+
 .accordion > h3::before {
-  position: absolute;
-  content: "";
+  // position: absolute;
+  // content: "";
   top: calc(50% - 7.5px);
   right: 0;
   background-image: url("../img/icons/arrow-down.svg");

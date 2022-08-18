@@ -26,8 +26,8 @@
         <div class="header__wrapper"></div>
         <div class="header__top">
           <img src="../img/icons/logo1.svg" alt="" class="logo" />
-          <div class="header__trigger">
-            <button class="menu-trigger active" id="menu-sidebar">
+          <div class="header__trigger" id="menu-sidebar">
+            <button class="menu-trigger active">
               <span></span>
               <span></span>
               <span></span>
@@ -62,8 +62,15 @@
           </div>
         </div>
         <div class="sidebar__list accordion" id="sidebar-accordion">
-          <h3 class="">Покупателям</h3>
-          <div class="tabs__text" id="tabs-1" style="height: 0px">
+          <h3 class="accordion-header">
+            <a href="#"> Покупателям </a>
+            <div class="accordion-button accordion-sidebar"></div>
+          </h3>
+          <div
+            class="tabs__text accordion-body"
+            id="tabs-1"
+            style="height: 0px"
+          >
             <a href="#"> Проектирование </a>
             <a href="#">Проектирование</a>
             <a href="#">Проектирование</a>
@@ -71,11 +78,17 @@
             <a href="#">Проектирование</a>
             <a href="#">Проектирование</a>
           </div>
-          <h3 class="">Стандарты</h3>
+          <h3 class="accordion-header">
+            <a href="#"> Покупателям </a>
+            <div class="accordion-button accordion-sidebar"></div>
+          </h3>
           <div class="tabs__text" id="tabs-2" style="height: 0px">
             <a href="#">Проектирование</a>
           </div>
-          <h3 class="">О застройщике</h3>
+          <h3 class="accordion-header">
+            <a href="#"> Покупателям </a>
+            <div class="accordion-button accordion-sidebar"></div>
+          </h3>
           <div class="tabs__text" id="tabs-3" style="height: 0px">
             <a href="#">Проектирование</a>
           </div>
@@ -213,8 +226,8 @@
     >
       <div class="container header__top">
         <img src="../img/icons/logo3.svg" alt="" class="logo" />
-        <div class="header__trigger">
-          <button class="menu-trigger" id="menu-header_fixed">
+        <div class="header__trigger" id="menu-header_fixed">
+          <button class="menu-trigger">
             <span></span>
             <span></span>
             <span></span>
@@ -285,30 +298,31 @@
           </div>
         </div>
       </div>
+      <div class="contact-arrow">
+        <a
+          href="tg://resolve?domain=username"
+          class="pie pie_big pie_blue drop__children children"
+        >
+          <img src="../img/icons/telega.svg" alt="" />
+        </a>
+        <a
+          href="https://wa.me/799999999"
+          class="pie pie_big pie_blue drop__children children"
+        >
+          <img src="../img/icons/whatsapp.svg" alt="" />
+        </a>
+        <a
+          href="tel:+799999999"
+          class="pie pie_big pie_blue drop__children children"
+        >
+          <img src="../img/icons/phone.svg" alt="" />
+        </a>
+        <span class="pie pie_big pie_accent drop drop_sq" id="drop">
+          <span></span><span></span><span></span><span></span>
+        </span>
+      </div>
 
-      <a
-        href="tg://resolve?domain=username"
-        class="pie pie_big pie_blue drop__children children"
-      >
-        <img src="../img/icons/telega.svg" alt="" />
-      </a>
-      <a
-        href="https://wa.me/799999999"
-        class="pie pie_big pie_blue drop__children children"
-      >
-        <img src="../img/icons/whatsapp.svg" alt="" />
-      </a>
-      <a
-        href="tel:+799999999"
-        class="pie pie_big pie_blue drop__children children"
-      >
-        <img src="../img/icons/phone.svg" alt="" />
-      </a>
-      <span class="pie pie_big pie_accent drop drop_sq" id="drop">
-        <span></span><span></span><span></span><span></span>
-      </span>
-
-      <div class="swiper headerSwiper">
+      <div class="swiper headerSwiper header__slider_m">
         <div class="swiper-wrapper swiper-wrapper_pb">
           <div class="swiper-slide swiper-slide_pb header__bottom">
             <div class="container container-slider carousel">
@@ -319,6 +333,65 @@
               </h2>
               <p class="carousel__text">
                 Запишитесь на экскурсию, <br />
+                чтобы увидеть это первыми!
+              </p>
+              <div>
+                <buttton class="carousel__btn button button_accent"
+                  >Записаться на экскурсию</buttton
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide_pb header__bottom">
+            <div class="container container-slider carousel">
+              <h2 class="carousel__title">
+                Новый проект <br />
+                со вторым <br />
+                светом
+              </h2>
+              <p class="carousel__text">
+                Запишитесь на экскурсию, <br />
+                чтобы увидеть это первыми!
+              </p>
+              <div>
+                <buttton class="carousel__btn button button_accent"
+                  >Записаться на экскурсию</buttton
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide_pb header__bottom">
+            <div class="container container-slider carousel">
+              <h2 class="carousel__title">
+                Новый проект <br />
+                со вторым <br />
+                светом
+              </h2>
+              <p class="carousel__text">
+                Запишитесь на экскурсию, <br />
+                чтобы увидеть это первыми!
+              </p>
+              <div>
+                <buttton class="carousel__btn button button_accent"
+                  >Записаться на экскурсию</buttton
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-numbs swiper-numbs_position"></div>
+      </div>
+      <div class="swiper headerSwiper header__slider_d">
+        <div class="swiper-wrapper swiper-wrapper_pb">
+          <div class="swiper-slide swiper-slide_pb header__bottom">
+            <div class="container container-slider carousel">
+              <h2 class="carousel__title">
+                Новый проект <br />
+                со вторым <br />
+                светом
+              </h2>
+              <p class="carousel__text">
+                Запишитесь на экскурсию, d <br />
                 чтобы увидеть это первыми!
               </p>
               <div>
@@ -2076,7 +2149,9 @@
         <div class="container">
           <div class="accordion" id="accordion">
             <h3 class="accordion-header">
-              Покупателям <span class="accordion__line"></span>
+              <a href="#"> Покупателям </a>
+              <button class="accordion-button"></button>
+              <span class="accordion__line"></span>
             </h3>
             <div
               class="accordion-body tabs__text"
@@ -2091,7 +2166,9 @@
               <a href="#">Проектирование</a>
             </div>
             <h3 class="accordion-header">
-              Стандарты <span class="accordion__line"></span>
+              <a href="#"> Стандарты </a>
+              <div class="accordion-button"></div>
+              <span class="accordion__line"></span>
             </h3>
             <div
               class="accordion-body tabs__text"
@@ -2101,8 +2178,11 @@
               <a href="#">Проектирование</a>
             </div>
             <h3 class="accordion-header">
-              О застройщике <span class="accordion__line"></span>
+              <a href="#"> О застройщике </a>
+              <div class="accordion-button"></div>
+              <span class="accordion__line"></span>
             </h3>
+
             <div
               class="accordion-body tabs__text"
               id="tabs-3"
@@ -2110,8 +2190,12 @@
             >
               <a href="#">Проектирование</a>
             </div>
-            <h3 class="accordion-header">Контакты</h3>
 
+            <h3 class="accordion-header">
+              <a href="#"> Контакты </a>
+              <div class="accordion-button"></div>
+              <span class="accordion__line"></span>
+            </h3>
             <div
               class="accordion-body tabs__text"
               id="tabs-4"
