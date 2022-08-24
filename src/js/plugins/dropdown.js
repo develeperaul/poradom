@@ -32,15 +32,15 @@ export default class Dropdown {
       });
       dropDownHeader.addEventListener(
         "click",
-        function () {
-          console.log("click dropDownHeader");
+        function (e) {
+          console.log(e.target);
           if (!isDropdownDisabled) {
             toggleInterface();
           }
         },
         false
       );
-      function toggleInterface() {
+      function toggleInterface () {
         chevronIcon.classList.toggle("rotate-icon-home");
         chevronIcon.classList.toggle("rotate-icon");
         dropdownListBody.classList.toggle("dropdown__body--hide");
@@ -51,7 +51,7 @@ export default class Dropdown {
       }
       const selectItem = (_this) => {
         dropdownHeaderValue.classList.add("dropdown__header--active");
-        dropdownHeaderValue.innerText = _this.innerText;
+        dropdownHeaderValue.textContent = _this.textContent;
         dropdownHeaderValue.setAttribute(
           "data-header",
           _this.getAttribute("data-index-type")
@@ -75,30 +75,30 @@ export default class Dropdown {
       this.selected = selectItem;
     }
   }
-  select() {
+  select () {
     const firstEl = document.querySelector(".dropdown__body--list-index");
     this.selected(firstEl);
   }
 
-  get choisEl() {
+  get choisEl () {
     return this._choisEl;
   }
-  set choisEl(el) {
+  set choisEl (el) {
     this._choisEl = el;
   }
 
-  get listItems() {
+  get listItems () {
     return this._listItems;
   }
-  set listItems(el) {
+  set listItems (el) {
     this._listItems = el;
   }
 
-  get dropdown() {
+  get dropdown () {
     console.log(this._dropdown);
     return this._dropdown;
   }
-  set dropdown(el) {
+  set dropdown (el) {
     this._dropdown = el;
   }
 }

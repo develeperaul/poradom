@@ -16,6 +16,7 @@
     padding: 40px 0;
     height: initial;
   }
+
   &__head {
     height: 40px;
     background-color: #fff;
@@ -24,12 +25,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     @include desktop-tablet {
       display: none;
     }
   }
+
   &__wrapper {
     display: none;
+
     @include desktop-tablet {
       // display: block;
       // background: #0c0c0c;
@@ -41,20 +45,24 @@
       // z-index: 999;
     }
   }
+
   .modal__cross {
     fill: $primary;
     top: 15px;
     right: 16px;
+
     @include desktop-tablet {
       top: 20px;
       right: 20px;
       fill: #fff;
     }
   }
+
   .swiper {
     // position: fixed;
     bottom: 0;
     height: calc(100% - 40px);
+
     @include desktop-tablet {
       bottom: auto;
       top: 0;
@@ -63,6 +71,7 @@
 
       z-index: 1000;
     }
+
     .swiper-stories-line {
       position: absolute;
       height: max-content;
@@ -70,6 +79,7 @@
       width: calc(100% - 32px);
       margin-left: 16px;
       top: 0;
+
       @include desktop-tablet {
         display: none;
       }
@@ -78,39 +88,56 @@
 
   .testSwiper {
     @include desktop-tablet {
+      height: 650px;
+    }
+
+    @include desktop-desktop {
       height: 760px;
     }
+
     .swiper-wrapper {
       align-items: flex-end;
     }
+
     .swiper-slide {
       height: 100%;
+
       @include desktop-tablet {
+        height: 620px;
         width: 400px;
+      }
+
+      @include desktop-desktop {
         height: 710px;
       }
+
       transform: translateY(0px);
       transition: all 0.2s ease;
       overflow: hidden;
 
-      & > div {
+      &>div {
         transition: all 0.2s ease;
         width: 100%;
         height: 100%;
         overflow: hidden;
         position: relative;
+
         @include desktop-tablet {
           background: rgba(0, 56, 82, 0.6);
           filter: blur(5px);
           border-radius: 16px;
         }
-        & > img {
+
+        &>img {
           position: absolute;
           width: 100%;
           height: 100%;
+          object-fit: cover;
         }
+
         .stories-line {
           display: none;
+
           @include desktop-tablet {
             display: block;
             position: absolute;
@@ -122,14 +149,21 @@
           }
         }
       }
+
       &-active {
         @include desktop-tablet {
+          transform: translateY(-30px);
+        }
+
+        @include desktop-desktop {
           transform: translateY(-50px);
         }
-        & > div {
+
+        &>div {
           background: transparent;
           filter: initial;
         }
+
         .stories-line::after {
           width: 100%;
           z-index: 1;

@@ -3,7 +3,8 @@
 }
 .info .popup {
   position: absolute;
-  transform: translate(-100%, 10px);
+      left: -50%;
+        transform: translate(-50%, 10px);
   padding: 30px 21px;
   background: $primary;
   border-radius: 4px;

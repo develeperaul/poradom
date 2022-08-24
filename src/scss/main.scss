@@ -271,6 +271,7 @@
     z-index: 10;
   }
 
+
   &__wrapper {
     position: relative;
     width: 100%;
@@ -511,5 +512,26 @@
 
   &_active &__top::before {
     transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+
+.contact-arrow {
+  &.active {
+    .drop_sq{
+      bottom: 3px;
+    } 
+    .children {
+      &:nth-child(1) {
+        bottom: 62px;
+      }
+      &:nth-child(2){
+        bottom: 183px;
+      }
+      &:nth-child(3) {
+        bottom: 124px;
+      }
+    }
+
   }
 }

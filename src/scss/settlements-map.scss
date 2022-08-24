@@ -3,4 +3,32 @@
   @include desktop-desktop {
     padding-top: 120px;
   }
+  .image-form {
+        display: flex;
+          flex-direction: column;
+          @include desktop-laptop {
+            display: block;
+          }
+          @include desktop-tablet {
+display: grid;
+          }
+  }
+  .image-form__form {
+    .form {
+      margin: 0 auto;
+    }
+  }
+  .image-form__image {
+    min-height: 279px;
+    order: 2;
+    @include desktop-tablet {
+      order: 1;
+    }
+    @include desktop-laptop {
+      min-height: 490px;
+    }
+    @include desktop-tablet {
+      min-height: 450px;
+    }
+  }
 }

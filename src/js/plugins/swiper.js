@@ -251,6 +251,7 @@ const s = new Swiper(".newsSwiper", {
 new newSwiper(".projects");
 new newSwiper(".buttonsSwiper", { pagination: {} });
 new newSwiper(".featuresSwiper", {
+  loop:false,
   navigation: {
     nextEl: ".swiper-next",
     prevEl: ".swiper-prev",
@@ -409,3 +410,20 @@ new newSwiper(".regionSwiper", {
     },
   },
 });
+
+
+new newSwiper(".alternativePlan", {
+    loop: false,
+        pagination: {
+     
+      el: ".swiper-numbs",
+      bulletActiveClass: "numb-active",
+      bulletClass: "numb",
+      type: "bullets",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + "</span>";
+      },
+    },
+
+})

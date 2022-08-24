@@ -1,3 +1,6 @@
+import Dropdown from "./dropdown";
+new Dropdown("calc");
+
 window.addEventListener("DOMContentLoaded", function () {
   function getPayment(sum, period, rate) {
     var i, koef, result;

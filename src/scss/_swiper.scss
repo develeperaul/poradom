@@ -357,6 +357,7 @@ $pageColorActive: #0099e0;
 }
 .headerSwiper {
   height: 100%;
+  
 }
 .hit__swiper {
   padding-bottom: 50px;
@@ -393,5 +394,12 @@ $pageColorActive: #0099e0;
 
   &.line-active {
     background: #fff;
+  }
+}
+
+.alternativePlan {
+  .swiper-numbs {
+    position: static;
+    margin-top: 0;
   }
 }

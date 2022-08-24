@@ -131,6 +131,7 @@
   }
 
   &__image {
+    object-fit: cover;
     @include desktop-tablet {
       height: 312px;
       max-height: 312px;
