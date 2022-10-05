@@ -17,7 +17,7 @@
     @include desktop-tablet {
       gap: 30px;
     }
-    @include desktop-tablet {
+    @include desktop-laptop {
       flex-direction: row;
       gap: 80px;
     }
@@ -27,6 +27,7 @@
     &-top {
       height: 320px;
       width: 100%;
+      object-fit: cover;
       @include desktop-tablet {
         height: 445px;
       }

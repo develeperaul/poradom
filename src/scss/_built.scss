@@ -168,9 +168,11 @@
       background-color: $secondary;
       padding: 30px 20px;
       border-radius: 12px;
+      margin: 0 -20px;
     }
     @include desktop-laptop {
       padding: 38px 20px;
+      margin: 0;
     }
     @include desktop-desktop {
       padding: 70px 150px;

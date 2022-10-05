@@ -195,6 +195,9 @@
       gap: 80px;
     }
     &-left {
+      @include desktop-tablet {
+        width: 345px;
+      }
       @include desktop-laptop_to_desktop {
         width: 266px;
       }

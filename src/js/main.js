@@ -17,8 +17,11 @@ import Accordion from "./plugins/accardion";
 import "./plugins/telmask";
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
-    const topPos = document.querySelector("#scroll-el").offsetTop;
-    if (topPos) (() => window.scrollTo(0, topPos))();
+    const scrollEL = document.querySelector("#scroll-el");
+    if (scrollEL) {
+      const topPos = scrollEL.offsetTop;
+      if (topPos) (() => window.scrollTo(0, topPos))();
+    }
   }, 3000);
 });
 
@@ -141,11 +144,11 @@ forms.forEach((form) => {
 const scrollTop = () => window.scrollTo(pageYOffset, 0);
 const arrow = document.querySelector("#arrow");
 const header = document.querySelector("header");
-const contactArrows = document.querySelector(".contact-arrow")
+const contactArrows = document.querySelector(".contact-arrow");
 arrow.onclick = scrollTop;
 window.addEventListener("scroll", () => {
   if (header) {
-    const headerHeight = header?.offsetHeight
+    const headerHeight = header?.offsetHeight;
     if (header && headerHeight && window.pageYOffset > headerHeight) {
       if (arrow?.classList.contains("hidden-arrow"))
         arrow?.classList.remove("hidden-arrow");
@@ -168,7 +171,6 @@ window.addEventListener("scroll", () => {
         }, 1100);
       }
     }
-
   } else if (window.pageYOffset > 20) {
     if (arrow?.classList.contains("hidden-arrow"))
       arrow?.classList.remove("hidden-arrow");
@@ -180,7 +182,6 @@ window.addEventListener("scroll", () => {
 
     arrow?.classList.add("article");
   } else {
-
     if (arrow?.classList.contains("show-arrow"))
       arrow?.classList.remove("show-arrow");
     if (!arrow?.classList.contains("hidden-arrow")) {
@@ -193,10 +194,10 @@ window.addEventListener("scroll", () => {
     }
   }
   if (window.pageYOffset > 20) {
-    if (contactArrows && !contactArrows.classList.contains('active')) {
-      contactArrows.classList.add('active')
+    if (contactArrows && !contactArrows.classList.contains("active")) {
+      contactArrows.classList.add("active");
     }
-  } else contactArrows.classList.remove('active')
+  } else contactArrows.classList.remove("active");
 });
 class SideBar {
   constructor() {
@@ -302,8 +303,8 @@ document.addEventListener("DOMContentLoaded", function () {
             function (e) {
               for (
                 var t = this,
-                o = (t.document || t.ownerDocument).querySelectorAll(e),
-                n = 0;
+                  o = (t.document || t.ownerDocument).querySelectorAll(e),
+                  n = 0;
                 o[n] && o[n] !== t;
 
               )
@@ -311,13 +312,13 @@ document.addEventListener("DOMContentLoaded", function () {
               return Boolean(o[n]);
             }),
           "function" != typeof e.closest &&
-          (e.closest = function (e) {
-            for (var t = this; t && 1 === t.nodeType;) {
-              if (t.matches(e)) return t;
-              t = t.parentNode;
-            }
-            return null;
-          });
+            (e.closest = function (e) {
+              for (var t = this; t && 1 === t.nodeType; ) {
+                if (t.matches(e)) return t;
+                t = t.parentNode;
+              }
+              return null;
+            });
       })(window.Element.prototype);
 
       let that = this;
@@ -482,7 +483,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }
-    set close (isClose) {
+    set close(isClose) {
       if (isClose) {
         this.message.classList.remove("active");
         setTimeout(
@@ -668,7 +669,6 @@ class toggleInfo {
             this.open = true;
           }, 0.5);
         }
-
       });
     });
   }

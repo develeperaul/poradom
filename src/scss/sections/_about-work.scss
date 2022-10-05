@@ -94,6 +94,7 @@
   }
 
   &__img {
+    object-fit: cover;
     width: 155px;
     height: 175px;
     margin-right: -$gap-m;
@@ -101,7 +102,6 @@
       width: 207px;
       height: 226px;
       margin-right: -$gap-t;
-      object-fit: cover;
     }
     @include desktop-laptop {
       width: 204px;

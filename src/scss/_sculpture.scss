@@ -14,15 +14,15 @@
     height: 720px;
   }
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: 1px;
-    height: 47px;
-    background-color: $brown;
-    right: 50%;
-    top: 0;
-  }
+  // &::after {
+  //   position: absolute;
+  //   content: "";
+  //   width: 1px;
+  //   height: 47px;
+  //   background-color: $brown;
+  //   right: 50%;
+  //   top: 0;
+  // }
 
   &__content {
     display: flex;

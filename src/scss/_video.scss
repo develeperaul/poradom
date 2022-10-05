@@ -24,7 +24,7 @@
       width: auto;
     }
     @include desktop-desktop {
-      width: calc(50% + 60px);
+      width: 50%;
     }
 
     & .glightbox {

@@ -46,19 +46,19 @@
 
 .bg {
   &-vacant {
-    background-color: $vacant  !important;
+    background-color: $vacant !important;
   }
 
   &-booked {
-    background-color: $booked  !important;
+    background-color: $booked !important;
   }
 
   &-sold {
-    background-color: $sold  !important;
+    background-color: $sold !important;
   }
 
   &-ready {
-    background-color: $ready  !important;
+    background-color: $ready !important;
   }
 }
 
@@ -97,12 +97,12 @@
     color: $black;
   }
 
-  &>span {
+  & > span {
     z-index: 10;
     position: relative;
   }
 
-  &>span:first-child {
+  & > span:first-child {
     display: inline-block;
     position: relative;
     padding-top: 10px;
@@ -130,7 +130,7 @@
 }
 
 .title_primary {
-  &>span:first-child {
+  & > span:first-child {
     position: relative;
     z-index: 10;
 
@@ -383,7 +383,7 @@
     height: 36px;
   }
 
-  &>img {
+  & > img {
     width: 50%;
     margin: 0 auto;
   }
@@ -427,11 +427,13 @@
   &__play {
     width: 48px;
     height: 48px;
-    background: linear-gradient(180deg,
-        #fe497f -20.21%,
-        #ed1556 28.44%,
-        #d10945 74.14%,
-        #d10945 74.14%);
+    background: linear-gradient(
+      180deg,
+      #fe497f -20.21%,
+      #ed1556 28.44%,
+      #d10945 74.14%,
+      #d10945 74.14%
+    );
 
     &_lg {
       width: 48px;
@@ -455,7 +457,7 @@
     height: 36px;
   }
 
-  &>span {
+  & > span {
     display: inline-block;
     height: 13px;
     width: 1px;
@@ -501,7 +503,6 @@
     }
 
     &:nth-child(2) {
-
       &::after,
       &::before {
         top: 0;
@@ -526,7 +527,7 @@
   &_active:hover {
     background-color: #0099e0;
 
-    &>span {
+    & > span {
       background-color: #e5e7ea;
 
       &::after,
@@ -604,8 +605,8 @@
   }
 
   @include desktop-tablet {
-    max-width: 235px;
-    flex-basis: 235px;
+    // max-width: 235px;
+    // flex-basis: 235px;
   }
 
   @include desktop-desktop {
@@ -654,7 +655,7 @@
       padding: 0 35px;
     }
 
-    &>p {
+    & > p {
       @include desktop-tablet {
         font-size: 16px;
         line-height: 120%;
@@ -752,7 +753,7 @@
       background-color: $primary;
       border-color: $primary;
 
-      &>* {
+      & > * {
         color: #fff !important;
 
         .card__address,
@@ -819,7 +820,7 @@
 
     // align-items: center;
     &.link-content {
-      color: $black  !important;
+      color: $black !important;
       text-decoration: none;
     }
 
@@ -849,7 +850,7 @@
       margin-top: 10px;
     }
 
-    &>img {
+    & > img {
       width: 12px;
       height: 20px;
     }
@@ -963,7 +964,7 @@
       gap: 10px;
     }
 
-    &>.marker__text {
+    & > .marker__text {
       font-weight: 500;
       font-size: 12px;
       line-height: 130%;
@@ -1020,7 +1021,6 @@
 
   //user
   &-user {
-
     // max-width: 139px;
     // width: 100%;
     @include desktop-desktop {
@@ -1075,7 +1075,7 @@
       display: flex;
       justify-content: space-between;
 
-      &>* {
+      & > * {
         color: $black;
         padding: 13px;
         border: 1px solid $border;
@@ -1088,13 +1088,13 @@
         width: 100%;
       }
 
-      &>*:first-child {
+      & > *:first-child {
         padding-right: 26px;
         padding-left: 13px;
         margin-right: 16px;
       }
 
-      &>*:last-child {
+      & > *:last-child {
         padding-right: 13px;
         padding-left: 26px;
       }
@@ -1137,7 +1137,7 @@
         height: 190px;
       }
 
-      &>img {
+      & > img {
         width: 100%;
         height: 100%;
       }
@@ -1159,7 +1159,7 @@
         flex-direction: column;
       }
 
-      &>.card__link {
+      & > .card__link {
         display: none;
 
         @include desktop-laptop {
@@ -1274,7 +1274,7 @@
       opacity: 0.5;
     }
 
-    &_active>&__progress {
+    &_active > &__progress {
       opacity: 1;
       background-color: #0099e0;
     }
@@ -1295,13 +1295,13 @@
     }
 
     &_active &__right {
-      &>svg {
+      & > svg {
         @include desktop-tablet {
           display: none;
         }
       }
 
-      &>img {
+      & > img {
         @include desktop-tablet {
           width: 28px;
           height: 24px;
@@ -1319,11 +1319,11 @@
         gap: 29px;
       }
 
-      &>img {
+      & > img {
         display: none;
       }
 
-      &>svg {
+      & > svg {
         display: none;
 
         @include desktop-tablet {
@@ -1341,7 +1341,7 @@
       display: none;
     }
 
-    &_active>&__wrapper>&__numb::after {
+    &_active > &__wrapper > &__numb::after {
       position: absolute;
       content: "";
       width: 10px;
@@ -1379,7 +1379,11 @@
     // min-width: 180px;
     max-height: 0;
     transition: max-height 0.2s ease-in-out;
-    filter: drop-shadow(0px 47px 19px rgba(0, 0, 0, 0.01)) drop-shadow(0px 26px 16px rgba(0, 0, 0, 0.05)) drop-shadow(0px 12px 12px rgba(0, 0, 0, 0.09)) drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0px 47px 19px rgba(0, 0, 0, 0.01))
+      drop-shadow(0px 26px 16px rgba(0, 0, 0, 0.05))
+      drop-shadow(0px 12px 12px rgba(0, 0, 0, 0.09))
+      drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.1))
+      drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
 
     @include desktop-desktop {
       width: 220px;
@@ -1558,12 +1562,12 @@
     }
   }
 
-  >*:last-child {
+  > *:last-child {
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
-  &>* {
+  & > * {
     color: $primary;
     display: inline-block;
     position: relative;
@@ -1711,7 +1715,7 @@
 
   &__text {
     white-space: nowrap;
-
+    font-size: 12px;
     @include desktop-tablet {
       font-size: 9px;
     }
@@ -1737,7 +1741,7 @@
       gap: 70px;
     }
 
-    &>img {
+    & > img {
       width: 100%;
       height: 100%;
       max-height: 190px;
@@ -1777,7 +1781,6 @@
     }
 
     &__pagination {
-
       // overflow-x: auto;
       @include desktop-tablet_to_laptop {
         left: 0 !important;
@@ -1857,8 +1860,8 @@
         width: 830px;
       }
 
-      &>.swiper-next,
-      &>.swiper-prev {
+      & > .swiper-next,
+      & > .swiper-prev {
         @include desktop-tablet {
           top: auto;
         }
@@ -1874,7 +1877,8 @@
       font-size: 16px;
     }
 
-    @include desktop-laptop {}
+    @include desktop-laptop {
+    }
 
     @include desktop-desktop {
       font-size: 26px;
@@ -1893,7 +1897,7 @@
       // padding-bottom: 20px;
     }
 
-    &>img {
+    & > img {
       width: 100%;
       max-height: 190px;
       object-fit: cover;
@@ -1908,7 +1912,7 @@
       }
     }
 
-    &>p {
+    & > p {
       margin-top: 10px;
 
       @include desktop-desktop {
@@ -2063,7 +2067,7 @@
           padding: 40px 20px;
         }
 
-        &>p {
+        & > p {
           font-size: 12px;
           line-height: 130%;
 
@@ -2298,7 +2302,7 @@
   align-items: center;
   color: #fff;
 
-  &>h2 {
+  & > h2 {
     font-size: 26px;
     line-height: 120%;
   }
@@ -2318,7 +2322,7 @@
     height: 150px;
   }
 
-  &>a {
+  & > a {
     color: #fff;
   }
 }
@@ -2478,7 +2482,6 @@
     }
 
     &_swiper {
-
       // height: calc(100% - 96px);
       @include desktop-laptop {
         height: 390px;
@@ -2505,7 +2508,7 @@
       grid-area: A;
     }
 
-    & .navigation__card>img {
+    & .navigation__card > img {
       @include desktop-laptop {
         max-height: 627px;
         height: 390px;
@@ -2622,7 +2625,7 @@
   }
 
   &__item {
-    &>a {
+    & > a {
       color: $black;
 
       &:hover {
@@ -2630,7 +2633,7 @@
       }
     }
 
-    &_active>a {
+    &_active > a {
       color: #0099e0;
     }
   }
@@ -2708,12 +2711,13 @@
     height: 250px;
   }
 
-  @include desktop-desktop {}
+  @include desktop-desktop {
+  }
 
   width: 350px;
   height: 350px;
 
-  &>p {
+  & > p {
     font-size: 18px;
     line-height: 120%;
   }

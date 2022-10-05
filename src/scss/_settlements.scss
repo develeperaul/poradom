@@ -18,8 +18,8 @@
 
   &__title {
     position: absolute;
-    top: 143px;
-    left: calc(40px - #{$gap-m});
+    top: 180px;
+    right: 16px;
     z-index: 9;
 
     @include desktop-tablet {
@@ -61,6 +61,7 @@
       }
       @include desktop-desktop {
         left: 130px;
+        height: 80px;
       }
     }
 
@@ -118,16 +119,14 @@
     }
   }
 
-  &__bottom {
-  }
-
   &__icon {
     position: absolute;
     width: 88px;
-    top: 30px;
+    top: 60px;
 
     @include desktop-desktop {
-      top: 80px;
+      top: 115px;
+      left: -40px;
       width: 353px;
       height: 310px;
     }
@@ -165,8 +164,8 @@
       padding-bottom: 40px;
       place-self: end;
       /* grid-column: 1 span; */
-      width: calc(100% - 100px);
-      gap: 25px;
+      width: calc(100% - 56px);
+      gap: 42px;
     }
     @include desktop-desktop {
       padding-bottom: 90px;

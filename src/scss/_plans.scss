@@ -96,10 +96,12 @@
     }
 
     & > img {
+      width: auto;
       max-width: inherit !important;
       height: 100%;
-      width: 100%;
-
+      @include desktop-laptop {
+        width: 100%;
+      }
       @include desktop-desktop {
         height: auto;
         width: 100%;

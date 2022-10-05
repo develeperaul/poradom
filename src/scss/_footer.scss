@@ -76,6 +76,10 @@ footer {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
+    &-left {
+      font-size: 12px;
+      line-height: 170%;
+    }
   }
 
   &__nav {
