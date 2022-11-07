@@ -57,6 +57,12 @@
         gap: 40px;
       }
     }
+    & > .tabs__text>a {
+      padding-bottom:15px;
+    }
+    & > .tabs__text > *:last-child {
+      margin-bottom: 10px;
+    }
   }
   &-children__list > &__item {
     width: 230px;
