@@ -1,164 +1,292 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Poradom</title>
-  </head>
 
-  <body>
-    <div class="top-arrow" id="arrow">
-      <div class="arrow-icon">
-        <svg
-          width="14"
-          height="8"
-          viewBox="0 0 14 8"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M13 7L7 1L1 7" stroke="white" stroke-linecap="round" />
-        </svg>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poradom</title>
+</head>
+
+<body>
+  <div class="top-arrow" id="arrow">
+    <div class="arrow-icon">
+      <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 7L7 1L1 7" stroke="white" stroke-linecap="round" />
+      </svg>
     </div>
+  </div>
     <section class="sidebar">
       <div class="container">
-        <div class="header__wrapper">
+        <div class="header__wrapper"></div>
           <div class="header__top">
-            <img src="../img/icons/logo1.svg" alt="" />
-            <button class="menu-trigger active" id="menu-sidebar">
+            <img src="../img/icons/logo1.svg" alt="" class="logo" />
+            <div class="header__trigger">
+              <button class="menu-trigger active" id="menu-sidebar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <span class="menu-trigger__text"> Меню </span>
+            </div>
+            <div class="header__contacts">
+              <div class="social">
+                <a href="#" class="pie pie_primary social__link_s">
+                  <img
+                    src="../img/icons/youtube.svg"
+                    alt=""
+                    class="social__icon"
+                  />
+                </a>
+
+                <a href="#" class="pie pie_primary social__link_s">
+                  <img
+                    src="../img/icons/facebook.svg"
+                    alt=""
+                    class="social__icon"
+                  />
+                </a>
+                <a href="#" class="pie pie_primary social__link_s">
+                  <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+                </a>
+              </div>
+              <div class="header__contact contact">
+                <address>г.Уфа, ул.Мустая Карима, д.16</address>
+                <a href="tel:73472008719">+7 (347) 200-87-19</a>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar__list accordion" id="sidebar-accordion">
+            <h3 class="">Покупателям</h3>
+            <div class="tabs__text" id="tabs-1" style="height: 0px">
+              <a href="#"> Проектирование </a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="">Стандарты</h3>
+            <div class="tabs__text" id="tabs-2" style="height: 0px">
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="">О застройщике</h3>
+            <div class="tabs__text" id="tabs-3" style="height: 0px">
+              <a href="#">Проектирование</a>
+            </div>
+          </div>
+          <div id="list_03">
+
+            <ul class="sidebar__list-desktop">
+              <li class="sidebar__item" data-node="#list_01-1">
+                <a href="#">
+                  <span class="sidebar__item-left">01 —</span>
+                  <span class="sidebar__item-right">Коттеджные посёлки</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_02-1">
+                <a href="#">
+                  <span class="sidebar__item-left">02 —</span>
+                  <span class="sidebar__item-right">Готовые дома</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_03-1">
+                <a href="#">
+                  <span class="sidebar__item-left">03 —</span>
+                  <span class="sidebar__item-right">Проекты</span>
+                </a>
+                <div class="sidebar___list_desktop-2 sidebar__children" id="list_03-1" style="display: none;">
+                  <ul class="sidebar-children__list">
+                    <li class="sidebar__item"  data-node="#list_03_1-2"><a href="#">Серия Первый Дом</a></li>
+                    <li class="sidebar__item"  data-node="#list_03_2-2"><a href="#">Серия NATUR-A</a></li>
+                    <li class="sidebar__item"  data-node="#list_03_3-2"><a href="#">Серия Элегант</a></li>
+                    <li class="sidebar__item"  data-node="#list_03_4-2"><a href="#">Серия Классик</a></li>
+                    <li class="sidebar__item"  data-node="#list_03_5-2"><a href="#">Кирпичный Стандарт</a></li>
+                    <li class="sidebar__item" data-node="#list_03_6-2">
+                      <a href="#" >Серия Ред Лайт</a>
+                      <div class="sidebar__list_desktop-3 sidebar__children" id="list_03_6-2" style="display: none;">
+                        <ul class="sidebar-children__list">
+                          <li class="sidebar__item" data-node="#list_03_6_1-3"><a href="#">Кирпичный Стандарт 105</a></li>
+                          <li class="sidebar__item" data-node="#list_03_6_2-3"><a href="#">Кирпичный Стандарт 120</a></li>
+                          <li class="sidebar__item" data-node="#list_03_6_3-3"><a href="#">Кирпичный Стандарт 140</a></li>
+                          <li class="sidebar__item" data-node="#list_03_6_4-3"><a href="#">Кирпичный Стандарт 150</a></li>
+                          <li class="sidebar__item" data-node="#list_03_6_5-3"><a href="#">Кирпичный Стандарт 170</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="sidebar__item" data-node="#list_03_7-2"><a href="#" >Индивидуальный проект</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="sidebar__item" data-node="#list_04-1">
+                <a href="#">
+                  <span class="sidebar__item-left">04 —</span>
+                  <span class="sidebar__item-right">Стандарты Порадом</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_05-1">
+                <a href="#">
+                  <span class="sidebar__item-left">05 —</span>
+                  <span class="sidebar__item-right">Компания Порадом</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_06-1">
+                <a href="#">
+                  <span class="sidebar__item-left">06 —</span>
+                  <span class="sidebar__item-right">Галерея</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_07-1">
+                <a href="#">
+                  <span class="sidebar__item-left">07 —</span>
+                  <span class="sidebar__item-right">Новости</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_08-1">
+                <a href="#">
+                  <span class="sidebar__item-left">08 —</span>
+                  <span class="sidebar__item-right">Отзывы</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_09-1">
+                <a href="#">
+                  <span class="sidebar__item-left">09 —</span>
+                  <span class="sidebar__item-right">Контакты</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+        <div class="header__top_white header__top_fixed header__top_fixed-open " style="display: none;">
+        <div class="container header__top">
+          <img src="../img/icons/logo3.svg" alt="" class="logo" />
+          <div class="header__trigger">
+            <button class="menu-trigger" id="menu-header">
               <span></span>
               <span></span>
               <span></span>
             </button>
+            <span class="menu-trigger__text"> Меню </span>
           </div>
-        </div>
+          <div class="header__contacts">
+            <div class="social">
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/youtube.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
 
-        <div class="sidebar__list accordion" id="sidebar-accordion">
-          <h3 class="">Покупателям</h3>
-          <div class="tabs__text" id="tabs-1" style="height: 0px">
-            <a href="#"> Проектирование </a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-          </div>
-          <h3 class="">Стандарты</h3>
-          <div class="tabs__text" id="tabs-2" style="height: 0px">
-            <a href="#">Проектирование</a>
-          </div>
-          <h3 class="">О застройщике</h3>
-          <div class="tabs__text" id="tabs-3" style="height: 0px">
-            <a href="#">Проектирование</a>
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/facebook.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+              <a href="#" class="pie pie_primary social__link_s">
+                <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+              </a>
+            </div>
+            <div class="header__contact contact">
+              <address>г.Уфа, ул.Мустая Карима, д.16</address>
+              <a href="tel:73472008719">+7 (347) 200-87-19</a>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-    <header class="header">
-      <div class="header__top header__top_absolute">
-        <img src="../img/icons/logo1.svg" alt="" />
-        <button class="menu-trigger" id="menu-header">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
+  <header class="header">
+    <div class="header__top header__top_absolute">
+      <img src="../img/icons/logo1.svg" alt="" />
+      <button class="menu-trigger" id="menu-header">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
 
-      <a
-        href="tg://resolve?domain=username"
-        class="pie pie_big pie_blue drop__children children"
-      >
-        <img src="../img/icons/telega.svg" alt="" />
-      </a>
-      <a
-        href="https://wa.me/799999999"
-        class="pie pie_big pie_blue drop__children children"
-      >
-        <img src="../img/icons/whatsapp.svg" alt="" />
-      </a>
-      <a
-        href="tel:+799999999"
-        class="pie pie_big pie_blue drop__children children"
-      >
-        <img src="../img/icons/phone.svg" alt="" />
-      </a>
-      <span class="pie pie_big pie_accent drop drop_sq" id="drop">
-        <span></span><span></span><span></span><span></span>
-      </span>
-      <div class="swiper headerSwiper">
-        <div class="swiper-wrapper swiper-wrapper_pb">
-          <div class="swiper-slide swiper-slide_pb header__bottom">
-            <div class="carousel">
-              <div></div>
-              <h2 class="carousel__title">
-                Новый проект <br />
-                со вторым <br />
-                светом
-              </h2>
-              <p class="carousel__text">
-                Запишитесь на экскурсию, <br />
-                чтобы увидеть это первыми!
-              </p>
-              <buttton class="carousel__btn button button_accent"
-                >Записаться на экскурсию</buttton
-              >
-            </div>
-          </div>
-          <div class="swiper-slide swiper-slide_pb header__bottom">
-            <div class="carousel">
-              <div></div>
-              <h2 class="carousel__title">
-                Новый проект <br />
-                со вторым <br />
-                светом
-              </h2>
-              <p class="carousel__text">
-                Запишитесь на экскурсию, <br />
-                чтобы увидеть это первыми!
-              </p>
-              <buttton class="carousel__btn button button_accent"
-                >Записаться на экскурсию</buttton
-              >
-            </div>
-          </div>
-          <div class="swiper-slide swiper-slide_pb header__bottom">
-            <div class="carousel">
-              <div></div>
-              <h2 class="carousel__title">
-                Новый проект <br />
-                со вторым <br />
-                светом
-              </h2>
-              <p class="carousel__text">
-                Запишитесь на экскурсию, <br />
-                чтобы увидеть это первыми!
-              </p>
-              <buttton class="carousel__btn button button_accent"
-                >Записаться на экскурсию</buttton
-              >
-            </div>
+    <a href="tg://resolve?domain=username" class="pie pie_big pie_blue drop__children children">
+      <img src="../img/icons/telega.svg" alt="" />
+    </a>
+    <a href="https://wa.me/799999999" class="pie pie_big pie_blue drop__children children">
+      <img src="../img/icons/whatsapp.svg" alt="" />
+    </a>
+    <a href="tel:+799999999" class="pie pie_big pie_blue drop__children children">
+      <img src="../img/icons/phone.svg" alt="" />
+    </a>
+    <span class="pie pie_big pie_accent drop drop_sq" id="drop">
+      <span></span><span></span><span></span><span></span>
+    </span>
+    <div class="swiper headerSwiper">
+      <div class="swiper-wrapper swiper-wrapper_pb">
+        <div class="swiper-slide swiper-slide_pb header__bottom">
+          <div class="carousel">
+            <div></div>
+            <h2 class="carousel__title">
+              Новый проект <br />
+              со вторым <br />
+              светом
+            </h2>
+            <p class="carousel__text">
+              Запишитесь на экскурсию, <br />
+              чтобы увидеть это первыми!
+            </p>
+            <buttton class="carousel__btn button button_accent js-open-modal" data-modal="1">Записаться на экскурсию</buttton>
           </div>
         </div>
-        <div class="swiper-numbs swiper-numbs_position"></div>
+        <div class="swiper-slide swiper-slide_pb header__bottom">
+          <div class="carousel">
+            <div></div>
+            <h2 class="carousel__title">
+              Новый проект <br />
+              со вторым <br />
+              светом
+            </h2>
+            <p class="carousel__text">
+              Запишитесь на экскурсию, <br />
+              чтобы увидеть это первыми!
+            </p>
+            <buttton class="carousel__btn button button_accent js-open-modal" data-modal="1">Записаться на экскурсию</buttton>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide_pb header__bottom">
+          <div class="carousel">
+            <div></div>
+            <h2 class="carousel__title">
+              Новый проект <br />
+              со вторым <br />
+              светом
+            </h2>
+            <p class="carousel__text">
+              Запишитесь на экскурсию, <br />
+              чтобы увидеть это первыми!
+            </p>
+            <buttton class="carousel__btn button button_accent js-open-modal" data-modal="1">Записаться на экскурсию</buttton>
+          </div>
+        </div>
       </div>
-    </header>
-    <main class="wrapper">
-      <section class="section">
-        <div class="container">
-          <div class="section__crumbs bread-crumbs">
-            <a href="home.html">ПОРАДОМ</a>
-            <a href="#">Компания ПОРАДОМ</a>
-            <a href="#">Вакансии</a>
-          </div>
-          <div class="section__top">
-            <h2 class="section__title">Компания ПОРАДОМ</h2>
-          </div>
+      <div class="swiper-numbs swiper-numbs_position"></div>
+    </div>
+  </header>
+  <main class="wrapper">
+    <section class="section">
+      <div class="container">
+        <div class="section__crumbs bread-crumbs">
+          <a href="home.html">ПОРАДОМ</a>
+          <a href="#">Компания ПОРАДОМ</a>
+          <a href="#">Вакансии</a>
+        </div>
+        <div class="section__top">
+          <h2 class="section__title">Компания ПОРАДОМ</h2>
+        </div>
+        <div class="section-flex__about-work">
           <div class="section__btns">
             <div id="reviews-btns" class="button__group">
-              <a href="#" class="button__round button__round_active"
-                >Вакансии</a
-              >
+              <a href="#" class="button__round button__round_active">Вакансии</a>
               <a href="#" class="button__round">Команда</a>
               <a href="#" class="button__round">Пресс-центр</a>
             </div>
@@ -182,86 +310,91 @@
               стать частью нашей команды!
             </p>
           </div>
-        </div>
-      </section>
-      <section class="p-b--40 section__bg section__bg_secondary about-work">
-        <div class="container">
-          <div class="about-work__top">
-            <div class="about-work__images">
-              <img
-                src="../img/icons/project.svg"
-                class="about-work__icon"
-                alt=""
-              />
-              <img src="../img/people.png" class="about-work__img" alt="" />
-            </div>
 
-            <h2 class="title about-work__title m-b--30">
-              <span> Работа в компании </span>
+        </div>
+      </div>
+    </section>
+    <section class="p-b--40 section__bg section__bg_secondary about-work">
+      <div class="container">
+        <div class="about-work__top">
+          <div class="about-work__images">
+            <img src="../img/icons/project.svg" class="about-work__icon" alt="" />
+            <img src="../img/vacance.jpg" class="about-work__img" alt="" />
+          </div>
+          <div class="about-work__content">
+
+            <h2 class="title about-work__title">
+              <span > Работа <span class="about-work__title-main">в компании</span>  </span>
               <br />
+              <div class="about-work__title-main_tablet">
+                <span > в компании</span>
+                <br>
+              </div>
               <span> ПОРАДОМ - это </span>
             </h2>
-          </div>
-          <div class="about-work__list">
-            <div class="about-work__item">
-              <div class="about-work__left">01 —</div>
-              <div class="about-work__right">
-                <h4>Стабильность</h4>
-                <p>
-                  Достойная зарплата, уверенность в завтрашнем дне.
-                  Предоставление спецодежды для рабочих, оплата проживания
-                  иногородним
-                </p>
+            <div class="about-work__list">
+              <div class="about-work__item">
+                <div class="about-work__left">01 —</div>
+                <div class="about-work__right">
+                  <h4>Стабильность</h4>
+                  <p>
+                    Достойная зарплата, уверенность в завтрашнем дне.
+                    Предоставление спецодежды для рабочих, оплата проживания
+                    иногородним
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="about-work__item">
-              <div class="about-work__left">02 —</div>
-              <div class="about-work__right">
-                <h4>Команда</h4>
-                <p>
-                  Молодой, активный коллектив, сплоченный общей идеей.
-                  Современный уютный офис в центре города
-                </p>
+              <div class="about-work__item">
+                <div class="about-work__left">02 —</div>
+                <div class="about-work__right">
+                  <h4>Команда</h4>
+                  <p>
+                    Молодой, активный коллектив, сплоченный общей идеей.
+                    Современный уютный офис в центре города
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="about-work__item">
-              <div class="about-work__left">03 —</div>
-              <div class="about-work__right">
-                <h4>Развитие</h4>
-                <p>
-                  Возможность обучения, повышение своего профессионального
-                  уровня
-                </p>
+              <div class="about-work__item">
+                <div class="about-work__left">03 —</div>
+                <div class="about-work__right">
+                  <h4>Развитие</h4>
+                  <p>
+                    Возможность обучения, повышение своего профессионального
+                    уровня
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="about-work__item">
-              <div class="about-work__left">04 —</div>
-              <div class="about-work__right">
-                <h4>Мотивация</h4>
-                <p>
-                  Интересные проекты, постоянные объемы работы вне зависимости
-                  от сезонности, профессиональный рост, насыщенная корпоративная
-                  жизнь, льготные условия для покупки дома от ПОРАДОМ
-                </p>
+              <div class="about-work__item">
+                <div class="about-work__left">04 —</div>
+                <div class="about-work__right">
+                  <h4>Мотивация</h4>
+                  <p>
+                    Интересные проекты, постоянные объемы работы вне зависимости
+                    от сезонности, профессиональный рост, насыщенная корпоративная
+                    жизнь, льготные условия для покупки дома от ПОРАДОМ
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="section">
-        <div class="container">
-          <div class="new-accordion" id="test">
-            <div class="tab tab_border">
-              <div class="tab__top">
-                <h4 class="tab__title">
-                  Бригада отделочников на получистовую отделку
-                </h4>
-              </div>
-              <div class="tab__bottom">
-                <p class="m-b--30">
+      </div>
+    </section>
+    <section class="section vacance">
+      <div class="container">
+        <div class="new-accordion vacance__list" id="test">
+          <div class="tab tab_border">
+            <div class="tab__top">
+              <h4 class="tab__title">
+                Бригада отделочников на получистовую отделку
+              </h4>
+            </div>
+            <div class="tab__bottom">
+              <div class="tab__content m-b--30">
+                <p class="">
                   Требуется бригада отделочников на получистовую отделку
-                  коттеджей Отделочные, штукатурные, малярные работы, монтаж ГКЛ
-                  Штукатурка, шпаклевка стен, потолков, ГКЛ во внутренних
+                  коттеджей Отделочные, штукатурные, малярные работы, монтаж
+                  ГКЛ Штукатурка, шпаклевка стен, потолков, ГКЛ во внутренних
                   помещениях по маякам (под обои, под покраску) Устройство
                   откосов (штукатурка, шпаклевка) Постоянные объемы независимо
                   от сезона Работа в пригородах г. Уфы (Акбердино, Нагаево,
@@ -269,115 +402,66 @@
                   Своевременные выплаты два раза в месяц Постоянный объемы
                   работ, коттеджи до 3-х этажей, договор ГПХ
                 </p>
-                <buttton
-                  class="button button_blue m-b--10 js-open-modal"
-                  data-modal="1"
-                  >Откликнуться</buttton
-                >
-                <a href="#" class="button button_accent">Посмотреть на hh.ru</a>
-                <div class="modal" data-modal="1">
-                  <!--   Svg иконка для закрытия окна  -->
-                  <svg
-                    class="modal__cross js-modal-close"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
-                    />
-                  </svg>
-                  <form
-                    action="#"
-                    class="form"
-                    id="special-offer"
-                    data-form="1"
-                  >
-                    <h4 class="form__title">Заголовок формы</h4>
-                    <div class="text-field">
-                      <input
-                        data-special-offer
-                        class="text-field__input tel"
-                        type="text"
-                        name="login"
-                        id="login"
-                        placeholder="Введите ваш телефон"
-                      />
-                    </div>
-                    <div class="text-field">
-                      <input
-                        data-special-offer
-                        class="text-field__input"
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder="Введите ваш имя"
-                      />
-                    </div>
-                    <div class="text-field">
-                      <input
-                        data-special-offer
-                        class="text-field__input"
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder="Ссылка на резюме"
-                      />
-                    </div>
-                    <div class="upload-file__wrapper" id="upload_1">
-                      <input
-                        type="file"
-                        name="files[]"
-                        id="upload-file__input_1"
-                        class="upload-file__input"
-                        accept=".jpg, .jpeg, .png, .gif, .bmp, .doc, .docx, .xls, .xlsx, .txt, .tar, .zip, .7z, .7zip"
-                        multiple
-                      />
-                      <label
-                        class="upload-file__label"
-                        for="upload-file__input_1"
-                      >
-                        <img
-                          src="../img/icons/document.svg"
-                          alt=""
-                          class="upload-file__icon"
-                        />
-                        <span class="upload-file__text">Прикрепить резюме</span>
-                      </label>
-                      <div class="files"></div>
-                    </div>
-
-                    <button
-                      type="submit"
-                      id="special-offer-btn"
-                      class="button button_accent"
-                    >
-                      Отправить
-                    </button>
-                    <label class="checkbox-other">
-                      <input data-special-offer type="checkbox" />
-                      <p>
-                        Даю согласие на обработку
-                        <a href="#" class="checkbox__link">
-                          персональных данных
-                        </a>
-                      </p>
+              </div>
+              <buttton class="button button_blue m-b--10 js-open-modal" data-modal="1">Откликнуться</buttton>
+              <a href="#" class="button button_accent">Посмотреть на hh.ru</a>
+              <div class="modal" data-modal="1">
+                
+                <form action="#" class="form-standart" id="special-offer" data-form="1">
+                  <h4 class="form__title">Откликнуться
+                    на вакансию
+                    Название вакансии</h4>
+                  <div class="text-field">
+                    <input data-special-offer class="text-field__input tel" type="text" name="tel" 
+                      placeholder="Введите ваш телефон" />
+                  </div>
+                  <div class="text-field">
+                    <input data-special-offer class="text-field__input" type="text" name="name" 
+                      placeholder="Введите ваш имя" />
+                  </div>
+                  <div class="text-field">
+                    <input data-special-offer class="text-field__input" type="text" name="link" 
+                      placeholder="Ссылка на резюме" />
+                  </div>
+                  <div class="upload-file__wrapper" id="upload_1">
+                    <input type="file" name="file" id="upload-file__input_1" class="upload-file__input"
+                      accept=".jpg, .jpeg, .png, .gif, .bmp, .doc, .docx, .xls, .xlsx, .txt, .tar, .zip, .7z, .7zip"/>
+                    <label class="upload-file__label" for="upload-file__input_1">
+                      <img src="../img/icons/document-white.svg" alt="" class="upload-file__icon" />
+                      <span class="upload-file__text">Прикрепить резюме</span>
                     </label>
-                  </form>
-                </div>
-                <div class="overlay js-overlay-modal"></div>
+                    <div class="files"></div>
+                  </div>
+
+                  <button type="submit" id="special-offer-btn" class="button button_accent">
+                    Отправить
+                  </button>
+                  <label class="checkbox-other">
+                    <input data-special-offer type="checkbox" />
+                    <p>
+                      Даю согласие на обработку
+                      <a href="#" class="checkbox__link">
+                        персональных данных
+                      </a>
+                    </p>
+                  </label>
+                </form>
               </div>
+              <div class="overlay js-overlay-modal"></div>
             </div>
-            <div class="tab tab_border">
-              <div class="tab__top">
-                <h4 class="tab__title">
-                  Бригада отделочников на получистовую отделку
-                </h4>
-              </div>
-              <div class="tab__bottom">
-                <p class="m-b--30">
+          </div>
+          <div class="tab tab_border">
+            <div class="tab__top">
+              <h4 class="tab__title">
+                Бригада отделочников на получистовую отделку
+              </h4>
+            </div>
+            <div class="tab__bottom">
+              <div class="tab__content m-b--30">
+                <p class="">
                   Требуется бригада отделочников на получистовую отделку
-                  коттеджей Отделочные, штукатурные, малярные работы, монтаж ГКЛ
-                  Штукатурка, шпаклевка стен, потолков, ГКЛ во внутренних
+                  коттеджей Отделочные, штукатурные, малярные работы, монтаж
+                  ГКЛ Штукатурка, шпаклевка стен, потолков, ГКЛ во внутренних
                   помещениях по маякам (под обои, под покраску) Устройство
                   откосов (штукатурка, шпаклевка) Постоянные объемы независимо
                   от сезона Работа в пригородах г. Уфы (Акбердино, Нагаево,
@@ -385,114 +469,79 @@
                   Своевременные выплаты два раза в месяц Постоянный объемы
                   работ, коттеджи до 3-х этажей, договор ГПХ
                 </p>
-                <buttton
-                  class="button button_blue m-b--10 js-open-modal"
-                  data-modal="2"
-                  >Откликнуться</buttton
-                >
-                <a href="#" class="button button_accent">Посмотреть на hh.ru</a>
-                <div class="modal" data-modal="2">
-                  <!--   Svg иконка для закрытия окна  -->
-                  <svg
-                    class="modal__cross js-modal-close"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
-                    />
-                  </svg>
-                  <form
-                    action="#"
-                    class="form"
-                    id="special-offer"
-                    data-form="2"
-                  >
-                    <h4 class="form__title">Заголовок формы</h4>
-                    <div class="text-field">
-                      <input
-                        data-special-offer
-                        class="text-field__input tel"
-                        type="text"
-                        name="login"
-                        id="login"
-                        placeholder="Введите ваш телефон"
-                      />
-                    </div>
-                    <div class="text-field">
-                      <input
-                        data-special-offer
-                        class="text-field__input"
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder="Введите ваш имя"
-                      />
-                    </div>
-                    <div class="text-field">
-                      <input
-                        data-special-offer
-                        class="text-field__input"
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder="Ссылка на резюме"
-                      />
-                    </div>
-                    <div class="upload-file__wrapper" id="upload_2">
-                      <input
-                        type="file"
-                        name="files[]"
-                        id="upload-file__input_2"
-                        class="upload-file__input"
-                        accept=".jpg, .jpeg, .png, .gif, .bmp, .doc, .docx, .xls, .xlsx, .txt, .tar, .zip, .7z, .7zip"
-                        multiple
-                      />
-                      <label
-                        class="upload-file__label"
-                        for="upload-file__input_2"
-                      >
-                        <img
-                          src="../img/icons/document.svg"
-                          alt=""
-                          class="upload-file__icon"
-                        />
-                        <span class="upload-file__text">Прикрепить резюме</span>
-                      </label>
-                      <div class="files"></div>
-                    </div>
-
-                    <button
-                      type="submit"
-                      id="special-offer-btn"
-                      class="button button_accent"
-                    >
-                      Отправить
-                    </button>
-                    <label class="checkbox-other">
-                      <input data-special-offer type="checkbox" />
-                      <p>
-                        Даю согласие на обработку
-                        <a href="#" class="checkbox__link">
-                          персональных данных
-                        </a>
-                      </p>
-                    </label>
-                  </form>
-                </div>
-                <div class="overlay js-overlay-modal"></div>
               </div>
+              <buttton class="button button_blue m-b--10 js-open-modal" data-modal="2">Откликнуться</buttton>
+              <a href="#" class="button button_accent">Посмотреть на hh.ru</a>
+              <div class="modal" data-modal="2">
+                
+                <form action="#" class="form-standart" id="special-offer" data-form="2">
+                  <h4 class="form__title">Откликнуться
+на вакансию
+Название вакансии</h4>
+                  <div class="text-field">
+                    <input data-special-offer class="text-field__input tel" type="text" name="login" id="login"
+                      placeholder="Введите ваш телефон" />
+                  </div>
+                  <div class="text-field">
+                    <input data-special-offer class="text-field__input" type="text" name="name" id="name"
+                      placeholder="Введите ваш имя" />
+                  </div>
+                  <div class="text-field">
+                    <input data-special-offer class="text-field__input" type="text" name="name" id="name"
+                      placeholder="Ссылка на резюме" />
+                  </div>
+                  <div class="upload-file__wrapper" id="upload_2">
+                    <input type="file" name="file" id="upload-file__input_2" class="upload-file__input"
+                      accept=".jpg, .jpeg, .png, .gif, .bmp, .doc, .docx, .xls, .xlsx, .txt, .tar, .zip, .7z, .7zip"
+                      multiple />
+                    <label class="upload-file__label" for="upload-file__input_2">
+                      <img src="../img/icons/document-white.svg" alt="" class="upload-file__icon" />
+                      <span class="upload-file__text">Прикрепить резюме</span>
+                    </label>
+                    <div class="files"></div>
+                  </div>
+
+                  <button type="submit" id="special-offer-btn" class="button button_accent">
+                    Отправить
+                  </button>
+                  <label class="checkbox-other">
+                    <input data-special-offer type="checkbox" />
+                    <p>
+                      Даю согласие на обработку
+                      <a href="#" class="checkbox__link">
+                        персональных данных
+                      </a>
+                    </p>
+                  </label>
+                </form>
+              </div>
+              <div class="popup-message" >
+                <svg width="65" height="64" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="32.5" cy="32" r="32" fill="#003852"/>
+<path d="M27.8333 43L18.5 34.0009L22.6504 29.9991L27.8333 35.0105L42.3496 21L46.5 25.0018L27.8333 43Z" fill="white"/>
+</svg>
+<p>
+
+  Спасибо <br>
+Ваша заявка принята
+</p>
+              </div>
+              <div class="overlay js-overlay-modal"></div>
             </div>
           </div>
         </div>
-      </section>
-    </main>
-    <!--footer start-->
-    <footer class="footer">
+      </div>
+    </section>
+  </main>
+  <!--footer start-->
+  <footer class="footer">
+    <div class="footer__m">
       <div class="container">
         <div class="accordion" id="accordion">
-          <h3 class="">Покупателям <span class="accordion__line"></span></h3>
-          <div class="tabs__text" id="tabs-1" style="height: 0px">
+          <h3 class="accordion-header">
+            Покупателям <span class="accordion__line"></span>
+          </h3>
+          <div class="accordion-body tabs__text" id="tabs-1" style="height: 0px">
             <a href="#"> Проектирование </a>
             <a href="#">Проектирование</a>
             <a href="#">Проектирование</a>
@@ -500,17 +549,21 @@
             <a href="#">Проектирование</a>
             <a href="#">Проектирование</a>
           </div>
-          <h3 class="">Стандарты <span class="accordion__line"></span></h3>
-          <div class="tabs__text" id="tabs-2" style="height: 0px">
+          <h3 class="accordion-header">
+            Стандарты <span class="accordion__line"></span>
+          </h3>
+          <div class="accordion-body tabs__text" id="tabs-2" style="height: 0px">
             <a href="#">Проектирование</a>
           </div>
-          <h3 class="">О застройщике <span class="accordion__line"></span></h3>
-          <div class="tabs__text" id="tabs-3" style="height: 0px">
+          <h3 class="accordion-header">
+            О застройщике <span class="accordion__line"></span>
+          </h3>
+          <div class="accordion-body tabs__text" id="tabs-3" style="height: 0px">
             <a href="#">Проектирование</a>
           </div>
-          <h3>Контакты</h3>
+          <h3 class="accordion-header">Контакты</h3>
 
-          <div class="tabs__text" id="tabs-4" style="height: 0px">
+          <div class="accordion-body tabs__text" id="tabs-4" style="height: 0px">
             <a href="#">Проектирование</a>
           </div>
         </div>
@@ -523,34 +576,107 @@
             <a href="#" class="pie pie_primary social__link_s">
               <img src="../img/icons/youtube.svg" alt="" class="social__icon" />
             </a>
+
             <a href="#" class="pie pie_primary social__link_s">
-              <img
-                src="../img/icons/instagram.svg"
-                alt=""
-                class="social__icon"
-              />
-            </a>
-            <a href="#" class="pie pie_primary social__link_s">
-              <img
-                src="../img/icons/facebook.svg"
-                alt=""
-                class="social__icon"
-              />
+              <img src="../img/icons/facebook.svg" alt="" class="social__icon" />
             </a>
             <a href="#" class="pie pie_primary social__link_s">
               <img src="../img/icons/vk.svg" alt="" class="social__icon" />
             </a>
           </div>
           <div class="footer__contact">
-            <address>г.Уфа, ул.Мустая Каримова, д.16</address>
-            <a href="tell:73472008719">+7 (347) 200-87-19</a>
+            <address>г.Уфа, ул.Мустая Карима, д.16</address>
+            <a href="tel:73472008719">+7 (347) 200-87-19</a>
           </div>
           <p class="development">
             Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
           </p>
         </div>
       </div>
-    </footer>
-    <!--footer end-->
-  </body>
+    </div>
+    <div class="footer__d">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__top-left">
+            <div class="footer__content">
+              <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
+              <div class="footer__socials social">
+                <a href="#" class="pie pie_primary social__link_s">
+                  <img src="../img/icons/youtube.svg" alt="" class="social__icon" />
+                </a>
+
+                <a href="#" class="pie pie_primary social__link_s">
+                  <img src="../img/icons/facebook.svg" alt="" class="social__icon" />
+                </a>
+                <a href="#" class="pie pie_primary social__link_s">
+                  <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+                </a>
+              </div>
+              <div class="footer__contact">
+                <address>г.Уфа, ул.Мустая Карима, д.16</address>
+                <a href="tel:73472008719">+7 (347) 200-87-19</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__top-right">
+            <div class="footer__nav">
+              <h5 class="footer__nav-header">
+                Покупателям
+              </h5>
+              <a href="#" class="footer__nav-item">
+                Поселки
+              </a>
+              <a href="#" class="footer__nav-item">
+                Готовые дома
+              </a>
+            </div>
+            <div class="footer__nav">
+              <h5 class="footer__nav-header">
+                Покупателям
+              </h5>
+              <a href="#" class="footer__nav-item">
+                Поселки
+              </a>
+              <a href="#" class="footer__nav-item">
+                Готовые дома
+              </a>
+            </div>
+            <div class="footer__nav">
+              <h5 class="footer__nav-header">
+                Покупателям
+              </h5>
+              <a href="#" class="footer__nav-item">
+                Поселки
+              </a>
+              <a href="#" class="footer__nav-item">
+                Готовые дома
+              </a>
+            </div>
+            <div class="footer__nav">
+              <h5 class="footer__nav-header">
+                Покупателям
+              </h5>
+              <a href="#" class="footer__nav-item">
+                Поселки
+              </a>
+              <a href="#" class="footer__nav-item">
+                Готовые дома
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__bottom-left">
+            Все права защищены
+          </p>
+          <p class="development footer__bottom-right">
+            Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--footer end-->
+</body>
+
 </html>

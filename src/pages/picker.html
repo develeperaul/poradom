@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poradom</title>
+  </head>
+
+  <body>
+    <div class="top-arrow" id="arrow">
+      <div class="arrow-icon">
+        <svg
+          width="14"
+          height="8"
+          viewBox="0 0 14 8"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M13 7L7 1L1 7" stroke="white" stroke-linecap="round" />
+        </svg>
+      </div>
+    </div>
+    <section class="sidebar">
+      <div class="container">
+        <div class="header__wrapper"></div>
+        <div class="header__top">
+          <img src="../img/icons/logo1.svg" alt="" class="logo" />
+          <div class="header__trigger">
+            <button class="menu-trigger active" id="menu-sidebar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <span class="menu-trigger__text"> Меню </span>
+          </div>
+          <div class="header__contacts">
+            <div class="social">
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/youtube.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/facebook.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+              <a href="#" class="pie pie_primary social__link_s">
+                <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+              </a>
+            </div>
+            <div class="header__contact contact">
+              <address>г.Уфа, ул.Мустая Карима, д.16</address>
+              <a href="tel:73472008719">+7 (347) 200-87-19</a>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar__list accordion" id="sidebar-accordion">
+          <h3 class="">Покупателям</h3>
+          <div class="tabs__text" id="tabs-1" style="height: 0px">
+            <a href="#"> Проектирование </a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+          </div>
+          <h3 class="">Стандарты</h3>
+          <div class="tabs__text" id="tabs-2" style="height: 0px">
+            <a href="#">Проектирование</a>
+          </div>
+          <h3 class="">О застройщике</h3>
+          <div class="tabs__text" id="tabs-3" style="height: 0px">
+            <a href="#">Проектирование</a>
+          </div>
+        </div>
+        <div id="list_03">
+          <ul class="sidebar__list-desktop">
+            <li class="sidebar__item" data-node="#list_01-1">
+              <a href="#">
+                <span class="sidebar__item-left">01 —</span>
+                <span class="sidebar__item-right">Коттеджные посёлки</span>
+              </a>
+            </li>
+            <li class="sidebar__item" data-node="#list_02-1">
+              <a href="#">
+                <span class="sidebar__item-left">02 —</span>
+                <span class="sidebar__item-right">Готовые дома</span>
+              </a>
+            </li>
+            <li class="sidebar__item" data-node="#list_03-1">
+              <a href="#">
+                <span class="sidebar__item-left">03 —</span>
+                <span class="sidebar__item-right">Проекты</span>
+              </a>
+              <div
+                class="sidebar___list_desktop-2 sidebar__children"
+                id="list_03-1"
+                style="display: none"
+              >
+                <ul class="sidebar-children__list">
+                  <li class="sidebar__item" data-node="#list_03_1-2">
+                    <a href="#">Серия Первый Дом</a>
+                  </li>
+                  <li class="sidebar__item" data-node="#list_03_2-2">
+                    <a href="#">Серия NATUR-A</a>
+                  </li>
+                  <li class="sidebar__item" data-node="#list_03_3-2">
+                    <a href="#">Серия Элегант</a>
+                  </li>
+                  <li class="sidebar__item" data-node="#list_03_4-2">
+                    <a href="#">Серия Классик</a>
+                  </li>
+                  <li class="sidebar__item" data-node="#list_03_5-2">
+                    <a href="#">Кирпичный Стандарт</a>
+                  </li>
+                  <li class="sidebar__item" data-node="#list_03_6-2">
+                    <a href="#">Серия Ред Лайт</a>
+                    <div
+                      class="sidebar__list_desktop-3 sidebar__children"
+                      id="list_03_6-2"
+                      style="display: none"
+                    >
+                      <ul class="sidebar-children__list">
+                        <li class="sidebar__item" data-node="#list_03_6_1-3">
+                          <a href="#">Кирпичный Стандарт 105</a>
+                        </li>
+                        <li class="sidebar__item" data-node="#list_03_6_2-3">
+                          <a href="#">Кирпичный Стандарт 120</a>
+                        </li>
+                        <li class="sidebar__item" data-node="#list_03_6_3-3">
+                          <a href="#">Кирпичный Стандарт 140</a>
+                        </li>
+                        <li class="sidebar__item" data-node="#list_03_6_4-3">
+                          <a href="#">Кирпичный Стандарт 150</a>
+                        </li>
+                        <li class="sidebar__item" data-node="#list_03_6_5-3">
+                          <a href="#">Кирпичный Стандарт 170</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="sidebar__item" data-node="#list_03_7-2">
+                    <a href="#">Индивидуальный проект</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar__item" data-node="#list_04-1">
+              <a href="#">
+                <span class="sidebar__item-left">04 —</span>
+                <span class="sidebar__item-right">Стандарты Порадом</span>
+              </a>
+            </li>
+            <li class="sidebar__item" data-node="#list_05-1">
+              <a href="#">
+                <span class="sidebar__item-left">05 —</span>
+                <span class="sidebar__item-right">Компания Порадом</span>
+              </a>
+            </li>
+            <li class="sidebar__item" data-node="#list_06-1">
+              <a href="#">
+                <span class="sidebar__item-left">06 —</span>
+                <span class="sidebar__item-right">Галерея</span>
+              </a>
+            </li>
+            <li class="sidebar__item" data-node="#list_07-1">
+              <a href="#">
+                <span class="sidebar__item-left">07 —</span>
+                <span class="sidebar__item-right">Новости</span>
+              </a>
+            </li>
+            <li class="sidebar__item" data-node="#list_08-1">
+              <a href="#">
+                <span class="sidebar__item-left">08 —</span>
+                <span class="sidebar__item-right">Отзывы</span>
+              </a>
+            </li>
+            <li class="sidebar__item" data-node="#list_09-1">
+              <a href="#">
+                <span class="sidebar__item-left">09 —</span>
+                <span class="sidebar__item-right">Контакты</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!--header start-->
+    <div
+      class="header__top_white header__top_fixed header__top_fixed-open"
+      style="display: none"
+    >
+      <div class="container header__top">
+        <img src="../img/icons/logo3.svg" alt="" class="logo" />
+        <div class="header__trigger">
+          <button class="menu-trigger" id="menu-header_fixed">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <span class="menu-trigger__text"> Меню </span>
+        </div>
+        <div class="header__contacts">
+          <div class="social">
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/youtube.svg" alt="" class="social__icon" />
+            </a>
+
+            <a href="#" class="pie pie_primary social__link_s">
+              <img
+                src="../img/icons/facebook.svg"
+                alt=""
+                class="social__icon"
+              />
+            </a>
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+            </a>
+          </div>
+          <div class="header__contact contact">
+            <address>г.Уфа, ул.Мустая Карима, д.16</address>
+            <a href="tel:73472008719">+7 (347) 200-87-19</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="header">
+      <div class="header__top_absolute header-nav">
+        <div class="container header__top">
+          <img src="../img/icons/logo1.svg" alt="" class="logo" />
+          <div class="header__trigger">
+            <button class="menu-trigger" id="menu-header">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <span class="menu-trigger__text"> Меню </span>
+          </div>
+          <div class="header__contacts">
+            <div class="social">
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/youtube.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/facebook.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+              <a href="#" class="pie pie_primary social__link_s">
+                <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+              </a>
+            </div>
+            <div class="header__contact contact">
+              <address>г.Уфа, ул.Мустая Карима, д.16</address>
+              <a href="tel:73472008719">+7 (347) 200-87-19</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-built">
+        <div class="container header-built__wrapper">
+          <img
+            src="../img/icons/pickup.svg"
+            alt=""
+            class="header-built__image"
+          />
+          <img
+            src="../img/icons/pickup_desktop.svg"
+            alt=""
+            class="header-built__image_desktop"
+          />
+          <div class="built__drop">
+            <h3 class="built__dropdowns-title">Я хочу</h3>
+            <div class="built__wrapper">
+              <div id="dropdown_1" class="dropdown" data-type="type">
+                <div
+                  id="dropdownHeader_1"
+                  class="dropdown__header dropdown__header--hide"
+                >
+                  <div
+                    id="dropdownHeaderValue_1"
+                    class="dropdown__header--title"
+                  >
+                    Тип
+                  </div>
+                  <div class="dropdown__header--icon">
+                    <img
+                      id="chevronIcon_1"
+                      class="fas fa-angle-down rotate-icon-home"
+                      src="../img/icons/down.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div
+                  id="dropdownListBody_1"
+                  class="dropdown__body dropdown__body--hide"
+                >
+                  <ul id="dropdownList_1" class="dropdown__body--list">
+                    <li class="dropdown__body--list-index" data-index-type="1">
+                      Дом
+                    </li>
+                    <li class="dropdown__body--list-index" data-index-type="2">
+                      Таунхаус
+                    </li>
+                    <li class="dropdown__body--list-index" data-index-type="3">
+                      Готовый дом
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div id="dropdown_2" class="dropdown" data-type="poselok">
+                <div
+                  id="dropdownHeader_2"
+                  class="dropdown__header dropdown__header--hide"
+                >
+                  <div
+                    id="dropdownHeaderValue_2"
+                    class="dropdown__header--title"
+                  >
+                    Посёлок
+                  </div>
+                  <div class="dropdown__header--icon">
+                    <img
+                      id="chevronIcon_2"
+                      class="fas fa-angle-down rotate-icon-home"
+                      src="../img/icons/down.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div
+                  id="dropdownListBody_2"
+                  class="dropdown__body dropdown__body--hide"
+                >
+                  <ul id="dropdownList_2" class="dropdown__body--list">
+                    <li class="dropdown__body--list-index" data-index-type="8">
+                      Девичья гора
+                    </li>
+                    <li class="dropdown__body--list-index" data-index-type="10">
+                      Есенинский 2
+                    </li>
+                    <li class="dropdown__body--list-index" data-index-type="11">
+                      Нагаевская Роща
+                    </li>
+                    <li class="dropdown__body--list-index" data-index-type="12">
+                      Цветы Башкирии
+                    </li>
+                    <li class="dropdown__body--list-index" data-index-type="13">
+                      Есенинский
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div id="dropdown_3" class="dropdown" data-type="s">
+                <div
+                  id="dropdownHeader_3"
+                  class="dropdown__header dropdown__header--hide"
+                >
+                  <div
+                    id="dropdownHeaderValue_3"
+                    class="dropdown__header--title"
+                  >
+                    Площадь дома
+                  </div>
+                  <div class="dropdown__header--icon">
+                    <img
+                      id="chevronIcon_3"
+                      class="fas fa-angle-down rotate-icon-home"
+                      src="../img/icons/down.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div
+                  id="dropdownListBody_3"
+                  class="dropdown__body dropdown__body--hide"
+                >
+                  <ul id="dropdownList_3" class="dropdown__body--list">
+                    <li class="dropdown__body--list-index" data-index-type="85">
+                      85
+                    </li>
+                    <li class="dropdown__body--list-index" data-index-type="99">
+                      99
+                    </li>
+                    <li
+                      class="dropdown__body--list-index"
+                      data-index-type="100"
+                    >
+                      100
+                    </li>
+                    <li
+                      class="dropdown__body--list-index"
+                      data-index-type="105"
+                    >
+                      105
+                    </li>
+                    <li
+                      class="dropdown__body--list-index"
+                      data-index-type="120"
+                    >
+                      120
+                    </li>
+                    <li
+                      class="dropdown__body--list-index"
+                      data-index-type="125"
+                    >
+                      125
+                    </li>
+                    <li
+                      class="dropdown__body--list-index"
+                      data-index-type="135"
+                    >
+                      135
+                    </li>
+                    <li
+                      class="dropdown__body--list-index"
+                      data-index-type="140"
+                    >
+                      140
+                    </li>
+                    <li
+                      class="dropdown__body--list-index"
+                      data-index-type="150"
+                    >
+                      150
+                    </li>
+                    <li
+                      class="dropdown__body--list-index"
+                      data-index-type="155"
+                    >
+                      155
+                    </li>
+                    <li
+                      class="dropdown__body--list-index"
+                      data-index-type="170"
+                    >
+                      170
+                    </li>
+                    <li
+                      class="dropdown__body--list-index"
+                      data-index-type="180"
+                    >
+                      180
+                    </li>
+                    <li
+                      class="dropdown__body--list-index"
+                      data-index-type="207"
+                    >
+                      207
+                    </li>
+                    <li
+                      class="dropdown__body--list-index"
+                      data-index-type="220"
+                    >
+                      220
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div id="dropdown_4" class="dropdown" data-type="su">
+                <div
+                  id="dropdownHeader_4"
+                  class="dropdown__header dropdown__header--hide"
+                >
+                  <div
+                    id="dropdownHeaderValue_4"
+                    class="dropdown__header--title"
+                  >
+                    Площадь участка
+                  </div>
+                  <div class="dropdown__header--icon">
+                    <img
+                      id="chevronIcon_4"
+                      class="fas fa-angle-down rotate-icon-home"
+                      src="../img/icons/down.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div
+                  id="dropdownListBody_4"
+                  class="dropdown__body dropdown__body--hide"
+                >
+                  <ul id="dropdownList_4" class="dropdown__body--list">
+                    <li
+                      class="dropdown__body--list-index"
+                      data-index-type="12.45"
+                    >
+                      12.45
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <a
+                href="#"
+                data-href="https://poradom.com/podborshchik"
+                class="button button_accent dropdown__btn"
+              >
+                Показать варианты
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--header end-->
+    <main>
+      <section class="section ready-homes">
+        <div class="container">
+          <div class="section__crumbs bread-crumbs">
+            <a href="home.html">ПОРАДОМ</a>
+            <a href="#">Поиск недвижимости</a>
+          </div>
+          <div class="ready-homes__top">
+            <h2 class="section__title">Найдено ХХ предложений</h2>
+            <div class="square card-filter__wrapper">
+              <span></span>
+              <span></span>
+              <div class="card-filter">
+                <span class="card-filter__item" data-get="1"
+                  >по возрастанию цены</span
+                >
+                <span class="card-filter__item"
+                  >по возрастанию площади дома</span
+                >
+                <span class="card-filter__item"
+                  >по возрастанию площади участка</span
+                >
+                <span class="card-filter__item">по сроку сдачи</span>
+              </div>
+            </div>
+          </div>
+          <div class="ready-homes__bottom">
+            <div class="distance__wrapper">
+              <div class="card card_label">
+                <div class="card__label label">
+                  <div class="label__text"><span>Хит продаж</span></div>
+                  <img src="../img/icons/label-blue.svg" alt="" />
+                </div>
+                <div class="location card__location_p">
+                  <div class="location__image">
+                    <img src="../img/icons/location.svg" alt="" />
+                  </div>
+                  <h5 class="location__title">Нагаева</h5>
+                </div>
+
+                <a href="#">
+                  <img src="../img/main.png" alt="" class="card__image" />
+                </a>
+
+                <div class="card__container">
+                  <div class="card__container_l">
+                    <h5 class="card__address">
+                      Есенинский-2, ул. Лесная поляна, 8
+                    </h5>
+                    <div class="card__content card__content_s">
+                      <h4 class="card__title">Кирпичный Стандарт 170</h4>
+                    </div>
+                    <div class="card__info">
+                      <div>
+                        <h6 class="card__region-size-title">S участка</h6>
+                        <p class="card__region-size-text">18.25 соток</p>
+                      </div>
+                      <div>
+                        <h6 class="card__dedlain-title">Срок сдачи</h6>
+                        <p class="card__dedlain-text">IV кв 2022</p>
+                      </div>
+                    </div>
+                    <a href="#" class="button button_border">5 884 954 ₽</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card card_label">
+                <div class="card__label label">
+                  <div class="label__text"><span>Хит продаж</span></div>
+                  <img src="../img/icons/label-blue.svg" alt="" />
+                </div>
+                <div class="location card__location_p">
+                  <div class="location__image">
+                    <img src="../img/icons/location.svg" alt="" />
+                  </div>
+                  <h5 class="location__title">Нагаева</h5>
+                </div>
+
+                <a href="#">
+                  <img src="../img/main.png" alt="" class="card__image" />
+                </a>
+
+                <div class="card__container">
+                  <div class="card__container_l">
+                    <h5 class="card__address">
+                      Есенинский-2, ул. Лесная поляна, 8
+                    </h5>
+                    <div class="card__content card__content_s">
+                      <h4 class="card__title">Кирпичный Стандарт 170</h4>
+                    </div>
+                    <div class="card__info">
+                      <div>
+                        <h6 class="card__region-size-title">S участка</h6>
+                        <p class="card__region-size-text">18.25 соток</p>
+                      </div>
+                      <div>
+                        <h6 class="card__dedlain-title">Срок сдачи</h6>
+                        <p class="card__dedlain-text">IV кв 2022</p>
+                      </div>
+                    </div>
+                    <a href="#" class="button button_border">5 884 954 ₽</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card card_label">
+                <div class="card__label label">
+                  <div class="label__text"><span>Хит продаж</span></div>
+                  <img src="../img/icons/label-blue.svg" alt="" />
+                </div>
+                <div class="location card__location_p">
+                  <div class="location__image">
+                    <img src="../img/icons/location.svg" alt="" />
+                  </div>
+                  <h5 class="location__title">Нагаева</h5>
+                </div>
+
+                <a href="#">
+                  <img src="../img/main.png" alt="" class="card__image" />
+                </a>
+
+                <div class="card__container">
+                  <div class="card__container_l">
+                    <h5 class="card__address">
+                      Есенинский-2, ул. Лесная поляна, 8
+                    </h5>
+                    <div class="card__content card__content_s">
+                      <h4 class="card__title">Кирпичный Стандарт 170</h4>
+                    </div>
+                    <div class="card__info">
+                      <div>
+                        <h6 class="card__region-size-title">S участка</h6>
+                        <p class="card__region-size-text">18.25 соток</p>
+                      </div>
+                      <div>
+                        <h6 class="card__dedlain-title">Срок сдачи</h6>
+                        <p class="card__dedlain-text">IV кв 2022</p>
+                      </div>
+                    </div>
+                    <a href="#" class="button button_border">5 884 954 ₽</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card card_label">
+                <div class="card__label label">
+                  <div class="label__text"><span>Хит продаж</span></div>
+                  <img src="../img/icons/label-blue.svg" alt="" />
+                </div>
+                <div class="location card__location_p">
+                  <div class="location__image">
+                    <img src="../img/icons/location.svg" alt="" />
+                  </div>
+                  <h5 class="location__title">Нагаева</h5>
+                </div>
+
+                <a href="#">
+                  <img src="../img/main.png" alt="" class="card__image" />
+                </a>
+
+                <div class="card__container">
+                  <div class="card__container_l">
+                    <h5 class="card__address">
+                      Есенинский-2, ул. Лесная поляна, 8
+                    </h5>
+                    <div class="card__content card__content_s">
+                      <h4 class="card__title">Кирпичный Стандарт 170</h4>
+                    </div>
+                    <div class="card__info">
+                      <div>
+                        <h6 class="card__region-size-title">S участка</h6>
+                        <p class="card__region-size-text">18.25 соток</p>
+                      </div>
+                      <div>
+                        <h6 class="card__dedlain-title">Срок сдачи</h6>
+                        <p class="card__dedlain-text">IV кв 2022</p>
+                      </div>
+                    </div>
+                    <a href="#" class="button button_border">5 884 954 ₽</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--footer start-->
+    <footer class="footer">
+      <div class="footer__m">
+        <div class="container">
+          <div class="accordion" id="accordion">
+            <h3 class="accordion-header">
+              Покупателям <span class="accordion__line"></span>
+            </h3>
+            <div
+              class="accordion-body tabs__text"
+              id="tabs-1"
+              style="height: 0px"
+            >
+              <a href="#"> Проектирование </a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="accordion-header">
+              Стандарты <span class="accordion__line"></span>
+            </h3>
+            <div
+              class="accordion-body tabs__text"
+              id="tabs-2"
+              style="height: 0px"
+            >
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="accordion-header">
+              О застройщике <span class="accordion__line"></span>
+            </h3>
+            <div
+              class="accordion-body tabs__text"
+              id="tabs-3"
+              style="height: 0px"
+            >
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="accordion-header">Контакты</h3>
+
+            <div
+              class="accordion-body tabs__text"
+              id="tabs-4"
+              style="height: 0px"
+            >
+              <a href="#">Проектирование</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__line"></div>
+        <div class="container">
+          <div class="footer__content">
+            <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
+            <div class="footer__socials social">
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/youtube.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/facebook.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+              <a href="#" class="pie pie_primary social__link_s">
+                <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+              </a>
+            </div>
+            <div class="footer__contact">
+              <address>г.Уфа, ул.Мустая Карима, д.16</address>
+              <a href="tel:73472008719">+7 (347) 200-87-19</a>
+            </div>
+            <p class="development">
+              Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__d">
+        <div class="container">
+          <div class="footer__top">
+            <div class="footer__top-left">
+              <div class="footer__content">
+                <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
+                <div class="footer__socials social">
+                  <a href="#" class="pie pie_primary social__link_s">
+                    <img
+                      src="../img/icons/youtube.svg"
+                      alt=""
+                      class="social__icon"
+                    />
+                  </a>
+
+                  <a href="#" class="pie pie_primary social__link_s">
+                    <img
+                      src="../img/icons/facebook.svg"
+                      alt=""
+                      class="social__icon"
+                    />
+                  </a>
+                  <a href="#" class="pie pie_primary social__link_s">
+                    <img
+                      src="../img/icons/vk.svg"
+                      alt=""
+                      class="social__icon"
+                    />
+                  </a>
+                </div>
+                <div class="footer__contact">
+                  <address>г.Уфа, ул.Мустая Карима, д.16</address>
+                  <a href="tel:73472008719">+7 (347) 200-87-19</a>
+                </div>
+              </div>
+            </div>
+            <div class="footer__top-right">
+              <div class="footer__nav">
+                <h5 class="footer__nav-header">Покупателям</h5>
+                <a href="#" class="footer__nav-item"> Поселки </a>
+                <a href="#" class="footer__nav-item"> Готовые дома </a>
+              </div>
+              <div class="footer__nav">
+                <h5 class="footer__nav-header">Покупателям</h5>
+                <a href="#" class="footer__nav-item"> Поселки </a>
+                <a href="#" class="footer__nav-item"> Готовые дома </a>
+              </div>
+              <div class="footer__nav">
+                <h5 class="footer__nav-header">Покупателям</h5>
+                <a href="#" class="footer__nav-item"> Поселки </a>
+                <a href="#" class="footer__nav-item"> Готовые дома </a>
+              </div>
+              <div class="footer__nav">
+                <h5 class="footer__nav-header">Покупателям</h5>
+                <a href="#" class="footer__nav-item"> Поселки </a>
+                <a href="#" class="footer__nav-item"> Готовые дома </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <p class="footer__bottom-left">Все права защищены</p>
+            <p class="development footer__bottom-right">
+              Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--footer end-->
+  </body>
+</html>

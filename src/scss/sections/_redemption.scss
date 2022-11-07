@@ -1,0 +1,49 @@
+.redemption {
+  &__text {
+    margin-bottom: 20px;
+    @include desktop-tablet {
+      font-size: 14px;
+    }
+    @include desktop-laptop {
+    }
+    @include desktop-desktop {
+      font-size: 26px;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @include desktop-tablet {
+      gap: 30px;
+    }
+    @include desktop-laptop {
+      flex-direction: row;
+      gap: 80px;
+    }
+    @include desktop-desktop {
+      gap: 150px;
+    }
+    &-top {
+      height: 320px;
+      width: 100%;
+      object-fit: cover;
+      @include desktop-tablet {
+        height: 445px;
+      }
+      @include desktop-laptop {
+        max-width: 546px;
+        height: 334px;
+      }
+      @include desktop-desktop {
+        max-width: 900px;
+        height: 550px;
+      }
+    }
+    &-bottom {
+      @include desktop-tablet_to_laptop {
+        align-self: flex-end;
+      }
+    }
+  }
+}

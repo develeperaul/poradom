@@ -1,0 +1,16 @@
+.ready-homes {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    @include desktop-desktop {
+      margin-bottom: 40px;
+    }
+
+    & > .section__title {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.advantages {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @include desktop-tablet {
+      margin-left: $space-l-t;
+      flex-direction: row;
+      gap: 21px;
+    }
+    @include desktop-laptop {
+      margin-left: $space-l-l;
+      gap: 87px;
+    }
+    @include desktop-desktop {
+      margin-left: $space-l-d;
+      gap: 170px;
+    }
+    & .cards-mini {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 236px));
+      @include desktop-tablet {
+        grid-template-columns: repeat(2, minmax(0, 160px));
+      }
+      @include desktop-laptop {
+        grid-template-columns: repeat(2, minmax(0, 170px));
+        column-gap: 37px;
+      }
+      @include desktop-desktop {
+        column-gap: 0;
+        grid-template-columns: repeat(2, minmax(0, 236px));
+      }
+    }
+    & .form {
+      @include desktop-tablet_to_laptop {
+        max-width: 235px;
+      }
+    }
+  }
+}

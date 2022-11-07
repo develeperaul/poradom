@@ -1,41 +1,90 @@
 .project {
   position: relative;
   background-color: $secondary;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
+
+  @include desktop-tablet {
+    padding-bottom: 0;
+  }
+
   &__line {
     &-top,
     &-bottom {
       position: absolute;
       background-color: $primary;
     }
+
     &-top {
       top: 0;
       left: 20px;
       width: 1px;
       height: 40px;
+      @include desktop-tablet {
+        left: 50px;
+      }
+      @include desktop-laptop {
+        left: 60px;
+      }
+      @include desktop-desktop {
+        left: 130px;
+        height: 80px;
+      }
     }
+
     &-bottom {
       bottom: 0;
       left: 20px;
       width: 1px;
       height: 160px;
+      @include desktop-tablet {
+        left: 50px;
+        height: 90px;
+      }
+      @include desktop-laptop {
+        left: 60px;
+        height: 100px;
+      }
+      @include desktop-desktop {
+        left: 130px;
+        height: 170px;
+      }
     }
   }
+
   &__number {
     position: absolute;
     display: flex;
     align-items: center;
     left: 7px;
     top: 40px;
+    @include desktop-tablet {
+      left: $gap-t;
+    }
+    @include desktop-laptop {
+      left: $gap-l;
+    }
+    @include desktop-desktop {
+      left: $gap;
+      top: 80px;
+    }
   }
 
   &__bottom {
     &-title {
-      padding-left: 23px;
-      padding-right: 4px;
       color: #fff;
-      margin-right: 12px;
       z-index: 11;
+      @include desktop-tablet {
+        display: none;
+      }
+      @include desktop-laptop {
+        display: inline-block;
+        font-size: 18px;
+        line-height: 120%;
+      }
+      @include desktop-desktop {
+        font-size: 26px;
+        line-height: 120%;
+      }
       &:first-child {
         transform: translateY(5px);
       }
@@ -48,32 +97,97 @@
     width: 100%;
     z-index: 9;
   }
+
   &__top {
     position: relative;
     display: flex;
     justify-content: space-between;
   }
+
   &__title {
     z-index: 9;
-    & > span:first-child {
-      padding-top: 9px;
+    margin-bottom: 23px;
+
+    @include desktop-desktop {
+      margin-bottom: 70px;
     }
+
+    & > span:first-child {
+      display: block;
+    }
+
     & > span {
-      padding-right: 13px;
-      padding-left: 10px;
     }
   }
+
   &__top {
     padding-top: 40px;
     display: flex;
     justify-content: end;
   }
+
   &__icon {
+    position: absolute;
+    top: 50px;
+
+    @include desktop-desktop {
+      top: 125px;
+      width: 275px;
+      height: 311px;
+    }
   }
+
   &__bottom {
-    padding-left: 21px;
-    transform: translateY(-20px);
+    position: relative;
+    width: 238px;
+    margin-left: auto;
+    // margin-right: 0em;
+    z-index: 8;
+
+    @include desktop-tablet {
+      display: block;
+      width: 100%;
+      // width: auto;
+      // display: grid;
+      // grid-template-columns: repeat(2, 1fr);
+      // gap: 70px;
+    }
+
+    &-content {
+      @include desktop-tablet {
+        position: absolute;
+        left: 45px;
+        top: 45px;
+        margin: 0;
+        // margin-left: 155px;
+        // margin-right: -70px;
+        // margin-top: 130px;
+      }
+      @include desktop-desktop {
+        left: 95px;
+        top: 130px;
+      }
+    }
   }
+
   &__image {
+    object-fit: cover;
+    @include desktop-tablet {
+      // order: 2;
+      // flex-grow: 1;
+      margin-right: 0;
+      margin-left: auto;
+      min-height: 310px;
+      width: 384px;
+    }
+
+    @include desktop-laptop {
+      width: 440px;
+    }
+
+    @include desktop-desktop {
+      width: 900px;
+      min-height: 700px;
+    }
   }
 }

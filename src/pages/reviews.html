@@ -1,289 +1,650 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Poradom</title>
+  </head>
 
-</head>
-
-<body>
-      <div class="top-arrow" id="arrow">
+  <body>
+    <div class="top-arrow" id="arrow">
       <div class="arrow-icon">
-            <svg
-              width="14"
-              height="8"
-              viewBox="0 0 14 8"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M13 7L7 1L1 7" stroke="white" stroke-linecap="round" />
-            </svg>
-          </div>
+        <svg
+          width="14"
+          height="8"
+          viewBox="0 0 14 8"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M13 7L7 1L1 7" stroke="white" stroke-linecap="round" />
+        </svg>
+      </div>
     </div>
-    <section class="sidebar ">
-        <div class="container">
-            <div class="header__wrapper">
-                <div class="header__top">
-                    <img src="../img/icons/logo1.svg" alt="" />
-                    <button class="menu-trigger active" id="menu-sidebar">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
+    <section class="sidebar">
+      <div class="container">
+        <div class="header__wrapper"></div>
+          <div class="header__top">
+            <img src="../img/icons/logo1.svg" alt="" class="logo" />
+            <div class="header__trigger">
+              <button class="menu-trigger active" id="menu-sidebar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <span class="menu-trigger__text"> Меню </span>
             </div>
+            <div class="header__contacts">
+              <div class="social">
+                <a href="#" class="pie pie_primary social__link_s">
+                  <img
+                    src="../img/icons/youtube.svg"
+                    alt=""
+                    class="social__icon"
+                  />
+                </a>
 
-            <div class="sidebar__list accordion" id="sidebar-accordion">
-                <h3 class="">Покупателям </h3>
-                <div class="tabs__text" id="tabs-1" style="height: 0px;">
-                    <a href="#">
-                        Проектирование
-                    </a>
-                    <a href="#">Проектирование</a>
-                    <a href="#">Проектирование</a>
-                    <a href="#">Проектирование</a>
-                    <a href="#">Проектирование</a>
-                    <a href="#">Проектирование</a>
-
-                </div>
-                <h3 class="">Стандарты</h3>
-                <div class="tabs__text" id="tabs-2" style="height: 0px;">
-                    <a href="#">Проектирование</a>
-                </div>
-                <h3 class="">О застройщике </h3>
-                <div class="tabs__text" id="tabs-3" style="height: 0px;">
-                    <a href="#">Проектирование</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <header class="header " >
-      <div class="header__top header__top_absolute">
-            <img src="../img/icons/logo1.svg" alt="" />
-            <button class="menu-trigger" id="menu-header">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          </div>
-
-        <a href="tg://resolve?domain=username" class="pie pie_big pie_blue drop__children children">
-          <img src="../img/icons/telega.svg" alt="">
-        </a>
-        <a href="https://wa.me/799999999" class="pie pie_big pie_blue drop__children children">
-          <img src="../img/icons/whatsapp.svg" alt="">
-        </a>
-        <a href="tel:+799999999" class="pie pie_big pie_blue drop__children children">
-          <img src="../img/icons/phone.svg" alt="">
-        </a>
-        <span class="pie pie_big pie_accent drop drop_sq" id="drop">
-        <span></span><span></span><span></span><span></span>
-        </span>
-      <div class="swiper headerSwiper">
-        <div class="swiper-wrapper swiper-wrapper_pb">
-          
-          <div class="swiper-slide swiper-slide_pb  header__bottom">
-            <div class="carousel">
-                <div>
-                  
-                </div>
-                <h2 class="carousel__title">Новый проект <br> со вторым <br> светом</h2>
-                <p class="carousel__text">Запишитесь на экскурсию, <br>
-                чтобы увидеть это первыми!
-                </p>
-                <buttton class="carousel__btn button button_accent">Записаться на экскурсию</buttton>
-              </div>  
-          </div>
-          <div class="swiper-slide swiper-slide_pb header__bottom">
-            <div class="carousel">
-              <div>
-                
+                <a href="#" class="pie pie_primary social__link_s">
+                  <img
+                    src="../img/icons/facebook.svg"
+                    alt=""
+                    class="social__icon"
+                  />
+                </a>
+                <a href="#" class="pie pie_primary social__link_s">
+                  <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+                </a>
               </div>
-              <h2 class="carousel__title">Новый проект <br> со вторым <br> светом</h2>
-              <p class="carousel__text">Запишитесь на экскурсию, <br>
-                чтобы увидеть это первыми! 
-
-              </p>
-              <buttton class="carousel__btn button button_accent">Записаться на экскурсию</buttton>
-            </div>
-          </div>
-          <div class="swiper-slide swiper-slide_pb header__bottom">
-            <div class="carousel">
-              <div>
-                
+              <div class="header__contact contact">
+                <address>г.Уфа, ул.Мустая Карима, д.16</address>
+                <a href="tel:73472008719">+7 (347) 200-87-19</a>
               </div>
-              <h2 class="carousel__title">Новый проект <br> со вторым <br> светом</h2>
-              <p class="carousel__text">Запишитесь на экскурсию, <br>
-                чтобы увидеть это первыми!</p>
-              <buttton class="carousel__btn button button_accent">Записаться на экскурсию</buttton>
             </div>
           </div>
-        </div>
-        <div class=" swiper-numbs swiper-numbs_position"></div>
+          <div class="sidebar__list accordion" id="sidebar-accordion">
+            <h3 class="">Покупателям</h3>
+            <div class="tabs__text" id="tabs-1" style="height: 0px">
+              <a href="#"> Проектирование </a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="">Стандарты</h3>
+            <div class="tabs__text" id="tabs-2" style="height: 0px">
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="">О застройщике</h3>
+            <div class="tabs__text" id="tabs-3" style="height: 0px">
+              <a href="#">Проектирование</a>
+            </div>
+          </div>
+          <div id="list_03">
+
+            <ul class="sidebar__list-desktop">
+              <li class="sidebar__item" data-node="#list_01-1">
+                <a href="#">
+                  <span class="sidebar__item-left">01 —</span>
+                  <span class="sidebar__item-right">Коттеджные посёлки</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_02-1">
+                <a href="#">
+                  <span class="sidebar__item-left">02 —</span>
+                  <span class="sidebar__item-right">Готовые дома</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_03-1">
+                <a href="#">
+                  <span class="sidebar__item-left">03 —</span>
+                  <span class="sidebar__item-right">Проекты</span>
+                </a>
+                <div class="sidebar___list_desktop-2 sidebar__children" id="list_03-1" style="display: none;">
+                  <ul class="sidebar-children__list">
+                    <li class="sidebar__item"  data-node="#list_03_1-2"><a href="#">Серия Первый Дом</a></li>
+                    <li class="sidebar__item"  data-node="#list_03_2-2"><a href="#">Серия NATUR-A</a></li>
+                    <li class="sidebar__item"  data-node="#list_03_3-2"><a href="#">Серия Элегант</a></li>
+                    <li class="sidebar__item"  data-node="#list_03_4-2"><a href="#">Серия Классик</a></li>
+                    <li class="sidebar__item"  data-node="#list_03_5-2"><a href="#">Кирпичный Стандарт</a></li>
+                    <li class="sidebar__item" data-node="#list_03_6-2">
+                      <a href="#" >Серия Ред Лайт</a>
+                      <div class="sidebar__list_desktop-3 sidebar__children" id="list_03_6-2" style="display: none;">
+                        <ul class="sidebar-children__list">
+                          <li class="sidebar__item" data-node="#list_03_6_1-3"><a href="#">Кирпичный Стандарт 105</a></li>
+                          <li class="sidebar__item" data-node="#list_03_6_2-3"><a href="#">Кирпичный Стандарт 120</a></li>
+                          <li class="sidebar__item" data-node="#list_03_6_3-3"><a href="#">Кирпичный Стандарт 140</a></li>
+                          <li class="sidebar__item" data-node="#list_03_6_4-3"><a href="#">Кирпичный Стандарт 150</a></li>
+                          <li class="sidebar__item" data-node="#list_03_6_5-3"><a href="#">Кирпичный Стандарт 170</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="sidebar__item" data-node="#list_03_7-2"><a href="#" >Индивидуальный проект</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="sidebar__item" data-node="#list_04-1">
+                <a href="#">
+                  <span class="sidebar__item-left">04 —</span>
+                  <span class="sidebar__item-right">Стандарты Порадом</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_05-1">
+                <a href="#">
+                  <span class="sidebar__item-left">05 —</span>
+                  <span class="sidebar__item-right">Компания Порадом</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_06-1">
+                <a href="#">
+                  <span class="sidebar__item-left">06 —</span>
+                  <span class="sidebar__item-right">Галерея</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_07-1">
+                <a href="#">
+                  <span class="sidebar__item-left">07 —</span>
+                  <span class="sidebar__item-right">Новости</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_08-1">
+                <a href="#">
+                  <span class="sidebar__item-left">08 —</span>
+                  <span class="sidebar__item-right">Отзывы</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_09-1">
+                <a href="#">
+                  <span class="sidebar__item-left">09 —</span>
+                  <span class="sidebar__item-right">Контакты</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
       </div>
-      
-        <!-- 
-      <div class="container">
-        <div class="header__wrapper">
-          <div class="header__top">
-            <img src="../img/icons/logo1.svg" alt="" />
+    </section>
+        <div class="header__top_white header__top_fixed header__top_fixed-open " style="display: none;">
+        <div class="container header__top">
+          <img src="../img/icons/logo3.svg" alt="" class="logo" />
+          <div class="header__trigger">
             <button class="menu-trigger" id="menu-header">
               <span></span>
               <span></span>
               <span></span>
             </button>
+            <span class="menu-trigger__text"> Меню </span>
           </div>
+          <div class="header__contacts">
+            <div class="social">
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/youtube.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
 
-            <div class="swiper readySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide header__bottom">
-                    <div class="carousel">
-                      <h2 class="carousel__title">Новый проект <br> со вторым <br> светом</h2>
-                      <p class="carousel__text">Запишитесь на экскурсию, <br>
-                      чтобы увидеть это первыми!
-                      </p>
-                      <buttton class="button button_accent">Записаться на экскурсию</buttton>
-                    </div>  
-                </div>
-                <div class="swiper-slide header__bottom">
-                  <div class="carousel">
-                    <h2 class="carousel__title">Новый проект <br> со вторым <br> светом</h2>
-                    <p class="carousel__text">Запишитесь на экскурсию, <br>
-                      чтобы увидеть это первыми! 
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/facebook.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+              <a href="#" class="pie pie_primary social__link_s">
+                <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+              </a>
+            </div>
+            <div class="header__contact contact">
+              <address>г.Уфа, ул.Мустая Карима, д.16</address>
+              <a href="tel:73472008719">+7 (347) 200-87-19</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--header start-->
+    <header class="header">
+      <div class="header__top_absolute">
+        <div class="container header__top">
+          <img src="../img/icons/logo1.svg" alt="" class="logo" />
+          <div class="header__trigger">
+            <button class="menu-trigger" id="menu-header">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <span class="menu-trigger__text"> Меню </span>
+          </div>
+          <div class="header__contacts">
+            <div class="social">
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/youtube.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
 
-                    </p>
-                    <buttton class="button button_accent">Записаться на экскурсию</buttton>
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/facebook.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+              <a href="#" class="pie pie_primary social__link_s">
+                <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+              </a>
+            </div>
+            <div class="header__contact contact">
+              <address>г.Уфа, ул.Мустая Карима, д.16</address>
+              <a href="tel:73472008719">+7 (347) 200-87-19</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a
+        href="tg://resolve?domain=username"
+        class="pie pie_big pie_blue drop__children children"
+      >
+        <img src="../img/icons/telega.svg" alt="" />
+      </a>
+      <a
+        href="https://wa.me/799999999"
+        class="pie pie_big pie_blue drop__children children"
+      >
+        <img src="../img/icons/whatsapp.svg" alt="" />
+      </a>
+      <a
+        href="tel:+799999999"
+        class="pie pie_big pie_blue drop__children children"
+      >
+        <img src="../img/icons/phone.svg" alt="" />
+      </a>
+      <span class="pie pie_big pie_accent drop drop_sq" id="drop">
+        <span></span><span></span><span></span><span></span>
+      </span>
+
+      <div class="swiper headerSwiper">
+        <div class="swiper-wrapper swiper-wrapper_pb">
+          <div class="swiper-slide swiper-slide_pb header__bottom">
+            <div class="container container-slider carousel">
+              <h2 class="carousel__title">
+                Новый проект <br />
+                со вторым <br />
+                светом
+              </h2>
+              <p class="carousel__text">
+                Запишитесь на экскурсию, <br />
+                чтобы увидеть это первыми!
+              </p>
+              <div>
+                <buttton class="carousel__btn button button_accent"
+                  >Записаться на экскурсию</buttton
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide_pb header__bottom">
+            <div class="container container-slider carousel">
+              <h2 class="carousel__title">
+                Новый проект <br />
+                со вторым <br />
+                светом
+              </h2>
+              <p class="carousel__text">
+                Запишитесь на экскурсию, <br />
+                чтобы увидеть это первыми!
+              </p>
+              <div>
+                <buttton class="carousel__btn button button_accent"
+                  >Записаться на экскурсию</buttton
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide_pb header__bottom">
+            <div class="container container-slider carousel">
+              <h2 class="carousel__title">
+                Новый проект <br />
+                со вторым <br />
+                светом
+              </h2>
+              <p class="carousel__text">
+                Запишитесь на экскурсию, <br />
+                чтобы увидеть это первыми!
+              </p>
+              <div>
+                <buttton class="carousel__btn button button_accent"
+                  >Записаться на экскурсию</buttton
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="paginate-center">
+          <div class="swiper-numbs swiper-numbs_position"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="pick-up">
+          <div class="pick-up__left">
+            <a href="#">Готовые дома</a>
+            <a href="#">Проекты домов</a>
+            <a href="#">Посёлки</a>
+          </div>
+          <div class="pick-up__right">
+            <div class="selection"><a href="#">Подобрать</a></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--header end-->
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section__crumbs bread-crumbs">
+            <a href="home.html">ПОРАДОМ</a>
+            <a href="#">Отзывы</a>
+          </div>
+          <h2 class="section__title">Отзывы</h2>
+          <div class="section__btns">
+            <div id="reviews-btns" class="button__group">
+              <a href="#" class="button__round">Девичья Гора</a>
+              <a href="#" class="button__round">Есенинский 2</a>
+              <a href="#" class="button__round">Нагаевская Роща</a>
+              <a
+                href="#"
+                id="requisites-button"
+                class="button__round button__round_active"
+                >125</a
+              >
+              <a href="#" class="button__round">85</a>
+              <a href="#" class="button__round">125</a>
+              <a href="#" class="button__round">135</a>
+              <a href="#" class="button__round">125</a>
+            </div>
+          </div>
+          <div class="distance__wrapper">
+            <div class="card">
+                                    <a href="#">
+                        <img src="../img/img.png" alt="" class="card__image" />
+                      </a>
+              <div class="card__container card__container_bg">
+                <div class="card__container_l">
+                  <div class="card__container_l-top">
+                    <div>
+                      <h5 class="card__address">Девичья Гора</h5>
+                      <h4 class="card__title">Ирек Каримов</h4>
+                    </div>
                   </div>
-                </div>
-                <div class="swiper-slide header__bottom">
-                  <div class="carousel">
-                    <h2 class="carousel__title">Новый проект <br> со вторым <br> светом</h2>
-                    <p class="carousel__text">Запишитесь на экскурсию, <br>
-                      чтобы увидеть это первыми!</p>
-                    <buttton class="button button_accent">Записаться на экскурсию</buttton>
+                  <div class="card__content">
+                    <p class="card__text">
+                      Когда люди будут выбирать свой загородный домик, у них
+                      будут свои критерии, поэтому самое главное определиться
+                      Когда люди будут выбирать свой загородный домик, у них
+                      будут свои критерии, поэтому самое главное определиться
+                    </p>
+                    <a href="#" class="card__link"
+                      ><img src="../img/icons/right-arrow.svg" alt=""
+                    /></a>
                   </div>
                 </div>
               </div>
-              <div class="swiper-numbs"></div>
-              
+            </div>
+            <div class="card">
+                                    <a href="#">
+                        <img src="../img/img.png" alt="" class="card__image" />
+                      </a>
+              <div class="card__container card__container_bg">
+                <div class="card__container_l">
+                  <div class="card__container_l-top">
+                    <div>
+                      <h5 class="card__address">Девичья Гора</h5>
+                      <h4 class="card__title">Ирек Каримов</h4>
+                    </div>
+                  </div>
+                  <div class="card__content">
+                    <p class="card__text">
+                      Когда люди будут выбирать свой загородный домик, у них
+                      будут свои критерии, поэтому самое главное определиться
+                      Когда люди будут выбирать свой загородный домик, у них
+                      будут свои критерии, поэтому самое главное определиться
+                    </p>
+                    <a href="#" class="card__link"
+                      ><img src="../img/icons/right-arrow.svg" alt=""
+                    /></a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div> -->
-    </header>
-    <main>
-        <section class="section">
-            <div class="container">
-                <div class="section__crumbs bread-crumbs">
-                <a href="home.html">ПОРАДОМ</a>
-                <a href="#">Отзывы</a>
-                
-            </div>
-                <h2 class="section__title">Отзывы</h2>
-                    <div class="section__btns">
-                        <div id="reviews-btns" class=" button__group ">
-                            <a href="#" class="button__round">Девичья Гора</a>
-                            <a href="#" class="button__round ">Есенинский 2</a>
-                            <a href="#" class="button__round">Нагаевская Роща</a>
-                            <a href="#" id="requisites-button" class="button__round button__round_active">125</a>
-                            <a href="#" class="button__round ">85</a>
-                            <a href="#" class="button__round ">125</a>
-                            <a href="#" class="button__round">135</a>
-                            <a href="#" class="button__round ">125</a>
-                        </div>
-                    </div>
-                <div class="card">
-                    <img src="../img/img.png" alt="" class="card__image">
-                    <div class="card__container card__container_bg">
-                        <div class="card__container_l ">
-                            <h5 class="card__address">Девичья Гора</h5>
-                            <h4 class="card__title">Ирек Каримов</h4>
-                            <div class="card__content">
-                                <p class="card__text">
-                                    Когда люди будут выбирать
-                                    свой загородный домик, у них
-                                    будут свои критерии, поэтому
-                                    самое главное определиться Когда люди будут выбирать
-                                    свой загородный домик, у них
-                                    будут свои критерии, поэтому
-                                    самое главное определиться
-                                    webkit-line-clamp: 2
-                                </p>
-                                <img src="../img/icons/right-arrow.svg" class="card__content-image" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      </section>
+            <!-- popup -->
+      <div class="modal" data-modal="excursion">
+        <form action="#" class="form-standart" id="special-offer" data-form="1">
+          <h4 class="form__title">
+Запишитесь <br> на экскурсию <br> по посёлку <br> Название посёлка
+          </h4>
+          <p class="form__text">
+            Приезжайте на экскурсию, чтобы увидеть все своими глазами и узнать о
+            жизни поселка
+          </p>
+          <div class="text-field">
+            <input
+              data-special-offer
+              class="text-field__input tel"
+              type="text"
+              name="login"
+              id="login"
+              placeholder="Введите ваш телефон"
+            />
+          </div>
+          <div class="text-field">
+            <input
+              data-special-offer
+              class="text-field__input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Введите ваш имя"
+            />
+          </div>
+
+          <button
+            type="submit"
+            id="special-offer-btn"
+            class="button button_accent"
+          >
+            Отправить
+          </button>
+          <label class="checkbox-other">
+            <input data-special-offer type="checkbox" checked />
+            <p>
+              Даю согласие на обработку
+              <a href="#" class="checkbox__link"> персональных данных </a>
+            </p>
+          </label>
+        </form>
+      </div>
+      <div class="popup-message">
+        <svg
+          width="65"
+          height="64"
+          viewBox="0 0 65 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="32.5" cy="32" r="32" fill="#003852" />
+          <path
+            d="M27.8333 43L18.5 34.0009L22.6504 29.9991L27.8333 35.0105L42.3496 21L46.5 25.0018L27.8333 43Z"
+            fill="white"
+          />
+        </svg>
+        <p>
+          Спасибо <br />
+          Ваша заявка принята
+        </p>
+      </div>
+      <div class="overlay js-overlay-modal"></div>
     </main>
     <!--footer start-->
     <footer class="footer">
+      <div class="footer__m">
         <div class="container">
-            <div class="accordion" id="accordion">
-                <h3 class="">Покупателям <span class="accordion__line"></span></h3>
-                <div class="tabs__text" id="tabs-1" style="height: 0px;">
-                    <a href="#">
-                        Проектирование
-                    </a>
-                    <a href="#">Проектирование</a>
-                    <a href="#">Проектирование</a>
-                    <a href="#">Проектирование</a>
-                    <a href="#">Проектирование</a>
-                    <a href="#">Проектирование</a>
-
-                </div>
-                <h3 class="">Стандарты <span class="accordion__line"></span></h3>
-                <div class="tabs__text" id="tabs-2" style="height: 0px;">
-                    <a href="#">Проектирование</a>
-                </div>
-                <h3 class="">О застройщике <span class="accordion__line"></span></h3>
-                <div class="tabs__text" id="tabs-3" style="height: 0px;">
-                    <a href="#">Проектирование</a>
-                </div>
-                <h3>Контакты </h3>
-
-                <div class="tabs__text" id="tabs-4" style="height: 0px;">
-                    <a href="#">Проектирование</a>
-                </div>
+          <div class="accordion" id="accordion">
+            <h3 class="accordion-header">
+              Покупателям <span class="accordion__line"></span>
+            </h3>
+            <div
+              class="accordion-body tabs__text"
+              id="tabs-1"
+              style="height: 0px"
+            >
+              <a href="#"> Проектирование </a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
             </div>
+            <h3 class="accordion-header">
+              Стандарты <span class="accordion__line"></span>
+            </h3>
+            <div
+              class="accordion-body tabs__text"
+              id="tabs-2"
+              style="height: 0px"
+            >
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="accordion-header">
+              О застройщике <span class="accordion__line"></span>
+            </h3>
+            <div
+              class="accordion-body tabs__text"
+              id="tabs-3"
+              style="height: 0px"
+            >
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="accordion-header">Контакты</h3>
+
+            <div
+              class="accordion-body tabs__text"
+              id="tabs-4"
+              style="height: 0px"
+            >
+              <a href="#">Проектирование</a>
+            </div>
+          </div>
         </div>
         <div class="footer__line"></div>
         <div class="container">
-            <div class="footer__content">
-                <img src="../img/icons/logo2.svg" class="footer__logo" alt="">
+          <div class="footer__content">
+            <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
+            <div class="footer__socials social">
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/youtube.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/facebook.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+              <a href="#" class="pie pie_primary social__link_s">
+                <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+              </a>
+            </div>
+            <div class="footer__contact">
+              <address>г.Уфа, ул.Мустая Карима, д.16</address>
+              <a href="tel:73472008719">+7 (347) 200-87-19</a>
+            </div>
+            <p class="development">
+              Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__d">
+        <div class="container">
+          <div class="footer__top">
+            <div class="footer__top-left">
+              <div class="footer__content">
+                <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
                 <div class="footer__socials social">
-                    <a href="#" class="pie pie_primary social__link_s">
-                        <img src="../img/icons/youtube.svg" alt="" class="social__icon">
-                    </a>
-                    <a href="#" class="pie pie_primary social__link_s">
-                        <img src="../img/icons/instagram.svg" alt="" class="social__icon">
-                    </a>
-                    <a href="#" class="pie pie_primary social__link_s">
-                        <img src="../img/icons/facebook.svg" alt="" class="social__icon">
-                    </a>
-                    <a href="#" class="pie pie_primary social__link_s">
-                        <img src="../img/icons/vk.svg" alt="" class="social__icon">
-                    </a>
+                  <a href="#" class="pie pie_primary social__link_s">
+                    <img
+                      src="../img/icons/youtube.svg"
+                      alt=""
+                      class="social__icon"
+                    />
+                  </a>
+
+                  <a href="#" class="pie pie_primary social__link_s">
+                    <img
+                      src="../img/icons/facebook.svg"
+                      alt=""
+                      class="social__icon"
+                    />
+                  </a>
+                  <a href="#" class="pie pie_primary social__link_s">
+                    <img
+                      src="../img/icons/vk.svg"
+                      alt=""
+                      class="social__icon"
+                    />
+                  </a>
                 </div>
                 <div class="footer__contact">
-                    <address>г.Уфа, ул.Мустая Каримова, д.16</address>
-                    <a href="tell:73472008719">+7 (347) 200-87-19</a>
+                  <address>г.Уфа, ул.Мустая Карима, д.16</address>
+                  <a href="tel:73472008719">+7 (347) 200-87-19</a>
                 </div>
-                <p class="development">Разработано <img src="../img/icons/yesidea.svg" alt="yesidea"></p>
+              </div>
             </div>
+            <div class="footer__top-right">
+              <div class="footer__nav">
+                <h5 class="footer__nav-header">Покупателям</h5>
+                <a href="#" class="footer__nav-item"> Поселки </a>
+                <a href="#" class="footer__nav-item"> Готовые дома </a>
+              </div>
+              <div class="footer__nav">
+                <h5 class="footer__nav-header">Покупателям</h5>
+                <a href="#" class="footer__nav-item"> Поселки </a>
+                <a href="#" class="footer__nav-item"> Готовые дома </a>
+              </div>
+              <div class="footer__nav">
+                <h5 class="footer__nav-header">Покупателям</h5>
+                <a href="#" class="footer__nav-item"> Поселки </a>
+                <a href="#" class="footer__nav-item"> Готовые дома </a>
+              </div>
+              <div class="footer__nav">
+                <h5 class="footer__nav-header">Покупателям</h5>
+                <a href="#" class="footer__nav-item"> Поселки </a>
+                <a href="#" class="footer__nav-item"> Готовые дома </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <p class="footer__bottom-left">Все права защищены</p>
+            <p class="development footer__bottom-right">
+              Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
+            </p>
+          </div>
         </div>
-
-
-
-        </div>
+      </div>
     </footer>
     <!--footer end-->
-</body>
-
+  </body>
 </html>

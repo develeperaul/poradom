@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poradom</title>
+  </head>
+
+  <body>
+    <div class="top-arrow" id="arrow">
+      <div class="arrow-icon">
+        <svg
+          width="14"
+          height="8"
+          viewBox="0 0 14 8"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M13 7L7 1L1 7" stroke="white" stroke-linecap="round" />
+        </svg>
+      </div>
+    </div>
+    <section class="sidebar">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__top">
+            <img src="../img/icons/logo1.svg" alt="" />
+            <button class="menu-trigger active" id="menu-sidebar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="sidebar__list accordion" id="sidebar-accordion">
+          <h3 class="">Покупателям</h3>
+          <div class="tabs__text" id="tabs-1" style="height: 0px">
+            <a href="#"> Проектирование </a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+          </div>
+          <h3 class="">Стандарты</h3>
+          <div class="tabs__text" id="tabs-2" style="height: 0px">
+            <a href="#">Проектирование</a>
+          </div>
+          <h3 class="">О застройщике</h3>
+          <div class="tabs__text" id="tabs-3" style="height: 0px">
+            <a href="#">Проектирование</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div
+      class="header__top_white header__top_fixed header__top_fixed-open"
+      style="display: none"
+    >
+      <div class="container header__top">
+        <img src="../img/icons/logo3.svg" alt="" class="logo" />
+        <div class="header__trigger">
+          <button class="menu-trigger" id="menu-header_fixed">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <span class="menu-trigger__text"> Меню </span>
+        </div>
+        <div class="header__contacts">
+          <div class="social">
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/youtube.svg" alt="" class="social__icon" />
+            </a>
+
+            <a href="#" class="pie pie_primary social__link_s">
+              <img
+                src="../img/icons/facebook.svg"
+                alt=""
+                class="social__icon"
+              />
+            </a>
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+            </a>
+          </div>
+          <div class="header__contact contact">
+            <address>г.Уфа, ул.Мустая Карима, д.16</address>
+            <a href="tel:73472008719">+7 (347) 200-87-19</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="header-region">
+      <div class="header__top_white header-nav">
+        <div class="container header__top">
+          <img src="../img/icons/logo3.svg" alt="" class="logo" />
+          <div class="header__trigger">
+            <button class="menu-trigger" id="menu-header">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <span class="menu-trigger__text"> Меню </span>
+          </div>
+          <div class="header__contacts">
+            <div class="social">
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/youtube.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/facebook.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+              <a href="#" class="pie pie_primary social__link_s">
+                <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+              </a>
+            </div>
+            <div class="header__contact contact">
+              <address>г.Уфа, ул.Мустая Карима, д.16</address>
+              <a href="tel:73472008719">+7 (347) 200-87-19</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="section__crumbs bread-crumbs">
+          <a href="home.html">ПОРАДОМ</a>
+          <a href="cottage-settlements.html">Коттеджные поселки</a>
+          <a href="#">Девичья Гора</a>
+        </div>
+        <div class="header-region__top">
+          <div class="header-region__top-left">
+            <h2 class="header-region__title title title_black">Участок XXX</h2>
+            <div class="header-region__top-left--content">
+              <button class="button__round">3 очередь</button>
+            </div>
+          </div>
+          <div class="header-region__top-right">
+            <div class="location">
+              <div class="location__image location__image_blue">
+                <img src="../img/icons/location-white.svg" alt="" />
+              </div>
+              <h5 class="">Акбердино</h5>
+            </div>
+            <div class="location">
+              <div class="location__image location__image_blue">
+                <img src="../img/icons/settlement-white.svg" alt="" />
+              </div>
+              <h5 class="">Девичья Гора</h5>
+            </div>
+          </div>
+        </div>
+        <div class="plan-region">
+          <div class="plan__map">
+            <img src="../img/map-region.jpg" alt="" />
+            <svg
+              width="1920"
+              height="900"
+              viewBox="0 0 1920 900"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M932 648.5L902 603L1011.5 579.5L1032 632L932 648.5Z"
+                fill="#247733"
+                fill-opacity="0.3"
+                stroke="#247733"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+          <div class="plan__bottom">
+            <img
+              src="../img/icons/plan-arrows.svg"
+              alt=""
+              class="plan__bottom-arrows"
+            />
+            <div class="compas">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="compas__round"
+              >
+                <path
+                  d="M0 20C0 8.955 8.955 0 20 0C31.045 0 40 8.955 40 20C40 31.045 31.045 40 20 40C8.955 40 0 31.045 0 20ZM3.36167 20C3.36167 29.1883 10.81 36.6383 20 36.6383C29.19 36.6383 36.6383 29.19 36.6383 20C36.6383 10.8117 29.19 3.36167 20 3.36167C10.8117 3.36167 3.36167 10.81 3.36167 20Z"
+                  fill="white"
+                />
+                <circle cx="5.33333" cy="6.66634" r="5.33333" fill="#ED1556" />
+                <path
+                  d="M3.54719 8.54167C2.96039 8.01042 2.66699 7.38715 2.66699 6.67187C2.66699 5.95312 2.96039 5.32812 3.54719 4.79687C4.13786 4.26562 4.83275 4 5.63189 4C6.07585 4 6.48892 4.08681 6.87112 4.26042C7.25331 4.43056 7.52741 4.60069 7.69341 4.77083L7.94242 5.01562L7.17224 5.70833C7.13363 5.65278 7.0738 5.58507 6.99272 5.50521C6.91551 5.42187 6.74372 5.31076 6.47734 5.17187C6.21483 5.03299 5.93301 4.96354 5.63189 4.96354C5.14932 4.96354 4.73045 5.12847 4.37528 5.45833C4.02397 5.78819 3.84832 6.19271 3.84832 6.67187C3.84832 7.14757 4.02397 7.55035 4.37528 7.88021C4.73045 8.21007 5.14932 8.375 5.63189 8.375C5.93301 8.375 6.21483 8.30729 6.47734 8.17187C6.74372 8.03646 6.93482 7.90451 7.05063 7.77604L7.23015 7.57812L8.00033 8.27083C7.97716 8.29861 7.94242 8.33854 7.89609 8.39062C7.84976 8.43924 7.74939 8.52431 7.59497 8.64583C7.44055 8.76389 7.2784 8.86979 7.10854 8.96354C6.93868 9.05382 6.71863 9.13889 6.44839 9.21875C6.17815 9.29514 5.90598 9.33333 5.63189 9.33333C4.83275 9.33333 4.13786 9.06944 3.54719 8.54167Z"
+                  fill="white"
+                />
+              </svg>
+
+              <img
+                class="compas__arrow"
+                src="../img/icons/compas.svg"
+                alt=""
+                style="transform: rotate(0deg)"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="indicators">
+          <div class="location-home__cards-wrapper">
+            <div class="location-home__cards">
+              <div class="location-home__card">
+                <div class="location-home__card-title">площадь участка</div>
+                <div class="location-home__card-text">12.45 сот</div>
+              </div>
+              <div class="location-home__card location-home__card bg-vacant">
+                <div class="location-home__card-title">статус участка</div>
+                <div class="location-home__card-text">cвободен</div>
+              </div>
+              <div class="location-home__card">
+                <div class="location-home__card-title">ширина участка</div>
+                <div class="location-home__card-text">39.5 м</div>
+              </div>
+              <div class="location-home__card">
+                <div class="location-home__card-title">длина участка</div>
+                <div class="location-home__card-text">34.8 м</div>
+              </div>
+              <div class="location-home__card location-home__card-col--2">
+                <div class="location-home__card-title">кадастровый номер</div>
+                <div class="location-home__card-text">1102:26:161701:4822</div>
+              </div>
+              <div class="location-home__card">
+                <div class="location-home__card-title">строительный индекс</div>
+                <div class="location-home__card-text">ДГЗ-17</div>
+              </div>
+              <div class="location-home__card">
+                <div
+                  class="location-home__card-title location-home__card-title"
+                >
+                  стоимость, руб.
+                </div>
+                <div
+                  class="location-home__card-text location-home__card-text--sm"
+                >
+                  15 550 000
+                </div>
+              </div>
+            </div>
+            <buttton
+              class="button button_accent js-open-modal"
+              data-modal="write"
+              >Забронировать участок</buttton
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--header end-->
+    <main>
+      <section class="region">
+        <div class="container">
+          <div class="region__project">
+            <div class="grass"></div>
+            <div class="slider-wrapper">
+              <!-- dropdown -->
+              <div id="dropdown_1" class="dropdown">
+                <div
+                  id="dropdownHeader_1"
+                  class="dropdown__header dropdown__header--hide"
+                >
+                  <div class="dropdown__header__wrapper">
+                    <div
+                      id="dropdownHeaderValue_1"
+                      class="dropdown__header--title"
+                    >
+                      Тип
+                    </div>
+                  </div>
+                  <div class="dropdown__header--icon">
+                    <img
+                      id="chevronIcon_1"
+                      class="fas fa-angle-down rotate-icon-home"
+                      src="../img/icons/down.svg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div
+                  id="dropdownListBody_1"
+                  class="dropdown__body dropdown__body--hide"
+                >
+                  <ul id="dropdownList_1" class="dropdown__body--list">
+                    <li
+                      class="dropdown__body--list-index dropdown__flex"
+                      data-slider="slider_1"
+                    >
+                      <img
+                        class="dropdown__img-round"
+                        src="../img/main.png"
+                        alt=""
+                      />
+                      Test Value 2
+                    </li>
+                    <li
+                      class="dropdown__body--list-index dropdown__flex"
+                      data-slider="slider_2"
+                    >
+                      <img
+                        class="dropdown__img-round"
+                        src="../img/img.png"
+                        alt=""
+                      />
+                      Test Value 3
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- <img src="/" alt="" class="region-home" /> -->
+              <div class="sliders">
+                <!-- slider -->
+                <div
+                  class="swiper regionSwiper"
+                  style="display: none"
+                  id="slider_1"
+                >
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="region__cards">
+                        <div class="region__card">
+                          <div class="region__card-title">S застройки</div>
+                          <div class="region__card-value">28 м2</div>
+                        </div>
+                        <div class="region__card">
+                          <div class="region__card-title">
+                            Свободная S участка
+                          </div>
+                          <div class="region__card-value">XX м2</div>
+                        </div>
+                      </div>
+                      <img
+                        src="../img/region-road.png"
+                        alt=""
+                        class="region-road"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="region__cards">
+                        <div class="region__card">
+                          <div class="region__card-title">S застройки</div>
+                          <div class="region__card-value">28 м2</div>
+                        </div>
+                        <div class="region__card">
+                          <div class="region__card-title">
+                            Свободная S участка
+                          </div>
+                          <div class="region__card-value">XX м2</div>
+                        </div>
+                      </div>
+                      <img
+                        src="../img/region-road.png"
+                        alt=""
+                        class="region-road"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-nav">
+                    <div class="swiper-next"></div>
+                    <div class="swiper-prev"></div>
+                  </div>
+                  <div>
+                    <div
+                      class="button__group"
+                      data-pagination='["105","125"]'
+                    ></div>
+                  </div>
+                </div>
+                <!-- slider -->
+                <div
+                  class="swiper regionSwiper"
+                  style="display: none"
+                  id="slider_2"
+                >
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="region__cards">
+                        <div class="region__card">
+                          <div class="region__card-title">S застройки</div>
+                          <div class="region__card-value">28 м2</div>
+                        </div>
+                        <div class="region__card">
+                          <div class="region__card-title">
+                            Свободная S участка
+                          </div>
+                          <div class="region__card-value">XX м2</div>
+                        </div>
+                      </div>
+                      <img
+                        src="../img/region-road.png"
+                        alt=""
+                        class="region-road"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="region__cards">
+                        <div class="region__card">
+                          <div class="region__card-title">S застройки</div>
+                          <div class="region__card-value">28 м2</div>
+                        </div>
+                        <div class="region__card">
+                          <div class="region__card-title">
+                            Свободная S участка
+                          </div>
+                          <div class="region__card-value">XX м2</div>
+                        </div>
+                      </div>
+                      <img
+                        src="../img/region-road.png"
+                        alt=""
+                        class="region-road"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="region__cards">
+                        <div class="region__card">
+                          <div class="region__card-title">S застройки</div>
+                          <div class="region__card-value">28 м2</div>
+                        </div>
+                        <div class="region__card">
+                          <div class="region__card-title">
+                            Свободная S участка
+                          </div>
+                          <div class="region__card-value">XX м2</div>
+                        </div>
+                      </div>
+                      <img
+                        src="../img/region-road.png"
+                        alt=""
+                        class="region-road"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="region__cards">
+                        <div class="region__card">
+                          <div class="region__card-title">S застройки</div>
+                          <div class="region__card-value">28 м2</div>
+                        </div>
+                        <div class="region__card">
+                          <div class="region__card-title">
+                            Свободная S участка
+                          </div>
+                          <div class="region__card-value">XX м2</div>
+                        </div>
+                      </div>
+                      <img
+                        src="../img/region-road.png"
+                        alt=""
+                        class="region-road"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-nav">
+                    <div class="swiper-next"></div>
+                    <div class="swiper-prev"></div>
+                  </div>
+                  <div>
+                    <div
+                      class="button__group"
+                      data-pagination='["105","125", "126", "136"]'
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- region and road -->
+            <!-- <img src="../img/region-road.png" alt="" class="region-road" /> -->
+          </div>
+        </div>
+      </section>
+      <section class="section section-pb0">
+        <div class="container">
+          <div class="section__top">
+            <h2 class="section__title">Фото участка</h2>
+          </div>
+          <div class="image-form">
+            <div class="swiper featuresSwiper image-form__image">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/card-project/photo_slide.jpg" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/card-project/photo_slide.jpg" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/card-project/photo_slide.jpg" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/card-project/photo_slide.jpg" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/card-project/photo_slide.jpg" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/card-project/photo_slide.jpg" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="navigation__card">
+                    <img src="../img/card-project/photo_slide.jpg" alt="" />
+                    <p class="section__text">Подпись фотографии</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-nav">
+                <div class="swiper-next"></div>
+                <div class="swiper-prev"></div>
+              </div>
+              <div>
+                <div class="swiper-numbs swiper-numbs_start"></div>
+              </div>
+            </div>
+            <div class="image-form__form image-form__form_swiper">
+              <form action="#" class="form form__column" id="special-offer">
+                <div class="form__top">
+                  <h4 class="form__title">
+                    Запишитесь на экскурсию, чтобы посмотреть свободные участки
+                  </h4>
+                </div>
+                <div class="form__bottom">
+                  <div class="form__inputs">
+                    <div class="text-field">
+                      <input
+                        data-special-offer=""
+                        class="text-field__input tel"
+                        type="text"
+                        placeholder="Введите ваш телефон"
+                      />
+                    </div>
+                    <div class="text-field">
+                      <input
+                        data-special-offer=""
+                        class="text-field__input tel"
+                        type="text"
+                        placeholder="Введите ваше имя"
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      id="special-offer-btn"
+                      class="button button_accent"
+                    >
+                      Отправить
+                    </button>
+                  </div>
+
+                  <label class="checkbox-other">
+                    <input
+                      data-special-offer=""
+                      type="checkbox"
+                      checked="checked"
+                    />
+                    <p>
+                      Даю согласие на обработку
+                      <a href="#" class="checkbox__link">
+                        персональных данных
+                      </a>
+                    </p>
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section-pb0">
+        <div class="container">
+          <div class="section__top">
+            <h2 class="section__title">Свободные участки похожей площади</h2>
+          </div>
+
+          <div class="swiper otherProjects">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card card_label">
+                  <div class="card__label label">
+                    <div class="label__text"><span>Хит продаж</span></div>
+                    <img src="../img/icons/label-blue.svg" alt="" />
+                  </div>
+                  <div class="location card__location_p">
+                    <div class="location__image">
+                      <img src="../img/icons/location.svg" alt="" />
+                    </div>
+                    <h5 class="location__title">Нагаева</h5>
+                  </div>
+                  <a href="#">
+                    <img src="../img/main.png" alt="" class="card__image" />
+                  </a>
+                  <div class="card__container">
+                    <div class="card__container_l">
+                      <div class="card__info-region">
+                        <div class="card__info-item">
+                          <!-- bg-vacant -->
+                          <div class="card__status-marker">
+                            <div class="marker__pie-sm bg-vacant"></div>
+                            <p class="marker__text">Свободен</p>
+                          </div>
+                          <!-- <h6 class="card__status-title">Свободен</h6> -->
+                          <p class="card__redion-text_lg">Участок №12</p>
+                        </div>
+                        <div class="card__info-item">
+                          <h6 class="card__region-size-title">S участка</h6>
+                          <p class="card__region-size-text_lg">18.25 соток</p>
+                        </div>
+                      </div>
+                      <button class="button button_border">5 884 954 ₽</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-numbs"></div>
+          </div>
+        </div>
+      </section>
+      <!-- popup -->
+      <div class="modal" data-modal="excursion">
+        <form action="#" class="form-standart" id="special-offer" data-form="1">
+          <h4 class="form__title">
+            Запишитесь <br />
+            на экскурсию <br />
+            по посёлку <br />
+            Название посёлка
+          </h4>
+          <p class="form__text">
+            Приезжайте на экскурсию, чтобы увидеть все своими глазами и узнать о
+            жизни поселка
+          </p>
+          <div class="text-field">
+            <input
+              data-special-offer
+              class="text-field__input tel"
+              type="text"
+              name="login"
+              id="login"
+              placeholder="Введите ваш телефон"
+            />
+          </div>
+          <div class="text-field">
+            <input
+              data-special-offer
+              class="text-field__input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Введите ваш имя"
+            />
+          </div>
+
+          <button
+            type="submit"
+            id="special-offer-btn"
+            class="button button_accent"
+          >
+            Отправить
+          </button>
+          <label class="checkbox-other">
+            <input data-special-offer type="checkbox" checked />
+            <p>
+              Даю согласие на обработку
+              <a href="#" class="checkbox__link"> персональных данных </a>
+            </p>
+          </label>
+        </form>
+      </div>
+      <div class="modal" data-modal="book">
+        <form action="#" class="form-standart" id="special-offer" data-form="1">
+          <h4 class="form__title">
+            Забронировать <br />
+            учаcток №XX
+          </h4>
+          <div class="text-field">
+            <input
+              data-special-offer
+              class="text-field__input tel"
+              type="text"
+              name="login"
+              id="login"
+              placeholder="Введите ваш телефон"
+            />
+          </div>
+          <div class="text-field">
+            <input
+              data-special-offer
+              class="text-field__input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Введите ваш имя"
+            />
+          </div>
+
+          <button
+            type="submit"
+            id="special-offer-btn"
+            class="button button_accent"
+          >
+            Отправить
+          </button>
+          <label class="checkbox-other">
+            <input data-special-offer type="checkbox" checked />
+            <p>
+              Даю согласие на обработку
+              <a href="#" class="checkbox__link"> персональных данных </a>
+            </p>
+          </label>
+        </form>
+      </div>
+      <div class="overlay js-overlay-modal"></div>
+    </main>
+    <!--footer start-->
+    <footer class="footer">
+      <div class="container">
+        <div class="accordion" id="accordion">
+          <h3 class="accordion-header">
+            Покупателям <span class="accordion__line"></span>
+          </h3>
+          <div
+            class="accordion-body tabs__text"
+            id="tabs-1"
+            style="height: 0px"
+          >
+            <a href="#"> Проектирование </a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+          </div>
+          <h3 class="accordion-header">
+            Стандарты <span class="accordion__line"></span>
+          </h3>
+          <div
+            class="accordion-body tabs__text"
+            id="tabs-2"
+            style="height: 0px"
+          >
+            <a href="#">Проектирование</a>
+          </div>
+          <h3 class="accordion-header">
+            О застройщике <span class="accordion__line"></span>
+          </h3>
+          <div
+            class="accordion-body tabs__text"
+            id="tabs-3"
+            style="height: 0px"
+          >
+            <a href="#">Проектирование</a>
+          </div>
+          <h3 class="accordion-header">Контакты</h3>
+
+          <div
+            class="accordion-body tabs__text"
+            id="tabs-4"
+            style="height: 0px"
+          >
+            <a href="#">Проектирование</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__line"></div>
+      <div class="container">
+        <div class="footer__content">
+          <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
+          <div class="footer__socials social">
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/youtube.svg" alt="" class="social__icon" />
+            </a>
+
+            <a href="#" class="pie pie_primary social__link_s">
+              <img
+                src="../img/icons/facebook.svg"
+                alt=""
+                class="social__icon"
+              />
+            </a>
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+            </a>
+          </div>
+          <div class="footer__contact">
+            <address>г.Уфа, ул.Мустая Карима, д.16</address>
+            <a href="tel:73472008719">+7 (347) 200-87-19</a>
+          </div>
+          <p class="development">
+            Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!--footer end-->
+  </body>
+</html>

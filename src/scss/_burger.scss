@@ -6,15 +6,26 @@ $color: #fff;
   transition: all 0.4s;
   box-sizing: border-box;
 }
+
 .menu-trigger {
   position: relative;
   width: 18px;
-  height: 14px;
+  height: 16px;
   background: none;
   border: none;
   appearance: none;
   cursor: pointer;
 }
+
+.menu-trigger__text {
+  display: none;
+
+  @include desktop-laptop {
+    display: inline-block;
+    cursor: pointer;
+  }
+}
+
 .menu-trigger span {
   position: absolute;
   left: 0;
@@ -23,25 +34,31 @@ $color: #fff;
   background-color: #fff;
   border-radius: 4px;
 }
+
 .menu-trigger_primary span {
   background-color: $primary;
 }
+
 .menu-trigger span:nth-of-type(1) {
   top: 0;
 }
+
 .menu-trigger span:nth-of-type(2) {
-  top: 6px;
+  top: 7px;
 }
+
 .menu-trigger span:nth-of-type(3) {
-  bottom: 0;
+  bottom: 0px;
 }
 
 .menu-trigger.active span:nth-of-type(1) {
-  transform: translateY(6px) rotate(-45deg);
+  transform: translateY(7px) rotate(-45deg);
 }
+
 .menu-trigger.active span:nth-of-type(2) {
   opacity: 0;
 }
+
 .menu-trigger.active span:nth-of-type(3) {
-  transform: translateY(-6px) rotate(45deg);
+  transform: translateY(-7px) rotate(45deg);
 }

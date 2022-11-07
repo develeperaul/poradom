@@ -23,46 +23,227 @@
     </div>
     <section class="sidebar">
       <div class="container">
-        <div class="header__wrapper">
+        <div class="header__wrapper"></div>
           <div class="header__top">
-            <img src="../img/icons/logo1.svg" alt="" />
-            <button class="menu-trigger active" id="menu-sidebar">
+            <img src="../img/icons/logo1.svg" alt="" class="logo" />
+            <div class="header__trigger">
+              <button class="menu-trigger active" id="menu-sidebar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <span class="menu-trigger__text"> Меню </span>
+            </div>
+            <div class="header__contacts">
+              <div class="social">
+                <a href="#" class="pie pie_primary social__link_s">
+                  <img
+                    src="../img/icons/youtube.svg"
+                    alt=""
+                    class="social__icon"
+                  />
+                </a>
+
+                <a href="#" class="pie pie_primary social__link_s">
+                  <img
+                    src="../img/icons/facebook.svg"
+                    alt=""
+                    class="social__icon"
+                  />
+                </a>
+                <a href="#" class="pie pie_primary social__link_s">
+                  <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+                </a>
+              </div>
+              <div class="header__contact contact">
+                <address>г.Уфа, ул.Мустая Карима, д.16</address>
+                <a href="tel:73472008719">+7 (347) 200-87-19</a>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar__list accordion" id="sidebar-accordion">
+            <h3 class="">Покупателям</h3>
+            <div class="tabs__text" id="tabs-1" style="height: 0px">
+              <a href="#"> Проектирование </a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="">Стандарты</h3>
+            <div class="tabs__text" id="tabs-2" style="height: 0px">
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="">О застройщике</h3>
+            <div class="tabs__text" id="tabs-3" style="height: 0px">
+              <a href="#">Проектирование</a>
+            </div>
+          </div>
+          <div id="list_03">
+
+            <ul class="sidebar__list-desktop">
+              <li class="sidebar__item" data-node="#list_01-1">
+                <a href="#">
+                  <span class="sidebar__item-left">01 —</span>
+                  <span class="sidebar__item-right">Коттеджные посёлки</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_02-1">
+                <a href="#">
+                  <span class="sidebar__item-left">02 —</span>
+                  <span class="sidebar__item-right">Готовые дома</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_03-1">
+                <a href="#">
+                  <span class="sidebar__item-left">03 —</span>
+                  <span class="sidebar__item-right">Проекты</span>
+                </a>
+                <div class="sidebar___list_desktop-2 sidebar__children" id="list_03-1" style="display: none;">
+                  <ul class="sidebar-children__list">
+                    <li class="sidebar__item"  data-node="#list_03_1-2"><a href="#">Серия Первый Дом</a></li>
+                    <li class="sidebar__item"  data-node="#list_03_2-2"><a href="#">Серия NATUR-A</a></li>
+                    <li class="sidebar__item"  data-node="#list_03_3-2"><a href="#">Серия Элегант</a></li>
+                    <li class="sidebar__item"  data-node="#list_03_4-2"><a href="#">Серия Классик</a></li>
+                    <li class="sidebar__item"  data-node="#list_03_5-2"><a href="#">Кирпичный Стандарт</a></li>
+                    <li class="sidebar__item" data-node="#list_03_6-2">
+                      <a href="#" >Серия Ред Лайт</a>
+                      <div class="sidebar__list_desktop-3 sidebar__children" id="list_03_6-2" style="display: none;">
+                        <ul class="sidebar-children__list">
+                          <li class="sidebar__item" data-node="#list_03_6_1-3"><a href="#">Кирпичный Стандарт 105</a></li>
+                          <li class="sidebar__item" data-node="#list_03_6_2-3"><a href="#">Кирпичный Стандарт 120</a></li>
+                          <li class="sidebar__item" data-node="#list_03_6_3-3"><a href="#">Кирпичный Стандарт 140</a></li>
+                          <li class="sidebar__item" data-node="#list_03_6_4-3"><a href="#">Кирпичный Стандарт 150</a></li>
+                          <li class="sidebar__item" data-node="#list_03_6_5-3"><a href="#">Кирпичный Стандарт 170</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="sidebar__item" data-node="#list_03_7-2"><a href="#" >Индивидуальный проект</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="sidebar__item" data-node="#list_04-1">
+                <a href="#">
+                  <span class="sidebar__item-left">04 —</span>
+                  <span class="sidebar__item-right">Стандарты Порадом</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_05-1">
+                <a href="#">
+                  <span class="sidebar__item-left">05 —</span>
+                  <span class="sidebar__item-right">Компания Порадом</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_06-1">
+                <a href="#">
+                  <span class="sidebar__item-left">06 —</span>
+                  <span class="sidebar__item-right">Галерея</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_07-1">
+                <a href="#">
+                  <span class="sidebar__item-left">07 —</span>
+                  <span class="sidebar__item-right">Новости</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_08-1">
+                <a href="#">
+                  <span class="sidebar__item-left">08 —</span>
+                  <span class="sidebar__item-right">Отзывы</span>
+                </a>
+              </li>
+              <li class="sidebar__item" data-node="#list_09-1">
+                <a href="#">
+                  <span class="sidebar__item-left">09 —</span>
+                  <span class="sidebar__item-right">Контакты</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+        <div class="header__top_white header__top_fixed header__top_fixed-open " style="display: none;">
+        <div class="container header__top">
+          <img src="../img/icons/logo3.svg" alt="" class="logo" />
+          <div class="header__trigger">
+            <button class="menu-trigger" id="menu-header">
               <span></span>
               <span></span>
               <span></span>
             </button>
+            <span class="menu-trigger__text"> Меню </span>
           </div>
-        </div>
+          <div class="header__contacts">
+            <div class="social">
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/youtube.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
 
-        <div class="sidebar__list accordion" id="sidebar-accordion">
-          <h3 class="">Покупателям</h3>
-          <div class="tabs__text" id="tabs-1" style="height: 0px">
-            <a href="#"> Проектирование </a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-          </div>
-          <h3 class="">Стандарты</h3>
-          <div class="tabs__text" id="tabs-2" style="height: 0px">
-            <a href="#">Проектирование</a>
-          </div>
-          <h3 class="">О застройщике</h3>
-          <div class="tabs__text" id="tabs-3" style="height: 0px">
-            <a href="#">Проектирование</a>
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/facebook.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+              <a href="#" class="pie pie_primary social__link_s">
+                <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+              </a>
+            </div>
+            <div class="header__contact contact">
+              <address>г.Уфа, ул.Мустая Карима, д.16</address>
+              <a href="tel:73472008719">+7 (347) 200-87-19</a>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    <!--header start-->
     <header class="header">
-      <div class="header__top header__top_absolute">
-        <img src="../img/icons/logo1.svg" alt="" />
-        <button class="menu-trigger" id="menu-header">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+      <div class="header__top_absolute">
+        <div class="container header__top">
+          <img src="../img/icons/logo1.svg" alt="" class="logo" />
+          <div class="header__trigger">
+            <button class="menu-trigger" id="menu-header">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <span class="menu-trigger__text"> Меню </span>
+          </div>
+          <div class="header__contacts">
+            <div class="social">
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/youtube.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/facebook.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+              <a href="#" class="pie pie_primary social__link_s">
+                <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+              </a>
+            </div>
+            <div class="header__contact contact">
+              <address>г.Уфа, ул.Мустая Карима, д.16</address>
+              <a href="tel:73472008719">+7 (347) 200-87-19</a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <a
@@ -86,11 +267,11 @@
       <span class="pie pie_big pie_accent drop drop_sq" id="drop">
         <span></span><span></span><span></span><span></span>
       </span>
+
       <div class="swiper headerSwiper">
         <div class="swiper-wrapper swiper-wrapper_pb">
           <div class="swiper-slide swiper-slide_pb header__bottom">
-            <div class="carousel">
-              <div></div>
+            <div class="container container-slider carousel">
               <h2 class="carousel__title">
                 Новый проект <br />
                 со вторым <br />
@@ -100,14 +281,15 @@
                 Запишитесь на экскурсию, <br />
                 чтобы увидеть это первыми!
               </p>
-              <buttton class="carousel__btn button button_accent"
-                >Записаться на экскурсию</buttton
-              >
+              <div>
+                <buttton class="carousel__btn button button_accent"
+                  >Записаться на экскурсию</buttton
+                >
+              </div>
             </div>
           </div>
           <div class="swiper-slide swiper-slide_pb header__bottom">
-            <div class="carousel">
-              <div></div>
+            <div class="container container-slider carousel">
               <h2 class="carousel__title">
                 Новый проект <br />
                 со вторым <br />
@@ -117,14 +299,15 @@
                 Запишитесь на экскурсию, <br />
                 чтобы увидеть это первыми!
               </p>
-              <buttton class="carousel__btn button button_accent"
-                >Записаться на экскурсию</buttton
-              >
+              <div>
+                <buttton class="carousel__btn button button_accent"
+                  >Записаться на экскурсию</buttton
+                >
+              </div>
             </div>
           </div>
           <div class="swiper-slide swiper-slide_pb header__bottom">
-            <div class="carousel">
-              <div></div>
+            <div class="container container-slider carousel">
               <h2 class="carousel__title">
                 Новый проект <br />
                 со вторым <br />
@@ -134,17 +317,32 @@
                 Запишитесь на экскурсию, <br />
                 чтобы увидеть это первыми!
               </p>
-              <buttton class="carousel__btn button button_accent"
-                >Записаться на экскурсию</buttton
-              >
+              <div>
+                <buttton class="carousel__btn button button_accent"
+                  >Записаться на экскурсию</buttton
+                >
+              </div>
             </div>
           </div>
         </div>
         <div class="swiper-numbs swiper-numbs_position"></div>
       </div>
+      <div class="container">
+        <div class="pick-up">
+          <div class="pick-up__left">
+            <a href="#">Готовые дома</a>
+            <a href="#">Проекты домов</a>
+            <a href="#">Посёлки</a>
+          </div>
+          <div class="pick-up__right">
+            <div class="selection"><a href="#">Подобрать</a></div>
+          </div>
+        </div>
+      </div>
     </header>
+    <!--header end-->
     <main>
-      <section class="section comands">
+      <section class="comands">
         <div class="container">
           <div class="section__crumbs bread-crumbs">
             <a href="home.html">ПОРАДОМ</a>
@@ -159,146 +357,368 @@
               <a href="#" class="button__round">Пресс-центр</a>
             </div>
           </div>
-          <h4 class="section__subtitle">Отдел продаж</h4>
-          <div class="comands__item">
-            <div class="card-user">
-              <img src="../img/people.png" alt="" class="card-user__img" />
-              <div class="card-user__name">
-                <p>Алиса</p>
-                <p>Зайкина</p>
+          <div class="comands__content">
+            <div class="comands__users">
+              <h4 class="section__subtitle">Отдел продаж</h4>
+              <div class="comands__item">
+                <div class="card-user">
+                  <img src="../img/people.png" alt="" class="card-user__img" />
+                  <div class="card-user__name">
+                    <p>Алиса</p>
+                    <p>Зайкина</p>
+                  </div>
+                  <p class="card-user__position">Руководитель ОП</p>
+                  <a href="#" class="card-user__email">a.zaikina@poradom.ru</a>
+                </div>
+                <div class="card-user">
+                  <img src="../img/people.png" alt="" class="card-user__img" />
+                  <div class="card-user__name">
+                    <p>Алиса</p>
+                    <p>Зайкина</p>
+                  </div>
+                  <p class="card-user__position">Руководитель ОП</p>
+                  <a href="#" class="card-user__email">a.zaikina@poradom.ru</a>
+                </div>
+                <div class="card-user">
+                  <img src="../img/people.png" alt="" class="card-user__img" />
+                  <div class="card-user__name">
+                    <p>Алиса</p>
+                    <p>Зайкина</p>
+                  </div>
+                  <p class="card-user__position">Руководитель ОП</p>
+                  <a href="#" class="card-user__email">a.zaikina@poradom.ru</a>
+                </div>
               </div>
-              <p class="card-user__position">Руководитель ОП</p>
-              <a href="#" class="card-user__email">a.zaikina@poradom.ru</a>
             </div>
-            <div class="card-user">
-              <img src="../img/people.png" alt="" class="card-user__img" />
-              <div class="card-user__name">
-                <p>Алиса</p>
-                <p>Зайкина</p>
-              </div>
-              <p class="card-user__position">Руководитель ОП</p>
-              <a href="#" class="card-user__email">a.zaikina@poradom.ru</a>
-            </div>
-            <div class="card-user">
-              <img src="../img/people.png" alt="" class="card-user__img" />
-              <div class="card-user__name">
-                <p>Алиса</p>
-                <p>Зайкина</p>
-              </div>
-              <p class="card-user__position">Руководитель ОП</p>
-              <a href="#" class="card-user__email">a.zaikina@poradom.ru</a>
-            </div>
-          </div>
-          <h4 class="section__subtitle">Отдел сопровождения клиентов</h4>
-          <div class="comands__item">
-            <div class="card-user">
-              <img src="../img/people.png" alt="" class="card-user__img" />
-              <div class="card-user__name">
-                <p>Алиса</p>
-                <p>Зайкина</p>
-              </div>
-              <p class="card-user__position">Руководитель ОП</p>
-              <a href="#" class="card-user__email">a.zaikina@poradom.ru</a>
-            </div>
-          </div>
-          <h4 class="section__subtitle">HR отдел</h4>
-          <div class="comands__item">
-            <div class="card-user">
-              <img src="../img/people.png" alt="" class="card-user__img" />
-              <div class="card-user__name">
-                <p>Алиса</p>
-                <p>Зайкина</p>
-              </div>
-              <p class="card-user__position">Руководитель ОП</p>
-              <a href="#" class="card-user__email">a.zaikina@poradom.ru</a>
-            </div>
-          </div>
-          <h4 class="section__subtitle">Руководство</h4>
-          <div class="comands__item">
-            <div class="card-user">
-              <img src="../img/people.png" alt="" class="card-user__img" />
-              <div class="card-user__name">
-                <p>Алиса</p>
-                <p>Зайкина</p>
-              </div>
-              <p class="card-user__position">Руководитель ОП</p>
-              <a href="#" class="card-user__email">a.zaikina@poradom.ru</a>
-            </div>
-          </div>
 
-          <div class="link-vacance">
-            <p class="m-b--20">
-              Ищем профессионалов своего дела, разделяющие ценности загородной
-              жизни
-            </p>
-            <a href="vacance.html" class="button button_border-white"
-              >К вакансиям</a
-            >
+            <div class="comands__users">
+              <h4 class="section__subtitle">Отдел сопровождения клиентов</h4>
+              <div class="comands__item">
+                <div class="card-user">
+                  <img src="../img/people.png" alt="" class="card-user__img" />
+                  <div class="card-user__name">
+                    <p>Алиса</p>
+                    <p>Зайкина</p>
+                  </div>
+                  <p class="card-user__position">Руководитель ОП</p>
+                  <a href="#" class="card-user__email">a.zaikina@poradom.ru</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="comands__users">
+              <h4 class="section__subtitle">HR отдел</h4>
+              <div class="comands__item">
+                <div class="card-user">
+                  <img src="../img/people.png" alt="" class="card-user__img" />
+                  <div class="card-user__name">
+                    <p>Алиса</p>
+                    <p>Зайкина</p>
+                  </div>
+                  <p class="card-user__position">Руководитель ОП</p>
+                  <a href="#" class="card-user__email">a.zaikina@poradom.ru</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="comands__users">
+              <h4 class="section__subtitle">Руководство</h4>
+              <div class="comands__item comands__item_last">
+                <div class="card-user">
+                  <img src="../img/people.png" alt="" class="card-user__img" />
+                  <div class="card-user__name">
+                    <p>Алиса</p>
+                    <p>Зайкина</p>
+                  </div>
+                  <p class="card-user__position">Руководитель ОП</p>
+                  <a href="#" class="card-user__email">a.zaikina@poradom.ru</a>
+                </div>
+
+                <div class="card card-mail">
+                  <h4>
+                    Ищем профессионалов своего дела, разделяющих ценности
+                    загородной жизни
+                  </h4>
+                  <button class="button button_accent js-open-modal"
+              data-modal="write">Написать</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="comands__vacance">
+          <div class="container">
+            <div class="link-vacance">
+              <p class="m-b--20">
+                Ищем профессионалов своего дела, разделяющих ценности загородной жизни
+              </p>
+              <a href="vacance.html" class="button button_border-white"
+                >К вакансиям</a
+              >
+            </div>
           </div>
         </div>
       </section>
+            <!-- popup -->
+      <div class="modal" data-modal="excursion">
+        <form action="#" class="form-standart" id="special-offer" data-form="1">
+          <h4 class="form__title">
+Запишитесь <br> на экскурсию <br> по посёлку <br> Название посёлка
+          </h4>
+          <p class="form__text">
+            Приезжайте на экскурсию, чтобы увидеть все своими глазами и узнать о
+            жизни поселка
+          </p>
+          <div class="text-field">
+            <input
+              data-special-offer
+              class="text-field__input tel"
+              type="text"
+              name="login"
+              id="login"
+              placeholder="Введите ваш телефон"
+            />
+          </div>
+          <div class="text-field">
+            <input
+              data-special-offer
+              class="text-field__input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Введите ваш имя"
+            />
+          </div>
+
+          <button
+            type="submit"
+            id="special-offer-btn"
+            class="button button_accent"
+          >
+            Отправить
+          </button>
+          <label class="checkbox-other">
+            <input data-special-offer type="checkbox" checked />
+            <p>
+              Даю согласие на обработку
+              <a href="#" class="checkbox__link"> персональных данных </a>
+            </p>
+          </label>
+        </form>
+      </div>
+      <div class="modal" data-modal="write">
+        <form action="#" class="form-standart" id="special-offer" data-form="3">
+          <h4 class="form__title">
+            Ваше предложение <br> по земле
+          </h4>
+          <div class="text-field">
+            <input
+              data-special-offer
+              class="text-field__input tel"
+              type="text"
+              name="login"
+              id="login"
+              placeholder="Введите ваш телефон"
+            />
+          </div>
+          <div class="text-field">
+            <input
+              data-special-offer
+              class="text-field__input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Введите ваш имя"
+            />
+          </div>
+
+          <button
+            type="submit"
+            id="special-offer-btn"
+            class="button button_accent"
+          >
+            Отправить
+          </button>
+          <label class="checkbox-other">
+            <input data-special-offer type="checkbox" checked />
+            <p>
+              Даю согласие на обработку
+              <a href="#" class="checkbox__link"> персональных данных </a>
+            </p>
+          </label>
+        </form>
+      </div>
+      <div class="popup-message">
+        <svg
+          width="65"
+          height="64"
+          viewBox="0 0 65 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="32.5" cy="32" r="32" fill="#003852" />
+          <path
+            d="M27.8333 43L18.5 34.0009L22.6504 29.9991L27.8333 35.0105L42.3496 21L46.5 25.0018L27.8333 43Z"
+            fill="white"
+          />
+        </svg>
+        <p>
+          Спасибо <br />
+          Ваша заявка принята
+        </p>
+      </div>
+      <div class="overlay js-overlay-modal"></div>
     </main>
     <!--footer start-->
     <footer class="footer">
-      <div class="container">
-        <div class="accordion" id="accordion">
-          <h3 class="">Покупателям <span class="accordion__line"></span></h3>
-          <div class="tabs__text" id="tabs-1" style="height: 0px">
-            <a href="#"> Проектирование </a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-          </div>
-          <h3 class="">Стандарты <span class="accordion__line"></span></h3>
-          <div class="tabs__text" id="tabs-2" style="height: 0px">
-            <a href="#">Проектирование</a>
-          </div>
-          <h3 class="">О застройщике <span class="accordion__line"></span></h3>
-          <div class="tabs__text" id="tabs-3" style="height: 0px">
-            <a href="#">Проектирование</a>
-          </div>
-          <h3>Контакты</h3>
+      <div class="footer__m">
+        <div class="container">
+          <div class="accordion" id="accordion">
+            <h3 class="accordion-header">
+              Покупателям <span class="accordion__line"></span>
+            </h3>
+            <div
+              class="accordion-body tabs__text"
+              id="tabs-1"
+              style="height: 0px"
+            >
+              <a href="#"> Проектирование </a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="accordion-header">
+              Стандарты <span class="accordion__line"></span>
+            </h3>
+            <div
+              class="accordion-body tabs__text"
+              id="tabs-2"
+              style="height: 0px"
+            >
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="accordion-header">
+              О застройщике <span class="accordion__line"></span>
+            </h3>
+            <div
+              class="accordion-body tabs__text"
+              id="tabs-3"
+              style="height: 0px"
+            >
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="accordion-header">Контакты</h3>
 
-          <div class="tabs__text" id="tabs-4" style="height: 0px">
-            <a href="#">Проектирование</a>
+            <div
+              class="accordion-body tabs__text"
+              id="tabs-4"
+              style="height: 0px"
+            >
+              <a href="#">Проектирование</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__line"></div>
+        <div class="container">
+          <div class="footer__content">
+            <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
+            <div class="footer__socials social">
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/youtube.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/facebook.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+              <a href="#" class="pie pie_primary social__link_s">
+                <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+              </a>
+            </div>
+            <div class="footer__contact">
+              <address>г.Уфа, ул.Мустая Карима, д.16</address>
+              <a href="tel:73472008719">+7 (347) 200-87-19</a>
+            </div>
+            <p class="development">
+              Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
+            </p>
           </div>
         </div>
       </div>
-      <div class="footer__line"></div>
-      <div class="container">
-        <div class="footer__content">
-          <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
-          <div class="footer__socials social">
-            <a href="#" class="pie pie_primary social__link_s">
-              <img src="../img/icons/youtube.svg" alt="" class="social__icon" />
-            </a>
-            <a href="#" class="pie pie_primary social__link_s">
-              <img
-                src="../img/icons/instagram.svg"
-                alt=""
-                class="social__icon"
-              />
-            </a>
-            <a href="#" class="pie pie_primary social__link_s">
-              <img
-                src="../img/icons/facebook.svg"
-                alt=""
-                class="social__icon"
-              />
-            </a>
-            <a href="#" class="pie pie_primary social__link_s">
-              <img src="../img/icons/vk.svg" alt="" class="social__icon" />
-            </a>
+      <div class="footer__d">
+        <div class="container">
+          <div class="footer__top">
+            <div class="footer__top-left">
+              <div class="footer__content">
+                <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
+                <div class="footer__socials social">
+                  <a href="#" class="pie pie_primary social__link_s">
+                    <img
+                      src="../img/icons/youtube.svg"
+                      alt=""
+                      class="social__icon"
+                    />
+                  </a>
+
+                  <a href="#" class="pie pie_primary social__link_s">
+                    <img
+                      src="../img/icons/facebook.svg"
+                      alt=""
+                      class="social__icon"
+                    />
+                  </a>
+                  <a href="#" class="pie pie_primary social__link_s">
+                    <img
+                      src="../img/icons/vk.svg"
+                      alt=""
+                      class="social__icon"
+                    />
+                  </a>
+                </div>
+                <div class="footer__contact">
+                  <address>г.Уфа, ул.Мустая Карима, д.16</address>
+                  <a href="tel:73472008719">+7 (347) 200-87-19</a>
+                </div>
+              </div>
+            </div>
+            <div class="footer__top-right">
+              <div class="footer__nav">
+                <h5 class="footer__nav-header">Покупателям</h5>
+                <a href="#" class="footer__nav-item"> Поселки </a>
+                <a href="#" class="footer__nav-item"> Готовые дома </a>
+              </div>
+              <div class="footer__nav">
+                <h5 class="footer__nav-header">Покупателям</h5>
+                <a href="#" class="footer__nav-item"> Поселки </a>
+                <a href="#" class="footer__nav-item"> Готовые дома </a>
+              </div>
+              <div class="footer__nav">
+                <h5 class="footer__nav-header">Покупателям</h5>
+                <a href="#" class="footer__nav-item"> Поселки </a>
+                <a href="#" class="footer__nav-item"> Готовые дома </a>
+              </div>
+              <div class="footer__nav">
+                <h5 class="footer__nav-header">Покупателям</h5>
+                <a href="#" class="footer__nav-item"> Поселки </a>
+                <a href="#" class="footer__nav-item"> Готовые дома </a>
+              </div>
+            </div>
           </div>
-          <div class="footer__contact">
-            <address>г.Уфа, ул.Мустая Каримова, д.16</address>
-            <a href="tell:73472008719">+7 (347) 200-87-19</a>
+          <div class="footer__bottom">
+            <p class="footer__bottom-left">Все права защищены</p>
+            <p class="development footer__bottom-right">
+              Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
+            </p>
           </div>
-          <p class="development">
-            Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
-          </p>
         </div>
       </div>
     </footer>

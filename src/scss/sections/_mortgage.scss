@@ -1,0 +1,92 @@
+.mortgage {
+  @include desktop-desktop {
+    padding-bottom: 120px;
+  }
+  &__content {
+    @include desktop-laptop {
+      display: flex;
+      gap: 90px;
+      justify-content: space-between;
+    }
+  }
+  &__bottom {
+    @include desktop-tablet_to_laptop {
+      margin: 0 auto;
+      width: calc(100% - 50px);
+    }
+    @include desktop-laptop {
+      padding-top: 50px;
+    }
+    @include desktop-desktop {
+      padding-top: 120px;
+    }
+  }
+  &__title {
+    margin-bottom: 10px;
+  }
+  &__text {
+    @include desktop-desktop {
+      font-size: 26px;
+      line-height: 120%;
+    }
+  }
+  &__accordion {
+    @include desktop-tablet {
+      margin-top: 30px;
+      margin-left: $space-l-t;
+      width: calc(100% - 2 * #{$space-l-t});
+    }
+    @include desktop-laptop {
+      margin-left: $space-l-l;
+      width: calc(100% - #{$space-l-l});
+    }
+    @include desktop-desktop {
+      margin-top: 90px;
+      margin-left: $space-l-d;
+      width: calc(100% - #{$space-l-d});
+    }
+    &-title {
+      color: #fff;
+      margin-bottom: 20px;
+      font-size: 18px;
+      line-height: 120%;
+      @include desktop-desktop {
+        font-size: 48px;
+        line-height: 100%;
+        margin-bottom: 40px;
+      }
+    }
+  }
+  &__calc {
+    @include desktop-laptop {
+      width: 390px;
+    }
+    @include desktop-desktop {
+      width: 595px;
+    }
+  }
+  &__secret {
+    &-content {
+      padding-top: 20px;
+      @include desktop-desktop {
+        padding: 20px 55px 0;
+      }
+      & > p {
+        font-weight: 500;
+        color: #b5b9be;
+        font-size: 10px;
+        line-height: 100%;
+        @include desktop-desktop {
+          font-size: 12px;
+          line-height: 130%;
+        }
+        &:not(:last-child) {
+          margin-bottom: 10px;
+          @include desktop-desktop {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

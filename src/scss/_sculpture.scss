@@ -3,33 +3,55 @@
   padding-top: 47px;
   padding-bottom: 40px;
   position: relative;
-  &::after {
-    position: absolute;
-    content: "";
-    width: 1px;
-    height: 47px;
-    background-color: $brown;
-    right: 50%;
-    top: 0;
+  @include desktop-tablet {
+    padding: 50px 0;
+    height: 430px;
   }
+  @include desktop-desktop {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 180px;
+    height: 720px;
+  }
+
+  // &::after {
+  //   position: absolute;
+  //   content: "";
+  //   width: 1px;
+  //   height: 47px;
+  //   background-color: $brown;
+  //   right: 50%;
+  //   top: 0;
+  // }
+
   &__content {
     display: flex;
     justify-content: space-between;
     position: relative;
     margin-bottom: 20px;
   }
+
   &__title {
-    font-family: AlienscowsEL;
+    font-family: MrPalkerDadsonCondL, sans-serif;
     color: $brown;
     font-size: 36px;
     line-height: 110%;
-    letter-spacing: -0.4px;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
     z-index: 10;
+    @include desktop-tablet {
+      font-size: 48px;
+      line-height: 110%;
+    }
+    @include desktop-desktop {
+      font-size: 86px;
+    }
+
     &-wrapper {
       flex-shrink: 0;
       //   position: relative;
     }
+
     &-image {
       position: absolute;
       height: 100%;
@@ -38,7 +60,26 @@
       // height: 83px;
       // border-radius: 50%;
       display: block;
+
       // clip-path: polygon(9px 0%, 100% 0%, 100% 100%, 9px 100%);
+      @include desktop-tablet {
+        z-index: 1;
+        top: -20px;
+        right: 60px;
+        width: 107px;
+        height: 120px;
+      }
+      @include desktop-laptop {
+        right: 12px;
+        width: 125px;
+        height: 140px;
+      }
+      @include desktop-desktop {
+        top: -35px;
+        right: 19px;
+        width: 249px;
+        height: 279px;
+      }
     }
   }
 
@@ -48,9 +89,31 @@
     margin-bottom: 30px;
     width: 100%;
     position: relative;
+    @include desktop-tablet {
+      position: absolute;
+      bottom: 0;
+      margin: 0;
+      object-fit: cover;
+      width: 45%;
+    }
+    @include desktop-desktop {
+      width: 55%;
+    }
     img {
       width: 100%;
+      @include desktop-tablet {
+        max-height: 430px;
+      }
+      @include desktop-tablet {
+        /* top: 0; */
+
+        /* display: none; */
+      }
+      @include desktop-desktop {
+        max-height: 720px;
+      }
     }
+
     &::before {
       position: absolute;
       content: "";
@@ -64,11 +127,31 @@
       top: -45px;
       right: 0;
       z-index: 100;
+
+      @include desktop-tablet {
+        width: 55%;
+        top: 25px;
+        right: 32px;
+      }
     }
   }
+
   &__text {
     color: #b5b9be;
     font-size: 16px;
     line-height: 21px;
+    @include desktop-tablet {
+      font-size: 16px;
+      line-height: 130%;
+      margin-bottom: 60px;
+    }
+    @include desktop-laptop {
+      margin-bottom: 48px;
+    }
+    @include desktop-desktop {
+      font-size: 26px;
+      line-height: 120%;
+      margin-bottom: 100px;
+    }
   }
 }

@@ -1,0 +1,82 @@
+.comands {
+  padding: 24px 0 0;
+  @include desktop-tablet {
+    padding: 24px 0 36px;
+  }
+  @include desktop-tablet {
+    padding: 24px 0 36px;
+  }
+  @include desktop-laptop {
+    padding: 34px 0 46px;
+  }
+  @include desktop-tablet {
+    padding: 42px 0 120px;
+  }
+  &__item {
+    row-gap: 20px;
+    column-gap: 10px;
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+
+    @include desktop-desktop {
+      margin-bottom: 0;
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    & > .card-user {
+      flex-basis: 140px;
+
+      @include desktop-tablet {
+        flex-basis: 228px;
+      }
+
+      @include desktop-desktop {
+        flex-basis: 270px;
+      }
+    }
+
+    & > .card-mail {
+      display: none;
+
+      @include desktop-tablet {
+        display: flex;
+      }
+    }
+
+    &_last {
+      // justify-content: space-between;
+    }
+  }
+
+  &__content {
+    @include desktop-desktop {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 270px));
+      gap: 30px;
+    }
+  }
+
+  &__users {
+    @include desktop-desktop {
+      grid-column: 3 span / 3 span;
+    }
+
+    & > h4 {
+      margin-bottom: 20px;
+      white-space: nowrap;
+    }
+  }
+
+  &__vacance {
+    background-color: $secondary;
+    padding: 40px 0;
+    @include desktop-tablet {
+      display: none;
+    }
+  }
+}

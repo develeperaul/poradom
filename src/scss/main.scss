@@ -1,5 +1,6 @@
 @import "~reset-css";
 @import "~normalize.css";
+@import "glightbox/dist/css/glightbox.css";
 @import "vars";
 @import "mixins";
 @import "settings";
@@ -7,7 +8,6 @@
 @import "input";
 @import "popup";
 @import "ui";
-@import "./swiper-bundle.min.css";
 @import "./swiper";
 @import "style";
 @import "dropdown";
@@ -17,6 +17,7 @@
 @import "ready";
 @import "hit";
 @import "settlements";
+@import "service";
 @import "project";
 @import "features";
 @import "sculpture";
@@ -24,57 +25,226 @@
 @import "news";
 @import "application";
 @import "distance";
-@import "checkbox.css";
-@import "accardion.css";
+@import "checkbox";
+@import "accardion";
+@import "calc";
 @import "explore";
+@import "video";
+@import "plans";
+
+@import "settlements-map";
+@import "service-settlement";
+@import "contacts";
+@import "neighbors";
+@import "visualization";
+@import "sections/interior";
+@import "sections/mortgage";
+@import "sections/results";
+@import "sections/complex";
+@import "sections/comands";
+@import "sections/road-map";
+@import "sections/redemption";
+@import "sections/advantages";
+@import "sections/review";
+@import "sections/news";
+@import "sections/news-item";
+@import "sections/location-home";
+@import "sections/about-settlement";
+@import "sections/services";
+@import "sections/documents-homeowners";
+@import "sections/ready-homes";
+@import "sections/region";
+@import "sections/requisites";
+@import "sections/about-work";
+@import "sections/vacance";
+@import "sections/form";
+
 @import "footer";
+
+@import "plugins/toggle";
+@import "plugins/popup-info";
+@import "plugins/glightbox";
+@import "plugins/slider-popup";
+
+.title-br {
+  @include desktop-tablet {
+    display: none;
+  }
+}
+
 .section {
   padding: 20px 0 40px;
+
+  @include desktop-desktop {
+    padding: 40px 0 120px;
+  }
+
+  &-pb0 {
+    padding-bottom: 0 !important;
+  }
+  &-pt80 {
+    padding-top: 80px !important;
+  }
   &:not(:first-child) {
     padding: 40px 0 40px;
+
+    @include desktop-tablet {
+      padding: 40px 0;
+    }
+    @include desktop-laptop {
+      padding: 50px 0;
+    }
+    @include desktop-desktop {
+      padding: 120px 0 120px;
+    }
   }
+
   &__bg {
     &_secondary {
       background-color: $secondary;
       color: #fff;
     }
   }
+
   &__top {
     margin-bottom: 20px;
+
+    @include desktop-desktop {
+      margin-bottom: 40px;
+    }
+
     & > .section__title {
       margin-bottom: 10px;
+      @include desktop-tablet {
+        margin-bottom: 0;
+      }
+    }
+
+    &_first {
+      display: none;
+
+      @include desktop-desktop {
+        display: block;
+      }
     }
   }
+
   &__title {
     margin-bottom: 20px;
+    @include desktop-tablet {
+      font-size: 24px;
+      line-height: 100%;
+    }
+    @include desktop-desktop {
+      font-size: 48px;
+      margin-bottom: 40px;
+    }
   }
+
   &__subtitle {
     margin-bottom: 20px;
   }
 
   &__text {
     color: #b5b9be;
+    margin-top: 10px;
+    @include desktop-tablet {
+      margin-top: 5px;
+    }
+    @include desktop-desktop {
+      margin-top: 20px;
+    }
   }
+
   &__btns {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     position: relative;
+
+    @include desktop-desktop {
+      margin-bottom: 45px;
+    }
   }
 
   &__crumbs {
     margin-bottom: 20px;
+    @include desktop-tablet {
+      margin-bottom: 13px;
+    }
+    @include desktop-desktop {
+      margin-bottom: 40px;
+      font-size: 14px;
+      line-height: 130%;
+    }
+  }
+
+  &-flex {
+    display: block;
+
+    @include desktop-tablet {
+      display: flex;
+      gap: 80px;
+    }
+    @include desktop-laptop {
+      gap: 72px;
+    }
+    @include desktop-desktop {
+      gap: 100px;
+    }
+
+    &__content {
+      flex-grow: 1;
+    }
+  }
+  &-flex__about-work {
+    @include desktop-desktop {
+      $space: $space-l-d + $gap + 100px;
+      display: flex;
+      justify-content: space-between;
+      margin-left: 0;
+      margin-right: $space;
+      width: calc(100% - #{$space});
+    }
+    .section__bottom {
+      @include desktop-tablet {
+        width: 485px;
+        margin-right: 0;
+        margin-left: auto;
+        font-size: 14px;
+        line-height: 120%;
+      }
+      @include desktop-laptop {
+        $space: $space-l-l + $gap-l + 100px;
+        margin-right: $space;
+        margin-left: auto;
+        width: 356px;
+      }
+      @include desktop-desktop {
+        margin: 0;
+        font-size: 18px;
+        width: 500px;
+      }
+    }
   }
 }
+
 .hit,
 .distance,
 .new-project {
   z-index: 111;
   padding-top: 40px;
   padding-bottom: 40px;
+
+  @include desktop-desktop {
+    padding: 120px 0;
+  }
 }
 
 .development {
   color: $border;
-  font-size: 12px;
+  font-size: 10px;
+  display: flex;
+  column-gap: 10px;
+  align-items: baseline;
 }
 
 .checkbox__link {
@@ -83,13 +253,25 @@
 }
 
 .drop {
+  @include desktop-tablet {
+    display: none;
+  }
+
+  &__children {
+    @include desktop-tablet {
+      display: none;
+    }
+  }
+
   &_sq {
     position: absolute;
     right: 8px;
-    bottom: 183px;
+    bottom: 221px;
 
     z-index: 10;
   }
+
+
   &__wrapper {
     position: relative;
     width: 100%;
@@ -105,6 +287,7 @@
   transform: rotate(0deg) translate(0px, 0px);
   opacity: 1;
   transition: all 0.3s ease;
+
   & > span {
     width: 9px;
     height: 9px;
@@ -112,64 +295,79 @@
     background-color: #fff;
     z-index: 10;
   }
+
   & > span:nth-child(1) {
   }
+
   & > span:nth-child(2) {
   }
+
   & > span:nth-child(3) {
   }
+
   & > span:nth-child(4) {
   }
+
   &_active {
     gap: 0px;
     transform: rotate(90deg);
+
     & > span {
       width: 2px;
       height: 20px;
     }
+
     & > span:nth-child(1) {
       transform: rotate(-45deg) translate(-6px, 8px);
     }
+
     & > span:nth-child(2) {
       opacity: 0;
     }
+
     & > span:nth-child(3) {
       transform: rotate(45deg) translate(-6px, -8px);
     }
+
     & > span:nth-child(4) {
       opacity: 0;
     }
   }
 }
+
 .children {
   position: absolute;
   z-index: 10;
   right: 8px;
-  &:nth-child(4) {
-    bottom: 243px;
+
+  &:nth-child(1) {
+    bottom: 283px;
     right: -1000px;
   }
+
   &:nth-child(2) {
-    bottom: 371px;
+    bottom: 411px;
     right: -1000px;
   }
+
   &:nth-child(3) {
-    bottom: 307px;
+    bottom: 347px;
     right: -1000px;
   }
 }
 
 .children_close {
-  &:nth-child(4) {
-    bottom: 243px;
+  &:nth-child(1) {
+    bottom: 283px;
     right: 8px;
     animation-name: close;
     animation-fill-mode: both;
     animation-timing-function: ease;
     animation-duration: 3s;
   }
+
   &:nth-child(2) {
-    bottom: 371px;
+    bottom: 411px;
     right: 8px;
     animation-name: close;
     animation-fill-mode: both;
@@ -177,8 +375,9 @@
     animation-delay: 0.3s;
     animation-duration: 0.3s;
   }
+
   &:nth-child(3) {
-    bottom: 307px;
+    bottom: 347px;
     right: 8px;
     animation-name: close;
     animation-fill-mode: both;
@@ -187,18 +386,21 @@
     animation-duration: 0.3s;
   }
 }
+
 .children_active {
   position: absolute;
-  &:nth-child(4) {
-    bottom: 243px;
+
+  &:nth-child(1) {
+    bottom: 283px;
     right: -1000px;
     animation-name: open;
     animation-fill-mode: both;
     animation-timing-function: ease-out;
     animation-duration: 0.3s;
   }
+
   &:nth-child(2) {
-    bottom: 371px;
+    bottom: 411px;
     right: -1000px;
     animation-name: open;
     animation-fill-mode: both;
@@ -206,8 +408,9 @@
     animation-duration: 0.3s;
     animation-delay: 0.2s;
   }
+
   &:nth-child(3) {
-    bottom: 307px;
+    bottom: 347px;
     right: -1000px;
     animation-name: open;
     animation-fill-mode: both;
@@ -221,42 +424,40 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
     right: 8px;
   }
 }
+
 @keyframes close {
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
     right: -1000px;
-  }
-}
-.neighbors {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 30px;
-  & > img {
-    z-index: 10;
   }
 }
 
 .tab {
   transition: all 0.5s ease;
   margin-bottom: 10px;
+
   &_border {
     padding: 20px 22px;
     border: 1px solid #e5e7ea;
     border-radius: 4px;
   }
+
   &__top {
     cursor: pointer;
     position: relative;
     margin-bottom: 0;
     transition: all 1s ease;
+
     &::before {
       position: absolute;
       content: "";
@@ -268,22 +469,69 @@
       background-position: center;
       width: 10px;
       height: 6px;
-      transform: rotate(0deg);
+      transform: translateY(-50%) rotate(0deg);
       transition: all 1s ease;
+      @include desktop-tablet {
+        top: 50%;
+        width: 15px;
+        height: 9px;
+      }
+      @include desktop-desktop {
+        width: 20px;
+        height: 12px;
+      }
     }
   }
+  &__title {
+    padding-right: 20px;
+    @include desktop-tablet {
+      padding-right: 25px;
+    }
+    @include desktop-desktop {
+      padding-right: 30px;
+    }
+  }
+
   &__bottom {
     transition: all 1s ease;
     height: 0;
     overflow: hidden;
   }
+
+  &__content {
+    color: #8f959b;
+  }
+
   &_active.tab_border {
     padding: 30px 22px;
   }
+
   &_active &__top {
     margin-bottom: 14px;
   }
+
   &_active &__top::before {
-    transform: rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+
+.contact-arrow {
+  &.active {
+    .drop_sq{
+      bottom: 3px;
+    } 
+    .children {
+      &:nth-child(1) {
+        bottom: 62px;
+      }
+      &:nth-child(2){
+        bottom: 183px;
+      }
+      &:nth-child(3) {
+        bottom: 124px;
+      }
+    }
+
   }
 }

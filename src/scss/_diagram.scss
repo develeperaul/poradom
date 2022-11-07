@@ -1,52 +1,85 @@
 svg {
   box-sizing: border-box;
 }
+
 .diagram {
   background-color: $secondary;
   position: relative;
+  padding-bottom: 40px;
+
+  @include desktop-desktop {
+    padding-bottom: 20px;
+  }
+
   &__accordion > h3 {
     color: #fff;
   }
-  padding-bottom: 40px;
+
   &__number-content {
     position: absolute;
   }
+
   &__top {
-    padding-top: 80px;
     padding-left: 13px;
-    width: 100%;
+    margin-left: 50px;
+    padding-top: 80px;
+
+    @include desktop-desktop {
+      padding-top: 130px;
+      margin-left: 300px;
+      padding-left: 0;
+    }
   }
+
   &__title {
     z-index: 9;
-    margin-left: 50px;
     margin-bottom: 10px;
+
+    @include desktop-desktop {
+      margin-bottom: 40px;
+    }
+
     & > span {
       padding-top: 9px;
-
-      padding-left: 11px;
       padding-right: 11px;
     }
   }
+
   &__text {
     color: #e5e7ea;
     display: inline-block;
-    margin-left: 61px;
-    margin-bottom: 30px;
+    // margin-left: 61px;
     font-size: 16px;
     align-self: flex-start;
+
+    @include desktop-desktop {
+      font-size: 26px;
+      line-height: 31px;
+      margin-left: 0;
+    }
   }
+
   &__line {
     &-top,
     &-bottom {
       position: absolute;
       background-color: $primary;
     }
+
     &-top {
       top: 0;
       left: 20px;
       width: 1px;
       height: 40px;
+      @include desktop-tablet {
+        left: 30px;
+      }
+      @include desktop-desktop {
+        left: 70px;
+        height: 80px;
+      }
     }
+
     &-bottom {
       bottom: 0;
       left: 20px;
@@ -54,27 +87,38 @@ svg {
       height: 160px;
     }
   }
+
   &__number {
     position: absolute;
-    left: 7px;
     top: 40px;
+
+    @include desktop-desktop {
+      top: 80px;
+    }
   }
+
   &__number-content {
     position: absolute;
-    // height: 100%;
-    // width: 100%;
+    left: 7px;
     z-index: 9;
+
+    @include desktop-desktop {
+      left: 60px;
+    }
   }
+
   &__bottom {
     text-align: center;
     // position: relative;
   }
+
   &__image {
     height: 40%;
 
     // position: absolute;
     // right: -16px;
   }
+
   &__logo {
     width: 62px;
     height: 32px;
@@ -84,6 +128,22 @@ svg {
 
 .survey__wrapper {
   position: relative;
+  @include desktop-tablet {
+    $space: 87px;
+    width: calc(100% - 2 * #{$space});
+    margin-left: $space;
+  }
+  @include desktop-laptop {
+    $space: 93px;
+    width: calc(100% - 2 * #{$space});
+    margin-left: 93px;
+  }
+  @include desktop-desktop {
+    $space: 300px;
+    width: calc(100% - 2 * #{$space});
+    margin-left: 300px;
+  }
+
   & > .popup {
     position: absolute;
     width: 100%;
@@ -100,12 +160,53 @@ svg {
     transition: all 0.7s ease;
 
     opacity: 0;
+
+    @include desktop-desktop {
+      max-width: 300px;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      top: 0%;
+      padding: 19px;
+    }
+
     &_active {
       opacity: 1;
       z-index: 11;
     }
   }
 }
+
 .survey__list {
   position: relative;
+
+  @include desktop-laptop {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 373px));
+    gap: 6px 8px;
+  }
+  @include desktop-desktop {
+    gap: 10px 30px;
+    grid-template-columns: repeat(2, minmax(0, 570px));
+  }
+}
+
+.diagram__accordion.accordion {
+  h3 {
+    margin-bottom: 6px;
+  }
+
+  h3:not(:first-child) {
+    padding-top: 20px;
+  }
+  h3 + .accordion-body {
+    margin-bottom: 0px;
+  }
+  h3.select + .accordion-body {
+    margin-bottom: 20px;
+  }
+  .accordion__line {
+    display: block;
+    position: static;
+  }
 }

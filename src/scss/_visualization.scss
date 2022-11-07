@@ -1,0 +1,60 @@
+.visualization {
+  @include desktop-laptop {
+  }
+
+  &__content {
+    @include desktop-laptop {
+      display: grid;
+      grid-template-areas: "A A A A B B";
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+  &__left {
+    @include desktop-laptop {
+      grid-area: A;
+    }
+    & .swiper-numbs {
+      @include desktop-laptop {
+        display: none;
+      }
+    }
+    .swiper-nav {
+      @include desktop-tablet {
+        position: absolute;
+        width: 100%;
+        top: 225px;
+      }
+      @include desktop-laptop {
+        top: 50%;
+      }
+      & .swiper-next,
+      & .swiper-prev {
+        @include desktop-tablet {
+          top: auto;
+        }
+      }
+    }
+  }
+  .section__btns {
+    @include desktop-laptop {
+      grid-area: B;
+      margin-left: 78px;
+    }
+    @include desktop-desktop {
+      margin-left: 160px;
+    }
+    & .button__group {
+      @include desktop-tablet_to_laptop {
+        flex-wrap: wrap;
+      }
+      @include desktop-laptop {
+        overflow-x: auto;
+        flex-wrap: wrap;
+        gap: 10px;
+        //   display: grid;
+        //   grid-template-columns: repeat(2, minmax(0, 1fr));
+        //   gap: 10px 0px;
+      }
+    }
+  }
+}

@@ -3,37 +3,129 @@ footer {
     color: #fff !important;
   }
 }
+
 .footer {
   padding: 33px 0 30px;
   background-color: $secondary;
   color: #fff !important;
+
+  &__m {
+    display: block;
+
+    @include desktop-tablet {
+      display: none;
+    }
+  }
+
+  &__d {
+    display: none;
+
+    @include desktop-tablet {
+      display: block;
+    }
+  }
+
   &__line {
     border-top: 1px solid #00293c;
     margin: 30px 0;
   }
+
   &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  &__logo {
-    margin-bottom: 40px;
-  }
-  &__socials {
-    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+    @include desktop-tablet {
+      text-align: left;
+    }
   }
 
-  &__contact {
-    text-align: center;
-    margin-bottom: 11px;
+  &__logo {
+    margin-bottom: 40px;
+
+    @include desktop-desktop {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__socials {
+    margin-bottom: 20px;
+
+    @include desktop-desktop {
+      align-self: baseline;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 73px;
+    &-right {
+      // display: flex;
+      column-gap: 70px;
+      row-gap: 18px;
+      display: grid;
+      grid-template-areas:
+        "A B C"
+        "A B D";
+      @include desktop-laptop {
+        column-gap: 150px;
+        grid-template-areas: "A B C D";
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    &-left {
+      font-size: 12px;
+      line-height: 170%;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+    @include desktop-desktop {
+      row-gap: 30px;
+    }
+    &:nth-child(1) {
+      grid-area: A;
+    }
+    &:nth-child(2) {
+      grid-area: B;
+    }
+    &:nth-child(3) {
+      grid-area: C;
+    }
+    &:nth-child(4) {
+      grid-area: D;
+    }
+
+    &-header {
+      color: $primary;
+    }
+
+    &-item {
+      color: #fff;
+    }
   }
 }
 
 .social {
   display: flex;
+
   &__link_s {
     &:not(:last-child) {
-      margin-right: 14px;
+      margin-right: 10px;
+      @include desktop-desktop {
+        margin-right: 14px;
+      }
     }
   }
 }

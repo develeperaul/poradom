@@ -1,0 +1,63 @@
+.calc {
+  padding: 20px 30px 30px;
+  background-color: #fff;
+  color: $black;
+  border-radius: 4px;
+  @include desktop-desktop {
+    padding: 60px 70px;
+  }
+  &__title,
+  &__btns,
+  &__text {
+    margin-bottom: 20px;
+  }
+  & .dropdown {
+    margin-bottom: 10px;
+  }
+  &__inputs {
+    @include desktop-desktop {
+      background-color: #e5e7ea;
+      border-radius: 6px;
+      padding: 60px 55px;
+    }
+  }
+  &__input {
+    margin-bottom: 10px;
+  }
+  &__plus {
+    display: flex;
+    align-items: center;
+    &-icon {
+      color: $border;
+      margin: 0 6px;
+    }
+  }
+  & .button {
+    width: 100%;
+  }
+  &__result {
+    display: flex;
+    &_60 {
+      width: 60%;
+      margin-right: 10px;
+    }
+    &_40 {
+      width: 40%;
+    }
+  }
+  &__sum {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 14px;
+      height: 14px;
+      background-image: url("../img/icons/sum.svg");
+      background-repeat: no-repeat;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%, -7px);
+      z-index: 10;
+    }
+  }
+}

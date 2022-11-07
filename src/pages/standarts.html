@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poradom</title>
+  </head>
+
+  <body>
+    <div class="top-arrow" id="arrow">
+      <div class="arrow-icon">
+        <svg
+          width="14"
+          height="8"
+          viewBox="0 0 14 8"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M13 7L7 1L1 7" stroke="white" stroke-linecap="round" />
+        </svg>
+      </div>
+    </div>
+    <section class="sidebar">
+      <div class="container">
+        <div class="header__wrapper"></div>
+        <div class="header__top">
+          <img src="../img/icons/logo1.svg" alt="" class="logo" />
+          <div class="header__trigger">
+            <button class="menu-trigger active" id="menu-sidebar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <span class="menu-trigger__text"> Меню </span>
+          </div>
+          <div class="header__contacts">
+            <div class="social">
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/youtube.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/facebook.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+              <a href="#" class="pie pie_primary social__link_s">
+                <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+              </a>
+            </div>
+            <div class="header__contact contact">
+              <address>г.Уфа, ул.Мустая Карима, д.16</address>
+              <a href="tel:73472008719">+7 (347) 200-87-19</a>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar__list accordion" id="sidebar-accordion">
+          <h3 class="">Покупателям</h3>
+          <div class="tabs__text" id="tabs-1" style="height: 0px">
+            <a href="#"> Проектирование </a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+            <a href="#">Проектирование</a>
+          </div>
+          <h3 class="">Стандарты</h3>
+          <div class="tabs__text" id="tabs-2" style="height: 0px">
+            <a href="#">Проектирование</a>
+          </div>
+          <h3 class="">О застройщике</h3>
+          <div class="tabs__text" id="tabs-3" style="height: 0px">
+            <a href="#">Проектирование</a>
+          </div>
+        </div>
+        <div id="list_03">
+          <ul class="sidebar__list-desktop">
+            <li class="sidebar__item" data-node="#list_01-1">
+              <a href="#">
+                <span class="sidebar__item-left">01 —</span>
+                <span class="sidebar__item-right">Коттеджные посёлки</span>
+              </a>
+            </li>
+            <li class="sidebar__item" data-node="#list_02-1">
+              <a href="#">
+                <span class="sidebar__item-left">02 —</span>
+                <span class="sidebar__item-right">Готовые дома</span>
+              </a>
+            </li>
+            <li class="sidebar__item" data-node="#list_03-1">
+              <a href="#">
+                <span class="sidebar__item-left">03 —</span>
+                <span class="sidebar__item-right">Проекты</span>
+              </a>
+              <div
+                class="sidebar___list_desktop-2 sidebar__children"
+                id="list_03-1"
+                style="display: none"
+              >
+                <ul class="sidebar-children__list">
+                  <li class="sidebar__item" data-node="#list_03_1-2">
+                    <a href="#">Серия Первый Дом</a>
+                  </li>
+                  <li class="sidebar__item" data-node="#list_03_2-2">
+                    <a href="#">Серия NATUR-A</a>
+                  </li>
+                  <li class="sidebar__item" data-node="#list_03_3-2">
+                    <a href="#">Серия Элегант</a>
+                  </li>
+                  <li class="sidebar__item" data-node="#list_03_4-2">
+                    <a href="#">Серия Классик</a>
+                  </li>
+                  <li class="sidebar__item" data-node="#list_03_5-2">
+                    <a href="#">Кирпичный Стандарт</a>
+                  </li>
+                  <li class="sidebar__item" data-node="#list_03_6-2">
+                    <a href="#">Серия Ред Лайт</a>
+                    <div
+                      class="sidebar__list_desktop-3 sidebar__children"
+                      id="list_03_6-2"
+                      style="display: none"
+                    >
+                      <ul class="sidebar-children__list">
+                        <li class="sidebar__item" data-node="#list_03_6_1-3">
+                          <a href="#">Кирпичный Стандарт 105</a>
+                        </li>
+                        <li class="sidebar__item" data-node="#list_03_6_2-3">
+                          <a href="#">Кирпичный Стандарт 120</a>
+                        </li>
+                        <li class="sidebar__item" data-node="#list_03_6_3-3">
+                          <a href="#">Кирпичный Стандарт 140</a>
+                        </li>
+                        <li class="sidebar__item" data-node="#list_03_6_4-3">
+                          <a href="#">Кирпичный Стандарт 150</a>
+                        </li>
+                        <li class="sidebar__item" data-node="#list_03_6_5-3">
+                          <a href="#">Кирпичный Стандарт 170</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="sidebar__item" data-node="#list_03_7-2">
+                    <a href="#">Индивидуальный проект</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar__item" data-node="#list_04-1">
+              <a href="#">
+                <span class="sidebar__item-left">04 —</span>
+                <span class="sidebar__item-right">Стандарты Порадом</span>
+              </a>
+            </li>
+            <li class="sidebar__item" data-node="#list_05-1">
+              <a href="#">
+                <span class="sidebar__item-left">05 —</span>
+                <span class="sidebar__item-right">Компания Порадом</span>
+              </a>
+            </li>
+            <li class="sidebar__item" data-node="#list_06-1">
+              <a href="#">
+                <span class="sidebar__item-left">06 —</span>
+                <span class="sidebar__item-right">Галерея</span>
+              </a>
+            </li>
+            <li class="sidebar__item" data-node="#list_07-1">
+              <a href="#">
+                <span class="sidebar__item-left">07 —</span>
+                <span class="sidebar__item-right">Новости</span>
+              </a>
+            </li>
+            <li class="sidebar__item" data-node="#list_08-1">
+              <a href="#">
+                <span class="sidebar__item-left">08 —</span>
+                <span class="sidebar__item-right">Отзывы</span>
+              </a>
+            </li>
+            <li class="sidebar__item" data-node="#list_09-1">
+              <a href="#">
+                <span class="sidebar__item-left">09 —</span>
+                <span class="sidebar__item-right">Контакты</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!--header start-->
+    <div
+      class="header__top_white header__top_fixed header__top_fixed-open"
+      style="display: none"
+    >
+      <div class="container header__top">
+        <img src="../img/icons/logo3.svg" alt="" class="logo" />
+        <div class="header__trigger">
+          <button class="menu-trigger" id="menu-header">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <span class="menu-trigger__text"> Меню </span>
+        </div>
+        <div class="header__contacts">
+          <div class="social">
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/youtube.svg" alt="" class="social__icon" />
+            </a>
+
+            <a href="#" class="pie pie_primary social__link_s">
+              <img
+                src="../img/icons/facebook.svg"
+                alt=""
+                class="social__icon"
+              />
+            </a>
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+            </a>
+          </div>
+          <div class="header__contact contact">
+            <address>г.Уфа, ул.Мустая Карима, д.16</address>
+            <a href="tel:73472008719">+7 (347) 200-87-19</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="header">
+      <div class="header__top_absolute header-nav">
+        <div class="container header__top">
+          <img src="../img/icons/logo1.svg" alt="" class="logo" />
+          <div class="header__trigger">
+            <button class="menu-trigger" id="menu-header">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <span class="menu-trigger__text"> Меню </span>
+          </div>
+          <div class="header__contacts">
+            <div class="social">
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/youtube.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/facebook.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+              <a href="#" class="pie pie_primary social__link_s">
+                <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+              </a>
+            </div>
+            <div class="header__contact contact">
+              <address>г.Уфа, ул.Мустая Карима, д.16</address>
+              <a href="tel:73472008719">+7 (347) 200-87-19</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a
+        href="tg://resolve?domain=username"
+        class="pie pie_big pie_blue drop__children children"
+      >
+        <img src="../img/icons/telega.svg" alt="" />
+      </a>
+      <a
+        href="https://wa.me/799999999"
+        class="pie pie_big pie_blue drop__children children"
+      >
+        <img src="../img/icons/whatsapp.svg" alt="" />
+      </a>
+      <a
+        href="tel:+799999999"
+        class="pie pie_big pie_blue drop__children children"
+      >
+        <img src="../img/icons/phone.svg" alt="" />
+      </a>
+      <span class="pie pie_big pie_accent drop drop_sq" id="drop">
+        <span></span><span></span><span></span><span></span>
+      </span>
+
+      <div class="swiper headerSwiper">
+        <div class="swiper-wrapper swiper-wrapper_pb">
+          <div class="swiper-slide swiper-slide_pb header__bottom">
+            <div class="container container-slider carousel">
+              <h2 class="carousel__title">
+                Новый проект <br />
+                со вторым <br />
+                светом
+              </h2>
+              <p class="carousel__text">
+                Запишитесь на экскурсию, <br />
+                чтобы увидеть это первыми!
+              </p>
+              <div>
+                <buttton class="carousel__btn button button_accent"
+                  >Записаться на экскурсию</buttton
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide_pb header__bottom">
+            <div class="container container-slider carousel">
+              <h2 class="carousel__title">
+                Новый проект <br />
+                со вторым <br />
+                светом
+              </h2>
+              <p class="carousel__text">
+                Запишитесь на экскурсию, <br />
+                чтобы увидеть это первыми!
+              </p>
+              <div>
+                <buttton class="carousel__btn button button_accent"
+                  >Записаться на экскурсию</buttton
+                >
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide_pb header__bottom">
+            <div class="container container-slider carousel">
+              <h2 class="carousel__title">
+                Новый проект <br />
+                со вторым <br />
+                светом
+              </h2>
+              <p class="carousel__text">
+                Запишитесь на экскурсию, <br />
+                чтобы увидеть это первыми!
+              </p>
+              <div>
+                <buttton class="carousel__btn button button_accent"
+                  >Записаться на экскурсию</buttton
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-numbs swiper-numbs_position"></div>
+      </div>
+      <div class="container">
+        <div class="pick-up">
+          <div class="pick-up__left">
+            <a href="#">Готовые дома</a>
+            <a href="#">Проекты домов</a>
+            <a href="#">Посёлки</a>
+          </div>
+          <div class="pick-up__right">
+            <div class="selection"><a href="#">Подобрать</a></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--header end-->
+    <main class="wrapper">
+      <section class="section">
+        <div class="container">
+          <div class="section__crumbs bread-crumbs">
+            <a href="home.html">ПОРАДОМ</a>
+            <a href="#">Стандарты ПОРАДОМ</a>
+          </div>
+          <div class="section__top">
+            <h2 class="section__title">Стандарты ПОРАДОМ</h2>
+          </div>
+          <div class="cards-slide">
+            <div
+              class="card-slide js-open-modal"
+              data-slider-button
+              data-modal="1"
+            >
+              <div class="card-slide__image">
+                <img src="../img/development/designing.jpg" alt="" />
+                <img
+                  src="../img/icons/designing.svg"
+                  alt=""
+                  class="card-slide__icon"
+                />
+              </div>
+              <p class="card-slide__text">Проектирование</p>
+            </div>
+            <div
+              class="card-slide js-open-modal"
+              data-slider-button
+              data-modal="3"
+            >
+              <div class="card-slide__image">
+                <img src="../img/development/construction.jpg" alt="" />
+                <img
+                  src="../img/icons/construction-icon.svg"
+                  alt=""
+                  class="card-slide__icon"
+                />
+              </div>
+              <p class="card-slide__text">Строительство</p>
+            </div>
+            <div class="card-slide">
+              <div class="card-slide__record">
+                <p>
+                  Хотите знать как подход порадом работает в жизни, запишитесь
+                  на экскурсию
+                </p>
+                <a href="#">
+                  <svg
+                    width="12"
+                    height="20"
+                    viewBox="0 0 12 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.11765 -1.8821e-06L12 10L2.11765 20L2.55547e-08 17.8571L7.76471 10L2.12944e-07 2.14286L2.11765 -1.8821e-06Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="modal slider-popup wrapper" data-modal="1">
+        <!--   Svg иконка для закрытия окна  -->
+        <svg
+          class="modal__cross js-modal-close"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+          />
+        </svg>
+
+        <div class="slider-popup__head">
+          <div class="slider-popup__head-title">Название раздела</div>
+          <div class="slider-popup__head-close"></div>
+        </div>
+        <div class="slider-popup__wrapper"></div>
+        <div class="swiper testSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div>
+                <div class="stories-line"></div>
+                <img src="../img/development/designing.jpg" alt="" />
+                <div class="test-class__wrapper">
+                  <div class="test-class">
+                    <div class="test-class__top">
+                      <span class="test-class__title">Title</span>
+                      <p class="test-class__subtitle">
+                        В активах ПОРАДОМ более 100 разработанных проектов
+                        домов, таунхаусов и комплексных девелоперский решений
+                      </p>
+                    </div>
+                    <div class="test-class__scroll">
+                      <p class="test-class__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Magni exercitationem quidem consequuntur fugiat, veniam
+                        repudiandae magnam eveniet, obcaecati nihil dicta
+                        voluptatem tenetur. Ad quos laboriosam ex doloremque
+                        quae? Obcaecati, provident. Voluptas maiores dolorum
+                        assumenda dolorem perspiciatis, architecto harum illum
+                        eaque voluptatibus odit placeat iusto alias tenetur
+                        animi facilis iure reiciendis hic qui similique et
+                        numquam cupiditate eligendi ducimus! Qui, suscipit?
+                        Explicabo repudiandae vitae vel in tenetur consequatur
+                        alias quia similique. Esse quia minima vitae corporis
+                        reiciendis, consequuntur mollitia. Exercitationem iste
+                        nisi ad earum fugit similique perferendis esse
+                        perspiciatis veniam dolorum? Voluptatibus fuga magni
+                        animi error quidem consequuntur architecto, sed veniam
+                        officiis nihil suscipit sunt, neque illum cupiditate,
+                        commodi unde repellat exercitationem recusandae eaque
+                        alias ullam. Obcaecati ducimus nobis odio
+                        exercitationem? Eum blanditiis doloribus sed itaque. Quo
+                        eaque quasi magni corporis, incidunt dolore aliquam
+                        labore explicabo at magnam cumque dicta. Autem saepe
+                        distinctio iure sed. Delectus veritatis culpa laborum
+                        amet aut. Deleniti harum distinctio accusamus. Nisi
+                        provident neque dolor necessitatibus voluptates nobis.
+                        Nemo, nobis, architecto maiores soluta accusantium
+                        beatae blanditiis quis nulla veritatis dolorem
+                        exercitationem! Dolorum repellendus delectus corrupti
+                        officia ratione. Laborum cupiditate eveniet voluptatum
+                        accusamus modi eaque veniam dignissimos commodi saepe?
+                        Accusantium hic corrupti enim explicabo porro neque
+                        sequi modi iste exercitationem, iusto dolor. Totam
+                        consectetur officia quis molestias quibusdam. At
+                        voluptatibus exercitationem ad explicabo eius? Et eaque
+                        laudantium ab dignissimos, sit molestiae rerum, vero at
+                        perspiciatis quisquam deserunt. Obcaecati ipsam omnis
+                        hic, iure repellat est necessitatibus laboriosam
+                        veritatis amet? Itaque, saepe? Ullam obcaecati vel
+                        provident omnis quia officia, recusandae in asperiores
+                        velit quo quis nam dolorem ex hic accusamus, voluptates
+                        tempora exercitationem vero vitae minus perspiciatis
+                        ducimus labore! Iure. Ea unde aspernatur accusantium id
+                        obcaecati praesentium. Doloremque, amet nisi minima
+                        tempora asperiores reiciendis molestias placeat
+                        architecto exercitationem dolore recusandae tempore,
+                        fugiat eius nesciunt sunt illo, voluptates quia.
+                        Impedit, ratione?
+                      </p>
+                    </div>
+                  </div>
+                  <div class="test-class__turn" data-modal="1">
+                    <span class="turn-active"> Свернуть </span>
+                    <span class="turn-disabled"> Развернуть </span>
+                  </div>
+                </div>
+                <div class="test-class__gradient"></div>
+                <div class="test-class__overlay"></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <div class="stories-line"></div>
+                <img src="../img/development/designing.jpg" alt="" />
+                <div class="test-class__wrapper">
+                  <div class="test-class">
+                    <div class="test-class__top">
+                      <span class="test-class__title">Title</span>
+                      <p class="test-class__subtitle">
+                        В активах ПОРАДОМ более 100 разработанных проектов
+                        домов, таунхаусов и комплексных девелоперский решений
+                      </p>
+                    </div>
+                    <div class="test-class__scroll">
+                      <p class="test-class__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Magni exercitationem quidem consequuntur fugiat, veniam
+                        repudiandae magnam eveniet, obcaecati nihil dicta
+                        voluptatem tenetur. Ad quos laboriosam ex doloremque
+                        quae? Obcaecati, provident. Voluptas maiores dolorum
+                        assumenda dolorem perspiciatis, architecto harum illum
+                        eaque voluptatibus odit placeat iusto alias tenetur
+                        animi facilis iure reiciendis hic qui similique et
+                        numquam cupiditate eligendi ducimus! Qui, suscipit?
+                        Explicabo repudiandae vitae vel in tenetur consequatur
+                        alias quia similique. Esse quia minima vitae corporis
+                        reiciendis, consequuntur mollitia. Exercitationem iste
+                        nisi ad earum fugit similique perferendis esse
+                        perspiciatis veniam dolorum? Voluptatibus fuga magni
+                        animi error quidem consequuntur architecto, sed veniam
+                        officiis nihil suscipit sunt, neque illum cupiditate,
+                        commodi unde repellat exercitationem recusandae eaque
+                        alias ullam. Obcaecati ducimus nobis odio
+                        exercitationem? Eum blanditiis doloribus sed itaque. Quo
+                        eaque quasi magni corporis, incidunt dolore aliquam
+                        labore explicabo at magnam cumque dicta. Autem saepe
+                        distinctio iure sed. Delectus veritatis culpa laborum
+                        amet aut. Deleniti harum distinctio accusamus. Nisi
+                        provident neque dolor necessitatibus voluptates nobis.
+                        Nemo, nobis, architecto maiores soluta accusantium
+                        beatae blanditiis quis nulla veritatis dolorem
+                        exercitationem! Dolorum repellendus delectus corrupti
+                        officia ratione. Laborum cupiditate eveniet voluptatum
+                        accusamus modi eaque veniam dignissimos commodi saepe?
+                        Accusantium hic corrupti enim explicabo porro neque
+                        sequi modi iste exercitationem, iusto dolor. Totam
+                        consectetur officia quis molestias quibusdam. At
+                        voluptatibus exercitationem ad explicabo eius? Et eaque
+                        laudantium ab dignissimos, sit molestiae rerum, vero at
+                        perspiciatis quisquam deserunt. Obcaecati ipsam omnis
+                        hic, iure repellat est necessitatibus laboriosam
+                        veritatis amet? Itaque, saepe? Ullam obcaecati vel
+                        provident omnis quia officia, recusandae in asperiores
+                        velit quo quis nam dolorem ex hic accusamus, voluptates
+                        tempora exercitationem vero vitae minus perspiciatis
+                        ducimus labore! Iure. Ea unde aspernatur accusantium id
+                        obcaecati praesentium. Doloremque, amet nisi minima
+                        tempora asperiores reiciendis molestias placeat
+                        architecto exercitationem dolore recusandae tempore,
+                        fugiat eius nesciunt sunt illo, voluptates quia.
+                        Impedit, ratione?
+                      </p>
+                    </div>
+                  </div>
+                  <div class="test-class__turn" data-modal="1">
+                    <span class="turn-active"> Свернуть </span>
+                    <span class="turn-disabled"> Развернуть </span>
+                  </div>
+                </div>
+                <div class="test-class__gradient"></div>
+                <div class="test-class__overlay"></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <div class="stories-line"></div>
+                <img src="../img/development/designing.jpg" alt="" />
+                <div class="test-class__wrapper">
+                  <div class="test-class">
+                    <div class="test-class__top">
+                      <span class="test-class__title">Title</span>
+                      <p class="test-class__subtitle">
+                        В активах ПОРАДОМ более 100 разработанных проектов
+                        домов, таунхаусов и комплексных девелоперский решений
+                      </p>
+                    </div>
+                    <div class="test-class__scroll">
+                      <p class="test-class__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Magni exercitationem quidem consequuntur fugiat, veniam
+                        repudiandae magnam eveniet, obcaecati nihil dicta
+                        voluptatem tenetur. Ad quos laboriosam ex doloremque
+                        quae? Obcaecati, provident. Voluptas maiores dolorum
+                        assumenda dolorem perspiciatis, architecto harum illum
+                        eaque voluptatibus odit placeat iusto alias tenetur
+                        animi facilis iure reiciendis hic qui similique et
+                        numquam cupiditate eligendi ducimus! Qui, suscipit?
+                        Explicabo repudiandae vitae vel in tenetur consequatur
+                        alias quia similique. Esse quia minima vitae corporis
+                        reiciendis, consequuntur mollitia. Exercitationem iste
+                        nisi ad earum fugit similique perferendis esse
+                        perspiciatis veniam dolorum? Voluptatibus fuga magni
+                        animi error quidem consequuntur architecto, sed veniam
+                        officiis nihil suscipit sunt, neque illum cupiditate,
+                        commodi unde repellat exercitationem recusandae eaque
+                        alias ullam. Obcaecati ducimus nobis odio
+                        exercitationem? Eum blanditiis doloribus sed itaque. Quo
+                        eaque quasi magni corporis, incidunt dolore aliquam
+                        labore explicabo at magnam cumque dicta. Autem saepe
+                        distinctio iure sed. Delectus veritatis culpa laborum
+                        amet aut. Deleniti harum distinctio accusamus. Nisi
+                        provident neque dolor necessitatibus voluptates nobis.
+                        Nemo, nobis, architecto maiores soluta accusantium
+                        beatae blanditiis quis nulla veritatis dolorem
+                        exercitationem! Dolorum repellendus delectus corrupti
+                        officia ratione. Laborum cupiditate eveniet voluptatum
+                        accusamus modi eaque veniam dignissimos commodi saepe?
+                        Accusantium hic corrupti enim explicabo porro neque
+                        sequi modi iste exercitationem, iusto dolor. Totam
+                        consectetur officia quis molestias quibusdam. At
+                        voluptatibus exercitationem ad explicabo eius? Et eaque
+                        laudantium ab dignissimos, sit molestiae rerum, vero at
+                        perspiciatis quisquam deserunt. Obcaecati ipsam omnis
+                        hic, iure repellat est necessitatibus laboriosam
+                        veritatis amet? Itaque, saepe? Ullam obcaecati vel
+                        provident omnis quia officia, recusandae in asperiores
+                        velit quo quis nam dolorem ex hic accusamus, voluptates
+                        tempora exercitationem vero vitae minus perspiciatis
+                        ducimus labore! Iure. Ea unde aspernatur accusantium id
+                        obcaecati praesentium. Doloremque, amet nisi minima
+                        tempora asperiores reiciendis molestias placeat
+                        architecto exercitationem dolore recusandae tempore,
+                        fugiat eius nesciunt sunt illo, voluptates quia.
+                        Impedit, ratione?
+                      </p>
+                    </div>
+                  </div>
+                  <div class="test-class__turn" data-modal="1">
+                    <span class="turn-active"> Свернуть </span>
+                    <span class="turn-disabled"> Развернуть </span>
+                  </div>
+                </div>
+                <div class="test-class__gradient"></div>
+                <div class="test-class__overlay"></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <div class="stories-line"></div>
+                <img src="../img/development/designing.jpg" alt="" />
+                <div class="test-class__wrapper">
+                  <div class="test-class">
+                    <div class="test-class__top">
+                      <span class="test-class__title">Title</span>
+                      <p class="test-class__subtitle">
+                        В активах ПОРАДОМ более 100 разработанных проектов
+                        домов, таунхаусов и комплексных девелоперский решений
+                      </p>
+                    </div>
+                    <div class="test-class__scroll">
+                      <p class="test-class__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Magni exercitationem quidem consequuntur fugiat, veniam
+                        repudiandae magnam eveniet, obcaecati nihil dicta
+                        voluptatem tenetur. Ad quos laboriosam ex doloremque
+                        quae? Obcaecati, provident. Voluptas maiores dolorum
+                        assumenda dolorem perspiciatis, architecto harum illum
+                        eaque voluptatibus odit placeat iusto alias tenetur
+                        animi facilis iure reiciendis hic qui similique et
+                        numquam cupiditate eligendi ducimus! Qui, suscipit?
+                        Explicabo repudiandae vitae vel in tenetur consequatur
+                        alias quia similique. Esse quia minima vitae corporis
+                        reiciendis, consequuntur mollitia. Exercitationem iste
+                        nisi ad earum fugit similique perferendis esse
+                        perspiciatis veniam dolorum? Voluptatibus fuga magni
+                        animi error quidem consequuntur architecto, sed veniam
+                        officiis nihil suscipit sunt, neque illum cupiditate,
+                        commodi unde repellat exercitationem recusandae eaque
+                        alias ullam. Obcaecati ducimus nobis odio
+                        exercitationem? Eum blanditiis doloribus sed itaque. Quo
+                        eaque quasi magni corporis, incidunt dolore aliquam
+                        labore explicabo at magnam cumque dicta. Autem saepe
+                        distinctio iure sed. Delectus veritatis culpa laborum
+                        amet aut. Deleniti harum distinctio accusamus. Nisi
+                        provident neque dolor necessitatibus voluptates nobis.
+                        Nemo, nobis, architecto maiores soluta accusantium
+                        beatae blanditiis quis nulla veritatis dolorem
+                        exercitationem! Dolorum repellendus delectus corrupti
+                        officia ratione. Laborum cupiditate eveniet voluptatum
+                        accusamus modi eaque veniam dignissimos commodi saepe?
+                        Accusantium hic corrupti enim explicabo porro neque
+                        sequi modi iste exercitationem, iusto dolor. Totam
+                        consectetur officia quis molestias quibusdam. At
+                        voluptatibus exercitationem ad explicabo eius? Et eaque
+                        laudantium ab dignissimos, sit molestiae rerum, vero at
+                        perspiciatis quisquam deserunt. Obcaecati ipsam omnis
+                        hic, iure repellat est necessitatibus laboriosam
+                        veritatis amet? Itaque, saepe? Ullam obcaecati vel
+                        provident omnis quia officia, recusandae in asperiores
+                        velit quo quis nam dolorem ex hic accusamus, voluptates
+                        tempora exercitationem vero vitae minus perspiciatis
+                        ducimus labore! Iure. Ea unde aspernatur accusantium id
+                        obcaecati praesentium. Doloremque, amet nisi minima
+                        tempora asperiores reiciendis molestias placeat
+                        architecto exercitationem dolore recusandae tempore,
+                        fugiat eius nesciunt sunt illo, voluptates quia.
+                        Impedit, ratione?
+                      </p>
+                    </div>
+                  </div>
+                  <div class="test-class__turn" data-modal="1">
+                    <span class="turn-active"> Свернуть </span>
+                    <span class="turn-disabled"> Развернуть </span>
+                  </div>
+                </div>
+                <div class="test-class__gradient"></div>
+                <div class="test-class__overlay"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-stories-line"></div>
+        </div>
+      </div>
+      <div class="modal slider-popup wrapper" data-modal="3">
+        <!--   Svg иконка для закрытия окна  -->
+        <svg
+          class="modal__cross js-modal-close"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+          />
+        </svg>
+
+        <div class="slider-popup__head">
+          <div class="slider-popup__head-title">Название раздела</div>
+          <div class="slider-popup__head-close"></div>
+        </div>
+        <div class="slider-popup__wrapper"></div>
+        <div class="swiper testSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div>
+                <div class="stories-line"></div>
+                <img src="../img/development/designing.jpg" alt="" />
+                <div class="test-class__wrapper">
+                  <div class="test-class">
+                    <div class="test-class__top">
+                      <span class="test-class__title">Title</span>
+                      <p class="test-class__subtitle">
+                        В активах ПОРАДОМ более 100 разработанных проектов
+                        домов, таунхаусов и комплексных девелоперский решений
+                      </p>
+                    </div>
+                    <div class="test-class__scroll">
+                      <p class="test-class__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Magni exercitationem quidem consequuntur fugiat, veniam
+                        repudiandae magnam eveniet, obcaecati nihil dicta
+                        voluptatem tenetur. Ad quos laboriosam ex doloremque
+                        quae? Obcaecati, provident. Voluptas maiores dolorum
+                        assumenda dolorem perspiciatis, architecto harum illum
+                        eaque voluptatibus odit placeat iusto alias tenetur
+                        animi facilis iure reiciendis hic qui similique et
+                        numquam cupiditate eligendi ducimus! Qui, suscipit?
+                        Explicabo repudiandae vitae vel in tenetur consequatur
+                        alias quia similique. Esse quia minima vitae corporis
+                        reiciendis, consequuntur mollitia. Exercitationem iste
+                        nisi ad earum fugit similique perferendis esse
+                        perspiciatis veniam dolorum? Voluptatibus fuga magni
+                        animi error quidem consequuntur architecto, sed veniam
+                        officiis nihil suscipit sunt, neque illum cupiditate,
+                        commodi unde repellat exercitationem recusandae eaque
+                        alias ullam. Obcaecati ducimus nobis odio
+                        exercitationem? Eum blanditiis doloribus sed itaque. Quo
+                        eaque quasi magni corporis, incidunt dolore aliquam
+                        labore explicabo at magnam cumque dicta. Autem saepe
+                        distinctio iure sed. Delectus veritatis culpa laborum
+                        amet aut. Deleniti harum distinctio accusamus. Nisi
+                        provident neque dolor necessitatibus voluptates nobis.
+                        Nemo, nobis, architecto maiores soluta accusantium
+                        beatae blanditiis quis nulla veritatis dolorem
+                        exercitationem! Dolorum repellendus delectus corrupti
+                        officia ratione. Laborum cupiditate eveniet voluptatum
+                        accusamus modi eaque veniam dignissimos commodi saepe?
+                        Accusantium hic corrupti enim explicabo porro neque
+                        sequi modi iste exercitationem, iusto dolor. Totam
+                        consectetur officia quis molestias quibusdam. At
+                        voluptatibus exercitationem ad explicabo eius? Et eaque
+                        laudantium ab dignissimos, sit molestiae rerum, vero at
+                        perspiciatis quisquam deserunt. Obcaecati ipsam omnis
+                        hic, iure repellat est necessitatibus laboriosam
+                        veritatis amet? Itaque, saepe? Ullam obcaecati vel
+                        provident omnis quia officia, recusandae in asperiores
+                        velit quo quis nam dolorem ex hic accusamus, voluptates
+                        tempora exercitationem vero vitae minus perspiciatis
+                        ducimus labore! Iure. Ea unde aspernatur accusantium id
+                        obcaecati praesentium. Doloremque, amet nisi minima
+                        tempora asperiores reiciendis molestias placeat
+                        architecto exercitationem dolore recusandae tempore,
+                        fugiat eius nesciunt sunt illo, voluptates quia.
+                        Impedit, ratione?
+                      </p>
+                    </div>
+                  </div>
+                  <div class="test-class__turn" data-modal="3">
+                    <span class="turn-active"> Свернуть </span>
+                    <span class="turn-disabled"> Развернуть </span>
+                  </div>
+                </div>
+                <div class="test-class__gradient"></div>
+                <div class="test-class__overlay"></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <div class="stories-line"></div>
+                <img src="../img/development/designing.jpg" alt="" />
+                <div class="test-class__wrapper">
+                  <div class="test-class">
+                    <div class="test-class__top">
+                      <span class="test-class__title">Title</span>
+                      <p class="test-class__subtitle">
+                        В активах ПОРАДОМ более 100 разработанных проектов
+                        домов, таунхаусов и комплексных девелоперский решений
+                      </p>
+                    </div>
+                    <div class="test-class__scroll">
+                      <p class="test-class__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Magni exercitationem quidem consequuntur fugiat, veniam
+                        repudiandae magnam eveniet, obcaecati nihil dicta
+                        voluptatem tenetur. Ad quos laboriosam ex doloremque
+                        quae? Obcaecati, provident. Voluptas maiores dolorum
+                        assumenda dolorem perspiciatis, architecto harum illum
+                        eaque voluptatibus odit placeat iusto alias tenetur
+                        animi facilis iure reiciendis hic qui similique et
+                        numquam cupiditate eligendi ducimus! Qui, suscipit?
+                        Explicabo repudiandae vitae vel in tenetur consequatur
+                        alias quia similique. Esse quia minima vitae corporis
+                        reiciendis, consequuntur mollitia. Exercitationem iste
+                        nisi ad earum fugit similique perferendis esse
+                        perspiciatis veniam dolorum? Voluptatibus fuga magni
+                        animi error quidem consequuntur architecto, sed veniam
+                        officiis nihil suscipit sunt, neque illum cupiditate,
+                        commodi unde repellat exercitationem recusandae eaque
+                        alias ullam. Obcaecati ducimus nobis odio
+                        exercitationem? Eum blanditiis doloribus sed itaque. Quo
+                        eaque quasi magni corporis, incidunt dolore aliquam
+                        labore explicabo at magnam cumque dicta. Autem saepe
+                        distinctio iure sed. Delectus veritatis culpa laborum
+                        amet aut. Deleniti harum distinctio accusamus. Nisi
+                        provident neque dolor necessitatibus voluptates nobis.
+                        Nemo, nobis, architecto maiores soluta accusantium
+                        beatae blanditiis quis nulla veritatis dolorem
+                        exercitationem! Dolorum repellendus delectus corrupti
+                        officia ratione. Laborum cupiditate eveniet voluptatum
+                        accusamus modi eaque veniam dignissimos commodi saepe?
+                        Accusantium hic corrupti enim explicabo porro neque
+                        sequi modi iste exercitationem, iusto dolor. Totam
+                        consectetur officia quis molestias quibusdam. At
+                        voluptatibus exercitationem ad explicabo eius? Et eaque
+                        laudantium ab dignissimos, sit molestiae rerum, vero at
+                        perspiciatis quisquam deserunt. Obcaecati ipsam omnis
+                        hic, iure repellat est necessitatibus laboriosam
+                        veritatis amet? Itaque, saepe? Ullam obcaecati vel
+                        provident omnis quia officia, recusandae in asperiores
+                        velit quo quis nam dolorem ex hic accusamus, voluptates
+                        tempora exercitationem vero vitae minus perspiciatis
+                        ducimus labore! Iure. Ea unde aspernatur accusantium id
+                        obcaecati praesentium. Doloremque, amet nisi minima
+                        tempora asperiores reiciendis molestias placeat
+                        architecto exercitationem dolore recusandae tempore,
+                        fugiat eius nesciunt sunt illo, voluptates quia.
+                        Impedit, ratione?
+                      </p>
+                    </div>
+                  </div>
+                  <div class="test-class__turn" data-modal="3">
+                    <span class="turn-active"> Свернуть </span>
+                    <span class="turn-disabled"> Развернуть </span>
+                  </div>
+                </div>
+                <div class="test-class__gradient"></div>
+                <div class="test-class__overlay"></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <div class="stories-line"></div>
+                <img src="../img/development/designing.jpg" alt="" />
+                <div class="test-class__wrapper">
+                  <div class="test-class">
+                    <div class="test-class__top">
+                      <span class="test-class__title">Title</span>
+                      <p class="test-class__subtitle">
+                        В активах ПОРАДОМ более 100 разработанных проектов
+                        домов, таунхаусов и комплексных девелоперский решений
+                      </p>
+                    </div>
+                    <div class="test-class__scroll">
+                      <p class="test-class__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Magni exercitationem quidem consequuntur fugiat, veniam
+                        repudiandae magnam eveniet, obcaecati nihil dicta
+                        voluptatem tenetur. Ad quos laboriosam ex doloremque
+                        quae? Obcaecati, provident. Voluptas maiores dolorum
+                        assumenda dolorem perspiciatis, architecto harum illum
+                        eaque voluptatibus odit placeat iusto alias tenetur
+                        animi facilis iure reiciendis hic qui similique et
+                        numquam cupiditate eligendi ducimus! Qui, suscipit?
+                        Explicabo repudiandae vitae vel in tenetur consequatur
+                        alias quia similique. Esse quia minima vitae corporis
+                        reiciendis, consequuntur mollitia. Exercitationem iste
+                        nisi ad earum fugit similique perferendis esse
+                        perspiciatis veniam dolorum? Voluptatibus fuga magni
+                        animi error quidem consequuntur architecto, sed veniam
+                        officiis nihil suscipit sunt, neque illum cupiditate,
+                        commodi unde repellat exercitationem recusandae eaque
+                        alias ullam. Obcaecati ducimus nobis odio
+                        exercitationem? Eum blanditiis doloribus sed itaque. Quo
+                        eaque quasi magni corporis, incidunt dolore aliquam
+                        labore explicabo at magnam cumque dicta. Autem saepe
+                        distinctio iure sed. Delectus veritatis culpa laborum
+                        amet aut. Deleniti harum distinctio accusamus. Nisi
+                        provident neque dolor necessitatibus voluptates nobis.
+                        Nemo, nobis, architecto maiores soluta accusantium
+                        beatae blanditiis quis nulla veritatis dolorem
+                        exercitationem! Dolorum repellendus delectus corrupti
+                        officia ratione. Laborum cupiditate eveniet voluptatum
+                        accusamus modi eaque veniam dignissimos commodi saepe?
+                        Accusantium hic corrupti enim explicabo porro neque
+                        sequi modi iste exercitationem, iusto dolor. Totam
+                        consectetur officia quis molestias quibusdam. At
+                        voluptatibus exercitationem ad explicabo eius? Et eaque
+                        laudantium ab dignissimos, sit molestiae rerum, vero at
+                        perspiciatis quisquam deserunt. Obcaecati ipsam omnis
+                        hic, iure repellat est necessitatibus laboriosam
+                        veritatis amet? Itaque, saepe? Ullam obcaecati vel
+                        provident omnis quia officia, recusandae in asperiores
+                        velit quo quis nam dolorem ex hic accusamus, voluptates
+                        tempora exercitationem vero vitae minus perspiciatis
+                        ducimus labore! Iure. Ea unde aspernatur accusantium id
+                        obcaecati praesentium. Doloremque, amet nisi minima
+                        tempora asperiores reiciendis molestias placeat
+                        architecto exercitationem dolore recusandae tempore,
+                        fugiat eius nesciunt sunt illo, voluptates quia.
+                        Impedit, ratione?
+                      </p>
+                    </div>
+                  </div>
+                  <div class="test-class__turn" data-modal="3">
+                    <span class="turn-active"> Свернуть </span>
+                    <span class="turn-disabled"> Развернуть </span>
+                  </div>
+                </div>
+                <div class="test-class__gradient"></div>
+                <div class="test-class__overlay"></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <div class="stories-line"></div>
+                <img src="../img/development/designing.jpg" alt="" />
+                <div class="test-class__wrapper">
+                  <div class="test-class">
+                    <div class="test-class__top">
+                      <span class="test-class__title">Title</span>
+                      <p class="test-class__subtitle">
+                        В активах ПОРАДОМ более 100 разработанных проектов
+                        домов, таунхаусов и комплексных девелоперский решений
+                      </p>
+                    </div>
+                    <div class="test-class__scroll">
+                      <p class="test-class__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Magni exercitationem quidem consequuntur fugiat, veniam
+                        repudiandae magnam eveniet, obcaecati nihil dicta
+                        voluptatem tenetur. Ad quos laboriosam ex doloremque
+                        quae? Obcaecati, provident. Voluptas maiores dolorum
+                        assumenda dolorem perspiciatis, architecto harum illum
+                        eaque voluptatibus odit placeat iusto alias tenetur
+                        animi facilis iure reiciendis hic qui similique et
+                        numquam cupiditate eligendi ducimus! Qui, suscipit?
+                        Explicabo repudiandae vitae vel in tenetur consequatur
+                        alias quia similique. Esse quia minima vitae corporis
+                        reiciendis, consequuntur mollitia. Exercitationem iste
+                        nisi ad earum fugit similique perferendis esse
+                        perspiciatis veniam dolorum? Voluptatibus fuga magni
+                        animi error quidem consequuntur architecto, sed veniam
+                        officiis nihil suscipit sunt, neque illum cupiditate,
+                        commodi unde repellat exercitationem recusandae eaque
+                        alias ullam. Obcaecati ducimus nobis odio
+                        exercitationem? Eum blanditiis doloribus sed itaque. Quo
+                        eaque quasi magni corporis, incidunt dolore aliquam
+                        labore explicabo at magnam cumque dicta. Autem saepe
+                        distinctio iure sed. Delectus veritatis culpa laborum
+                        amet aut. Deleniti harum distinctio accusamus. Nisi
+                        provident neque dolor necessitatibus voluptates nobis.
+                        Nemo, nobis, architecto maiores soluta accusantium
+                        beatae blanditiis quis nulla veritatis dolorem
+                        exercitationem! Dolorum repellendus delectus corrupti
+                        officia ratione. Laborum cupiditate eveniet voluptatum
+                        accusamus modi eaque veniam dignissimos commodi saepe?
+                        Accusantium hic corrupti enim explicabo porro neque
+                        sequi modi iste exercitationem, iusto dolor. Totam
+                        consectetur officia quis molestias quibusdam. At
+                        voluptatibus exercitationem ad explicabo eius? Et eaque
+                        laudantium ab dignissimos, sit molestiae rerum, vero at
+                        perspiciatis quisquam deserunt. Obcaecati ipsam omnis
+                        hic, iure repellat est necessitatibus laboriosam
+                        veritatis amet? Itaque, saepe? Ullam obcaecati vel
+                        provident omnis quia officia, recusandae in asperiores
+                        velit quo quis nam dolorem ex hic accusamus, voluptates
+                        tempora exercitationem vero vitae minus perspiciatis
+                        ducimus labore! Iure. Ea unde aspernatur accusantium id
+                        obcaecati praesentium. Doloremque, amet nisi minima
+                        tempora asperiores reiciendis molestias placeat
+                        architecto exercitationem dolore recusandae tempore,
+                        fugiat eius nesciunt sunt illo, voluptates quia.
+                        Impedit, ratione?
+                      </p>
+                    </div>
+                  </div>
+                  <div class="test-class__turn" data-modal="3">
+                    <span class="turn-active"> Свернуть </span>
+                    <span class="turn-disabled"> Развернуть </span>
+                  </div>
+                </div>
+                <div class="test-class__gradient"></div>
+                <div class="test-class__overlay"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-stories-line"></div>
+        </div>
+      </div>
+      <!-- popup -->
+      <div class="modal" data-modal="excursion">
+        <form action="#" class="form-standart" id="special-offer" data-form="1">
+          <h4 class="form__title">
+            Запишитесь <br />
+            на экскурсию <br />
+            по посёлку <br />
+            Название посёлка
+          </h4>
+          <p class="form__text">
+            Приезжайте на экскурсию, чтобы увидеть все своими глазами и узнать о
+            жизни поселка
+          </p>
+          <div class="text-field">
+            <input
+              data-special-offer
+              class="text-field__input tel"
+              type="text"
+              name="login"
+              id="login"
+              placeholder="Введите ваш телефон"
+            />
+          </div>
+          <div class="text-field">
+            <input
+              data-special-offer
+              class="text-field__input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Введите ваш имя"
+            />
+          </div>
+
+          <button
+            type="submit"
+            id="special-offer-btn"
+            class="button button_accent"
+          >
+            Отправить
+          </button>
+          <label class="checkbox-other">
+            <input data-special-offer type="checkbox" checked />
+            <p>
+              Даю согласие на обработку
+              <a href="#" class="checkbox__link"> персональных данных </a>
+            </p>
+          </label>
+        </form>
+      </div>
+      <div class="popup-message">
+        <svg
+          width="65"
+          height="64"
+          viewBox="0 0 65 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="32.5" cy="32" r="32" fill="#003852" />
+          <path
+            d="M27.8333 43L18.5 34.0009L22.6504 29.9991L27.8333 35.0105L42.3496 21L46.5 25.0018L27.8333 43Z"
+            fill="white"
+          />
+        </svg>
+        <p>
+          Спасибо <br />
+          Ваша заявка принята
+        </p>
+      </div>
+      <div class="overlay js-overlay-modal"></div>
+    </main>
+    <!--footer start-->
+    <footer class="footer">
+      <div class="footer__m">
+        <div class="container">
+          <div class="accordion" id="accordion">
+            <h3 class="accordion-header">
+              Покупателям <span class="accordion__line"></span>
+            </h3>
+            <div
+              class="accordion-body tabs__text"
+              id="tabs-1"
+              style="height: 0px"
+            >
+              <a href="#"> Проектирование </a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="accordion-header">
+              Стандарты <span class="accordion__line"></span>
+            </h3>
+            <div
+              class="accordion-body tabs__text"
+              id="tabs-2"
+              style="height: 0px"
+            >
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="accordion-header">
+              О застройщике <span class="accordion__line"></span>
+            </h3>
+            <div
+              class="accordion-body tabs__text"
+              id="tabs-3"
+              style="height: 0px"
+            >
+              <a href="#">Проектирование</a>
+            </div>
+            <h3 class="accordion-header">Контакты</h3>
+
+            <div
+              class="accordion-body tabs__text"
+              id="tabs-4"
+              style="height: 0px"
+            >
+              <a href="#">Проектирование</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__line"></div>
+        <div class="container">
+          <div class="footer__content">
+            <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
+            <div class="footer__socials social">
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/youtube.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+
+              <a href="#" class="pie pie_primary social__link_s">
+                <img
+                  src="../img/icons/facebook.svg"
+                  alt=""
+                  class="social__icon"
+                />
+              </a>
+              <a href="#" class="pie pie_primary social__link_s">
+                <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+              </a>
+            </div>
+            <div class="footer__contact">
+              <address>г.Уфа, ул.Мустая Карима, д.16</address>
+              <a href="tel:73472008719">+7 (347) 200-87-19</a>
+            </div>
+            <p class="development">
+              Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__d">
+        <div class="container">
+          <div class="footer__top">
+            <div class="footer__top-left">
+              <div class="footer__content">
+                <img src="../img/icons/logo2.svg" class="footer__logo" alt="" />
+                <div class="footer__socials social">
+                  <a href="#" class="pie pie_primary social__link_s">
+                    <img
+                      src="../img/icons/youtube.svg"
+                      alt=""
+                      class="social__icon"
+                    />
+                  </a>
+
+                  <a href="#" class="pie pie_primary social__link_s">
+                    <img
+                      src="../img/icons/facebook.svg"
+                      alt=""
+                      class="social__icon"
+                    />
+                  </a>
+                  <a href="#" class="pie pie_primary social__link_s">
+                    <img
+                      src="../img/icons/vk.svg"
+                      alt=""
+                      class="social__icon"
+                    />
+                  </a>
+                </div>
+                <div class="footer__contact">
+                  <address>г.Уфа, ул.Мустая Карима, д.16</address>
+                  <a href="tel:73472008719">+7 (347) 200-87-19</a>
+                </div>
+              </div>
+            </div>
+            <div class="footer__top-right">
+              <div class="footer__nav">
+                <h5 class="footer__nav-header">Покупателям</h5>
+                <a href="#" class="footer__nav-item"> Поселки </a>
+                <a href="#" class="footer__nav-item"> Готовые дома </a>
+              </div>
+              <div class="footer__nav">
+                <h5 class="footer__nav-header">Покупателям</h5>
+                <a href="#" class="footer__nav-item"> Поселки </a>
+                <a href="#" class="footer__nav-item"> Готовые дома </a>
+              </div>
+              <div class="footer__nav">
+                <h5 class="footer__nav-header">Покупателям</h5>
+                <a href="#" class="footer__nav-item"> Поселки </a>
+                <a href="#" class="footer__nav-item"> Готовые дома </a>
+              </div>
+              <div class="footer__nav">
+                <h5 class="footer__nav-header">Покупателям</h5>
+                <a href="#" class="footer__nav-item"> Поселки </a>
+                <a href="#" class="footer__nav-item"> Готовые дома </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <p class="footer__bottom-left">Все права защищены</p>
+            <p class="development footer__bottom-right">
+              Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--footer end-->
+  </body>
+</html>

@@ -1,0 +1,29 @@
+.services {
+  background-color: $secondary;
+  position: relative;
+  padding-bottom: 40px;
+
+  @include desktop-desktop {
+    padding-bottom: 120px;
+  }
+
+  & .cards-mini {
+    color: #fff;
+
+    @include desktop-tablet {
+      margin-top: 80px;
+      display: grid;
+      gap: 40px 10px;
+      margin-left: $space-l-t;
+      grid-template-columns: repeat(5, minmax(0, 200px));
+    }
+    @include desktop-laptop {
+      margin-left: $space-l-l;
+    }
+    @include desktop-desktop {
+      gap: 40px 10px;
+      margin-left: $space-l-d;
+      grid-template-columns: repeat(5, minmax(0, 157px));
+    }
+  }
+}

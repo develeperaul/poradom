@@ -17,6 +17,11 @@ body {
   line-height: 16px;
   color: $black;
   position: relative;
+
+  @include desktop-desktop {
+    font-size: 16px;
+    line-height: 21px;
+  }
 }
 
 a {
@@ -26,10 +31,15 @@ a {
 
 h2 {
   font-size: 26px;
-  line-height: 31px;
-
-  letter-spacing: 0.04em;
-  // text-transform: uppercase;
+  line-height: 120%;
+  @include desktop-tablet {
+    font-size: 48px;
+    line-height: 100%;
+  }
+  @include desktop-desktop {
+    font-size: 96px;
+    line-height: 120%;
+  }
 }
 
 h3 {
@@ -40,17 +50,41 @@ h3 {
 
 h4 {
   font-size: 18px;
-  line-height: 22px;
+  line-height: 120%;
+  @include desktop-tablet {
+    font-size: 24px;
+  }
+  @include desktop-desktop {
+    font-size: 26px;
+  }
 }
 
 h5 {
   font-size: 12px;
   line-height: 16px;
+  // @include desktop-tablet {
+  //   font-size: 10px;
+  //   line-height: 130%;
+  // }
+  @include desktop-desktop {
+    font-size: 16px;
+    line-height: 21px;
+  }
 }
 
 h6 {
   font-size: 10px;
   line-height: 10px;
+
+  @include desktop-desktop {
+    font-size: 16px;
+    line-height: 130%;
+  }
+}
+
+p {
+  font-size: 16px;
+  line-height: 130%;
 }
 
 img {
@@ -58,45 +92,79 @@ img {
   display: inherit;
 }
 
+.YMaps img {
+  max-width: inherit;
+}
+
 // .container {
 
 //   margin: 0 auto;
 // }
 .wrapper {
-  margin-right: auto; /* 1 */
-  margin-left: auto; /* 1 */
-  // width: 100%;
-  // max-width: 1200px;
-  // padding-right: 15px; /* 3 */
-  // padding-left: 15px; /* 3 */
-  // width: 100%;
-
-  max-width: 1440px; /* 2 */
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1920px;
   width: 100%;
 }
-.container {
-  margin-right: auto; /* 1 */
-  margin-left: auto; /* 1 */
-  // width: 100%;
-  // max-width: 1200px;
-  // padding-right: 15px; /* 3 */
-  // padding-left: 15px; /* 3 */
-  // width: 100%;
 
-  max-width: 1440px; /* 2 */
+.container {
+  margin-right: auto;
+  position: relative;
+  margin-left: auto;
+
+  max-width: 1920px;
   width: 100%;
   padding: 0 $gap-m;
-  @include media(1140) {
+  @include desktop-tablet {
+    padding: 0 $gap-t;
+  }
+  @include desktop-laptop {
+    padding: 0 $gap-l;
+  }
+  @include desktop-desktop {
     padding: 0 $gap;
+  }
+
+  &-slider {
+    width: calc(100% - 2 * #{$gap-m});
+
+    // margin-left: #{calc(#{$val} + #{$offset_one_side})};
+    @include desktop-tablet {
+      width: calc(100% - 2 * #{$gap-t});
+    }
+    @include desktop-laptop {
+      width: calc(100% - 2 * #{$gap-l});
+    }
+    @include desktop-desktop {
+      width: calc(100% - 2 * #{$gap});
+    }
   }
 }
 
 .-l-gap {
   margin-left: -$gap-m;
+  @include desktop-tablet {
+    margin-left: -$gap-t;
+  }
+  @include desktop-laptop {
+    margin-left: -$gap-l;
+  }
+  @include desktop-desktop {
+    margin-left: -$gap;
+  }
 }
 
 .-r-gap {
   margin-right: -$gap-m;
+  @include desktop-tablet {
+    margin-right: -$gap-t;
+  }
+  @include desktop-laptop {
+    margin-right: -$gap-l;
+  }
+  @include desktop-desktop {
+    margin-right: -$gap;
+  }
 }
 
 .-x-gap {

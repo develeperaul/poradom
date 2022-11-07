@@ -3,8 +3,13 @@ $pageColorActive: #0099e0;
 
 .swiper {
   width: 100%;
-  height: 100%;
+  // height: 100%;
+  // padding-bottom: 50px;
+  // @include desktop-desktop {
+  //   padding-bottom: 0;
+  // }
 }
+
 .swiper-slide {
   /* text-align: center; */
   /* font-size: 18px; */
@@ -23,9 +28,12 @@ $pageColorActive: #0099e0;
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+  // height: calc((100% - 30px) / 2) !important;
+
   &_pb {
     padding-bottom: 85px;
   }
+
   &__title {
     &_ty {
       &--30 {
@@ -33,20 +41,39 @@ $pageColorActive: #0099e0;
       }
     }
   }
+
   &__text {
     margin-top: 14px;
+    @include desktop-desktop {
+      font-size: 18px;
+      line-height: 140%;
+      max-width: 300px;
+      margin-top: 40px;
+    }
   }
+
   &__list {
     margin-top: 14px;
+    @include desktop-desktop {
+      margin-top: 20px;
+    }
   }
+
   &__item {
     position: relative;
     padding-left: 10px;
+    @include desktop-desktop {
+      padding-left: 20px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 180%;
+    }
     &::after {
       position: absolute;
       content: "\2022";
       color: #fff;
       left: 0;
+      top: 0;
     }
   }
 }
@@ -61,13 +88,22 @@ $pageColorActive: #0099e0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
+  &-card {
+    @include desktop-tablet {
+      display: none;
+    }
+  }
+
   & * .button {
     width: auto;
   }
+
   &-wrapper_pb {
     padding-bottom: 85px;
   }
 }
+
 // .carousel > .button {
 //     width: auto;
 // }
@@ -75,6 +111,7 @@ $pageColorActive: #0099e0;
   display: flex;
 
   justify-content: center;
+
   .pag {
     // display: block;
     vertical-align: baseline;
@@ -84,6 +121,7 @@ $pageColorActive: #0099e0;
     width: 43px;
     display: block;
     color: $pagColor;
+
     &::after {
       position: absolute;
       content: "";
@@ -94,8 +132,10 @@ $pageColorActive: #0099e0;
       width: 100%;
       background-color: $pagColor;
     }
+
     &-active {
       color: $pageColorActive;
+
       &::after {
         position: absolute;
         content: "";
@@ -112,47 +152,71 @@ $pageColorActive: #0099e0;
 .swiper {
   &-dots {
     display: flex;
+
     .dot {
       width: 8px;
       height: 8px;
       background-color: $pagColor;
       border-radius: 50%;
+
       &:not(:last-child) {
         margin-right: 6px;
       }
+
       &-active {
         background-color: $accent;
       }
+
       &__lg-red {
         width: 8px;
         height: 8px;
         background-color: $pagColor;
         border-radius: 50%;
+
         &:not(:last-child) {
           margin-right: 6px;
         }
+
         &-active {
           background-color: $accent;
         }
       }
     }
   }
+  & .paginate-center {
+    margin: 0 auto;
+  }
   &-numbs {
-    display: flex;
+    position: absolute;
+    text-align: center;
+    bottom: 0 !important;
     padding-top: 9px;
-    justify-content: center;
     margin-top: 20px;
+    @include desktop-laptop {
+      margin-top: 60px;
+    }
+    &_start {
+      @include desktop-tablet {
+        text-align: left;
+      }
+    }
     &_mt {
       &--10 {
         margin-top: -10px;
       }
     }
+
     &_position {
       position: absolute;
-      bottom: 45px !important;
+      bottom: 0;
       z-index: 10;
+      @include desktop-tablet {
+        bottom: 45px !important;
+      }
     }
+
     .numb {
+      cursor: pointer;
       color: #fff;
       font-size: 16px;
       font-weight: 500;
@@ -161,9 +225,10 @@ $pageColorActive: #0099e0;
       text-align: center;
       position: relative;
       margin: 0 6px;
-      width: 43px;
+      min-width: 43px;
       display: block;
       color: $pagColor;
+      display: inline-block;
       &::after {
         position: absolute;
         content: "";
@@ -174,8 +239,10 @@ $pageColorActive: #0099e0;
         width: 100%;
         background-color: $pagColor;
       }
+
       &-active {
         color: $pageColorActive;
+
         &::after {
           position: absolute;
           content: "";
@@ -188,6 +255,7 @@ $pageColorActive: #0099e0;
       }
     }
   }
+
   &-prev,
   &-next {
     position: absolute;
@@ -196,15 +264,142 @@ $pageColorActive: #0099e0;
     width: 9px;
     height: 15px;
     z-index: 10;
+    cursor: pointer;
     // top: calc(50% - 30px);
-    top: 50%;
+    // top: 50%;
+    // top: 115px;
   }
+
   &-prev {
     background-image: url(../img/icons/prev.svg);
     left: 12px;
+    background-position: center left;
+    padding: 0px 0 10% 10%;
+    transform: translateY(-50%);
   }
+
   &-next {
     right: 12px;
     background-image: url(../img/icons/next.svg);
+    background-position: center right;
+    padding: 0px 0 10% 10%;
+    transform: translateY(-50%);
+  }
+
+  &-stories-line {
+    display: flex;
+    padding-top: 9px;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 4px;
+  }
+  &_flex {
+    @include desktop-tablet {
+      margin-left: $space-l-t;
+      width: calc(100% - 2 * #{$space-l-t});
+    }
+    @include desktop-laptop {
+      margin-left: $space-l-l;
+      width: calc(100% - #{$space-l-l});
+    }
+    @include desktop-desktop {
+      margin-left: $space-l-d;
+      width: calc(100% - #{$space-l-d});
+    }
+  }
+  &-arrows {
+    margin: 0 auto;
+    display: flex;
+    gap: 94px;
+    @include desktop-tablet {
+      margin-top: 20px;
+    }
+    @include desktop-desktop {
+      margin-top: 106px;
+    }
+  }
+  &-prev-arrow,
+  &-next-arrow {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    background-image: url(../img/icons/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &-prev-arrow {
+    transform: rotate(90deg);
+  }
+  &-next-arrow {
+    transform: rotate(-90deg);
+  }
+}
+
+.newsSwiper {
+  padding-bottom: 50px;
+  @include desktop-desktop {
+    padding-bottom: 110px;
+  }
+}
+
+.otherProjects {
+  padding-bottom: 50px;
+  @include desktop-desktop {
+    padding-bottom: 110px;
+  }
+}
+
+.featuresSwiper {
+  padding-bottom: 50px;
+  @include desktop-laptop {
+    padding-bottom: 0;
+  }
+}
+.headerSwiper {
+  height: 100%;
+  
+}
+.hit__swiper {
+  padding-bottom: 50px;
+  @include desktop-laptop {
+    padding-bottom: 0;
+  }
+}
+
+.stories-line {
+  background: gray;
+  opacity: 0.5;
+  border-radius: 24px;
+  height: 3px;
+  width: 100%;
+
+  &::after {
+    position: absolute;
+    content: "";
+    border-radius: 24px;
+    height: 100%;
+    width: 0%;
+    transition: width 2.5s ease;
+  }
+
+  &-active {
+    background: gray;
+    position: relative;
+
+    &::after {
+      width: 100%;
+      background-color: #fff;
+    }
+  }
+
+  &.line-active {
+    background: #fff;
+  }
+}
+
+.alternativePlan {
+  .swiper-numbs {
+    position: static;
+    margin-top: 0;
   }
 }

@@ -2,37 +2,97 @@
   background-color: $secondary;
   color: #fff;
   padding-bottom: 40px;
+
   &__number-content {
     position: absolute;
   }
+
   &__number-content {
     position: absolute;
-    width: 100%;
+
+    @include desktop-desktop {
+      left: 60px;
+    }
   }
+
   &__number {
     position: absolute;
     left: 7px;
     top: 0px;
+
+    @include desktop-desktop {
+      top: 80px;
+    }
   }
+
   &__top {
     padding-top: 40px;
     margin-bottom: 30px;
+    margin-left: 50px;
     padding-left: 13px;
-    width: 100%;
+    @include desktop-tablet {
+      padding-left: 0;
+      padding-top: 8px;
+      margin-left: $space-l-t;
+    }
+    @include desktop-laptop {
+      margin-left: $space-l-l;
+    }
+    @include desktop-desktop {
+      padding-top: 130px;
+      margin-left: $space-l-d;
+      padding-left: 0;
+    }
   }
-  &__botton {
+
+  &__bottom {
     text-align: center;
     margin-top: 30px;
   }
+
+  & .form {
+    margin-top: 40px;
+  }
+
   &__title {
     z-index: 9;
-    margin-left: 50px;
 
     & > span {
-      padding-top: 9px;
-
-      padding-left: 11px;
       padding-right: 11px;
+    }
+
+    &_br {
+      @include desktop-desktop {
+        display: none;
+      }
+    }
+  }
+  & .swiper {
+    @include desktop-tablet {
+      margin-left: $space-l-t;
+      width: calc(100% - #{$space-l-t});
+    }
+    @include desktop-laptop {
+      margin-left: $space-l-l;
+      width: calc(100% - #{$space-l-l});
+    }
+    @include desktop-desktop {
+      margin-left: $space-l-d;
+      width: calc(100% - #{$space-l-d});
+    }
+    &-numbs {
+      @include desktop-tablet {
+        width: calc(100% + #{$space-l-t});
+        margin-left: -#{$space-l-t};
+      }
+      @include desktop-laptop {
+        width: calc(100% + #{$space-l-l});
+        margin-left: -#{$space-l-l};
+      }
+      @include desktop-desktop {
+        width: calc(100% + #{$space-l-d});
+        margin-left: -#{$space-l-d};
+      }
     }
   }
   & > a {

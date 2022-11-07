@@ -1,0 +1,222 @@
+.video {
+  // padding-top: 30px;
+  padding-bottom: 50px;
+  background: $secondary;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  height: 100%;
+
+  @include desktop-tablet {
+    padding-bottom: 0;
+    height: auto;
+  }
+
+  &__top {
+    @include desktop-tablet {
+      order: 2;
+      /* flex-grow: 1; */
+      width: 50%;
+      flex-shrink: 0;
+    }
+    @include desktop-laptop_to_desktop {
+      width: auto;
+    }
+    @include desktop-desktop {
+      width: 50%;
+    }
+
+    & .glightbox {
+      display: none;
+
+      @include desktop-tablet {
+        display: block;
+      }
+    }
+
+    &-image {
+      width: 220px;
+      height: 130px;
+      margin-left: auto;
+      object-fit: cover;
+
+      @include desktop-tablet {
+        object-fit: cover;
+        height: 302px;
+        width: 100%;
+      }
+      @include desktop-laptop {
+        height: 500px;
+        width: 578px;
+      }
+      @include desktop-desktop {
+        width: 100%;
+        height: 700px;
+      }
+    }
+  }
+
+  &__bottom {
+    flex-grow: 1;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: center;
+  }
+
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include desktop-tablet {
+      height: auto;
+      margin-bottom: 30px;
+    }
+    @include desktop-desktop {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    @include desktop-tablet_to_laptop {
+      align-items: flex-start;
+    }
+    @include desktop-tablet {
+      flex-direction: row;
+      // align-items: center;
+      gap: 57px;
+    }
+    @include desktop-laptop {
+      gap: 75px;
+    }
+    @include desktop-desktop {
+      gap: 120px;
+    }
+  }
+
+  &__cards {
+    margin-bottom: 40px;
+    @include desktop-tablet {
+      margin-bottom: 0;
+    }
+    &.features__cards {
+      @include desktop-tablet {
+        grid-template-columns: repeat(2, 155px);
+      }
+      @include desktop-desktop {
+        grid-template-columns: repeat(4, 200px);
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: "DinCyMd", sans-serif;
+    // @include desktop-tablet {
+    //   margin-bottom: 20px;
+    // }
+  }
+
+  &__name {
+    display: block;
+    @include desktop-tablet_to_laptop {
+      display: none;
+    }
+    &_tablet {
+      display: none;
+      @include desktop-tablet_to_laptop {
+        display: block;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 120%;
+    margin-bottom: 2px;
+    white-space: nowrap;
+
+    @include desktop-tablet {
+      margin-bottom: 10px;
+      font-size: 48px;
+      line-height: 100%;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 110%;
+    color: #e5e7ea;
+  }
+
+  &__block-info {
+    display: flex;
+    // justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  &__info {
+    min-width: 18px;
+    min-height: 18px;
+    @include desktop-tablet {
+      min-width: 14px;
+      min-height: 14px;
+    }
+    @include desktop-desktop {
+      min-width: 24px;
+      min-height: 24px;
+    }
+  }
+
+  &__location {
+    margin-bottom: 20px;
+    @include desktop-tablet {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__play {
+    display: flex;
+    align-items: center;
+  }
+
+  & &__play {
+    margin-bottom: 20px;
+
+    @include desktop-tablet {
+      display: none;
+    }
+  }
+
+  &__play-text {
+    margin-left: 14px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 130%;
+    color: #e5e7ea;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include desktop-tablet {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
+}
