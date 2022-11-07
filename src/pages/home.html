@@ -22,186 +22,231 @@
       </div>
     </div>
     <section class="sidebar">
-      <div class="container">
-        <div class="header__wrapper"></div>
-        <div class="header__top">
-          <img src="../img/icons/logo1.svg" alt="" class="logo" />
-          <div class="header__trigger" id="menu-sidebar">
-            <button class="menu-trigger active">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-            <span class="menu-trigger__text"> Меню </span>
-          </div>
-          <div class="header__contacts">
-            <div class="social">
-              <a href="#" class="pie pie_primary social__link_s">
-                <img
-                  src="../img/icons/youtube.svg"
-                  alt=""
-                  class="social__icon"
-                />
-              </a>
-
-              <a href="#" class="pie pie_primary social__link_s">
-                <img
-                  src="../img/icons/facebook.svg"
-                  alt=""
-                  class="social__icon"
-                />
-              </a>
-              <a href="#" class="pie pie_primary social__link_s">
-                <img src="../img/icons/vk.svg" alt="" class="social__icon" />
-              </a>
-            </div>
-            <div class="header__contact contact">
-              <address>г.Уфа, ул.Мустая Карима, д.16</address>
-              <a href="tell:73472008719">+7 (347) 200-87-19</a>
-            </div>
-          </div>
-        </div>
-        <div class="sidebar__list accordion" id="sidebar-accordion">
-          <h3 class="accordion-header">
-            <a href="#"> Покупателям </a>
-            <div class="accordion-button accordion-sidebar"></div>
-          </h3>
-          <div
-            class="tabs__text accordion-body"
-            id="tabs-1"
-            style="height: 0px"
-          >
-            <a href="#"> Проектирование </a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-            <a href="#">Проектирование</a>
-          </div>
-          <h3 class="accordion-header">
-            <a href="#"> Покупателям </a>
-            <div class="accordion-button accordion-sidebar"></div>
-          </h3>
-          <div class="tabs__text" id="tabs-2" style="height: 0px">
-            <a href="#">Проектирование</a>
-          </div>
-          <h3 class="accordion-header">
-            <a href="#"> Покупателям </a>
-            <div class="accordion-button accordion-sidebar"></div>
-          </h3>
-          <div class="tabs__text" id="tabs-3" style="height: 0px">
-            <a href="#">Проектирование</a>
-          </div>
-        </div>
-        <div id="list_03">
-          <ul class="sidebar__list-desktop">
-            <li class="sidebar__item" data-node="#list_01-1">
-              <a href="#">
-                <span class="sidebar__item-left">01 —</span>
-                <span class="sidebar__item-right">Коттеджные посёлки</span>
-              </a>
-            </li>
-            <li class="sidebar__item" data-node="#list_02-1">
-              <a href="#">
-                <span class="sidebar__item-left">02 —</span>
-                <span class="sidebar__item-right">Готовые дома</span>
-              </a>
-            </li>
-            <li class="sidebar__item" data-node="#list_03-1">
-              <a href="#">
-                <span class="sidebar__item-left">03 —</span>
-                <span class="sidebar__item-right">Проекты</span>
-              </a>
-              <div
-                class="sidebar___list_desktop-2 sidebar__children"
-                id="list_03-1"
-                style="display: none"
-              >
-                <ul class="sidebar-children__list">
-                  <li class="sidebar__item" data-node="#list_03_1-2">
-                    <a href="#">Серия Первый Дом</a>
-                  </li>
-                  <li class="sidebar__item" data-node="#list_03_2-2">
-                    <a href="#">Серия NATUR-A</a>
-                  </li>
-                  <li class="sidebar__item" data-node="#list_03_3-2">
-                    <a href="#">Серия Элегант</a>
-                  </li>
-                  <li class="sidebar__item" data-node="#list_03_4-2">
-                    <a href="#">Серия Классик</a>
-                  </li>
-                  <li class="sidebar__item" data-node="#list_03_5-2">
-                    <a href="#">Кирпичный Стандарт</a>
-                  </li>
-                  <li class="sidebar__item" data-node="#list_03_6-2">
-                    <a href="#">Серия Ред Лайт</a>
-                    <div
-                      class="sidebar__list_desktop-3 sidebar__children"
-                      id="list_03_6-2"
-                      style="display: none"
-                    >
-                      <ul class="sidebar-children__list">
-                        <li class="sidebar__item" data-node="#list_03_6_1-3">
-                          <a href="#">Кирпичный Стандарт 105</a>
-                        </li>
-                        <li class="sidebar__item" data-node="#list_03_6_2-3">
-                          <a href="#">Кирпичный Стандарт 120</a>
-                        </li>
-                        <li class="sidebar__item" data-node="#list_03_6_3-3">
-                          <a href="#">Кирпичный Стандарт 140</a>
-                        </li>
-                        <li class="sidebar__item" data-node="#list_03_6_4-3">
-                          <a href="#">Кирпичный Стандарт 150</a>
-                        </li>
-                        <li class="sidebar__item" data-node="#list_03_6_5-3">
-                          <a href="#">Кирпичный Стандарт 170</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="sidebar__item" data-node="#list_03_7-2">
-                    <a href="#">Индивидуальный проект</a>
-                  </li>
-                </ul>
+      <div class="container sidebar__container">
+        <div>
+          <div class="header__wrapper">
+            <div class="header__top">
+              <img src="../img/icons/logo1.svg" alt="" class="logo" />
+              <div class="header__trigger" id="menu-sidebar">
+                <button class="menu-trigger active">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+                <span class="menu-trigger__text"> Меню </span>
               </div>
-            </li>
-            <li class="sidebar__item" data-node="#list_04-1">
-              <a href="#">
-                <span class="sidebar__item-left">04 —</span>
-                <span class="sidebar__item-right">Стандарты Порадом</span>
-              </a>
-            </li>
-            <li class="sidebar__item" data-node="#list_05-1">
-              <a href="#">
-                <span class="sidebar__item-left">05 —</span>
-                <span class="sidebar__item-right">Компания Порадом</span>
-              </a>
-            </li>
-            <li class="sidebar__item" data-node="#list_06-1">
-              <a href="#">
-                <span class="sidebar__item-left">06 —</span>
-                <span class="sidebar__item-right">Галерея</span>
-              </a>
-            </li>
-            <li class="sidebar__item" data-node="#list_07-1">
-              <a href="#">
-                <span class="sidebar__item-left">07 —</span>
-                <span class="sidebar__item-right">Новости</span>
-              </a>
-            </li>
-            <li class="sidebar__item" data-node="#list_08-1">
-              <a href="#">
-                <span class="sidebar__item-left">08 —</span>
-                <span class="sidebar__item-right">Отзывы</span>
-              </a>
-            </li>
-            <li class="sidebar__item" data-node="#list_09-1">
-              <a href="#">
-                <span class="sidebar__item-left">09 —</span>
-                <span class="sidebar__item-right">Контакты</span>
-              </a>
-            </li>
-          </ul>
+              <div class="header__contacts">
+                <div class="social">
+                  <a href="#" class="pie pie_primary social__link_s">
+                    <img
+                      src="../img/icons/youtube.svg"
+                      alt=""
+                      class="social__icon"
+                    />
+                  </a>
+
+                  <a href="#" class="pie pie_primary social__link_s">
+                    <img
+                      src="../img/icons/facebook.svg"
+                      alt=""
+                      class="social__icon"
+                    />
+                  </a>
+                  <a href="#" class="pie pie_primary social__link_s">
+                    <img
+                      src="../img/icons/vk.svg"
+                      alt=""
+                      class="social__icon"
+                    />
+                  </a>
+                </div>
+                <div class="header__contact contact">
+                  <address>г.Уфа, ул.Мустая Карима, д.16</address>
+                  <a href="tel:73472008719">+7 (347) 200-87-19</a>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar__list accordion" id="sidebar-accordion">
+              <h3 class="accordion-header">
+                <a href="#"> Покупателям </a>
+                <div class="accordion-button accordion-sidebar"></div>
+              </h3>
+              <div
+                class="tabs__text accordion-body"
+                id="tabs-1"
+                style="height: 0px"
+              >
+                <a href="#"> Проектирование </a>
+                <a href="#">Проектирование</a>
+                <a href="#">Проектирование</a>
+                <a href="#">Проектирование</a>
+                <a href="#">Проектирование</a>
+                <a href="#">Проектирование</a>
+              </div>
+              <h3 class="accordion-header">
+                <a href="#"> Покупателям </a>
+                <div class="accordion-button accordion-sidebar"></div>
+              </h3>
+              <div class="tabs__text" id="tabs-2" style="height: 0px">
+                <a href="#">Проектирование</a>
+              </div>
+              <h3 class="accordion-header">
+                <a href="#"> Покупателям </a>
+                <div class="accordion-button accordion-sidebar"></div>
+              </h3>
+              <div class="tabs__text" id="tabs-3" style="height: 0px">
+                <a href="#">Проектирование</a>
+              </div>
+            </div>
+            <div id="list_03">
+              <ul class="sidebar__list-desktop">
+                <li class="sidebar__item" data-node="#list_01-1">
+                  <a href="#">
+                    <span class="sidebar__item-left">01 —</span>
+                    <span class="sidebar__item-right">Коттеджные посёлки</span>
+                  </a>
+                </li>
+                <li class="sidebar__item" data-node="#list_02-1">
+                  <a href="#">
+                    <span class="sidebar__item-left">02 —</span>
+                    <span class="sidebar__item-right">Готовые дома</span>
+                  </a>
+                </li>
+                <li class="sidebar__item" data-node="#list_03-1">
+                  <a href="#">
+                    <span class="sidebar__item-left">03 —</span>
+                    <span class="sidebar__item-right">Проекты</span>
+                  </a>
+                  <div
+                    class="sidebar___list_desktop-2 sidebar__children"
+                    id="list_03-1"
+                    style="display: none"
+                  >
+                    <ul class="sidebar-children__list">
+                      <li class="sidebar__item" data-node="#list_03_1-2">
+                        <a href="#">Серия Первый Дом</a>
+                      </li>
+                      <li class="sidebar__item" data-node="#list_03_2-2">
+                        <a href="#">Серия NATUR-A</a>
+                      </li>
+                      <li class="sidebar__item" data-node="#list_03_3-2">
+                        <a href="#">Серия Элегант</a>
+                      </li>
+                      <li class="sidebar__item" data-node="#list_03_4-2">
+                        <a href="#">Серия Классик</a>
+                      </li>
+                      <li class="sidebar__item" data-node="#list_03_5-2">
+                        <a href="#">Кирпичный Стандарт</a>
+                      </li>
+                      <li class="sidebar__item" data-node="#list_03_6-2">
+                        <a href="#">Серия Ред Лайт</a>
+                        <div
+                          class="sidebar__list_desktop-3 sidebar__children"
+                          id="list_03_6-2"
+                          style="display: none"
+                        >
+                          <ul class="sidebar-children__list">
+                            <li
+                              class="sidebar__item"
+                              data-node="#list_03_6_1-3"
+                            >
+                              <a href="#">Кирпичный Стандарт 105</a>
+                            </li>
+                            <li
+                              class="sidebar__item"
+                              data-node="#list_03_6_2-3"
+                            >
+                              <a href="#">Кирпичный Стандарт 120</a>
+                            </li>
+                            <li
+                              class="sidebar__item"
+                              data-node="#list_03_6_3-3"
+                            >
+                              <a href="#">Кирпичный Стандарт 140</a>
+                            </li>
+                            <li
+                              class="sidebar__item"
+                              data-node="#list_03_6_4-3"
+                            >
+                              <a href="#">Кирпичный Стандарт 150</a>
+                            </li>
+                            <li
+                              class="sidebar__item"
+                              data-node="#list_03_6_5-3"
+                            >
+                              <a href="#">Кирпичный Стандарт 170</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="sidebar__item" data-node="#list_03_7-2">
+                        <a href="#">Индивидуальный проект</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="sidebar__item" data-node="#list_04-1">
+                  <a href="#">
+                    <span class="sidebar__item-left">04 —</span>
+                    <span class="sidebar__item-right">Стандарты Порадом</span>
+                  </a>
+                </li>
+                <li class="sidebar__item" data-node="#list_05-1">
+                  <a href="#">
+                    <span class="sidebar__item-left">05 —</span>
+                    <span class="sidebar__item-right">Компания Порадом</span>
+                  </a>
+                </li>
+                <li class="sidebar__item" data-node="#list_06-1">
+                  <a href="#">
+                    <span class="sidebar__item-left">06 —</span>
+                    <span class="sidebar__item-right">Галерея</span>
+                  </a>
+                </li>
+                <li class="sidebar__item" data-node="#list_07-1">
+                  <a href="#">
+                    <span class="sidebar__item-left">07 —</span>
+                    <span class="sidebar__item-right">Новости</span>
+                  </a>
+                </li>
+                <li class="sidebar__item" data-node="#list_08-1">
+                  <a href="#">
+                    <span class="sidebar__item-left">08 —</span>
+                    <span class="sidebar__item-right">Отзывы</span>
+                  </a>
+                </li>
+                <li class="sidebar__item" data-node="#list_09-1">
+                  <a href="#">
+                    <span class="sidebar__item-left">09 —</span>
+                    <span class="sidebar__item-right">Контакты</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar__footer footer__content">
+          <div class="footer__socials social">
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/youtube.svg" alt="" class="social__icon" />
+            </a>
+
+            <a href="#" class="pie pie_primary social__link_s">
+              <img
+                src="../img/icons/facebook.svg"
+                alt=""
+                class="social__icon"
+              />
+            </a>
+            <a href="#" class="pie pie_primary social__link_s">
+              <img src="../img/icons/vk.svg" alt="" class="social__icon" />
+            </a>
+          </div>
+          <div class="footer__contact">
+            <address>г.Уфа, ул.Мустая Карима, д.16</address>
+            <a href="tel:73472008719">+7 (347) 200-87-19</a>
+          </div>
         </div>
       </div>
 
@@ -253,7 +298,7 @@
           </div>
           <div class="header__contact contact">
             <address>г.Уфа, ул.Мустая Карима, д.16</address>
-            <a href="tell:73472008719">+7 (347) 200-87-19</a>
+            <a href="tel:73472008719">+7 (347) 200-87-19</a>
           </div>
         </div>
       </div>
@@ -293,7 +338,7 @@
             </div>
             <div class="header__contact contact">
               <address>г.Уфа, ул.Мустая Карима, д.16</address>
-              <a href="tell:73472008719">+7 (347) 200-87-19</a>
+              <a href="tel:73472008719">+7 (347) 200-87-19</a>
             </div>
           </div>
         </div>
@@ -330,12 +375,7 @@
                 Новый проект <br />
                 со вторым <br />
                 <a href="#">
-
-                                  <a href="#">
-
-                  светом
-                </a>
-
+                  <a href="#"> светом </a>
                 </a>
               </h2>
               <p class="carousel__text">
@@ -354,12 +394,8 @@
               <h2 class="carousel__title">
                 Новый проект <br />
                 со вторым <br />
-                
-                                <a href="#">
 
-                  светом
-                </a>
-
+                <a href="#"> светом </a>
               </h2>
               <p class="carousel__text">
                 Запишитесь на экскурсию, <br />
@@ -377,14 +413,9 @@
               <h2 class="carousel__title">
                 Новый проект <br />
                 со вторым <br />
-                
+
                 <a href="#">
-
-                                  <a href="#">
-
-                  светом
-                </a>
-
+                  <a href="#"> светом </a>
                 </a>
               </h2>
               <p class="carousel__text">
@@ -408,11 +439,7 @@
               <h2 class="carousel__title">
                 Новый проект <br />
                 со вторым <br />
-                                <a href="#">
-
-                  светом
-                </a>
-
+                <a href="#"> светом </a>
               </h2>
               <p class="carousel__text">
                 Запишитесь на экскурсию, d <br />
@@ -430,11 +457,7 @@
               <h2 class="carousel__title">
                 Новый проект <br />
                 со вторым <br />
-                                <a href="#">
-
-                  светом
-                </a>
-
+                <a href="#"> светом </a>
               </h2>
               <p class="carousel__text">
                 Запишитесь на экскурсию, <br />
@@ -452,15 +475,11 @@
               <h2 class="carousel__title">
                 Новый проект <br />
                 со вторым <br />
-                                <a href="#">
-
-                  светом
-                </a>
-
+                <a href="#"> светом </a>
               </h2>
               <p class="carousel__text">
                 Запишитесь на экскурсию, <br />
-                чтобы увидеть это <a href="#">первыми!</a> 
+                чтобы увидеть это <a href="#">первыми!</a>
               </p>
               <div>
                 <buttton class="carousel__btn button button_accent"
@@ -2263,7 +2282,7 @@
             </div>
             <div class="footer__contact">
               <address>г.Уфа, ул.Мустая Карима, д.16</address>
-              <a href="tell:73472008719">+7 (347) 200-87-19</a>
+              <a href="tel:73472008719">+7 (347) 200-87-19</a>
             </div>
             <p class="development">
               Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
@@ -2303,7 +2322,7 @@
                 </div>
                 <div class="footer__contact">
                   <address>г.Уфа, ул.Мустая Карима, д.16</address>
-                  <a href="tell:73472008719">+7 (347) 200-87-19</a>
+                  <a href="tel:73472008719">+7 (347) 200-87-19</a>
                 </div>
               </div>
             </div>

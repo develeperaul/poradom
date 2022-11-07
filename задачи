@@ -1,0 +1,46 @@
+задокументировать набор полей для формы
+
+
+поправить карту мобильную
+блокчейн
+спайдербот
+
+
+
+http://mporad1s.beget.tech/kompaniya-poradom/
+История домостроительной <br>
+компании ПОРАДОМ
+поставить ссылки на слайды
+
+
+
+заметки
+
+http://mporad1s.beget.tech/gotovye-doma/red-layt-120-es2-14/
+  блок особенности скрыт
+
+http://mporad1s.beget.tech/proekty//sky-layt-165/
+  некоторые карточки без картинок
+
+http://mporad1s.beget.tech/proekty/pervyi-dom/pervyi-dom-85/
+  поправить ипотечный карусель
+
+http://mporad1s.beget.tech/gotovye-doma/pervyi-dom-125-dg3-117/
+  поправить header
+
+http://mporad1s.beget.tech/poselki/devichya-gora/
+  нету ссылки на карте 1 очередь
+
+
+документация для формы
+
+отпарвляется запрос на адрес
+  /bitrix/templates/poradom/ajax/form.php
+
+поля
+  name -имя
+  phone - телефон
+  link - ссылка на резюме
+  number - кадастровый номер
+  file - файл
+  files[] - массив файлов

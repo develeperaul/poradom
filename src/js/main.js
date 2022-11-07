@@ -363,6 +363,29 @@ document.addEventListener("DOMContentLoaded", function () {
               '.modal[data-modal="' + modalId + '"]'
             );
             indexModal = index;
+            if (this.hasAttribute("data-modal-header")) {
+              const headerContentText = this.getAttribute("data-modal-header");
+
+              if (headerContentText.length > 0) {
+                modalElem.querySelector(".form__title").style.display = "block";
+                modalElem.querySelector(".form__title").textContent =
+                  headerContentText;
+              } else {
+                modalElem.querySelector(".form__title").style.display = "none";
+              }
+            }
+            if (this.hasAttribute("data-modal-description")) {
+              const desciptionContentText = this.getAttribute(
+                "data-modal-description"
+              );
+              if (desciptionContentText.length > 0) {
+                modalElem.querySelector(".form__text").style.display = "block";
+                modalElem.querySelector(".form__text").textContent =
+                  desciptionContentText;
+              } else {
+                modalElem.querySelector(".form__text").style.display = "none";
+              }
+            }
             /* После того как нашли нужное модальное окно, добавим классы
                     подложке и окну чтобы показать их. */
             modalElem.classList.add("active");

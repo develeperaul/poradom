@@ -57,7 +57,7 @@
             </div>
             <div class="header__contact contact">
               <address>г.Уфа, ул.Мустая Карима, д.16</address>
-              <a href="tell:73472008719">+7 (347) 200-87-19</a>
+              <a href="tel:73472008719">+7 (347) 200-87-19</a>
             </div>
           </div>
         </div>
@@ -225,7 +225,7 @@
           </div>
           <div class="header__contact contact">
             <address>г.Уфа, ул.Мустая Карима, д.16</address>
-            <a href="tell:73472008719">+7 (347) 200-87-19</a>
+            <a href="tel:73472008719">+7 (347) 200-87-19</a>
           </div>
         </div>
       </div>
@@ -266,7 +266,7 @@
             </div>
             <div class="header__contact contact">
               <address>г.Уфа, ул.Мустая Карима, д.16</address>
-              <a href="tell:73472008719">+7 (347) 200-87-19</a>
+              <a href="tel:73472008719">+7 (347) 200-87-19</a>
             </div>
           </div>
         </div>
@@ -454,7 +454,9 @@
               <div class="video__buttons">
                 <buttton
                   class="carousel__btn button button_accent js-open-modal"
-                  data-modal="excursion"
+                  data-modal-header="header"
+                  data-modal-description="description"
+                  data-modal="excursion-dynamic"
                   >Записаться на экскурсию</buttton
                 >
               </div>
@@ -1742,6 +1744,65 @@
           </label>
         </form>
       </div>
+      <div class="modal" data-modal="excursion-dynamic">
+        <form action="#" class="form-standart" id="special-offer" data-form="1">
+          <!--   Svg иконка для закрытия окна  -->
+          <svg
+            class="modal__cross js-modal-close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+            />
+          </svg>
+          <h4 class="form__title">
+            Запишитесь <br />
+            на экскурсию <br />
+            по посёлку <br />
+            Название посёлка
+          </h4>
+          <p class="form__text">
+            Приезжайте на экскурсию, чтобы увидеть все своими глазами и узнать о
+            жизни поселка
+          </p>
+          <div class="text-field">
+            <input
+              data-special-offer
+              class="text-field__input tel"
+              type="text"
+              name="login"
+              id="login"
+              placeholder="Введите ваш телефон"
+            />
+          </div>
+          <div class="text-field">
+            <input
+              data-special-offer
+              class="text-field__input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Введите ваш имя"
+            />
+          </div>
+
+          <button
+            type="submit"
+            id="special-offer-btn"
+            class="button button_accent"
+          >
+            Отправить
+          </button>
+          <label class="checkbox-other">
+            <input data-special-offer type="checkbox" checked />
+            <p>
+              Даю согласие на обработку
+              <a href="#" class="checkbox__link"> персональных данных </a>
+            </p>
+          </label>
+        </form>
+      </div>
       <div class="popup-message">
         <svg
           width="65"
@@ -1840,7 +1901,7 @@
             </div>
             <div class="footer__contact">
               <address>г.Уфа, ул.Мустая Карима, д.16</address>
-              <a href="tell:73472008719">+7 (347) 200-87-19</a>
+              <a href="tel:73472008719">+7 (347) 200-87-19</a>
             </div>
             <p class="development">
               Разработано <img src="../img/icons/yesidea.svg" alt="yesidea" />
@@ -1880,7 +1941,7 @@
                 </div>
                 <div class="footer__contact">
                   <address>г.Уфа, ул.Мустая Карима, д.16</address>
-                  <a href="tell:73472008719">+7 (347) 200-87-19</a>
+                  <a href="tel:73472008719">+7 (347) 200-87-19</a>
                 </div>
               </div>
             </div>

@@ -2316,6 +2316,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 999999px;
+  cursor: pointer;
 
   @include desktop-desktop {
     width: 150px;

@@ -8,6 +8,25 @@
   height: 100%;
   transform: translateX(-100%);
   transition: transform 1s ease;
+  display: flex;
+  flex-direction: column;
+  @include desktop-tablet {
+    display: block;
+  }
+  &__container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include desktop-tablet {
+      display: block;
+    }
+  }
+  &__footer {
+    @include desktop-tablet {
+      display: none !important;
+    }
+  }
   &_active {
     transform: translateX(0%);
   }
