@@ -29,6 +29,7 @@
   }
   &_active {
     transform: translateX(0%);
+    overflow: auto;
   }
 
   &__list > * {
@@ -57,8 +58,8 @@
         gap: 40px;
       }
     }
-    & > .tabs__text>a {
-      padding-bottom:15px;
+    & > .tabs__text > a {
+      padding-bottom: 15px;
     }
     & > .tabs__text > *:last-child {
       margin-bottom: 10px;

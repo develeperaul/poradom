@@ -5,12 +5,19 @@ export default class Accordion {
       accordion.addEventListener("click", change);
       function change(event) {
         var targ = event.target;
-        if (!targ.classList.contains("accordion-button")) return;
-        if (
-          targ.classList.contains("accordion-button") &&
-          targ.classList.contains("select")
-        ) {
+        let currentElem = targ;
+        while (currentElem) {
+          if (currentElem.classList.contains("accordion-header")) {
+            console.log(currentElem);
+            break;
+          } else if (currentElem == document.querySelector("html")) break;
+          else currentElem = currentElem.parentElement;
+        }
+        const btn = currentElem.querySelector(".accordion-button");
+        // if (!targ.classList.contains("accordion-button")) return;
+        if (btn && btn.classList.contains("select")) {
           if (targ.classList.contains("accordion-sidebar")) {
+            console.log("close");
             targ.classList.remove("select");
             targ.parentNode.nextElementSibling.style.height = "0";
           } else {
@@ -22,9 +29,8 @@ export default class Accordion {
             console.log(2);
             hideAll();
           }
-
-          targ.classList.add("select");
-          showText(targ.parentNode.nextElementSibling);
+          btn.classList.add("select");
+          showText(btn.parentNode.nextElementSibling);
         }
       }
       function hideAll() {

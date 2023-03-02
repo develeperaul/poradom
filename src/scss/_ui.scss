@@ -285,10 +285,12 @@
 
     @include desktop-tablet {
       padding: 10px;
+      font-size: 12px;
     }
 
     @include desktop-desktop {
       padding: 16px;
+      font-size: 26px;
     }
 
     &-white {
@@ -2317,13 +2319,13 @@
   justify-content: center;
   border-radius: 999999px;
   cursor: pointer;
-
+  color: #fff;
   @include desktop-desktop {
     width: 150px;
     height: 150px;
   }
 
-  & > a {
+  & > span {
     color: #fff;
   }
 }

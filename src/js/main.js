@@ -209,6 +209,7 @@ class SideBar {
       menuSideBar.onclick = () => {
         if (sidebar.classList.contains("sidebar_active")) {
           menuSideBar.classList.remove("active");
+          window.document.querySelector("body").style.overflow = "initial";
           sidebar.classList.remove("sidebar_active");
         }
       };
@@ -217,6 +218,7 @@ class SideBar {
       menuHeader.onclick = () => {
         if (!sidebar.classList.contains("sidebar_active")) {
           menuSideBar.classList.add("active");
+          window.document.querySelector("body").style.overflow = "hidden";
           sidebar.classList.add("sidebar_active");
         }
       };
@@ -225,6 +227,7 @@ class SideBar {
       menuHeaderFixed.onclick = () => {
         if (!sidebar.classList.contains("sidebar_active")) {
           menuSideBar.classList.add("active");
+          window.document.querySelector("body").style.overflow = "hidden";
           sidebar.classList.add("sidebar_active");
         }
       };

@@ -3,8 +3,8 @@
 }
 .info .popup {
   position: absolute;
-      left: -50%;
-        transform: translate(-50%, 10px);
+  left: -50%;
+  transform: translate(-50%, 10px);
   padding: 30px 21px;
   background: $primary;
   border-radius: 4px;
@@ -18,5 +18,9 @@
   }
   &-open {
     opacity: 0.98;
+  }
+  .modal__cross {
+    top: 10px;
+    right: 10px;
   }
 }

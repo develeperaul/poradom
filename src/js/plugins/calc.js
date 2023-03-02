@@ -38,6 +38,7 @@ window.addEventListener("DOMContentLoaded", function () {
   }
   const form = document.querySelector("#calc-1");
   if (form) {
+    console.log(form);
     const inputs = form.querySelectorAll("input");
 
     const dropdownHeader = form.querySelector("[data-dropdown_header]");
@@ -166,8 +167,8 @@ window.addEventListener("DOMContentLoaded", function () {
       });
     });
     console.log(inputs);
-    form.addEventListener("click", (e) => {
-      console.log(e);
-    });
+    // form.addEventListener("click", (e) => {
+    //   console.log(e);
+    // });
   }
 });
