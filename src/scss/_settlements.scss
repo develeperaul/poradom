@@ -99,6 +99,7 @@
     }
     @include desktop-desktop {
       left: $gap;
+      top: 75px;
     }
   }
 
@@ -125,8 +126,8 @@
     top: 60px;
 
     @include desktop-desktop {
-      top: 115px;
-      left: -40px;
+      top: 120px;
+      left: 60px;
       width: 353px;
       height: 310px;
     }

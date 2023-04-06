@@ -68,7 +68,7 @@
     overflow: hidden;
     height: 100%;
     @include desktop-tablet {
-      flex-basis: 228px;
+      flex-basis: 235px;
       gap: 14px;
     }
     @include desktop-laptop {
@@ -328,6 +328,47 @@
       @include desktop-desktop {
         width: 540px;
         height: 700px;
+      }
+    }
+  }
+
+  &-write {
+    display: none;
+    @include desktop-laptop {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-top: 30px !important;
+      padding-bottom: 30px !important;
+    }
+    @include desktop-desktop {
+      padding-top: 80px !important;
+      padding-bottom: 80px !important;
+    }
+    &__top {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      @include desktop-desktop {
+        gap: 20px;
+      }
+      h4 {
+        font-size: 18px;
+        line-height: 21.6px;
+        @include desktop-desktop {
+          font-size: 26px;
+          line-height: 31.2px;
+        }
+      }
+    }
+    &__subtitle {
+      @include desktop-tablet {
+        font-size: 10px;
+        line-height: 12px;
+      }
+      @include desktop-desktop {
+        font-size: 16px;
+        line-height: 130%;
       }
     }
   }

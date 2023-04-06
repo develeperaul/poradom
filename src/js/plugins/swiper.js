@@ -180,7 +180,22 @@ export const stories = new newSwiper(".testSwiper", {
     },
   },
 });
-new newSwiper(".headerSwiper", { spaceBetween: 0, loop: false });
+
+new newSwiper(".headerSwiper", {
+  spaceBetween: 0,
+  loop: false,
+  pagination: {
+    dynamicBullets: false,
+    el: ".swiper-numbs",
+    bulletActiveClass: "numb-active",
+    bulletClass: "numb",
+    type: "bullets",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
+  },
+});
 new newSwiper(".readySwiper", {});
 new newSwiper(".hitProject", {
   spaceBetween: 16,
@@ -216,7 +231,7 @@ const s = new Swiper(".newsSwiper", {
   // slidesPerView: 1,
   spaceBetween: 30,
   pagination: {
-    dynamicBullets: true,
+    dynamicBullets: false,
     dynamicMainBullets: 4,
     el: ".swiper-numbs",
     bulletActiveClass: "numb-active",
@@ -251,7 +266,7 @@ const s = new Swiper(".newsSwiper", {
 new newSwiper(".projects");
 new newSwiper(".buttonsSwiper", { pagination: {} });
 new newSwiper(".featuresSwiper", {
-  loop:false,
+  loop: false,
   navigation: {
     nextEl: ".swiper-next",
     prevEl: ".swiper-prev",
@@ -411,19 +426,16 @@ new newSwiper(".regionSwiper", {
   },
 });
 
-
 new newSwiper(".alternativePlan", {
-    loop: false,
-        pagination: {
-     
-      el: ".swiper-numbs",
-      bulletActiveClass: "numb-active",
-      bulletClass: "numb",
-      type: "bullets",
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (index + 1) + "</span>";
-      },
+  loop: false,
+  pagination: {
+    el: ".swiper-numbs",
+    bulletActiveClass: "numb-active",
+    bulletClass: "numb",
+    type: "bullets",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
     },
-
-})
+  },
+});

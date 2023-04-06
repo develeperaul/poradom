@@ -436,7 +436,19 @@
       #d10945 74.14%,
       #d10945 74.14%
     );
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include desktop-desktop {
+      width: 90px;
+      height: 90px;
+    }
+    & > img {
+      width: 12px;
+      @include desktop-desktop {
+        width: 23px;
+      }
+    }
     &_lg {
       width: 48px;
       height: 48px;
@@ -602,13 +614,13 @@
   gap: 20px;
 
   @include desktop-tablet {
-    max-width: 228px;
-    flex-basis: 228px;
+    max-width: 270px;
+    // flex-basis: 260px;
   }
 
   @include desktop-tablet {
-    // max-width: 235px;
-    // flex-basis: 235px;
+    // max-width: 260px;
+    // flex-basis: 260px;
   }
 
   @include desktop-desktop {

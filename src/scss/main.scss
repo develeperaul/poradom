@@ -31,7 +31,7 @@
 @import "explore";
 @import "video";
 @import "plans";
-
+@import "points";
 @import "settlements-map";
 @import "service-settlement";
 @import "contacts";
@@ -270,7 +270,6 @@
 
     z-index: 10;
   }
-
 
   &__wrapper {
     position: relative;
@@ -515,23 +514,278 @@
   }
 }
 
-
 .contact-arrow {
   &.active {
-    .drop_sq{
+    .drop_sq {
       bottom: 3px;
-    } 
+    }
     .children {
       &:nth-child(1) {
         bottom: 62px;
       }
-      &:nth-child(2){
+      &:nth-child(2) {
         bottom: 183px;
       }
       &:nth-child(3) {
         bottom: 124px;
       }
     }
-
   }
+}
+
+.plan-other {
+  background: #292929;
+  color: white;
+  .title {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    left: 20px;
+    @include desktop-tablet {
+      top: 100px;
+      left: 40px;
+    }
+    &__text {
+      margin-bottom: 20px;
+    }
+    &__back {
+      cursor: pointer;
+      text-decoration: underline;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 16px;
+      & > a {
+        color: white;
+      }
+    }
+    &-static {
+      padding: 40px 20px 0;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      @include desktop-tablet {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 40px 0;
+        margin-bottom: 100px;
+      }
+    }
+  }
+  .desktop {
+    display: none;
+    @include desktop-tablet {
+      display: block;
+    }
+  }
+  .mobile {
+    @include desktop-tablet {
+      display: none;
+    }
+    .mobile-plan__drag-container {
+      position: relative;
+    }
+    .icon-action {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      z-index: 10;
+    }
+  }
+
+  .text-approximate {
+    position: absolute;
+    bottom: 10px;
+    right: 40px;
+  }
+  .markup {
+    height: 100%;
+    left: 0;
+    overflow: visible !important;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  svg.choice-plot {
+    z-index: 10;
+    & > g {
+      cursor: pointer;
+    }
+    & > g > text,
+    text {
+      fill: #fff;
+      font: normal 8px Stolzl;
+      @include desktop-tablet {
+        font: normal 16px Stolzl;
+      }
+      @include desktop-desktop {
+        font: normal 18px Stolzl;
+      }
+    }
+  }
+
+  g[data-status="free"] {
+    & > path {
+      fill: #245b20;
+      fill-opacity: 0;
+      stroke: #f8f8f8;
+    }
+    & > circle {
+      fill: #56b361;
+      stroke: #fff;
+    }
+  }
+
+  g[data-status="booked"] {
+    & > path {
+      fill: #f7941d;
+      fill-opacity: 0.28;
+      stroke: #f7941d;
+    }
+    & > circle {
+      fill: #f7941d;
+      stroke: #fff;
+    }
+  }
+
+  g[data-status="sold"] {
+    & > path {
+      fill: #a61c20;
+      fill-opacity: 0.28;
+      stroke: #a61c20;
+    }
+    & > circle {
+      fill: #a61c20;
+      stroke: #fff;
+    }
+  }
+}
+.plan__map-mobile {
+  & > img {
+    width: 100%;
+  }
+}
+.popup-card {
+  display: none;
+  transition: all 0.3s ease;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 40;
+  &--count {
+    width: 260px;
+    .popup-card__content {
+      padding: 16px;
+      background: white;
+      color: #292929;
+
+      .title {
+        font-size: 2.25rem;
+        line-height: 90%;
+      }
+      & .grid {
+        display: grid;
+        gap: 1.25rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        &__title {
+          font-size: 0.75rem;
+          line-height: 140%;
+          margin-bottom: 0.125rem;
+          letter-spacing: -0.02em;
+          color: #98999d;
+        }
+        &__subtitle {
+          font-size: 1.5rem;
+          line-height: 1.75rem;
+        }
+      }
+    }
+  }
+  &--box {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    @include desktop-laptop {
+      height: auto;
+      width: auto;
+      backdrop-filter: none;
+    }
+    .popup-card__close {
+      border-radius: 100%;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 0;
+      @include desktop-laptop {
+        display: none;
+      }
+    }
+    .popup-card__content {
+      width: 335px;
+      margin: 0 20px;
+      color: #231f20;
+      .grid {
+        display: flex;
+        gap: 14px;
+        padding: 8px;
+        background: white;
+      }
+    }
+    .popup-card__btn {
+      background: #f7941d;
+      font-size: 1rem;
+      line-height: 140%;
+      padding: 8px 0;
+      text-align: center;
+      & > a {
+        color: white;
+      }
+    }
+  }
+  &.active {
+    display: block;
+  }
+  &__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .type {
+    color: white;
+    border-radius: 6px;
+    padding: 2px 8px;
+    text-align: center;
+  }
+  .free {
+    .type {
+      background: #2f7144;
+    }
+  }
+  .booked {
+    .type {
+      background: #f7941d;
+    }
+  }
+  .sold {
+    .type {
+      background: #a61c20;
+    }
+    img {
+      filter: grayscale(100%);
+    }
+  }
+}
+.relative {
+  position: relative;
+}
+.flex {
+  display: flex;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.flex-col {
+  flex-direction: column;
 }

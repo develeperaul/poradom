@@ -1,5 +1,6 @@
 import "../scss/main.scss";
 // import 'swiper/css'
+import "./plugins/animate";
 import { stories } from "./plugins/swiper";
 import "./plugins/calc";
 import GLightbox from "glightbox";

@@ -15,15 +15,15 @@
       display: grid;
       gap: 40px 10px;
       margin-left: $space-l-t;
-      grid-template-columns: repeat(5, minmax(0, 200px));
+      grid-template-columns: repeat(5, minmax(0, 150px));
     }
     @include desktop-laptop {
       margin-left: $space-l-l;
     }
     @include desktop-desktop {
-      gap: 40px 10px;
+      gap: 40px 70px;
       margin-left: $space-l-d;
-      grid-template-columns: repeat(5, minmax(0, 157px));
+      grid-template-columns: repeat(5, minmax(0, 170px));
     }
   }
 }
