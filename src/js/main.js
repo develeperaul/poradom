@@ -57,12 +57,18 @@ window.addEventListener("mousemove", (e) => {
 const forms = document.querySelectorAll("form");
 const formReq = async (form) => {
   const url = "/bitrix/templates/poradom/ajax/form.php";
+  const id = document.getElementById("visitor_uid")?.value;
+  const clientID = document.getElementById("clientID")?.value
+    ? document.getElementById("clientID")?.value
+    : "";
   const formData = new FormData();
   const fields = form.querySelectorAll("input");
   // console.log(form.getAttribute("data-theme"));
   const theme = form.getAttribute("data-theme");
+  formData.append("theme", theme ? theme : "");
+  formData.append("visitor_uid", id ? id : "");
+  formData.append("clientID", clientID ? clientID : "");
   Array.from(fields).forEach((field) => {
-    formData.append("theme", theme ? theme : "");
     if (field.name) {
       if (field.name === "file" && field.files.length > 0)
         formData.append(field.name, field.files[0], field.files[0].name);

@@ -40,7 +40,7 @@ window.addEventListener("DOMContentLoaded", function () {
   if (form) {
     console.log(form);
     const inputs = form.querySelectorAll("input");
-
+    const text = form.querySelector(".calc__text")
     const dropdownHeader = form.querySelector("[data-dropdown_header]");
     const month = form.querySelector("[data-input='month']");
 
@@ -70,6 +70,7 @@ window.addEventListener("DOMContentLoaded", function () {
             buttonActive.classList.remove("button__round_active");
             button.classList.add("button__round_active");
             buttonActive = button;
+            if(text) text.textContent = button.dataset.text
             inputs.forEach((input) => {
               if (input.dataset.input === "rate") {
                 rate = button.dataset.rate;
